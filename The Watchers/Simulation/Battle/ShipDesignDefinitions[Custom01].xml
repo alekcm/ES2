@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ShipDesignDefinition.xsd">
+
+	<ShipDesignDefinition Name="Custom01_Hero" Hidden="true" Editable="false" MustBePreloaded="true">
+	    <Tags>HideUpkeep</Tags>
+		<HullReference Name="Hull01SmallAdmiral"/>
+        <ShipRoleReference Name="ShipRoleHero"/>
+        <!-- Core -->
+        <SlotBinding SlotName="CoreSection.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.Weapon02">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!-- N -->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseShield1"/>
+        </SlotBinding>
+        <!-- NE -->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!-- E -->
+
+        <!-- SE -->
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionSE.Weapon02">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!-- S -->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+    </ShipDesignDefinition>
+	
+    <ShipDesignDefinition Name="Custom01_Colonizer">
+		<HullReference Name="HullSmall03Custom01"/>
+		<ShipRoleReference Name="ShipRoleColonizer"/>
+		<SlotBinding SlotName="CoreSection.Support01">
+			<ModuleReference Name="ModuleSupportEngine1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="CoreSection.Weapon01">
+			<ModuleReference Name="ModuleSupportColonization1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="SectionN.Support01">
+			<ModuleReference Name="ModuleSupportEngine1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="SectionS.Support01">
+			<ModuleReference Name="ModuleSupportEngine1"/>
+		</SlotBinding>
+
+        <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,FactionTraitManualHomeSystem</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayVenetians</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+	</ShipDesignDefinition>
+
+	<ShipDesignDefinition Name="ShipDesignDecolonizationCustom01" Editable="false" Hidden="true">
+		<HullReference Name="HullSmall03Custom01"/>
+		<ShipRoleReference Name="ShipRoleColonizer"/>
+		<SlotBinding SlotName="CoreSection.Support01">
+			<ModuleReference Name="ModuleSupportEngine1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="CoreSection.Weapon01">
+			<ModuleReference Name="ModuleSupportColonization1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="SectionN.Support01">
+			<ModuleReference Name="ModuleSupportEngine1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="SectionS.Support01">
+			<ModuleReference Name="ModuleSupportEngine1"/>
+		</SlotBinding>
+	</ShipDesignDefinition>
+
+	<ShipDesignDefinition Name="Custom01_Explorer">
+		<HullReference Name="HullSmall04Custom01"/>
+		<ShipRoleReference Name="ShipRoleExploration"/>
+		<SlotBinding SlotName="CoreSection.Support01">
+			<ModuleReference Name="ModuleSupportEngine1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="SectionNE.Support01">
+			<ModuleReference Name="ModuleSupportExploration1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="SectionE.Weapon01">
+			<ModuleReference Name="ModuleWeaponKinetic1"/>
+		</SlotBinding>
+		<SlotBinding SlotName="SectionS.Weapon01">
+			<ModuleReference Name="ModuleWeaponMissile1"/>
+		</SlotBinding>
+	</ShipDesignDefinition>
+
+    <ShipDesignDefinition Name="Custom01_SmallAttack">
+        <HullReference Name="HullSmall01Custom01"/>
+        <ShipRoleReference Name="ShipRoleSmallAttacker"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--N Section-->
+
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!--SE Section-->
+
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionS.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyHull2Custom01</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <ShipDesignDefinition Name="Custom01_SmallSupport">
+        <HullReference Name="HullSmall02Custom01"/>
+        <ShipRoleReference Name="ShipRoleSmallSupport"/>
+        <!--Core Section-->
+        
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--SE Section-->
+
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionS.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyHull3Custom01</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <ShipDesignDefinition Name="Custom01_MediumAttack">
+        <HullReference Name="HullMedium01Custom01"/>
+        <ShipRoleReference Name="ShipRoleMediumAttacker"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionE.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!--SE Section-->
+        <SlotBinding SlotName="SectionSE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyHull4Custom01</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <ShipDesignDefinition Name="Custom01_Invader">
+        <HullReference Name="HullMedium02Custom01"/>
+        <ShipRoleReference Name="ShipRoleMediumSupport"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Weapon01">
+            <ModuleReference Name="ModuleWeaponLaser1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionE.Weapon01">
+            <ModuleReference Name="ModuleWeaponLaser1"/>
+        </SlotBinding>
+        <!--SE Section-->
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponLaser1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionSE.Support01">
+            <ModuleReference Name="ModuleSupportCrew1"/>
+        </SlotBinding>
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+		
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyHull5Custom01</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <ShipDesignDefinition Name="Custom01_MediumDefense">
+        <HullReference Name="HullMedium02Custom01"/>
+        <ShipRoleReference Name="ShipRoleMediumSupport"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Weapon01">
+            <ModuleReference Name="ModuleWeaponLaser1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionE.Weapon01">
+            <ModuleReference Name="ModuleWeaponLaser1"/>
+        </SlotBinding>
+        <!--SE Section-->
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponLaser1"/>
+        </SlotBinding>
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyHull5Custom01</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <ShipDesignDefinition Name="Custom01_LargeCarrier">
+        <HullReference Name="HullLarge01Custom01"/>
+        <ShipRoleReference Name="ShipRoleCarrier"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!--SE Section-->
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.LargeWeapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyHull6Custom01</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <!--CUSTOM FACTIONS SUPPORT-->
+    <ShipDesignDefinition Name="Custom01_RootCreator">
+        <HullReference Name="HullSmall06Custom01"/>
+        <ShipRoleReference Name="ShipRoleRootCreator"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Support01">
+            <ModuleReference Name="ModuleSupportRootCreation1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <!--SE Section-->
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+
+        <PathPrerequisite>../ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+    </ShipDesignDefinition>
+	
+    <ShipDesignDefinition Name="Custom01_Leecher">
+        <HullReference Name="HullSmall05Custom01"/>
+        <ShipRoleReference Name="ShipRoleLeecher"/>
+        <SlotBinding SlotName="CoreSection.Support01">
+            <ModuleReference Name="ModuleGrowthLogistics1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.Weapon01">
+          <ModuleReference Name="ModuleGrowthLogistics1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionN.Support01">
+          <ModuleReference Name="ModuleGrowthLogistics1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleGrowthLogistics1"/>
+        </SlotBinding>
+        
+        <PathPrerequisite>../ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+    </ShipDesignDefinition>
+
+    <ShipDesignDefinition Name="Custom01_Mothership" Editable="true" Hidden="false">
+        <Tags>NoBuyout,Indestructible</Tags>
+        <HullReference Name="HullLarge00Custom01"/>
+        <ShipRoleReference Name="ShipRoleMothership"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.SupportDefense01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Support01">
+            <ModuleReference Name="ModuleMothershipScience1"/>
+        </SlotBinding>
+        <!--NE Section-->        
+        <!--E Section-->
+        <!--SE Section-->
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleMothershipLifeforce1"/>
+        </SlotBinding>
+
+        <PathPrerequisite>../ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+    </ShipDesignDefinition>
+
+	<ShipDesignDefinition Name="Custom01_SuperColonizer" Editable="true" Hidden="true" InspectionBypass="true">
+        <Tags>HideConstructionCost,Indestructible</Tags>
+        <HullReference Name="HullMedium03Custom01"/>
+        <ShipRoleReference Name="ShipRoleSuperColonizer"/>
+        <SlotBinding SlotName="SectionN.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionSE.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+
+        <PathPrerequisite>../ClassEmpire,FactionTraitManualHomeSystem</PathPrerequisite>
+    </ShipDesignDefinition>
+	
+	<ShipDesignDefinition Name="ShipDesignAutomatedShipCustom01" Hidden="true" Editable="false">
+        <HullReference Name="HullAutomated"/>
+        <ShipRoleReference Name="ShipRoleAutomated"/>
+    </ShipDesignDefinition>
+
+	</Datatable>

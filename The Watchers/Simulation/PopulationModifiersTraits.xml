@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitCustom01" SubCategory="Affinity" ShowInCustom="false">
+      <Modifiers>
+        <Modifier Class="ClassPopulationEmpire">
+          <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityCustom01"/>
+        </Modifier>
+        <Modifier Class="ClassPopulationStarSystem">
+          <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityCustom01"/>
+          <SimulationDescriptorReference Name="ClassPopulationStarSystemGrowthTypeIndustry"/>
+        </Modifier>
+      </Modifiers>
+      <AssimilatedModifiers>
+        <Modifier Class="ClassPopulationEmpire">
+          <SimulationDescriptorReference Name="ClassPopulationAssimilatedEmpireAffinityCustom01"/>
+        </Modifier>
+      </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+	
+	<PopulationModifiersTrait Name="PopulationModifiersTraitCustom01Count" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityCustom01Count"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityCustom01Count"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityCustom01Count"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

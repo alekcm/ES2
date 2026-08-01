@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+	<FactionAffinityMapping Name="AffinityMappingCustom01" SubCategory="MajorFactionAffinityMapping" Hidden="false" Custom="true" Cost="5">
+        <Command Name="RecruitHero"                     Arguments="HeroCustom0101"/>
+
+        <SimulationDescriptorReference Name="AffinityMappingCustom01" />
+
+        <ShipDesign Abstract="SuperColonizer"   ShipDesign="Custom01_SuperColonizer"/>
+        <ShipDesign Abstract="Colonizer"        ShipDesign="Custom01_Colonizer"/>
+        <ShipDesign Abstract="Explorer"         ShipDesign="Custom01_Explorer"/>
+        <ShipDesign Abstract="Leecher"          ShipDesign="Custom01_Leecher"/>
+        <ShipDesign Abstract="RootCreator"      ShipDesign="Custom01_RootCreator"/>
+        <ShipDesign Abstract="SmallAttack"      ShipDesign="Custom01_SmallAttack"/>
+        <ShipDesign Abstract="SmallSupport"     ShipDesign="Custom01_SmallSupport"/>
+        <ShipDesign Abstract="MediumAttack"     ShipDesign="Custom01_MediumAttack"/>
+        <ShipDesign Abstract="MediumDefense"    ShipDesign="Custom01_MediumDefense"/>
+        <ShipDesign Abstract="Invader"          ShipDesign="Custom01_Invader"/>
+        <ShipDesign Abstract="LargeCarrier"     ShipDesign="Custom01_LargeCarrier"/>
+        <ShipDesign Abstract="Mothership"       ShipDesign="Custom01_Mothership"/>
+
+        <ShipDesign Abstract="ScienceJuggernaut"    ShipDesign="Juggernauts_ScienceJuggernaut"/>
+        <ShipDesign Abstract="MilitaryJuggernaut"   ShipDesign="Juggernauts_MilitaryJuggernaut"/>
+        <ShipDesign Abstract="SupportJuggernaut"    ShipDesign="Juggernauts_SupportJuggernaut"/>
+        <ShipDesign Abstract="Battleship"           ShipDesign="Juggernauts_Battleship"/>
+        <ShipDesign Abstract="Obliterator"          ShipDesign="Juggernauts_Obliterator"/>
+    </FactionAffinityMapping>
+	
+	
+</Datatable>	

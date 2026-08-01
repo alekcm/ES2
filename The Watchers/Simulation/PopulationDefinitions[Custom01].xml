@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationDefinition.xsd">
+
+    <PopulationDefinition AffinityName="AffinityCustom01" Standard="true">
+
+        <DefaultPolitics>
+            <Politics PoliticsReference="Politics05" BaseScore="1" BaseTrend="0"/>
+        </DefaultPolitics>
+
+        <Trait Name="PopulationPoliticalTraitReligious"/>
+        <Trait Name="PopulationPoliticalTraitMilitaristToReligious"/>
+		<Trait Name="PopulationPoliticalTraitPious"/>
+		
+        <Trait Name="PopulationModifiersTraitCustom01Count"/>
+        <Trait Name="PopulationModifiersTraitCustom01"/>
+
+        <Trait Name="PopulationModifiersTraitPrimaryFIDSI"/>
+		<Trait Name="PopulationModifiersTraitSecondaryAntiDepletion01"/> 
+
+        <Trait Name="PopulationCollectionBonusTraitCustom01"/>
+
+        <Wills>
+        </Wills>
+
+        <AffinityMapping Name="AffinityMappingCustom01"/>
+
+        <GrowthBoostLuxuryOptions>
+            <Luxury>Luxury1</Luxury>
+            <Luxury>Luxury2</Luxury>
+            <Luxury>Luxury3</Luxury>
+            <Luxury>Luxury4</Luxury>
+            <Luxury>Luxury5</Luxury>
+            <Luxury>Luxury6</Luxury>
+            <Luxury>Luxury7</Luxury>
+            <Luxury>Luxury8</Luxury>
+        </GrowthBoostLuxuryOptions>
+    </PopulationDefinition>
+
+</Datatable>

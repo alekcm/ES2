@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TechnologyLinkDefinition.xsd">
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique2Custom01" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2Custom01</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull1Custom01</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique2Custom01"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique3Custom01" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2Custom01</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull2Custom01</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique3Custom01"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique4ToUnique6Custom01" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull4Custom01</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull3Custom01</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique4ToUnique6Custom01"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique5ToUnique7Custom01" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull5Custom01</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull4Custom01</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique5ToUnique7Custom01"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique8ToUnique9Custom01" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull6Custom01</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull5Custom01</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique8ToUnique9Custom01"/>
+    </TechnologyLinkDefinition>
+	
+</Datatable>

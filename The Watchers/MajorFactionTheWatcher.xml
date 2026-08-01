@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Runtime.RuntimeModule.xsd">
+	<RuntimeModule Name="MajorFactionTheWatcher" Type="Extension" Version="1.3">
+		<Tags>MajorFactions</Tags>
+		<Author>Klosterheim</Author>
+		<Homepage></Homepage>
+		<Title>Major Faction - The Watcher</Title>
+		<Description>
+Introduces a new faction complete with all the bells and whistles you would expect.
+At first this faction may seem overpowered, however; 
+It is a slow rolling snowball that requires careful management at higher difficulties
+Fully functioning with Penumbra DLC, although it is not required. 
+Supremacy DLC is required to access Behemoth Technology.
+
+Added Runeless Localization as an option.
+Copy the "english" folder located here:
+INSTALLPATH- Steam\steamapps\workshop\content\392110\1493351143\RUNELESS
+And Paste it in here, replacing the existing file when prompted:
+INSTALLPATH- Steam\steamapps\workshop\content\392110\1493351143\Localization
+Re-Subscribe to turn the runes back on.
+
+---
+Version 1.3:
+- Compatible with Penumbra DLC
+
+Version 1.2:
+- Runeless Version Added
+- Minor Localization Fixes
+
+Version 1.1:
+- Ship Texture Additions and Improvements
+- Completed Behemoth GuiElements
+- Completed Ark GuiElements
+- Completed Quest Lore
+- Minor Localization Fixes 
+
+Version 1.0:
+- Custom GUI Elements, Images and Textures
+- Endless Runes for Lore-Specific Elements
+
+- Unique Faction (The Watcher)
+- Unique Affinity (Horatio/Riftborn Hybrid)
+- Unique Population (Constructs)
+- Unique Home Planet (Arcadia)
+- Unique Hero (Prime Construct)
+- Customized Ship Textures (White/Gold Vodyani and Behemoths)
+- Customized Ship Modules (Non-Essence Vodyani Base)
+- Customized Quests (Vodyani Base)
+---
+
+Suggested Mods:
+White Heroes by Jaylo:
+https://steamcommunity.com/sharedfiles/filedetails/?id=1167782728
+
+Known Issues:
+- Overwrites Vodyani Ship Textures
+- "Introduction" Voiceline is based on most recent DLC installed.
+- Questline spawns a second "Tabernacle" System when against a Vodyani opponent
+(The correct system is usually the Second, use the button in the top right to navigate)
+		</Description>
+
+		<ReleaseNotes>Release 1.3: Major Faction Mod - The Watcher</ReleaseNotes>
+
+		<PreviewImageFile>ModIcon_MajorFactionTheWatcher.jpg</PreviewImageFile>
+
+		<Plugins>
+		
+		    <LocalizationPlugin DefaultLanguage="english">
+				<Directory>Localization</Directory>
+			</LocalizationPlugin>
+			
+			<DatabasePlugin DataType="Amplitude.Unity.Gui.GuiElement, Assembly-CSharp-firstpass">
+				<ExtraTypes>
+					<ExtraType  DataType="Amplitude.Unity.Gui.ExtendedGuiElement, Assembly-CSharp-firstpass" />
+					 <ExtraType DataType="AffinityGuiElement, Assembly-CSharp" />
+					 <ExtraType DataType="HeroGuiElement, Assembly-CSharp" />
+					 <ExtraType DataType="HeroClassGuiElement, Assembly-CSharp" />
+					 <ExtraType DataType="TechnologyGuiElement2, Assembly-CSharp" />
+					 <ExtraType DataType="QuestGuiElement, Assembly-CSharp" />
+					 <ExtraType DataType="SkinnedGuiElement, Assembly-CSharp" />
+				 </ExtraTypes>
+				<FilePath>Gui/GuiElements[Custom01].xml</FilePath>	 
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="GalaxyGeneratorWeightTableDefinition, Assembly-CSharp">
+				<FilePath>GalaxyGenerator/WeightTableDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="RemappingDefinition, Assembly-CSharp">
+				<FilePath>Mapping/RemappingDefinitions.xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="PlanetRemappingDefinition, Assembly-CSharp">
+				<FilePath>Mapping/PlanetRemappingDefinitions.xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="FleetNameMappingDefinition, Assembly-CSharp">
+				<FilePath>Mapping/FleetNameMappingDefinitions.xml</FilePath>			
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="Amplitude.Unity.Simulation.SimulationDescriptor, Assembly-CSharp-firstpass">
+				<FilePath>Simulation/SimulationDescriptors[Custom01].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="HeroAffinityDefinition, Assembly-CSharp">
+				<FilePath>Simulation/HeroAffinityDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>				
+
+			<DatabasePlugin DataType="HeroClassDefinition, Assembly-CSharp">
+				<FilePath>Simulation/HeroClassDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="HeroSkillTreeDefinition, Assembly-CSharp">
+				<FilePath>Simulation/HeroSkillTreeDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>	
+
+			<DatabasePlugin DataType="HeroDefinition, Assembly-CSharp">
+				<FilePath>Simulation/HeroDefinitions.xml</FilePath>
+			</DatabasePlugin>	
+
+			<DatabasePlugin DataType="MajorFaction, Assembly-CSharp">
+				<FilePath>Simulation/Factions[Major].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="Faction, Assembly-CSharp">
+			    <ExtraTypes>
+                    <ExtraType DataType="MajorFaction, Assembly-CSharp"/>
+                </ExtraTypes>
+				<FilePath>Simulation/Factions[Major].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="FactionTrait, Assembly-CSharp" Priority="20">
+				<ExtraTypes>
+					<ExtraType  DataType="FactionAffinity, Assembly-CSharp" />
+					<ExtraType  DataType="FactionAffinityMapping, Assembly-CSharp" />
+				</ExtraTypes>
+				<FilePath>Simulation/FactionTraits[*].xml</FilePath>				
+			</DatabasePlugin>	
+
+			<DatabasePlugin DataType="FactionAffinity, Assembly-CSharp">
+				<FilePath>Simulation/FactionTraits[Affinity].xml</FilePath>
+			</DatabasePlugin>
+
+			<DatabasePlugin DataType="FactionAffinityMapping, Assembly-CSharp">
+				<FilePath>Simulation/FactionTraits[AffinityMapping].xml</FilePath>			
+			</DatabasePlugin>	
+		
+			<DatabasePlugin DataType="EmpireImprovementDefinition, Assembly-CSharp">
+				<FilePath>Simulation/EmpireImprovements[Custom01].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="TechnologyLinkDefinition, Assembly-CSharp">
+				<FilePath>Simulation/TechnologyLinkDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="ShipDesignDefinition, Assembly-CSharp">
+				<FilePath>Simulation/Battle/ShipDesignDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>
+
+			<DatabasePlugin DataType="HullDefinition, Assembly-CSharp">
+				<FilePath>Simulation/Battle/HullDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="PopulationDefinition, Assembly-CSharp">
+				<FilePath>Simulation/PopulationDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>
+
+			<DatabasePlugin DataType="PopulationTrait, Assembly-CSharp">
+                <ExtraTypes>
+                    <ExtraType DataType="PopulationModifiersTrait, Assembly-CSharp"/>
+                    <ExtraType DataType="PopulationCollectionBonusTrait, Assembly-CSharp"/>
+                </ExtraTypes>
+                <FilePath>Simulation/PopulationModifiersTraits.xml</FilePath>
+                <FilePath>Simulation/PopulationCollectionBonusTraits.xml</FilePath>
+            </DatabasePlugin>
+			
+			<DatabasePlugin DataType="IndustryConstructibleElement, Assembly-CSharp">
+				<ExtraTypes>
+					 <ExtraType DataType="StarSystemImprovementDefinition, Assembly-CSharp" />
+					 <ExtraType DataType="StarSystemPopulationTransformImprovementDefinition, Assembly-CSharp" />
+				</ExtraTypes>
+				<FilePath>Simulation/ConstructibleElement_Industry[Custom01].xml</FilePath>	 
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="ScienceConstructibleElement, Assembly-CSharp">
+				<ExtraTypes>
+					<ExtraType DataType="TechnologyDefinition, Assembly-CSharp" />
+				</ExtraTypes>
+				<FilePath>Simulation/ConstructibleElement_Science[Custom01].xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="QuestDefinition, Assembly-CSharp">
+				<Overrides>
+					<Override Name="Prerequisites" DataType="Amplitude.Query.Xml.XmlQueryPrerequisites, Assembly-CSharp-firstpass">
+						<ExtraType Name="FilterConstellationByDistance" DataType="QuestFilterConstellationByDistance, Assembly-CSharp" />
+						<ExtraType Name="FilterSystemByStatus" DataType="QuestFilterSystemByStatus, Assembly-CSharp" />
+						<ExtraType Name="FilterSystemByDistance" DataType="QuestFilterSystemByDistance, Assembly-CSharp" />
+						<ExtraType Name="FilterSystemByCuriosity" DataType="QuestFilterSystemByCuriosity, Assembly-CSharp" />
+						<ExtraType Name="FilterPlanetByCuriosity" DataType="QuestFilterPlanetByCuriosity, Assembly-CSharp" />
+						<ExtraType Name="FilterShipDesignByModule" DataType="QuestFilterShipDesignByModule, Assembly-CSharp" />
+						<ExtraType Name="FilterByStringValue" DataType="QuestFilterByStringValue, Assembly-CSharp" />
+						<ExtraType Name="IsNot" DataType="QuestFilterDifferentEntity, Assembly-CSharp" />
+					</Override>
+					<Override Name="Sorter" DataType="Amplitude.Query.Xml.XmlQuerySorter, Assembly-CSharp-firstpass">
+						<ExtraType Name="SortConstellationByDistance" DataType="QuestSorterConstellationByDistance, Assembly-CSharp" />
+						<ExtraType Name="SortSystemByDistance" DataType="QuestSorterSystemByDistance, Assembly-CSharp" />
+					</Override>
+				</Overrides>
+				<FilePath>Quests/QuestDefinitions[Custom01].xml</FilePath>
+			</DatabasePlugin>
+
+		</Plugins>
+	</RuntimeModule>
+</Datatable>

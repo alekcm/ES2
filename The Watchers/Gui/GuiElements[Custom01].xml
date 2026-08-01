@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+	<GuiElement Name="CategoryFactionCustom01">
+      <Title>%PopulationCustom01Title</Title>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Small" />
+      </Icons>
+    </GuiElement>
+	
+	<AffinityGuiElement Name="AffinityMappingCustom01" PreloadCount="3" >
+        <Title>%AffinityCustom01Title</Title>
+        <Description>%AffinityCustom01Description</Description>
+        <Icons>
+			<Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Small" />
+			<Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Medium" />
+			<Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityPopulationIconsOverride04MediumInverted" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Heroes/QuestHeroEndless02Large" />
+            <Icon Size="Leader" Path="Bitmaps/Dynamic/Heroes/HeroArchivist01Large" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityRandomMood" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Dynamic/Affinities/AffinityRandomMood" />
+            <Icon Size="MediumExtended" Path="Bitmaps/Dynamic/Affinities/AffinityRandomMood" />
+            <Icon Size="Loading" Path="Textures/LoadingScreen.png" />
+        </Icons>
+        <SymbolString>[custom04]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+        <ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitArchivist01</ModelPath>
+    </AffinityGuiElement>
+
+	<ExtendedGuiElement Name="ClassPopulationEmpireAffinityCustom01">
+        <Title>%ClassPopulationEmpireAffinityCustom01Title</Title>      
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityCustom01Count">
+        <Title>%ClassPopulationEmpireAffinityCustom01Title</Title>
+    </ExtendedGuiElement>
+
+	<ExtendedGuiElement Name="ClassPopulationStarSystemAffinityCustom01">
+		<Title>%ClassPopulationStarSystemAffinityCustom01Title</Title>
+        <SymbolString>[custom04]</SymbolString>
+        <TooltipElement>
+            <EffectOverride>%ClassPopulationStarSystemAffinityCustom01TooltipEffect</EffectOverride>
+        </TooltipElement>
+		<Color Red="255" Green="255" Blue="255" Alpha="255" />
+	</ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityCustom01Count">
+        <Title>%ClassPopulationStarSystemAffinityCustom01Title</Title>
+        <SymbolString>[custom04]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>	
+
+	<ExtendedGuiElement Name="ClassPopulationPlanetAffinityCustom01">
+		<Title>%PopulationCustom01Title</Title>
+		<Description>%PopulationCustom01Description</Description>
+		<SymbolString>[custom04]</SymbolString>
+		<Color Red="255" Green="255" Blue="255" Alpha="255" />
+		<AltTitle>%PopulationCustom01Title</AltTitle>
+	</ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationPlanetAffinityCustom01Count">
+        <Title>%PopulationCustom01Title</Title>
+        <Description>%PopulationCustom01Description</Description>
+        <SymbolString>[custom04]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+        <AltTitle>%PopulationCustom01Title</AltTitle>
+    </ExtendedGuiElement>	
+	
+	<ExtendedGuiElement Name="AffinityGameplayTechnologyCustom01">
+        <Title>%AffinityGameplayCustom01Title</Title>
+        <Description>%AffinityGameplayCustom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityGameplaySmall" />
+        </Icons>
+    </ExtendedGuiElement>
+	
+	<ExtendedGuiElement Name="AffinityCustom01">
+		<Title>%AffinityCustom01Title</Title>
+		<Description>%AffinityCustom01Description</Description>
+		<Icons>
+			<Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Small" />
+			<Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Medium" />
+			<Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityPopulationIconsOverride04MediumInverted" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Heroes/QuestHeroEndless02Large" />
+            <Icon Size="Leader" Path="Bitmaps/Dynamic/Heroes/HeroArchivist01Large" />
+		</Icons>
+		<SymbolString>[custom04]</SymbolString>
+		<Color Red="74" Green="122" Blue="244" Alpha="255" />
+	</ExtendedGuiElement>
+
+	<ExtendedGuiElement Name="AffinityGameplayCustom01">
+        <Title>%AffinityGameplayCustom01Title</Title>
+        <Description>%AffinityGameplayCustom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Small" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%AffinityGameplayCustom01TooltipEffect</EffectOverride>
+        </TooltipElement>		
+    </ExtendedGuiElement>
+
+    <GuiElement Name="PopulationCollectionBonusTraitCustom01">
+        <Title>%PopulationCollectionBonusTraitCustom01Title</Title>
+        <Description>%PopulationCollectionBonusTraitCustom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="DiplomaticAbilitiesTruceSmall" />
+        </Icons>
+    </GuiElement>
+	
+    <GuiElement Name="FactionCustom01">
+        <Title>%FactionCustom01Title</Title>
+        <Description>%FactionCustom01Description</Description>
+    </GuiElement>	
+	
+	<GuiElement Name="UniquePlanetCustom01">
+        <Title>%UniquePlanetCustom01Title</Title>
+        <Description>%UniquePlanetCustom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="PlanetType"/>
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/UniquePlanetVampirilisMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeUniqueSykagojaLarge" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Notifications/NotificationUniquePlanetSykagojaLarge" />
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeHomeWorldHoratioPlanetoid"/>
+        </Icons>
+    </GuiElement>
+
+	<GuiElement Name="TroopInfantryAffinityGameplayCustom01">
+        <Title>%TroopInfantryTitle</Title>
+        <Description>%TroopInfantryDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/HarmonyInfantrySmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopTankAffinityGameplayCustom01">
+        <Title>%TroopTankTitle</Title>
+        <Description>%TroopTankDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/AdvancedTankSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopPlaneAffinityGameplayCustom01">
+        <Title>%TroopPlaneTitle</Title>
+        <Description>%TroopPlaneDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/AdvancedPlaneSmall" />
+        </Icons>
+    </GuiElement>		
+		
+    <HeroGuiElement Name="HeroCustom0101">
+        <Title>%HeroCustom0101Title</Title>
+        <Description>%HeroCustom0101Description</Description>
+        <Icons>
+			<Icon Size="Medium" Path="Bitmaps/Dynamic/Heroes/QuestHeroEndless02Medium" />
+			<Icon Size="Large" Path="Bitmaps/Dynamic/Heroes/QuestHeroEndless02Large" />
+		</Icons>
+		<ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitQuestHeroEndless02</ModelPath>
+	</HeroGuiElement>
+	
+	<ExtendedGuiElement Name="HeroAffinityCustom01">
+        <Title>%HeroAffinityCustom01Title</Title>
+        <Description>%HeroAffinityCustom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Small" />
+        </Icons>
+    </ExtendedGuiElement>
+		
+	<HeroClassGuiElement Name="HeroClassOverseer">
+        <Title>%HeroClassOverseerTitle</Title>
+        <Description>%HeroClassOverseerDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride01Small" />
+        </Icons>
+        <SymbolString>[custom01]</SymbolString>
+        <AffectedBy></AffectedBy>
+    </HeroClassGuiElement>	
+	
+	<ExtendedGuiElement Name="HeroSkillTreeCustom01">
+        <Title>%HeroSkillTreeCustom01Title</Title>
+        <Description>%HeroSkillTreeCustom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Small" />
+        </Icons>
+        <Color Red="231" Green="103" Blue="0" Alpha="255"/>
+    </ExtendedGuiElement>
+
+	<ExtendedGuiElement Name="HeroSkillTreeOverseer">
+        <Title>%HeroSkillTreeOverseerTitle</Title>
+        <Description>%HeroSkillTreeOverseerDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride01Small" />
+        </Icons>
+         <Color Red="115" Green="147" Blue="141" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="HeroSkillTreeNewBasic">
+        <Title>%HeroSkillTreeNewBasicTitle</Title>
+        <Description>%HeroSkillTreeNewBasicDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="/Atlased/Hero/HeroesHeroesSmall" />
+        </Icons>
+        <Color Red="148" Green="168" Blue="20" Alpha="255"/>
+    </ExtendedGuiElement>		
+		
+	<ExtendedGuiElement Name="StarSystemImprovementCreateMajorPopulation2">
+        <Title>%StarSystemImprovementCreateMajorPopulation2Title</Title>
+        <Description>%StarSystemImprovementCreateMajorPopulation2Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Heroes/QuestHeroEndless02Large" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Heroes/QuestHeroEndless02Large" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%StarSystemImprovementCreateMajorPopulationEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="StarSystemImprovementIndustryToManpower2">
+        <Title>%StarSystemImprovementIndustryToManpower2Title</Title>
+        <Description>%StarSystemImprovementIndustryToManpower2Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="EmpireManPowerSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/EmpireManPowerLarge" />
+        </Icons>
+    </GuiElement>
+	
+	    <GuiElement Name="CategoryHeroSkillTreeCustom01">
+        <Title>%CategoryHeroSkillTreeCustom01Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride04Small" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryHeroSkillTreeOverseer">
+        <Title>%CategoryHeroSkillTreeOverseerTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/PopulationIconsOverride01Small" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryHeroSkillTreeNewBasic">
+        <Title>%CategoryHeroSkillTreeNewBasicTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Hero/HeroesHeroesSmall" />
+        </Icons>
+    </GuiElement>
+	
+	<ExtendedGuiElement Name="CategoryTechnologyFactionCustom01">
+        <Title>%CategoryTechnologyFactionCustom01Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryTechnologySmall" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+	
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique1Custom01" X="2.75" Y="0">
+        <Title>%TechnologyDefinitionUnique1VampirilisTitle</Title>
+        <Description>%TechnologyDefinitionUnique1VampirilisDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique1Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique3Custom01" X="4.5" Y="0">
+        <Title>%TechnologyDefinitionUnique3VampirilisTitle</Title>
+        <Description>%TechnologyDefinitionUnique3VampirilisDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique3Small" />
+        </Icons>
+    </TechnologyGuiElement2>	
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique2Custom01" X="3.25" Y="0">
+        <Title>%TechnologyDefinitionUnique2VampirilisTitle</Title>
+        <Description>%TechnologyDefinitionUnique2VampirilisDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique2Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+	
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique5Custom01" X="2.15" Y="0">
+        <Title>%TechnologyDefinitionUnique5VampirilisTitle</Title>
+        <Description>%TechnologyDefinitionUnique5VampirilisDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique5Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique4Custom01" X="1" Y="0">
+        <Title>%TechnologyDefinitionUnique4VampirilisTitle</Title>
+        <Description>%TechnologyDefinitionUnique4VampirilisDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique4Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique8Custom01" X="5.75" Y="0">
+        <Title>%TechnologyDefinitionUnique8Title</Title>
+        <Description>%TechnologyDefinitionUnique8Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique8Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique8Custom01Vampirilis" X="5.75" Y="0">
+        <Title>%TechnologyDefinitionUnique8Title</Title>
+        <Description>%TechnologyDefinitionUnique8Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique8Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique10Custom01" X="4.75" Y="0">
+        <Title>%TechnologyDefinitionUnique10VampirilisTitle</Title>
+        <Description>%TechnologyDefinitionUnique10VampirilisDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique10Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+	
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique6Custom01" X="1" Y="0">
+        <Title>%TechnologyDefinitionUnique6Title</Title>
+        <Description>%TechnologyDefinitionUnique6Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique6Small" />
+        </Icons>
+    </TechnologyGuiElement2>	
+	
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique9Custom01" X="6" Y="0">
+    <Title>%TechnologyDefinitionUnique9Title</Title>
+    <Description>%TechnologyDefinitionUnique9Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique9Small" />
+    </Icons>
+  </TechnologyGuiElement2>	
+	
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique9Custom01Vampirilis" X="6" Y="0">
+    <Title>%TechnologyDefinitionUnique9Title</Title>
+    <Description>%TechnologyDefinitionUnique9Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique9Small" />
+    </Icons>
+  </TechnologyGuiElement2>	
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionUnique7Custom01" X="2.25" Y="0">
+    <Title>%TechnologyDefinitionUnique7Title</Title>
+    <Description>%TechnologyDefinitionUnique7Description</Description>
+    <Icons>
+        <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionUnique7Small" />
+    </Icons>
+  </TechnologyGuiElement2>	
+
+  <GuiPlanetTypeBaseStats Name="PlanetTypeCustom01">
+        <Stat Name="MeanRadius" Min="6000" Max="7000" />
+        <Stat Name="Mass" Min="5" Max="9" />
+        <Stat Name="SurfaceGravity" Min="9" Max="12" />
+        <Stat Name="OrbitalPeriod" Min="150" Max="290" />
+        <Stat Name="RotationPeriod" Min="0.8" Max="1.4" />
+        <Stat Name="AtmosphereComposition">
+            <StatDetail Name="N₂" Min="70" Max="90" />
+            <StatDetail Name="O₂" Min="15" Max="25" />
+            <StatDetail Name="Ar" Min="1" Max="3" />
+            <StatDetail Name="H₂" Min="0" Max="1" />
+            <StatDetail Name="H₂O" Min="1" Max="2" />
+            <StatDetail Name="CO₂" Min="0" Max="1" />
+            <StatDetail Name="SO₂" Min="0" Max="1" />
+            <StatDetail Name="CH₄" Min="0" Max="1" />
+        </Stat>
+        <Stat Name="AtmospherePressure" Min="0.9" Max="1.1" />
+        <Stat Name="AtmosphereTemperature" Min="290" Max="295" />
+        <Stat Name="PlanetMainElements">
+            <StatDetail Name="Fe" Min="30" Max="40" />
+            <StatDetail Name="O" Min="25" Max="35" />
+            <StatDetail Name="Si" Min="25" Max="35" />
+            <StatDetail Name="Mg" Min="10" Max="20" />
+            <StatDetail Name="S" Min="1" Max="3" />
+            <StatDetail Name="Ni" Min="1" Max="3" />
+            <StatDetail Name="Ca" Min="1" Max="2" />
+            <StatDetail Name="Al" Min="1" Max="2" />
+        </Stat >
+        <Stat Name="CoreType" Value="%PlanetCoreTypeMetallicTitle" />
+    </GuiPlanetTypeBaseStats>
+
+    <GuiElement Name="MothershipLevel1">
+        <Title>%MothershipLevel1Title</Title>
+        <Description>%MothershipLevel1Description</Description>
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewArkPathfindersLevel1Banner" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="MothershipLevel2">
+        <Title>%MothershipLevel2Title</Title>
+        <Description>%MothershipLevel2Description</Description>
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewArkPathfindersLevel2Banner" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="MothershipLevel3">
+        <Title>%MothershipLevel3Title</Title>
+        <Description>%MothershipLevel3Description</Description>
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewArkPathfindersLevel3Banner" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="MothershipLevel4">
+        <Title>%MothershipLevel4Title</Title>
+        <Description>%MothershipLevel4Description</Description>
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewArkPathfindersLevel4Banner" />
+        </Icons>
+    </GuiElement>
+
+    <SkinnedGuiElement Name="Recipe1Mothership" SkinName="Pathfinders">
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewArkPathfindersLevel2Constructible" />
+            <Icon Size="Large" Path="Textures/NewArkPathfindersLevel2Banner" />
+        </Icons>
+    </SkinnedGuiElement>
+
+    <SkinnedGuiElement Name="Recipe2Mothership" SkinName="Pathfinders">
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewArkPathfindersLevel3Constructible" />
+            <Icon Size="Large" Path="Textures/NewArkPathfindersLevel3Banner" />
+        </Icons>
+    </SkinnedGuiElement>
+
+    <SkinnedGuiElement Name="Recipe3Mothership" SkinName="Pathfinders">
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewArkPathfindersLevel4Constructible" />
+            <Icon Size="Large" Path="Textures/NewArkPathfindersLevel4Banner" />
+        </Icons>
+    </SkinnedGuiElement>
+  
+      <!-- HULLS -->
+    <GuiElement Name="HullAutomatedCustom01"/>
+	
+    <GuiElement Name="HullHero01Custom01">
+      <Title>%HullHero01Custom01Title</Title>
+      <Description>%HullHero01Custom01Description</Description>
+      <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/HeroesPathfinder/ShipHullHeroesPathfinder02Small" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/HeroesPathfinder/ShipHullHeroesPathfinder02Large" />
+      </Icons>
+    </GuiElement>	  
+	  
+    <GuiElement Name="HullSmall01Custom01">
+        <Title>%HullSmall01Custom01Title</Title>
+        <Description>%HullSmall01Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewSwordSmall" />
+            <Icon Size="Large" Path="Textures/NewSwordLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullSmall02Custom01">
+        <Title>%HullSmall02Custom01Title</Title>
+        <Description>%HullSmall02Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShieldSmall" />
+            <Icon Size="Large" Path="Textures/NewShieldLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullSmall03Custom01">
+        <Title>%HullSmall03Custom01Title</Title>
+        <Description>%HullSmall03Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewColonySmall"/>
+            <Icon Size="Large" Path="Textures/NewColonyLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullSmall04Custom01">
+        <Title>%HullSmall04Custom01Title</Title>
+        <Description>%HullSmall04Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewSwordSmall" />
+            <Icon Size="Large" Path="Textures/NewSwordLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullSmall05Custom01">
+        <Title>%HullSmall05Custom01Title</Title>
+        <Description>%HullSmall05Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewColonySmall" />
+            <Icon Size="Large" Path="Textures/NewColonyLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullSmall06Custom01">
+        <Title>%HullSmall06Custom01Title</Title>
+        <Description>%HullSmall06Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewColonySmall" />
+            <Icon Size="Large" Path="Textures/NewColonyLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullMedium01Custom01">
+        <Title>%HullMedium01Custom01Title</Title>
+        <Description>%HullMedium01Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewMartyrSmall" />
+            <Icon Size="Large" Path="Textures/NewMartyrLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullMedium02Custom01">
+        <Title>%HullMedium02Custom01Title</Title>
+        <Description>%HullMedium02Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewTitanSmall" />
+            <Icon Size="Large" Path="Textures/NewTitanLarge" />
+        </Icons>
+    </GuiElement>
+	
+	<GuiElement Name="HullMedium03Custom01">
+        <Title>%HullMedium03Custom01Title</Title>
+        <Description>%HullMedium03Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/Vaulters/ShipHullMedium03VaultersSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vaulters/ShipHullMedium03VaultersLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullLarge01Custom01">
+        <Title>%HullLarge01Custom01Title</Title>
+        <Description>%HullLarge01Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewCarrierSmall" />
+            <Icon Size="Large" Path="Textures/NewCarrierLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullLarge00Custom01">
+        <Title>%HullLarge00Custom01Title</Title>
+        <Description>%HullLarge00Custom01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullVampirilisPathfindersMothershipSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullVampirilisPathfindersMothershipLarge" />
+        </Icons>
+    </GuiElement>
+  
+<!-- SHIP DESIGNS -->
+    <GuiElement Name="Custom01_Hero">
+      <Title>%ShipDesignHeroCustom01Title</Title>
+      <Description>%ShipDesignHeroCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/HeroesPathfinder/ShipHullHeroesPathfinder02Small" />
+        <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/HeroesPathfinder/ShipHullHeroesPathfinder02Large" />
+      </Icons>
+    </GuiElement>	
+	
+    <GuiElement Name="Custom01_Colonizer">
+      <Title>%ShipDesignSmall03ColonizerCustom01Title</Title>
+      <Description>%ShipDesignSmall03ColonizerCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/TETSY2" />
+        <Icon Size="Large" Path="Textures/What" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="ShipDesignDecolonizationCustom01">
+      <Title>%ShipDesignSmall03ColonizerCustom01Title</Title>
+      <Description>%ShipDesignSmall03ColonizerCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewColonySmall" />
+        <Icon Size="Large" Path="Textures/NewColonyLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_Explorer">
+      <Title>%ShipDesignSmall03ExplorerCustom01Title</Title>
+      <Description>%ShipDesignSmall03ExplorerCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewColonySmall" />
+        <Icon Size="Large" Path="Textures/NewColonyLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_Invader">
+      <Title>%ShipDesignMedium02InvaderCustom01Title</Title>
+      <Description>%ShipDesignMedium02InvaderCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewColonySmall" />
+        <Icon Size="Large" Path="Textures/NewColonyLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_SmallAttack">
+      <Title>%ShipDesignSmall01AttackerCustom01Title</Title>
+      <Description>%ShipDesignSmall01AttackerCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewSwordSmall" />
+        <Icon Size="Large" Path="Textures/NewSwordLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_SmallSupport">
+      <Title>%ShipDesignSmall02SupporterCustom01Title</Title>
+      <Description>%ShipDesignSmall02SupporterCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewShieldSmall" />
+        <Icon Size="Large" Path="Textures/NewShieldLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_Leecher">
+      <Title>%ShipDesignSmall05LeecherCustom01Title</Title>
+      <Description>%ShipDesignSmall05LeecherCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewColonySmall" />
+        <Icon Size="Large" Path="Textures/NewColonyLarge" />
+      </Icons>
+    </GuiElement>
+  
+    <GuiElement Name="Custom01_RootCreator">
+      <Title>%ShipDesignSmall06RootCreatorCustom01Title</Title>
+      <Description>%ShipDesignSmall06RootCreatorCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewColonySmall" />
+        <Icon Size="Large" Path="Textures/NewColonyLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_MediumAttack">
+      <Title>%ShipDesignMedium01AttackerCustom01Title</Title>
+      <Description>%ShipDesignMedium01AttackerCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewMartyrSmall" />
+        <Icon Size="Large" Path="Textures/NewMartyrLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_MediumDefense">
+      <Title>%ShipDesignMedium02DefenderCustom01Title</Title>
+      <Description>%ShipDesignMedium02DefenderCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewTitanSmall" />
+        <Icon Size="Large" Path="Textures/NewTitanLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_LargeCarrier">
+      <Title>%ShipDesignLarge01CarrierCustom01Title</Title>
+      <Description>%ShipDesignLarge01CarrierCustom01Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Textures/NewCarrierSmall" />
+        <Icon Size="Large" Path="Textures/NewCarrierLarge" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Custom01_Mothership">
+      <Title>%ShipDesignLarge00MothershipCustom01Title</Title>
+      <Description>%ShipDesignLarge00MothershipCustom01Description</Description>
+      <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullVampirilisPathfindersMothershipSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullVampirilisPathfindersMothershipLarge" />
+      </Icons>
+    </GuiElement>
+	
+	<SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade3Mothership" SkinName="Pathfinders">
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewEmpireImprovementStageEconomyAndTrade3LargeMothership" />
+        </Icons>
+    </SkinnedGuiElement>	
+	
+    <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade4Mothership" SkinName="Pathfinders">
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewEmpireImprovementStageEconomyAndTrade4LargeMothership" />
+        </Icons>
+    </SkinnedGuiElement>	
+	
+    <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade5Mothership" SkinName="Pathfinders">
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewEmpireImprovementStageEconomyAndTrade5LargeMothership" />
+        </Icons>
+    </SkinnedGuiElement>
+	
+    <SkinnedGuiElement Name="EmpireImprovementImprovedArk2" SkinName="Pathfinders">
+        <Title>%EmpireImprovementImprovedArk2Title</Title>
+        <Description>%EmpireImprovementImprovedArk2Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullVampirilisMothershipSmallLevel1" />
+            <Icon Size="Large" Path="Textures/NewShipHullVampirilisMothershipLargeLevel1" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementImprovedArkTooltipOverride</EffectOverride>
+        </TooltipElement>
+    </SkinnedGuiElement>	
+	
+    <SkinnedGuiElement Name="EmpireImprovementImprovedArk3" SkinName="Pathfinders">
+        <Title>%EmpireImprovementImprovedArk3Title</Title>
+        <Description>%EmpireImprovementImprovedArk3Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullVampirilisMothershipSmallLevel2" />
+            <Icon Size="Large" Path="Textures/NewShipHullVampirilisMothershipLargeLevel2" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementImprovedArkTooltipOverride</EffectOverride>
+        </TooltipElement>
+    </SkinnedGuiElement>
+	
+	<SkinnedGuiElement Name="EmpireImprovementImprovedArk4" SkinName="Pathfinders">
+        <Title>%EmpireImprovementImprovedArk4Title</Title>
+        <Description>%EmpireImprovementImprovedArk4Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullVampirilisMothershipSmallLevel3" />
+            <Icon Size="Large" Path="Textures/NewShipHullVampirilisMothershipLargeLevel3" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementImprovedArkTooltipOverride</EffectOverride>
+        </TooltipElement>
+    </SkinnedGuiElement>
+
+<!-- JUGG -->
+
+    <GuiElement Name="HullJuggernaut01Juggernauts">
+        <Title>%HullJuggernaut01JuggernautsTitle</Title>
+        <Description>%HullJuggernaut01JuggernautsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullJuggernaut01bisJuggernauts">
+        <Title>%HullJuggernaut01JuggernautsTitle</Title>
+        <Description>%HullJuggernaut01JuggernautsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullJuggernaut02Juggernauts">
+        <Title>%HullJuggernaut02JuggernautsTitle</Title>
+        <Description>%HullJuggernaut02JuggernautsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut02JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut02JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="HullJuggernaut03Juggernauts">
+        <Title>%HullJuggernaut03JuggernautsTitle</Title>
+        <Description>%HullJuggernaut03JuggernautsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut03JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut03JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Juggernauts_ScienceJuggernaut">
+        <Title>%ShipDesignJuggernautsScienceJuggernautTitle</Title>
+        <Description>%ShipDesignJuggernautsScienceJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Juggernauts_MilitaryJuggernaut">
+        <Title>%ShipDesignJuggernautsMilitaryJuggernautTitle</Title>
+        <Description>%ShipDesignJuggernautsMilitaryJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Juggernauts_SupportJuggernaut">
+        <Title>%ShipDesignJuggernautsSupportJuggernautTitle</Title>
+        <Description>%ShipDesignJuggernautsSupportJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Juggernauts_SupportJuggernautHisshos">
+        <Title>%ShipDesignJuggernautsSupportJuggernautTitle</Title>
+        <Description>%ShipDesignJuggernautsSupportJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Juggernauts_Battleship">
+        <Title>%ShipDesignJuggernautsBattleshipTitle</Title>
+        <Description>%ShipDesignJuggernautsBattleshipDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut02JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut02JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="Juggernauts_Obliterator">
+        <Title>%ShipDesignJuggernautsObliteratorTitle</Title>
+        <Description>%ShipDesignJuggernautsObliteratorDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut03JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut03JuggernautsLarge" />
+        </Icons>
+    </GuiElement>
+	
+  <GuiElement Name="ShipQuestHisshos_MilitaryJuggernaut">
+    <Title>%ShipDesignJuggernautsMilitaryJuggernautTitle</Title>
+    <Description>%ShipDesignJuggernautsMilitaryJuggernautDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+      <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+    </Icons>
+  </GuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsMilitary1Juggernaut">
+        <Title>%EmpireImprovementSlotsMilitary1JuggernautTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsMilitary1JuggernautTooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsMilitary1BattleshipJuggernaut">
+        <Title>%EmpireImprovementSlotsMilitary1BattleshipJuggernautTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut02JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut02JuggernautsLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsMilitary1BattleshipJuggernautTooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementBattleshipSpecializationJuggernaut">
+        <Title>%EmpireImprovementBattleshipSpecializationJuggernautTitle</Title>
+        <Description>%EmpireImprovementBattleshipSpecializationJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut02JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut02JuggernautsLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementJuggernautSpecializationEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementObliteratorSpecializationJuggernaut">
+        <Title>%EmpireImprovementObliteratorSpecializationJuggernautTitle</Title>
+        <Description>%EmpireImprovementObliteratorSpecializationJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut03JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut03JuggernautsLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementJuggernautSpecializationEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsSupport1Juggernaut">
+        <Title>%EmpireImprovementSlotsSupport1JuggernautTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsSupport1JuggernautTooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementImprovedHull1Juggernaut">
+        <Title>%EmpireImprovementImprovedHull1JuggernautTitle</Title>
+        <Description>%EmpireImprovementImprovedHull1JuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementImprovedHull4Juggernaut">
+        <Title>%EmpireImprovementImprovedHull4JuggernautTitle</Title>
+        <Description>%EmpireImprovementImprovedHull4JuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementImprovedHull5Juggernaut">
+        <Title>%EmpireImprovementImprovedHull5JuggernautTitle</Title>
+        <Description>%EmpireImprovementImprovedHull5JuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementImprovedHull6Juggernaut">
+        <Title>%EmpireImprovementImprovedHull6JuggernautTitle</Title>
+        <Description>%EmpireImprovementImprovedHull6JuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementHonorBoostJuggernaut">
+        <Title>%EmpireImprovementHonorBoostJuggernautTitle</Title>
+        <Description>%EmpireImprovementHonorBoostJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Textures/NewShipHullJuggernaut01JuggernautsSmall" />
+            <Icon Size="Large" Path="Textures/NewShipHullJuggernaut01JuggernautsLarge" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="JuggernautSpecializationObliterator">
+        <Title>%ShipRoleObliteratorTitle</Title>
+        <Description>%ShipRoleObliteratorDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewJuggernautSpecializationObliteratorLarge"/>
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="JuggernautSpecializationBattleship">
+        <Title>%ShipRoleBattleshipTitle</Title>
+        <Description>%ShipRoleBattleshipDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Textures/NewJuggernautSpecializationBattleshipLarge"/>
+        </Icons>
+    </GuiElement>	
+  
+<!-- QUESTS -->
+
+	<QuestGuiElement Name="Custom01Quest-Chapter1">
+        <Title>%Custom01Quest-Chapter1-Step1Title</Title>
+        <Description>%Custom01Quest-Chapter1-Step1Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Tutorial/TutorialQuest01Large" Size="Quest" />
+
+        </Icons>
+        <Steps>
+            <Step  Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%Custom01Quest-Chapter1-Step1</Title>
+                    <Description>%Custom01Quest-Chapter1-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter1-Step1ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter1-Step1Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%Custom01Quest-Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective1">%Custom01Quest-Chapter1-Step1Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter1-Step2">
+        <Title>%Custom01Quest-Chapter1-Step2Title</Title>
+        <Description>%Custom01Quest-Chapter1-Step2Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest02Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="Step2_1" Politics="Politics00">
+                    <Title>%Custom01Quest-Chapter1-C1Step2</Title>
+                    <Description>%Custom01Quest-Chapter1-C1Step2Description</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter1-C1Step2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter1-C1Step2Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%Custom01Quest-Chapter1-C1Step2OutcomeFailed</OutcomeFailed>
+                    <Objective Name="Step2_1_Objective1">%Custom01Quest-Chapter1-C1Step2Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="Step2_2" Politics="Politics05">
+                    <Title>%Custom01Quest-Chapter1-C2Step2</Title>
+                    <Description>%Custom01Quest-Chapter1-C2Step2Description</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter1-C2Step2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter1-C2Step2Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%Custom01Quest-Chapter1-C2Step2Failed</OutcomeFailed>
+                    <Objective Name="Step2_2_Objective1">%Custom01Quest-Chapter1-C2Step2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter2">
+        <Title>%Custom01Quest-Chapter2-Title</Title>
+        <Description>%Custom01Quest-Chapter2-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Notifications/NotificationRemainsSpawnedLarge" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%Custom01Quest-Chapter2-C1</Title>
+                    <Description>%Custom01Quest-Chapter2-C1Description</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter2-C1ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter2-C1Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%Custom01Quest-Chapter2-C1Failed</OutcomeFailed>
+                    <Objective Name="Step2_1_Objective1">%Custom01Quest-Chapter2-C1Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%Custom01Quest-Chapter2-C2</Title>
+                    <Description>%Custom01Quest-Chapter2-C2Description</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter2-C2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter2-C2Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%Custom01Quest-Chapter2-C2Failed</OutcomeFailed>
+                    <Objective Name="Step2_2_Objective1">%Custom01Quest-Chapter2-C2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter2Ter">
+        <Title>%Custom01Quest-Chapter2-Title</Title>
+        <Description>%Custom01Quest-Chapter2-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Notifications/NotificationRemainsSpawnedLarge" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%Custom01Quest-Chapter2-C1</Title>
+                    <Description>%Custom01Quest-Chapter2-C1Description</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter2-C1ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter2-C1Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%Custom01Quest-Chapter2-C1Failed</OutcomeFailed>
+                    <Objective Name="Step2_1_Objective1">%Custom01Quest-Chapter2-C1Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%Custom01Quest-Chapter2-C2</Title>
+                    <Description>%Custom01Quest-Chapter2-C2Description</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter2-C2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter2-C2Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%Custom01Quest-Chapter2-C2Failed</OutcomeFailed>
+                    <Objective Name="Step2_2_Objective1">%Custom01Quest-Chapter2-C2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter2Alt">
+        <Title>%Custom01Quest-Chapter2-Title</Title>
+        <Description>%Custom01Quest-Chapter2-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Notifications/NotificationRemainsSpawnedLarge" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%Custom01Quest-Chapter2-C2-Alt</Title>
+                    <Description>%Custom01Quest-Chapter2-C2-AltDescription</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter2-C2-AltObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter2-C2-AltOutcome</OutcomeCompleted>                  
+                    <Objective Name="Step2_2_Objective1">%Custom01Quest-Chapter2-C2-AltObjective</Objective>
+                </ObjectiveSet>                
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter3-Rebellious-Step1">
+        <Title>%Custom01Quest-Chapter3-Rebellious-Step1-Title</Title>
+        <Description>%Custom01Quest-Chapter3-Rebellious-Step1-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventReveal07Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">                  
+                    <Description>%Custom01Quest-Chapter3-Rebellious-Step1-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter3-Rebellious-Step1Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter3-Rebellious-Step1Outcome</OutcomeCompleted>
+                    <Objective Name="Step1_Objective1">%Custom01Quest-Chapter3-Rebellious-Step1Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter3-Religious">
+        <Title>%Custom01Quest-Chapter3-Religious-Title</Title>
+        <Description>%Custom01Quest-Chapter3-Religious-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventReveal07Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">                   
+                    <Description>%Custom01Quest-Chapter3-Religious-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter3-Religious-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter3-Religious-Outcome</OutcomeCompleted>
+                    <Objective Name="Step1_Objective1">%Custom01Quest-Chapter3-Religious-Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Description>%Custom01Quest-Chapter3-Religious-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter3-Religious-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter3-Religious-Outcome</OutcomeCompleted>
+                    <Objective Name="Step1_Objective2">%Custom01Quest-Chapter3-Religious-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <QuestGuiElement Name="Custom01Quest-Chapter3-Rebellious-Step2">
+        <Title>%Custom01Quest-Chapter3-Rebellious-Step2-Title</Title>
+        <Description>%Custom01Quest-Chapter3-Rebellious-Step2-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventReveal07Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Description>%Custom01Quest-Chapter3-Rebellious-Step2-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter3-Rebellious-Step2Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter3-Rebellious-Step2Outcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective1">%Custom01Quest-Chapter3-Rebellious-Step2Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Description>%Custom01Quest-Chapter3-Rebellious-Step2-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter3-Rebellious-Step2Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter3-Rebellious-Step2Outcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective2">%Custom01Quest-Chapter3-Rebellious-Step2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter4-Rebellious-Step1">
+        <Title>%Custom01Quest-Chapter4-Rebellious-Step1-Title</Title>
+        <Description>%Custom01Quest-Chapter4-Rebellious-Step1-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Sophon/Sophon_quest_chap4_SCI_v1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Description>%Custom01Quest-Chapter4-Rebellious-Step1-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter4-Rebellious-Step1Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter4-Rebellious-Step1Outcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective1">%Custom01Quest-Chapter4-Rebellious-Step1Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter4-Religious-Step1">
+        <Title>%Custom01Quest-Chapter4-Religious-Step1-Title</Title>
+        <Description>%Custom01Quest-Chapter4-Religious-Step1-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Sophon/Sophon_quest_chap4_SCI_v1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Description>%Custom01Quest-Chapter4-Religious-Step1-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter4-Religious-Step1Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter4-Religious-Step1Outcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective1">%Custom01Quest-Chapter4-Religious-Step1Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter4-Rebellious-Step2">
+        <Title>%Custom01Quest-Chapter4-Rebellious-Step2-Title</Title>
+        <Description>%Custom01Quest-Chapter4-Rebellious-Step2-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Sophon/Sophon_quest_chap4_SCI_v1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Description>%Custom01Quest-Chapter4-Rebellious-Step2-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter4-Rebellious-Step2Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter4-Rebellious-Step2Outcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective1">%Custom01Quest-Chapter4-Rebellious-Step2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter4-Rebellious-Step2Bis">
+        <Title>%Custom01Quest-Chapter4-Rebellious-Step2Bis-Title</Title>
+        <Description>%Custom01Quest-Chapter4-Rebellious-Step2Bis-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Sophon/Sophon_quest_chap4_SCI_v1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Description>%Custom01Quest-Chapter4-Rebellious-Step2Bis-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter4-Rebellious-Step2BisTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter4-Rebellious-Step2BisOutcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective1">%Custom01Quest-Chapter4-Rebellious-Step2BisObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Custom01Quest-Chapter4-Rebellious-Step2Ter">
+        <Title>%Custom01Quest-Chapter4-Rebellious-Step2Ter-Title</Title>
+        <Description>%Custom01Quest-Chapter4-Rebellious-Step2Ter-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Sophon/Sophon_quest_chap4_SCI_v1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Description>%Custom01Quest-Chapter4-Rebellious-Step2Ter-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter4-Rebellious-Step2TerTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter4-Rebellious-Step2TerOutcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective1">%Custom01Quest-Chapter4-Rebellious-Step2TerObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <QuestGuiElement Name="Custom01Quest-Chapter4-Religious-Step2">
+        <Title>%Custom01Quest-Chapter4-Religious-Step2-Title</Title>
+        <Description>%Custom01Quest-Chapter4-Religious-Step2-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Sophon/Sophon_quest_chap4_SCI_v1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Description>%Custom01Quest-Chapter4-Religious-Step2-Description01</Description>
+                    <TooltipDescription>%Custom01Quest-Chapter4-Religious-Step2Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%Custom01Quest-Chapter4-Religious-Step2Outcome</OutcomeCompleted>
+                    <Objective Name="Step2_Objective1">%Custom01Quest-Chapter4-Religious-Step2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+  
+<!-- HULL IMPROVEMENT -->
+    <ExtendedGuiElement Name="EmpireImprovementSlotsSmall01Custom01">
+        <Title>%EmpireImprovementSlotsSmall01Custom01Era2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewSwordSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewSwordLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsSmall01Custom01Era2TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsSmall02Custom01">
+        <Title>%EmpireImprovementSlotsSmall02Custom01Era2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewShieldSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewShieldLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsSmall02Custom01Era2TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>  
+  
+    <ExtendedGuiElement Name="EmpireImprovementSlotsMedium01Custom01">
+        <Title>%EmpireImprovementSlotsMedium01Custom01Era3Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewMartyrSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewMartyrLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsMedium01Custom01Era3TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsMedium02Custom01">
+        <Title>%EmpireImprovementSlotsMedium02Custom01Era3Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewTitanSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewTitanLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsMedium02Custom01Era3TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+	
+	<ExtendedGuiElement Name="EmpireImprovementSlotsLarge01Custom01">
+        <Title>%EmpireImprovementSlotsLarge01Custom01Era4Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewCarrierSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewCarrierLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsLarge01Custom01Era4TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsSmall01Custom02">
+        <Title>%EmpireImprovementSlotsSmall01Custom01Era2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewSwordSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewSwordLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsSmall01Custom01Era2TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsSmall02Custom02">
+        <Title>%EmpireImprovementSlotsSmall02Custom01Era2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewShieldSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewShieldLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsSmall02Custom01Era2TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>  
+  
+    <ExtendedGuiElement Name="EmpireImprovementSlotsMedium01Custom02">
+        <Title>%EmpireImprovementSlotsMedium01Custom01Era3Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewMartyrSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewMartyrLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsMedium01Custom01Era3TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementSlotsMedium02Custom02">
+        <Title>%EmpireImprovementSlotsMedium02Custom01Era3Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewTitanSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewTitanLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsMedium02Custom01Era3TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+	
+	<ExtendedGuiElement Name="EmpireImprovementSlotsLarge01Custom02">
+        <Title>%EmpireImprovementSlotsLarge01Custom01Era4Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipHulls/NewCarrierSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/NewCarrierLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%EmpireImprovementSlotsLarge01Custom01Era4TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>  	
+</Datatable>

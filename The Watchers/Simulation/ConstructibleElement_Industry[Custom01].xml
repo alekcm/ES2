@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/IndustryConstructibleElement.xsd">
+
+	<StarSystemPopulationTransformImprovementDefinition   Name="StarSystemImprovementCreateMajorPopulation2" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
+                                                      PopulationDestination="Major"  PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+        <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
+        <SupervisorGain Name="Industry" Weight="0.15"/>
+        <SupervisorGain Name="Food"     Weight="0.15"/>
+        <SupervisorGain Name="Dust"     Weight="0.15"/>
+        <SupervisorGain Name="Science"  Weight="0.15"/>
+        <Tags>NoBuyout</Tags>
+        <QueuedSimulationDescriptorReference Name="QueuedDescriptorIncreaseVirtualPopulation"/>
+        <CustomCost ResourceName="SystemProduction">(50 + Property(StockLocation,@ClassColonizedStarSystem,MajorPopulationCount) * 100) * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
+        <PathPrerequisite Inverted="false"   Flags="Prerequisite,Discard">ClassColonizedStarSystem</PathPrerequisite>
+        <PathPrerequisite Inverted="false"   Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityCustom01</PathPrerequisite>
+        <PathPrerequisite Inverted="true"   Flags="Prerequisite,Discard">../ClassEmpire,EmpireImprovementQuestCustom0105</PathPrerequisite>
+        <PathPrerequisite Inverted="true"   Flags="Prerequisite,Discard">../ClassEmpire,EmpireImprovementQuestCustom0107</PathPrerequisite>
+        <InterpreterPrerequisite Flags="MaximumPopulationSystem,Enqueue">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (1 + Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Prerequisite">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementCreateMajorPopulation"/>
+        <NextUpgradeName>StarSystemImprovementQuestCustom0105</NextUpgradeName>
+        <NextUpgradeName>StarSystemImprovementQuestCustom0107</NextUpgradeName>
+    </StarSystemPopulationTransformImprovementDefinition>
+	
+    <StarSystemImprovementDefinition Name="StarSystemImprovementIndustryToManpower2" SubCategory="SubCategoryInfiniteManpower" >
+        <AIGain RessourceName="ResourceConverter">
+            <Tag>IndustryConverter</Tag>
+        </AIGain>
+        <AIGain RessourceName="ManpowerGain"/>
+
+        <SupervisorGain Name="Military" />
+        <Tags>NoBuyout</Tags>
+        <InProgressSimulationDescriptorReference Name="StarSystemImprovementIndustryToManpowerEffect" />
+        <InProgressSimulationDescriptorReference Name="StarSystemImprovementInfinite"/>
+        <InfiniteCost ResourceName="SystemTurnBased"/>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite Inverted="false"          Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityCustom01</PathPrerequisite>
+        <PathPrerequisite Inverted="true"   Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestCustom0106</PathPrerequisite>
+        <PathPrerequisite Inverted="true"   Flags="Prerequisite,Discard">../ClassEmpire,EmpireImprovementQuestCustom0107</PathPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementIndustryToManpower"/>
+        <NextUpgradeName>StarSystemImprovementQuestCustom0106</NextUpgradeName>
+        <NextUpgradeName>StarSystemImprovementQuestCustom0108</NextUpgradeName>
+    </StarSystemImprovementDefinition>
+	
+</Datatable>

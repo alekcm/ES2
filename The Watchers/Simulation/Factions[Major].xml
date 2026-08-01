@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/MajorFaction.xsd">
+
+    <MajorFaction Name="FactionCustom01" Standard="true" Author="Klosterheim" Priority="1">
+        <Affinity Name="AffinityGameplayCustom01"/>
+
+        <Trait Name="IsMajorFaction"/>
+
+		<Trait Name="FactionTraitStartWithTitanium"/>
+        <Trait Name="FactionTraitStartWithHyperium"/>
+		
+		<Trait Name="FactionTraitTechnologyDefinitionEconomyAndTrade1"/>
+		<Trait Name="FactionTraitTechnologyDefinitionEconomyAndTrade2"/>
+		<Trait Name="FactionTraitCrowdedPlanets2"/>
+		<Trait Name="FactionTraitEternalWar"/>
+		<Trait Name="FactionTraitJuggernautSpecialists"/>
+		
+		
+        <TraitStartingSenate Priority="100">
+            <Government Name="GovernmentEmpire"/>
+            <PoliticsWeight Politics="Politics01" Weight="0"/>
+            <PoliticsWeight Politics="Politics02" Weight="0"/>
+            <PoliticsWeight Politics="Politics03" Weight="0"/>
+            <PoliticsWeight Politics="Politics04" Weight="1"/>
+            <PoliticsWeight Politics="Politics05" Weight="3"/>
+            <PoliticsWeight Politics="Politics06" Weight="0"/>
+        </TraitStartingSenate>
+
+        <Bailiff Name="DefaultMoneyBailiff"/>
+        <Bailiff Name="DefaultEmpirePointBailiff"/> 
+
+        <MajorPopulation Affinity="AffinityCustom01"     Count="2"/>
+    </MajorFaction>
+
+</Datatable>

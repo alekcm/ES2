@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+	<SimulationDescriptor Name="ClassHullHeroCustom01" Type="ClassHull">
+    </SimulationDescriptor>	
+	<SimulationDescriptor Name="HeroClassOverseer"       	Type="HeroClass"/>
+    <SimulationDescriptor Name="HeroAffinityCustom01"        Type="HeroAffinity"/>
+
+    <SimulationDescriptor Name="TechnologyHull2Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyHull3Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyHull4Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyHull5Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyHull6Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyHull6Custom01NonVampirilis"            Type="Technology" IsSerializable="false"/>	
+	
+    <SimulationDescriptor Name="TechnologyHullMothership1Custom01"                      Type="Technology" IsSerializable="false"/>
+	
+    <SimulationDescriptor Name="TechnologyImproveHull1Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyImproveHull2Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyImproveHull3Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyImproveHull4Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyImproveHull5Custom01"            Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyImproveHull5Custom01NonVampirilis"            Type="Technology" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique2Custom01"   Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique3Custom01"   Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkExclusionUnique2Unique3Custom01"    Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique4ToUnique6Custom01"    Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique5ToUnique7Custom01"    Type="TechnologyLink"/>	
+	<SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique8ToUnique9Custom01"    Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkExclusionUnique6Unique7Custom01"    Type="TechnologyLink" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="PopulationCollectionBonusCustom011" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="false"   TooltipOverride="%TooltipOverridePositivePolitics05"/>
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom01Count"   TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom0Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom1Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom2Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom3Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom4Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom5Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom6Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom7Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom8Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom9Count"      TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom10Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="PopulationCollectionBonusCustom011,ClassPopulationEmpireAffinityCustom11Count"     TooltipHidden="true"   />
+	</SimulationDescriptor> 
+      
+    <SimulationDescriptor Name="PopulationCollectionBonusCustom012" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="SystemFIDSIPercentBonusFromCollection" Operation="Addition" Value="0.05" Path="false/./ClassEmpire/ClassStarSystem/ClassPopulationStarSystemAffinityCustom01" SearchValueFromPath="true" />
+        <Modifier TargetProperty="SystemFIDSIPercentBonusFromCollection" Operation="Addition" Value="0.05" Path="PopulationCollectionBonusCustom012,ClassPopulationEmpireAffinityCustom01Count/./ClassEmpire/ClassStarSystem/ClassPopulationStarSystemAffinityCustom01" SearchValueFromPath="true" TooltipHidden="true"/> 
+    </SimulationDescriptor>
+
+	<SimulationDescriptor Name="PopulationCollectionBonusCustom013" Type="PopulationCollectionBonus">
+		<Modifier TargetProperty="HealthPerTurn" Operation="Percent" Value="1" Path="./ClassEmpire/ClassHero"/>	
+    </SimulationDescriptor>
+	
+	<SimulationDescriptor Name="AffinityGameplayCustom01" Type="AffinityGameplay">
+
+        <Modifier TargetProperty="HasAffinityGeneHunter"        Operation="Force"     Value="1"    Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HasAffinityGeneHunter"        Operation="Force"     Value="1"    Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeForest" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeTerran" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeMonsoon" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeOcean" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeAtoll" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeBoreal" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeJungle" TooltipHidden="true"/>
+    </SimulationDescriptor>
+	
+	<SimulationDescriptor Name="EmpireImprovementSlotsSmall01Custom01" Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipHull01,ShipSizeSmall" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall02Custom01" Type="EmpireImprovement"      >
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipHull02,ShipSizeSmall" TooltipHidden="true"/>
+    </SimulationDescriptor>
+	
+    <SimulationDescriptor Name="EmpireImprovementSlotsMedium01Custom01"    Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull01" TooltipHidden="true"/>
+    </SimulationDescriptor>
+	
+    <SimulationDescriptor Name="EmpireImprovementSlotsMedium02Custom01"    Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull02" TooltipHidden="true"/>
+    </SimulationDescriptor>
+	
+    <SimulationDescriptor Name="EmpireImprovementSlotsLarge01Custom01" Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeLarge" TooltipHidden="true"/>
+    </SimulationDescriptor>	
+	
+	<SimulationDescriptor Name="ClassPopulationEmpireAffinityCustom01" Type="ClassPopulationEmpire"/>
+	
+	<SimulationDescriptor Name="AffinityCustom01" Type="Affinity"/>	
+	
+	<SimulationDescriptor Name="AffinityMappingCustom01" Type="AffinityMapping"/>
+	
+	<SimulationDescriptor Name="UniquePlanetCustom01"  Type="UniquePlanet" >
+		<Modifier TargetProperty="PlanetRawFood"        Operation="Addition" Value="0" />
+		<Modifier TargetProperty="PlanetRawIndustry"    Operation="Addition" Value="4" />
+		<Modifier TargetProperty="PlanetRawDust"        Operation="Addition" Value="4" />
+		<Modifier TargetProperty="PlanetRawScience"     Operation="Addition" Value="3" />
+        <Modifier TargetProperty="PlanetRawPrestige"    Operation="Addition" Value="1" />		
+    </SimulationDescriptor>
+	
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityCustom01" Type="ClassPopulationStarSystem">
+        <Modifier         TargetProperty="ShouldPopulationGrow"       Operation="Force"       Value="-1"  TooltipHidden="true"/>        
+        <Modifier       TargetProperty="PopulationWithGrowth"       Operation="Subtraction" Value="$(PopulationCount)" Path="./ClassStarSystem" TooltipHidden="true"/>
+    </SimulationDescriptor>
+	
+    <SimulationDescriptor Name="ClassPopulationPlanetAffinityCustom01Count" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="PopulationCount"   Operation="Addition" Value="$(PopulationCount)" Path="../ClassStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityCustom01Count" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityCustom01Count" Type="ClassPopulationStarSystem">
+        <Modifier TargetProperty="PopulationCount"      Operation="Addition" Value="$(PopulationCount)"     Path="./!ClassExploitedStarSystem,!ColonizedStarSystemStateLost/../ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityCustom01Count" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityCustom01Count"   Type="ClassPopulationEmpire">
+        <Modifier TargetProperty="NetPopulationScore" Operation="Multiplication" Value="$(PopulationGrowthScoreModifier)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassPopulationStarSystemAffinityCustom01Count" Priority="100" TooltipHidden="true"/>
+    </SimulationDescriptor>
+	
+</Datatable>
+	
+	

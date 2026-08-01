@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HeroSkillTreeDefinition.xsd">
+
+	<!--ETERNAL TREE-->
+    <HeroSkillTreeDefinition Name="HeroSkillTreeCustom01">
+        <Stage Level="0">
+            <Skill>
+                <SkillDefinition Name="HeroSkill01BranchMinorFaction01"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill02BranchVampirilis"/>
+            </Skill>
+        </Stage>
+        <Stage Level="4">
+            <Skill>
+                <SkillDefinition Name="HeroSkill03BranchVampirilis"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill04BranchVampirilis"/>
+            </Skill>
+        </Stage>
+        <Stage Level="8">
+            <Skill>
+                <SkillDefinition Name="HeroSkill05BranchVampirilis"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill06BranchVampirilis"/>
+            </Skill>
+        </Stage>
+        <Stage Level="12">
+            <Skill>
+                <SkillDefinition Name="HeroSkill07BranchVampirilis"/>
+            </Skill>
+        </Stage>
+    </HeroSkillTreeDefinition>
+	
+	<!--OVERSEER TREE-->
+	<HeroSkillTreeDefinition Name="HeroSkillTreeOverseer">
+        <Stage Level="0">
+            <Skill>
+                <SkillDefinition Name="HeroSkill01BranchAdmiral"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill02BranchAdmiral"/>
+            </Skill>
+        </Stage>
+        <Stage Level="4">
+            <Skill>
+                <SkillDefinition Name="HeroSkill03BranchAdmiral"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill04BranchAdmiral"/>
+            </Skill>
+        </Stage>
+        <Stage Level="8">
+            <Skill>
+                <SkillDefinition Name="HeroSkill05BranchAdmiral"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill06BranchAdmiral"/>
+            </Skill>
+        </Stage>
+        <Stage Level="12">
+            <Skill>
+                <SkillDefinition Name="HeroSkill07BranchAdmiral"/>
+            </Skill>
+        </Stage>
+    </HeroSkillTreeDefinition>
+	<!--NEWBASIC TREE-->	
+    <HeroSkillTreeDefinition Name="HeroSkillTreeNewBasic">
+        <Stage Level="0">
+            <Skill>
+                <SkillDefinition Name="HeroSkill01BranchGeneric"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill02BranchGeneric"/>
+            </Skill>
+        </Stage>
+        <Stage Level="4">
+            <Skill>
+                <SkillDefinition Name="HeroSkill03BranchGeneric"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill04BranchGeneric"/>
+            </Skill>
+        </Stage>
+        <Stage Level="8">
+            <Skill>
+                <SkillDefinition Name="HeroSkill05BranchGeneric"/>
+            </Skill>
+            <Skill>
+                <SkillDefinition Name="HeroSkill06BranchGeneric"/>
+            </Skill>
+        </Stage>
+        <Stage Level="12">
+            <Skill>
+                <SkillDefinition Name="HeroSkill07BranchGeneric"/>
+            </Skill>
+        </Stage>
+    </HeroSkillTreeDefinition>	
+	
+</Datatable>	

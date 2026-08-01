@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HeroDefinition.xsd">
+
+    <HeroDefinition Name="HeroCustom0101">
+        <Skill Name="HeroSkill01Vampirilis02"/>
+        <Skill Name="HeroSkill02Vampirilis02"/>
+
+        <Affinity Name="HeroAffinityCustom01"/>
+        <Class Name="HeroClassOverseer"/>
+        <Politics Name="HeroPolitics05"/>
+
+        <ShipDesign Name="Custom01_Hero"/>
+
+        <SkillTree Name="HeroSkillTreeNewBasic"/>
+		<SkillTree Name="HeroSkillTreeCustom01"/>
+        <SkillTree Name="HeroSkillTreeOverseer"/>
+
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+	
+</Datatable>
