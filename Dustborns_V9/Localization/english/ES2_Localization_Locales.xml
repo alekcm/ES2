@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Localization.LocalizationDatatableElement.xsd">
     <LocalizationPair Name="%FactionDustbornsTitle">Пылерождённые</LocalizationPair>
-    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, конверсия еды в пыль 25% (технологии ветки «Сухая Жатва» поднимают до 100%). Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
+    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (технологии ветки «Сухая Жатва» поднимают до 100%). Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
 
     <LocalizationPair Name="%AffinityGameplayDustbornsTitle">Пылерождённые + Безвольные</LocalizationPair>
     <LocalizationPair Name="%AffinityGameplayDustbornsDescription">-10% пром за каждого Пылерождённого на планете, 0/+8/+16 пыли через теги планеты, еда в пыль постоянна, безвольные без политики.</LocalizationPair>
@@ -13,7 +13,7 @@
     <LocalizationPair Name="%AffinityMappingDustbornsDescription">Корабли из пыли.</LocalizationPair>
 
     <LocalizationPair Name="%PopulationDustbornsTitle">Пылерождённый</LocalizationPair>
-    <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, конверсия еды в пыль 25% (до 100% технологиями).</LocalizationPair>
+    <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (до 100% технологиями).</LocalizationPair>
 
     <LocalizationPair Name="%PopulationBezvolnyTitle">Безвольный</LocalizationPair>
     <LocalizationPair Name="%PopulationBezvolnyDescription">+3 промышленности (+6 на истощённой), без науки/влияния, без политики, не растёт.</LocalizationPair>
@@ -47,6 +47,8 @@
     <LocalizationPair Name="%PlanetDepletionPerTurnTitle">Истощение</LocalizationPair>
     <LocalizationPair Name="%SystemMoneyFromGrowthConversionTitle">Конверсия еды в пыль</LocalizationPair>
     <LocalizationPair Name="%SystemProductionFromGrowthTitle">Конверсия еды</LocalizationPair>
+    <LocalizationPair Name="%SystemGrowthTitle">Излишек еды</LocalizationPair>
+    <LocalizationPair Name="%SystemGrowthDescription">Излишек еды системы (после содержания населения).</LocalizationPair>
 
     <LocalizationPair Name="%ClassPopulationEmpireAffinityDustbornsTitle">Пылерождённые</LocalizationPair>
     <LocalizationPair Name="%ClassPopulationStarSystemAffinityDustbornsTitle">Пылерождённые</LocalizationPair>
@@ -56,6 +58,8 @@
     <LocalizationPair Name="%ClassPopulationPlanetAffinityBezvolnyCountTitle">Безвольный</LocalizationPair>
 
     <!-- ============ ТЕХНОЛОГИИ ============ -->
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust0Title">Первый Голод</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust0Description">Награда главы 1 «Голод». Разблокирует конверсию излишка еды в Пыль: 0% -&gt; 25%.</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornFoodToDust1Title">Сухая Жатва</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornFoodToDust1Description">Конверсия еды в Пыль: 25% -&gt; 50%.</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornFoodToDust2Title">Обезвоживание Биомассы</LocalizationPair>
@@ -172,8 +176,85 @@
     <LocalizationPair Name="%DustbornCatalogRacesHolderTitle">Каталог Рас</LocalizationPair>
     <LocalizationPair Name="%DustbornCatalogRacesHolderDescription">+2% к добыче Пыли за каждую уникальную переваренную расу. Без потолка.</LocalizationPair>
     <LocalizationPair Name="%DustbornCatalogPlanetEntryTitle">Каталог Миров</LocalizationPair>
-    <LocalizationPair Name="%DustbornCatalogPlanetEntryDescription">+2/+4 к сбору Пыли за каждый уникальный истощённый тип планеты.</LocalizationPair>
+    <LocalizationPair Name="%DustbornCatalogPlanetEntryDescription">Запись в Каталоге Миров: +2/+4 к сбору Пыли за каждый уникальный истощённый тип планеты (автоматически при первом истощении типа).</LocalizationPair>
     <LocalizationPair Name="%DustbornCatalogRaceEntryTitle">Новая запись в Каталоге Рас</LocalizationPair>
     <LocalizationPair Name="%DustbornCatalogRaceEntryDescription">+2% к добыче Пыли.</LocalizationPair>
 
+    <!-- ============ КВЕСТЫ: GUI (QuestGuiElement) ============ -->
+    <LocalizationPair Name="%DustbornsQuest-Chapter1-Desc01">Облака сгущаются над первой жертвой. Переварите чужаков — и их оболочки будут работать на нас.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter1-Tooltip">Завершите постройку «Переварить в Безвольного» 2 раза.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter1-Outcome">Первые оболочки встали в строй. Пыль помнит их имена.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter2_A_Title">Затвердение</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-A-Desc">Мы не можем держать молоток. Но можем ненадолго затвердеть и стать им.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-A-Tooltip">Выкупите 3 постройки за Пыль.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-A-Outcome">Пыль затвердела в инструмент. Штраф производства снят.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter2_B_Title">Полное Пищеварение</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-B-Desc">Мир — одноразовый обед. Научимся выедать его до самого дна.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-B-Tooltip">Полностью истощите 2 планеты.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-B-Outcome">Пищеварение ускорилось: миры отдают больше Пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter2_C_Title">Пастбище</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-C-Desc">Может, не есть всё подряд? Чужаков можно разводить.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-C-Tooltip">10 ходов подряд держите не менее 2 минорных популяций.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2-C-Outcome">Пастбище разбито. Чужаки восстанавливают истощённые миры.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter3_A_Title">Идти на Холод</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-A-Desc">У холодных миров медленная, кристаллическая мысль — её можно выучить.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-A-Tooltip">Истощите 3 холодные планеты (Арктика/Тундра).</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-A-Outcome">Мы выучили холод: наука теперь зависит от добытой Пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter3_B_Title">Идти на Жар</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-B-Desc">У горячих миров нет мысли — только форма и давление. Их можно повторить.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-B-Tooltip">Истощите 3 горячие планеты (Лава/Пустыня/Пепел).</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-B-Outcome">Мы повторили жар: пылевые конструкции стали дешевле.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter3_C_Title">Идти на Мёртвое</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-C-Desc">У мёртвых миров нет ничего — именно поэтому они учат есть, когда есть нечего.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-C-Tooltip">Истощите 3 бесплодные планеты (Пустошь/Астероид).</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3-C-Outcome">Скупая мудрость: Пыль собирается даже со Стерильных миров.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter4_A_Title">Долгое Соседство</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter4-A-Desc">Оболочки не думают. Но живые рядом с ними чувствуют.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter4-A-Tooltip">10 ходов подряд держите не менее 4 минорных популяций.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter4-A-Outcome">Влияние Пыли на разум: чужаки счастливее рядом с нами.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter4_B_Title">Абразивный Стан</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter4-B-Desc">Стан из затвердевшей пыли, который точит чужую сталь.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter4-B-Tooltip">Постройте Абразивный Стан в системе с истощённой планетой.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter4-B-Outcome">Стан работает: армия империи сильнее на 10%.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter5_A_Title">Осевшие</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter5-A-Desc">Мир мёртв. Но кладбище можно превратить в склад.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter5-A-Tooltip">10 ходов подряд держите не менее 20 Безвольных.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter5-A-Outcome">Курган Осевших: +4 производства на истощённых мирах.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter5_B_Title">Свернуть Лагерь</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter5-B-Desc">Мы — стихийное бедствие. Бедствия не оседают.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter5-B-Tooltip">Истощите 8 планет.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter5-B-Outcome">Лагерь свёрнут: разбор построек даёт Пыль.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-Find-Desc">Здесь Пыль впервые подумала. Машина размером с планету, до сих пор тёплая.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-Find-Tooltip">Найдите Первый Курган в отдалённой системе.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-Find-Outcome">Мы нашли Первый Курган. Теперь решаем, кем быть.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter6_A_Title">Погасить Источник</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-A-Desc">Уничтожить машину, что нас создала. Стать чем-то большим, чем голод.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-A-Tooltip">Истощение остановлено, но экономика переходит на население и конверсию.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-A-Outcome">Источник погашен. Мы больше не стихийное бедствие.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter6_B_Title">Открыть Жилу</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-B-Desc">Машина не враг — она источник. Вскрыть её и пить.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-B-Tooltip">Первый Курган становится Неисчерпаемым миром.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-B-Outcome">Жила открыта: +10 000 Пыли и вечный источник.</LocalizationPair>
+
+    <LocalizationPair Name="%Chapter6_C_Title">Возвращение к Корням</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-C-Desc">Машина — колыбель. Вернуться в неё и стать снова плотью.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-C-Tooltip">Пылерождённые становятся Курганорождёнными.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6-C-Outcome">Пыль обрела плоть. Курганорождённые — наше будущее.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsSide-ScholarShells-Desc01">Эта оболочка пустая, как и все прочие. Но пальцы её всё ещё считают. Может, привычку стоит сохранить?</LocalizationPair>
+    <LocalizationPair Name="%DustbornsSide-ScholarShells-Tooltip">Переварите первого жителя в Безвольного.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsSide-ScholarShells-Outcome">Считающие Оболочки разблокированы: +2 науки за каждого Пылерождённого рядом.</LocalizationPair>
 </Datatable>

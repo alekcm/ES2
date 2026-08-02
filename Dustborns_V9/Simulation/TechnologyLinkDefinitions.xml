@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TechnologyLinkDefinition.xsd">
+
+    <!-- ============================================================================
+         ВЕТКИ ТЕХНОЛОГИЙ ПЫЛЕРОЖДЁННЫХ
+         TechnologyLinkDefinition рисует ЛИНИЮ между двумя технологиями в дереве
+         и (через дескриптор TechnologyLink на Research) даёт скидку в CustomCost.
+         Паттерн взят из официального примера разработчиков ExampleTechnology.
+         ============================================================================ -->
+
+    <!-- Ветка "Сухая Жатва" (Экономика и Торговля): 0 (Т1) -> 1 -> 2 -> 3 -->
+    <TechnologyLinkDefinition Name="TechnologyLinkDustbornFoodToDust0To1" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornFoodToDust0</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornFoodToDust1</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkDustbornFoodToDust0To1"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDustbornFoodToDust1To2" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornFoodToDust1</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornFoodToDust2</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkDustbornFoodToDust1To2"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDustbornFoodToDust2To3" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornFoodToDust2</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornFoodToDust3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkDustbornFoodToDust2To3"/>
+    </TechnologyLinkDefinition>
+
+    <!-- Ветка "Переваривание" (Развитие Империи): 1 -> 2 -> 3 -->
+    <TechnologyLinkDefinition Name="TechnologyLinkDustbornDigestion1To2" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornDigestion1</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornDigestion2</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkDustbornDigestion1To2"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDustbornDigestion2To3" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornDigestion2</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornDigestion3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkDustbornDigestion2To3"/>
+    </TechnologyLinkDefinition>
+
+    <!-- Ветка "Истощение/Оболочки" (Наука и Исследование): Терпеливые Ветра -> Армированные Оболочки -->
+    <TechnologyLinkDefinition Name="TechnologyLinkDustbornDepletionToShells" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornDepletion1</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyDustbornShells1</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkDustbornDepletionToShells"/>
+    </TechnologyLinkDefinition>
+
+</Datatable>

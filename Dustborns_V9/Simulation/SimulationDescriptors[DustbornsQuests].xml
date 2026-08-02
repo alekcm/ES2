@@ -167,6 +167,14 @@
     <SimulationDescriptor Name="SystemTreatyBroken" Type="StarSystem"/>
 
     <!-- 2.10 Разблокировка Считающих Оболочек -->
+    <!-- Дескрипторы TechnologyLink: вешаются на Research при активации линков технологий -->
+    <SimulationDescriptor Name="TechnologyLinkDustbornFoodToDust0To1" Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkDustbornFoodToDust1To2" Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkDustbornFoodToDust2To3" Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkDustbornDigestion1To2" Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkDustbornDigestion2To3" Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkDustbornDepletionToShells" Type="TechnologyLink"/>
+
     <SimulationDescriptor Name="EmpireUnlockedScholarShells" Type="DustbornReward"/>
 
     <!-- Служебный тип для наград -->
@@ -177,45 +185,52 @@
          ====================================================================== -->
 
     <!-- Ветка A: конверсия еды в пыль 25% -> 50% -> 75% -> 100%.
-         База 25% зашита в ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust (литерал 0.25).
-         Каждая техника добавляет ещё +25% излишка еды в пыль напрямую в SystemMoney системы. -->
+         Технология Т1 (Первый Голод, эра 1) РАЗБЛОКИРОВЫВАЕТ механику и даёт первые +25%.
+         Каждая следующая техника добавляет ещё +25% излишка еды в пыль
+         напрямую в SystemMoney системы. Базы в трейте популяции больше нет. -->
+    <SimulationDescriptor Name="TechnologyDustbornFoodToDust0" Type="Technology">
+        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
+                        Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
     <SimulationDescriptor Name="TechnologyDustbornFoodToDust1" Type="Technology">
         <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
                         Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
-                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
+                        Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornFoodToDust2" Type="Technology">
         <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
                         Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
-                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
+                        Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornFoodToDust3" Type="Technology">
         <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
                         Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
-                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
+                        Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- Ветка B: пыль за переваривание 300 -> 600 -> 900 -> 1200.
          Каждая техника добавляет +300 к свойству, которое читает TemporaryEffect. -->
     <SimulationDescriptor Name="TechnologyDustbornDigestion1" Type="Technology">
-        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornDigestion2" Type="Technology">
-        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornDigestion3" Type="Technology">
-        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- Ветка C -->
     <SimulationDescriptor Name="TechnologyDustbornDepletion1" Type="Technology">
-        <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Subtraction" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" TooltipHidden="false"/>
+        <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Subtraction" Value="0.1" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="TechnologyDustbornShells1" Type="Technology">
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="false"/>
-        <Modifier TargetProperty="SystemGarrisonMaximumHealth" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="SystemGarrisonMaximumHealth" Operation="Percent" Value="0.1" Path="../ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- Держатель значения переваривания. Вешается на империю аффинити-трейтом. -->

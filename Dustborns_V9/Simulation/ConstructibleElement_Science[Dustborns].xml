@@ -4,12 +4,34 @@
     <!-- ============================================================================
          ВЕТКА A: КОНВЕРСИЯ ЕДЫ В ПЫЛЬ  ->  КВАДРАНТ «ЭКОНОМИКА И ТОРГОВЛЯ»
          TechnologyDustbornFoodToDust1 (эра 2) -> 2 (эра 3) -> 3 (эра 4)
+         Каждая следующая требует предыдущую (Prerequisite,Link,Disable) и получает
+         скидку -25% через TechnologyLinkDefinition (паттерн ExampleTechnology).
          ============================================================================ -->
+
+    <!-- ============================================================================
+         ВЕТКА A: КОНВЕРСИЯ ЕДЫ В ПЫЛЬ  ->  КВАДРАНТ «ЭКОНОМИКА И ТОРГОВЛЯ»
+         TechnologyDustbornFoodToDust0 (эра 1, РАЗБЛОКИРОВКА МЕХАНИКИ, +25%)
+            -> 1 (эра 2, +25%) -> 2 (эра 3, +25%) -> 3 (эра 4, +25%)
+         Каждая следующая требует предыдущую (Prerequisite,Link,Disable) и получает
+         скидку -25% через TechnologyLinkDefinition (паттерн ExampleTechnology).
+         ============================================================================ -->
+
+    <TechnologyDefinition Name="TechnologyDustbornFoodToDust0" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade1" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity" Visibility="Hidden">
+        <Tags>NoOmniscience</Tags>
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage1Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage1"/>
+        <SimulationDescriptorReference Name="TechnologyDustbornFoodToDust0"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <HelperVariable Name="TurnVariable"/>
+        <HelperFormula>15 * $(TurnVariable) + 5</HelperFormula>
+    </TechnologyDefinition>
 
     <TechnologyDefinition Name="TechnologyDustbornFoodToDust1" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade2" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
         <Tags>NoOmniscience</Tags>
-        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * (1 - (0.25 * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDustbornFoodToDust0To1'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
         <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyDustbornFoodToDust0</TechnologyPrerequisite>
         <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage2"/>
         <SimulationDescriptorReference Name="TechnologyDustbornFoodToDust1"/>
         <SimulationDescriptorReference Name="TechnologyCounter"/>
@@ -19,9 +41,9 @@
 
     <TechnologyDefinition Name="TechnologyDustbornFoodToDust2" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade3" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
         <Tags>NoOmniscience</Tags>
-        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * (1 - (0.25 * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDustbornFoodToDust1To2'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
         <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
-        <TechnologyPrerequisite Flags="Prerequisite,Link">TechnologyDustbornFoodToDust1</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyDustbornFoodToDust1</TechnologyPrerequisite>
         <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage3"/>
         <SimulationDescriptorReference Name="TechnologyDustbornFoodToDust2"/>
         <SimulationDescriptorReference Name="TechnologyCounter"/>
@@ -31,9 +53,9 @@
 
     <TechnologyDefinition Name="TechnologyDustbornFoodToDust3" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade4" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
         <Tags>NoOmniscience</Tags>
-        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * (1 - (0.25 * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDustbornFoodToDust2To3'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
         <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
-        <TechnologyPrerequisite Flags="Prerequisite,Link">TechnologyDustbornFoodToDust2</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyDustbornFoodToDust2</TechnologyPrerequisite>
         <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage4"/>
         <SimulationDescriptorReference Name="TechnologyDustbornFoodToDust3"/>
         <SimulationDescriptorReference Name="TechnologyCounter"/>
@@ -59,9 +81,9 @@
 
     <TechnologyDefinition Name="TechnologyDustbornDigestion2" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment3" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
         <Tags>NoOmniscience</Tags>
-        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * (1 - (0.25 * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDustbornDigestion1To2'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
         <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
-        <TechnologyPrerequisite Flags="Prerequisite,Link">TechnologyDustbornDigestion1</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyDustbornDigestion1</TechnologyPrerequisite>
         <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage3"/>
         <SimulationDescriptorReference Name="TechnologyDustbornDigestion2"/>
         <SimulationDescriptorReference Name="TechnologyCounter"/>
@@ -71,9 +93,9 @@
 
     <TechnologyDefinition Name="TechnologyDustbornDigestion3" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment4" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
         <Tags>NoOmniscience</Tags>
-        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * (1 - (0.25 * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDustbornDigestion2To3'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
         <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
-        <TechnologyPrerequisite Flags="Prerequisite,Link">TechnologyDustbornDigestion2</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyDustbornDigestion2</TechnologyPrerequisite>
         <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage4"/>
         <SimulationDescriptorReference Name="TechnologyDustbornDigestion3"/>
         <SimulationDescriptorReference Name="TechnologyCounter"/>
@@ -99,9 +121,9 @@
 
     <TechnologyDefinition Name="TechnologyDustbornShells1" TechnologyStage="TechnologyStageDefinitionScienceAndExploration3" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
         <Tags>NoOmniscience</Tags>
-        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * (1 - (0.25 * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDustbornDepletionToShells'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
         <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
-        <TechnologyPrerequisite Flags="Prerequisite,Link">TechnologyDustbornDepletion1</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyDustbornDepletion1</TechnologyPrerequisite>
         <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage3"/>
         <SimulationDescriptorReference Name="TechnologyDustbornShells1"/>
         <SimulationDescriptorReference Name="TechnologyCounter"/>

@@ -81,6 +81,14 @@
         </Icons>
     </ExtendedGuiElement>
 
+    <TechnologyGuiElement2 Name="TechnologyDustbornFoodToDust0" X="-1" Y="0">
+        <Title>%TechnologyDustbornFoodToDust0Title</Title>
+        <Description>%TechnologyDustbornFoodToDust0Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade1Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
     <TechnologyGuiElement2 Name="TechnologyDustbornFoodToDust1" X="-1" Y="0">        <Icons>
             <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade2Small" />
         </Icons>
@@ -234,14 +242,210 @@
 <Title>%TechnologyDustbornShells1Title</Title><Description>%TechnologyDustbornShells1Description</Description></TechnologyGuiElement2>
 
 
-    <!-- ============ КВЕСТЫ ============ -->
-    <GuiElement Name="DustbornsQuest-Chapter1"><Title>%DustbornsQuest-Chapter1Title</Title><Description>%DustbornsQuest-Chapter1Description</Description></GuiElement>
-    <GuiElement Name="DustbornsQuest-Chapter2"><Title>%DustbornsQuest-Chapter2Title</Title><Description>%DustbornsQuest-Chapter2Description</Description></GuiElement>
-    <GuiElement Name="DustbornsQuest-Chapter3"><Title>%DustbornsQuest-Chapter3Title</Title><Description>%DustbornsQuest-Chapter3Description</Description></GuiElement>
-    <GuiElement Name="DustbornsQuest-Chapter4"><Title>%DustbornsQuest-Chapter4Title</Title><Description>%DustbornsQuest-Chapter4Description</Description></GuiElement>
-    <GuiElement Name="DustbornsQuest-Chapter5"><Title>%DustbornsQuest-Chapter5Title</Title><Description>%DustbornsQuest-Chapter5Description</Description></GuiElement>
-    <GuiElement Name="DustbornsQuest-Chapter6"><Title>%DustbornsQuest-Chapter6Title</Title><Description>%DustbornsQuest-Chapter6Description</Description></GuiElement>
-    <GuiElement Name="DustbornsSide-ScholarShells"><Title>%DustbornsSide-ScholarShellsTitle</Title><Description>%DustbornsSide-ScholarShellsDescription</Description></GuiElement>
+    <!-- ============ КВЕСТЫ (QuestGuiElement: название/текст/задача/награда) ============ -->
+
+    <!-- ЭТАП 1: ГОЛОД -->
+    <QuestGuiElement Name="DustbornsQuest-Chapter1">
+        <Title>%DustbornsQuest-Chapter1Title</Title>
+        <Description>%DustbornsQuest-Chapter1Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Description>%DustbornsQuest-Chapter1-Desc01</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter1-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter1-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter1_Objective1">%Chapter1_Objective1Title</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- ЭТАП 2: РУКИ, КОТОРЫХ НЕТ (3 варианта) -->
+    <QuestGuiElement Name="DustbornsQuest-Chapter2">
+        <Title>%DustbornsQuest-Chapter2Title</Title>
+        <Description>%DustbornsQuest-Chapter2Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest02Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="A" Politics="Politics06">
+                    <Title>%Chapter2_A_Title</Title>
+                    <Description>%DustbornsQuest-Chapter2-A-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter2-A-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter2-A-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter2_A_Objective1">%Chapter2_A_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="B" Politics="Politics05">
+                    <Title>%Chapter2_B_Title</Title>
+                    <Description>%DustbornsQuest-Chapter2-B-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter2-B-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter2-B-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter2_B_Objective1">%Chapter2_B_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="C" Politics="Politics03">
+                    <Title>%Chapter2_C_Title</Title>
+                    <Description>%DustbornsQuest-Chapter2-C-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter2-C-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter2-C-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter2_C_Objective1">%Chapter2_C_Objective1Title</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- ЭТАП 3: ВКУС МЫСЛИ (3 варианта) -->
+    <QuestGuiElement Name="DustbornsQuest-Chapter3">
+        <Title>%DustbornsQuest-Chapter3Title</Title>
+        <Description>%DustbornsQuest-Chapter3Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest03Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="A" Politics="Politics06">
+                    <Title>%Chapter3_A_Title</Title>
+                    <Description>%DustbornsQuest-Chapter3-A-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter3-A-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter3-A-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter3_A_Objective1">%Chapter3_A_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="B" Politics="Politics06">
+                    <Title>%Chapter3_B_Title</Title>
+                    <Description>%DustbornsQuest-Chapter3-B-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter3-B-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter3-B-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter3_B_Objective1">%Chapter3_B_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="C" Politics="Politics06">
+                    <Title>%Chapter3_C_Title</Title>
+                    <Description>%DustbornsQuest-Chapter3-C-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter3-C-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter3-C-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter3_C_Objective1">%Chapter3_C_Objective1Title</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- ЭТАП 4: ПЫЛЬ В ЧЕРЕПАХ (2 варианта) -->
+    <QuestGuiElement Name="DustbornsQuest-Chapter4">
+        <Title>%DustbornsQuest-Chapter4Title</Title>
+        <Description>%DustbornsQuest-Chapter4Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest04Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="A" Politics="Politics05">
+                    <Title>%Chapter4_A_Title</Title>
+                    <Description>%DustbornsQuest-Chapter4-A-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter4-A-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter4-A-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter4_A_Objective1">%Chapter4_A_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="B" Politics="Politics06">
+                    <Title>%Chapter4_B_Title</Title>
+                    <Description>%DustbornsQuest-Chapter4-B-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter4-B-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter4-B-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter4_B_Objective1">%Chapter4_B_Objective1Title</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- ЭТАП 5: МЁРТВЫЙ МИР (2 варианта) -->
+    <QuestGuiElement Name="DustbornsQuest-Chapter5">
+        <Title>%DustbornsQuest-Chapter5Title</Title>
+        <Description>%DustbornsQuest-Chapter5Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest05Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="A" Politics="Politics02">
+                    <Title>%Chapter5_A_Title</Title>
+                    <Description>%DustbornsQuest-Chapter5-A-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter5-A-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter5-A-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter5_A_Objective1">%Chapter5_A_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="B" Politics="Politics06">
+                    <Title>%Chapter5_B_Title</Title>
+                    <Description>%DustbornsQuest-Chapter5-B-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter5-B-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter5-B-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter5_B_Objective1">%Chapter5_B_Objective1Title</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- ЭТАП 6: ПЕРВЫЙ КУРГАН (2 шага: поиск + финальный выбор) -->
+    <QuestGuiElement Name="DustbornsQuest-Chapter6">
+        <Title>%DustbornsQuest-Chapter6Title</Title>
+        <Description>%DustbornsQuest-Chapter6Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest06Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Description>%DustbornsQuest-Chapter6-Find-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter6-Find-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter6-Find-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter6_Find">%Chapter6_FindTitle</Objective>
+                </ObjectiveSet>
+            </Step>
+            <Step Name="Step2">
+                <ObjectiveSet Name="A" Politics="Politics05">
+                    <Title>%Chapter6_A_Title</Title>
+                    <Description>%DustbornsQuest-Chapter6-A-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter6-A-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter6-A-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter6_A_Objective1">%Chapter6_A_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="B" Politics="Politics06">
+                    <Title>%Chapter6_B_Title</Title>
+                    <Description>%DustbornsQuest-Chapter6-B-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter6-B-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter6-B-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter6_B_Objective1">%Chapter6_B_Objective1Title</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="C" Politics="Politics02">
+                    <Title>%Chapter6_C_Title</Title>
+                    <Description>%DustbornsQuest-Chapter6-C-Desc</Description>
+                    <TooltipDescription>%DustbornsQuest-Chapter6-C-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsQuest-Chapter6-C-Outcome</OutcomeCompleted>
+                    <Objective Name="Chapter6_C_Objective1">%Chapter6_C_Objective1Title</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- САЙД 2.10: ОБОЛОЧКИ, КОТОРЫЕ СЧИТАЛИ -->
+    <QuestGuiElement Name="DustbornsSide-ScholarShells">
+        <Title>%DustbornsSide-ScholarShellsTitle</Title>
+        <Description>%DustbornsSide-ScholarShellsDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest02Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Description>%DustbornsSide-ScholarShells-Desc01</Description>
+                    <TooltipDescription>%DustbornsSide-ScholarShells-Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%DustbornsSide-ScholarShells-Outcome</OutcomeCompleted>
+                    <Objective Name="ScholarShells_Objective1">%ScholarShells_Objective1Title</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
 
     <!-- ============ НАГРАДЫ ============ -->
     <ExtendedGuiElement Name="DustbornRewardCongealedForms"><Title>%DustbornRewardCongealedFormsTitle</Title><Description>%DustbornRewardCongealedFormsDescription</Description></ExtendedGuiElement>

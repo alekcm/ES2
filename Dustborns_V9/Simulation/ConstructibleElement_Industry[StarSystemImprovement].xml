@@ -37,17 +37,25 @@
 
     <!-- Бесплатная постройка "Сконструировать Безвольного" (Home) также удалена -->
 
-    <!-- Конверсия минора в Безвольного +300 пыли, требует Пылерождённого -->
+    <!-- Конверсия минора в Безвольного +300 пыли, требует Пылерождённого.
+         Паттерн взят из ванильной постройки Хоратио "Clone Major Population"
+         (StarSystemPopulationTransformImprovementDefinition PopulationSource="Minor"
+         PopulationDestination="Major"): корректные пути к минорной популяции -
+         ColonizedStarSystemStateColony/ClassColonizedPlanet/PopulationNonMajor. -->
     <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementConvertToBezvolny" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
                                                       PopulationSource="Minor" PopulationSourceHeuristic="LowestCount"
-                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+                                                      PopulationDestination="Major" PopulationDestinationHeuristic="LowestCount"
+                                                      PopulationToTransformCount="1">
         <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
         <SupervisorGain Name="Industry" Weight="0.5"/>
         <Tags>NoBuyout</Tags>
         <Cost ResourceName="SystemTurnBased">1</Cost>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/PopulationMinor</PathPrerequisite>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
+        <!-- В системе есть Пылерождённые -->
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
+        <!-- На планете колонии есть не-мажорная (минорная) популяция -->
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Disable">ColonizedStarSystemStateColony/ClassColonizedPlanet/PopulationNonMajor</PathPrerequisite>
+        <!-- Есть кого переваривать: население системы > мажорного -->
+        <InterpreterPrerequisite Inverted="false" Flags="NotEnoughPopulation,Enqueue">(Property(Context, @ClassColonizedStarSystem, Population) - Property(Context, @ClassColonizedStarSystem, MajorPopulationCount)) gt 0</InterpreterPrerequisite>
         <SimulationDescriptorReference Name="StarSystemImprovementConvertToBezvolny"/>
         <TemporaryEffect>BezvolnyDustReward</TemporaryEffect>
     </StarSystemPopulationTransformImprovementDefinition>
