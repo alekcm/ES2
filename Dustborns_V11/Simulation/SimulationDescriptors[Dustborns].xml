@@ -177,7 +177,8 @@
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="StarSystemImprovementCreateMajorPopulationDustborns" Type="StarSystemImprovement"/>
-    <SimulationDescriptor Name="StarSystemImprovementSellMajorPopulationDustborns" Type="StarSystemImprovement"/>
+    <!-- v3.0: дескриптор StarSystemImprovementSellMajorPopulationDustborns удалён
+         (распыление Пылерождённых больше недоступно). -->
     <SimulationDescriptor Name="StarSystemImprovementConvertToBezvolny" Type="StarSystemImprovement"/>
 
     <!-- Убираем старые PlanetDepletionBonus/Neutral override - теперь логика через теги планеты -->

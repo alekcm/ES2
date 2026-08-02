@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Localization.LocalizationDatatableElement.xsd">
     <LocalizationPair Name="%FactionDustbornsTitle">Пылерождённые</LocalizationPair>
-    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (технологии ветки «Сухая Жатва» поднимают до 100%). Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +2 производства, не дают пыль. Конверсия минора в Безвольного даёт Пыль, распыление Пылерождённого добавляет 250 производства системе.</LocalizationPair>
+    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена. Конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25%, далее поднимается ванильными технологиями (Ландшафтное проектирование +10%, Сканирование растений, Хаотическая метеорология, Автономные материалы и Адаптация колоний +25% — до 135%). Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +2 производства, не дают пыль. Конверсия минора в Безвольного даёт Пыль. Распыление Пылерождённых недоступно.</LocalizationPair>
 
     <LocalizationPair Name="%AffinityGameplayDustbornsTitle">Пылерождённые + Безвольные</LocalizationPair>
-    <LocalizationPair Name="%AffinityGameplayDustbornsDescription">-10% пром за каждого Пылерождённого на планете, 0/+8/+16 пыли через теги планеты, еда в пыль постоянна, безвольные без политики.</LocalizationPair>
+    <LocalizationPair Name="%AffinityGameplayDustbornsDescription">-10% пром за каждого Пылерождённого на планете, 0/+8/+16 пыли через теги планеты, еда в пыль после «Первого Голода», безвольные без политики.</LocalizationPair>
 
     <LocalizationPair Name="%AffinityDustbornsTitle">Пылерождённые</LocalizationPair>
     <LocalizationPair Name="%AffinityDustbornsDescription">Разумная пыль.</LocalizationPair>
@@ -13,7 +13,7 @@
     <LocalizationPair Name="%AffinityMappingDustbornsDescription">Корабли из пыли.</LocalizationPair>
 
     <LocalizationPair Name="%PopulationDustbornsTitle">Пылерождённый</LocalizationPair>
-    <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (до 100% технологиями).</LocalizationPair>
+    <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (ванильные технологии поднимают до 135%).</LocalizationPair>
 
     <LocalizationPair Name="%PopulationBezvolnyTitle">Безвольный</LocalizationPair>
     <LocalizationPair Name="%PopulationBezvolnyDescription">+2 производства, без политики, не растёт, не даёт Пыль.</LocalizationPair>
@@ -27,13 +27,11 @@
     <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryTitle">Безвольная Покорность</LocalizationPair>
     <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryDescription">+2 производства, без политики, не даёт Пыль.</LocalizationPair>
 
-    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsTitle">Сконструировать Пылерождённого</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsTitle">Соткать Пылерождённого</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsDescription">Стоимость всегда 250 пыли (x множитель скорости игры).</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsEffect">Покупает Пылерождённого.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsEffect">Соткать Пылерождённого из Пыли.</LocalizationPair>
 
-    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsTitle">Распылить Пылерождённого</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsDescription">Даёт +250 пыли.</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsEffect">+250 пыли.</LocalizationPair>
+    <!-- v3.0: «Распылить Пылерождённого» удалено (постройка, дескриптор, GuiElement). -->
 
     <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyTitle">Переварить в Безвольного</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyDescription">Минора в Безвольного +300 пыли, требует Пылерождённого.</LocalizationPair>
@@ -60,25 +58,48 @@
     <!-- ============ ТЕХНОЛОГИИ ============ -->
     <LocalizationPair Name="%TechnologyDustbornFoodToDust0Title">Первый Голод</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornFoodToDust0Description">Награда главы 1 «Голод». Разблокирует конверсию излишка еды в Пыль: 0% -&gt; 25%.</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornFoodToDust1Title">Сухая Жатва</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornFoodToDust1Description">Конверсия еды в Пыль: 25% -&gt; 50%.</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornFoodToDust2Title">Обезвоживание Биомассы</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornFoodToDust2Description">Конверсия еды в Пыль: 50% -&gt; 75%.</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornFoodToDust3Title">Полный Распад</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornFoodToDust3Description">Конверсия еды в Пыль: 75% -&gt; 100%.</LocalizationPair>
-
-    <LocalizationPair Name="%TechnologyDustbornDigestion1Title">Глубокое Переваривание</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornDigestion1Description">Переработка жителя: 300 -&gt; 600 Пыли.</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornDigestion2Title">Извлечение Памяти</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornDigestion2Description">Переработка жителя: 600 -&gt; 900 Пыли.</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornDigestion3Title">Тотальный Гидролиз</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornDigestion3Description">Переработка жителя: 900 -&gt; 1200 Пыли.</LocalizationPair>
 
     <LocalizationPair Name="%TechnologyDustbornDepletion1Title">Терпеливые Ветра</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornDepletion1Description">Каждый Пылерождённый истощает планету на 0.1 в ход медленнее.</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornShells1Title">Армированные Оболочки</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornShells1Description">Безвольные: +2 производства. Гарнизон: +10% здоровья.</LocalizationPair>
 
+    <!-- ============ v3.0: ВАРИАНТЫ ВАНИЛЬНЫХ ТЕХНОЛОГИЙ ДЛЯ ПЫЛЕРОЖДЁННЫХ ============
+         Описание варианта = текст оригинала + новый «раздел» с бонусом фракции.
+         Бонус механически работает только у Пылерождённых (вариант виден только им). -->
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment2DustbornsTitle">Ландшафтное проектирование в масштабах планет</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment2DustbornsDescription">Совокупность большого числа растениеводческих технологий, общий эффект от совместного использования которых далеко превосходит сумму отдельных операций. Генетическое проектирование, осеменение территорий и искусственное производство феромонов служат фундаментом невероятной технологии, способной преображать целые континенты.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment3DustbornsTitle">Сканирование растений</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment3DustbornsDescription">Растения ведут относительно оседлый образ жизни и медленно вырастают, поэтому легче поддаются сканированию и анализу, чем животные. Системы для пометки и сканирования растений в больших масштабах являются важным подспорьем в работах по детоксикации и колонизации новых планет в системах.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment15DustbornsTitle">Хаотическая метеорология</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment15DustbornsDescription">Прогнозирование погоды - головоломная отрасль науки, на протяжении многих веков сбивавшая с толку предсказателей всех мастей. Поскольку речь идет о типичном примере хаотической системы, мельчайшие неточности в определении исходных условий приводят к непредсказуемым вариантам развития. Однако возникновение хаотической метеорологии изменило ситуацию, сделав возможными гораздо более точные и длительные прогнозы.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionScienceAndExploration10DustbornsTitle">Автономные материалы</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionScienceAndExploration10DustbornsDescription">Умные материалы, способные приспосабливаться к конкретным условиям, не теряя при этом своей внутренней структуры. Полезны в районах с высокой сейсмичностью.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionScienceAndExploration17DustbornsTitle">Адаптация колоний</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionScienceAndExploration17DustbornsDescription">Планетарные аномалии могут быть вызваны огромным числом самых разнообразных проблем. Вследствие улучшения технологий и получении новых знаний в области ксенобиологии был разработан ряд смягчающих мер, позволяющих гражданским поселениям процветать независимо от местных условий.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEconomyAndTrade5DustbornsTitle">Астрофинансы</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEconomyAndTrade5DustbornsDescription">Вести бухучет и составлять бюджеты в космическом пространстве-времени - нелегкая задача. Даже если не вдаваться в сложности опций и ссудных процентов, необходима огромная работа для уяснения механики финансовых систем и специфики запросов поставщиков и потребителей, принадлежащих к чуждым цивилизациям.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEconomyAndTrade11DustbornsTitle">Центры-хамелеоны</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEconomyAndTrade11DustbornsDescription">Если объединить усилия лучших инженеров и ученых, поставив перед ними задачу разработки многоцелевых научно-промышленных центров, где заводы легко превращаются в исследовательские институты и наоборот, в результате можно получить очень приспособляемые звездные системы... и сильно озадаченных фабричных рабочих.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment6DustbornsTitle">Ксеноантропология</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEmpireDevelopment6DustbornsDescription">Изучение чуждых цивилизаций, как прежних, так и ныне существующих, способно принести немалые дивиденды в плане лучшего осознания своих собственных культурных паттернов, а также при определении эффектов, возникающих в ходе развития галактического сообщества.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEconomyAndTrade26DustbornsTitle">Сверхпрочные материалы</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionEconomyAndTrade26DustbornsDescription">Будучи тверже алмаза, эти сверхпрочные материалы вдохнут новую жизнь в промышленные процессы в самых жестких условиях эксплуатации.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionMilitary5DustbornsTitle">Автономное строительство</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionMilitary5DustbornsDescription">Инфраструктурные проекты могут выиграть благодаря этой новой способности - автоматическому созданию сооружений. Схемы, заказы, складирование, планирование, производство и строительство могут сейчас производиться быстро и автоматически посредством независимых машин.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionMilitary7DustbornsTitle">Упрочненные сплавы</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDefinitionMilitary7DustbornsDescription">Если добавить к стандартным металлам военного назначения подложку из сплава сложных металлов, можно получить существенно более прочные материалы с широкими перспективами в деле производства оружия.</LocalizationPair>
+
+
+    <!-- v3.1: строки-«разделы» в тултипах технологий (TooltipOverride).
+         Игра выводит их пунктами раздела «Эффекты» у технологии - так же, как
+         ванильные эффекты (паттерн %NegatedLuxuryTooltipEffect). -->
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust0Effect">Пылерождённые: +25% излишка еды превращается в Пыль.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust10Effect">Пылерождённые: +10% излишка еды превращается в Пыль.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust25Effect">Пылерождённые: +25% излишка еды превращается в Пыль.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion1Effect">Пылерождённые: +300 Пыли за переваривание жителя.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion2Effect">Пылерождённые: +300 Пыли за переваривание жителя.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion3Effect">Пылерождённые: +300 Пыли за переваривание жителя.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion4Effect">Пылерождённые: +300 Пыли за переваривание жителя.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornBezvolnyIndustry1Effect">Пылерождённые: Безвольные +1 производства.</LocalizationPair>
 
     <!-- ============ ГЛАВНЫЙ КВЕСТ ============ -->
     <LocalizationPair Name="%DustbornsQuest-Chapter1Title">Голод</LocalizationPair>

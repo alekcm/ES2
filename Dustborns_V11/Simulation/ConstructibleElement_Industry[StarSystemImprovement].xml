@@ -15,22 +15,11 @@
         <SimulationDescriptorReference Name="StarSystemImprovementCreateMajorPopulationDustborns"/>
     </StarSystemPopulationTransformImprovementDefinition>
 
-    <!-- Распыление Пылерождённого -->
-    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementSellMajorPopulationDustborns" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
-                                                      PopulationSource="AffinityDustborns" IgnoreInvinciblePopulation="true">
-        <AIGain RessourceName="PopulationGain" Inverted="true"></AIGain>
-        <SupervisorGain Name="Dust" Weight="0.5"/>
-        <Tags>NoBuyout</Tags>
-        <Cost ResourceName="SystemTurnBased">1</Cost>
-        <!-- Прямой возврат производства: без скрытых квестов-слушателей. -->
-        <CustomCost ResourceName="SystemProduction" Instant="true">-250 * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
-        <InterpreterPrerequisite Flags="Prerequisite">Property(Context,@'ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns', PopulationCount) ge 1</InterpreterPrerequisite>
-        <SimulationDescriptorReference Name="StarSystemImprovementSellMajorPopulationDustborns"/>
-    </StarSystemPopulationTransformImprovementDefinition>
-
     <!-- Покупка Безвольных за пыль удалена: Безвольные получаются ТОЛЬКО переработкой чужого населения -->
+
+    <!-- v3.0: «Распылить Пылерождённого» (StarSystemImprovementSellMajorPopulationDustborns)
+         УДАЛЕНО полностью (постройка, дескриптор, GuiElement, локализация).
+         Пылерождённых больше нельзя распылять обратно в производство. -->
 
     <!-- Бесплатная постройка "Сконструировать Безвольного" (Home) также удалена -->
 

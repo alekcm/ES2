@@ -89,30 +89,6 @@
         </Icons>
     </TechnologyGuiElement2>
 
-    <TechnologyGuiElement2 Name="TechnologyDustbornFoodToDust1" X="-1" Y="0">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade2Small" />
-        </Icons>
-
-        <Title>%TechnologyDustbornFoodToDust1Title</Title>
-        <Description>%TechnologyDustbornFoodToDust1Description</Description>
-    </TechnologyGuiElement2>
-
-    <TechnologyGuiElement2 Name="TechnologyDustbornFoodToDust2" X="-1" Y="1">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade2Small" />
-        </Icons>
-
-        <Title>%TechnologyDustbornFoodToDust2Title</Title>
-        <Description>%TechnologyDustbornFoodToDust2Description</Description>
-    </TechnologyGuiElement2>
-
-    <TechnologyGuiElement2 Name="TechnologyDustbornFoodToDust3" X="-1" Y="2">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade2Small" />
-        </Icons>
-
-        <Title>%TechnologyDustbornFoodToDust3Title</Title>
-        <Description>%TechnologyDustbornFoodToDust3Description</Description>
-    </TechnologyGuiElement2>
-
     <ExtendedGuiElement Name="ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust">
         <Title>%PopulationModifiersTraitDustbornsPrimaryTitle</Title>
         <Description>%PopulationModifiersTraitDustbornsPrimaryDescription</Description>
@@ -125,15 +101,6 @@
             <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
         </Icons>
         <TooltipEffect>%StarSystemImprovementCreateMajorPopulationDustbornsEffect</TooltipEffect>
-    </ExtendedGuiElement>
-
-    <ExtendedGuiElement Name="StarSystemImprovementSellMajorPopulationDustborns">
-        <Title>%StarSystemImprovementSellMajorPopulationDustbornsTitle</Title>
-        <Description>%StarSystemImprovementSellMajorPopulationDustbornsDescription</Description>
-        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
-        </Icons>
-        <TooltipEffect>%StarSystemImprovementSellMajorPopulationDustbornsEffect</TooltipEffect>
     </ExtendedGuiElement>
 
     <ExtendedGuiElement Name="AffinityDustbornsCount">
@@ -220,26 +187,92 @@
 
 
     <!-- ============ ТЕХНОЛОГИИ ============ -->
-    <TechnologyGuiElement2 Name="TechnologyDustbornDigestion1" X="-1" Y="0">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment6Small" />
-        </Icons>
-<Title>%TechnologyDustbornDigestion1Title</Title><Description>%TechnologyDustbornDigestion1Description</Description></TechnologyGuiElement2>
-    <TechnologyGuiElement2 Name="TechnologyDustbornDigestion2" X="-1" Y="1">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment6Small" />
-        </Icons>
-<Title>%TechnologyDustbornDigestion2Title</Title><Description>%TechnologyDustbornDigestion2Description</Description></TechnologyGuiElement2>
-    <TechnologyGuiElement2 Name="TechnologyDustbornDigestion3" X="-1" Y="2">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment6Small" />
-        </Icons>
-<Title>%TechnologyDustbornDigestion3Title</Title><Description>%TechnologyDustbornDigestion3Description</Description></TechnologyGuiElement2>
     <TechnologyGuiElement2 Name="TechnologyDustbornDepletion1" X="-1" Y="0">        <Icons>
             <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration5Small" />
         </Icons>
 <Title>%TechnologyDustbornDepletion1Title</Title><Description>%TechnologyDustbornDepletion1Description</Description></TechnologyGuiElement2>
-    <TechnologyGuiElement2 Name="TechnologyDustbornShells1" X="-1" Y="1">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration5Small" />
+
+    <!-- ============ ТЕХНОЛОГИИ v3.0: ВАРИАНТЫ ПЫЛЕРОЖДЁННЫХ ============
+         По одной на каждую ванильную технологию, в которую переехал бонус.
+         Координаты X/Y те же, что у оригинала, - вариант встаёт на его место
+         в дереве исследований (механика Горацио/Софонов). Иконки - оригинальные. -->
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEmpireDevelopment2Dustborns" X="1.5" Y="0">
+        <Title>%TechnologyDefinitionEmpireDevelopment2DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEmpireDevelopment2DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment2Small" />
         </Icons>
-<Title>%TechnologyDustbornShells1Title</Title><Description>%TechnologyDustbornShells1Description</Description></TechnologyGuiElement2>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEmpireDevelopment3Dustborns" X="1.5" Y="0">
+        <Title>%TechnologyDefinitionEmpireDevelopment3DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEmpireDevelopment3DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment3Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEmpireDevelopment15Dustborns" X="2" Y="0">
+        <Title>%TechnologyDefinitionEmpireDevelopment15DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEmpireDevelopment15DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment15Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEmpireDevelopment6Dustborns" X="-1.15" Y="0">
+        <Title>%TechnologyDefinitionEmpireDevelopment6DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEmpireDevelopment6DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment6Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEconomyAndTrade5Dustborns" X="1.5" Y="0">
+        <Title>%TechnologyDefinitionEconomyAndTrade5DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEconomyAndTrade5DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade5Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEconomyAndTrade11Dustborns" X="4.75" Y="0">
+        <Title>%TechnologyDefinitionEconomyAndTrade11DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEconomyAndTrade11DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade11Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEconomyAndTrade26Dustborns" X="-4.1" Y="0">
+        <Title>%TechnologyDefinitionEconomyAndTrade26DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEconomyAndTrade26DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade26Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionScienceAndExploration10Dustborns" X="-1.4" Y="0">
+        <Title>%TechnologyDefinitionScienceAndExploration10DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionScienceAndExploration10DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration10Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionScienceAndExploration17Dustborns" X="5.5" Y="0">
+        <Title>%TechnologyDefinitionScienceAndExploration17DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionScienceAndExploration17DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration17Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionMilitary5Dustborns" X="1.5" Y="0">
+        <Title>%TechnologyDefinitionMilitary5DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionMilitary5DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionMilitary5Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+    <TechnologyGuiElement2 Name="TechnologyDefinitionMilitary7Dustborns" X="-4.5" Y="0">
+        <Title>%TechnologyDefinitionMilitary7DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionMilitary7DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionMilitary7Small" />
+        </Icons>
+    </TechnologyGuiElement2>
 
 
     <!-- ============ КВЕСТЫ (QuestGuiElement: название/текст/задача/награда) ============ -->
