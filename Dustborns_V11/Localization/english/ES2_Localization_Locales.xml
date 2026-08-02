@@ -75,7 +75,7 @@
     <LocalizationPair Name="%TechnologyDustbornDigestion3Description">Переработка жителя: 900 -&gt; 1200 Пыли.</LocalizationPair>
 
     <LocalizationPair Name="%TechnologyDustbornDepletion1Title">Терпеливые Ветра</LocalizationPair>
-    <LocalizationPair Name="%TechnologyDustbornDepletion1Description">Истощение миров -0.1 в ход.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDepletion1Description">Каждый Пылерождённый истощает планету на 0.1 в ход медленнее.</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornShells1Title">Армированные Оболочки</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornShells1Description">Безвольные: +2 производства. Гарнизон: +10% здоровья.</LocalizationPair>
 
@@ -175,12 +175,78 @@
     <!-- ============ ПЕРЕПИСЬ ПРАХА ============ -->
     <LocalizationPair Name="%DustbornCatalogRacesHolderTitle">Каталог Рас</LocalizationPair>
     <LocalizationPair Name="%DustbornCatalogRacesHolderDescription">+2% к добыче Пыли за каждую уникальную переваренную расу. Без потолка.</LocalizationPair>
-    <LocalizationPair Name="%DustbornCatalogPlanetEntryTitle">Каталог Миров</LocalizationPair>
-    <LocalizationPair Name="%DustbornCatalogPlanetEntryDescription">Запись в Каталоге Миров: +2/+4 к сбору Пыли за каждый уникальный истощённый тип планеты (автоматически при первом истощении типа).</LocalizationPair>
-    <LocalizationPair Name="%DustbornCatalogRaceEntryTitle">Новая запись в Каталоге Рас</LocalizationPair>
+<LocalizationPair Name="%DustbornCatalogRaceEntryTitle">Новая запись в Каталоге Рас</LocalizationPair>
     <LocalizationPair Name="%DustbornCatalogRaceEntryDescription">+2% к добыче Пыли.</LocalizationPair>
 
-    <!-- ============ КВЕСТЫ: GUI (QuestGuiElement) ============ -->
+    <!-- ============ КВЕСТ «КАТАЛОГ МИРОВ» ============ -->
+    <LocalizationPair Name="%DustbornsCensusTitle">Каталог Миров</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCensusDescription">Пыль помнит, кем была. Каждый переваренный мир учит нас новому: как вести себя со льдом, с жаром, с пустотой. Мы ведём перепись — пока не будет съеден мир каждого типа, учёт не закрыт.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCensusOutcome">Каталог Миров заполнен. Пыль помнит каждый съеденный мир.</LocalizationPair>
+    <LocalizationPair Name="%Census_AtollTitle">Атолл: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_ForestTitle">Лесной мир: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_OceanTitle">Океанический мир: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_TerranTitle">Терранский мир: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_BorealTitle">Борейский лес: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_MediterraneanTitle">Средиземный мир: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_MonsoonTitle">Мир муссонов: +1/+2 Пыли, +10% еды на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_JungleTitle">Джунгли: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_SavannahTitle">Саванна: +1/+2 Пыли, +10% к добыче Пыли на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_SteppesTitle">Степной мир: +1/+2 Пыли, +10% к добыче Пыли на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_TundraTitle">Тундра: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_ArcticTitle">Арктика: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_SnowTitle">Снежный мир: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_AridTitle">Засушливый мир: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_DesertTitle">Пустыня: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_IceTitle">Ледяной мир: каждый Пылерождённый истощает миры на 0.05 медленнее</LocalizationPair>
+    <LocalizationPair Name="%Census_AshTitle">Пепельный мир: Безвольные +3 производства на истощённых мирах</LocalizationPair>
+    <LocalizationPair Name="%Census_LavaTitle">Лавовый мир: Безвольные +1 производства</LocalizationPair>
+    <LocalizationPair Name="%Census_BarrenTitle">Пустошь: пока мир истощается, Пылерождённые дают +4 науки</LocalizationPair>
+    <LocalizationPair Name="%Census_ToxicTitle">Ядовитый мир: Пылерождённые +1 Пыли</LocalizationPair>
+    <LocalizationPair Name="%Census_GasBurningTitle">Газовый гигант (Пылающий): Пылерождённые +1 производства</LocalizationPair>
+    <LocalizationPair Name="%Census_GasHotTitle">Газовый гигант (Жаркий): Безвольные +1 производства</LocalizationPair>
+    <LocalizationPair Name="%Census_GasWarmTitle">Газовый гигант (Тёплый): +1% к добыче Пыли империи</LocalizationPair>
+    <LocalizationPair Name="%Census_GasTemperateTitle">Газовый гигант (Умеренный): Пылерождённые +1 Пыли</LocalizationPair>
+    <LocalizationPair Name="%Census_GasColdTitle">Газовый гигант (Холодный): Пылерождённые +1 науки</LocalizationPair>
+    <LocalizationPair Name="%Census_GasFrozenTitle">Газовый гигант (Замёрзший): Безвольные +1 науки</LocalizationPair>
+
+    <!-- ============ ОПОВЕЩЕНИЯ СКРЫТЫХ СЛУШАТЕЛЕЙ «КАТАЛОГ МИРОВ» (v2.08) ============ -->
+    <!-- Показываются при ПЕРВОМ полном истощении мира каждого типа и описывают награду. -->
+
+    <!-- ============ ВРЕМЕННЫЕ БАФФЫ УМЕРЕННЫХ МИРОВ ============ -->
+    <LocalizationPair Name="%DustbornBuffScience10Title">Ускоренные Исследования</LocalizationPair>
+    <LocalizationPair Name="%DustbornBuffScience10Description">+10% к производству науки на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornBuffIndustry10Title">Ускоренное Производство</LocalizationPair>
+    <LocalizationPair Name="%DustbornBuffIndustry10Description">+10% к производству на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornBuffFood10Title">Ускоренный Сбор Урожая</LocalizationPair>
+    <LocalizationPair Name="%DustbornBuffFood10Description">+10% к производству еды на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornBuffDust10Title">Пылевой Ветер</LocalizationPair>
+    <LocalizationPair Name="%DustbornBuffDust10Description">+10% к добыче Пыли на 10 ходов.</LocalizationPair>
+
+    <!-- Заголовки оповещений Каталога Миров -->
+
+    <!-- Тексты наград для уведомлений слушателей Каталога Миров -->
+    <!-- Кнопка подтверждения в окнах «Каталог Миров» -->
+
+
+    <!-- ============ ОПОВЕЩЕНИЯ СКРЫТЫХ СЛУШАТЕЛЕЙ «КАТАЛОГ МИРОВ» ============
+         Показываются игроку при ПЕРВОМ полном истощении планеты каждого типа.
+         В конце каждого сообщения — награда, чтобы игрок видел, что он получил. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============ КВЕСТЫ: GUI (QuestGuiElement) ============ -->
     <LocalizationPair Name="%DustbornsQuest-Chapter1-Desc01">Облака сгущаются над первой жертвой. Переварите чужаков — и их оболочки будут работать на нас.</LocalizationPair>
     <LocalizationPair Name="%DustbornsQuest-Chapter1-Tooltip">Завершите постройку «Переварить в Безвольного» 2 раза.</LocalizationPair>
     <LocalizationPair Name="%DustbornsQuest-Chapter1-Outcome">Первые оболочки встали в строй. Пыль помнит их имена.</LocalizationPair>

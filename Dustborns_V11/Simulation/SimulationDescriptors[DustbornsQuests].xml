@@ -41,12 +41,11 @@
         <Modifier TargetProperty="BuyOutCostMultiplier" Operation="Percent" Value="-0.25" Path="ClassEmpire" TooltipHidden="true"/>
     </SimulationDescriptor>
 
-    <!-- 3-C "Скупая Мудрость": Стерильные дают 2/4/8 и растут на 1/2/4 за тип планеты.
-         Ставим базу Стерильных в 2 и добавляем +1 за каждый тип каталога. -->
+    <!-- 3-C "Скупая Мудрость": Стерильные дают базовые 2 пыли. Рост больше не зависит
+         от счётчика каталога: записи за бедные миры дают другие бонусы (см. DustbornCatalog*). -->
     <SimulationDescriptor Name="DustbornRewardMiserlyWisdom" Type="DustbornReward">
         <Modifier TargetProperty="DustbornMeagerUnlocked" Operation="Force" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
         <Modifier TargetProperty="DustbornDustBaseMeager" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
-        <BinaryModifier TargetProperty="DustbornDustBaseMeager" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(DustbornCatalogPlanets)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
     </SimulationDescriptor>
 
     <!-- ============ ЭТАП 4 ============ -->
@@ -131,9 +130,92 @@
         <Modifier TargetProperty="DustbornCatalogRaces" Operation="Addition" Value="1" Path="ClassEmpire,DustbornCatalogRacesHolder" TooltipHidden="true"/>
     </SimulationDescriptor>
 
-    <!-- Одна запись каталога миров: +2 обычная / +4 Teeming -->
-    <SimulationDescriptor Name="DustbornCatalogPlanetEntry" Type="DustbornCatalogEntry">
-        <Modifier TargetProperty="DustbornCatalogPlanets" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+    <!-- ============ КАТАЛОГ МИРОВ (§0.1 v2.08) ============
+         У каждого типа мира ЗАРАНЕЕ РАСПИСАННЫЙ эффект (без выбора):
+         - Богатые (Atoll/Forest/Ocean/Terran): +2/+4 к сбору Пыли с неистощённых миров.
+         - Умеренные (Boreal/Mediterranean/Monsoon/Jungle/Savannah/Steppes/Tundra/Arctic/Snow/Arid/Desert):
+           +1/+2 к сбору Пыли + разовый временный бафф (+10% ресурса на 10 ходов, QuestEffect).
+         - Бедные (Ice/Ash/Lava/Barren/Toxic) и газовые гиганты: уникальные постоянные особенности.
+         Награды вешают скрытые слушатели-квесты при ПЕРВОМ полном истощении мира каждого типа. -->
+
+    <!-- Богатые миры: +2 обычная / +4 Teeming (одинаково для всех четырёх) -->
+    <SimulationDescriptor Name="DustbornCatalogRichDust" Type="DustbornReward">
+        <Modifier TargetProperty="DustbornDustBaseNormal" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornDustBaseTeeming" Operation="Addition" Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Умеренные миры: +1 обычная / +2 Teeming (одинаково для всех одиннадцати) -->
+    <SimulationDescriptor Name="DustbornCatalogModerateDust" Type="DustbornReward">
+        <Modifier TargetProperty="DustbornDustBaseNormal" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornDustBaseTeeming" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Ice: каждый Пылерождённый истощает планету на 0.05 в ход медленнее (стакается с техникой) -->
+    <SimulationDescriptor Name="DustbornCatalogIce" Type="DustbornReward">
+        <Modifier TargetProperty="DustbornIceReduction" Operation="Force" Value="0.05" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Ash: Безвольные получают +3 производства НА ИСТОЩЁННЫХ мирах -->
+    <SimulationDescriptor Name="DustbornCatalogAsh" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Lava: Безвольные получают +1 производства (везде) -->
+    <SimulationDescriptor Name="DustbornCatalogLava" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Barren: пока мир истощается (не истощён полностью), каждый Пылерождённый даёт +4 науки в ход.
+         $(BonusFromDepletion) = 1 на не-истощённых планетах, 0 на полностью истощённых. -->
+    <SimulationDescriptor Name="DustbornCatalogBarren" Type="DustbornReward">
+        <BinaryModifier TargetProperty="BonusPopulationScience" Operation="Addition" Left="4" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" SearchValueFromPath="true" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Toxic: Пылерождённые получают +1 Пыли (плоско, всегда) -->
+    <SimulationDescriptor Name="DustbornCatalogToxic" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationDust" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- ============ ГАЗОВЫЕ ГИГАНТЫ (колонизируются техой «Экстремальная атмосфера») ============ -->
+    <!-- Gas Burning (пром): Пылерождённые +1 производства -->
+    <SimulationDescriptor Name="DustbornCatalogGasBurning" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <!-- Gas Hot (пром/наука): Безвольные +1 производства -->
+    <SimulationDescriptor Name="DustbornCatalogGasHot" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <!-- Gas Warm (пром/пыль): +1% к добыче Пыли империи -->
+    <SimulationDescriptor Name="DustbornCatalogGasWarm" Type="DustbornReward">
+        <Modifier TargetProperty="EmpireMoneyMultiplier" Operation="Percent" Value="0.01" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <!-- Gas Temperate (пыль): Пылерождённые +1 Пыли -->
+    <SimulationDescriptor Name="DustbornCatalogGasTemperate" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationDust" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <!-- Gas Cold (пыль/наука): Пылерождённые +1 науки -->
+    <SimulationDescriptor Name="DustbornCatalogGasCold" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationScience" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <!-- Gas Frozen (наука): Безвольные +1 науки -->
+    <SimulationDescriptor Name="DustbornCatalogGasFrozen" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationScience" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- ============ ВРЕМЕННЫЕ БАФФЫ УМЕРЕННЫХ МИРОВ (+10% ресурса на 10 ходов) ============
+         Применяются через QuestEffectDefinition (Quests/Effects/QuestEffectDefinitions[Dustborns].xml)
+         действием Action_ApplyQuestEffect в квесте-слушателе умеренного мира. -->
+    <SimulationDescriptor Name="DustbornBuffScience10" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornBuffIndustry10" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemIndustry" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornBuffFood10" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemFood" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornBuffDust10" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemMoney" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- ============ ПОБОЧНЫЕ КВЕСТЫ ============ -->
@@ -223,8 +305,12 @@
     </SimulationDescriptor>
 
     <!-- Ветка C -->
+    <!-- Терпеливые Ветра: НЕ плоские -0.1 ко всем планетам, а -0.1 ЗА КАЖДОГО Пылерождённого
+         на планете. Реализация: техника ставит свойство DustbornPatientWindsReduction=0.1
+         на трейт Primary каждого Пылерождённого; сам вычет делает бинарник в трейте
+         (PlanetDepletionPerTurn -= 0.1 × PopulationCount на планету). -->
     <SimulationDescriptor Name="TechnologyDustbornDepletion1" Type="Technology">
-        <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Subtraction" Value="0.1" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornPatientWindsReduction" Operation="Force" Value="0.1" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="TechnologyDustbornShells1" Type="Technology">

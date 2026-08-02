@@ -747,635 +747,572 @@
 
 
     <!-- ##################################################################### -->
-    <!--  СКРЫТЫЕ СЛУШАТЕЛИ "КАТАЛОГ МИРОВ"                                   -->
-    <!--  При ПЕРВОМ полном истощении планеты каждого типа вешают на империю   -->
-    <!--  дескриптор DustbornCatalogPlanetEntry: +1 к DustbornCatalogPlanets   -->
-    <!--  (= +2/+4 к сбору пыли Пылерождённых на обычных/Teeming мирах).       -->
-    <!--  Каждый слушатель срабатывает ровно один раз за игру (RepetitionRules). -->
+        <!-- ##################################################################### -->
+        <!-- ##################################################################### -->
+        <!-- ##################################################################### -->
+    <!--  КВЕСТ «КАТАЛОГ МИРОВ» (один на всю игру)                             -->
+    <!--  Стартует в начале игры для Пылерождённых и НЕ завершается, пока       -->
+    <!--  не будут истощены все 26 типов миров (ObjectiveComposition="All").   -->
+    <!--  Каждая цель завершается при первом полном истощении мира типа:        -->
+    <!--  выдаёт награду (дескриптор + бафф умеренных) и показывает уведомление.-->
+    <!--  Без Choice: без модальных окон, только лента уведомлений.            -->
     <!-- ##################################################################### -->
 
-
-    <QuestDefinition Name="DustbornsCatalogListenerArctic" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
+    <QuestDefinition Name="DustbornsCensus" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="3">
+        <Tags>BeginTurn</Tags>
         <QuestContextSolo/>
         <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
         <Vars>
             <Var VarName="$CurrentEmpire">
                 <From Source="$Empire"/>
             </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprArctic" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeArctic,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Arctic">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprArctic"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerAsteroid" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprAsteroid" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAsteroid,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Asteroid">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprAsteroid"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerAtoll" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
+            <Var VarName="$RichDust" StringValue="DustbornCatalogRichDust"/>
+            <Var VarName="$ModerateDust" StringValue="DustbornCatalogModerateDust"/>
+            <Var VarName="$Ice" StringValue="DustbornCatalogIce"/>
+            <Var VarName="$Ash" StringValue="DustbornCatalogAsh"/>
+            <Var VarName="$Lava" StringValue="DustbornCatalogLava"/>
+            <Var VarName="$Barren" StringValue="DustbornCatalogBarren"/>
+            <Var VarName="$Toxic" StringValue="DustbornCatalogToxic"/>
+            <Var VarName="$GasBurning" StringValue="DustbornCatalogGasBurning"/>
+            <Var VarName="$GasHot" StringValue="DustbornCatalogGasHot"/>
+            <Var VarName="$GasWarm" StringValue="DustbornCatalogGasWarm"/>
+            <Var VarName="$GasTemperate" StringValue="DustbornCatalogGasTemperate"/>
+            <Var VarName="$GasCold" StringValue="DustbornCatalogGasCold"/>
+            <Var VarName="$GasFrozen" StringValue="DustbornCatalogGasFrozen"/>
+            <Var VarName="$BuffBoreal" StringValue="DustbornQuestEffectBoreal"/>
+            <Var VarName="$BuffMediterranean" StringValue="DustbornQuestEffectMediterranean"/>
+            <Var VarName="$BuffMonsoon" StringValue="DustbornQuestEffectMonsoon"/>
+            <Var VarName="$BuffJungle" StringValue="DustbornQuestEffectJungle"/>
+            <Var VarName="$BuffSavannah" StringValue="DustbornQuestEffectSavannah"/>
+            <Var VarName="$BuffSteppes" StringValue="DustbornQuestEffectSteppes"/>
+            <Var VarName="$BuffTundra" StringValue="DustbornQuestEffectTundra"/>
+            <Var VarName="$BuffArctic" StringValue="DustbornQuestEffectArctic"/>
+            <Var VarName="$BuffSnow" StringValue="DustbornQuestEffectSnow"/>
+            <Var VarName="$BuffArid" StringValue="DustbornQuestEffectArid"/>
+            <Var VarName="$BuffDesert" StringValue="DustbornQuestEffectDesert"/>
             <Var VarName="$ExprAtoll" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAtoll,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Atoll">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprAtoll"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerArid" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprArid" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeArid,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Arid">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprArid"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerAsh" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprAsh" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAsh,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Ash">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprAsh"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerBarren" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprBarren" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeBarren,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Barren">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprBarren"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerDesert" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprDesert" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeDesert,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Desert">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprDesert"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerForest" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
             <Var VarName="$ExprForest" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeForest,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Forest">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprForest"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerFrozen" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprFrozen" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeFrozen,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Frozen">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprFrozen"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerJungle" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprJungle" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeJungle,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Jungle">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprJungle"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerLava" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprLava" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeLava,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Lava">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprLava"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerOcean" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
             <Var VarName="$ExprOcean" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeOcean,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Ocean">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprOcean"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerSteppe" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprSteppe" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeSteppe,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Steppe">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprSteppe"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerTerran" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
             <Var VarName="$ExprTerran" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeTerran,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Terran">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprTerran"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerToxic" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
-            <Var VarName="$ExprToxic" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeToxic,PlanetDepletionMalus') ge 1"/>
-        </Vars>
-        <Prerequisites Target="$(Empire)">
-            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
-        </Prerequisites>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Toxic">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprToxic"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
-                            <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
-                                <Input_Targets VarName="$CurrentEmpire"/>
-                            </Action_ApplyDescriptor>
-                            <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestDefinition>
-
-
-    <QuestDefinition Name="DustbornsCatalogListenerTundra" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
-        <Tags>Hidden,BeginTurn</Tags>
-        <QuestContextSolo/>
-        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-        <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$EntryDescriptor" StringValue="DustbornCatalogPlanetEntry"/>
+            <Var VarName="$ExprBoreal" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeBoreal,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprMediterranean" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeMediterranean,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprMonsoon" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeMonsoon,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprJungle" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeJungle,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprSavannah" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeSavannah,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprSteppes" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeSteppes,PlanetDepletionMalus') ge 1"/>
             <Var VarName="$ExprTundra" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeTundra,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprArctic" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeArctic,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprSnow" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeSnow,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprArid" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeArid,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprDesert" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeDesert,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprIce" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeIce,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprAsh" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAsh,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprLava" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeLava,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprBarren" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeBarren,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprToxic" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeToxic,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprGasBurning" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeGasBurning,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprGasHot" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeGasHot,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprGasWarm" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeGasWarm,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprGasTemperate" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeGasTemperate,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprGasCold" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeGasCold,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprGasFrozen" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeGasFrozen,PlanetDepletionMalus') ge 1"/>
         </Vars>
         <Prerequisites Target="$(Empire)">
             <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
         </Prerequisites>
         <Steps>
             <Step Name="Step1">
-                <ObjectiveSet>
-                    <Objective Name="Listener_Tundra">
-                        <Sequence>
-                            <Decorator_BeginTurn>
-                                <Condition_CheckInterpreter>
-                                    <Input_Context VarName="$CurrentEmpire"/>
-                                    <Input_Expression VarName="$ExprTundra"/>
-                                </Condition_CheckInterpreter>
-                            </Decorator_BeginTurn>
+                <ObjectiveSet ObjectiveComposition="All">
+                <Objective Name="Census_Atoll">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprAtoll"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
                             <Action_ApplyDescriptor>
-                                <Input_DescriptorName VarName="$EntryDescriptor"/>
+                                <Input_DescriptorName VarName="$RichDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
                             <Action_ChooseOutcome Name="Outcome1"/>
-                        </Sequence>
-                        <Outcome Name="Outcome1"/>
-                    </Objective>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Forest">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprForest"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$RichDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Ocean">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprOcean"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$RichDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Terran">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprTerran"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$RichDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Boreal">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprBoreal"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffBoreal"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Mediterranean">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprMediterranean"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffMediterranean"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Monsoon">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprMonsoon"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffMonsoon"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Jungle">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprJungle"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffJungle"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Savannah">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprSavannah"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffSavannah"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Steppes">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprSteppes"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffSteppes"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Tundra">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprTundra"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffTundra"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Arctic">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprArctic"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffArctic"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Snow">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprSnow"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffSnow"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Arid">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprArid"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffArid"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Desert">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprDesert"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$ModerateDust"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ApplyQuestEffect>
+                                <Input_EffectName VarName="$BuffDesert"/>
+                                <Input_Target VarName="$CurrentEmpire"/>
+                            </Action_ApplyQuestEffect>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Ice">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprIce"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Ice"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Ash">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprAsh"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Ash"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Lava">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprLava"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Lava"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Barren">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprBarren"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Barren"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_Toxic">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprToxic"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Toxic"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_GasBurning">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprGasBurning"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$GasBurning"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_GasHot">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprGasHot"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$GasHot"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_GasWarm">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprGasWarm"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$GasWarm"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_GasTemperate">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprGasTemperate"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$GasTemperate"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_GasCold">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprGasCold"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$GasCold"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
+                <Objective Name="Census_GasFrozen">
+                    <Sequence>
+                        <Decorator_BeginTurn>
+                            <Condition_CheckInterpreter>
+                                <Input_Context VarName="$CurrentEmpire"/>
+                                <Input_Expression VarName="$ExprGasFrozen"/>
+                            </Condition_CheckInterpreter>
+                        </Decorator_BeginTurn>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$GasFrozen"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                    </Sequence>
+                    <Outcome Name="Outcome1"/>
+                </Objective>
+
                 </ObjectiveSet>
             </Step>
         </Steps>
     </QuestDefinition>
 
 </Datatable>
+

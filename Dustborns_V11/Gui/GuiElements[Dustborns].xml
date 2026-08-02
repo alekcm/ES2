@@ -462,9 +462,54 @@
     <ExtendedGuiElement Name="DustbornRewardOpenTheVein"><Title>%DustbornRewardOpenTheVeinTitle</Title><Description>%DustbornRewardOpenTheVeinDescription</Description></ExtendedGuiElement>
     <ExtendedGuiElement Name="DustbornRewardReturnToRoots"><Title>%DustbornRewardReturnToRootsTitle</Title><Description>%DustbornRewardReturnToRootsDescription</Description></ExtendedGuiElement>
     <ExtendedGuiElement Name="PlanetInexhaustible"><Title>%PlanetInexhaustibleTitle</Title><Description>%PlanetInexhaustibleDescription</Description></ExtendedGuiElement>
+
+    <!-- ============ ОПОВЕЩЕНИЯ «КАТАЛОГ МИРОВ» (GuiElement для Action_Message) ============ -->
+
+
+        <!-- ============ КВЕСТ «КАТАЛОГ МИРОВ» (единый трекер на всю игру) ============ -->
+    <QuestGuiElement Name="DustbornsCensus">
+        <Title>%DustbornsCensusTitle</Title>
+        <Description>%DustbornsCensusDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <OutcomeCompleted>%DustbornsCensusOutcome</OutcomeCompleted>
+                    <Objective Name="Census_Atoll">%Census_AtollTitle</Objective>
+                    <Objective Name="Census_Forest">%Census_ForestTitle</Objective>
+                    <Objective Name="Census_Ocean">%Census_OceanTitle</Objective>
+                    <Objective Name="Census_Terran">%Census_TerranTitle</Objective>
+                    <Objective Name="Census_Boreal">%Census_BorealTitle</Objective>
+                    <Objective Name="Census_Mediterranean">%Census_MediterraneanTitle</Objective>
+                    <Objective Name="Census_Monsoon">%Census_MonsoonTitle</Objective>
+                    <Objective Name="Census_Jungle">%Census_JungleTitle</Objective>
+                    <Objective Name="Census_Savannah">%Census_SavannahTitle</Objective>
+                    <Objective Name="Census_Steppes">%Census_SteppesTitle</Objective>
+                    <Objective Name="Census_Tundra">%Census_TundraTitle</Objective>
+                    <Objective Name="Census_Arctic">%Census_ArcticTitle</Objective>
+                    <Objective Name="Census_Snow">%Census_SnowTitle</Objective>
+                    <Objective Name="Census_Arid">%Census_AridTitle</Objective>
+                    <Objective Name="Census_Desert">%Census_DesertTitle</Objective>
+                    <Objective Name="Census_Ice">%Census_IceTitle</Objective>
+                    <Objective Name="Census_Ash">%Census_AshTitle</Objective>
+                    <Objective Name="Census_Lava">%Census_LavaTitle</Objective>
+                    <Objective Name="Census_Barren">%Census_BarrenTitle</Objective>
+                    <Objective Name="Census_Toxic">%Census_ToxicTitle</Objective>
+                    <Objective Name="Census_GasBurning">%Census_GasBurningTitle</Objective>
+                    <Objective Name="Census_GasHot">%Census_GasHotTitle</Objective>
+                    <Objective Name="Census_GasWarm">%Census_GasWarmTitle</Objective>
+                    <Objective Name="Census_GasTemperate">%Census_GasTemperateTitle</Objective>
+                    <Objective Name="Census_GasCold">%Census_GasColdTitle</Objective>
+                    <Objective Name="Census_GasFrozen">%Census_GasFrozenTitle</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
     <ExtendedGuiElement Name="DustbornCatalogRacesHolder"><Title>%DustbornCatalogRacesHolderTitle</Title><Description>%DustbornCatalogRacesHolderDescription</Description></ExtendedGuiElement>
     <ExtendedGuiElement Name="DustbornCatalogRaceEntry"><Title>%DustbornCatalogRaceEntryTitle</Title><Description>%DustbornCatalogRaceEntryDescription</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornCatalogPlanetEntry"><Title>%DustbornCatalogPlanetEntryTitle</Title><Description>%DustbornCatalogPlanetEntryDescription</Description></ExtendedGuiElement>
 
     <!-- ============ ПОСТРОЙКИ ============ -->
     <ExtendedGuiElement Name="StarSystemImprovementAbrasiveForge">

@@ -24,7 +24,10 @@
         </GrowthBoostLuxuryOptions>
     </PopulationDefinition>
 
-    <PopulationDefinition AffinityName="AffinityBezvolny" Standard="true">
+    <!-- Безвольный: IsInvincible="true" - оболочку нельзя переварить/преобразовать повторно
+         (ни в Безвольного, ни в Считающую Оболочку). Это оболочка, она уже переварена.
+         Конверсии, не имеющие IgnoreInvinciblePopulation="true", пропускают таких жителей. -->
+    <PopulationDefinition AffinityName="AffinityBezvolny" Standard="true" IsInvincible="true">
         <DefaultPolitics>
         </DefaultPolitics>
         <Trait Name="PopulationModifiersTraitBezvolnyCount"/>
@@ -45,7 +48,7 @@
     </PopulationDefinition>
 
     <!-- 2.10 Считающая Оболочка: как Безвольный, но +2 науки за каждого Пылерождённого на планете -->
-    <PopulationDefinition AffinityName="AffinityBezvolnyScholar" Standard="true">
+    <PopulationDefinition AffinityName="AffinityBezvolnyScholar" Standard="true" IsInvincible="true">
         <DefaultPolitics>
         </DefaultPolitics>
         <Trait Name="PopulationModifiersTraitBezvolnyScholarCount"/>

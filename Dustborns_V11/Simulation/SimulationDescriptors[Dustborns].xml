@@ -37,21 +37,29 @@
     <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitDustbornsPrimary" Type="ClassPopulationPlanet">
         <Property Name="BonusFromDepletion" BaseValue="1"/>
 
-        <!-- Счётчик уникальных истощённых типов планет. Поднимается флагами EmpireCatalogPlanet* -->
-        <Property Name="DustbornCatalogPlanets" BaseValue="0" MinValue="0"/>
+        <!-- Ставки замедления истощения (множитель: число Пылерождённых на планете).
+             DustbornPatientWindsReduction: техника «Терпеливые Ветра» (Force 0.1).
+             DustbornIceReduction: запись Каталога за ледяной мир (Force 0.05). -->
+        <Property Name="DustbornPatientWindsReduction" BaseValue="0" MinValue="0" MaxValue="1"/>
+        <Property Name="DustbornIceReduction" BaseValue="0" MinValue="0" MaxValue="1"/>
+
         <!-- Флаг награды этапа 3-C "Скупая Мудрость": разрешает сбор со Стерильных -->
         <Property Name="DustbornMeagerUnlocked" BaseValue="0" MinValue="0" MaxValue="1"/>
 
-        <!-- Итоговые ставки сбора -->
+        <!-- Итоговые ставки сбора. Растут только от записей Каталога Миров:
+             богатые миры (+2/+4) и умеренные (+1/+2) - через дескрипторы-награды
+             DustbornCatalogRichDust / DustbornCatalogModerateDust. -->
         <Property Name="DustbornDustBaseNormal" BaseValue="4" MinValue="0"/>
         <Property Name="DustbornDustBaseTeeming" BaseValue="4" MinValue="0"/>
         <Property Name="DustbornDustBaseMeager" BaseValue="0" MinValue="0"/>
-        <BinaryModifier TargetProperty="DustbornDustBaseNormal"  Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(DustbornCatalogPlanets)" TooltipHidden="true"/>
-        <BinaryModifier TargetProperty="DustbornDustBaseTeeming" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(DustbornCatalogPlanets)" TooltipHidden="true"/>
 
         <!-- Истощение -->
         <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Addition" Value="1" Path="False/./ClassPlanet"/>
         <BinaryModifier TargetProperty="PlanetDepletionPerTurn" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="./ClassPlanet" TooltipHidden="true"/>
+        <!-- «Терпеливые Ветра»: −0.1 × Пылерождённых (свойство ставит техника) -->
+        <BinaryModifier TargetProperty="PlanetDepletionPerTurn" Operation="Subtraction" Left="$(DustbornPatientWindsReduction)" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="./ClassPlanet" TooltipHidden="true"/>
+        <!-- Каталог: ледяной мир: −0.05 × Пылерождённых (свойство ставит награда) -->
+        <BinaryModifier TargetProperty="PlanetDepletionPerTurn" Operation="Subtraction" Left="$(DustbornIceReduction)" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="./ClassPlanet" TooltipHidden="true"/>
         <Modifier TargetProperty="BonusFromDepletion" Operation="Force" Value="0" TooltipHidden="true" Priority="-1"/>
 
         <!-- Штраф промышленности: -10% за каждого Пылерождённого на планете -->

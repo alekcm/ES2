@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/QuestEffectDefinition.xsd">
+
+    <!-- ======================================================================
+         ВРЕМЕННЫЕ БАФФЫ КАТАЛОГА МИРОВ (умеренные миры)
+         Каждый умеренный мир при первом истощении даёт разовый бафф +10%
+         к основному ресурсу мира на 10 ходов. Применяется действием
+         Action_ApplyQuestEffect в квесте-слушателе (Duration = число ходов).
+         ====================================================================== -->
+
+    <!-- Наука -->
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectBoreal" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffScience10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectTundra" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffScience10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectArctic" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffScience10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectSnow" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffScience10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <!-- Промышленность -->
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectMediterranean" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffIndustry10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectJungle" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffIndustry10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectArid" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffIndustry10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectDesert" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffIndustry10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <!-- Еда -->
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectMonsoon" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffFood10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <!-- Пыль -->
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectSavannah" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffDust10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+    <QuestEffectAddDescriptorsDefinition Name="DustbornQuestEffectSteppes" Duration="10">
+        <SimulationDescriptorReference Name="DustbornBuffDust10"/>
+    </QuestEffectAddDescriptorsDefinition>
+
+</Datatable>

@@ -54,8 +54,10 @@
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
         <!-- На планете колонии есть не-мажорная (минорная) популяция -->
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Disable">ColonizedStarSystemStateColony/ClassColonizedPlanet/PopulationNonMajor</PathPrerequisite>
-        <!-- Есть кого переваривать: население системы > мажорного -->
-        <InterpreterPrerequisite Inverted="false" Flags="NotEnoughPopulation,Enqueue">(Property(Context, @ClassColonizedStarSystem, Population) - Property(Context, @ClassColonizedStarSystem, MajorPopulationCount)) gt 0</InterpreterPrerequisite>
+        <!-- Есть кого переваривать: не-мажорное население минус Безвольные и Считающие Оболочки.
+             Самих Безвольных и Оболочек переваривать нельзя (IsInvincible): они уже переварены,
+             повторная переработка бессмысленна и в прежних версиях «съедала» собственных оболочек. -->
+        <InterpreterPrerequisite Inverted="false" Flags="NotEnoughPopulation,Enqueue">(Property(Context, @ClassColonizedStarSystem, Population) - Property(Context, @ClassColonizedStarSystem, MajorPopulationCount) - Property(Context, @'ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyCount', PopulationCount, true) - Property(Context, @'ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyScholarCount', PopulationCount, true)) gt 0</InterpreterPrerequisite>
         <SimulationDescriptorReference Name="StarSystemImprovementConvertToBezvolny"/>
         <TemporaryEffect>BezvolnyDustReward</TemporaryEffect>
     </StarSystemPopulationTransformImprovementDefinition>
@@ -73,6 +75,8 @@
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/PopulationMinor</PathPrerequisite>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+        <!-- Есть кого переваривать: Безвольные и Считающие Оболочки не считаются (IsInvincible) -->
+        <InterpreterPrerequisite Inverted="false" Flags="NotEnoughPopulation,Enqueue">(Property(Context, @ClassColonizedStarSystem, Population) - Property(Context, @ClassColonizedStarSystem, MajorPopulationCount) - Property(Context, @'ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyCount', PopulationCount, true) - Property(Context, @'ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyScholarCount', PopulationCount, true)) gt 0</InterpreterPrerequisite>
         <SimulationDescriptorReference Name="StarSystemImprovementConvertToScholar"/>
     </StarSystemPopulationTransformImprovementDefinition>
 
