@@ -5,12 +5,15 @@
             <Politics PoliticsReference="Politics05" BaseScore="1" BaseTrend="0"/>
         </DefaultPolitics>
         <Trait Name="PopulationPoliticalTraitReligious"/>
-        <Trait Name="PopulationPoliticalTraitAntiScientist"/>
-        <Trait Name="PopulationPoliticalTraitFanatic"/>
+        <!-- Faithful: Militarist events support Religious (vanilla trait; no custom guessed name). -->
+        <Trait Name="PopulationPoliticalTraitMilitaristToReligious"/>
+        <!-- Druids + Anti-Ecologists: Ecologist events support Religious, Ecologist support is dampened. -->
+        <Trait Name="PopulationPoliticalTraitEcologistToReligious"/>
+        <Trait Name="PopulationPoliticalTraitAntiEcologist"/>
         <Trait Name="PopulationModifiersTraitDustbornsCount"/>
         <Trait Name="PopulationModifiersTraitDustborns"/>
         <Trait Name="PopulationModifiersTraitDustbornsPrimary"/>
-        <Trait Name="PopulationCollectionBonusTraitCraver"/>
+        <Trait Name="PopulationCollectionBonusTraitDustborns"/>
         <AffinityMapping Name="AffinityMappingDustborns"/>
         <GrowthBoostLuxuryOptions>
             <Luxury>Luxury1</Luxury>
@@ -33,7 +36,7 @@
         <Trait Name="PopulationModifiersTraitBezvolnyCount"/>
         <Trait Name="PopulationModifiersTraitBezvolny"/>
         <Trait Name="PopulationModifiersTraitBezvolnyPrimary"/>
-        <Trait Name="PopulationCollectionBonusTraitCraver"/>
+        <Trait Name="PopulationCollectionBonusTraitBezvolny"/>
         <AffinityMapping Name="AffinityMappingBezvolny"/>
         <GrowthBoostLuxuryOptions>
             <Luxury>Luxury1</Luxury>
@@ -50,11 +53,18 @@
     <!-- 2.10 Считающая Оболочка: как Безвольный, но +2 науки за каждого Пылерождённого на планете -->
     <PopulationDefinition AffinityName="AffinityBezvolnyScholar" Standard="true" IsInvincible="true">
         <DefaultPolitics>
+            <Politics PoliticsReference="Politics02" BaseScore="1" BaseTrend="0"/>
         </DefaultPolitics>
+        <!-- Вычислители: наука как основа; религиозные события частично уходят в науку; экологические — в науку. -->
+        <Trait Name="PopulationPoliticalTraitScientist"/>
+        <Trait Name="PopulationPoliticalTraitReligiousToScientific"/>
+        <Trait Name="PopulationPoliticalTraitAntiReligious"/>
+        <Trait Name="PopulationPoliticalTraitEcologistToScience"/>
+        <Trait Name="PopulationPoliticalTraitAntiMilitarist"/>
         <Trait Name="PopulationModifiersTraitBezvolnyScholarCount"/>
         <Trait Name="PopulationModifiersTraitBezvolnyScholar"/>
         <Trait Name="PopulationModifiersTraitBezvolnyScholarPrimary"/>
-        <Trait Name="PopulationCollectionBonusTraitCraver"/>
+        <Trait Name="PopulationCollectionBonusTraitBezvolnyScholar"/>
         <AffinityMapping Name="AffinityMappingBezvolny"/>
         <GrowthBoostLuxuryOptions>
             <Luxury>Luxury1</Luxury>

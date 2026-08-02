@@ -703,41 +703,63 @@
     <!--  Триггер: первая переработка жителя в Безвольного.                    -->
     <!-- ##################################################################### -->
 
-    <QuestDefinition Name="DustbornsSide-ScholarShells" Category="MinorQuest" SubCategory="Dustborns" MinimumTurn="10">
-        <Tags>BeginTurn,DustbornsSide-ScholarShells</Tags>
+    <!-- ##################################################################### -->
+    <!--  Скрытый слушатель распыления Пылерождённого: выдаёт 250 Пыли.         -->
+    <!--  TemporaryEffect не срабатывает на transform без PopulationDestination. -->
+    <!-- ##################################################################### -->
+
+    <!-- ##################################################################### -->
+    <!--  СБОЙ ОБОЛОЧКИ: шанс открытия Вычислителей после переработки           -->
+    <!--  Шанс = 10% за каждого Безвольного, включая стартового.                -->
+    <!--  После первого ручного перемалывания: стартовый + новый = 2 => 10%.    -->
+    <!-- ##################################################################### -->
+
+    <!-- ##################################################################### -->
+    <!--  МГНОВЕННЫЕ скрытые проверки сбоя оболочки.                            -->
+    <!--  Не держат активный слушатель в квестлоге: каждый порог проверяется    -->
+    <!--  один раз на BeginTurn и сразу завершается.                            -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll1" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
         <QuestContextSolo/>
-                <Prerequisites Target="$(Empire)">
+        <Prerequisites Target="$(Empire)">
             <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked1</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 2</InterpreterPrerequisite>
         </Prerequisites>
-
-<RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
-
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
         <Vars>
-            <Var VarName="$CurrentEmpire">
-                <From Source="$Empire"/>
-            </Var>
-            <Var VarName="$ConstructibleConvert" StringValue="StarSystemImprovementConvertToBezvolny"/>
-            <Var VarName="$UnlockDescriptor" StringValue="EmpireUnlockedScholarShells"/>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked1"/>
         </Vars>
-
         <Steps>
             <Step Name="Step1">
                 <ObjectiveSet>
-                    <Objective Name="ScholarShells_Objective1">
-                        <AIHint Category="Minimal" MinAutoResolutionTurn="30" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll1_Objective">
                         <Sequence>
-                            <Decorator_ConstructionCompleted Initiator="Empire">
-                                <Input_ConstructionName VarName="$ConstructibleConvert"/>
-                            </Decorator_ConstructionCompleted>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
                             <Action_ChooseOutcome Name="Outcome1"/>
                         </Sequence>
                         <Outcome Name="Outcome1">
-                            <StartActions>
-                                <Action_ApplyDescriptor>
-                                    <Input_DescriptorName VarName="$UnlockDescriptor"/>
-                                    <Input_Targets VarName="$CurrentEmpire"/>
-                                </Action_ApplyDescriptor>
-                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="9">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
                         </Outcome>
                     </Objective>
                 </ObjectiveSet>
@@ -745,6 +767,1027 @@
         </Steps>
     </QuestDefinition>
 
+    <QuestDefinition Name="DustbornScholarAccidentRoll2" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked2</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 3</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked2"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll2_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="2">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="8">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll3" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked3</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 4</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked3"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll3_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="3">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="7">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll4" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked4</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 5</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked4"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll4_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="4">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="6">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll5" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked5</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 6</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked5"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll5_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="5">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="5">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll6" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked6</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 7</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked6"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll6_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="6">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="4">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll7" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked7</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 8</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked7"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll7_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="7">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="3">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll8" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked8</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 9</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked8"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll8_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="8">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="2">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll9" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked9</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) eq 10</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked9"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll9_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="9">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornScholarAccidentRollFailed</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRoll10" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1" IsInstant="true">
+        <Tags>BeginTurn</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarAccidentChecked10</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount, true) ge 11</InterpreterPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var>
+            <Var VarName="$Checked" StringValue="DustbornScholarAccidentChecked10"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarAccidentRoll10_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Checked"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="10">
+                                <QuestTrigger>
+                                    <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarAccidentRollFailed" Category="Hidden" SubCategory="Dustborns" IsInstant="true">
+        <Tags>DustbornScholarAccidentRollFailed</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="0" NumberOfConcurrentInstances="1"/>
+        <Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var></Vars>
+        <Steps><Step Name="Step1"><ObjectiveSet><StartActions><Action_SetQuestVisibility Visible="false"/></StartActions><Objective Name="ScholarAccidentRollFailed_Objective"><Sequence><Action_SetQuestVisibility Visible="false"/><Action_ChooseOutcome Name="Outcome1"/></Sequence><Outcome Name="Outcome1"/></Objective></ObjectiveSet></Step></Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornsSide-ScholarShellsAccidentUnlock" Category="Hidden" SubCategory="Dustborns">
+        <Tags>DustbornsSide-ScholarShellsAccidentUnlock</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$UnlockDescriptor" StringValue="EmpireUnlockedScholarShells"/></Vars>
+        <Steps><Step Name="Step1"><ObjectiveSet><StartActions><Action_SetQuestVisibility Visible="false"/></StartActions><Objective Name="ScholarAccidentUnlock_Objective"><Sequence>
+            <Action_ApplyDescriptor><Input_DescriptorName VarName="$UnlockDescriptor"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor>
+            <Action_Message Message="DustbornsSideScholarShellsAccident_Message"><Input_Empires VarName="$CurrentEmpire"/></Action_Message>
+            <Action_ChooseOutcome Name="Outcome1"/>
+        </Sequence><Outcome Name="Outcome1"/></Objective></ObjectiveSet></Step></Steps>
+    </QuestDefinition>
+
+    <!-- После 10-го вычислителя каждый последующий имеет стакающийся шанс обнаружить план побега. -->
+    <QuestDefinition Name="DustbornScholarEscapeIncident" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1">
+        <Tags>BeginTurn,DustbornScholarEscapeIncident</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarEscapePending</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarIndependent</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarLobotomized</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="0" NumberOfConcurrentInstances="1"/>
+        <Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$ConstructibleScholar" StringValue="StarSystemImprovementConvertToScholar"/>
+            <Var VarName="$ExprScholarEscapeTier1" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 11"/>
+            <Var VarName="$ExprScholarEscapeTier2" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 12"/>
+            <Var VarName="$ExprScholarEscapeTier3" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 13"/>
+            <Var VarName="$ExprScholarEscapeTier4" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 14"/>
+            <Var VarName="$ExprScholarEscapeTier5" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 15"/>
+            <Var VarName="$ExprScholarEscapeTier6" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 16"/>
+            <Var VarName="$ExprScholarEscapeTier7" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 17"/>
+            <Var VarName="$ExprScholarEscapeTier8" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 18"/>
+            <Var VarName="$ExprScholarEscapeTier9" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 19"/>
+            <Var VarName="$ExprScholarEscapeTier10" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) ge 20"/>
+        </Vars>
+        <Steps><Step Name="Step1"><ObjectiveSet ObjectiveComposition="Any">
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarEscape_Tier1">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier1"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier1"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier1">
+                            <Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="9"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier2">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier2"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier2"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier2">
+                            <Triggers Weight="2"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="8"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier3">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier3"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier3"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier3">
+                            <Triggers Weight="3"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="7"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier4">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier4"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier4"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier4">
+                            <Triggers Weight="4"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="6"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier5">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier5"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier5"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier5">
+                            <Triggers Weight="5"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="5"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier6">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier6"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier6"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier6">
+                            <Triggers Weight="6"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="4"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier7">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier7"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier7"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier7">
+                            <Triggers Weight="7"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="3"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier8">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier8"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier8"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier8">
+                            <Triggers Weight="8"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="2"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier9">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier9"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier9"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier9">
+                            <Triggers Weight="9"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarEscapeIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarEscape_Tier10">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarEscapeTier10"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier10"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier10"><Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers></Outcome>
+                    </Objective>
+        </ObjectiveSet></Step></Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarEscapeTimer" Category="Hidden" SubCategory="Dustborns">
+        <Tags>DustbornScholarEscapeTimer</Tags><QuestContextSolo/><RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$Duration" IntValue="3"/><Var VarName="$Pending" StringValue="DustbornScholarEscapePending"/></Vars>
+        <Steps><Step Name="Step1"><ObjectiveSet><StartActions><Action_SetQuestVisibility Visible="false"/><Action_ApplyDescriptor><Input_DescriptorName VarName="$Pending"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor></StartActions><Objective Name="ScholarEscapeTimer_Objective"><Sequence><Decorator_Wait><Input_WaitDuration VarName="$Duration"/><Input_EndTurn VarName="$Duration"/></Decorator_Wait><Action_ChooseOutcome Name="Outcome1"/></Sequence><Outcome Name="Outcome1"><Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarEscapeChoice</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers></Outcome></Objective></ObjectiveSet></Step></Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarEscapeChoice" Category="MinorQuest" SubCategory="Dustborns">
+        <Tags>DustbornScholarEscapeChoice</Tags><QuestContextSolo/><RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$Independent" StringValue="DustbornScholarIndependent"/><Var VarName="$Lobotomized" StringValue="DustbornScholarLobotomized"/></Vars>
+        <Steps><Step Name="Step1"><Choice DefaultChoiceIndex="0"><ChoiceItem ObjectiveSetIndex="0"/><ChoiceItem ObjectiveSetIndex="1"/></Choice>
+            <ObjectiveSet><Objective Name="ScholarEscape_Independent"><Sequence><Action_ApplyDescriptor><Input_DescriptorName VarName="$Independent"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor><Action_ChooseOutcome Name="OutcomeA"/></Sequence><Outcome Name="OutcomeA"/></Objective></ObjectiveSet>
+            <ObjectiveSet><Objective Name="ScholarEscape_Lobotomize"><Sequence><Action_ApplyDescriptor><Input_DescriptorName VarName="$Lobotomized"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor><Action_ChooseOutcome Name="OutcomeB"/></Sequence><Outcome Name="OutcomeB"/></Objective></ObjectiveSet>
+        </Step></Steps>
+    </QuestDefinition>
+
+    <!-- Ветка независимости: после 20-го вычислителя шанс открыть пищевое размножение. -->
+    <QuestDefinition Name="DustbornScholarReproductionIncident" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1">
+        <Tags>BeginTurn,DustbornScholarReproductionIncident</Tags><QuestContextSolo/>
+        <Prerequisites Target="$(Empire)"><PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornScholarIndependent</PathPrerequisite><PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarReproductionPending</PathPrerequisite><PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarFoodReproduction</PathPrerequisite></Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="0" NumberOfConcurrentInstances="1"/>
+        <Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$ConstructibleScholar" StringValue="StarSystemImprovementConvertToScholar"/>
+            <Var VarName="$ExprScholarReproductionTier1" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 21"/>
+            <Var VarName="$ExprScholarReproductionTier2" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 22"/>
+            <Var VarName="$ExprScholarReproductionTier3" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 23"/>
+            <Var VarName="$ExprScholarReproductionTier4" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 24"/>
+            <Var VarName="$ExprScholarReproductionTier5" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 25"/>
+            <Var VarName="$ExprScholarReproductionTier6" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 26"/>
+            <Var VarName="$ExprScholarReproductionTier7" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 27"/>
+            <Var VarName="$ExprScholarReproductionTier8" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 28"/>
+            <Var VarName="$ExprScholarReproductionTier9" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 29"/>
+            <Var VarName="$ExprScholarReproductionTier10" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) ge 30"/>
+        </Vars><Steps><Step Name="Step1"><ObjectiveSet ObjectiveComposition="Any">
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarReproduction_Tier1">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier1"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier1"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier1">
+                            <Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="9"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier2">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier2"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier2"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier2">
+                            <Triggers Weight="2"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="8"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier3">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier3"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier3"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier3">
+                            <Triggers Weight="3"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="7"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier4">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier4"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier4"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier4">
+                            <Triggers Weight="4"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="6"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier5">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier5"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier5"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier5">
+                            <Triggers Weight="5"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="5"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier6">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier6"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier6"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier6">
+                            <Triggers Weight="6"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="4"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier7">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier7"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier7"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier7">
+                            <Triggers Weight="7"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="3"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier8">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier8"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier8"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier8">
+                            <Triggers Weight="8"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="2"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier9">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier9"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier9"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier9">
+                            <Triggers Weight="9"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarReproductionIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarReproduction_Tier10">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarReproductionTier10"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier10"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier10"><Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers></Outcome>
+                    </Objective></ObjectiveSet></Step></Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarReproductionTimer" Category="Hidden" SubCategory="Dustborns"><Tags>DustbornScholarReproductionTimer</Tags><QuestContextSolo/><RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/><Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$Duration" IntValue="3"/><Var VarName="$Pending" StringValue="DustbornScholarReproductionPending"/><Var VarName="$Reward" StringValue="DustbornScholarFoodReproduction"/></Vars><Steps><Step Name="Step1"><ObjectiveSet><StartActions><Action_SetQuestVisibility Visible="false"/><Action_ApplyDescriptor><Input_DescriptorName VarName="$Pending"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor></StartActions><Objective Name="ScholarReproductionTimer_Objective"><Sequence><Decorator_Wait><Input_WaitDuration VarName="$Duration"/><Input_EndTurn VarName="$Duration"/></Decorator_Wait><Action_Message Message="DustbornScholarReproduction_Message"><Input_Empires VarName="$CurrentEmpire"/></Action_Message><Action_ApplyDescriptor><Input_DescriptorName VarName="$Reward"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor><Action_ChooseOutcome Name="Outcome1"/></Sequence><Outcome Name="Outcome1"/></Objective></ObjectiveSet></Step></Steps></QuestDefinition>
+
+    <!-- Ветка лоботомии: после 20-го вычислителя шанс открыть выбор о питомцах/ротации. -->
+    <QuestDefinition Name="DustbornScholarPetIncident" Category="Hidden" SubCategory="Dustborns" MinimumTurn="1"><Tags>BeginTurn,DustbornScholarPetIncident</Tags><QuestContextSolo/><Prerequisites Target="$(Empire)"><PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornScholarLobotomized</PathPrerequisite><PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarPetPending</PathPrerequisite><PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarPetsAllowed</PathPrerequisite><PathPrerequisite Inverted="true" Flags="Prerequisite">ClassEmpire,DustbornScholarRotation</PathPrerequisite></Prerequisites><RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="0" NumberOfConcurrentInstances="1"/><Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$ConstructibleScholar" StringValue="StarSystemImprovementConvertToScholar"/>
+            <Var VarName="$ExprScholarPetTier1" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 21"/>
+            <Var VarName="$ExprScholarPetTier2" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 22"/>
+            <Var VarName="$ExprScholarPetTier3" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 23"/>
+            <Var VarName="$ExprScholarPetTier4" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 24"/>
+            <Var VarName="$ExprScholarPetTier5" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 25"/>
+            <Var VarName="$ExprScholarPetTier6" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 26"/>
+            <Var VarName="$ExprScholarPetTier7" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 27"/>
+            <Var VarName="$ExprScholarPetTier8" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 28"/>
+            <Var VarName="$ExprScholarPetTier9" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) eq 29"/>
+            <Var VarName="$ExprScholarPetTier10" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount', PopulationCount, true) ge 30"/>
+        </Vars><Steps><Step Name="Step1"><ObjectiveSet ObjectiveComposition="Any">
+                    <StartActions><Action_SetQuestVisibility Visible="false"/></StartActions>
+                    <Objective Name="ScholarPet_Tier1">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier1"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier1"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier1">
+                            <Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="9"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier2">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier2"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier2"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier2">
+                            <Triggers Weight="2"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="8"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier3">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier3"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier3"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier3">
+                            <Triggers Weight="3"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="7"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier4">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier4"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier4"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier4">
+                            <Triggers Weight="4"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="6"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier5">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier5"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier5"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier5">
+                            <Triggers Weight="5"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="5"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier6">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier6"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier6"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier6">
+                            <Triggers Weight="6"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="4"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier7">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier7"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier7"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier7">
+                            <Triggers Weight="7"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="3"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier8">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier8"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier8"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier8">
+                            <Triggers Weight="8"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="2"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier9">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier9"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier9"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier9">
+                            <Triggers Weight="9"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                            <Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarPetIncident</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Objective Name="ScholarPet_Tier10">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleScholar"/>
+                                <Condition_CheckInterpreter>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ExprScholarPetTier10"/>
+                                </Condition_CheckInterpreter>
+                            </Decorator_ConstructionCompleted>
+                            <Action_ChooseOutcome Name="OutcomeTier10"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeTier10"><Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers></Outcome>
+                    </Objective></ObjectiveSet></Step></Steps></QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarPetTimer" Category="Hidden" SubCategory="Dustborns"><Tags>DustbornScholarPetTimer</Tags><QuestContextSolo/><RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/><Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$Duration" IntValue="3"/><Var VarName="$Pending" StringValue="DustbornScholarPetPending"/></Vars><Steps><Step Name="Step1"><ObjectiveSet><StartActions><Action_SetQuestVisibility Visible="false"/><Action_ApplyDescriptor><Input_DescriptorName VarName="$Pending"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor></StartActions><Objective Name="ScholarPetTimer_Objective"><Sequence><Decorator_Wait><Input_WaitDuration VarName="$Duration"/><Input_EndTurn VarName="$Duration"/></Decorator_Wait><Action_ChooseOutcome Name="Outcome1"/></Sequence><Outcome Name="Outcome1"><Triggers Weight="1"><QuestTrigger><Tags>DustbornScholarPetChoice</Tags><QuestContextSolo ParticipantsVarName="$CurrentEmpire"/></QuestTrigger></Triggers></Outcome></Objective></ObjectiveSet></Step></Steps></QuestDefinition>
+
+    <QuestDefinition Name="DustbornScholarPetChoice" Category="MinorQuest" SubCategory="Dustborns"><Tags>DustbornScholarPetChoice</Tags><QuestContextSolo/><RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/><Vars><Var VarName="$CurrentEmpire"><From Source="$Empire"/></Var><Var VarName="$Pets" StringValue="DustbornScholarPetsAllowed"/><Var VarName="$Rotation" StringValue="DustbornScholarRotation"/></Vars><Steps><Step Name="Step1"><Choice DefaultChoiceIndex="0"><ChoiceItem ObjectiveSetIndex="0"/><ChoiceItem ObjectiveSetIndex="1"/></Choice><ObjectiveSet><Objective Name="ScholarPet_Allow"><Sequence><Action_ApplyDescriptor><Input_DescriptorName VarName="$Pets"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor><Action_ChooseOutcome Name="OutcomeA"/></Sequence><Outcome Name="OutcomeA"/></Objective></ObjectiveSet><ObjectiveSet><Objective Name="ScholarPet_Rotation"><Sequence><Action_ApplyDescriptor><Input_DescriptorName VarName="$Rotation"/><Input_Targets VarName="$CurrentEmpire"/></Action_ApplyDescriptor><Action_ChooseOutcome Name="OutcomeB"/></Sequence><Outcome Name="OutcomeB"/></Objective></ObjectiveSet></Step></Steps></QuestDefinition>
 
     <!-- ##################################################################### -->
         <!-- ##################################################################### -->
@@ -779,17 +1822,17 @@
             <Var VarName="$GasTemperate" StringValue="DustbornCatalogGasTemperate"/>
             <Var VarName="$GasCold" StringValue="DustbornCatalogGasCold"/>
             <Var VarName="$GasFrozen" StringValue="DustbornCatalogGasFrozen"/>
-            <Var VarName="$BuffBoreal" StringValue="DustbornQuestEffectBoreal"/>
-            <Var VarName="$BuffMediterranean" StringValue="DustbornQuestEffectMediterranean"/>
-            <Var VarName="$BuffMonsoon" StringValue="DustbornQuestEffectMonsoon"/>
-            <Var VarName="$BuffJungle" StringValue="DustbornQuestEffectJungle"/>
-            <Var VarName="$BuffSavannah" StringValue="DustbornQuestEffectSavannah"/>
-            <Var VarName="$BuffSteppes" StringValue="DustbornQuestEffectSteppes"/>
-            <Var VarName="$BuffTundra" StringValue="DustbornQuestEffectTundra"/>
-            <Var VarName="$BuffArctic" StringValue="DustbornQuestEffectArctic"/>
-            <Var VarName="$BuffSnow" StringValue="DustbornQuestEffectSnow"/>
-            <Var VarName="$BuffArid" StringValue="DustbornQuestEffectArid"/>
-            <Var VarName="$BuffDesert" StringValue="DustbornQuestEffectDesert"/>
+            <Var VarName="$BuffBoreal" StringValue="DustbornTimedBuffBoreal"/>
+            <Var VarName="$BuffMediterranean" StringValue="DustbornTimedBuffMediterranean"/>
+            <Var VarName="$BuffMonsoon" StringValue="DustbornTimedBuffMonsoon"/>
+            <Var VarName="$BuffJungle" StringValue="DustbornTimedBuffJungle"/>
+            <Var VarName="$BuffSavannah" StringValue="DustbornTimedBuffSavannah"/>
+            <Var VarName="$BuffSteppes" StringValue="DustbornTimedBuffSteppes"/>
+            <Var VarName="$BuffTundra" StringValue="DustbornTimedBuffTundra"/>
+            <Var VarName="$BuffArctic" StringValue="DustbornTimedBuffArctic"/>
+            <Var VarName="$BuffSnow" StringValue="DustbornTimedBuffSnow"/>
+            <Var VarName="$BuffArid" StringValue="DustbornTimedBuffArid"/>
+            <Var VarName="$BuffDesert" StringValue="DustbornTimedBuffDesert"/>
             <Var VarName="$ExprAtoll" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAtoll,PlanetDepletionMalus') ge 1"/>
             <Var VarName="$ExprForest" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeForest,PlanetDepletionMalus') ge 1"/>
             <Var VarName="$ExprOcean" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeOcean,PlanetDepletionMalus') ge 1"/>
@@ -835,6 +1878,9 @@
                                 <Input_DescriptorName VarName="$RichDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Atoll_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -852,6 +1898,9 @@
                                 <Input_DescriptorName VarName="$RichDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Forest_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -869,6 +1918,9 @@
                                 <Input_DescriptorName VarName="$RichDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Ocean_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -886,6 +1938,9 @@
                                 <Input_DescriptorName VarName="$RichDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Terran_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -903,10 +1958,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffBoreal"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffBoreal"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Boreal_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -924,10 +1982,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffMediterranean"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffMediterranean"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Mediterranean_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -945,10 +2006,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffMonsoon"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffMonsoon"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Monsoon_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -966,10 +2030,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffJungle"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffJungle"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Jungle_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -987,10 +2054,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffSavannah"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffSavannah"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Savannah_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1008,10 +2078,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffSteppes"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffSteppes"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Steppes_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1029,10 +2102,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffTundra"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffTundra"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Tundra_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1050,10 +2126,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffArctic"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffArctic"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Arctic_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1071,10 +2150,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffSnow"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffSnow"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Snow_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1092,10 +2174,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffArid"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffArid"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Arid_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1113,10 +2198,13 @@
                                 <Input_DescriptorName VarName="$ModerateDust"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
-                            <Action_ApplyQuestEffect>
-                                <Input_EffectName VarName="$BuffDesert"/>
-                                <Input_Target VarName="$CurrentEmpire"/>
-                            </Action_ApplyQuestEffect>
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$BuffDesert"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Desert_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1134,6 +2222,9 @@
                                 <Input_DescriptorName VarName="$Ice"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Ice_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1151,6 +2242,9 @@
                                 <Input_DescriptorName VarName="$Ash"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Ash_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1168,6 +2262,9 @@
                                 <Input_DescriptorName VarName="$Lava"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Lava_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1185,6 +2282,9 @@
                                 <Input_DescriptorName VarName="$Barren"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Barren_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1202,6 +2302,9 @@
                                 <Input_DescriptorName VarName="$Toxic"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_Toxic_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1219,6 +2322,9 @@
                                 <Input_DescriptorName VarName="$GasBurning"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_GasBurning_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1236,6 +2342,9 @@
                                 <Input_DescriptorName VarName="$GasHot"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_GasHot_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1253,6 +2362,9 @@
                                 <Input_DescriptorName VarName="$GasWarm"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_GasWarm_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1270,6 +2382,9 @@
                                 <Input_DescriptorName VarName="$GasTemperate"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_GasTemperate_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1287,6 +2402,9 @@
                                 <Input_DescriptorName VarName="$GasCold"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_GasCold_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
@@ -1304,11 +2422,466 @@
                                 <Input_DescriptorName VarName="$GasFrozen"/>
                                 <Input_Targets VarName="$CurrentEmpire"/>
                             </Action_ApplyDescriptor>
+                            <Action_Message Message="DustbornsCatalogListener_GasFrozen_Message">
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_Message>
                             <Action_ChooseOutcome Name="Outcome1"/>
                     </Sequence>
                     <Outcome Name="Outcome1"/>
                 </Objective>
 
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Boreal -->
+    <QuestDefinition Name="DustbornTimedBuffBorealRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffBorealRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffBoreal</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffBoreal"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffBorealRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Mediterranean -->
+    <QuestDefinition Name="DustbornTimedBuffMediterraneanRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffMediterraneanRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffMediterranean</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffMediterranean"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffMediterraneanRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Monsoon -->
+    <QuestDefinition Name="DustbornTimedBuffMonsoonRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffMonsoonRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffMonsoon</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffMonsoon"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffMonsoonRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Jungle -->
+    <QuestDefinition Name="DustbornTimedBuffJungleRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffJungleRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffJungle</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffJungle"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffJungleRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Savannah -->
+    <QuestDefinition Name="DustbornTimedBuffSavannahRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffSavannahRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffSavannah</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffSavannah"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffSavannahRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Steppes -->
+    <QuestDefinition Name="DustbornTimedBuffSteppesRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffSteppesRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffSteppes</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffSteppes"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffSteppesRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Tundra -->
+    <QuestDefinition Name="DustbornTimedBuffTundraRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffTundraRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffTundra</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffTundra"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffTundraRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Arctic -->
+    <QuestDefinition Name="DustbornTimedBuffArcticRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffArcticRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffArctic</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffArctic"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffArcticRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Snow -->
+    <QuestDefinition Name="DustbornTimedBuffSnowRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffSnowRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffSnow</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffSnow"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffSnowRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Arid -->
+    <QuestDefinition Name="DustbornTimedBuffAridRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffAridRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffArid</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffArid"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffAridRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- Таймер снятия временного баффа Каталога Миров: Desert -->
+    <QuestDefinition Name="DustbornTimedBuffDesertRemove" Category="Hidden" SubCategory="Dustborns">
+        <Tags>BeginTurn,DustbornTimedBuffDesertRemove</Tags>
+        <QuestContextSolo/>
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire,DustbornTimedBuffDesert</PathPrerequisite>
+        </Prerequisites>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="1"/>
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Descriptor" StringValue="DustbornTimedBuffDesert"/>
+        </Vars>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SetQuestVisibility Visible="false"/>
+                    </StartActions>
+                    <Objective Name="DustbornTimedBuffDesertRemove_Objective">
+                        <Sequence>
+                            <Action_SetQuestVisibility Visible="false"/>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                                <Input_EndTurn VarName="$Duration"/>
+                            </Decorator_Wait>
+                            <Action_ApplyDescriptor Remove="true">
+                                <Input_DescriptorName VarName="$Descriptor"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1"/>
+                    </Objective>
                 </ObjectiveSet>
             </Step>
         </Steps>

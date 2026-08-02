@@ -209,13 +209,53 @@
         <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="DustbornBuffIndustry10" Type="DustbornBuff">
-        <Modifier TargetProperty="SystemIndustry" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+        <Modifier TargetProperty="SystemProduction" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="DustbornBuffFood10" Type="DustbornBuff">
-        <Modifier TargetProperty="SystemFood" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+        <Modifier TargetProperty="SystemGrowth" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="DustbornBuffDust10" Type="DustbornBuff">
         <Modifier TargetProperty="SystemMoney" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+
+    <!-- ============ ВРЕМЕННЫЕ БАФФЫ КАТАЛОГА МИРОВ, версия без QuestEffect ============
+         Action_ApplyQuestEffect в ES2 может молча не применять QuestEffectAddDescriptorsDefinition.
+         Поэтому каждый умеренный мир теперь вешает уникальный дескриптор прямо на империю,
+         а отдельный скрытый квест снимает этот дескриптор через 10 ходов.
+         Path="ClassEmpire/ClassColonizedStarSystem" означает: бонус действует на все системы империи. -->
+    <SimulationDescriptor Name="DustbornTimedBuffBoreal" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffMediterranean" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemProduction" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffMonsoon" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemGrowth" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffJungle" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemProduction" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffSavannah" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemMoney" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffSteppes" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemMoney" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffTundra" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffArctic" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffSnow" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffArid" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemProduction" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="DustbornTimedBuffDesert" Type="DustbornBuff">
+        <Modifier TargetProperty="SystemProduction" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- ============ ПОБОЧНЫЕ КВЕСТЫ ============ -->
@@ -323,5 +363,18 @@
     <SimulationDescriptor Name="DustbornDigestionHolder" Type="DustbornCatalog">
         <Property Name="DustbornDigestionValue" BaseValue="300" MinValue="0"/>
     </SimulationDescriptor>
+
+
+    <!-- Проверенные пороги случайного открытия вычислителей -->
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked1" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked2" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked3" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked4" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked5" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked6" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked7" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked8" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked9" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarAccidentChecked10" Type="DustbornReward"/>
 
 </Datatable>

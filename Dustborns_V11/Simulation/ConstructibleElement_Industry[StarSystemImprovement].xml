@@ -22,15 +22,12 @@
         <SupervisorGain Name="Dust" Weight="0.5"/>
         <Tags>NoBuyout</Tags>
         <Cost ResourceName="SystemTurnBased">1</Cost>
+        <!-- Прямой возврат производства: без скрытых квестов-слушателей. -->
+        <CustomCost ResourceName="SystemProduction" Instant="true">-250 * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
         <PathPrerequisite Inverted="false" Flags="Prerequisite">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
         <InterpreterPrerequisite Flags="Prerequisite">Property(Context,@'ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns', PopulationCount) ge 1</InterpreterPrerequisite>
         <SimulationDescriptorReference Name="StarSystemImprovementSellMajorPopulationDustborns"/>
-        <!-- Возврат 250 пыли. Основной путь - TemporaryEffect (как у переваривания, там работает). -->
-        <TemporaryEffect>DustbornSellDustReward</TemporaryEffect>
-        <!-- ЗАПАСНОЙ ВАРИАНТ, если TemporaryEffect всё равно не платит: закомментируй строку выше и раскомментируй строку ниже.
-        <CustomCost ResourceName="EmpireMoney" Instant="true">-250 * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
-        -->
     </StarSystemPopulationTransformImprovementDefinition>
 
     <!-- Покупка Безвольных за пыль удалена: Безвольные получаются ТОЛЬКО переработкой чужого населения -->
@@ -44,8 +41,8 @@
          ColonizedStarSystemStateColony/ClassColonizedPlanet/PopulationNonMajor. -->
     <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementConvertToBezvolny" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
                                                       PopulationSource="Minor" PopulationSourceHeuristic="LowestCount"
-                                                      PopulationDestination="Major" PopulationDestinationHeuristic="LowestCount"
-                                                      PopulationToTransformCount="1">
+                                                      PopulationDestination="AffinityBezvolny" PopulationDestinationHeuristic="LowestCount"
+                                                      PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
         <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
         <SupervisorGain Name="Industry" Weight="0.5"/>
         <Tags>NoBuyout</Tags>
@@ -67,7 +64,7 @@
          Доступна только после разблокировки квестом (флаг EmpireUnlockedScholarShells). -->
     <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementConvertToScholar" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
                                                       PopulationSource="Minor" PopulationSourceHeuristic="LowestCount"
-                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+                                                      PopulationDestination="AffinityBezvolnyScholar" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
         <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
         <SupervisorGain Name="Science" Weight="0.5"/>
         <Tags>NoBuyout</Tags>
@@ -78,6 +75,7 @@
         <!-- Есть кого переваривать: Безвольные и Считающие Оболочки не считаются (IsInvincible) -->
         <InterpreterPrerequisite Inverted="false" Flags="NotEnoughPopulation,Enqueue">(Property(Context, @ClassColonizedStarSystem, Population) - Property(Context, @ClassColonizedStarSystem, MajorPopulationCount) - Property(Context, @'ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyCount', PopulationCount, true) - Property(Context, @'ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyScholarCount', PopulationCount, true)) gt 0</InterpreterPrerequisite>
         <SimulationDescriptorReference Name="StarSystemImprovementConvertToScholar"/>
+        <TemporaryEffect>ScholarDustReward</TemporaryEffect>
     </StarSystemPopulationTransformImprovementDefinition>
 
     <!-- ============ 4-B АБРАЗИВНЫЙ СТАН ============

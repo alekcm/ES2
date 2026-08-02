@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationCollectionBonusTrait.xsd">
+
+    <PopulationCollectionBonusTrait Name="PopulationCollectionBonusTraitDustborns" Cost="0" ShowInCustom="false">
+        <CollectionBonus Threshold="10">
+            <!-- Generic: increases the political output of the population's default politics (Dustborns = Religious). -->
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel1"/>
+        </CollectionBonus>
+        <CollectionBonus Threshold="20">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusDustborns20"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel2"/>
+        </CollectionBonus>
+        <CollectionBonus Threshold="50">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusDustborns50"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel3"/>
+        </CollectionBonus>
+    </PopulationCollectionBonusTrait>
+
+    <PopulationCollectionBonusTrait Name="PopulationCollectionBonusTraitBezvolny" Cost="0" ShowInCustom="false">
+        <CollectionBonus Threshold="10">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusBezvolny10"/>
+        </CollectionBonus>
+        <CollectionBonus Threshold="20">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusBezvolny20"/>
+        </CollectionBonus>
+        <CollectionBonus Threshold="50">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusBezvolny50"/>
+        </CollectionBonus>
+    </PopulationCollectionBonusTrait>
+
+    <PopulationCollectionBonusTrait Name="PopulationCollectionBonusTraitBezvolnyScholar" Cost="0" ShowInCustom="false">
+        <CollectionBonus Threshold="10">
+            <!-- Generic: increases the political output of Scholar Shells' default politics (Scientists). -->
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel1"/>
+        </CollectionBonus>
+        <CollectionBonus Threshold="20">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusBezvolnyScholar20"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel2"/>
+        </CollectionBonus>
+        <CollectionBonus Threshold="50">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusBezvolnyScholar50"/>
+        </CollectionBonus>
+    </PopulationCollectionBonusTrait>
+
+</Datatable>

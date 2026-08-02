@@ -117,17 +117,42 @@
         <Modifier TargetProperty="NetPopulationScore" Operation="Multiplication" Value="$(PopulationGrowthScoreModifier)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassPopulationStarSystemAffinityBezvolnyCount" Priority="100" TooltipHidden="true"/>
     </SimulationDescriptor>
 
-    <!-- Bezvolny Primary: +3 промышленности (+6 на истощённой). Наука и влияние - как у обычного населения. -->
+    <!-- Bezvolny Primary: базово +2 производства, без политики и без пыли. -->
     <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitBezvolnyPrimary" Type="ClassPopulationPlanet">
         <Property Name="BonusFromDepletion" BaseValue="1"/>
         <Modifier TargetProperty="BonusFromDepletion" Operation="Force" Value="0" TooltipHidden="true" Priority="-1"/>
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" TooltipHidden="false"/>
-        <BinaryModifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Left="-3" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
-        <!-- Наука и Влияние Безвольных больше НЕ режутся: обе блокировки не работали,
-             и по решению дизайна Безвольные теперь производят науку и влияние как обычное население.
-             Научная специализация вынесена в отдельную популяцию "Безвольный-Учёный" (квест §2.10). -->
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" TooltipHidden="false"/>
         <Modifier TargetProperty="BonusPopulationDust" Operation="Force" Value="0" Priority="5" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+
+    <!-- ============ СТАТУСЫ СБОРА: ПЫЛЕРОЖДЁННЫЕ / БЕЗВОЛЬНЫЕ / СЧИТАЮЩИЕ ОБОЛОЧКИ ============ -->
+    <SimulationDescriptor Name="PopulationCollectionBonusDustborns20" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="DustbornIceReduction" Operation="Addition" Value="0.05" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusDustborns50" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="DustbornDustBaseNormal" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornDustBaseTeeming" Operation="Addition" Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationCollectionBonusBezvolny10" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="150" Path="ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusBezvolny20" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="150" Path="ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusBezvolny50" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="6" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationCollectionBonusBezvolnyScholar20" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="BonusPopulationScience" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusBezvolnyScholar50" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="PopulationApproval" Operation="Addition" Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary/../ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="AffinityGameplayDustborns" Type="AffinityGameplay">
@@ -179,7 +204,12 @@
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="TemporaryEffectDustbornSellDustReward" Type="TemporaryEffect">
-        <Modifier TargetProperty="SystemMoney" Operation="Addition" Value="250" TooltipHidden="false"/>
+        <Modifier TargetProperty="SystemMoney" Operation="Addition" Value="250" Path="../ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectScholarDustReward" Type="TemporaryEffect">
+        <!-- Вычислитель даёт треть стандартной награды переработки: 300 -> 100, 600 -> 200 и т.д. -->
+        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition" Left="$(DustbornDigestionValue)" BinaryOperation="Multiplication" Right="0.333333" Path="../ClassEmpire" SearchValueFromPath="true" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- ============ 2.10 СЧИТАЮЩАЯ ОБОЛОЧКА ============ -->
@@ -212,12 +242,48 @@
     <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" Type="ClassPopulationPlanet">
         <Property Name="BonusFromDepletion" BaseValue="1"/>
         <Modifier TargetProperty="BonusFromDepletion" Operation="Force" Value="0" TooltipHidden="true" Priority="-1"/>
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" TooltipHidden="false"/>
-        <BinaryModifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Left="-3" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
-        <!-- Наука: +2 за каждого Пылерождённого на этой планете -->
-        <BinaryModifier TargetProperty="BonusPopulationScience" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="../ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="false"/>
+        <!-- Базовые вычислители: сохранённый разум даёт простую научную пользу. -->
+        <Modifier TargetProperty="BonusPopulationScience" Operation="Addition" Value="2" TooltipHidden="false"/>
         <Modifier TargetProperty="BonusPopulationDust" Operation="Force" Value="0" Priority="5" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+
+    <!-- ============ ВЫЧИСЛИТЕЛИ: СОЗНАНИЕ, ЛОБОТОМИЯ, ПОБЕГИ ============ -->
+    <SimulationDescriptor Name="DustbornScholarEscapePending" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarReproductionPending" Type="DustbornReward"/>
+    <SimulationDescriptor Name="DustbornScholarPetPending" Type="DustbornReward"/>
+
+    <!-- Независимая часть империи: вычислители довольнее на живых мирах, но страдают рядом с Пылерождёнными. -->
+    <SimulationDescriptor Name="DustbornScholarIndependent" Type="DustbornReward">
+        <Modifier TargetProperty="PopulationApproval" Operation="Addition" Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="PopulationApproval" Operation="Subtraction" Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="PopulationApproval" Operation="Addition" Left="-10" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary/../ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Лоботомия: базовые +2 науки убираются, вместо них вычислитель считает для Пылерождённых всей системы. -->
+    <SimulationDescriptor Name="DustbornScholarLobotomized" Type="DustbornReward">
+        <Modifier TargetProperty="BonusPopulationScience" Operation="Subtraction" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="BonusPopulationScience" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary/../ClassStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityDustbornsCount" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Независимые вычислители снова учатся размножаться. Рост едой экспериментален: переопределяет запрет роста. -->
+    <SimulationDescriptor Name="DustbornScholarFoodReproduction" Type="DustbornReward">
+        <Modifier TargetProperty="ShouldPopulationGrow" Operation="Force" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyScholar" Priority="100" TooltipHidden="false"/>
+        <Modifier TargetProperty="PopulationWithGrowth" Operation="Addition" Value="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyScholar/./ClassStarSystem" SearchValueFromPath="true" Priority="100" TooltipHidden="true"/>
+        <!-- Дополнительная политическая самостоятельность: +1 влияния, если на планете нет Пылерождённых. -->
+        <Modifier TargetProperty="BonusPopulationEmpirePoint" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationEmpirePoint" Operation="Subtraction" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary/../ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Разрешить практику: Пылерождённые получают счастье от вычислителей на планете. -->
+    <SimulationDescriptor Name="DustbornScholarPetsAllowed" Type="DustbornReward">
+        <BinaryModifier TargetProperty="PopulationApproval" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary/../ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityBezvolnyScholarCount" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Ротация: лоботомированные вычислители получают ещё +1 науки за Пылерождённого в системе (2 -> 3). -->
+    <SimulationDescriptor Name="DustbornScholarRotation" Type="DustbornReward">
+        <BinaryModifier TargetProperty="BonusPopulationScience" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary/../ClassStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityDustbornsCount" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- ============ 6-C КУРГАНОРОЖДЁННЫЙ ============ -->

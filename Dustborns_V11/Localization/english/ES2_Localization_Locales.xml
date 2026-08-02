@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Localization.LocalizationDatatableElement.xsd">
     <LocalizationPair Name="%FactionDustbornsTitle">Пылерождённые</LocalizationPair>
-    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (технологии ветки «Сухая Жатва» поднимают до 100%). Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
+    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (технологии ветки «Сухая Жатва» поднимают до 100%). Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +2 производства, не дают пыль. Конверсия минора в Безвольного даёт Пыль, распыление Пылерождённого добавляет 250 производства системе.</LocalizationPair>
 
     <LocalizationPair Name="%AffinityGameplayDustbornsTitle">Пылерождённые + Безвольные</LocalizationPair>
     <LocalizationPair Name="%AffinityGameplayDustbornsDescription">-10% пром за каждого Пылерождённого на планете, 0/+8/+16 пыли через теги планеты, еда в пыль постоянна, безвольные без политики.</LocalizationPair>
@@ -16,7 +16,7 @@
     <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, конверсия еды в пыль открывается технологией «Первый Голод» (Т1): 25% (до 100% технологиями).</LocalizationPair>
 
     <LocalizationPair Name="%PopulationBezvolnyTitle">Безвольный</LocalizationPair>
-    <LocalizationPair Name="%PopulationBezvolnyDescription">+3 промышленности (+6 на истощённой), без науки/влияния, без политики, не растёт.</LocalizationPair>
+    <LocalizationPair Name="%PopulationBezvolnyDescription">+2 производства, без политики, не растёт, не даёт Пыль.</LocalizationPair>
 
     <LocalizationPair Name="%PopulationModifiersTraitDustbornsTitle">Пылевая Форма Жизни</LocalizationPair>
     <LocalizationPair Name="%PopulationModifiersTraitDustbornsDescription">x0.5 пром, +8/+4 пыли через теги.</LocalizationPair>
@@ -25,7 +25,7 @@
     <LocalizationPair Name="%PopulationModifiersTraitDustbornsPrimaryDescription">+1 истощения, -10% пром планеты за каждого Пылерождённого, +16 пыли на Teeming неистощённой, +8 на не Meager неистощённой.</LocalizationPair>
 
     <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryTitle">Безвольная Покорность</LocalizationPair>
-    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryDescription">+3 пром (+6 на истощённой), -100% наука/влияние, без политики.</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryDescription">+2 производства, без политики, не даёт Пыль.</LocalizationPair>
 
     <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsTitle">Сконструировать Пылерождённого</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsDescription">Стоимость всегда 250 пыли (x множитель скорости игры).</LocalizationPair>
@@ -118,6 +118,10 @@
     <LocalizationPair Name="%DustbornsSide-ScholarShellsDescription">Эта оболочка пустая, как и все прочие. Но пальцы её всё ещё считают. Не для нас — просто по привычке. Может, привычку стоит сохранить?</LocalizationPair>
     <LocalizationPair Name="%ScholarShells_Objective1Title">Переварить жителя научной фракции</LocalizationPair>
 
+
+    <LocalizationPair Name="%DustbornsSideScholarShellsAccident_MessageTitle">Сбой Оболочки</LocalizationPair>
+    <LocalizationPair Name="%DustbornsSideScholarShellsAccident_MessageDescription">Один из Безвольных сохранил сознание. Мы начали изучать инцидент и поняли, из-за чего это произошло. Увы, в ходе экспериментов разум подопытного был окончательно перемолот, и тот стал обычным Безвольным. Зато теперь мы знаем, какие части тела можно осознанно не перемалывать, чтобы сохранить разум для дальнейшего использования. Открыто производство вычислителей.</LocalizationPair>
+
     <!-- ============ НАГРАДЫ ============ -->
     <LocalizationPair Name="%DustbornRewardCongealedFormsTitle">Затвердение</LocalizationPair>
     <LocalizationPair Name="%DustbornRewardCongealedFormsDescription">Штраф производства за Пылерождённых снят полностью.</LocalizationPair>
@@ -160,9 +164,9 @@
 
     <!-- ============ НОВЫЕ ПОПУЛЯЦИИ ============ -->
     <LocalizationPair Name="%PopulationBezvolnyScholarTitle">Считающая Оболочка</LocalizationPair>
-    <LocalizationPair Name="%PopulationBezvolnyScholarDescription">Как Безвольный, но +2 науки за каждого Пылерождённого на той же планете. Оболочка считает только когда рядом есть Пыль.</LocalizationPair>
+    <LocalizationPair Name="%PopulationBezvolnyScholarDescription">Вычислитель: +2 науки. При создании даёт треть Пыли от обычной переработки в Безвольного.</LocalizationPair>
     <LocalizationPair Name="%PopulationModifiersTraitBezvolnyScholarPrimaryTitle">Заученная Привычка</LocalizationPair>
-    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyScholarPrimaryDescription">+3 производства (+6 на истощённой), +2 науки за каждого Пылерождённого на планете.</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyScholarPrimaryDescription">+2 науки.</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementConvertToScholarTitle">Переварить в Считающую Оболочку</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementConvertToScholarDescription">Пыль не даётся. Вместо Безвольного получаешь Считающую Оболочку.</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementConvertToScholarEffect">+1 Считающая Оболочка.</LocalizationPair>
@@ -182,32 +186,32 @@
     <LocalizationPair Name="%DustbornsCensusTitle">Каталог Миров</LocalizationPair>
     <LocalizationPair Name="%DustbornsCensusDescription">Пыль помнит, кем была. Каждый переваренный мир учит нас новому: как вести себя со льдом, с жаром, с пустотой. Мы ведём перепись — пока не будет съеден мир каждого типа, учёт не закрыт.</LocalizationPair>
     <LocalizationPair Name="%DustbornsCensusOutcome">Каталог Миров заполнен. Пыль помнит каждый съеденный мир.</LocalizationPair>
-    <LocalizationPair Name="%Census_AtollTitle">Атолл: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
-    <LocalizationPair Name="%Census_ForestTitle">Лесной мир: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
-    <LocalizationPair Name="%Census_OceanTitle">Океанический мир: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
-    <LocalizationPair Name="%Census_TerranTitle">Терранский мир: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
-    <LocalizationPair Name="%Census_BorealTitle">Борейский лес: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_MediterraneanTitle">Средиземный мир: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_MonsoonTitle">Мир муссонов: +1/+2 Пыли, +10% еды на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_JungleTitle">Джунгли: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_SavannahTitle">Саванна: +1/+2 Пыли, +10% к добыче Пыли на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_SteppesTitle">Степной мир: +1/+2 Пыли, +10% к добыче Пыли на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_TundraTitle">Тундра: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_ArcticTitle">Арктика: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_SnowTitle">Снежный мир: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_AridTitle">Засушливый мир: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_DesertTitle">Пустыня: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
-    <LocalizationPair Name="%Census_IceTitle">Ледяной мир: каждый Пылерождённый истощает миры на 0.05 медленнее</LocalizationPair>
-    <LocalizationPair Name="%Census_AshTitle">Пепельный мир: Безвольные +3 производства на истощённых мирах</LocalizationPair>
-    <LocalizationPair Name="%Census_LavaTitle">Лавовый мир: Безвольные +1 производства</LocalizationPair>
-    <LocalizationPair Name="%Census_BarrenTitle">Пустошь: пока мир истощается, Пылерождённые дают +4 науки</LocalizationPair>
-    <LocalizationPair Name="%Census_ToxicTitle">Ядовитый мир: Пылерождённые +1 Пыли</LocalizationPair>
-    <LocalizationPair Name="%Census_GasBurningTitle">Газовый гигант (Пылающий): Пылерождённые +1 производства</LocalizationPair>
-    <LocalizationPair Name="%Census_GasHotTitle">Газовый гигант (Жаркий): Безвольные +1 производства</LocalizationPair>
-    <LocalizationPair Name="%Census_GasWarmTitle">Газовый гигант (Тёплый): +1% к добыче Пыли империи</LocalizationPair>
-    <LocalizationPair Name="%Census_GasTemperateTitle">Газовый гигант (Умеренный): Пылерождённые +1 Пыли</LocalizationPair>
-    <LocalizationPair Name="%Census_GasColdTitle">Газовый гигант (Холодный): Пылерождённые +1 науки</LocalizationPair>
-    <LocalizationPair Name="%Census_GasFrozenTitle">Газовый гигант (Замёрзший): Безвольные +1 науки</LocalizationPair>
+    <LocalizationPair Name="%Census_AtollTitle">Атолл поглощён: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_ForestTitle">Лесной мир поглощён: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_OceanTitle">Океанический мир поглощён: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_TerranTitle">Терранский мир поглощён: +2/+4 к сбору Пыли с неистощённых миров</LocalizationPair>
+    <LocalizationPair Name="%Census_BorealTitle">Борейский лес поглощён: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_MediterraneanTitle">Средиземный мир поглощён: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_MonsoonTitle">Мир муссонов поглощён: +1/+2 Пыли, +10% еды на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_JungleTitle">Джунгли поглощены: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_SavannahTitle">Саванна поглощена: +1/+2 Пыли, +10% к добыче Пыли на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_SteppesTitle">Степной мир поглощён: +1/+2 Пыли, +10% к добыче Пыли на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_TundraTitle">Тундра поглощена: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_ArcticTitle">Арктический мир поглощён: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_SnowTitle">Снежный мир поглощён: +1/+2 Пыли, +10% науки на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_AridTitle">Засушливый мир поглощён: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_DesertTitle">Пустыня поглощена: +1/+2 Пыли, +10% промышленности на 10 ходов</LocalizationPair>
+    <LocalizationPair Name="%Census_IceTitle">Ледяной мир поглощён: каждый Пылерождённый истощает миры на 0.05 медленнее</LocalizationPair>
+    <LocalizationPair Name="%Census_AshTitle">Пепельный мир поглощён: Безвольные получают +3 производства на истощённых мирах</LocalizationPair>
+    <LocalizationPair Name="%Census_LavaTitle">Лавовый мир поглощён: Безвольные получают +1 производства</LocalizationPair>
+    <LocalizationPair Name="%Census_BarrenTitle">Пустошь поглощена: пока мир истощается, Пылерождённые дают +4 науки</LocalizationPair>
+    <LocalizationPair Name="%Census_ToxicTitle">Ядовитый мир поглощён: Пылерождённые получают +1 Пыли</LocalizationPair>
+    <LocalizationPair Name="%Census_GasBurningTitle">Пылающий газовый гигант поглощён: Пылерождённые получают +1 производства</LocalizationPair>
+    <LocalizationPair Name="%Census_GasHotTitle">Жаркий газовый гигант поглощён: Безвольные получают +1 производства</LocalizationPair>
+    <LocalizationPair Name="%Census_GasWarmTitle">Тёплый газовый гигант поглощён: +1% к добыче Пыли империи</LocalizationPair>
+    <LocalizationPair Name="%Census_GasTemperateTitle">Умеренный газовый гигант поглощён: Пылерождённые получают +1 Пыли</LocalizationPair>
+    <LocalizationPair Name="%Census_GasColdTitle">Холодный газовый гигант поглощён: Пылерождённые получают +1 науки</LocalizationPair>
+    <LocalizationPair Name="%Census_GasFrozenTitle">Замёрзший газовый гигант поглощён: Безвольные получают +1 науки</LocalizationPair>
 
     <!-- ============ ОПОВЕЩЕНИЯ СКРЫТЫХ СЛУШАТЕЛЕЙ «КАТАЛОГ МИРОВ» (v2.08) ============ -->
     <!-- Показываются при ПЕРВОМ полном истощении мира каждого типа и описывают награду. -->
@@ -221,6 +225,107 @@
     <LocalizationPair Name="%DustbornBuffFood10Description">+10% к производству еды на 10 ходов.</LocalizationPair>
     <LocalizationPair Name="%DustbornBuffDust10Title">Пылевой Ветер</LocalizationPair>
     <LocalizationPair Name="%DustbornBuffDust10Description">+10% к добыче Пыли на 10 ходов.</LocalizationPair>
+
+
+    <!-- Статусы сбора населения -->
+    <LocalizationPair Name="%PopulationCollectionBonusTraitDustbornsTitle">Статус сбора: Пылерождённые</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusTraitDustbornsDescription">10: усиление религиозного политического выхода. 20: -0.05 к истощению миров за Пылерождённого. 50: +2/+4 к сбору Пыли с неистощённых миров.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusTraitBezvolnyTitle">Статус сбора: Безвольные</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusTraitBezvolnyDescription">10: +150 Пыли за переработку в Безвольного, +1 производство. 20: ещё +150 Пыли за переработку и +2 производства на истощённых мирах. 50: +6 производства на истощённых мирах.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusTraitBezvolnyScholarTitle">Статус сбора: Считающие Оболочки</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusTraitBezvolnyScholarDescription">10: усиление научного политического выхода. 20: +2 науки. 50: +5 счастья, если на мире есть Пылерождённые.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusDustborns20Title">Медленное Поглощение</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusDustborns20Description">Каждый Пылерождённый истощает миры на 0.05 медленнее.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusDustborns50Title">Глубокий Сбор Пыли</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusDustborns50Description">+2 к сбору Пыли с обычных неистощённых миров и +4 с изобильных.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolny10Title">Первые Оболочки</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolny10Description">+150 Пыли за переработку в Безвольного; Безвольные получают +1 производства.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolny20Title">Рабочие Оболочки</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolny20Description">Ещё +150 Пыли за переработку в Безвольного; Безвольные получают +2 производства на истощённых мирах.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolny50Title">Мёртвые Мануфактуры</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolny50Description">Безвольные получают +6 производства на истощённых мирах.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolnyScholar20Title">Счётные Узлы</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolnyScholar20Description">Считающие Оболочки получают +2 науки.</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolnyScholar50Title">Отражённая Воля</LocalizationPair>
+    <LocalizationPair Name="%PopulationCollectionBonusBezvolnyScholar50Description">Считающие Оболочки получают +5 счастья на мирах, где есть Пылерождённые.</LocalizationPair>
+
+    <!-- Названия временных дескрипторов Каталога Миров -->
+    <LocalizationPair Name="%DustbornTimedBuffBorealTitle">Ускоренные Исследования</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffBorealDescription">+10% к производству науки во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffMediterraneanTitle">Ускоренное Производство</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffMediterraneanDescription">+10% к производству во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffMonsoonTitle">Ускоренный Сбор Урожая</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffMonsoonDescription">+10% к производству еды во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffJungleTitle">Ускоренное Производство</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffJungleDescription">+10% к производству во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffSavannahTitle">Пылевой Ветер</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffSavannahDescription">+10% к добыче Пыли во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffSteppesTitle">Пылевой Ветер</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffSteppesDescription">+10% к добыче Пыли во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffTundraTitle">Ускоренные Исследования</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffTundraDescription">+10% к производству науки во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffArcticTitle">Ускоренные Исследования</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffArcticDescription">+10% к производству науки во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffSnowTitle">Ускоренные Исследования</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffSnowDescription">+10% к производству науки во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffAridTitle">Ускоренное Производство</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffAridDescription">+10% к производству во всех системах империи на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffDesertTitle">Ускоренное Производство</LocalizationPair>
+    <LocalizationPair Name="%DustbornTimedBuffDesertDescription">+10% к производству во всех системах империи на 10 ходов.</LocalizationPair>
+
+    <!-- Заголовки и тексты Action_Message для Каталога Миров -->
+    <LocalizationPair Name="%DustbornsCatalogListener_Atoll_MessageTitle">Атолл поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Atoll_MessageDescription">Первый мир-атолл рассыпался в Пыль. Получен бонус: +2 к сбору Пыли с обычных неистощённых миров и +4 с изобильных.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Forest_MessageTitle">Лесной мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Forest_MessageDescription">Первый лесной мир рассыпался в Пыль. Получен бонус: +2 к сбору Пыли с обычных неистощённых миров и +4 с изобильных.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Ocean_MessageTitle">Океанический мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Ocean_MessageDescription">Первый океанический мир рассыпался в Пыль. Получен бонус: +2 к сбору Пыли с обычных неистощённых миров и +4 с изобильных.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Terran_MessageTitle">Терранский мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Terran_MessageDescription">Первый терранский мир рассыпался в Пыль. Получен бонус: +2 к сбору Пыли с обычных неистощённых миров и +4 с изобильных.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Boreal_MessageTitle">Борейский лес поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Boreal_MessageDescription">Первый борейский мир переварен. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% науки на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Mediterranean_MessageTitle">Средиземный мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Mediterranean_MessageDescription">Первый средиземный мир переварен. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% промышленности на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Monsoon_MessageTitle">Мир муссонов поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Monsoon_MessageDescription">Первый мир муссонов переварен. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% еды на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Jungle_MessageTitle">Джунгли поглощены</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Jungle_MessageDescription">Первые джунгли переварены. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% промышленности на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Savannah_MessageTitle">Саванна поглощена</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Savannah_MessageDescription">Первая саванна переварена. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% к добыче Пыли на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Steppes_MessageTitle">Степной мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Steppes_MessageDescription">Первый степной мир переварен. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% к добыче Пыли на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Tundra_MessageTitle">Тундра поглощена</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Tundra_MessageDescription">Первая тундра переварена. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% науки на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Arctic_MessageTitle">Арктический мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Arctic_MessageDescription">Первый арктический мир переварен. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% науки на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Snow_MessageTitle">Снежный мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Snow_MessageDescription">Первый снежный мир переварен. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% науки на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Arid_MessageTitle">Засушливый мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Arid_MessageDescription">Первый засушливый мир переварен. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% промышленности на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Desert_MessageTitle">Пустыня поглощена</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Desert_MessageDescription">Первая пустыня переварена. Получен бонус: +1/+2 к сбору Пыли с неистощённых миров и +10% промышленности на 10 ходов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Ice_MessageTitle">Ледяной мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Ice_MessageDescription">Первый ледяной мир стал частью Каталога. Получен бонус: каждый Пылерождённый истощает миры на 0.05 медленнее.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Ash_MessageTitle">Пепельный мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Ash_MessageDescription">Первый пепельный мир стал частью Каталога. Получен бонус: Безвольные получают +3 производства на истощённых мирах.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Lava_MessageTitle">Лавовый мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Lava_MessageDescription">Первый лавовый мир стал частью Каталога. Получен бонус: Безвольные получают +1 производства.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Barren_MessageTitle">Пустошь поглощена</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Barren_MessageDescription">Первая пустошь стала частью Каталога. Получен бонус: пока мир истощается, Пылерождённые дают +4 науки.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Toxic_MessageTitle">Ядовитый мир поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_Toxic_MessageDescription">Первый ядовитый мир стал частью Каталога. Получен бонус: Пылерождённые получают +1 Пыли.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasBurning_MessageTitle">Пылающий газовый гигант поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasBurning_MessageDescription">Первый пылающий газовый гигант стал частью Каталога. Получен бонус: Пылерождённые получают +1 производства.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasHot_MessageTitle">Жаркий газовый гигант поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasHot_MessageDescription">Первый жаркий газовый гигант стал частью Каталога. Получен бонус: Безвольные получают +1 производства.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasWarm_MessageTitle">Тёплый газовый гигант поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasWarm_MessageDescription">Первый тёплый газовый гигант стал частью Каталога. Получен бонус: +1% к добыче Пыли империи.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasTemperate_MessageTitle">Умеренный газовый гигант поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasTemperate_MessageDescription">Первый умеренный газовый гигант стал частью Каталога. Получен бонус: Пылерождённые получают +1 Пыли.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasCold_MessageTitle">Холодный газовый гигант поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasCold_MessageDescription">Первый холодный газовый гигант стал частью Каталога. Получен бонус: Пылерождённые получают +1 науки.</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasFrozen_MessageTitle">Замёрзший газовый гигант поглощён</LocalizationPair>
+    <LocalizationPair Name="%DustbornsCatalogListener_GasFrozen_MessageDescription">Первый замёрзший газовый гигант стал частью Каталога. Получен бонус: Безвольные получают +1 науки.</LocalizationPair>
 
     <!-- Заголовки оповещений Каталога Миров -->
 
@@ -323,4 +428,43 @@
     <LocalizationPair Name="%DustbornsSide-ScholarShells-Desc01">Эта оболочка пустая, как и все прочие. Но пальцы её всё ещё считают. Может, привычку стоит сохранить?</LocalizationPair>
     <LocalizationPair Name="%DustbornsSide-ScholarShells-Tooltip">Переварите первого жителя в Безвольного.</LocalizationPair>
     <LocalizationPair Name="%DustbornsSide-ScholarShells-Outcome">Считающие Оболочки разблокированы: +2 науки за каждого Пылерождённого рядом.</LocalizationPair>
+
+
+    <!-- Вычислители: инциденты и выборы -->
+    <LocalizationPair Name="%DustbornScholarEscapePendingTitle">Подозрительное Молчание</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarEscapePendingDescription">Через 3 хода станет ясно, что вычислители замышляли побег.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarReproductionPendingTitle">Пищевые Формулы</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarReproductionPendingDescription">Вычислители проверяют гипотезу о самостоятельном размножении.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetPendingTitle">Игры с Оболочками</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetPendingDescription">Некоторые Пылерождённые слишком привязались к вычислителям.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarIndependentTitle">Независимая Часть Империи</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarIndependentDescription">Вычислители получают +5 счастья на неистощённых планетах и -10 счастья за каждого Пылерождённого на той же планете.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarLobotomizedTitle">Прямая Лоботомия</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarLobotomizedDescription">Вычислители теряют базовые +2 науки, но получают +2 науки за каждого Пылерождённого в той же системе.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarFoodReproductionTitle">Самовоспроизводящиеся Вычислители</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarFoodReproductionDescription">Вычислители снова могут размножаться через пищу и не должны исчезать из-за её нехватки. Также получают +1 влияния, если на планете нет Пылерождённых.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetsAllowedTitle">Разрешённые Любимцы</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetsAllowedDescription">Пылерождённые получают +2 счастья за каждого вычислителя на той же планете.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarRotationTitle">Обязательная Ротация</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarRotationDescription">Лоботомированные вычислители получают ещё +1 науки за каждого Пылерождённого в системе: бонус +2 становится +3.</LocalizationPair>
+    <LocalizationPair Name="%TemporaryEffectScholarDustRewardTitle">Остаточная Пыль</LocalizationPair>
+    <LocalizationPair Name="%TemporaryEffectScholarDustRewardDescription">Переработка в вычислителя возвращает треть Пыли от стандартной переработки в Безвольного.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornScholarEscapeChoiceTitle">Попытка Побега</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarEscapeChoiceDescription">Через три хода после подозрительной активности стало ясно: сохранившийся разум позволил вычислителям составить план побега из заточения. Побег провалился, но сам его факт заставляет некоторых усомниться, что это просто инструменты.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarEscapeChoiceA">Признать их независимой частью империи. Они станут счастливее на живых мирах, но будут страдать от близости Пылерождённых.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarEscapeChoiceAObj">Признать ограниченную независимость</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarEscapeChoiceB">Лоботомировать их и управлять разумом напрямую. Базовая научная польза исчезнет, но вычислители будут считать через волю Пылерождённых всей системы.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarEscapeChoiceBObj">Взять разум под прямой контроль</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornScholarReproduction_MessageTitle">Пищевое Самокопирование</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarReproduction_MessageDescription">После изучения собственного состояния вычислители нашли способ снова размножаться. Теперь они могут плодить себя самостоятельно через пищу и дают +1 влияния на планетах без Пылерождённых.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornScholarPetChoiceTitle">Игрушки из Разума</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetChoiceDescription">Часть Пылерождённых будто играет вычислителями, а кто-то заводит их как домашних питомцев. Безвольных так контролировать нельзя, но вычислители всё ещё достаточно разумны, чтобы реагировать.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetChoiceA">Разрешить такое поведение. Пылерождённые будут получать счастье от вычислителей на планете.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetChoiceAObj">Разрешить личных вычислителей</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetChoiceB">Ввести обязательную ротацию, чтобы предотвратить привязанность и повысить эффективность расчётов.</LocalizationPair>
+    <LocalizationPair Name="%DustbornScholarPetChoiceBObj">Установить обязательную ротацию</LocalizationPair>
+
 </Datatable>

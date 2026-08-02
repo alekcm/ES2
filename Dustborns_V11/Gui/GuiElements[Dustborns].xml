@@ -426,26 +426,13 @@
             </Step>
         </Steps>
     </QuestGuiElement>
-
-    <!-- САЙД 2.10: ОБОЛОЧКИ, КОТОРЫЕ СЧИТАЛИ -->
-    <QuestGuiElement Name="DustbornsSide-ScholarShells">
-        <Title>%DustbornsSide-ScholarShellsTitle</Title>
-        <Description>%DustbornsSide-ScholarShellsDescription</Description>
+    <ExtendedGuiElement Name="DustbornsSideScholarShellsAccident_Message">
+        <Title>%DustbornsSideScholarShellsAccident_MessageTitle</Title>
+        <Description>%DustbornsSideScholarShellsAccident_MessageDescription</Description>
         <Icons>
             <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest02Large" Size="Quest" />
         </Icons>
-        <Steps>
-            <Step Name="Step1">
-                <ObjectiveSet Politics="Politics02">
-                    <Description>%DustbornsSide-ScholarShells-Desc01</Description>
-                    <TooltipDescription>%DustbornsSide-ScholarShells-Tooltip</TooltipDescription>
-                    <OutcomeCompleted>%DustbornsSide-ScholarShells-Outcome</OutcomeCompleted>
-                    <Objective Name="ScholarShells_Objective1">%ScholarShells_Objective1Title</Objective>
-                </ObjectiveSet>
-            </Step>
-        </Steps>
-    </QuestGuiElement>
-
+    </ExtendedGuiElement>
 
     <!-- ============ НАГРАДЫ ============ -->
     <ExtendedGuiElement Name="DustbornRewardCongealedForms"><Title>%DustbornRewardCongealedFormsTitle</Title><Description>%DustbornRewardCongealedFormsDescription</Description></ExtendedGuiElement>
@@ -464,6 +451,189 @@
     <ExtendedGuiElement Name="PlanetInexhaustible"><Title>%PlanetInexhaustibleTitle</Title><Description>%PlanetInexhaustibleDescription</Description></ExtendedGuiElement>
 
     <!-- ============ ОПОВЕЩЕНИЯ «КАТАЛОГ МИРОВ» (GuiElement для Action_Message) ============ -->
+
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Atoll_Message">
+        <Title>%DustbornsCatalogListener_Atoll_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Atoll_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Forest_Message">
+        <Title>%DustbornsCatalogListener_Forest_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Forest_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Ocean_Message">
+        <Title>%DustbornsCatalogListener_Ocean_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Ocean_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Terran_Message">
+        <Title>%DustbornsCatalogListener_Terran_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Terran_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Boreal_Message">
+        <Title>%DustbornsCatalogListener_Boreal_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Boreal_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Mediterranean_Message">
+        <Title>%DustbornsCatalogListener_Mediterranean_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Mediterranean_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Monsoon_Message">
+        <Title>%DustbornsCatalogListener_Monsoon_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Monsoon_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Jungle_Message">
+        <Title>%DustbornsCatalogListener_Jungle_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Jungle_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Savannah_Message">
+        <Title>%DustbornsCatalogListener_Savannah_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Savannah_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Steppes_Message">
+        <Title>%DustbornsCatalogListener_Steppes_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Steppes_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Tundra_Message">
+        <Title>%DustbornsCatalogListener_Tundra_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Tundra_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Arctic_Message">
+        <Title>%DustbornsCatalogListener_Arctic_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Arctic_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Snow_Message">
+        <Title>%DustbornsCatalogListener_Snow_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Snow_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Arid_Message">
+        <Title>%DustbornsCatalogListener_Arid_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Arid_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Desert_Message">
+        <Title>%DustbornsCatalogListener_Desert_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Desert_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Ice_Message">
+        <Title>%DustbornsCatalogListener_Ice_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Ice_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Ash_Message">
+        <Title>%DustbornsCatalogListener_Ash_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Ash_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Lava_Message">
+        <Title>%DustbornsCatalogListener_Lava_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Lava_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Barren_Message">
+        <Title>%DustbornsCatalogListener_Barren_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Barren_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_Toxic_Message">
+        <Title>%DustbornsCatalogListener_Toxic_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_Toxic_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_GasBurning_Message">
+        <Title>%DustbornsCatalogListener_GasBurning_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_GasBurning_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_GasHot_Message">
+        <Title>%DustbornsCatalogListener_GasHot_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_GasHot_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_GasWarm_Message">
+        <Title>%DustbornsCatalogListener_GasWarm_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_GasWarm_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_GasTemperate_Message">
+        <Title>%DustbornsCatalogListener_GasTemperate_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_GasTemperate_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_GasCold_Message">
+        <Title>%DustbornsCatalogListener_GasCold_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_GasCold_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornsCatalogListener_GasFrozen_Message">
+        <Title>%DustbornsCatalogListener_GasFrozen_MessageTitle</Title>
+        <Description>%DustbornsCatalogListener_GasFrozen_MessageDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+    </ExtendedGuiElement>
 
 
         <!-- ============ КВЕСТ «КАТАЛОГ МИРОВ» (единый трекер на всю игру) ============ -->
@@ -511,6 +681,32 @@
     <ExtendedGuiElement Name="DustbornCatalogRacesHolder"><Title>%DustbornCatalogRacesHolderTitle</Title><Description>%DustbornCatalogRacesHolderDescription</Description></ExtendedGuiElement>
     <ExtendedGuiElement Name="DustbornCatalogRaceEntry"><Title>%DustbornCatalogRaceEntryTitle</Title><Description>%DustbornCatalogRaceEntryDescription</Description></ExtendedGuiElement>
 
+
+    <!-- ============ СТАТУСЫ СБОРА ПОПУЛЯЦИИ ============ -->
+    <ExtendedGuiElement Name="PopulationCollectionBonusTraitDustborns"><Title>%PopulationCollectionBonusTraitDustbornsTitle</Title><Description>%PopulationCollectionBonusTraitDustbornsDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusTraitBezvolny"><Title>%PopulationCollectionBonusTraitBezvolnyTitle</Title><Description>%PopulationCollectionBonusTraitBezvolnyDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusTraitBezvolnyScholar"><Title>%PopulationCollectionBonusTraitBezvolnyScholarTitle</Title><Description>%PopulationCollectionBonusTraitBezvolnyScholarDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusDustborns20"><Title>%PopulationCollectionBonusDustborns20Title</Title><Description>%PopulationCollectionBonusDustborns20Description</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusDustborns50"><Title>%PopulationCollectionBonusDustborns50Title</Title><Description>%PopulationCollectionBonusDustborns50Description</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusBezvolny10"><Title>%PopulationCollectionBonusBezvolny10Title</Title><Description>%PopulationCollectionBonusBezvolny10Description</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusBezvolny20"><Title>%PopulationCollectionBonusBezvolny20Title</Title><Description>%PopulationCollectionBonusBezvolny20Description</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusBezvolny50"><Title>%PopulationCollectionBonusBezvolny50Title</Title><Description>%PopulationCollectionBonusBezvolny50Description</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusBezvolnyScholar20"><Title>%PopulationCollectionBonusBezvolnyScholar20Title</Title><Description>%PopulationCollectionBonusBezvolnyScholar20Description</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusBezvolnyScholar50"><Title>%PopulationCollectionBonusBezvolnyScholar50Title</Title><Description>%PopulationCollectionBonusBezvolnyScholar50Description</Description></ExtendedGuiElement>
+
+    <!-- ============ ВРЕМЕННЫЕ БАФФЫ КАТАЛОГА МИРОВ ============ -->
+    <ExtendedGuiElement Name="DustbornTimedBuffBoreal"><Title>%DustbornTimedBuffBorealTitle</Title><Description>%DustbornTimedBuffBorealDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffMediterranean"><Title>%DustbornTimedBuffMediterraneanTitle</Title><Description>%DustbornTimedBuffMediterraneanDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffMonsoon"><Title>%DustbornTimedBuffMonsoonTitle</Title><Description>%DustbornTimedBuffMonsoonDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffJungle"><Title>%DustbornTimedBuffJungleTitle</Title><Description>%DustbornTimedBuffJungleDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffSavannah"><Title>%DustbornTimedBuffSavannahTitle</Title><Description>%DustbornTimedBuffSavannahDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffSteppes"><Title>%DustbornTimedBuffSteppesTitle</Title><Description>%DustbornTimedBuffSteppesDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffTundra"><Title>%DustbornTimedBuffTundraTitle</Title><Description>%DustbornTimedBuffTundraDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffArctic"><Title>%DustbornTimedBuffArcticTitle</Title><Description>%DustbornTimedBuffArcticDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffSnow"><Title>%DustbornTimedBuffSnowTitle</Title><Description>%DustbornTimedBuffSnowDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffArid"><Title>%DustbornTimedBuffAridTitle</Title><Description>%DustbornTimedBuffAridDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornTimedBuffDesert"><Title>%DustbornTimedBuffDesertTitle</Title><Description>%DustbornTimedBuffDesertDescription</Description></ExtendedGuiElement>
+
     <!-- ============ ПОСТРОЙКИ ============ -->
     <ExtendedGuiElement Name="StarSystemImprovementAbrasiveForge">
         <Title>%StarSystemImprovementAbrasiveForgeTitle</Title>
@@ -554,5 +750,40 @@
     <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityBarrowbornCount"><Title>%PopulationBarrowbornTitle</Title><SymbolString>[Cravers]</SymbolString></ExtendedGuiElement>
     <ExtendedGuiElement Name="ClassPopulationEmpireAffinityBarrowbornCount"><Title>%PopulationBarrowbornTitle</Title><SymbolString>[Cravers]</SymbolString></ExtendedGuiElement>
     <ExtendedGuiElement Name="ClassPopulationPlanetModifiersTraitBarrowbornPrimary"><Title>%PopulationModifiersTraitBarrowbornPrimaryTitle</Title><Description>%PopulationModifiersTraitBarrowbornPrimaryDescription</Description></ExtendedGuiElement>
+
+
+
+    <!-- ============ ВЫЧИСЛИТЕЛИ: ИВЕНТЫ И РАЗВИТИЕ ============ -->
+    <ExtendedGuiElement Name="DustbornScholarEscapePending"><Title>%DustbornScholarEscapePendingTitle</Title><Description>%DustbornScholarEscapePendingDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornScholarReproductionPending"><Title>%DustbornScholarReproductionPendingTitle</Title><Description>%DustbornScholarReproductionPendingDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornScholarPetPending"><Title>%DustbornScholarPetPendingTitle</Title><Description>%DustbornScholarPetPendingDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornScholarIndependent"><Title>%DustbornScholarIndependentTitle</Title><Description>%DustbornScholarIndependentDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornScholarLobotomized"><Title>%DustbornScholarLobotomizedTitle</Title><Description>%DustbornScholarLobotomizedDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornScholarFoodReproduction"><Title>%DustbornScholarFoodReproductionTitle</Title><Description>%DustbornScholarFoodReproductionDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornScholarPetsAllowed"><Title>%DustbornScholarPetsAllowedTitle</Title><Description>%DustbornScholarPetsAllowedDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornScholarRotation"><Title>%DustbornScholarRotationTitle</Title><Description>%DustbornScholarRotationDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="TemporaryEffectScholarDustReward"><Title>%TemporaryEffectScholarDustRewardTitle</Title><Description>%TemporaryEffectScholarDustRewardDescription</Description></ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="DustbornScholarReproduction_Message"><Title>%DustbornScholarReproduction_MessageTitle</Title><Description>%DustbornScholarReproduction_MessageDescription</Description></ExtendedGuiElement>
+
+    <QuestGuiElement Name="DustbornScholarEscapeChoice">
+        <Title>%DustbornScholarEscapeChoiceTitle</Title>
+        <Description>%DustbornScholarEscapeChoiceDescription</Description>
+        <Icons><Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest02Large" Size="Quest" /></Icons>
+        <Steps><Step Name="Step1">
+            <ObjectiveSet Name="A" Politics="Politics03"><Description>%DustbornScholarEscapeChoiceA</Description><Objective Name="ScholarEscape_Independent">%DustbornScholarEscapeChoiceAObj</Objective></ObjectiveSet>
+            <ObjectiveSet Name="B" Politics="Politics02"><Description>%DustbornScholarEscapeChoiceB</Description><Objective Name="ScholarEscape_Lobotomize">%DustbornScholarEscapeChoiceBObj</Objective></ObjectiveSet>
+        </Step></Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="DustbornScholarPetChoice">
+        <Title>%DustbornScholarPetChoiceTitle</Title>
+        <Description>%DustbornScholarPetChoiceDescription</Description>
+        <Icons><Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest02Large" Size="Quest" /></Icons>
+        <Steps><Step Name="Step1">
+            <ObjectiveSet Name="A" Politics="Politics05"><Description>%DustbornScholarPetChoiceA</Description><Objective Name="ScholarPet_Allow">%DustbornScholarPetChoiceAObj</Objective></ObjectiveSet>
+            <ObjectiveSet Name="B" Politics="Politics02"><Description>%DustbornScholarPetChoiceB</Description><Objective Name="ScholarPet_Rotation">%DustbornScholarPetChoiceBObj</Objective></ObjectiveSet>
+        </Step></Steps>
+    </QuestGuiElement>
 
 </Datatable>
