@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/TechnologyLinkDefinition.xsd">
+
+	<!-- ATTRIBUTES -->
+	<!-- Name: the name of the link. Must be unique -->
+	<!-- Category: the category of the link. There must be a GuiElement of the same name or the link will not be displayed properly -->
+	<!-- PrerequisiteResolution: OR = any of the prerequisite has to be passed for the link to be active. AND = all the prerequisites must be passed. XOR = only one of the prerequisites must be passed. -->
+	
+	<!-- ELEMENTS -->
+	<!-- TechnologyPrerequisite: the technology which provides the tag checked in the first TechnologyPrerequisite is the first extremity of the link in GUI, and the one which provides the tag checked in the second prerequisite is the other extremity -->
+	<!-- SimulationDescriptorReference: a reference to the SimulationDescriptor of your choice, to be applied on the Research simulation object under the empire, once the prerequisites have been checked -->
+	
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionExampleCostReduction" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyExample1</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyExample2</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkExampleCostReduction"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionExampleExclusion" Category="TechnologyLinkTypeExclusion" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyExample2</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyExample3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkExampleExclusion"/>
+    </TechnologyLinkDefinition>
+
+</Datatable>

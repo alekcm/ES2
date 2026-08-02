@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Conversion = add new files, not compatible with other mods. Standalone = replace all files, not compatible with other mods. Extension = add new files, compatible with other mods. -->
+	<RuntimeModule Name="ExampleSimpleQuests" Type="Extension">
+		
+		<!-- Available tags: AI, Art, Buildings, Gameplay, Improvements, MajorFactions, Maps, MinorFactions, Multiplayer, Other, Resources, Technologies, Units -->
+		<Tags>Other</Tags>
+		<!-- Name of the author -->
+		<Author>Quaedam</Author>
+		<!-- Link to your other work -->
+		<Homepage></Homepage>
+		<!-- Title as it appears in the workshop -->
+		<Title>First Example of Quests</Title>
+		<!-- Description as it appears in the workshop -->
+		<Description>Adds:
+			- Three Simple Quests (without choice or effect)
+            - Their GUI
+            - Example of Droplist Reward
+		</Description>
+		<!-- Add more content to this each time you update the mod -->
+		<ReleaseNotes></ReleaseNotes>
+		<!-- Image as it appears in the workshop. Size should be 430x430 pixels -->
+		<PreviewImageFile>ModIcon.png</PreviewImageFile>
+
+		<!-- XML files to load -->
+		<Plugins>
+		
+			<!-- Add one DatabasePlugin for each type you modify. Available DataTypes are referenced in XmlReference.xml -->          
+            <DatabasePlugin DataType="QuestDefinition, Assembly-CSharp">              
+                <Overrides>
+                    <Override Name="Prerequisites" DataType="Amplitude.Query.Xml.XmlQueryPrerequisites, Assembly-CSharp-firstpass">
+                        <ExtraType Name="FilterConstellationByDistance" DataType="QuestFilterConstellationByDistance, Assembly-CSharp" />
+                        <ExtraType Name="FilterSystemByStatus" DataType="QuestFilterSystemByStatus, Assembly-CSharp" />
+                        <ExtraType Name="FilterSystemByDistance" DataType="QuestFilterSystemByDistance, Assembly-CSharp" />
+                        <ExtraType Name="FilterSystemByCuriosity" DataType="QuestFilterSystemByCuriosity, Assembly-CSharp" />
+                        <ExtraType Name="FilterPlanetByCuriosity" DataType="QuestFilterPlanetByCuriosity, Assembly-CSharp" />
+                        <ExtraType Name="FilterShipDesignByModule" DataType="QuestFilterShipDesignByModule, Assembly-CSharp" />
+                        <ExtraType Name="FilterByStringValue" DataType="QuestFilterByStringValue, Assembly-CSharp" />
+                        <ExtraType Name="IsNot" DataType="QuestFilterDifferentEntity, Assembly-CSharp" />
+                    </Override>
+                    <Override Name="Sorter" DataType="Amplitude.Query.Xml.XmlQuerySorter, Assembly-CSharp-firstpass">
+                        <ExtraType Name="SortConstellationByDistance" DataType="QuestSorterConstellationByDistance, Assembly-CSharp" />
+                        <ExtraType Name="SortSystemByDistance" DataType="QuestSorterSystemByDistance, Assembly-CSharp" />
+                    </Override>
+                </Overrides>
+                <FilePath>Simulation/QuestDefinitions.xml</FilePath>                
+            </DatabasePlugin>		
+						
+			<DatabasePlugin DataType="Amplitude.Unity.Gui.GuiElement, Assembly-CSharp-firstpass">
+				<ExtraTypes>
+					<ExtraType DataType="Amplitude.Unity.Gui.ExtendedGuiElement, Assembly-CSharp-firstpass" />
+					<ExtraType DataType="QuestGuiElement, Assembly-CSharp" />
+				</ExtraTypes>
+				<FilePath>Gui/GuiElements.xml</FilePath>
+			</DatabasePlugin>
+			
+			<DatabasePlugin DataType="Droplist, Assembly-CSharp">
+				<FilePath>Simulation/Droplists[Reward].xml</FilePath>
+			</DatabasePlugin>
+			
+			<!-- Add this if you replace text. Note that sub-folders must be named after the languages they contain -->
+			<LocalizationPlugin>
+				<Directory>Localization</Directory>
+			</LocalizationPlugin>
+		</Plugins>
+	
+	</RuntimeModule>
+</Datatable>

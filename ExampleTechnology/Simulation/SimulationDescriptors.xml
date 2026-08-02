@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+	<!-- In this example, the technologies do not unlock anything. However, add a TechnologyPrerequisite which contains the SimulationDescriptor of the technology to make it an unlock of the technology! -->
+    <SimulationDescriptor Name="TechnologyExample1" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyExample2" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyExample3" Type="Technology"/>
+	
+	<!-- These descriptors are used for checks in the TechnologyDefinitions. They do not do anything either, and are provided by the TechnologyLinkDefinitions -->
+    <SimulationDescriptor Name="TechnologyLinkExampleCostReduction" Type="TechnologyLink"/>
+    <SimulationDescriptor Name="TechnologyLinkExampleExclusion" Type="TechnologyLink"/>
+
+</Datatable>

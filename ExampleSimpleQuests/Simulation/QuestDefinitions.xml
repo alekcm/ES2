@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+
+    
+    <!--Category: appears in GUI in Narrative Screen-->
+    <!--ChanceOfTriggering: Random on Quest triggering-->
+    <!--MinimumTurn: Minimum turn of appearence-->
+    <QuestDefinition Name="ExampleQuest01" Category="ExampleQuest" SubCategory="Mod" ChanceOfTriggering="1" MinimumTurn="1">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <!--First, let's select the Empire concerned by the quest -->
+            <!--Here, it's a solo quest, so the Empire concerned is the current Empire: $Empire -->
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <!--Let's define what kinds of buildings we want to track-->
+            <Var VarName="$ScienceBuildings" StringValue="SubCategoryScience"/>
+            <!--How many buildings we want to have ?-->
+            <Var VarName="$MinimumAmount01" IntValue="2"/>
+            <!--Localization var is used to display dynamically a System name or a number-->
+            <LocalizationVar LocalizationKey="$MinimumAmount01Name" Source="$MinimumAmount01"/>
+        </Vars>
+        
+        <!--============ PREREQUISITES ============-->
+        <!--If the prerequisites are not validated, then the quest will not be launched-->
+        <Prerequisites Target="$(Empire)">
+            <!--I want that only Sophon Empires - custom or not - receive this quest: that's why I check if their Major population is Sophon-->        
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinitySophons,PopulationMajor</PathPrerequisite>
+            <!--This quest is launched only if the player has at least 1 colony-->
+            <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ColonizedStarSystemStateColony') ge 1</InterpreterPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ STEP 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <!--Objective Name is needed in GUI-->
+                    <!--StartValue is used in the progression counter displayed when the quest is pinned and in front of the objective in the notifications-->
+                    <!--EndValue is used in the progression counter-->
+                    <Objective Name="Step1_Objective1" StartValue="0" EndValue="$Amount02">
+                        
+                        <Loop>
+                            
+                            <!--The Sequence defines the order and the type of interactions the player has to do-->
+                            <Sequence>
+                                <!--Interaction-check is called a decorator-->
+                                <!--Here, the decorator checks the completion of a construction (fleets, buildings, planetary improvement)-->
+                                <!--Progression increment: each time the decorator is validated, the StartValue is incremented by 1-->
+                                <Decorator_ConstructionCompleted Initiator="Empire" ProgressionIncrement="1">
+                                    <!--Here, the category referes to the building sub category: you can fine them on files starting by ConstructibleElement_Industry[...]-->
+                                    <Input_ConstructionSubCategory VarName="$ScienceBuildings"/>
+                                </Decorator_ConstructionCompleted>
+                            </Sequence>
+                            
+                            <!--A loop requiere a sequence been repeted X times to validate the objective-->
+                            <!--$MinimumAmount01 is define: so the player has to repete the previous sequence twice-->
+                        <Input_Count VarName="$MinimumAmount01"/>                            
+                        </Loop>                      
+                        
+                    </Objective>
+                </ObjectiveSet>
+                <!--Rewards mainly call Droplists-->
+                <!--Because of GUI constraint, you can call only 2 droplists max in solo quests-->
+                <Reward Droplist="DroplistGenericExample01" Picks="1"/>              
+            </Step>
+        </Steps>
+    </QuestDefinition>
+    
+    <!--Let's create another version of ExampleQuest01-->
+    <!--This time using a condition-->
+    <!--The issue with ExampleQuest01 is that the player can destroy the first building and build it again -->
+
+    <QuestDefinition Name="ExampleQuest02" Category="ExampleQuest" SubCategory="Mod" ChanceOfTriggering="1" MinimumTurn="2">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+           
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>            
+                       
+            <!--The interpreted var is able to interrogate the simulation: it will return a "intvalue", a number-->
+            <!--Here, when the quest is launched it is able to count how many time the path is repeted in the game: ClassEmpire/ClassColonizedStarSystem/ClassImprovement -->
+            <!--It will count how many current builginds exist in the whole Empire-->
+            <InterpretedVar VarName="$Amount01Start" Target="$(Empire)">
+                <Expression>Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassImprovement,SubCategoryScience')</Expression>
+            </InterpretedVar>
+            
+            <!--To the current count of existing buildings, you add  +2 -->
+            <InterpretedVar VarName="$Amount01Objective" Target="$(Empire)">
+                <Expression>Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassImprovement,SubCategoryScience') + 2</Expression>
+            </InterpretedVar>
+            
+            <!--This expression is a string: this count how many buildings (type science) there are on the Empire-->
+            <Var VarName="$Expression1" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassImprovement,SubCategoryScience')"/>
+
+            <LocalizationVar LocalizationKey="$Amount01ObjectiveName" Source="$Amount01Objective"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+       
+        <Prerequisites Target="$(Empire)">          
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinitySophons,PopulationMajor</PathPrerequisite>           
+            <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ColonizedStarSystemStateColony') ge 1</InterpreterPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ STEP 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>                   
+                    <Objective Name="Step1_Objective1" StartValue="$Amount01Start" EndValue="$Amount01Objective">
+
+                        <Sequence>
+                            <!--Just like the previous decorator, this one check an interaction: when the player passes a turn and start the next one-->
+                            <!--Notice there is no "initiator": the BeginTurn action is supposed to be the same for all players-->
+                            <Decorator_BeginTurn>
+                                <!--After a Decorator, some conditions can be checked-->
+                                <!--Here, the condition interrogates the simulation (the game properties and situation)-->
+                                <!--Here, it referes to the $Expression1 defines on the variables and it compares the Start and the EndValue-->
+                                <!--Notice that this special condition has also the role of "Progression increment"-->
+                                <Condition_IsProgressionComplete>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$Expression1"/>
+                                </Condition_IsProgressionComplete>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+
+                    </Objective>
+                </ObjectiveSet>               
+                <Reward Droplist="DroplistGenericExample01" Picks="1"/>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--Let's add a time limite for those previous objectives-->
+
+    <QuestDefinition Name="ExampleQuest03" Category="ExampleQuest" SubCategory="Mod" ChanceOfTriggering="1" MinimumTurn="3">
+
+        <!--============ TAGS ============-->
+        <!--Game Event which trigger the quest-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <Var VarName="$Expression1" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassImprovement,SubCategoryScience')"/>
+          
+            <InterpretedVar VarName="$Amount01Start" Target="$(Empire)">
+                <Expression>Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassImprovement,SubCategoryScience')</Expression>
+            </InterpretedVar>
+            
+            <InterpretedVar VarName="$Amount01Objective" Target="$(Empire)">
+                <Expression>Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassImprovement,SubCategoryScience') + 2</Expression>
+            </InterpretedVar>
+            
+            <!--Create the Variable Timer-->
+            <!--You can use it in the localization file, without using a localization var (unique exception)-->
+            <Var VarName="$Timer"/>
+            
+            <!--Let's define the duration of the timer-->
+            <!--On normal speed, the duration will be 20 but will be modified depending on the game speed-->
+            <!--Fast Gamespeed = 0.5-->
+            <!--Normal Gamespeed = 1-->
+            <!--Slow Gamespeed = 1.5-->
+            <!--Endless Gamespeed = 2-->
+            <InterpretedVar VarName="$TurnAmount" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier)*20</Expression>
+            </InterpretedVar>
+
+            <LocalizationVar LocalizationKey="$Amount01ObjectiveName" Source="$Amount01Objective"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinitySophons,PopulationMajor</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ColonizedStarSystemStateColony') ge 1</InterpreterPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ STEP 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <!--While Decorators track interactions between player and the game, Actions trigger elements-->
+                    <!--They can be use directly on the Sequences or between special tags "StartAction" which are used to be sure those actions whould be launch at the beginning of quest-->
+                    <StartActions>
+                        <!--The Action is used to start the Timer. It uses the $Timer variable and the $DurationMax-->
+                        <Action_StartTimer>
+                            <Input_Duration VarName="$TurnAmount"/>
+                            <Output_Timer VarName="$Timer"/>
+                        </Action_StartTimer>
+                        
+                    </StartActions>
+                    
+                    <Objective Name="Step1_Objective1" StartValue="$Amount01Start" EndValue="$Amount01Objective">
+                        <!--A parallel can be used if there are different ways to succeed the quest and/or if there is a way to fail the quest-->
+                        <!--Here, there are 2 "Sequences" in the Parallel-->
+                        <!--The "First" acheived stop the parallel-->
+                        <!--Notice that, if you replace "First" by "All", the 2 "Sequence" has to be succeeded to stop the parallel-->
+                        <Parallel CompletionPolicy="First">
+
+                                <Sequence>
+
+                                    <Decorator_BeginTurn>
+                                        <Condition_IsProgressionComplete>
+                                            <Input_Context VarName="$CurrentEmpire"/>
+                                            <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                            <Input_Expression VarName="$Expression1"/>
+                                        </Condition_IsProgressionComplete>
+                                    </Decorator_BeginTurn>
+
+                                </Sequence>
+
+                                <Sequence>
+                                
+                                    <Decorator_BeginTurn>
+                                        <Condition_TimerEnded>
+                                            <Input_Timer VarName="$Timer"/>
+                                        </Condition_TimerEnded>
+                                    </Decorator_BeginTurn>
+                                    <!--This Action is used to fail a quest-->
+                                    <!--If the $Timer = 0, the next action/decorator waited is the fail action -->
+                                    <Action_Fail/>
+                                
+                                </Sequence>
+
+                        </Parallel>
+                        
+                    </Objective>
+                </ObjectiveSet>
+                <!--If the Action Fail stops the Parallel, the Reward will not be given. -->
+                <Reward Droplist="DroplistGenericExample01" Picks="1"/>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+    
+</Datatable>

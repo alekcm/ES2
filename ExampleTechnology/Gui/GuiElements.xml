@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+	<!-- ATTRIBUTES -->
+	<!-- Name: the name of the element the GuiElement refers to -->
+	<!-- X, Y: the position of the technology relative to the quadrant the technology is placed in. Note that Y is currently unused -->
+	<!-- PrerequisiteResolution: OR = any of the prerequisite has to be passed for the link to be active. AND = all the prerequisites must be passed. XOR = only one of the prerequisites must be passed. -->
+	
+	<!-- ELEMENTS -->
+	<!-- Title: the title of the technology. There must be a LocalizationPair with the same name for it to be properly displayed -->
+	<!-- Description: the description of the technology. There must be a LocalizationPair with the same name for it to be properly displayed -->
+	<!-- Icons: several sizes can be set for different uses (in the technology tree, in the tooltip, etc.) but technologies only support Small for now -->
+	
+    <TechnologyGuiElement2 Name="TechnologyExample1" X="-0.5" Y="0">
+        <Title>%TechnologyExample1Title</Title>
+        <Description>%TechnologyExample1Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration1Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyExample2" X="-2" Y="0">
+        <Title>%TechnologyExample2Title</Title>
+        <Description>%TechnologyExample2Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration1Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyExample3" X="-2.6" Y="0">
+        <Title>%TechnologyExample3Title</Title>
+        <Description>%TechnologyExample3Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration1Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+	
+	<!-- Override the GuiElement of a technology from the base game (just change X) so that our example has space! -->
+    <TechnologyGuiElement2 Name="TechnologyDefinitionScienceAndExploration3" X="-3.6" Y="0">
+        <Title>%TechnologyDefinitionScienceAndExploration3Title</Title>
+        <Description>%TechnologyDefinitionScienceAndExploration3Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration3Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+	
+</Datatable>

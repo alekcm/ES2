@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Droplist.xsd">
+
+   <!--############################
+       #### GENERIC DROPLIST ######
+       ############################-->
+    
+    <!--This droplist is based on Turn Progression-->
+    <!--When the quest is launched, it sends to the droplist the current turn-->
+    <!--Then, among this first droplist, another one is selected-->
+    
+    <Droplist Name="DroplistGenericExample01" Selector="TurnProgression">
+        <List Name="DroplistPrestigeEra1" MaxTurn="50"/>
+        <List Name="DroplistPrestigeEra2" MaxTurn="100"/>
+        <List Name="DroplistPrestigeEra3" MaxTurn="150"/>
+        <List Name="DroplistPrestigeEra4" MaxTurn="200"/>
+        <List Name="DroplistPrestigeEra5"/>
+    </Droplist>
+
+    <!--If this droplist is selected (because the quest was launched between the turn 1 and 49)-->
+    <!--it selects the reward given to the player among this list-->
+    <!--The selector is based on weight: it is more frequent to receive 50 Influence Points for this quest than 80-->
+    <Droplist Name="DroplistPrestigeEra1" Selector="Weighted">
+        <Resource Name="EmpireEmpirePoint" Quantity="50" Weight="8" />
+        <Resource Name="EmpireEmpirePoint" Quantity="60" Weight="3" />
+        <Resource Name="EmpireEmpirePoint" Quantity="80" Weight="1" />
+    </Droplist>
+
+    <Droplist Name="DroplistPrestigeEra2" Selector="Weighted">
+        <Resource Name="EmpireEmpirePoint" Quantity="80" Weight="8" />
+        <Resource Name="EmpireEmpirePoint" Quantity="110" Weight="3" />
+        <Resource Name="EmpireEmpirePoint" Quantity="150" Weight="1" />
+    </Droplist>
+
+    <Droplist Name="DroplistPrestigeEra3" Selector="Weighted">
+        <Resource Name="EmpireEmpirePoint" Quantity="120" Weight="8" />
+        <Resource Name="EmpireEmpirePoint" Quantity="180" Weight="3" />
+        <Resource Name="EmpireEmpirePoint" Quantity="200" Weight="1" />
+    </Droplist>
+
+    <Droplist Name="DroplistPrestigeEra4" Selector="Weighted">
+        <Resource Name="EmpireEmpirePoint" Quantity="250" Weight="8" />
+        <Resource Name="EmpireEmpirePoint" Quantity="300" Weight="3" />
+        <Resource Name="EmpireEmpirePoint" Quantity="400" Weight="1" />
+    </Droplist>
+
+    <Droplist Name="DroplistPrestigeEra5" Selector="Weighted">
+        <Resource Name="EmpireEmpirePoint" Quantity="500" Weight="8" />
+        <Resource Name="EmpireEmpirePoint" Quantity="600" Weight="3" />
+        <Resource Name="EmpireEmpirePoint" Quantity="800" Weight="1" />
+    </Droplist>
+
+
+</Datatable>

@@ -3,10 +3,11 @@
 
     <!-- ##################################################################### -->
     <!--        ГЛАВНЫЙ КВЕСТ ПЫЛЕРОЖДЁННЫХ: "ОСАДОК ЗАБЫТЫХ"                  -->
-    <!--        Chapter0 - скрытый запуск                                      -->
+    <!--  Скрытый запуск на 3-м ходу ТОЛЬКО для империй Пылерождённых          -->
+    <!--  (фильтр по AffinityMappingDustborns — дескриптору фракции).         -->
     <!-- ##################################################################### -->
 
-    <QuestDefinition Name="DustbornsQuest-Chapter0" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
+    <QuestDefinition Name="DustbornsQuest-Chapter0" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="3">
         <Tags>Hidden,BeginTurn</Tags>
         <QuestContextMulti ParticipantsVarName="$Players"/>
         <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
@@ -16,7 +17,7 @@
                 <From Source="$Empires">
                     <Where>
                         <PathPrerequisite Flags="Prerequisite">ClassEmpire,EmpireTypeMajor</PathPrerequisite>
-                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor') ge 1</InterpreterPrerequisite>
+                        <PathPrerequisite Flags="Prerequisite">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
                     </Where>
                 </From>
             </Var>
@@ -49,7 +50,7 @@
 
     <!-- ##################################################################### -->
     <!--  ЭТАП 1 - "ГОЛОД"  (туториальный, без выбора)                         -->
-    <!--  Задача: переварить 2 жителя ИЛИ истощить первую планету              -->
+    <!--  Задача: переварить 2 жителей в Безвольных                            -->
     <!-- ##################################################################### -->
 
     <QuestDefinition Name="DustbornsQuest-Chapter1" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="3">
@@ -62,6 +63,7 @@
                 <From Source="$Empire"/>
             </Var>
             <Var VarName="$DigestCount" IntValue="2"/>
+            <Var VarName="$ConstructibleConvert" StringValue="StarSystemImprovementConvertToBezvolny"/>
         </Vars>
 
         <Steps>
@@ -71,9 +73,9 @@
                         <AIHint Category="Minimal" MinAutoResolutionTurn="15" MaxAutoResolutionTurn="25" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
-                                <Decorator_ConstructionEnded Initiator="Empire" ProgressionIncrement="1">
-                                    <Input_ConstructibleElementName StringValue="StarSystemImprovementConvertToBezvolny"/>
-                                </Decorator_ConstructionEnded>
+                                <Decorator_ConstructionCompleted Initiator="Empire" ProgressionIncrement="1">
+                                    <Input_ConstructionName VarName="$ConstructibleConvert"/>
+                                </Decorator_ConstructionCompleted>
                                 <Input_Count VarName="$DigestCount"/>
                             </Loop>
                             <Action_ChooseOutcome Name="Outcome1"/>
@@ -115,6 +117,10 @@
             <Var VarName="$RewardCongealed" StringValue="DustbornRewardCongealedForms"/>
             <Var VarName="$RewardDigestion" StringValue="DustbornRewardTotalDigestion"/>
             <Var VarName="$RewardPasture" StringValue="DustbornRewardPasture"/>
+
+            <!-- Условия (проверенные паттерны The Watchers: Condition_CheckInterpreter) -->
+            <Var VarName="$ExprDepleted" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprMinors" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMinor') ge 2"/>
         </Vars>
 
         <Steps>
@@ -132,7 +138,7 @@
                         <AIHint Category="Minimal" MinAutoResolutionTurn="25" MaxAutoResolutionTurn="40" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
-                                <Decorator_ConstructionEnded Initiator="Empire" ProgressionIncrement="1"/>
+                                <Decorator_ConstructionCompleted Initiator="Empire" ProgressionIncrement="1"/>
                                 <Input_Count VarName="$BuyoutCount"/>
                             </Loop>
                             <Action_ChooseOutcome Name="OutcomeA"/>
@@ -161,9 +167,10 @@
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprDepleted"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$DepleteCount"/>
                             </Loop>
@@ -186,16 +193,17 @@
                     </Objective>
                 </ObjectiveSet>
 
-                <!-- ===== C. ПАСТБИЩЕ: 10 ходов держать не-Пылерождённых, никого не перерабатывая ===== -->
+                <!-- ===== C. ПАСТБИЩЕ: 10 ходов держать >= 2 миноров ===== -->
                 <ObjectiveSet>
                     <Objective Name="Chapter2_C_Objective1" StartValue="0" EndValue="$KeepTurns">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="25" MaxAutoResolutionTurn="40" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMinor') ge 2</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprMinors"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$KeepTurns"/>
                             </Loop>
@@ -240,6 +248,10 @@
             <Var VarName="$RewardSapience" StringValue="DustbornRewardAdaptationToSapience"/>
             <Var VarName="$RewardLattices" StringValue="DustbornRewardRefinedLattices"/>
             <Var VarName="$RewardMiserly" StringValue="DustbornRewardMiserlyWisdom"/>
+
+            <Var VarName="$ExprCold" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeArctic,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeTundra,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprHot" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeLava,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeDesert,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprMeager" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeBarren,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAsteroid,PlanetDepletionMalus') ge 1"/>
         </Vars>
 
         <Steps>
@@ -250,16 +262,17 @@
                     <ChoiceItem ObjectiveSetIndex="2"/>
                 </Choice>
 
-                <!-- ===== A. ИДТИ НА ХОЛОД: 3 холодные планеты ===== -->
+                <!-- ===== A. ИДТИ НА ХОЛОД ===== -->
                 <ObjectiveSet>
                     <Objective Name="Chapter3_A_Objective1" StartValue="0" EndValue="$PlanetCount">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="40" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeArctic,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeTundra,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprCold"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$PlanetCount"/>
                             </Loop>
@@ -282,16 +295,17 @@
                     </Objective>
                 </ObjectiveSet>
 
-                <!-- ===== B. ИДТИ НА ЖАР: 3 горячие планеты ===== -->
+                <!-- ===== B. ИДТИ НА ЖАР ===== -->
                 <ObjectiveSet>
                     <Objective Name="Chapter3_B_Objective1" StartValue="0" EndValue="$PlanetCount">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="40" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeLava,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeDesert,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprHot"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$PlanetCount"/>
                             </Loop>
@@ -314,16 +328,17 @@
                     </Objective>
                 </ObjectiveSet>
 
-                <!-- ===== C. ИДТИ НА МЁРТВОЕ: 3 бесплодные планеты ===== -->
+                <!-- ===== C. ИДТИ НА МЁРТВОЕ ===== -->
                 <ObjectiveSet>
                     <Objective Name="Chapter3_C_Objective1" StartValue="0" EndValue="$PlanetCount">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="40" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeBarren,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAsteroid,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprMeager"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$PlanetCount"/>
                             </Loop>
@@ -366,6 +381,9 @@
             <Var VarName="$KeepTurns" IntValue="10"/>
             <Var VarName="$RewardWhisper" StringValue="DustbornRewardWhisperInTheLungs"/>
             <Var VarName="$RewardForge" StringValue="DustbornRewardAbrasiveForge"/>
+
+            <Var VarName="$ExprMinors4" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMinor') ge 4"/>
+            <Var VarName="$ConstructibleForge" StringValue="StarSystemImprovementAbrasiveForge"/>
         </Vars>
 
         <Steps>
@@ -375,16 +393,17 @@
                     <ChoiceItem ObjectiveSetIndex="1"/>
                 </Choice>
 
-                <!-- ===== A. ДОЛГОЕ СОСЕДСТВО: 10 ходов Пылерождённые на 4 планетах с чужаками ===== -->
+                <!-- ===== A. ДОЛГОЕ СОСЕДСТВО: 10 ходов >= 4 миноров ===== -->
                 <ObjectiveSet>
                     <Objective Name="Chapter4_A_Objective1" StartValue="0" EndValue="$KeepTurns">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="55" MaxAutoResolutionTurn="75" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMinor') ge 4</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprMinors4"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$KeepTurns"/>
                             </Loop>
@@ -418,9 +437,9 @@
                     <Objective Name="Chapter4_B_Objective1">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="55" MaxAutoResolutionTurn="75" AutoResolutionProbability="1"/>
                         <Sequence>
-                            <Decorator_ConstructionEnded Initiator="Empire">
-                                <Input_ConstructibleElementName StringValue="StarSystemImprovementAbrasiveForge"/>
-                            </Decorator_ConstructionEnded>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleForge"/>
+                            </Decorator_ConstructionCompleted>
                             <Action_ChooseOutcome Name="OutcomeB"/>
                         </Sequence>
                         <Outcome Name="OutcomeB">
@@ -455,6 +474,9 @@
             <Var VarName="$DepleteCount" IntValue="8"/>
             <Var VarName="$RewardBarrow" StringValue="DustbornRewardSettledBarrow"/>
             <Var VarName="$RewardCamp" StringValue="DustbornRewardStrikeTheCamp"/>
+
+            <Var VarName="$ExprDepleted" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus') ge 1"/>
+            <Var VarName="$ExprBezvolny" StringValue="Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount) ge 20"/>
         </Vars>
 
         <Steps>
@@ -464,16 +486,17 @@
                     <ChoiceItem ObjectiveSetIndex="1"/>
                 </Choice>
 
-                <!-- ===== A. ОСЕВШИЕ: 10 ходов 20 Безвольных на истощённых мирах ===== -->
+                <!-- ===== A. ОСЕВШИЕ: 10 ходов >= 20 Безвольных ===== -->
                 <ObjectiveSet>
                     <Objective Name="Chapter5_A_Objective1" StartValue="0" EndValue="$KeepTurns">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="80" MaxAutoResolutionTurn="110" AutoResolutionProbability="1"/>
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount) ge 20</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprBezvolny"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$KeepTurns"/>
                             </Loop>
@@ -503,9 +526,10 @@
                         <Sequence>
                             <Loop>
                                 <Decorator_BeginTurn ProgressionIncrement="1">
-                                    <Input_Prerequisites>
-                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
-                                    </Input_Prerequisites>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$ExprDepleted"/>
+                                    </Condition_CheckInterpreter>
                                 </Decorator_BeginTurn>
                                 <Input_Count VarName="$DepleteCount"/>
                             </Loop>
@@ -571,6 +595,8 @@
             <Var VarName="$RewardSilence" StringValue="DustbornRewardSilenceTheSource"/>
             <Var VarName="$RewardVein" StringValue="DustbornRewardOpenTheVein"/>
             <Var VarName="$RewardRoots" StringValue="DustbornRewardReturnToRoots"/>
+            <Var VarName="$Marker01"/>
+            <Var VarName="$BarrowGUID"/>
         </Vars>
 
         <Steps>
@@ -579,21 +605,25 @@
                 <ObjectiveSet>
                     <StartActions>
                         <Action_AddQuestMarkers RevealsLocation="true">
+                            <Input_Targets VarName="$BarrowSystem"/>
                             <Input_Empires VarName="$CurrentEmpire"/>
-                            <Input_TargetEntities VarName="$BarrowSystem"/>
+                            <Output_Markers VarName="$Marker01"/>
                         </Action_AddQuestMarkers>
                         <Action_SpawnCuriosity>
                             <Input_Empires VarName="$CurrentEmpire"/>
                             <Input_Planets VarName="$BarrowPlanet"/>
                             <Input_CuriosityDefinition VarName="$CuriosityName"/>
+                            <Output_CuriosityGUIDs VarName="$BarrowGUID"/>
                         </Action_SpawnCuriosity>
                     </StartActions>
                     <Objective Name="Chapter6_Find">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="120" MaxAutoResolutionTurn="160" AutoResolutionProbability="1"/>
                         <Sequence>
-                            <Decorator_CuriosityDiscovered Initiator="Empire"/>
+                            <Decorator_CuriosityDiscovered>
+                                <Input_CuriosityGUIDs VarName="$BarrowGUID"/>
+                            </Decorator_CuriosityDiscovered>
                             <Action_RemoveQuestMarkers>
-                                <Input_TargetEntities VarName="$BarrowSystem"/>
+                                <Input_Markers VarName="$Marker01"/>
                             </Action_RemoveQuestMarkers>
                             <Action_ChooseOutcome Name="OutcomeFound"/>
                         </Sequence>
@@ -672,7 +702,8 @@
 
     <!-- ##################################################################### -->
     <!--  САЙД 2.10 - "ОБОЛОЧКИ, КОТОРЫЕ СЧИТАЛИ"                              -->
-    <!--  Триггер: первое же переваривание жителя научной фракции              -->
+    <!--  Только для Пылерождённых (фильтр AffinityMappingDustborns).          -->
+    <!--  Триггер: первая переработка жителя в Безвольного.                    -->
     <!-- ##################################################################### -->
 
     <QuestDefinition Name="DustbornsSide-ScholarShells" Category="MinorQuest" SubCategory="Dustborns" MinimumTurn="10">
@@ -685,13 +716,14 @@
                 <From Source="$Empires">
                     <Where>
                         <PathPrerequisite Flags="Prerequisite">ClassEmpire,EmpireTypeMajor</PathPrerequisite>
-                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor') ge 1</InterpreterPrerequisite>
+                        <PathPrerequisite Flags="Prerequisite">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
                     </Where>
                 </From>
             </Var>
             <Var VarName="$CurrentEmpire">
                 <From Source="$Empire"/>
             </Var>
+            <Var VarName="$ConstructibleConvert" StringValue="StarSystemImprovementConvertToBezvolny"/>
             <Var VarName="$UnlockDescriptor" StringValue="EmpireUnlockedScholarShells"/>
         </Vars>
 
@@ -701,9 +733,9 @@
                     <Objective Name="ScholarShells_Objective1">
                         <AIHint Category="Minimal" MinAutoResolutionTurn="30" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
                         <Sequence>
-                            <Decorator_ConstructionEnded Initiator="Empire">
-                                <Input_ConstructibleElementName StringValue="StarSystemImprovementConvertToBezvolny"/>
-                            </Decorator_ConstructionEnded>
+                            <Decorator_ConstructionCompleted Initiator="Empire">
+                                <Input_ConstructionName VarName="$ConstructibleConvert"/>
+                            </Decorator_ConstructionCompleted>
                             <Action_ChooseOutcome Name="Outcome1"/>
                         </Sequence>
                         <Outcome Name="Outcome1">

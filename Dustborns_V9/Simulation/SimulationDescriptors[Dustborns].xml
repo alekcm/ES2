@@ -70,31 +70,32 @@
 
     <SimulationDescriptor Name="PopulationExploitingPlanetWhileDepleting" Type="PopulationExploitingPlanetWhileDepleting"/>
 
-    <!-- КОНВЕРСИЯ ЕДЫ В ПЫЛЬ  (v5 - рабочая схема)
-         Возврат к v1 (она единственная реально давала цифры), плюс компенсация производства.
-         Шаг 1-4: штатная рифтборновская конверсия. Она наполняет SystemProductionFromGrowth
-                  и через DisableFoodConversion разрешает игре превратить его в производство.
-                  Деньги при этой схеме считаются корректно.
-         Шаг 5:   платим пыль с пула по ставке DustbornFoodToDustRatio (техи поднимают до 1.0).
-         Шаг 6:   компенсация: вычитаем из производства ровно ту же величину, которую добавил шаг 1-4.
-                  Итог +X -X = 0, производство от еды не растёт, а деньги остаются. -->
+    <!-- КОНВЕРСИЯ ЕДЫ В ПЫЛЬ  (v6 - исправленная схема)
+         Прошлая схема (v5) манипулировала SystemProductionFromGrowth: она САМА добавляла
+         излишек еды в этот пул, а игра (Public/SimulationDescriptors[ColonizedStarSystem])
+         безусловно добавляет SystemProductionFromGrowth в NetSystemProduction, т.е. в
+         производство. Компенсация же писалась в SystemIndustry/NetSystemIndustry (не туда)
+         и срабатывала после добавления пула, поэтому еда шла в производство, а пыль - нет
+         (ставка DustbornFoodToDustRatio читалась с системы, где её нет: SearchValueFromPath
+         читает ВСЕ значения с пути цели).
+         Новая схема простая и надёжная:
+           1) Пыль = излишек еды системы * 0.25 -> прямо в SystemMoney системы;
+           2) DisableFoodConversion = 1 на системе отключает штатную конверсию еды
+              в производство (именно так это свойство используют моды-балансеры);
+           3) Технологии ветки A добавляют ещё по +0.25 (см. SimulationDescriptors[DustbornsQuests]). -->
     <SimulationDescriptor Name="ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" Type="ClassPopulationStarSystem">
         <Property Name="DustbornFoodToDustRatio" BaseValue="0.25" MinValue="0" MaxValue="1"/>
 
-        <!-- 1-4. Штатный расчёт пула еды -->
-        <Modifier TargetProperty="SystemProductionFromGrowth" Operation="Addition" Value="$(SystemGrowth)" Path="../ClassColonizedStarSystem" TooltipHidden="true" SearchValueFromPath="true"/>
-        <Modifier TargetProperty="SystemProductionFromGrowth" Operation="Subtraction" Value="$(SystemGrowthUpkeep)" Path="../ClassColonizedStarSystem" TooltipHidden="true" SearchValueFromPath="true"/>
-        <BinaryModifier TargetProperty="SystemProductionFromGrowth" Operation="Multiplication" Left="1" BinaryOperation="Subtraction" Right="$(SystemPopulationIsMaxed)" Path="../ClassColonizedStarSystem" TooltipHidden="true" SearchValueFromPath="true"/>
-        <Modifier TargetProperty="DisableFoodConversion" Operation="Subtraction" Value="1" Path="../ClassColonizedStarSystem" TooltipHidden="true"/>
+        <!-- 1) Пыль с еды: SystemMoney системы += SystemGrowth * 0.25.
+             $(SystemGrowth) читается с системы (SearchValueFromPath="true"), 0.25 - литерал.
+             Дескриптор висит на системной популяции Пылерождённых (1 раз на систему). -->
+        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
+                        Path="../ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
 
-        <!-- 5. Пыль с пула -->
-        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition" Left="$(SystemProductionFromGrowth)" BinaryOperation="Multiplication" Right="$(DustbornFoodToDustRatio)" Path="../ClassColonizedStarSystem" Priority="100" TooltipHidden="false" SearchValueFromPath="true"/>
-
-        <!-- 6. КОМПЕНСАЦИЯ ПРОИЗВОДСТВА: -X равный тому же пулу.
-             Пылерождённые не работают руками, еда не должна давать производство.
-             Пробуем сразу два целевых свойства - лишнее просто не найдётся и будет проигнорировано. -->
-        <Modifier TargetProperty="SystemIndustry" Operation="Subtraction" Value="$(SystemProductionFromGrowth)" Path="../ClassColonizedStarSystem" Priority="900" TooltipHidden="false" SearchValueFromPath="true"/>
-        <Modifier TargetProperty="NetSystemIndustry" Operation="Subtraction" Value="$(SystemProductionFromGrowth)" Path="../ClassColonizedStarSystem" Priority="900" TooltipHidden="true" SearchValueFromPath="true"/>
+        <!-- 2) Отключаем штатную конверсию еды в производство -->
+        <Modifier TargetProperty="DisableFoodConversion" Operation="Force" Value="1"
+                  Path="../ClassColonizedStarSystem" TooltipHidden="true"/>
     </SimulationDescriptor>
 
     <!-- Bezvolny -->

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="Documentation/Schemas/Amplitude.Unity.Runtime.RuntimeModule.xsd">
-  <RuntimeModule Name="DustbornsV9" Type="Extension" Version="2.00">
+  <RuntimeModule Name="DustbornsV9" Type="Extension" Version="2.03">
     <Title>Dustborns - Quests, Technologies and Census of Ash</Title>
     <Description>Фикс: x0.5 пром через PlanetPopulationIndustry Percent, старт 2+1 безвольный через MajorPopulation Count и HomeImprovement. Пыль: +8 Teeming неистощена, +4 средняя неистощена. Безвольные без политики, +3/+6 инд, без науки/влияния.</Description>
     <Author>Arena Agent</Author>
     <Homepage></Homepage>
     <PreviewImageFile>ModIcon.png</PreviewImageFile>
-    <ReleaseNotes>1.10 - Fixed half industry via PlanetPopulationIndustry Percent -0.5, added home improvement to spawn Bezvolny, Standard true for Bezvolny, removed politics, dust bonus via tags Meager/Teeming * BonusFromDepletion</ReleaseNotes>
+    <ReleaseNotes>1.13 - TECH TREE: techs moved into real quadrants (Digestion=Empire Development, FoodToDust=Economy and Trade, Depletion/Shells=Science and Exploration) with correct stage/category/cost/count descriptors; vertical chains: FoodToDust1->2->3, Digestion1->2->3, Depletion1->Shells1. QUESTS: rewritten objectives to proven element names (Decorator_ConstructionCompleted+Input_ConstructionName, Condition_CheckInterpreter+Input_Context/Input_Expression); restored hidden Chapter0 launcher (MinimumTurn=3) as the faction gate; all quest filters now use ClassEmpire,AffinityMappingDustborns instead of the broken population-count path - main quest appears on turn 3 for Dustborns only, side quest ScholarShells no longer fires for all factions. 1.12 - TECH TREE: techs now use TechnologyGuiElement2 with X/Y (were invisible in the tree); added TechnologyGuiElement2 to GuiElement plugin ExtraTypes; added icons. FOOD: rewrote food-to-dust (v6): money = SystemGrowth*0.25 written directly to SystemMoney, DisableFoodConversion=1 stops food->industry; removed the SystemProductionFromGrowth hack that caused food->industry; techs add +25% each. QUESTS: removed redundant Chapter0 launcher (started Chapter1 on turn 1 over the game intro); added faction Prerequisites to all chapters. 1.11 - CRASH FIX: Droplists rewritten to correct ES2 format (Resource with Quantity, no DroppableStack); removed invalid ExtraType 'DroppableStack' from Dustborns.xml; added GuiElement/localization for tech category CategoryTechnologyFactionDustborns. 1.10 - Fixed half industry via PlanetPopulationIndustry Percent -0.5, added home improvement to spawn Bezvolny, Standard true for Bezvolny, removed politics, dust bonus via tags Meager/Teeming * BonusFromDepletion</ReleaseNotes>
     <Tags>MajorFactions</Tags>
     <Plugins>
       <DatabasePlugin DataType="Amplitude.Unity.Simulation.SimulationDescriptor, Assembly-CSharp-firstpass">
@@ -70,6 +70,9 @@
         <ExtraTypes>
           <ExtraType DataType="Amplitude.Unity.Gui.ExtendedGuiElement, Assembly-CSharp-firstpass" />
           <ExtraType DataType="AffinityGuiElement, Assembly-CSharp" />
+          <!-- Без TechnologyGuiElement2 технологии не отображаются в дереве: у техы должен быть
+               TechnologyGuiElement2 с тем же именем и координатами X/Y -->
+          <ExtraType DataType="TechnologyGuiElement2, Assembly-CSharp" />
         </ExtraTypes>
         <FilePath>Gui/GuiElements[Dustborns].xml</FilePath>
       </DatabasePlugin>
@@ -90,9 +93,9 @@
       </DatabasePlugin>
 
       <DatabasePlugin DataType="Droplist, Assembly-CSharp">
-        <ExtraTypes>
-          <ExtraType DataType="DroppableStack, Assembly-CSharp"/>
-        </ExtraTypes>
+        <!-- ExtraTypes не нужны: <Resource> - штатный дочерний элемент Droplist.
+             Тип "DroppableStack" в игре НЕ существует; объявление его здесь
+             вызывало ошибку "Data type 'DroppableStack, Assembly-CSharp' could not be resolved". -->
         <FilePath>Simulation/Droplists[Dustborns].xml</FilePath>
       </DatabasePlugin>
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/ScienceConstructibleElement.xsd">
+
+	<!-- ATTRIBUTES -->
+	<!-- Name: the name of the technology. Must be unique. There must be a TechnologyGuiElement2 of the same name or it will not be displayed properly -->
+	<!-- TechnologyStage: a reference to the TechnologyStageDefinition of your choice -->
+	<!--  - It is currently impossible to add new stages due to GUI limitations. Use the ones that already exist in ConstructibleElement_Science[*].xml -->
+	<!-- Category: the category of the technology. There must be a GuiElement of the same name or the tooltip of the technology will not be displayed properly, and the technology will not have a colored outline -->
+	<!-- ScoreProvider: a reference to the ScoreProviderListDefinition of your choice. This will give points to unlock heroes, if defined -->
+	
+	<!-- ELEMENTS -->
+	<!-- Cost/CustomCost: the cost in any resource it will take to research the technology. Please note that non-EmpireResearch costs are improperly displayed in GUI -->
+	<!--  - CustomCosts are used extensively to have a dynamic cost, which supports the effects of a cost reduction link -->
+	<!-- TechnologyPrerequisite: use this prerequisite for exclusion links -->
+	<!-- SimulationDescriptorReference: a reference to the SimulationDescriptor of your choice, to be applied on the Research simulation object under the empire -->
+	<!-- PopulationEvent: a reference to the PopulationPoliticalEventDefinition of your choice -->
+
+    <TechnologyDefinition Name="TechnologyExample1" TechnologyStage="TechnologyStageDefinitionScienceAndExploration1" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage1Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+        <SimulationDescriptorReference Name="TechnologyExample1"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage1"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyExample2" TechnologyStage="TechnologyStageDefinitionScienceAndExploration2" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * (1 - (0.25 * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkExampleCostReduction'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+		<TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkExampleExclusion</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyExample2"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyExample3" TechnologyStage="TechnologyStageDefinitionScienceAndExploration2" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+		<TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkExampleExclusion</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyExample3"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+    </TechnologyDefinition>
+	
+</Datatable>

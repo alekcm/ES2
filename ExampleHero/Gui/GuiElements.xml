@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+	<!-- ATTRIBUTES -->
+	<!-- Name: the name of the element the GuiElement refers to -->
+	
+	<!-- ELEMENTS -->
+	<!-- Title: the title of the technology. There must be a LocalizationPair with the same name for it to be properly displayed -->
+	<!-- Description: the description of the technology. There must be a LocalizationPair with the same name for it to be properly displayed -->
+	<!-- Icons: several sizes can be set for different uses -->
+    <!-- ModelPath: the path to the animated model of the hero. Here, we have none so that the icons are used instead. -->
+
+    <HeroGuiElement Name="HeroExample">
+        <Title>%HeroExampleTitle</Title>
+        <Description>%HeroExampleDescription</Description>
+        <Icons>
+            <!-- These textures are used in tooltips, and in the notification if the animated model fails to load. -->
+            <Icon Size="Medium" Path="Gui/HeroExampleMedium"/>
+            <Icon Size="Large" Path="Gui/HeroExampleLarge"/>
+            <Icon Size="Mood" Path="Gui/HeroExampleMood"/>
+        </Icons>
+    </HeroGuiElement>
+	
+</Datatable>

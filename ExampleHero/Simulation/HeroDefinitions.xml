@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/HeroDefinition.xsd">
+
+    <!-- Heroes each have a specific set of data. Their name must be unique. -->
+    <HeroDefinition Name="HeroExample">
+        
+        <!-- These are the starting hero's skills. There is no limit on the number of starting skills. -->
+        <Skill Name="HeroSkillExample01"/>
+        <Skill Name="HeroSkillExample02"/>
+
+        <!-- A hero has an affinity, class and politics. -->
+        <Affinity Name="HeroAffinityTerrans"/>
+        <Class Name="HeroClassAdministrator"/>
+        <Politics Name="HeroPolitics06"/>
+
+        <!-- The ship design of the hero must be a Hero ship design (with role "ShipRoleHero") -->
+        <ShipDesign Name="ShipDesignHeroSmall04Defender"/>
+
+        <!-- The GUI supports only 3 skill trees so far. It's recommended to have matching skill trees and affinity/class, but you can do otherwise. -->
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeTerrans"/>
+        <SkillTree Name="HeroSkillTreeAdministrator"/>
+        
+        <!-- The levelup rule sets the XP needed to gain a level. This must be the same required XP as the hero's ship. -->
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+</Datatable>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Localization.LocalizationDatatableElement.xsd">
     <LocalizationPair Name="%FactionDustbornsTitle">Пылерождённые</LocalizationPair>
-    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, еда->пыль постоянно 25%. Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
+    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, конверсия еды в пыль 25% (технологии ветки «Сухая Жатва» поднимают до 100%). Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
 
     <LocalizationPair Name="%AffinityGameplayDustbornsTitle">Пылерождённые + Безвольные</LocalizationPair>
     <LocalizationPair Name="%AffinityGameplayDustbornsDescription">-10% пром за каждого Пылерождённого на планете, 0/+8/+16 пыли через теги планеты, еда в пыль постоянна, безвольные без политики.</LocalizationPair>
@@ -13,7 +13,7 @@
     <LocalizationPair Name="%AffinityMappingDustbornsDescription">Корабли из пыли.</LocalizationPair>
 
     <LocalizationPair Name="%PopulationDustbornsTitle">Пылерождённый</LocalizationPair>
-    <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, еда->пыль 25% постоянно.</LocalizationPair>
+    <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, конверсия еды в пыль 25% (до 100% технологиями).</LocalizationPair>
 
     <LocalizationPair Name="%PopulationBezvolnyTitle">Безвольный</LocalizationPair>
     <LocalizationPair Name="%PopulationBezvolnyDescription">+3 промышленности (+6 на истощённой), без науки/влияния, без политики, не растёт.</LocalizationPair>
@@ -74,6 +74,7 @@
     <LocalizationPair Name="%TechnologyDustbornDepletion1Description">Истощение миров -0.1 в ход.</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornShells1Title">Армированные Оболочки</LocalizationPair>
     <LocalizationPair Name="%TechnologyDustbornShells1Description">Безвольные: +2 производства. Гарнизон: +10% здоровья.</LocalizationPair>
+
 
     <!-- ============ ГЛАВНЫЙ КВЕСТ ============ -->
     <LocalizationPair Name="%DustbornsQuest-Chapter1Title">Голод</LocalizationPair>

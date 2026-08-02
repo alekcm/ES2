@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/IndustryConstructibleElement.xsd">
+
+    <!-- In order to modify an existing improvement, copy the improvement definition from the XML in the game files, and change some of the values. Don't change the name! -->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementStartingFoodIndustry" SubCategory="SubCategoryStarting" ScoreProvider="StarSystemImprovementBuilt">
+        <!-- Used for system supervisor. -->
+        <SupervisorGain Name="Food" />
+        <SupervisorGain Name="Industry" />
+        <!-- The cost of the improvement. There can be more than one. -->
+        <Cost ResourceName="SystemProduction">100</Cost>
+        <!-- The prerequisites of the improvement. They are checked on the system, but can test flags or values on anything in the empire. -->
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementStartingFoodIndustry,!FastForwardedImprovement</PathPrerequisite>
+        <!-- This prerequisite specifically checks a technology unlock. -->
+        <TechnologyPrerequisite Flags="Prerequisite,Discard">TechnologyStageEmpireDevelopment1</TechnologyPrerequisite>
+        <!-- SimulationDescriptors are the "effects" of the improvement. This one has a '+5 food +5 industry' and '+weak upkeep'. -->
+        <SimulationDescriptorReference Name="StarSystemImprovementStartingFoodIndustry" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage1Weak" />
+    </StarSystemImprovementDefinition>
+
+    <!-- In this improvement, we only change the cost as well. -->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementStartingDustScience" SubCategory="SubCategoryStarting" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Dust" />
+        <SupervisorGain Name="Science" />
+        <Cost ResourceName="SystemProduction">100</Cost>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementStartingDustScience,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard">TechnologyStageEmpireDevelopment1</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementStartingDustScience" />
+    </StarSystemImprovementDefinition>
+
+</Datatable>

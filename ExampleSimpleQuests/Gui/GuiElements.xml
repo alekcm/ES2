@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+	<!-- ATTRIBUTES -->
+	<!-- Name (Title): the name of the element the GuiElement refers to -->
+	<!-- Politics: define the icons which will appear in front of the objective -->
+    <!-- Name (Step): Refere to the step (find it in the quest definition)-->
+	<!-- Name (objective): Refere to the sequence the player has to do (find it in the quest definition) -->
+	
+	<!-- ELEMENTS -->
+	<!-- Title: the title of the Quest. There must be a LocalizationPair with the same name for it to be properly displayed -->
+	<!-- Description: the description of the Quest. There must be a LocalizationPair with the same name for it to be properly displayed -->
+	<!-- Icons: the quest picture (the size is always large -->
+    <!-- Description: the lore description in the objective tooltips -->
+    <!-- TooltipDescription: Gameplay hint in the objective tooltips -->
+    <!-- OutcomeCompleted: The lore text displays if the player succeeds the quest -->
+    <!-- OutcomeFailed: The lore text displays if the player fails the quest -->
+    <!-- Objective: The objective the player has to acheive -->
+
+    <!-- POLITICS -->
+    <!--Politics01: Industrialist-->
+    <!--Politics02: Science-->
+    <!--Politics03: Pacifist-->
+    <!--Politics04: Ecologist-->
+    <!--Politics05: Religious-->
+    <!--Politics06: Militarist-->
+
+    <QuestGuiElement Name="ExampleQuest01">
+        <Title>%ExampleQuest01-Title</Title>
+        <Description>%ExampleQuest01-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Description>%ExampleQuest01-Description01</Description>
+                    <TooltipDescription>%ExampleQuest01-Objective01Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExampleQuest01-Outcome</OutcomeCompleted>                   
+                    <Objective Name="Step1_Objective1">%ExampleQuest01-Objective01</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="ExampleQuest02">
+        <Title>%ExampleQuest02-Title</Title>
+        <Description>%ExampleQuest02-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Description>%ExampleQuest02-Description01</Description>
+                    <TooltipDescription>%ExampleQuest02-Objective01Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExampleQuest02-Outcome</OutcomeCompleted>
+                    <Objective Name="Step1_Objective1">%ExampleQuest02-Objective01</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="ExampleQuest03">
+        <Title>%ExampleQuest03-Title</Title>
+        <Description>%ExampleQuest03-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Description>%ExampleQuest03-Description01</Description>
+                    <TooltipDescription>%ExampleQuest03-Objective01Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExampleQuest03-Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%ExampleQuest03-Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective1">%ExampleQuest03-Objective01</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+</Datatable>

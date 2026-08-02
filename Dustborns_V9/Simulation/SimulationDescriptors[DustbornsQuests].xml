@@ -177,15 +177,22 @@
          ====================================================================== -->
 
     <!-- Ветка A: конверсия еды в пыль 25% -> 50% -> 75% -> 100%.
-         Каждая техника ДОБАВЛЯЕТ 0.25 к ставке; MaxValue свойства = 1. -->
+         База 25% зашита в ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust (литерал 0.25).
+         Каждая техника добавляет ещё +25% излишка еды в пыль напрямую в SystemMoney системы. -->
     <SimulationDescriptor Name="TechnologyDustbornFoodToDust1" Type="Technology">
-        <Modifier TargetProperty="DustbornFoodToDustRatio" Operation="Addition" Value="0.25" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
+                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornFoodToDust2" Type="Technology">
-        <Modifier TargetProperty="DustbornFoodToDustRatio" Operation="Addition" Value="0.25" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
+                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornFoodToDust3" Type="Technology">
-        <Modifier TargetProperty="DustbornFoodToDustRatio" Operation="Addition" Value="0.25" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
+                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <!-- Ветка B: пыль за переваривание 300 -> 600 -> 900 -> 1200.

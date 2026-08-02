@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/PanelFeatureModuleEffectsDefinition.xsd">
+
+    <!-- PanelFeatureModuleEffectsDefinition - Defines the layout and set of information displayed in Module tooltips.
+    Available attributes for Item:
+        - Name: Name fo the simulation property reflected by that entry
+        - MinValue/MaxValue: Closed interval in which the value is valid (default is ]-Infinity; +Infinity[)
+        - IsPercentage: Self-explanatory (default is false)
+        - Format: String used to format the result (default is "{0}")
+    In each PanelFeatureModuleEffectsDefinition, only one item can have the attribute IsSpecialTable set to true. This is used to
+    placed the list of Special effects string within the table.
+    NB: Some values have particular formatting and are overriden in code:
+        - ShortRangePenalty
+        - MediumRangePenalty
+        - LongRangePenalty
+        - NetShipProbe
+  -->
+    <!-- ********************** -->
+    <!-- **** Weapon module *** -->
+    <!-- ********************** -->
+    <PanelFeatureModuleEffectsDefinition Name="Weapon">
+        <Category Name="DamageGroup" Title="%PanelFeatureModuleEffectsWeaponDamageTitle">
+            <Item Name="DamagePerSecond"                        Title="%PanelFeatureModuleEffectsWeaponDPSTitle"                            MinValue="0.01"/>
+            <Item Name="CriticalHitChance"                      Title="%PanelFeatureModuleEffectsWeaponCriticalHitTitle"                    MinValue="0.01" IsPercentage="true"/>
+            <Item Name="WeaponTypePhysical"                     Title="%PanelFeatureModuleEffectsWeaponTypePhysicalTitle"                   MinValue="1"/>
+            <Item Name="WeaponTypeEnergy"                       Title="%PanelFeatureModuleEffectsWeaponTypeEnergyTitle"                     MinValue="1"/>
+            <Item Name="FlakEfficiency"                         Title="%FlakEfficiencyTitle"                                                MinValue="1"/>
+            <Item Name="SalvoHealthPercent"                     Title="%PanelFeatureModuleEffectsSalvoHealthPercentTitle"                   Format="+{0}" MinValue="0.01" IsPercentage="true"/>
+            <Item Name="ShipManpowerKillPerHit"                 Title="%PanelFeatureModuleEffectShipManpowerKillPerHitTitle"                MinValue="0.01"/>
+            <Item Name="DamageAbsorbedByShieldMultiplier"       Title="%PanelFeatureModuleEffectsDamageAbsorbedByShieldMultiplierTitle"     Format="+{0}" MinValue="0.01" IsPercentage="true"/>
+            <Item Name="SplashFlotillaDamagePercent"            Title="%PanelFeatureModuleEffectsSplashFlotillaDamagePercentTitle"          MinValue="0.01" IsPercentage="true"/>
+        </Category>
+        <Category Name="OpponentPenalty" Title="%PanelFeatureModuleEffectsWeaponOpponentPenaltyTitle">
+            <Item Name="OpponentEnergyWeaponAccuracyPercent"    Title="%PanelFeatureModuleEffectsOpponentEnergyWeaponAccuracyPercentTitle"  MaxValue="-0.01" IsPercentage="true"/>
+            <Item Name="OpponentCooldownReductionPercent"       Title="%PanelFeatureModuleEffectsOpponentCooldownReductionPercentTitle"     Format="+{0}" MinValue="0.01"  IsPercentage="true"/>
+            <Item Name="SpecialEffectDuration"                  Title="%PanelFeatureModuleEffectsSpecialEffectDurationTitle"                Format="{0} " MinValue="1" UnitLocalizationKey="%PanelFeatureModuleEffectsSpecialEffectDurationUnit"/>
+        </Category>
+        <Category Name="RangeGroup" Title="%PanelFeatureModuleEffectsWeaponRangeTitle">
+            <Item Name="ShortRangePenalty"      Title="%PanelFeatureModuleEffectsWeaponRangeShortTitle"/>
+            <Item Name="MediumRangePenalty"     Title="%PanelFeatureModuleEffectsWeaponRangeMediumTitle"/>
+            <Item Name="LongRangePenalty"       Title="%PanelFeatureModuleEffectsWeaponRangeLongTitle"/>
+        </Category>
+        <Category Name="SpecialGroup" Title="%PanelFeatureModuleEffectsSpecialTitle"/>
+    </PanelFeatureModuleEffectsDefinition>
+
+
+    <!-- ********************** -->
+    <!-- *** Defense module *** -->
+    <!-- ********************** -->
+    <PanelFeatureModuleEffectsDefinition Name="Defense">
+        <Category Name="ProtectionGroup"                            Title="%PanelFeatureModuleEffectsDefenseProtectionTitle">
+            <Item Name="SectionHealthBonus"                         Title="%PanelFeatureModuleEffectsDefenseHealthTitle"                            Format="{0}"    MinValue="1"/>
+            <Item Name="SectionHealthMultiplier"                    Title="%PanelFeatureModuleEffectsDefenseHealthModifierTitle"                    Format="{0}"    IsPercentage="true" MinValue="0.1"/>
+            <Item Name="ShieldBonus"                                Title="%PanelFeatureModuleEffectsDefenseShieldTitle"                            MinValue="1"/>
+            <Item Name="ShieldReloadPerPhase"                       Title="%PanelFeatureModuleEffectsShieldReloadPerPhaseTitle"                     MinValue="1"/>
+            <Item Name="HullPlatingAbsorption"                      Title="%PanelFeatureModuleEffectsDefensePhysicalDmgReducTitle"                  MinValue="1"/>
+            <Item Name="ShieldAbsorption"                           Title="%PanelFeatureModuleEffectsDefenseEnergeticDmgReducTitle"                 MinValue="1"/>
+            <Item Name="FleetXPPerDamageAbsorbedByHullPlating"      Title="%PanelFeatureModuleEffectsFleetXPPerDamageAbsorbedByHullPlatingTitle"    MinValue="0.0001" DecimalCount="2"/>
+            <Item Name="OpponentCriticalHitDamagePercent"           Title="%PanelFeatureModuleEffectsOpponentCriticalHitDamagePercentTitle"         MaxValue="-0.01" IsPercentage="true"/>
+            <Item Name="ShipManpowerKillAbsorption"                 Title="%PanelFeatureModuleEffectsShipManpowerKillAbsorption"                    MinValue="0.01" IsPercentage="true"/>
+            <Item Name="Evasion"                                    Title="%PanelFeatureModuleEvasionTitle"                                         MinValue="-1" IsPercentage="true"/>
+            <Item Name="RepairFlatPerDamageAbsorbedByHullPlating"   Title="%PanelFeatureModuleEffectsRepairFlatPerDamageAbsorbedByHullPlatingTitle" MinValue="0.0001" DecimalCount="1"/>
+        </Category>
+    </PanelFeatureModuleEffectsDefinition>
+
+
+    <!-- ********************** -->
+    <!-- *** Support module *** -->
+    <!-- ********************** -->
+    <PanelFeatureModuleEffectsDefinition Name="Support">
+        <Category Name="DamageGroup"                                Title="%PanelFeatureModuleEffectsWeaponDamageTitle">
+            <Item Name="DamagePerSecond"                            Title="%PanelFeatureModuleEffectsWeaponDPSTitle"                                MinValue="1"/>
+            <Item Name="LocalManpower"                              Title="%PanelFeatureModuleEffectsSupportAdditionalManpowerTitle"                MinValue="1"/>
+            <Item Name="SiegePower"                                 Title="%PanelFeatureModuleEffectsSiegePowerTitle"                               MinValue="0.01"/>
+            <Item Name="DamageIncreasePercent"                      Title="%PanelFeatureModuleEffectsSupportEnhancedDmgTitle"                       MinValue="0.01" IsPercentage="true"/>
+            <Item Name="PhysicalDmgDue"                             Title="%PanelFeatureModuleEffectsSupportPhysicalDmgDueTitle"                    MinValue="1"    IsPercentage="true"/>
+            <Item Name="EnergeticDmgDue"                            Title="%PanelFeatureModuleEffectsSupportEnergeticDmgDueTitle"                   MinValue="1"    IsPercentage="true"/>
+            <Item Name="DamageBonusPerTargetCommandPointsFlotilla"  Title="%PanelFeatureModuleDamageBonusPerTargetCommandPointsFlotillaTitle"       MinValue="0.01" IsPercentage="true"/>
+            <Item Name="TargetingWeightBonus"                       Title="%PanelFeatureModuleTargetingWeightBonusTitle"                            MinValue="0.01" />
+            <Item Name="DamageEnergy"                               Title="%PanelFeatureModuleDamageEnergyTitle"                                    MinValue="0.01" IsPercentage="true"/>
+            <Item Name="DamageProjectile"                           Title="%PanelFeatureModuleDamageProjectileTitle"                                MinValue="0.01" IsPercentage="true"/>
+            <Item Name="CriticalHitChance"                          Title="%PanelFeatureModuleEffectsWeaponCriticalHitTitle"                        MinValue="0.01" IsPercentage="true"/>
+            <Item Name="Damage"                                     Title="%FleetDamageTitle"                                                       MinValue="0.01" IsPercentage="true"/>
+            <Item Name="FlotillaShipManpowerKillPerHitPercent"      Title="%PanelFeatureModuleEffectFlotillaShipManpowerKillPerHitPercentTitle"     MinValue="0.01" IsPercentage="true"/>
+        </Category>
+
+        <Category Name="ProtectionGroup" Title="%PanelFeatureModuleEffectsDefenseProtectionTitle">
+            <Item Name="SectionHealthBonus"                         Title="%PanelFeatureModuleEffectsDefenseHealthTitle"                    Format="{0}"    MinValue="1"/>
+            <Item Name="ShieldBonus"                                Title="%PanelFeatureModuleEffectsDefenseShieldTitle"                    MinValue="1"/>
+            <Item Name="HullPlatingAbsorption"                      Title="%PanelFeatureModuleEffectsDefensePhysicalDmgReducTitle"          MinValue="1"/>
+            <Item Name="ShieldAbsorption"                           Title="%PanelFeatureModuleEffectsDefenseEnergeticDmgReducTitle"         MinValue="1"/>
+            <Item Name="ShieldReloadPerPhase"                       Title="%PanelFeatureModuleEffectsShieldReloadPerPhaseTitle"             MinValue="1"/>
+            <Item Name="FlotillaMaximumShield"                      Title="%PanelFeatureModuleFlotillaMaximumShieldTitle"                   MinValue="1"/>
+            <Item Name="FlotillaShieldAbsorption"                   Title="%PanelFeatureModuleFlotillaShieldAbsorptionTitle"                MinValue="1"/>
+            <Item Name="FlotillaDmgReductionAgainstPhysical"        Title="%PanelFeatureModuleEffectsFlotillaDefensePhysicalDmgReducTitle"  MinValue="1"/>
+            <Item Name="FlotillaDmgReductionAgainstEnergy"          Title="%PanelFeatureModuleEffectsFlotillaDefenseEnergeticDmgReducTitle" MinValue="1"/>
+            <Item Name="RepairAfterBattle"                          Title="%PanelFeatureModuleRepairAfterBattleTitle"                       MinValue="0.01" IsPercentage="true"/>
+            <Item Name="RepairAfterPhase"                           Title="%PanelFeatureModuleRepairAfterPhaseTitle"                        MinValue="0.01" IsPercentage="true"/>
+            <Item Name="FlotillaRepairAfterBattle"                  Title="%PanelFeatureModuleFlotillaRepairAfterBattleTitle"               MinValue="0.01" IsPercentage="true"/>
+            <Item Name="FlotillaRepairAfterPhase"                   Title="%PanelFeatureModuleFlotillaRepairAfterPhaseTitle"                MinValue="0.01" IsPercentage="true"/>
+            <Item Name="Evasion"                                    Title="%PanelFeatureModuleEvasionTitle"                                 MinValue="-1" IsPercentage="true"/>
+            <Item Name="TargetingWeightPenalty"                     Title="%PanelFeatureModuleTargetingWeightPenaltyTitle"                  MinValue="0.01" />
+            <Item Name="ShipManpowerKillAbsorption"                 Title="%PanelFeatureModuleEffectsShipManpowerKillAbsorption"            MinValue="0.01" IsPercentage="true"/>
+        </Category>
+
+        <Category Name="SpecialGroup" Title="%PanelFeatureModuleEffectsSpecialTitle">
+            <Item Name="MaximumMovement"                            Title="%PanelFeatureModuleEffectsSupportMovementTitle"              MinValue="1"/>
+            <Item Name="MaximumMovementFleet"                       Title="%PanelFeatureModuleEffectsSupportMovementFleetTitle"         MinValue="1"/>
+            <Item Name="VisionRange"                                Title="%PanelFeatureModuleEffectsSupportVisionRangeTitle"           MinValue="1"/>
+            <Item Name="MaximumShipProbeStock"                      Title="%PanelFeatureModuleEffectsSupportProbeStockTitle"            MinValue="1"/>
+            <Item Name="NetShipProbe"                               Title="%PanelFeatureModuleEffectsSupportCooldownTitle"              MinValue="1"    Format="{0} [turn]"/>
+            <Item Name="SystemProductionFlat"                       Title="%PanelFeatureModuleProductionFromMothershipTitle"            MinValue="0.01" IsPercentage="false"/>
+            <Item Name="SystemMoneyFlat"                            Title="%PanelFeatureModuleMoneyFromMothershipTitle"                 MinValue="0.01" IsPercentage="false"/>
+            <Item Name="SystemResearchFlat"                         Title="%PanelFeatureModuleResearchFromMothershipTitle"              MinValue="0.01" IsPercentage="false"/>
+            <Item Name="SystemEmpirePointFlat"                      Title="%PanelFeatureModuleEmpirePointFromMothershipTitle"           MinValue="0.01" IsPercentage="false"/>
+            <Item Name="SystemLifeforceFlat"                        Title="%PanelFeatureModuleLifeforceFromMothershipTitle"             MinValue="0.01" IsPercentage="false"/>
+            <Item Name="SystemProductionPercent"                    Title="%PanelFeatureModuleProductionFromMothershipTitle"            MinValue="0.01" IsPercentage="true"/>
+            <Item Name="SystemMoneyPercent"                         Title="%PanelFeatureModuleMoneyFromMothershipTitle"                 MinValue="0.01" IsPercentage="true"/>
+            <Item Name="SystemResearchPercent"                      Title="%PanelFeatureModuleResearchFromMothershipTitle"              MinValue="0.01" IsPercentage="true"/>
+            <Item Name="SystemEmpirePointPercent"                   Title="%PanelFeatureModuleEmpirePointFromMothershipTitle"           MinValue="0.01" IsPercentage="true"/>
+            <Item Name="LifeforceLeechedPerTurn"                    Title="%PanelFeatureModuleLifeforceLeechedPerTurnTitle"             MinValue="1"/>
+            <Item Name="SystemGrowthTransferredPerTurn"             Title="%PanelFeatureModuleSystemGrowthTransferredPerTurnTitle"      MinValue="1"/>
+            <Item Name="EmpireMoneyTransferredPerTurn"              Title="%PanelFeatureModuleEmpireMoneyTransferredPerTurnTitle"       MinValue="1"/>
+            <Item Name="EmpireEmpirePointTransferredPerTurn"        Title="%PanelFeatureModuleEmpireEmpirePointTransferredPerTurnTitle" MinValue="1"/>
+            <Item Name="OpponentRecyclingSciencePerCP"              Title="%PanelFeatureModuleOpponentRecyclingSciencePerCPTitle"       MinValue="0.01" IsPercentage="false"/>
+            <Item Name="OpponentRecyclingEmpirePointPerCP"          Title="%PanelFeatureModuleOpponentRecyclingEmpirePointPerCPTitle"   MinValue="0.01" IsPercentage="false"/>
+            <Item Name="OpponentRecyclingDustPerCP"                 Title="%PanelFeatureModuleOpponentRecyclingDustPerCPTitle"          MinValue="0.01" IsPercentage="false"/>
+
+            <Special>ClassModuleSupportShipOnly</Special>
+            <Special>ClassModuleExplorerShipOnly</Special>
+            <Special>ClassModuleColonizerShipOnly</Special>
+            <Special>ClassModuleExplorerAndHeroShipOnly</Special>
+			<Special>ClassModuleSupportAndHeroShipOnly</Special>
+        </Category>
+    </PanelFeatureModuleEffectsDefinition>
+
+
+    <!-- ********************** -->
+    <!-- **** Destruction module *** -->
+    <!-- ********************** -->
+    <PanelFeatureModuleEffectsDefinition Name="Destruction" >
+        <!--<Category Name="DamageGroup" Title="%PanelFeatureModuleEffectsWeaponDamageTitle">
+            <Item Name="DamagePerSecond"        Title="%PanelFeatureModuleEffectsWeaponDPSTitle"/>
+            <Item Name="CriticalHitChance"      Title="%PanelFeatureModuleEffectsWeaponCriticalHitTitle"    IsPercentage="true"/>
+            <Item Name="WeaponTypePhysical"     Title="%PanelFeatureModuleEffectsWeaponTypePhysicalTitle"   MinValue="1"/>
+            <Item Name="WeaponTypeEnergy"       Title="%PanelFeatureModuleEffectsWeaponTypeEnergyTitle"     MinValue="1"/>
+        </Category>
+        <Category Name="RangeGroup" Title="%PanelFeatureModuleEffectsWeaponRangeTitle">
+            <Item Name="ShortRangePenalty"      Title="%PanelFeatureModuleEffectsWeaponRangeShortTitle"/>
+            <Item Name="MediumRangePenalty"     Title="%PanelFeatureModuleEffectsWeaponRangeMediumTitle"/>
+            <Item Name="LongRangePenalty"       Title="%PanelFeatureModuleEffectsWeaponRangeLongTitle"/>
+        </Category>-->
+        <Category Name="SpecialGroup" Title="%PanelFeatureModuleEffectsSpecialTitle"/>
+    </PanelFeatureModuleEffectsDefinition>
+
+    <PanelFeatureModuleEffectsDefinition Name="Squadron" >
+        <Category Name="SpecialGroup" Title="%PanelFeatureModuleEffectsSpecialTitle"/>
+    </PanelFeatureModuleEffectsDefinition>
+
+</Datatable>

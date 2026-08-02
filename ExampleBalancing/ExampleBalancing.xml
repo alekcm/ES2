@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="Documentation/Schemas/Amplitude.Unity.Runtime.RuntimeModule.xsd">
+
+	<!-- Conversion = add new files, not compatible with other mods. Standalone = replace all files, not compatible with other mods. Extension = add new files, compatible with other mods. -->
+	<RuntimeModule Name="ExampleBalancing" Type="Extension" Version="1.0">
+
+        <!-- Title as it appears in the workshop. -->
+        <Title>Example balancing</Title>
+        <!-- Description as it appears in the workshop. -->
+        <Description>Reduces the cost of the starting improvements.</Description>
+        <!-- Name of the author. -->
+        <Author>I_AM_ENFER</Author>
+        <!-- Link to your other work. -->
+        <Homepage>https://www.games2gether.com/</Homepage>
+
+        <!-- Image as it appears in the workshop. Size should be 430x430 pixels. -->
+        <PreviewImageFile>ModIcon.png</PreviewImageFile>
+        <!-- Add more content to this each time you update the mod. -->
+        <ReleaseNotes>First release.</ReleaseNotes>
+        <!-- Available tags: AI, Art, Buildings, Gameplay, Improvements, MajorFactions, Maps, MinorFactions, Multiplayer, Other, Resources, Technologies, Units. -->
+        <Tags>Gameplay</Tags>
+
+		<!-- XML files to load. -->
+		<Plugins>
+            <!-- Add one DatabasePlugin for each type you modify. Available DataTypes are referenced in DataTypes.txt. -->
+            <DatabasePlugin DataType="IndustryConstructibleElement, Assembly-CSharp">
+                <!-- Some DataTypes include sub-types, they are added as following. -->
+                <ExtraTypes>
+                    <ExtraType DataType="StarSystemImprovementDefinition, Assembly-CSharp" />
+                </ExtraTypes>
+                <!-- Path leading to the files, starting from the location of this XML file. '*' can be used as a 'wildcard' to find several files at once. -->
+                <FilePath>Simulation/StarSystemImprovements.xml</FilePath>
+            </DatabasePlugin>
+		</Plugins>
+
+	</RuntimeModule>
+</Datatable>

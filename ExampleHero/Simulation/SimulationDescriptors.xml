@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Documentation/Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- Apply a missile damage bonus on the hero's fleet -->
+    <SimulationDescriptor Name="HeroSkillExampleMissile" Type="HeroSkill">
+        <!-- Increase the value on the fleet, it'll apply on all the missile damage it deals -->
+        <Modifier TargetProperty="ShipDamageMissile"	                    Operation="Percent"	    Value="0.20"    Path="./ClassGarrisonFleet" />
+    </SimulationDescriptor>
+
+    <!-- Apply a defense bonus on system -->
+    <SimulationDescriptor Name="HeroSkillExampleDefense" Type="HeroSkill">
+        <!-- Note: flat damage dealt to a side of the ground battle is named "bombardment damage". -->
+        <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages"	Operation="Addition"	Value="200"		Path="./ClassColonizedStarSystem" />
+    </SimulationDescriptor>
+
+</Datatable>

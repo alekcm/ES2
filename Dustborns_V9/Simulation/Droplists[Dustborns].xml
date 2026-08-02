@@ -2,21 +2,17 @@
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Droplist.xsd">
 
     <!-- Награда этапа 1: 200 пыли -->
+    <!-- ВАЖНО: в ES2 дроплист содержит "дроппабли" НАПРЯМУЮ как детей <Droplist>.
+         Никакого <DroppableStack> в игре нет (это и вызывало вылет:
+         Data type 'DroppableStack' could not be resolved + ArgumentNullException).
+         Ресурс задаётся атрибутами Name + Quantity (не Value, не дочерним элементом). -->
     <Droplist Name="DroplistDustbornsChapter1">
-        <DroppableStack Name="DustbornsChapter1Dust" Weight="1"/>
+        <Resource Name="EmpireMoney" Quantity="200" Weight="1"/>
     </Droplist>
-
-    <DroppableStack Name="DustbornsChapter1Dust" Category="Resource">
-        <Resource Name="EmpireMoney" Value="200"/>
-    </DroppableStack>
 
     <!-- Награда 6-B: 10 000 пыли -->
     <Droplist Name="DroplistDustbornsVein">
-        <DroppableStack Name="DustbornsVeinDust" Weight="1"/>
+        <Resource Name="EmpireMoney" Quantity="10000" Weight="1"/>
     </Droplist>
-
-    <DroppableStack Name="DustbornsVeinDust" Category="Resource">
-        <Resource Name="EmpireMoney" Value="10000"/>
-    </DroppableStack>
 
 </Datatable>
