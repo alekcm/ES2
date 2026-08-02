@@ -317,7 +317,7 @@
         <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
                         Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
                         Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
-        <Modifier TargetProperty="SystemMoney" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornFoodToDust0Effect"/>
+
     </SimulationDescriptor>
 
     <!-- Конверсия еды в пыль: +10% (вариант «Ландшафтного проектирования»). -->
@@ -325,7 +325,6 @@
         <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
                         Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.10"
                         Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
-        <Modifier TargetProperty="SystemMoney" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornFoodToDust10Effect"/>
     </SimulationDescriptor>
 
     <!-- Конверсия еды в пыль: +25% (варианты «Сканирования растений», «Хаотической
@@ -334,7 +333,6 @@
         <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
                         Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
                         Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
-        <Modifier TargetProperty="SystemMoney" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornFoodToDust25Effect"/>
     </SimulationDescriptor>
 
     <!-- Пыль за переваривание: каждый дескриптор добавляет +300 к свойству
@@ -343,19 +341,15 @@
          База 300 + 4 x +300 = 1500 максимум. -->
     <SimulationDescriptor Name="TechnologyDustbornDigestion1" Type="Technology">
         <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-        <Modifier TargetProperty="SystemMoney" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornDigestion1Effect"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornDigestion2" Type="Technology">
         <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-        <Modifier TargetProperty="SystemMoney" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornDigestion2Effect"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornDigestion3" Type="Technology">
         <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-        <Modifier TargetProperty="SystemMoney" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornDigestion3Effect"/>
     </SimulationDescriptor>
     <SimulationDescriptor Name="TechnologyDustbornDigestion4" Type="Technology">
         <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-        <Modifier TargetProperty="SystemMoney" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornDigestion4Effect"/>
     </SimulationDescriptor>
 
     <!-- Терпеливые Ветра: НЕ плоские -0.1 ко всем планетам, а -0.1 ЗА КАЖДОГО Пылерождённого
@@ -371,7 +365,6 @@
          Только обычные Безвольные (не Считающие Оболочки). -->
     <SimulationDescriptor Name="TechnologyDustbornBezvolnyIndustry1" Type="Technology">
         <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="true"/>
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Force" Value="0" Path="FAKE" TooltipOverride="%TechnologyDustbornBezvolnyIndustry1Effect"/>
     </SimulationDescriptor>
 
     <!-- Держатель значения переваривания. Вешается на империю аффинити-трейтом. -->
