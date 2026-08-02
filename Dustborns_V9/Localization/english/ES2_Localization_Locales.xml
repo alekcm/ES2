@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Localization.LocalizationDatatableElement.xsd">
     <LocalizationPair Name="%FactionDustbornsTitle">Пылерождённые</LocalizationPair>
-    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, еда->пыль постоянно 25%. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
+    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, еда->пыль постоянно 25%. Безвольных нельзя ни собрать, ни разобрать за пыль. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
 
     <LocalizationPair Name="%AffinityGameplayDustbornsTitle">Пылерождённые + Безвольные</LocalizationPair>
-    <LocalizationPair Name="%AffinityGameplayDustbornsDescription">x0.5 пром у Пылерождённых, +8/+4 пыли через теги планеты, еда в пыль постоянна, безвольные без политики.</LocalizationPair>
+    <LocalizationPair Name="%AffinityGameplayDustbornsDescription">-10% пром за каждого Пылерождённого на планете, 0/+8/+16 пыли через теги планеты, еда в пыль постоянна, безвольные без политики.</LocalizationPair>
 
     <LocalizationPair Name="%AffinityDustbornsTitle">Пылерождённые</LocalizationPair>
     <LocalizationPair Name="%AffinityDustbornsDescription">Разумная пыль.</LocalizationPair>
@@ -22,18 +22,18 @@
     <LocalizationPair Name="%PopulationModifiersTraitDustbornsDescription">x0.5 пром, +8/+4 пыли через теги.</LocalizationPair>
 
     <LocalizationPair Name="%PopulationModifiersTraitDustbornsPrimaryTitle">Пылевое Пожирание</LocalizationPair>
-    <LocalizationPair Name="%PopulationModifiersTraitDustbornsPrimaryDescription">+1 истощения, x0.5 пром, +8 пыли на Teeming неистощённой, +4 на не Meager неистощённой.</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitDustbornsPrimaryDescription">+1 истощения, -10% пром планеты за каждого Пылерождённого, +16 пыли на Teeming неистощённой, +8 на не Meager неистощённой.</LocalizationPair>
 
     <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryTitle">Безвольная Покорность</LocalizationPair>
     <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryDescription">+3 пром (+6 на истощённой), -100% наука/влияние, без политики.</LocalizationPair>
 
     <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsTitle">Сконструировать Пылерождённого</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsDescription">Стоимость (100+75*население)*скорость. Быстрая x0.5.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsDescription">Стоимость всегда 250 пыли (x множитель скорости игры).</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsEffect">Покупает Пылерождённого.</LocalizationPair>
 
     <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsTitle">Распылить Пылерождённого</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsDescription">Даёт +100 пыли.</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsEffect">+100 пыли.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsDescription">Даёт +250 пыли.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsEffect">+250 пыли.</LocalizationPair>
 
     <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyTitle">Переварить в Безвольного</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyDescription">Минора в Безвольного +300 пыли, требует Пылерождённого.</LocalizationPair>
@@ -43,9 +43,6 @@
     <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyMajorDescription">Мажора в Безвольного +300.</LocalizationPair>
     <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyMajorEffect">+300 пыли.</LocalizationPair>
 
-    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationBezvolnyTitle">Сконструировать Безвольного</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationBezvolnyDescription">Собрать безвольного за пыль. Дешевле пылерождённого.</LocalizationPair>
-    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationBezvolnyEffect">Покупает Безвольного.</LocalizationPair>
 
     <LocalizationPair Name="%PlanetDepletionPerTurnTitle">Истощение</LocalizationPair>
     <LocalizationPair Name="%SystemMoneyFromGrowthConversionTitle">Конверсия еды в пыль</LocalizationPair>
@@ -57,5 +54,125 @@
     <LocalizationPair Name="%ClassPopulationEmpireAffinityBezvolnyTitle">Безвольный</LocalizationPair>
     <LocalizationPair Name="%ClassPopulationStarSystemAffinityBezvolnyTitle">Безвольный</LocalizationPair>
     <LocalizationPair Name="%ClassPopulationPlanetAffinityBezvolnyCountTitle">Безвольный</LocalizationPair>
+
+    <!-- ============ ТЕХНОЛОГИИ ============ -->
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust1Title">Сухая Жатва</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust1Description">Конверсия еды в Пыль: 25% -&gt; 50%.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust2Title">Обезвоживание Биомассы</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust2Description">Конверсия еды в Пыль: 50% -&gt; 75%.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust3Title">Полный Распад</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornFoodToDust3Description">Конверсия еды в Пыль: 75% -&gt; 100%.</LocalizationPair>
+
+    <LocalizationPair Name="%TechnologyDustbornDigestion1Title">Глубокое Переваривание</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion1Description">Переработка жителя: 300 -&gt; 600 Пыли.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion2Title">Извлечение Памяти</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion2Description">Переработка жителя: 600 -&gt; 900 Пыли.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion3Title">Тотальный Гидролиз</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDigestion3Description">Переработка жителя: 900 -&gt; 1200 Пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%TechnologyDustbornDepletion1Title">Терпеливые Ветра</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornDepletion1Description">Истощение миров -0.1 в ход.</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornShells1Title">Армированные Оболочки</LocalizationPair>
+    <LocalizationPair Name="%TechnologyDustbornShells1Description">Безвольные: +2 производства. Гарнизон: +10% здоровья.</LocalizationPair>
+
+    <!-- ============ ГЛАВНЫЙ КВЕСТ ============ -->
+    <LocalizationPair Name="%DustbornsQuest-Chapter1Title">Голод</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter1Description">Облака шепчут не словами, а оседанием. Первый вкус чужой памяти оказался... информативным.</LocalizationPair>
+    <LocalizationPair Name="%Chapter1_Objective1Title">Переварить 2 жителей</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsQuest-Chapter2Title">Руки, которых нет</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter2Description">Мы не можем держать молоток. Но мы можем быть молотком — если согласимся ненадолго затвердеть. Или можем не тратить себя на молотки вовсе, а научиться выедать мир до самого дна. Или, быть может, перестать выедать вовсе — и начать разводить.</LocalizationPair>
+    <LocalizationPair Name="%Chapter2_A_Objective1Title">Затвердение: выкупить 3 постройки за Пыль</LocalizationPair>
+    <LocalizationPair Name="%Chapter2_B_Objective1Title">Полное Пищеварение: истощить 2 планеты</LocalizationPair>
+    <LocalizationPair Name="%Chapter2_C_Objective1Title">Пастбище: 10 ходов сохранять чужое население</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsQuest-Chapter3Title">Вкус Мысли</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter3Description">У холодных миров медленная, кристаллическая мысль — её можно выучить. У горячих нет мысли вовсе, только форма и давление — её можно повторить. А у мёртвых нет ничего — и именно поэтому они учат самому полезному: как есть, когда есть нечего. Что мы едим?</LocalizationPair>
+    <LocalizationPair Name="%Chapter3_A_Objective1Title">Истощить 3 холодные планеты</LocalizationPair>
+    <LocalizationPair Name="%Chapter3_B_Objective1Title">Истощить 3 горячие планеты</LocalizationPair>
+    <LocalizationPair Name="%Chapter3_C_Objective1Title">Истощить 3 бесплодные планеты</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsQuest-Chapter4Title">Пыль в Черепах</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter4Description">Оболочки не думают. Но они помнят, как это делается — и живые рядом это чувствуют.</LocalizationPair>
+    <LocalizationPair Name="%Chapter4_A_Objective1Title">Долгое Соседство: 10 ходов рядом с чужаками</LocalizationPair>
+    <LocalizationPair Name="%Chapter4_B_Objective1Title">Построить Абразивный Стан</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsQuest-Chapter5Title">Мёртвый Мир</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter5Description">Система мертва. Вопрос только в том, кладбище это или склад.</LocalizationPair>
+    <LocalizationPair Name="%Chapter5_A_Objective1Title">Осевшие: 10 ходов держать 20 Безвольных</LocalizationPair>
+    <LocalizationPair Name="%Chapter5_B_Objective1Title">Свернуть Лагерь: истощить 8 планет</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsQuest-Chapter6Title">Первый Курган</LocalizationPair>
+    <LocalizationPair Name="%DustbornsQuest-Chapter6Description">Здесь Пыль впервые подумала. И здесь же лежит то, что заставило её думать: мир, который не кончается. Машина размером с планету, до сих пор тёплая.</LocalizationPair>
+    <LocalizationPair Name="%Chapter6_FindTitle">Найти Первый Курган</LocalizationPair>
+    <LocalizationPair Name="%Chapter6_A_Objective1Title">Погасить Источник</LocalizationPair>
+    <LocalizationPair Name="%Chapter6_B_Objective1Title">Открыть Жилу</LocalizationPair>
+    <LocalizationPair Name="%Chapter6_C_Objective1Title">Возвращение к Корням</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornsSide-ScholarShellsTitle">Оболочки, Которые Считали</LocalizationPair>
+    <LocalizationPair Name="%DustbornsSide-ScholarShellsDescription">Эта оболочка пустая, как и все прочие. Но пальцы её всё ещё считают. Не для нас — просто по привычке. Может, привычку стоит сохранить?</LocalizationPair>
+    <LocalizationPair Name="%ScholarShells_Objective1Title">Переварить жителя научной фракции</LocalizationPair>
+
+    <!-- ============ НАГРАДЫ ============ -->
+    <LocalizationPair Name="%DustbornRewardCongealedFormsTitle">Затвердение</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardCongealedFormsDescription">Штраф производства за Пылерождённых снят полностью.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardTotalDigestionTitle">Полное Пищеварение</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardTotalDigestionDescription">Истощение миров замедлено на 20%: мир отдаёт на 25% больше Пыли за всё время пожирания.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardPastureTitle">Пастбище</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardPastureDescription">Планета восстанавливает 0.2 истощения за каждого не-Пылерождённого жителя на ней. Чужаков выгоднее разводить, чем есть.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornRewardAdaptationToSapienceTitle">Адаптация к Разумности</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardAdaptationToSapienceDescription">Наука, равная 10% добываемой Пыли.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardRefinedLatticesTitle">Улучшенные Пылевые Конструкции</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardRefinedLatticesDescription">Стоимость выкупа производства -25%.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardMiserlyWisdomTitle">Скупая Мудрость</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardMiserlyWisdomDescription">Пылерождённые собирают Пыль и со Стерильных планет: 2/4/8, растёт на 1/2/4 за каждый тип планеты в каталоге.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornRewardWhisperInTheLungsTitle">Влияние Пыли на Разум</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardWhisperInTheLungsDescription">Не-Пылерождённое население: +5 счастья и +2 влияния за каждого Пылерождённого на той же планете.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardAbrasiveForgeTitle">Абразивный Стан</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardAbrasiveForgeDescription">Разблокирует постройку "Абразивный Стан": +10% силы армии, пока она стоит.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementAbrasiveForgeTitle">Абразивный Стан</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementAbrasiveForgeDescription">Требует истощённую планету в системе. +10% силы армии империи.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementAbrasiveForgeEffect">+10% силы армии.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornRewardSettledBarrowTitle">Осевшие</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardSettledBarrowDescription">Разблокирует постройку "Курган Осевших".</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementSettledBarrowTitle">Курган Осевших</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementSettledBarrowDescription">+4 производства любому населению на истощённых планетах этой системы.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementSettledBarrowEffect">+4 производства на истощённых мирах.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardStrikeTheCampTitle">Свернуть Лагерь</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardStrikeTheCampDescription">Разбор построек даёт Пыль по курсу 1 производство : 2 Пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%DustbornRewardSilenceTheSourceTitle">Погасить Источник</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardSilenceTheSourceDescription">Миры больше не истощаются. Сбор Пыли с планет обнулён, но конверсия еды в Пыль 100%, штраф производства снят, Безвольные +4 производства, +25% ко всей добыче Пыли.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardOpenTheVeinTitle">Открыть Жилу</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardOpenTheVeinDescription">+10 000 Пыли. Первый Курган становится Неисчерпаемым миром.</LocalizationPair>
+    <LocalizationPair Name="%PlanetInexhaustibleTitle">Неисчерпаемый</LocalizationPair>
+    <LocalizationPair Name="%PlanetInexhaustibleDescription">Эта планета никогда не истощается.</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardReturnToRootsTitle">Возвращение к Корням</LocalizationPair>
+    <LocalizationPair Name="%DustbornRewardReturnToRootsDescription">Пылерождённые становятся Курганорождёнными.</LocalizationPair>
+
+    <!-- ============ НОВЫЕ ПОПУЛЯЦИИ ============ -->
+    <LocalizationPair Name="%PopulationBezvolnyScholarTitle">Считающая Оболочка</LocalizationPair>
+    <LocalizationPair Name="%PopulationBezvolnyScholarDescription">Как Безвольный, но +2 науки за каждого Пылерождённого на той же планете. Оболочка считает только когда рядом есть Пыль.</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyScholarPrimaryTitle">Заученная Привычка</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyScholarPrimaryDescription">+3 производства (+6 на истощённой), +2 науки за каждого Пылерождённого на планете.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementConvertToScholarTitle">Переварить в Считающую Оболочку</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementConvertToScholarDescription">Пыль не даётся. Вместо Безвольного получаешь Считающую Оболочку.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementConvertToScholarEffect">+1 Считающая Оболочка.</LocalizationPair>
+
+    <LocalizationPair Name="%PopulationBarrowbornTitle">Курганорождённый</LocalizationPair>
+    <LocalizationPair Name="%PopulationBarrowbornDescription">+6 Пыли, +6 науки, +6 производства, +6 еды, +2 единства, +5 счастья. Растёт за счёт еды, как обычное население.</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitBarrowbornPrimaryTitle">Плоть Кургана</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitBarrowbornPrimaryDescription">+6 ко всем основным ресурсам, +2 единства, +5 счастья. Растёт обычным образом.</LocalizationPair>
+
+    <!-- ============ ПЕРЕПИСЬ ПРАХА ============ -->
+    <LocalizationPair Name="%DustbornCatalogRacesHolderTitle">Каталог Рас</LocalizationPair>
+    <LocalizationPair Name="%DustbornCatalogRacesHolderDescription">+2% к добыче Пыли за каждую уникальную переваренную расу. Без потолка.</LocalizationPair>
+    <LocalizationPair Name="%DustbornCatalogPlanetEntryTitle">Каталог Миров</LocalizationPair>
+    <LocalizationPair Name="%DustbornCatalogPlanetEntryDescription">+2/+4 к сбору Пыли за каждый уникальный истощённый тип планеты.</LocalizationPair>
+    <LocalizationPair Name="%DustbornCatalogRaceEntryTitle">Новая запись в Каталоге Рас</LocalizationPair>
+    <LocalizationPair Name="%DustbornCatalogRaceEntryDescription">+2% к добыче Пыли.</LocalizationPair>
 
 </Datatable>

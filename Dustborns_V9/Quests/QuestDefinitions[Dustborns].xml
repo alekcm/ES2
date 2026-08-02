@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+
+    <!-- ##################################################################### -->
+    <!--        ГЛАВНЫЙ КВЕСТ ПЫЛЕРОЖДЁННЫХ: "ОСАДОК ЗАБЫТЫХ"                  -->
+    <!--        Chapter0 - скрытый запуск                                      -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsQuest-Chapter0" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="1">
+        <Tags>Hidden,BeginTurn</Tags>
+        <QuestContextMulti ParticipantsVarName="$Players"/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$Players">
+                <From Source="$Empires">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">ClassEmpire,EmpireTypeMajor</PathPrerequisite>
+                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor') ge 1</InterpreterPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+        </Vars>
+
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_BeginTurn></Decorator_BeginTurn>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter1</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ##################################################################### -->
+    <!--  ЭТАП 1 - "ГОЛОД"  (туториальный, без выбора)                         -->
+    <!--  Задача: переварить 2 жителя ИЛИ истощить первую планету              -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsQuest-Chapter1" Category="MajorQuest" SubCategory="Dustborns" MinimumTurn="3">
+        <Tags>BeginTurn,DustbornsQuest-Chapter1</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$DigestCount" IntValue="2"/>
+        </Vars>
+
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Chapter1_Objective1" StartValue="0" EndValue="$DigestCount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="15" MaxAutoResolutionTurn="25" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_ConstructionEnded Initiator="Empire" ProgressionIncrement="1">
+                                    <Input_ConstructibleElementName StringValue="StarSystemImprovementConvertToBezvolny"/>
+                                </Decorator_ConstructionEnded>
+                                <Input_Count VarName="$DigestCount"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter2</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Reward Droplist="DroplistDustbornsChapter1" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ##################################################################### -->
+    <!--  ЭТАП 2 - "РУКИ, КОТОРЫХ НЕТ"  - ПЕРВЫЙ ВЫБОР (3 варианта)            -->
+    <!--  A Затвердение / B Полное Пищеварение / C Пастбище                    -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsQuest-Chapter2" Category="MajorQuest" SubCategory="Dustborns">
+        <Tags>DustbornsQuest-Chapter2</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$BuyoutCount" IntValue="3"/>
+            <Var VarName="$DepleteCount" IntValue="2"/>
+            <Var VarName="$KeepTurns" IntValue="10"/>
+
+            <Var VarName="$RewardCongealed" StringValue="DustbornRewardCongealedForms"/>
+            <Var VarName="$RewardDigestion" StringValue="DustbornRewardTotalDigestion"/>
+            <Var VarName="$RewardPasture" StringValue="DustbornRewardPasture"/>
+        </Vars>
+
+        <Steps>
+            <Step Name="Step1">
+                <!-- Выбор делается В НАЧАЛЕ этапа -->
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                    <ChoiceItem ObjectiveSetIndex="2"/>
+                </Choice>
+
+                <!-- ===== A. ЗАТВЕРДЕНИЕ: выкупить 3 постройки за пыль ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter2_A_Objective1" StartValue="0" EndValue="$BuyoutCount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="25" MaxAutoResolutionTurn="40" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_ConstructionEnded Initiator="Empire" ProgressionIncrement="1"/>
+                                <Input_Count VarName="$BuyoutCount"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeA"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeA">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardCongealed"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter3</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+
+                <!-- ===== B. ПОЛНОЕ ПИЩЕВАРЕНИЕ: истощить 2 планеты ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter2_B_Objective1" StartValue="0" EndValue="$DepleteCount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="25" MaxAutoResolutionTurn="40" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$DepleteCount"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeB"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeB">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardDigestion"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter3</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+
+                <!-- ===== C. ПАСТБИЩЕ: 10 ходов держать не-Пылерождённых, никого не перерабатывая ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter2_C_Objective1" StartValue="0" EndValue="$KeepTurns">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="25" MaxAutoResolutionTurn="40" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMinor') ge 2</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$KeepTurns"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeC"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeC">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardPasture"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter3</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ##################################################################### -->
+    <!--  ЭТАП 3 - "ВКУС МЫСЛИ" - ВТОРОЙ ВЫБОР                                 -->
+    <!--  A холодные / B горячие / C бесплодные - по 3 планеты                 -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsQuest-Chapter3" Category="MajorQuest" SubCategory="Dustborns">
+        <Tags>DustbornsQuest-Chapter3</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$PlanetCount" IntValue="3"/>
+            <Var VarName="$RewardSapience" StringValue="DustbornRewardAdaptationToSapience"/>
+            <Var VarName="$RewardLattices" StringValue="DustbornRewardRefinedLattices"/>
+            <Var VarName="$RewardMiserly" StringValue="DustbornRewardMiserlyWisdom"/>
+        </Vars>
+
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                    <ChoiceItem ObjectiveSetIndex="2"/>
+                </Choice>
+
+                <!-- ===== A. ИДТИ НА ХОЛОД: 3 холодные планеты ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter3_A_Objective1" StartValue="0" EndValue="$PlanetCount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="40" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeArctic,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeTundra,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$PlanetCount"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeA"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeA">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardSapience"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter4</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+
+                <!-- ===== B. ИДТИ НА ЖАР: 3 горячие планеты ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter3_B_Objective1" StartValue="0" EndValue="$PlanetCount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="40" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeLava,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeDesert,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$PlanetCount"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeB"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeB">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardLattices"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter4</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+
+                <!-- ===== C. ИДТИ НА МЁРТВОЕ: 3 бесплодные планеты ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter3_C_Objective1" StartValue="0" EndValue="$PlanetCount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="40" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeBarren,PlanetDepletionMalus') ge 1 or Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeAsteroid,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$PlanetCount"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeC"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeC">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardMiserly"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter4</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ##################################################################### -->
+    <!--  ЭТАП 4 - "ПЫЛЬ В ЧЕРЕПАХ" - ТРЕТИЙ ВЫБОР (2 варианта)                -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsQuest-Chapter4" Category="MajorQuest" SubCategory="Dustborns">
+        <Tags>DustbornsQuest-Chapter4</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$KeepTurns" IntValue="10"/>
+            <Var VarName="$RewardWhisper" StringValue="DustbornRewardWhisperInTheLungs"/>
+            <Var VarName="$RewardForge" StringValue="DustbornRewardAbrasiveForge"/>
+        </Vars>
+
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+
+                <!-- ===== A. ДОЛГОЕ СОСЕДСТВО: 10 ходов Пылерождённые на 4 планетах с чужаками ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter4_A_Objective1" StartValue="0" EndValue="$KeepTurns">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="55" MaxAutoResolutionTurn="75" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMinor') ge 4</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$KeepTurns"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeA"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeA">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardWhisper"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter5</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+
+                <!-- ===== B. АБРАЗИВНЫЙ СТАН: построить здание ===== -->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyDescriptor>
+                            <Input_DescriptorName VarName="$RewardForge"/>
+                            <Input_Targets VarName="$CurrentEmpire"/>
+                        </Action_ApplyDescriptor>
+                    </StartActions>
+                    <Objective Name="Chapter4_B_Objective1">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="55" MaxAutoResolutionTurn="75" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Decorator_ConstructionEnded Initiator="Empire">
+                                <Input_ConstructibleElementName StringValue="StarSystemImprovementAbrasiveForge"/>
+                            </Decorator_ConstructionEnded>
+                            <Action_ChooseOutcome Name="OutcomeB"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeB">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter5</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ##################################################################### -->
+    <!--  ЭТАП 5 - "МЁРТВЫЙ МИР" - ЧЕТВЁРТЫЙ ВЫБОР (2 варианта)                -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsQuest-Chapter5" Category="MajorQuest" SubCategory="Dustborns">
+        <Tags>DustbornsQuest-Chapter5</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$KeepTurns" IntValue="10"/>
+            <Var VarName="$DepleteCount" IntValue="8"/>
+            <Var VarName="$RewardBarrow" StringValue="DustbornRewardSettledBarrow"/>
+            <Var VarName="$RewardCamp" StringValue="DustbornRewardStrikeTheCamp"/>
+        </Vars>
+
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+
+                <!-- ===== A. ОСЕВШИЕ: 10 ходов 20 Безвольных на истощённых мирах ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter5_A_Objective1" StartValue="0" EndValue="$KeepTurns">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="80" MaxAutoResolutionTurn="110" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyCount', PopulationCount) ge 20</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$KeepTurns"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeA"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeA">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardBarrow"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter6</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+
+                <!-- ===== B. СВЕРНУТЬ ЛАГЕРЬ: истощить 8 планет ===== -->
+                <ObjectiveSet>
+                    <Objective Name="Chapter5_B_Objective1" StartValue="0" EndValue="$DepleteCount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="80" MaxAutoResolutionTurn="110" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Input_Prerequisites>
+                                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus') ge 1</InterpreterPrerequisite>
+                                    </Input_Prerequisites>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$DepleteCount"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="OutcomeB"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeB">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$RewardCamp"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>DustbornsQuest-Chapter6</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ##################################################################### -->
+    <!--  ЭТАП 6 - "ПЕРВЫЙ КУРГАН" - ФИНАЛ (3 варианта)                        -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsQuest-Chapter6" Category="MajorQuest" SubCategory="Dustborns">
+        <Tags>DustbornsQuest-Chapter6</Tags>
+        <QuestContextSolo/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$HomeSystem">
+                <From Source="$CurrentEmpire.$StartingNode"/>
+            </Var>
+            <Var VarName="$BarrowSystem" AutoLockTargets="true">
+                <First>
+                    <From Source="$Constellations.$StarSystems">
+                        <Where>
+                            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassStarSystem,IsolatedNode</PathPrerequisite>
+                            <PathPrerequisite Inverted="true" Flags="Prerequisite">ClassStarSystem,QuestNode</PathPrerequisite>
+                        </Where>
+                        <OrderBy>
+                            <SortSystemByDistance OriginVarName="$HomeSystem" SortBy="Farthest" MinimumDistance="12" MaximumDistance="60" MinimumCandidateCount="1"/>
+                        </OrderBy>
+                    </From>
+                </First>
+            </Var>
+            <Var VarName="$BarrowPlanet">
+                <Any>
+                    <From Source="$BarrowSystem.$Planets"/>
+                </Any>
+            </Var>
+            <Var VarName="$CuriosityName" StringValue="Curiosity_Loot_Ruins_Era4"/>
+            <Var VarName="$InexhaustibleDescriptor" StringValue="PlanetInexhaustible"/>
+            <Var VarName="$RewardSilence" StringValue="DustbornRewardSilenceTheSource"/>
+            <Var VarName="$RewardVein" StringValue="DustbornRewardOpenTheVein"/>
+            <Var VarName="$RewardRoots" StringValue="DustbornRewardReturnToRoots"/>
+        </Vars>
+
+        <Steps>
+            <!-- Сначала найти Первый Курган -->
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_AddQuestMarkers RevealsLocation="true">
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Input_TargetEntities VarName="$BarrowSystem"/>
+                        </Action_AddQuestMarkers>
+                        <Action_SpawnCuriosity>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Input_Planets VarName="$BarrowPlanet"/>
+                            <Input_CuriosityDefinition VarName="$CuriosityName"/>
+                        </Action_SpawnCuriosity>
+                    </StartActions>
+                    <Objective Name="Chapter6_Find">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="120" MaxAutoResolutionTurn="160" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Decorator_CuriosityDiscovered Initiator="Empire"/>
+                            <Action_RemoveQuestMarkers>
+                                <Input_TargetEntities VarName="$BarrowSystem"/>
+                            </Action_RemoveQuestMarkers>
+                            <Action_ChooseOutcome Name="OutcomeFound"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeFound"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+
+            <!-- Затем финальный выбор -->
+            <Step Name="Step2">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                    <ChoiceItem ObjectiveSetIndex="2"/>
+                </Choice>
+
+                <!-- ===== A. ПОГАСИТЬ ИСТОЧНИК ===== -->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyDescriptor>
+                            <Input_DescriptorName VarName="$RewardSilence"/>
+                            <Input_Targets VarName="$CurrentEmpire"/>
+                        </Action_ApplyDescriptor>
+                    </StartActions>
+                    <Objective Name="Chapter6_A_Objective1">
+                        <Sequence>
+                            <Decorator_BeginTurn/>
+                            <Action_ChooseOutcome Name="OutcomeA"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeA"/>
+                    </Objective>
+                </ObjectiveSet>
+
+                <!-- ===== B. ОТКРЫТЬ ЖИЛУ ===== -->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyDescriptor>
+                            <Input_DescriptorName VarName="$RewardVein"/>
+                            <Input_Targets VarName="$CurrentEmpire"/>
+                        </Action_ApplyDescriptor>
+                        <Action_ApplyDescriptor>
+                            <Input_DescriptorName VarName="$InexhaustibleDescriptor"/>
+                            <Input_Targets VarName="$BarrowPlanet"/>
+                        </Action_ApplyDescriptor>
+                    </StartActions>
+                    <Objective Name="Chapter6_B_Objective1">
+                        <Sequence>
+                            <Decorator_BeginTurn/>
+                            <Action_ChooseOutcome Name="OutcomeB"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeB"/>
+                    </Objective>
+                    <Reward Droplist="DroplistDustbornsVein" Picks="1"/>
+                </ObjectiveSet>
+
+                <!-- ===== C. ВОЗВРАЩЕНИЕ К КОРНЯМ ===== -->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyDescriptor>
+                            <Input_DescriptorName VarName="$RewardRoots"/>
+                            <Input_Targets VarName="$CurrentEmpire"/>
+                        </Action_ApplyDescriptor>
+                    </StartActions>
+                    <Objective Name="Chapter6_C_Objective1">
+                        <Sequence>
+                            <Decorator_BeginTurn/>
+                            <Action_ChooseOutcome Name="OutcomeC"/>
+                        </Sequence>
+                        <Outcome Name="OutcomeC"/>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ##################################################################### -->
+    <!--  САЙД 2.10 - "ОБОЛОЧКИ, КОТОРЫЕ СЧИТАЛИ"                              -->
+    <!--  Триггер: первое же переваривание жителя научной фракции              -->
+    <!-- ##################################################################### -->
+
+    <QuestDefinition Name="DustbornsSide-ScholarShells" Category="MinorQuest" SubCategory="Dustborns" MinimumTurn="10">
+        <Tags>BeginTurn,DustbornsSide-ScholarShells</Tags>
+        <QuestContextMulti ParticipantsVarName="$Players"/>
+        <RepetitionRules NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+        <Vars>
+            <Var VarName="$Players">
+                <From Source="$Empires">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">ClassEmpire,EmpireTypeMajor</PathPrerequisite>
+                        <InterpreterPrerequisite Flags="Prerequisite">Count(Context, @'EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityDustborns,PopulationMajor') ge 1</InterpreterPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$UnlockDescriptor" StringValue="EmpireUnlockedScholarShells"/>
+        </Vars>
+
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="ScholarShells_Objective1">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="30" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Decorator_ConstructionEnded Initiator="Empire">
+                                <Input_ConstructibleElementName StringValue="StarSystemImprovementConvertToBezvolny"/>
+                            </Decorator_ConstructionEnded>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <StartActions>
+                                <Action_ApplyDescriptor>
+                                    <Input_DescriptorName VarName="$UnlockDescriptor"/>
+                                    <Input_Targets VarName="$CurrentEmpire"/>
+                                </Action_ApplyDescriptor>
+                            </StartActions>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+</Datatable>

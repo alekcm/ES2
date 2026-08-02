@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Droplist.xsd">
+
+    <!-- Награда этапа 1: 200 пыли -->
+    <Droplist Name="DroplistDustbornsChapter1">
+        <DroppableStack Name="DustbornsChapter1Dust" Weight="1"/>
+    </Droplist>
+
+    <DroppableStack Name="DustbornsChapter1Dust" Category="Resource">
+        <Resource Name="EmpireMoney" Value="200"/>
+    </DroppableStack>
+
+    <!-- Награда 6-B: 10 000 пыли -->
+    <Droplist Name="DroplistDustbornsVein">
+        <DroppableStack Name="DustbornsVeinDust" Weight="1"/>
+    </Droplist>
+
+    <DroppableStack Name="DustbornsVeinDust" Category="Resource">
+        <Resource Name="EmpireMoney" Value="10000"/>
+    </DroppableStack>
+
+</Datatable>

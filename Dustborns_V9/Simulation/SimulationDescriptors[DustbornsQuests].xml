@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- ======================================================================
+         НАГРАДЫ ГЛАВНОГО КВЕСТА "ОСАДОК ЗАБЫТЫХ"
+         Каждая награда - дескриптор, который квест вешает на империю навсегда.
+         ====================================================================== -->
+
+    <!-- ============ ЭТАП 2 ============ -->
+
+    <!-- 2-A "Затвердение": снимает штраф -10% производства за Пылерождённого.
+         Работает встречным +10% на тех же свойствах и с тем же приоритетом. -->
+    <SimulationDescriptor Name="DustbornRewardCongealedForms" Type="DustbornReward">
+        <BinaryModifier TargetProperty="PlanetIndustry" Operation="Percent" Left="0.1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" Priority="10" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="NetPlanetIndustry" Operation="Percent" Left="0.1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" Priority="10" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- 2-B "Полное Пищеварение": истощение 1.0 -> 0.8 в ход (+25% пыли за срок жизни мира) -->
+    <SimulationDescriptor Name="DustbornRewardTotalDigestion" Type="DustbornReward">
+        <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Percent" Value="-0.2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" Priority="50" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- 2-C "Пастбище": планета восстанавливает 0.2 истощения за каждого НЕ-Пылерождённого жителя
+         (обычное население, Безвольные и Считающие Оболочки). Позволяет держать миноров "как скот".
+         Считаем всех жителей планеты и вычитаем Пылерождённых. -->
+    <SimulationDescriptor Name="DustbornRewardPasture" Type="DustbornReward">
+        <BinaryModifier TargetProperty="PlanetDepletionPerTurn" Operation="Subtraction" Left="0.2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation" Priority="60" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="PlanetDepletionPerTurn" Operation="Addition" Left="0.2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" Priority="60" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- ============ ЭТАП 3 ============ -->
+
+    <!-- 3-A "Адаптация к Разумности": наука = 10% добываемой пыли -->
+    <SimulationDescriptor Name="DustbornRewardAdaptationToSapience" Type="DustbornReward">
+        <BinaryModifier TargetProperty="SystemResearch" Operation="Addition" Left="$(SystemMoney)" BinaryOperation="Multiplication" Right="0.1" Path="ClassEmpire/ClassColonizedStarSystem" Priority="800" TooltipHidden="false" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <!-- 3-B "Улучшенные Пылевые Конструкции": выкуп производства -25% -->
+    <SimulationDescriptor Name="DustbornRewardRefinedLattices" Type="DustbornReward">
+        <Modifier TargetProperty="BuyoutCostModifier" Operation="Percent" Value="-0.25" Path="ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="BuyOutCostMultiplier" Operation="Percent" Value="-0.25" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- 3-C "Скупая Мудрость": Стерильные дают 2/4/8 и растут на 1/2/4 за тип планеты.
+         Ставим базу Стерильных в 2 и добавляем +1 за каждый тип каталога. -->
+    <SimulationDescriptor Name="DustbornRewardMiserlyWisdom" Type="DustbornReward">
+        <Modifier TargetProperty="DustbornMeagerUnlocked" Operation="Force" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+        <Modifier TargetProperty="DustbornDustBaseMeager" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="DustbornDustBaseMeager" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(DustbornCatalogPlanets)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- ============ ЭТАП 4 ============ -->
+
+    <!-- 4-A "Влияние Пыли на Разум": не-Пылерождённое население на планете получает
+         +5 счастья и +2 влияния за каждого Пылерождённого на той же планете.
+         Стакается с 2-C: скот теперь ещё и полезен. -->
+    <!-- Бонус вешается на ВСЁ население планет империи, а затем снимается с самих
+         Пылерождённых - так эффект достаётся только "чужим" (миноры, Безвольные, Оболочки).
+         Множитель - число Пылерождённых на ТОЙ ЖЕ планете. -->
+    <SimulationDescriptor Name="DustbornRewardWhisperInTheLungs" Type="DustbornReward">
+        <BinaryModifier TargetProperty="PopulationApproval" Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation/ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="BonusPopulationPrestige" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation/ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="false"/>
+        <!-- Снимаем с самих Пылерождённых -->
+        <BinaryModifier TargetProperty="PopulationApproval" Operation="Subtraction" Left="5" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount/ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationPrestige" Operation="Subtraction" Left="2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount/ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- 4-B "Абразивный Стан": +10% силы армии, пока стоит здание -->
+    <SimulationDescriptor Name="StarSystemImprovementAbrasiveForge" Type="StarSystemImprovement">
+        <Modifier TargetProperty="LandBattleArmyPowerModifier" Operation="Percent" Value="0.1" Path="../ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="ArmyPower" Operation="Percent" Value="0.1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="DustbornRewardAbrasiveForge" Type="DustbornReward"/>
+
+    <!-- ============ ЭТАП 5 ============ -->
+
+    <!-- 5-A "Курган Осевших": +4 производства любому населению на истощённых планетах системы -->
+    <SimulationDescriptor Name="StarSystemImprovementSettledBarrow" Type="StarSystemImprovement">
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="4" Path="./ClassColonizedPlanet/ClassPopulation,PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="DustbornRewardSettledBarrow" Type="DustbornReward"/>
+
+    <!-- 5-B "Свернуть Лагерь": разблокирует действие "Развеять систему".
+         Курс 1 производство : 2 пыли при разборе построек. -->
+    <SimulationDescriptor Name="DustbornRewardStrikeTheCamp" Type="DustbornReward">
+        <Modifier TargetProperty="ImprovementScrapValueModifier" Operation="Addition" Value="2" Path="ClassEmpire" TooltipHidden="false"/>
+        <Modifier TargetProperty="CanScatterSystem" Operation="Force" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- ============ ЭТАП 6 - ФИНАЛ ============ -->
+
+    <!-- 6-A "Погасить Источник": истощение 0, но сбор пыли с планет обнуляется.
+         Компенсация, чтобы вариант оставался сильным: +100% к конверсии еды в пыль
+         (ставка становится максимальной), +50% к производству Безвольных и
+         снятие штрафа производства Пылерождённых. Экономика переезжает на население и постройки. -->
+    <SimulationDescriptor Name="DustbornRewardSilenceTheSource" Type="DustbornReward">
+        <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Force" Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" Priority="1000" TooltipHidden="false"/>
+        <Modifier TargetProperty="DustbornDustBaseNormal" Operation="Force" Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" Priority="1000" TooltipHidden="true"/>
+        <Modifier TargetProperty="DustbornDustBaseTeeming" Operation="Force" Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" Priority="1000" TooltipHidden="true"/>
+        <!-- Компенсации -->
+        <Modifier TargetProperty="DustbornFoodToDustRatio" Operation="Force" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" Priority="1000" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="PlanetIndustry" Operation="Percent" Left="0.1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" Priority="10" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="EmpireMoneyMultiplier" Operation="Percent" Value="0.25" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- 6-B "Открыть Жилу": планета "Неисчерпаемый" никогда не истощается -->
+    <SimulationDescriptor Name="DustbornRewardOpenTheVein" Type="DustbornReward"/>
+
+    <SimulationDescriptor Name="PlanetInexhaustible" Type="PlanetSpecialization">
+        <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Force" Value="0" Priority="1000" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusFromDepletion" Operation="Force" Value="1" Path="./ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" Priority="1000" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetGameplayTypeTeeming" Operation="Force" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- 6-C "Возвращение к Корням": все Пылерождённые становятся Курганорождёнными -->
+    <SimulationDescriptor Name="DustbornRewardReturnToRoots" Type="DustbornReward"/>
+
+    <!-- ============ КАТАЛОГ РАС (§0.1) ============ -->
+    <!-- +2% к добыче пыли за каждую уникальную переваренную расу.
+         Счётчик поднимается флагами, которые вешает квест-слушатель. -->
+    <SimulationDescriptor Name="DustbornCatalogRacesHolder" Type="DustbornCatalog">
+        <Property Name="DustbornCatalogRaces" BaseValue="0" MinValue="0"/>
+        <BinaryModifier TargetProperty="EmpireMoneyMultiplier" Operation="Percent" Left="0.02" BinaryOperation="Multiplication" Right="$(DustbornCatalogRaces)" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Одна запись каталога рас. Квест вешает по одному такому на каждую новую расу. -->
+    <SimulationDescriptor Name="DustbornCatalogRaceEntry" Type="DustbornCatalogEntry">
+        <Modifier TargetProperty="DustbornCatalogRaces" Operation="Addition" Value="1" Path="ClassEmpire,DustbornCatalogRacesHolder" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Одна запись каталога миров: +2 обычная / +4 Teeming -->
+    <SimulationDescriptor Name="DustbornCatalogPlanetEntry" Type="DustbornCatalogEntry">
+        <Modifier TargetProperty="DustbornCatalogPlanets" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- ============ ПОБОЧНЫЕ КВЕСТЫ ============ -->
+
+    <!-- 2.2 "Прахосборники": 10% урона бомбардировки -> пыль -->
+    <SimulationDescriptor Name="DustbornRewardDustHarvesters" Type="DustbornReward">
+        <BinaryModifier TargetProperty="EmpireMoney" Operation="Addition" Left="0.1" BinaryOperation="Multiplication" Right="$(BombardDamage)" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- 2.4 "Пылевой Курган": +пыль = число истощённых планет империи -->
+    <SimulationDescriptor Name="PlanetImprovementDustBarrow" Type="PlanetImprovement">
+        <Modifier TargetProperty="PlanetMoney" Operation="Addition" Value="$(DepletedPlanetCount)" Path="../ClassEmpire" TooltipHidden="false" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <!-- 2.7 "Трюмы": счётчик уничтоженных пиратских логов -->
+    <SimulationDescriptor Name="DustbornPirateBasesHolder" Type="DustbornCatalog">
+        <Property Name="DustbornPirateBasesDestroyed" BaseValue="0" MinValue="0"/>
+    </SimulationDescriptor>
+
+    <!-- 2.8 "Обелиски": счётчик деколонизированных систем -->
+    <SimulationDescriptor Name="DustbornObelisksHolder" Type="DustbornCatalog">
+        <Property Name="DustbornAbandonedSystems" BaseValue="0" MinValue="0"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="DustbornRewardKeepObelisks" Type="DustbornReward">
+        <BinaryModifier TargetProperty="EmpirePrestige" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(DustbornAbandonedSystems)" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- 2.9 "Договор Тихой Системы" -->
+    <SimulationDescriptor Name="SystemTreatyOfTheQuiet" Type="StarSystem"/>
+    <SimulationDescriptor Name="SystemTreatyBroken" Type="StarSystem"/>
+
+    <!-- 2.10 Разблокировка Считающих Оболочек -->
+    <SimulationDescriptor Name="EmpireUnlockedScholarShells" Type="DustbornReward"/>
+
+    <!-- Служебный тип для наград -->
+    <SimulationDescriptor Name="StarSystemImprovementConvertToScholar" Type="StarSystemImprovement"/>
+
+    <!-- ======================================================================
+         ЭФФЕКТЫ ТЕХНОЛОГИЙ
+         ====================================================================== -->
+
+    <!-- Ветка A: конверсия еды в пыль 25% -> 50% -> 75% -> 100%.
+         Каждая техника ДОБАВЛЯЕТ 0.25 к ставке; MaxValue свойства = 1. -->
+    <SimulationDescriptor Name="TechnologyDustbornFoodToDust1" Type="Technology">
+        <Modifier TargetProperty="DustbornFoodToDustRatio" Operation="Addition" Value="0.25" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornFoodToDust2" Type="Technology">
+        <Modifier TargetProperty="DustbornFoodToDustRatio" Operation="Addition" Value="0.25" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornFoodToDust3" Type="Technology">
+        <Modifier TargetProperty="DustbornFoodToDustRatio" Operation="Addition" Value="0.25" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Ветка B: пыль за переваривание 300 -> 600 -> 900 -> 1200.
+         Каждая техника добавляет +300 к свойству, которое читает TemporaryEffect. -->
+    <SimulationDescriptor Name="TechnologyDustbornDigestion1" Type="Technology">
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornDigestion2" Type="Technology">
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornDigestion3" Type="Technology">
+        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Ветка C -->
+    <SimulationDescriptor Name="TechnologyDustbornDepletion1" Type="Technology">
+        <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Subtraction" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TechnologyDustbornShells1" Type="Technology">
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" TooltipHidden="false"/>
+        <Modifier TargetProperty="SystemGarrisonMaximumHealth" Operation="Percent" Value="0.1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- Держатель значения переваривания. Вешается на империю аффинити-трейтом. -->
+    <SimulationDescriptor Name="DustbornDigestionHolder" Type="DustbornCatalog">
+        <Property Name="DustbornDigestionValue" BaseValue="300" MinValue="0"/>
+    </SimulationDescriptor>
+
+</Datatable>

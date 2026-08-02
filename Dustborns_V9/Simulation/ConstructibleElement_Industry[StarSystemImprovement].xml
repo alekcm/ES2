@@ -7,7 +7,7 @@
         <SupervisorGain Name="Dust" Weight="0.5"/>
         <Tags>NoBuyout</Tags>
         <QueuedSimulationDescriptorReference Name="QueuedDescriptorIncreaseVirtualPopulationDustborns"/>
-        <CustomCost ResourceName="EmpireMoney" Instant="true">(100 + Property(StockLocation,@ClassColonizedStarSystem,MajorPopulationCount) * 75) * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
+        <CustomCost ResourceName="EmpireMoney" Instant="true">250 * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem</PathPrerequisite>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
         <InterpreterPrerequisite Flags="MaximumPopulationSystem,Enqueue">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (1 + Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
@@ -22,36 +22,20 @@
         <SupervisorGain Name="Dust" Weight="0.5"/>
         <Tags>NoBuyout</Tags>
         <Cost ResourceName="SystemTurnBased">1</Cost>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
         <InterpreterPrerequisite Flags="Prerequisite">Property(Context,@'ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns', PopulationCount) ge 1</InterpreterPrerequisite>
         <SimulationDescriptorReference Name="StarSystemImprovementSellMajorPopulationDustborns"/>
+        <!-- Возврат 250 пыли. Основной путь - TemporaryEffect (как у переваривания, там работает). -->
         <TemporaryEffect>DustbornSellDustReward</TemporaryEffect>
+        <!-- ЗАПАСНОЙ ВАРИАНТ, если TemporaryEffect всё равно не платит: закомментируй строку выше и раскомментируй строку ниже.
+        <CustomCost ResourceName="EmpireMoney" Instant="true">-250 * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
+        -->
     </StarSystemPopulationTransformImprovementDefinition>
 
-    <!-- Создание Безвольного за пыль (для старта и покупки) -->
-    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementCreateMajorPopulationBezvolny" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
-                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
-        <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
-        <SupervisorGain Name="Industry" Weight="0.5"/>
-        <Tags>NoBuyout</Tags>
-        <QueuedSimulationDescriptorReference Name="QueuedDescriptorIncreaseVirtualPopulationBezvolny"/>
-        <CustomCost ResourceName="EmpireMoney" Instant="true">(50 + Property(StockLocation,@ClassColonizedStarSystem,MajorPopulationCount) * 30) * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem</PathPrerequisite>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
-        <InterpreterPrerequisite Flags="MaximumPopulationSystem,Enqueue">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (1 + Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
-        <InterpreterPrerequisite Flags="Prerequisite">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
-        <SimulationDescriptorReference Name="StarSystemImprovementCreateMajorPopulationBezvolny"/>
-    </StarSystemPopulationTransformImprovementDefinition>
+    <!-- Покупка Безвольных за пыль удалена: Безвольные получаются ТОЛЬКО переработкой чужого населения -->
 
-    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementCreateMajorPopulationBezvolnyHome" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
-                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
-        <Tags>NoBuyout</Tags>
-        <Cost ResourceName="SystemTurnBased">0</Cost>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem</PathPrerequisite>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
-        <SimulationDescriptorReference Name="StarSystemImprovementCreateMajorPopulationBezvolny"/>
-    </StarSystemPopulationTransformImprovementDefinition>
+    <!-- Бесплатная постройка "Сконструировать Безвольного" (Home) также удалена -->
 
     <!-- Конверсия минора в Безвольного +300 пыли, требует Пылерождённого -->
     <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementConvertToBezvolny" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
@@ -61,11 +45,49 @@
         <SupervisorGain Name="Industry" Weight="0.5"/>
         <Tags>NoBuyout</Tags>
         <Cost ResourceName="SystemTurnBased">1</Cost>
-        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/PopulationMinor</PathPrerequisite>
         <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
         <SimulationDescriptorReference Name="StarSystemImprovementConvertToBezvolny"/>
         <TemporaryEffect>BezvolnyDustReward</TemporaryEffect>
     </StarSystemPopulationTransformImprovementDefinition>
+
+    <!-- ============ 2.10 ПЕРЕРАБОТКА В СЧИТАЮЩУЮ ОБОЛОЧКУ ============
+         Альтернатива обычной переработке: пыль НЕ даётся, вместо Безвольного - Считающая Оболочка.
+         Доступна только после разблокировки квестом (флаг EmpireUnlockedScholarShells). -->
+    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementConvertToScholar" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
+                                                      PopulationSource="Minor" PopulationSourceHeuristic="LowestCount"
+                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+        <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
+        <SupervisorGain Name="Science" Weight="0.5"/>
+        <Tags>NoBuyout</Tags>
+        <Cost ResourceName="SystemTurnBased">1</Cost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/PopulationMinor</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire,EmpireUnlockedScholarShells</PathPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementConvertToScholar"/>
+    </StarSystemPopulationTransformImprovementDefinition>
+
+    <!-- ============ 4-B АБРАЗИВНЫЙ СТАН ============
+         Требует истощённую планету в системе. Даёт +10% силы армии, пока стоит. -->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementAbrasiveForge" SubCategory="SubCategoryEmpire" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Industry" Weight="0.5"/>
+        <UniqueTags>AbrasiveForge</UniqueTags>
+        <CustomCost ResourceName="SystemProduction">400 * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire,DustbornRewardAbrasiveForge</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite">ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus</PathPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementAbrasiveForge"/>
+    </StarSystemImprovementDefinition>
+
+    <!-- ============ 5-A КУРГАН ОСЕВШИХ ============
+         +4 производства ЛЮБОМУ населению на истощённых планетах этой системы. -->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementSettledBarrow" SubCategory="SubCategoryEmpire" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Industry" Weight="0.7"/>
+        <UniqueTags>SettledBarrow</UniqueTags>
+        <CustomCost ResourceName="SystemProduction">300 * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire,DustbornRewardSettledBarrow</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite">ClassColonizedStarSystem/ClassColonizedPlanet,PlanetDepletionMalus</PathPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementSettledBarrow"/>
+    </StarSystemImprovementDefinition>
 
 </Datatable>

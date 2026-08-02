@@ -200,22 +200,85 @@
         <TooltipEffect>%StarSystemImprovementConvertToBezvolnyMajorEffect</TooltipEffect>
     </ExtendedGuiElement>
 
-    <ExtendedGuiElement Name="StarSystemImprovementCreateMajorPopulationBezvolny">
-        <Title>%StarSystemImprovementCreateMajorPopulationBezvolnyTitle</Title>
-        <Description>%StarSystemImprovementCreateMajorPopulationBezvolnyDescription</Description>
-        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
-        </Icons>
-        <TooltipEffect>%StarSystemImprovementCreateMajorPopulationBezvolnyEffect</TooltipEffect>
+
+
+    <!-- ============ ТЕХНОЛОГИИ ============ -->
+    <GuiElement Name="TechnologyDustbornDigestion1"><Title>%TechnologyDustbornDigestion1Title</Title><Description>%TechnologyDustbornDigestion1Description</Description></GuiElement>
+    <GuiElement Name="TechnologyDustbornDigestion2"><Title>%TechnologyDustbornDigestion2Title</Title><Description>%TechnologyDustbornDigestion2Description</Description></GuiElement>
+    <GuiElement Name="TechnologyDustbornDigestion3"><Title>%TechnologyDustbornDigestion3Title</Title><Description>%TechnologyDustbornDigestion3Description</Description></GuiElement>
+    <GuiElement Name="TechnologyDustbornDepletion1"><Title>%TechnologyDustbornDepletion1Title</Title><Description>%TechnologyDustbornDepletion1Description</Description></GuiElement>
+    <GuiElement Name="TechnologyDustbornShells1"><Title>%TechnologyDustbornShells1Title</Title><Description>%TechnologyDustbornShells1Description</Description></GuiElement>
+
+    <!-- ============ КВЕСТЫ ============ -->
+    <GuiElement Name="DustbornsQuest-Chapter1"><Title>%DustbornsQuest-Chapter1Title</Title><Description>%DustbornsQuest-Chapter1Description</Description></GuiElement>
+    <GuiElement Name="DustbornsQuest-Chapter2"><Title>%DustbornsQuest-Chapter2Title</Title><Description>%DustbornsQuest-Chapter2Description</Description></GuiElement>
+    <GuiElement Name="DustbornsQuest-Chapter3"><Title>%DustbornsQuest-Chapter3Title</Title><Description>%DustbornsQuest-Chapter3Description</Description></GuiElement>
+    <GuiElement Name="DustbornsQuest-Chapter4"><Title>%DustbornsQuest-Chapter4Title</Title><Description>%DustbornsQuest-Chapter4Description</Description></GuiElement>
+    <GuiElement Name="DustbornsQuest-Chapter5"><Title>%DustbornsQuest-Chapter5Title</Title><Description>%DustbornsQuest-Chapter5Description</Description></GuiElement>
+    <GuiElement Name="DustbornsQuest-Chapter6"><Title>%DustbornsQuest-Chapter6Title</Title><Description>%DustbornsQuest-Chapter6Description</Description></GuiElement>
+    <GuiElement Name="DustbornsSide-ScholarShells"><Title>%DustbornsSide-ScholarShellsTitle</Title><Description>%DustbornsSide-ScholarShellsDescription</Description></GuiElement>
+
+    <!-- ============ НАГРАДЫ ============ -->
+    <ExtendedGuiElement Name="DustbornRewardCongealedForms"><Title>%DustbornRewardCongealedFormsTitle</Title><Description>%DustbornRewardCongealedFormsDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardTotalDigestion"><Title>%DustbornRewardTotalDigestionTitle</Title><Description>%DustbornRewardTotalDigestionDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardPasture"><Title>%DustbornRewardPastureTitle</Title><Description>%DustbornRewardPastureDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardAdaptationToSapience"><Title>%DustbornRewardAdaptationToSapienceTitle</Title><Description>%DustbornRewardAdaptationToSapienceDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardRefinedLattices"><Title>%DustbornRewardRefinedLatticesTitle</Title><Description>%DustbornRewardRefinedLatticesDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardMiserlyWisdom"><Title>%DustbornRewardMiserlyWisdomTitle</Title><Description>%DustbornRewardMiserlyWisdomDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardWhisperInTheLungs"><Title>%DustbornRewardWhisperInTheLungsTitle</Title><Description>%DustbornRewardWhisperInTheLungsDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardAbrasiveForge"><Title>%DustbornRewardAbrasiveForgeTitle</Title><Description>%DustbornRewardAbrasiveForgeDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardSettledBarrow"><Title>%DustbornRewardSettledBarrowTitle</Title><Description>%DustbornRewardSettledBarrowDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardStrikeTheCamp"><Title>%DustbornRewardStrikeTheCampTitle</Title><Description>%DustbornRewardStrikeTheCampDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardSilenceTheSource"><Title>%DustbornRewardSilenceTheSourceTitle</Title><Description>%DustbornRewardSilenceTheSourceDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardOpenTheVein"><Title>%DustbornRewardOpenTheVeinTitle</Title><Description>%DustbornRewardOpenTheVeinDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornRewardReturnToRoots"><Title>%DustbornRewardReturnToRootsTitle</Title><Description>%DustbornRewardReturnToRootsDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="PlanetInexhaustible"><Title>%PlanetInexhaustibleTitle</Title><Description>%PlanetInexhaustibleDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornCatalogRacesHolder"><Title>%DustbornCatalogRacesHolderTitle</Title><Description>%DustbornCatalogRacesHolderDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornCatalogRaceEntry"><Title>%DustbornCatalogRaceEntryTitle</Title><Description>%DustbornCatalogRaceEntryDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="DustbornCatalogPlanetEntry"><Title>%DustbornCatalogPlanetEntryTitle</Title><Description>%DustbornCatalogPlanetEntryDescription</Description></ExtendedGuiElement>
+
+    <!-- ============ ПОСТРОЙКИ ============ -->
+    <ExtendedGuiElement Name="StarSystemImprovementAbrasiveForge">
+        <Title>%StarSystemImprovementAbrasiveForgeTitle</Title>
+        <Description>%StarSystemImprovementAbrasiveForgeDescription</Description>
+        <Icons><Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust"/></Icons>
+        <TooltipEffect>%StarSystemImprovementAbrasiveForgeEffect</TooltipEffect>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="StarSystemImprovementSettledBarrow">
+        <Title>%StarSystemImprovementSettledBarrowTitle</Title>
+        <Description>%StarSystemImprovementSettledBarrowDescription</Description>
+        <Icons><Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust"/></Icons>
+        <TooltipEffect>%StarSystemImprovementSettledBarrowEffect</TooltipEffect>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="StarSystemImprovementConvertToScholar">
+        <Title>%StarSystemImprovementConvertToScholarTitle</Title>
+        <Description>%StarSystemImprovementConvertToScholarDescription</Description>
+        <Icons><Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust"/></Icons>
+        <TooltipEffect>%StarSystemImprovementConvertToScholarEffect</TooltipEffect>
     </ExtendedGuiElement>
 
-    <ExtendedGuiElement Name="StarSystemImprovementCreateMajorPopulationBezvolnyHome">
-        <Title>%StarSystemImprovementCreateMajorPopulationBezvolnyTitle</Title>
-        <Description>%StarSystemImprovementCreateMajorPopulationBezvolnyDescription</Description>
-        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
-        </Icons>
-        <TooltipEffect>%StarSystemImprovementCreateMajorPopulationBezvolnyEffect</TooltipEffect>
-    </ExtendedGuiElement>
+    <!-- ============ СЧИТАЮЩАЯ ОБОЛОЧКА ============ -->
+    <GuiElement Name="AffinityBezvolnyScholar">
+        <Title>%PopulationBezvolnyScholarTitle</Title><Description>%PopulationBezvolnyScholarDescription</Description>
+        <Icons><Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall"/></Icons>
+    </GuiElement>
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityBezvolnyScholar"><Title>%PopulationBezvolnyScholarTitle</Title><Description>%PopulationBezvolnyScholarDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityBezvolnyScholar"><Title>%PopulationBezvolnyScholarTitle</Title><SymbolString>[Cravers]</SymbolString><Color Red="140" Green="160" Blue="200" Alpha="255"/></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationPlanetAffinityBezvolnyScholarCount"><Title>%PopulationBezvolnyScholarTitle</Title><Description>%PopulationBezvolnyScholarDescription</Description><SymbolString>[Cravers]</SymbolString><Color Red="140" Green="160" Blue="200" Alpha="255"/></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityBezvolnyScholarCount"><Title>%PopulationBezvolnyScholarTitle</Title><SymbolString>[Cravers]</SymbolString></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityBezvolnyScholarCount"><Title>%PopulationBezvolnyScholarTitle</Title><SymbolString>[Cravers]</SymbolString></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary"><Title>%PopulationModifiersTraitBezvolnyScholarPrimaryTitle</Title><Description>%PopulationModifiersTraitBezvolnyScholarPrimaryDescription</Description></ExtendedGuiElement>
+
+    <!-- ============ КУРГАНОРОЖДЁННЫЙ ============ -->
+    <GuiElement Name="AffinityBarrowborn">
+        <Title>%PopulationBarrowbornTitle</Title><Description>%PopulationBarrowbornDescription</Description>
+        <Icons><Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall"/></Icons>
+    </GuiElement>
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityBarrowborn"><Title>%PopulationBarrowbornTitle</Title><Description>%PopulationBarrowbornDescription</Description></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityBarrowborn"><Title>%PopulationBarrowbornTitle</Title><SymbolString>[Cravers]</SymbolString><Color Red="230" Green="200" Blue="120" Alpha="255"/></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationPlanetAffinityBarrowbornCount"><Title>%PopulationBarrowbornTitle</Title><Description>%PopulationBarrowbornDescription</Description><SymbolString>[Cravers]</SymbolString><Color Red="230" Green="200" Blue="120" Alpha="255"/></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityBarrowbornCount"><Title>%PopulationBarrowbornTitle</Title><SymbolString>[Cravers]</SymbolString></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityBarrowbornCount"><Title>%PopulationBarrowbornTitle</Title><SymbolString>[Cravers]</SymbolString></ExtendedGuiElement>
+    <ExtendedGuiElement Name="ClassPopulationPlanetModifiersTraitBarrowbornPrimary"><Title>%PopulationModifiersTraitBarrowbornPrimaryTitle</Title><Description>%PopulationModifiersTraitBarrowbornPrimaryDescription</Description></ExtendedGuiElement>
 
 </Datatable>

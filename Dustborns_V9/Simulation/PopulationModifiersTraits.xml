@@ -78,4 +78,76 @@
         </Modifiers>
     </PopulationModifiersTrait>
 
+    <!-- ===== 2.10 Считающая Оболочка ===== -->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBezvolnyScholar" SubCategory="Affinity" ShowInCustom="false">
+        <Modifiers>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityBezvolnyScholar"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityBezvolnyScholar"/>
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemGrowthTypeIndustry"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBezvolnyScholarCount" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityBezvolnyScholarCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityBezvolnyScholarCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityBezvolnyScholarCount"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBezvolnyScholarPrimary" SubCategory="Primary" ShowInCustom="true" Cost="12">
+        <Tags>BonusPopulationIndustry,BonusPopulationScience</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary"/>
+                <SimulationDescriptorReference Name="PopulationExploitingPlanetWhileDepleting"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <!-- ===== 6-C Курганорождённый ===== -->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBarrowborn" SubCategory="Affinity" ShowInCustom="false">
+        <Modifiers>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityBarrowborn"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityBarrowborn"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBarrowbornCount" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityBarrowbornCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityBarrowbornCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityBarrowbornCount"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBarrowbornPrimary" SubCategory="Primary" ShowInCustom="true" Cost="25">
+        <Tags>BonusPopulationDust,BonusPopulationScience,BonusPopulationIndustry,BonusPopulationFood</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitBarrowbornPrimary"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
 </Datatable>

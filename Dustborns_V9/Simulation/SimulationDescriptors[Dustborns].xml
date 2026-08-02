@@ -14,7 +14,6 @@
         <Modifier TargetProperty="CannotMigrate" Operation="Force" Value="1" TooltipHidden="true"/>
         <Modifier TargetProperty="ShouldPopulationGrow" Operation="Force" Value="-1" TooltipHidden="true"/>
         <Modifier TargetProperty="PopulationWithGrowth" Operation="Subtraction" Value="$(PopulationCount)" Path="./ClassStarSystem" TooltipHidden="true"/>
-        <Property Name="DustbornFoodToDustRatio" BaseValue="0.25" MinValue="0" MaxValue="1"/>
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="ClassPopulationPlanetAffinityDustbornsCount" Type="ClassPopulationPlanet">
@@ -29,34 +28,73 @@
         <Modifier TargetProperty="NetPopulationScore" Operation="Multiplication" Value="$(PopulationGrowthScoreModifier)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustbornsCount" Priority="100" TooltipHidden="true"/>
     </SimulationDescriptor>
 
-    <!-- Dustborn Primary: +1 истощения, x0.5 промышленности, +4/+8 пыли по тегам планеты только когда не истощена -->
+    <!-- ==========================================================================
+         DUSTBORN PRIMARY
+         База сбора пыли: 4 обычная / 8 Teeming / 0 Стерильная.
+         Растёт от Каталога Миров (§0.1): +2 обычная, +4 Teeming за каждый уникальный
+         истощённый тип планеты. Стерильные открываются наградой этапа 3-C.
+         ========================================================================== -->
     <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitDustbornsPrimary" Type="ClassPopulationPlanet">
         <Property Name="BonusFromDepletion" BaseValue="1"/>
+
+        <!-- Счётчик уникальных истощённых типов планет. Поднимается флагами EmpireCatalogPlanet* -->
+        <Property Name="DustbornCatalogPlanets" BaseValue="0" MinValue="0"/>
+        <!-- Флаг награды этапа 3-C "Скупая Мудрость": разрешает сбор со Стерильных -->
+        <Property Name="DustbornMeagerUnlocked" BaseValue="0" MinValue="0" MaxValue="1"/>
+
+        <!-- Итоговые ставки сбора -->
+        <Property Name="DustbornDustBaseNormal" BaseValue="4" MinValue="0"/>
+        <Property Name="DustbornDustBaseTeeming" BaseValue="4" MinValue="0"/>
+        <Property Name="DustbornDustBaseMeager" BaseValue="0" MinValue="0"/>
+        <BinaryModifier TargetProperty="DustbornDustBaseNormal"  Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(DustbornCatalogPlanets)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="DustbornDustBaseTeeming" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(DustbornCatalogPlanets)" TooltipHidden="true"/>
+
+        <!-- Истощение -->
         <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Addition" Value="1" Path="False/./ClassPlanet"/>
         <BinaryModifier TargetProperty="PlanetDepletionPerTurn" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="./ClassPlanet" TooltipHidden="true"/>
         <Modifier TargetProperty="BonusFromDepletion" Operation="Force" Value="0" TooltipHidden="true" Priority="-1"/>
 
-        <!-- Половинчатая промышленность: только PopulationIndustry -->
-        <Modifier TargetProperty="PopulationIndustry" Operation="Percent" Value="-0.5" Priority="10" TooltipHidden="false"/>
-        <Modifier TargetProperty="DepletingPopulationIndustry" Operation="Percent" Value="-0.5" Priority="10" TooltipHidden="false"/>
+        <!-- Штраф промышленности: -10% за каждого Пылерождённого на планете -->
+        <BinaryModifier TargetProperty="PlanetIndustry" Operation="Percent" Left="-0.1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="./ClassPlanet" Priority="10" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="NetPlanetIndustry" Operation="Percent" Left="-0.1" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="./ClassPlanet" Priority="10" TooltipHidden="true"/>
 
-        <!-- +4 пыли на не Стерильной (не Meager) только когда не истощена: 4 * BonusFromDepletion -->
-        <BinaryModifier TargetProperty="BonusPopulationDust" Operation="Addition" Left="4" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
-        <!-- -4 на Стерильной (Meager) чтобы обнулить предыдущий бонус: -4 * BonusFromDepletion когда Meager -->
-        <BinaryModifier TargetProperty="BonusPopulationDust" Operation="Addition" Left="-4" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="./PlanetGameplayTypeMeager/PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
-        <!-- +4 дополнительно на Плодородной (Teeming) когда не истощена -->
-        <BinaryModifier TargetProperty="BonusPopulationDust" Operation="Addition" Left="4" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="./PlanetGameplayTypeTeeming/PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
+        <!-- Сбор пыли на не-Стерильной планете, только пока не истощена -->
+        <BinaryModifier TargetProperty="BonusPopulationDust" Operation="Addition" Left="$(DustbornDustBaseNormal)" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
+        <!-- Снимаем этот сбор на Стерильной -->
+        <BinaryModifier TargetProperty="BonusPopulationDust" Operation="Subtraction" Left="$(DustbornDustBaseNormal)" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="./PlanetGameplayTypeMeager/PopulationExploitingPlanetWhileDepleting" TooltipHidden="true"/>
+        <!-- Teeming: удвоение (ещё столько же сверху) -->
+        <BinaryModifier TargetProperty="BonusPopulationDust" Operation="Addition" Left="$(DustbornDustBaseTeeming)" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="./PlanetGameplayTypeTeeming/PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
+        <!-- Стерильные после награды 3-C "Скупая Мудрость": 2 базово + 1 за тип планеты -->
+        <BinaryModifier TargetProperty="BonusPopulationDust" Operation="Addition" Left="$(DustbornDustBaseMeager)" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="./PlanetGameplayTypeMeager/PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="PopulationExploitingPlanetWhileDepleting" Type="PopulationExploitingPlanetWhileDepleting"/>
 
-    <!-- Конверсия еды в пыль 25% - постоянная, не зависит от истощения -->
+    <!-- КОНВЕРСИЯ ЕДЫ В ПЫЛЬ  (v5 - рабочая схема)
+         Возврат к v1 (она единственная реально давала цифры), плюс компенсация производства.
+         Шаг 1-4: штатная рифтборновская конверсия. Она наполняет SystemProductionFromGrowth
+                  и через DisableFoodConversion разрешает игре превратить его в производство.
+                  Деньги при этой схеме считаются корректно.
+         Шаг 5:   платим пыль с пула по ставке DustbornFoodToDustRatio (техи поднимают до 1.0).
+         Шаг 6:   компенсация: вычитаем из производства ровно ту же величину, которую добавил шаг 1-4.
+                  Итог +X -X = 0, производство от еды не растёт, а деньги остаются. -->
     <SimulationDescriptor Name="ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust" Type="ClassPopulationStarSystem">
+        <Property Name="DustbornFoodToDustRatio" BaseValue="0.25" MinValue="0" MaxValue="1"/>
+
+        <!-- 1-4. Штатный расчёт пула еды -->
         <Modifier TargetProperty="SystemProductionFromGrowth" Operation="Addition" Value="$(SystemGrowth)" Path="../ClassColonizedStarSystem" TooltipHidden="true" SearchValueFromPath="true"/>
         <Modifier TargetProperty="SystemProductionFromGrowth" Operation="Subtraction" Value="$(SystemGrowthUpkeep)" Path="../ClassColonizedStarSystem" TooltipHidden="true" SearchValueFromPath="true"/>
         <BinaryModifier TargetProperty="SystemProductionFromGrowth" Operation="Multiplication" Left="1" BinaryOperation="Subtraction" Right="$(SystemPopulationIsMaxed)" Path="../ClassColonizedStarSystem" TooltipHidden="true" SearchValueFromPath="true"/>
         <Modifier TargetProperty="DisableFoodConversion" Operation="Subtraction" Value="1" Path="../ClassColonizedStarSystem" TooltipHidden="true"/>
-        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition" Left="$(SystemProductionFromGrowth)" BinaryOperation="Multiplication" Right="0.25" Path="../ClassColonizedStarSystem" TooltipHidden="false" SearchValueFromPath="true"/>
+
+        <!-- 5. Пыль с пула -->
+        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition" Left="$(SystemProductionFromGrowth)" BinaryOperation="Multiplication" Right="$(DustbornFoodToDustRatio)" Path="../ClassColonizedStarSystem" Priority="100" TooltipHidden="false" SearchValueFromPath="true"/>
+
+        <!-- 6. КОМПЕНСАЦИЯ ПРОИЗВОДСТВА: -X равный тому же пулу.
+             Пылерождённые не работают руками, еда не должна давать производство.
+             Пробуем сразу два целевых свойства - лишнее просто не найдётся и будет проигнорировано. -->
+        <Modifier TargetProperty="SystemIndustry" Operation="Subtraction" Value="$(SystemProductionFromGrowth)" Path="../ClassColonizedStarSystem" Priority="900" TooltipHidden="false" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="NetSystemIndustry" Operation="Subtraction" Value="$(SystemProductionFromGrowth)" Path="../ClassColonizedStarSystem" Priority="900" TooltipHidden="true" SearchValueFromPath="true"/>
     </SimulationDescriptor>
 
     <!-- Bezvolny -->
@@ -82,18 +120,16 @@
         <Modifier TargetProperty="NetPopulationScore" Operation="Multiplication" Value="$(PopulationGrowthScoreModifier)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassPopulationStarSystemAffinityBezvolnyCount" Priority="100" TooltipHidden="true"/>
     </SimulationDescriptor>
 
-    <!-- Bezvolny Primary: +3 промышленности, +3 на истощённой, без науки/влияния -->
+    <!-- Bezvolny Primary: +3 промышленности (+6 на истощённой). Наука и влияние - как у обычного населения. -->
     <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitBezvolnyPrimary" Type="ClassPopulationPlanet">
         <Property Name="BonusFromDepletion" BaseValue="1"/>
         <Modifier TargetProperty="BonusFromDepletion" Operation="Force" Value="0" TooltipHidden="true" Priority="-1"/>
         <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" TooltipHidden="false"/>
         <BinaryModifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Left="-3" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
         <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
-        <!-- Запрет науки и влияния через -1.0 = 0% -->
-        <Modifier TargetProperty="PopulationScience" Operation="Percent" Value="-1.0" Priority="10" TooltipHidden="false"/>
-        <Modifier TargetProperty="DepletingPopulationScience" Operation="Percent" Value="-1.0" Priority="10" TooltipHidden="false"/>
-        <Modifier TargetProperty="PopulationPrestige" Operation="Percent" Value="-1.0" Priority="10" TooltipHidden="false"/>
-        <Modifier TargetProperty="DepletingPopulationPrestige" Operation="Percent" Value="-1.0" Priority="10" TooltipHidden="false"/>
+        <!-- Наука и Влияние Безвольных больше НЕ режутся: обе блокировки не работали,
+             и по решению дизайна Безвольные теперь производят науку и влияние как обычное население.
+             Научная специализация вынесена в отдельную популяцию "Безвольный-Учёный" (квест §2.10). -->
         <Modifier TargetProperty="BonusPopulationDust" Operation="Force" Value="0" Priority="5" TooltipHidden="true"/>
     </SimulationDescriptor>
 
@@ -102,7 +138,6 @@
         <Modifier TargetProperty="HasAffinityCravers" Operation="Force" Value="1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true"/>
         <Modifier TargetProperty="ImprovementScrapValueModifier" Operation="Addition" Value="5.67" Path="ClassEmpire" TooltipHidden="false"/>
         <Modifier TargetProperty="CanSellImprovements" Operation="Force" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
-        <Property Name="DustbornFoodToDustRatio" BaseValue="0.25" MinValue="0" MaxValue="1"/>
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="AffinityGameplayBezvolny" Type="AffinityGameplay"/>
@@ -122,8 +157,6 @@
     <SimulationDescriptor Name="StarSystemImprovementCreateMajorPopulationDustborns" Type="StarSystemImprovement"/>
     <SimulationDescriptor Name="StarSystemImprovementSellMajorPopulationDustborns" Type="StarSystemImprovement"/>
     <SimulationDescriptor Name="StarSystemImprovementConvertToBezvolny" Type="StarSystemImprovement"/>
-    <SimulationDescriptor Name="StarSystemImprovementCreateMajorPopulationBezvolny" Type="StarSystemImprovement"/>
-    <SimulationDescriptor Name="StarSystemImprovementCreateMajorPopulationBezvolnyHome" Type="StarSystemImprovement"/>
 
     <!-- Убираем старые PlanetDepletionBonus/Neutral override - теперь логика через теги планеты -->
     <SimulationDescriptor Name="PlanetDepletionBonus" Type="PlanetDepletion">
@@ -140,11 +173,90 @@
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="TemporaryEffectBezvolnyDustReward" Type="TemporaryEffect">
+        <!-- Значение масштабируется веткой технологий "Пищеварение": 300/600/900/1200.
+             Читается из свойства империи DustbornDigestionValue (держатель DustbornDigestionHolder). -->
+        <Modifier TargetProperty="SystemMoney" Operation="Addition" Value="$(DustbornDigestionValue)" Path="../ClassEmpire" TooltipHidden="false" SearchValueFromPath="true"/>
+        <!-- Запасной фикс, если чтение свойства не сработает - раскомментируй строку ниже и закомментируй верхнюю:
         <Modifier TargetProperty="SystemMoney" Operation="Addition" Value="300" TooltipHidden="false"/>
+        -->
     </SimulationDescriptor>
 
     <SimulationDescriptor Name="TemporaryEffectDustbornSellDustReward" Type="TemporaryEffect">
-        <Modifier TargetProperty="SystemMoney" Operation="Addition" Value="100" TooltipHidden="false"/>
+        <Modifier TargetProperty="SystemMoney" Operation="Addition" Value="250" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <!-- ============ 2.10 СЧИТАЮЩАЯ ОБОЛОЧКА ============ -->
+    <SimulationDescriptor Name="AffinityBezvolnyScholar" Type="Affinity"/>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityBezvolnyScholar" Type="ClassPopulationEmpire">
+        <Modifier TargetProperty="CanBeBoosted" Operation="Force" Value="0" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityBezvolnyScholar" Type="ClassPopulationStarSystem">
+        <Modifier TargetProperty="CannotMigrate" Operation="Force" Value="0" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShouldPopulationGrow" Operation="Force" Value="-1" TooltipHidden="true"/>
+        <Modifier TargetProperty="PopulationWithGrowth" Operation="Subtraction" Value="$(PopulationCount)" Path="./ClassStarSystem" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetAffinityBezvolnyScholarCount" Type="ClassPopulationPlanet">
+        <Modifier TargetProperty="PopulationCount" Operation="Addition" Value="$(PopulationCount)" Path="../ClassStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBezvolnyScholarCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityBezvolnyScholarCount" Type="ClassPopulationStarSystem">
+        <Modifier TargetProperty="PopulationCount" Operation="Addition" Value="$(PopulationCount)" Path="./!ClassExploitedStarSystem/../ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBezvolnyScholarCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityBezvolnyScholarCount" Type="ClassPopulationEmpire">
+        <Modifier TargetProperty="NetPopulationScore" Operation="Multiplication" Value="$(PopulationGrowthScoreModifier)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassPopulationStarSystemAffinityBezvolnyScholarCount" Priority="100" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Всё как у Безвольного, плюс +2 науки за каждого Пылерождённого на ТОЙ ЖЕ планете.
+         Оболочка сама по себе пустая - она считает только когда рядом есть пыль. -->
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitBezvolnyScholarPrimary" Type="ClassPopulationPlanet">
+        <Property Name="BonusFromDepletion" BaseValue="1"/>
+        <Modifier TargetProperty="BonusFromDepletion" Operation="Force" Value="0" TooltipHidden="true" Priority="-1"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" TooltipHidden="false"/>
+        <BinaryModifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Left="-3" BinaryOperation="Multiplication" Right="$(BonusFromDepletion)" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="3" Path="PopulationExploitingPlanetWhileDepleting" TooltipHidden="false"/>
+        <!-- Наука: +2 за каждого Пылерождённого на этой планете -->
+        <BinaryModifier TargetProperty="BonusPopulationScience" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(PopulationCount)" Path="../ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetAffinityDustbornsCount" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationDust" Operation="Force" Value="0" Priority="5" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- ============ 6-C КУРГАНОРОЖДЁННЫЙ ============ -->
+    <SimulationDescriptor Name="AffinityBarrowborn" Type="Affinity"/>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityBarrowborn" Type="ClassPopulationEmpire">
+        <Modifier TargetProperty="CanBeBoosted" Operation="Force" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Ключевое отличие от Пылерождённых: население РАСТЁТ обычным образом за счёт еды -->
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityBarrowborn" Type="ClassPopulationStarSystem">
+        <Modifier TargetProperty="CannotMigrate" Operation="Force" Value="0" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShouldPopulationGrow" Operation="Force" Value="1" TooltipHidden="false"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetAffinityBarrowbornCount" Type="ClassPopulationPlanet">
+        <Modifier TargetProperty="PopulationCount" Operation="Addition" Value="$(PopulationCount)" Path="../ClassStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBarrowbornCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityBarrowbornCount" Type="ClassPopulationStarSystem">
+        <Modifier TargetProperty="PopulationCount" Operation="Addition" Value="$(PopulationCount)" Path="./!ClassExploitedStarSystem/../ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBarrowbornCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityBarrowbornCount" Type="ClassPopulationEmpire">
+        <Modifier TargetProperty="NetPopulationScore" Operation="Multiplication" Value="$(PopulationGrowthScoreModifier)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassPopulationStarSystemAffinityBarrowbornCount" Priority="100" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Ультимативная универсальная форма: +6 пыли/науки/производства/еды, +2 единства, +5 счастья.
+         Не истощает планеты и не имеет штрафа производства. -->
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitBarrowbornPrimary" Type="ClassPopulationPlanet">
+        <Modifier TargetProperty="BonusPopulationDust" Operation="Addition" Value="6" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationScience" Operation="Addition" Value="6" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="6" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationFood" Operation="Addition" Value="6" TooltipHidden="false"/>
+        <Modifier TargetProperty="BonusPopulationEmpirePoint" Operation="Addition" Value="2" TooltipHidden="false"/>
+        <Modifier TargetProperty="PopulationApproval" Operation="Addition" Value="5" TooltipHidden="false"/>
     </SimulationDescriptor>
 
 </Datatable>

@@ -34,7 +34,6 @@
         <!-- Home system buildings -->
         <Command Name="CreateHomeSystemImprovement" Arguments="StarSystemImprovementHomeSystem"/>
         <Command Name="CreateHomeSystemImprovement" Arguments="StarSystemImprovementColonyBase"/>
-        <Command Name="CreateHomeSystemImprovement" Arguments="StarSystemImprovementCreateMajorPopulationBezvolnyHome"/>
 
         <Command Name="UnlockPlay" Arguments="PlayDefensiveShortHullPlatingIncrease" Priority="0"/>
         <Command Name="UnlockPlay" Arguments="PlayDefensiveLongShieldIncrease" Priority="-1"/>
@@ -48,6 +47,11 @@
 
         <SimulationDescriptorReference Name="AffinityDustborns"/>
         <SimulationDescriptorReference Name="AffinityGameplayDustborns"/>
+        <!-- Держатели счётчиков "Переписи Праха" и ветки Пищеварения -->
+        <SimulationDescriptorReference Name="DustbornCatalogRacesHolder"/>
+        <SimulationDescriptorReference Name="DustbornDigestionHolder"/>
+        <SimulationDescriptorReference Name="DustbornPirateBasesHolder"/>
+        <SimulationDescriptorReference Name="DustbornObelisksHolder"/>
 
         <DefaultColonizer>ShipDesignDecolonizationCravers</DefaultColonizer>
         <AutomatedShip>ShipDesignAutomatedShipCravers</AutomatedShip>
