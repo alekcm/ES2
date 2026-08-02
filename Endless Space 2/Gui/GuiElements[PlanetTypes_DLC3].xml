@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ExtendedGuiElement Name="PlanetTypeFake">
+        <Title>%PlanetTypeFakeTitle</Title>
+        <Description>%PlanetTypeFakeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="PlanetType"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLarge"/>
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakePlanetoid"/>
+        </Icons>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="PlanetTypeFakeUncolonized">
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeUncolonizedLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLarge"/>
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakePlanetoid"/>
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="PlanetTypeFakeSmall">
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLarge"/>
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakePlanetoid"/>
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="PlanetTypeFakeMedium">
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeMediumLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLarge"/>
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakePlanetoid"/>
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="PlanetTypeFakeLarge">
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLargeLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLarge"/>
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakePlanetoid"/>
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="PlanetTypeFakeHuge">
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeHugeLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLarge"/>
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakePlanetoid"/>
+        </Icons>
+    </ExtendedGuiElement>
+    
+</Datatable>

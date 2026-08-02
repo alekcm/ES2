@@ -1,0 +1,1322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+  <!--============================-->
+  <!-- Visions Of a Common Enemy  -->
+  <!--============================-->
+  <QuestDefinition Name="visions_of_a_common_enemy"
+					 Category="Quest" SubCategory="Exploration"
+					 MinimumTurn="40"
+					 TriggeringProbability="0.2">
+
+    <!--============ TAGS ============-->
+    <Tags>BeginTurn</Tags>
+
+    <QuestContextSolo/>
+
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+						  NumberOfOccurrencesPerEmpire="1"
+						  NumberOfConcurrentInstances="0"/>
+
+
+    <!--============ VARIABLES ============-->
+    <Vars>
+
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+
+      <Var VarName="$Timer"/>
+
+      <InterpretedVar VarName="$CurrentAlliancesCount" Target="$(Empire)">
+        <Expression>Property(Context, AllianceCount)</Expression>
+      </InterpretedVar>
+
+      <InterpretedVar VarName="$Duration" Target="$(Empire)">
+        <Expression>Ceil(Property(Context, @../ClassEmpire, GameSpeedMultiplier, true) * 15)</Expression>
+      </InterpretedVar>
+
+      <Var VarName="$AllyStatus" StringValue="DiplomaticRelationStateAlliance"/>
+
+      <Var VarName="$CheckAlliancesIncrement" StringValue="Property(Context,AllianceCount) gt $(CurrentAlliancesCount)"/>
+
+      <LocalizationVar LocalizationKey="$DurationName" Source="$Duration"/>
+
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+
+    <Prerequisites Target="$(Empire)">
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,EmpireTypeMajor,FactionTraitEternalWar</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite">ClassEmpire,EmpireImprovementDiplomacyBonus3</PathPrerequisite> <!-- generic Alliance empire improvement -->
+      <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', NumberOfNonEliminatedMajorEmpires) gt 3</InterpreterPrerequisite>
+      <InterpreterPrerequisite Flags="Prerequisite">(Property(Context, @'ClassEmpire', NumberOfNonEliminatedMajorEmpires) - 1) gt Property(Context, @'ClassEmpire', UnknownCount)</InterpreterPrerequisite>
+      <InterpreterPrerequisite Flags="Prerequisite">Property(Context, AllianceCount) lt 1</InterpreterPrerequisite>
+    </Prerequisites>
+
+    <!--============ STEPS ============-->
+    <Steps>
+      <Step Name="Step1">
+        <!--============ STEP 1 ============-->
+        <ObjectiveSet>
+          <StartActions>
+            <Action_StartTimer>
+              <Input_Duration VarName="$Duration"/>
+              <Output_Timer VarName="$Timer"/>
+            </Action_StartTimer>
+          </StartActions>
+          <Objective Name="Step1_Objective1">
+
+            <AIHint Category="Minimal" MinAutoResolutionTurn="80" MaxAutoResolutionTurn="110" AutoResolutionProbability="1" />
+
+            <Parallel CompletionPolicy="First">
+
+              <Sequence>
+                <Decorator_BeginTurn>
+                  <Condition_TimerEnded>
+                    <Input_Timer VarName="$Timer"/>
+                  </Condition_TimerEnded>
+                </Decorator_BeginTurn>
+                <Action_Fail/>
+              </Sequence>
+
+              <Sequence>
+                <Decorator_DiplomaticRelationChanged Initiator="Empire">
+                  <Input_DiplomaticRelationState VarName="$AllyStatus"/>
+                </Decorator_DiplomaticRelationChanged>
+              </Sequence>
+            </Parallel>
+          </Objective>
+        </ObjectiveSet>
+
+        <Reward Droplist="DroplistMinorRewardsEra3" Picks="1"/>
+
+      </Step>
+    </Steps>
+  </QuestDefinition>
+
+  <!--============================-->
+  <!--    Thieves And Traitors    -->
+  <!--============================-->
+  <!-- This used to trigger a different quest based on whether you had Awakening or not, but I fixed the bug that made that necessary -->
+  <QuestDefinition Name="thieves_x_traitors"
+					 Category="Quest"
+					 SubCategory="Exploration"
+					 MinimumTurn="50"
+					 TriggeringProbability="0.2">
+
+    <!-- ============ TAGS ============ -->
+    <Tags>BeginTurn,Hidden</Tags>
+
+    <QuestContextSolo/>
+
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+						  NumberOfOccurrencesPerEmpire="1"
+						  NumberOfConcurrentInstances="1"/>
+
+    <!-- ========= VARIABLES ========== -->
+    <Vars>
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+
+      <!-- Get the academy empire -->
+      <Var VarName="$Academy">
+        <From Source="$AcademyEmpire"/>
+      </Var>
+
+      <!-- In case the empire is in war with the academy -->
+      <Var VarName="$WarStatus" StringValue="AcademyDiplomaticRelationStateWar"/>
+
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', CurrentTurn) gt 56 </InterpreterPrerequisite>
+    </Prerequisites>
+
+    <!-- =========== STEPS ============ -->
+    <Steps>
+
+      <Step Name="Step1">
+        <!--============ STEP 1 ============-->
+        <ObjectiveSet>
+          <Objective Name="Step1_Objective1">
+
+            <Sequence>
+              <Decorator_PostEndTurn>
+                <Condition_CheckDiplomaticRelation Inverted="true">
+                  <Input_Empire VarName="$CurrentEmpire"/>
+                  <Input_OtherEmpire VarName="$Academy"/>
+                  <Input_DiplomaticRelationState VarName="$WarStatus"/>
+                </Condition_CheckDiplomaticRelation>
+              </Decorator_PostEndTurn>
+              <Action_ChooseOutcome Name="Outcome"/>
+            </Sequence>
+
+            <Outcome Name="Outcome">
+              <Triggers Weight="1">
+                <QuestTrigger>
+                  <Tags>thieves_and_traitors</Tags>
+                  <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                </QuestTrigger>
+              </Triggers>
+            </Outcome>
+          </Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+
+  </QuestDefinition>
+
+  <!--============================-->
+  <!--    Thieves And Traitors    -->
+  <!-- Spawn 3 different fleets across the galaxy. The player must chase and kill them. -->
+  <!--============================-->
+  <QuestDefinition Name="thieves_and_traitors" Category="SideQuest" SubCategory="Dlc21" CheckRandom="false">
+
+    <!--============ TAGS ============-->
+    <Tags>thieves_and_traitors,BeginTurn</Tags>
+    <QuestContextSolo/>
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+						  NumberOfOccurrencesPerEmpire="1"
+						  NumberOfConcurrentInstances="1"/>
+
+    <!--============ VARIABLES ============-->
+    <Vars>
+
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+
+      <!-- Get the lesser empire -->
+      <Var VarName="$Lesser" >
+        <From Source="$LesserEmpire"/>
+      </Var>
+
+      <!-- Get the academy empire -->
+      <Var VarName="$Academy">
+        <From Source="$AcademyEmpire"/>
+      </Var>
+
+      <Var VarName="$PlayerSystem"/>
+
+      <Var VarName="$CloseAcademySystem">
+        <From Source="$CurrentEmpire.$ColonizedStarSystems.$StarSystem" />
+      </Var>
+
+      <DroplistVar VarName="$RogueAcademyFleetToSpawn1" Droplist="AcademyStrongFleetDesign"/>
+
+      <DroplistVar VarName="$FleetRewardDesign" Droplist="RewardFleet1"/>
+
+      <Var VarName="$RogueAcademyFleets"/>
+
+      <Var VarName="$FleetMission" StringValue="Roam"/>
+
+      <Var VarName="$AcademyTraitorsFleetName" StringValue="%thieves_and_traitors-AcademyTraitorsFleetName"/>
+
+      <Var VarName="$Count1" IntValue="3"/>
+
+      <Var VarName="$Markers"/>
+
+      <Var VarName="$SystemMarker"/>
+
+      <!-- In case the empire broke the relationship with the academy -->
+      <Var VarName="$WarStatus" StringValue="AcademyDiplomaticRelationStateWar"/>
+      <Var VarName="$AcademyFleetName" StringValue="%thieves_and_traitors-RewardFleetName"/>
+
+      <LocalizationVar LocalizationKey="$RogueKilledAmount" Source="$Count1"/>
+
+      <Var VarName="$DescriptorName" StringValue="QuestShowAcademyCarrier"/>
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="thieves_x_traitors" QuestState="Completed"/>
+    </Prerequisites>
+
+    <!--============ STEPS ============-->
+    <Steps>
+      <Step Name="Step1">
+        <!--============ STEP 1 ============-->
+        <ObjectiveSet>
+          <StartActions>
+
+            <Action_SpawnFleets LockShipsInTheFleet="true">
+              <Input_Empire VarName="$Lesser"/>
+              <Input_Locations VarName="$CloseAcademySystem"/>
+              <Input_DroppableFleet VarName="$RogueAcademyFleetToSpawn1"/>
+              <Input_Count VarName="$Count1"/>
+              <Input_FleetName VarName="$AcademyTraitorsFleetName"/>
+              <Output_FleetGUIDs VarName="$RogueAcademyFleets"/>
+            </Action_SpawnFleets>
+
+            <Action_CreateFleetMissions>
+              <Input_MissionDefinitionName VarName="$FleetMission"/>
+              <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+            </Action_CreateFleetMissions>
+
+            <Action_AddQuestMarkers RevealsLocation="true">
+              <Input_TargetGUIDs VarName="$RogueAcademyFleets"/>
+              <Input_Empires VarName="$CurrentEmpire"/>
+              <Output_Markers VarName="$Markers"/>
+            </Action_AddQuestMarkers>
+
+          </StartActions>
+
+          <Objective Name="Step1_Objective1" StartValue="0" EndValue="$Count1">
+
+            <AIHint Category="Minimal" MinAutoResolutionTurn="2" MaxAutoResolutionTurn="10" AutoResolutionProbability="1" />
+
+            <Parallel CompletionPolicy="First">
+
+              <!-- We count the defeated (by any empire) rogue fleets -->
+              <Sequence>
+                <Loop>
+                  <Decorator_BattleEnded Status="Won" Initiator="Empire" ProgressionIncrement="1">
+                    <Condition_BattleEnded_FleetDestroyed>
+                      <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                    </Condition_BattleEnded_FleetDestroyed>
+                    <Output_Node VarName="$PlayerSystem"/>
+                  </Decorator_BattleEnded>
+                  <Input_Count VarName="$Count1"/>
+                </Loop>
+
+
+                <Sequence>
+                  <Action_ApplyDescriptor LogAction="false">
+                    <Input_DescriptorName VarName="$DescriptorName"/>
+                    <Input_Targets VarName="$CurrentEmpire"/>
+                  </Action_ApplyDescriptor>
+                </Sequence>
+
+                <Action_RemoveQuestMarkers>
+                  <Input_Markers VarName="$Markers"/>
+                </Action_RemoveQuestMarkers>
+
+              </Sequence>
+
+              <!-- The quest fails if one of the rebel fleets is destroyed by other empire -->
+              <Sequence>
+                <Decorator_BattleEnded Status="Won" Initiator="OtherEmpires">
+                  <Condition_BattleEnded_FleetDestroyed>
+                    <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                  </Condition_BattleEnded_FleetDestroyed>
+                </Decorator_BattleEnded>
+
+                <Action_RemoveQuestMarkers>
+                  <Input_Markers VarName="$Markers"/>
+                </Action_RemoveQuestMarkers>
+
+                <Action_DestroyFleets>
+                  <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                </Action_DestroyFleets>
+
+                <Action_Fail/>
+              </Sequence>
+
+              <!-- The quest fails if the empire changes its diplomatic reltionship with the academy to war -->
+              <Sequence>
+                <Decorator_DiplomaticRelationChanged Initiator="Empire">
+                  <Input_OtherEmpire VarName="$Academy"/>
+                  <Input_DiplomaticRelationState VarName="$WarStatus"/>
+                </Decorator_DiplomaticRelationChanged>
+
+                <Action_RemoveQuestMarkers>
+                  <Input_Markers VarName="$Markers"/>
+                </Action_RemoveQuestMarkers>
+
+                <Action_DestroyFleets>
+                  <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                </Action_DestroyFleets>
+
+                <Action_Fail/>
+              </Sequence>
+
+            </Parallel>
+          </Objective>
+        </ObjectiveSet>
+
+        <Reward Droplist="thieves_and_traitors_blueprint" Picks="1"/>
+      </Step>
+    </Steps>
+
+  </QuestDefinition>
+
+  <!--============================-->
+  <!--  A Hero Proven in Battle   -->
+  <!--============================-->
+  <QuestDefinition Name="a_hero_proven_in_battle"
+					 Category="Quest"
+					 SubCategory="Exploration"
+					 MinimumTurn="40"
+					 TriggeringProbability="0.2">
+    <!-- ============ TAGS ============ -->
+    <Tags>BeginTurn</Tags>
+
+    <QuestContextSolo/>
+
+    <RepetitionRules NumberOfOccurrencesPerGame="0"
+						   NumberOfOccurrencesPerEmpire="1"
+						   NumberOfConcurrentInstances="0"/>
+
+    <!-- ========= VARIABLES ========== -->
+    <Vars>
+
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+
+      <Var VarName="$Timer"/>
+
+      <Var VarName="$DestroyedNode"/>
+
+      <Var VarName="$HeroShip" StringValue="ShipRoleHero"/>
+      <Var VarName="$MinAmountHero" IntValue="1"/>
+      <Var VarName="$MinHeroLevel" IntValue="1"/>
+      <Var VarName="$ShipsCount" IntValue="1"/>
+
+      <InterpretedVar VarName="$Duration" Target="$(Empire)">
+        <Expression>Ceil(Property(Context, @../ClassEmpire, GameSpeedMultiplier, true) * 25)</Expression>
+      </InterpretedVar>
+
+      <Var VarName="$ShipsDestroyedCounter" IntValue="1" />
+
+      <Var VarName="$Expression" StringValue="$(ShipsDestroyedCounter) ge 1"/>
+
+      <LocalizationVar LocalizationKey="$DurationName" Source="$Duration"/>
+      <LocalizationVar LocalizationKey="$ShipsCountName" Source="$ShipsCount"/>
+      <LocalizationVar LocalizationKey="$ShipsDestroyedCounterName" Source="$ShipsDestroyedCounter"/>
+
+    </Vars>
+
+    <!-- ======= PREREQUISITES ======== -->
+    <Prerequisites Target="$(Empire)">
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <InterpreterPrerequisite Flags="Prerequisite">(Property(Context, @'ClassEmpire', NumberOfNonEliminatedMajorEmpires) - 1) ge Property(Context, @'ClassEmpire', UnknownCount)</InterpreterPrerequisite>
+      <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', MajorWarCount) ge 1</InterpreterPrerequisite>
+    </Prerequisites>
+
+    <!-- =========== STEPS ============ -->
+    <Steps>
+
+      <Step Name="Step1">
+
+        <!--============ DEFEAT THE ENEMY FLEET ============-->
+        <ObjectiveSet>
+
+          <StartActions>
+            <Action_StartTimer>
+              <Input_Duration VarName="$Duration"/>
+              <Output_Timer VarName="$Timer"/>
+            </Action_StartTimer>
+
+          </StartActions>
+
+          <Objective Name="Step1_Objective1" StartValue="0" EndValue="$ShipsCount">
+
+            <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+
+            <Parallel CompletionPolicy="First">
+
+              <Sequence>
+                <Decorator_BeginTurn>
+                  <Condition_TimerEnded>
+                    <Input_Timer VarName="$Timer"/>
+                  </Condition_TimerEnded>
+                </Decorator_BeginTurn>
+                <Action_Fail/>
+              </Sequence>
+
+              <!--if player uses obliterator to kill other hero ship-->
+              <!--
+              <Sequence>
+                <Loop Count="1000000">
+                  <Decorator_SystemDestroyed Initiator="Empire">
+                    <Output_Node VarName="$DestroyedNode"/>
+                  </Decorator_SystemDestroyed>
+                  <Decorator_ShipDestroyed CheckShipHadHero="true" ProgressionIncrement="1">
+                    <Condition_IsFleetDockedOnNode>
+                      <Input_Systems VarName="$DestroyedNode"/>
+                    </Condition_IsFleetDockedOnNode>
+                  </Decorator_ShipDestroyed>
+                  <Action_SetProgress IsIncrement="true">
+                    <Input_Value VarName="$ShipsDestroyedCounter"/>
+                  </Action_SetProgress>
+                </Loop>
+              </Sequence>
+              -->
+
+              <Sequence>
+                <Loop>
+                  <Decorator_HeroInjured ProgressionIncrement="1" HeroAssignationFilter="Fleet">
+                    <Input_AttackerEmpire VarName="$CurrentEmpire"/>
+                  </Decorator_HeroInjured>
+                  <!--
+                  <Action_SetProgress IsIncrement="true">
+                    <Input_Value VarName="$ShipsDestroyedCounter"/>
+                  </Action_SetProgress>
+                  -->
+                  <Input_Count VarName="$ShipsCount"/>
+                </Loop>
+              </Sequence>
+
+              <!--
+              <Sequence>
+                <Loop Count="100000">
+                  <Decorator_ShipDestroyed CheckShipHadHero="true" Initiator="Empire" ProgressionIncrement="1">
+                    <Condition_HasHeroes HeroAssignationFilter="Fleet">
+                      <Input_Empire VarName="$CurrentEmpire"/>
+                      <Input_MinimumAmount VarName="$MinAmountHero"/>
+                      <Input_MinimumLevel VarName="$MinHeroLevel"/>
+                    </Condition_HasHeroes>
+                  </Decorator_ShipDestroyed>
+                </Loop>
+              </Sequence>
+              -->
+
+              <!-- Check a battle against an enemy fleet commanded by an hero has ended
+              <Sequence>
+                <Loop Count="1000000">                  
+                  <Decorator_BattleEnded CheckFleetHadHero="true">
+                    <Input_Empire VarName="$CurrentEmpire"/>
+                    <Output_EnemyDestroyedShipsCount VarName="$ShipsDestroyedCounter"/>
+                  </Decorator_BattleEnded>
+                  <Action_SetProgress IsIncrement="true">
+                    <Input_Value VarName="$ShipsDestroyedCounter"/>
+                  </Action_SetProgress>
+                </Loop>
+              </Sequence>
+
+              <Sequence>
+                <Decorator_PostEndTurn>
+                  <Condition_IsProgressionComplete/>
+                </Decorator_PostEndTurn>
+              </Sequence>
+              -->
+            </Parallel>
+
+          </Objective>
+        </ObjectiveSet>
+
+        <Reward Droplist="Reward_A_Hero_Proven_In_Battle" Picks="1"/>
+        <!-- <Reward LocalizationKey="%a_hero_proven_in_battle-Reward"/> -->
+
+      </Step>
+    </Steps>
+
+  </QuestDefinition>
+
+  <!--============================-->
+  <!-- Chapter 0: Strange Tidings -->
+  <!--============================-->
+  <QuestDefinition Name="chapter_0_strange_tidings" Category="Quest" SubCategory="Exploration" MinimumTurn="40" TriggeringProbability="0.2">
+    <!-- ============ TAGS ============ -->
+    <Tags>BeginTurn,Hidden</Tags>
+
+    <QuestContextSolo/>
+
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+						  NumberOfOccurrencesPerEmpire="1"
+						  NumberOfConcurrentInstances="0"/>
+
+    <!-- ========= VARIABLES ========== -->
+    <Vars>
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+
+      <Var VarName="$ConstellationCount">
+        <Count>
+          <From Source="$Constellations"/>
+        </Count>
+      </Var>
+
+      <Var VarName="$Expression" StringValue="$(ConstellationCount) lt 2"/>
+      <Var VarName="$Expression2" StringValue="$(UniqueCount) lt 2"/>
+
+      <!-- Get all the nodes with unique planets except the Academy -->
+      <Var VarName="$AllNodesWithUniquePlanetsExceptAcademy">
+        <From Source="$Constellations.$GameNodes">
+          <Where>
+            <PathPrerequisite Flags="Prerequisite">ClassStarSystem/ClassPlanet,IsUniquePlanet,!HomeSystem,!WorldAcademy</PathPrerequisite>
+          </Where>
+        </From>
+      </Var>
+      <Var VarName="$UniqueCount">
+        <Count>
+          <From Source="$AllNodesWithUniquePlanetsExceptAcademy"/>
+        </Count>
+      </Var>
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+    </Prerequisites>
+
+
+    <!-- =========== STEPS ============ -->
+    <Steps>
+
+      <Step Name="Step1">
+        <!--============ STEP 1 ============-->
+        <ObjectiveSet>
+          <Objective Name="Step1_Objective1">
+            <Parallel CompletionPolicy="First">
+
+              <Sequence>
+                <Decorator_BeginTurn>
+                  <Condition_CheckInterpreter>
+                    <Input_Expression VarName="$Expression"/>
+                  </Condition_CheckInterpreter>
+                </Decorator_BeginTurn>
+                <Action_Fail/>
+              </Sequence>
+
+              <Sequence>
+                <Decorator_BeginTurn>
+                  <Condition_CheckInterpreter>
+                    <Input_Expression VarName="$Expression2"/>
+                  </Condition_CheckInterpreter>
+                </Decorator_BeginTurn>
+                <Action_Fail/>
+              </Sequence>
+
+              <Sequence>
+                <Decorator_ExploredNode Initiator="Empire" MinimumState="Revealed">
+                  <Input_NodeList VarName="$AllNodesWithUniquePlanetsExceptAcademy"/>
+                </Decorator_ExploredNode>
+                <Action_ChooseOutcome Name="Outcome1"/>
+              </Sequence>
+
+            </Parallel>
+            <Outcome Name="Outcome1">
+              <Triggers Weight="1">
+                <QuestTrigger>
+                  <Tags>chapter_1_strange_tidings</Tags>
+                  <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                </QuestTrigger>
+              </Triggers>
+            </Outcome>
+          </Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+
+  </QuestDefinition>
+
+  <!--============================-->
+  <!-- Chapter 1: Strange Tidings -->
+  <!--============================-->
+  <QuestDefinition Name="chapter_1_strange_tidings" Category="SideQuest" SubCategory="Dlc21" CheckRandom="false">
+
+    <!-- ============ TAGS ============ -->
+    <Tags>chapter_1_strange_tidings,BeginTurn</Tags>
+    <QuestContextSolo/>
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+						  NumberOfOccurrencesPerEmpire="1"
+						  NumberOfConcurrentInstances="0"/>
+    <!-- ========= VARIABLES ========== -->
+    <Vars>
+
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+
+      <Var VarName="$HomeSystem">
+        <From Source="$CurrentEmpire.$StartingNode"/>
+      </Var>
+      <!-- Find the Home Constellation Position 
+      <Var VarName="$HomeConstellation">
+        <From Source="$HomeSystem.$Constellation"/>
+      </Var>
+
+      <Var VarName="$ConstellationNearestHome">
+        <From Source="$Constellations">
+          <OrderBy>
+            <SortConstellationByDistance OriginVarName="$HomeConstellation" SortBy="Nearest"/>
+          </OrderBy>
+        </From>
+      </Var>
+		-->
+      <Var VarName="$SystemsToVisit">
+        <From Source="$Constellations.$StarSystems">
+          <Where>
+            <PathPrerequisite Flags="Prerequisite">!IsolatedNode,!QuestNode</PathPrerequisite>
+            <FilterSystemByStatus ColonizationState="NotColonized"/>
+          </Where>
+          <OrderBy>
+            <SortSystemByDistance ConsiderFreeMovement="true" OriginVarName="$HomeSystem" SortBy="Nearest"/>
+          </OrderBy>
+        </From>
+      </Var>
+      <!--
+      <Var VarName="$Constellation1">
+		  <Select Index="1">
+			  <From Source="$ConstellationNearestHome"/>
+		  </Select>
+      </Var>
+
+      <Var VarName="$Constellation2">
+		  <Select Index="2">
+			  <From Source="$ConstellationNearestHome"/>
+		  </Select>
+      </Var>
+	  -->
+
+      <Var VarName="$NumberOfCuriosities" IntValue="1"/>
+
+      <Var VarName="$CuriosityType1" StringValue="Curiosity_PlanetAnomaly02"/>
+      <Var VarName="$CuriosityType2" StringValue="Curiosity_PlanetAnomaly03"/>
+      <!--
+      <Var VarName="$System1List">
+        <From Source="$Constellation1.$StarSystems">
+          <Where>
+            <PathPrerequisite Flags="Prerequisite">ClassStarSystem,!HomeSystem,!IsolatedNode,!QuestNode,!WorldAcademy,!ColonizedStarSystemStateColony</PathPrerequisite>
+          </Where>
+        </From>
+      </Var>
+            -->
+      <Var VarName="$System1">
+        <Select Index="2">
+          <From Source="$SystemsToVisit"/>
+        </Select>
+      </Var>
+
+      <Var VarName="$Planet1">
+        <Any>
+          <From Source="$System1.$Planets"/>
+        </Any>
+      </Var>
+      <!--
+      <Var VarName="$System2List">
+        <From Source="$Constellation2.$StarSystems">
+          <Where>
+            <PathPrerequisite Flags="Prerequisite">ClassStarSystem,!HomeSystem,!IsolatedNode,!QuestNode,!WorldAcademy,!ColonizedStarSystemStateColony</PathPrerequisite>
+          </Where>
+        </From>
+      </Var>
+        -->
+      <Var VarName="$System2">
+        <Select Index="10">
+          <From Source="$SystemsToVisit"/>
+        </Select>
+      </Var>
+
+      <Var VarName="$Planet2">
+        <Any>
+          <From Source="$System2.$Planets"/>
+        </Any>
+      </Var>
+
+      <Var VarName="$Curiosity1GUID"/>
+      <Var VarName="$Curiosity2GUID"/>
+
+      <Var VarName="$Counter" IntValue="2"/>
+
+      <Var VarName="$Marker1"/>
+      <Var VarName="$Marker2"/>
+
+      <LocalizationVar LocalizationKey="$CuriositiesCount" Source="$Counter"/>
+
+    </Vars>
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="chapter_0_strange_tidings" QuestState="Completed"/>
+    </Prerequisites>
+    <!-- =========== STEPS ============ -->
+    <Steps>
+
+      <Step Name="Step1">
+        <StartActions>
+
+          <Action_AddQuestMarkers>
+            <Input_Targets VarName="$Planet1"/>
+            <Input_Empires VarName="$CurrentEmpire"/>
+            <Output_Markers VarName="$Marker1"/>
+          </Action_AddQuestMarkers>
+
+          <Action_AddQuestMarkers>
+            <Input_Targets VarName="$Planet2"/>
+            <Input_Empires VarName="$CurrentEmpire"/>
+            <Output_Markers VarName="$Marker2"/>
+          </Action_AddQuestMarkers>
+
+        </StartActions>
+        <!--============ STEP 1 ============-->
+        <ObjectiveSet>
+          <Objective Name="Step1_Objective1" StartValue="0" EndValue="$Counter">
+            <Parallel CompletionPolicy="First">
+              <!--if system is destroy-->
+              <Sequence>
+                <Parallel CompletionPolicy="Any">
+                  <Sequence>
+                    <Decorator_SystemDestroyed Initiator="AllEmpires">
+                      <Input_Nodes VarName="$System1"/>
+                    </Decorator_SystemDestroyed>
+                  </Sequence>
+                  <Sequence>
+                    <Decorator_SystemDestroyed Initiator="AllEmpires">
+                      <Input_Nodes VarName="$System2"/>
+                    </Decorator_SystemDestroyed>
+                  </Sequence>
+                </Parallel>
+                <Action_Fail/>
+              </Sequence>
+              <!--if planet is destroy-->
+              <Sequence>
+                <Parallel CompletionPolicy="Any">
+                  <Sequence>
+                    <Decorator_PlanetDestroyed>
+                      <Input_Planet VarName="$Planet1"/>
+                    </Decorator_PlanetDestroyed>
+                  </Sequence>
+                  <Sequence>
+                    <Decorator_PlanetDestroyed>
+                      <Input_Planet VarName="$Planet2"/>
+                    </Decorator_PlanetDestroyed>
+                  </Sequence>
+                </Parallel>
+                <Action_Fail/>
+              </Sequence>
+
+              <!--If no planet or system are destroy-->
+              <Sequence>
+                <Parallel CompletionPolicy="All">
+                  <!--Planet 1-->
+                  <Sequence>
+                    <!--Player Reachs the system-->
+                    <Decorator_FleetDocked Initiator="Empire">
+                      <Input_Systems VarName="$System1"/>
+                    </Decorator_FleetDocked>
+                    <!--Spawn Curiosity-->
+                    <Action_SpawnCuriosity>
+                      <Input_Planets VarName="$Planet1"/>
+                      <Input_Count VarName="$NumberOfCuriosities"/>
+                      <Input_CuriosityDefinition VarName="$CuriosityType1"/>
+                      <Output_CuriosityGUIDs VarName="$Curiosity1GUID"/>
+                    </Action_SpawnCuriosity>
+
+                    <Parallel CompletionPolicy="First">
+                      <!-- If Planet is destroy quest fail-->
+                      <Sequence>
+                        <Decorator_PlanetDestroyed>
+                          <Input_Planet VarName="$Planet1"/>
+                        </Decorator_PlanetDestroyed>
+                        <Action_Fail/>
+                      </Sequence>
+                      <!-- If other empire discovered the curiosity, the quest fail -->
+                      <Sequence>
+
+                        <Decorator_CuriosityDiscovered Initiator="OtherEmpires">
+                          <Input_CuriosityGUIDs VarName="$Curiosity1GUID"/>
+                        </Decorator_CuriosityDiscovered>
+
+                        <Action_RemoveQuestMarkers>
+                          <Input_Markers VarName="$Marker1"/>
+                        </Action_RemoveQuestMarkers>
+
+                        <Action_RemoveQuestMarkers>
+                          <Input_Markers VarName="$Marker2"/>
+                        </Action_RemoveQuestMarkers>
+
+                        <Action_Fail/>
+
+                      </Sequence>
+                      <!-- Check if the player visit the anomaly -->
+                      <Sequence>
+                        <Sequence>
+                          <Decorator_CuriosityDiscovered Initiator="Empire" ProgressionIncrement="1">
+                            <Input_CuriosityGUIDs VarName="$Curiosity1GUID"/>
+                          </Decorator_CuriosityDiscovered>
+                          <Action_RemoveQuestMarkers>
+                            <Input_Markers VarName="$Marker1"/>
+                          </Action_RemoveQuestMarkers>
+                        </Sequence>
+                      </Sequence>
+                    </Parallel>
+                  </Sequence>
+
+                  <!--Planet 2-->
+                  <Sequence>
+                    <!--Player Reachs the system-->
+                    <Decorator_FleetDocked Initiator="Empire">
+                      <Input_Systems VarName="$System2"/>
+                    </Decorator_FleetDocked>
+                    <!--Spawn Curiosity-->
+                    <Action_SpawnCuriosity>
+                      <Input_Planets VarName="$Planet2"/>
+                      <Input_Count VarName="$NumberOfCuriosities"/>
+                      <Input_CuriosityDefinition VarName="$CuriosityType2"/>
+                      <Output_CuriosityGUIDs VarName="$Curiosity2GUID"/>
+                    </Action_SpawnCuriosity>
+
+                    <Parallel CompletionPolicy="First">
+                      <!-- If Planet is destroy quest fail-->
+                      <Sequence>
+                        <Decorator_PlanetDestroyed>
+                          <Input_Planet VarName="$Planet2"/>
+                        </Decorator_PlanetDestroyed>
+                        <Action_Fail/>
+                      </Sequence>
+                      <!-- If other empire discovered the curiosity, the quest fail -->
+                      <Sequence>
+
+                        <Decorator_CuriosityDiscovered Initiator="OtherEmpires">
+                          <Input_CuriosityGUIDs VarName="$Curiosity2GUID"/>
+                        </Decorator_CuriosityDiscovered>
+
+                        <Action_RemoveQuestMarkers>
+                          <Input_Markers VarName="$Marker1"/>
+                        </Action_RemoveQuestMarkers>
+
+                        <Action_RemoveQuestMarkers>
+                          <Input_Markers VarName="$Marker2"/>
+                        </Action_RemoveQuestMarkers>
+
+                        <Action_Fail/>
+
+                      </Sequence>
+
+                      <!-- Check if the player visit the anomaly -->
+                      <Sequence>
+                        <Sequence>
+                          <Decorator_CuriosityDiscovered Initiator="Empire" ProgressionIncrement="1">
+                            <Input_CuriosityGUIDs VarName="$Curiosity2GUID"/>
+                          </Decorator_CuriosityDiscovered>
+                          <Action_RemoveQuestMarkers>
+                            <Input_Markers VarName="$Marker2"/>
+                          </Action_RemoveQuestMarkers>
+                        </Sequence>
+                      </Sequence>
+                    </Parallel>
+                  </Sequence>
+                </Parallel>
+                <Action_ChooseOutcome Name="Outcome1"/>
+              </Sequence>
+
+            </Parallel>
+
+            <Outcome Name="Outcome1">
+              <Triggers Weight="1">
+                <QuestTrigger>
+                  <Tags>chapter_2_weapon_without_a_target</Tags>
+                  <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                </QuestTrigger>
+              </Triggers>
+            </Outcome>
+
+          </Objective>
+        </ObjectiveSet>
+
+        <Reward Droplist="DroplistMultiDust"/>
+        <Reward Droplist="DroplistLuxuries"/>
+
+      </Step>
+    </Steps>
+
+  </QuestDefinition>
+
+  <!--============================-->
+  <!-- Chapter 2: Weapon without a Target -->
+  <!--============================-->
+  <QuestDefinition Name="chapter_2_weapon_without_a_target" Category="SideQuest" SubCategory="Dlc21" CheckRandom="false">
+
+    <!-- ============ TAGS ============ -->
+    <Tags>chapter_2_weapon_without_a_target,BeginTurn</Tags>
+    <QuestContextSolo/>
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+							NumberOfOccurrencesPerEmpire="1"
+							NumberOfConcurrentInstances="0"/>
+    <!-- ========= VARIABLES ========== -->
+    <Vars>
+
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+      <Var VarName="$AllyStatus" StringValue="DiplomaticRelationStateAlliance"/>
+      <!--Get Science-->
+      <InterpretedVar VarName="$Amount1" Target="$(Empire)">
+        <Expression>Property(Context, @'ClassEmpire', NetEmpireResearch)</Expression>
+      </InterpretedVar>
+      <InterpretedVar VarName="$Amount2" Target="$(Empire)">
+        <Expression>Property(Context, @'ClassEmpire', NetEmpireResearch)+64</Expression>
+      </InterpretedVar>
+      <Var VarName="$Expression01" StringValue="Property(Context, @'ClassEmpire', NetEmpireResearch, true)"/>
+      <Var VarName="$RelationState" StringValue="DiplomaticRelationStateMinorAdvancedBrainwashed"/>
+      <!--Science Treaty-->
+      <InterpretedVar VarName="$Amount04" Target="$(Empire)">
+        <Expression>Count(Context, @'ClassEmpire/ClassDiplomacy/ClassDiplomaticEmpire,DiplomaticAbilityEffectScienceAgreement')</Expression>
+      </InterpretedVar>
+      <InterpretedVar VarName="$Amount05" Target="$(Empire)">
+        <Expression>Count(Context, @'ClassEmpire/ClassDiplomacy/ClassDiplomaticEmpire,DiplomaticAbilityEffectScienceAgreement')+1</Expression>
+      </InterpretedVar>
+      <Var VarName="$Expression02" StringValue="Count(Context, @'ClassEmpire/ClassDiplomacy/DiplomaticAbilityEffectScienceAgreement,ClassDiplomaticEmpire') ge 1"/>
+
+      <LocalizationVar LocalizationKey="$Amount02" Source="$Amount2"/>
+      <LocalizationVar LocalizationKey="$Amount01" Source="$Amount1"/>
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="chapter_1_strange_tidings" QuestState="Completed"/>
+    </Prerequisites>
+
+    <!-- =========== STEPS ============ -->
+    <Steps>
+      <Step Name="Step1">
+
+        <!-- STEP 1 -->
+        <ObjectiveSet>
+          <Objective Name="Step1_Objective1" StartValue="$Amount1" EndValue="$Amount2">
+            <Sequence>
+              <Parallel CompletionPolicy="Any">
+                <!--Get Science-->
+                <Sequence>
+                  <Decorator_BeginTurn>
+                    <Condition_IsProgressionComplete>
+                      <Input_Context VarName="$CurrentEmpire"/>
+                      <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                      <Input_Expression VarName="$Expression01"/>
+                    </Condition_IsProgressionComplete>
+                  </Decorator_BeginTurn>
+                </Sequence>
+                <!--Make Science treaty-->
+                <Sequence>
+                  <Decorator_BeginTurn>
+                    <Condition_CheckInterpreter>
+                      <Input_Context VarName="$CurrentEmpire"/>
+                      <Input_Expression VarName="$Expression02"/>
+                    </Condition_CheckInterpreter>
+                  </Decorator_BeginTurn>
+                </Sequence>
+
+              </Parallel>
+              <Action_ChooseOutcome Name="Outcome1"/>
+            </Sequence>
+
+            <Outcome Name="Outcome1">
+              <Triggers Weight="1">
+                <QuestTrigger>
+                  <Tags>chapter_3_anomalous_data</Tags>
+                  <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                </QuestTrigger>
+              </Triggers>
+            </Outcome>
+
+          </Objective>
+        </ObjectiveSet>
+
+        <Reward Droplist="DroplistMoney"/>
+        <Reward Droplist="DroplistStrategics"/>
+      </Step>
+
+    </Steps>
+
+  </QuestDefinition>
+
+  <!--============================-->
+  <!-- Chapter 3: Anomalous Data -->
+  <!--============================-->
+  <QuestDefinition Name="chapter_3_anomalous_data" Category="SideQuest" SubCategory="Dlc21" CheckRandom="false">
+
+    <!-- ============ TAGS ============ -->
+    <Tags>chapter_3_anomalous_data,BeginTurn</Tags>
+    <QuestContextSolo/>
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+								NumberOfOccurrencesPerEmpire="1"
+								NumberOfConcurrentInstances="0"/>
+    <!-- ========= VARIABLES ========== -->
+    <Vars>
+
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+
+      <!-- Find a unique planet -->
+      <Var VarName="$ConstellationCount">
+        <Count>
+          <From Source="$Constellations"/>
+        </Count>
+      </Var>
+      <!-- Get all the nodes with unique planets except the Academy -->
+      <Var VarName="$AllNodesWithUniquePlanetsExceptAcademy">
+        <From Source="$Constellations.$GameNodes">
+          <Where>
+            <PathPrerequisite Flags="Prerequisite">ClassStarSystem/ClassPlanet,IsUniquePlanet,!HomeSystem,!WorldAcademy</PathPrerequisite>
+          </Where>
+        </From>
+      </Var>
+
+      <!-- Reveal x amount of the galaxy -->
+      <Var VarName="$Amount3" IntValue="50"/>
+
+      <LocalizationVar LocalizationKey="$Amount03" Source="$Amount3"/>
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="chapter_2_weapon_without_a_target" QuestState="Completed"/>
+    </Prerequisites>
+
+    <!-- =========== STEPS ============ -->
+    <Steps>
+      <Step Name="Step1">
+
+        <!-- STEP 1 -->
+        <ObjectiveSet>
+
+          <Objective Name="Step1_Objective1">
+            <Sequence>
+              <Parallel CompletionPolicy="Any">
+                <!-- Reveal x amount of the galaxy -->
+                <Sequence>
+                  <Decorator_BeginTurn>
+                    <Condition_ExplorationProgress MinimumState="Revealed">
+                      <Input_Empire VarName="$CurrentEmpire"/>
+                      <Input_Percentage VarName="$Amount3"/>
+                    </Condition_ExplorationProgress>
+                  </Decorator_BeginTurn>
+                  <!--<Action_ChooseOutcome Name="Outcome1"/>-->
+                </Sequence>
+                <!-- Find a unique planet-->
+                <Sequence>
+                  <Decorator_ExploredNode Initiator="Empire" MinimumState="Revealed">
+                    <Input_NodeList VarName="$AllNodesWithUniquePlanetsExceptAcademy"/>
+                  </Decorator_ExploredNode>
+                </Sequence>
+              </Parallel>
+              <Action_ChooseOutcome Name="Outcome1"/>
+            </Sequence>
+            <Outcome Name="Outcome1">
+              <Triggers Weight="1">
+                <QuestTrigger>
+                  <Tags>chapter_4_a_final_absolution</Tags>
+                  <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                </QuestTrigger>
+              </Triggers>
+            </Outcome>
+          </Objective>
+        </ObjectiveSet>
+
+        <Reward Droplist="DroplistStrategics"/>
+        <Reward Droplist="DroplistMoney"/>
+      </Step>
+    </Steps>
+
+  </QuestDefinition>
+
+  <!--============================-->
+  <!-- Chapter 4: A Final Absolution -->
+  <!--============================-->
+  <QuestDefinition Name="chapter_4_a_final_absolution" Category="SideQuest" SubCategory="Dlc21" CheckRandom="false">
+
+    <!-- ============ TAGS ============ -->
+    <Tags>chapter_4_a_final_absolution,BeginTurn</Tags>
+    <QuestContextSolo/>
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+								NumberOfOccurrencesPerEmpire="1"
+								NumberOfConcurrentInstances="0"/>
+    <!-- ========= VARIABLES ========== -->
+    <Vars>
+
+      <!--System and location we need in this Quest-->
+      <Var VarName="$CurrentEmpire">
+        <From Source="$Empire"/>
+      </Var>
+      <Var VarName="$HomeSystem">
+        <From Source="$CurrentEmpire.$StartingNode"/>
+      </Var>
+      <Var VarName="$HomeConstellation">
+        <From Source="$HomeSystem.$Constellation"></From>
+      </Var>
+      <Var VarName="$AnotherConstellation">
+        <From Source="$Constellations">
+          <Where>
+            <IsNot EntityVarName="$HomeConstellation"/>
+          </Where>
+        </From>
+      </Var>
+      <!-- Nodes among my Constellation which are IsolatedNodes -->
+      <Var VarName="$TargetNode">
+        <First>
+          <From Source="$Constellations.$StarSystems">
+            <Where>
+              <PathPrerequisite Flags="Prerequisite">IsolatedNode,!QuestNode</PathPrerequisite>
+              <FilterSystemByStatus ColonizationState="NotColonized"/>
+            </Where>
+            <OrderBy>
+              <SortSystemByDistance ConsiderFreeMovement="true" OriginVarName="$HomeSystem" SortBy="Nearest"/>
+            </OrderBy>
+          </From>
+        </First>
+
+      </Var>
+      <!--Lair To Spawn-->
+      <Var VarName="$Lesser" >
+        <From Source="$LesserEmpire"/>
+      </Var>
+
+      <Var VarName="$Count1" IntValue="1"/>
+
+      <Var VarName="$LairFleet"/>
+
+      <Var VarName="$LairFleetName" StringValue="%chapter_4_a_final_absolution-LairFleet"/>
+      <!--Ship To Spawn-->
+      <Var VarName="$RogueAcademyFleets"/>
+
+      <Var VarName="$FleetMission" StringValue="RoamAndAttack"/>
+
+      <Var VarName="$AcademyFleetName" StringValue="%chapter_4_a_final_absolution-AcademyFleet"/>
+
+      <Var VarName="$Count2" IntValue="3"/>
+
+      <Var VarName="$Timer"/>
+
+      <Var VarName="$Markers"/>
+
+      <DroplistVar VarName="$FinalFleet" Droplist="FinalAbsolutionFleet"/>
+
+      <DroplistVar VarName="$FleetRewardDesign" Droplist="RewardFleet1"/>
+
+      <DroplistVar Droplist="JuggernautsFleet" VarName="$JuggernautToSpawn"/>
+
+
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+    <Prerequisites Target="$(Empire)">
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">TutorialModeBeginner</PathPrerequisite>
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCDarkMatter</DownloadableContentPrerequisite>
+      <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="chapter_3_anomalous_data" QuestState="Completed"/>
+    </Prerequisites>
+
+
+    <!-- =========== STEPS ============ -->
+    <Steps>
+      <Step Name="Step1">
+
+        <!-- STEP 1 -->
+        <ObjectiveSet>
+          <StartActions>
+            <Action_AddQuestMarkers>
+              <Input_Targets VarName="$TargetNode"/>
+              <Input_Empires VarName="$CurrentEmpire"/>
+              <!--<Output_Markers VarName="$Marker01"/>-->
+            </Action_AddQuestMarkers>
+
+            <Action_SpawnFleets LockShipsInTheFleet="true">
+              <Input_Empire VarName="$Lesser"/>
+              <Input_Locations VarName="$TargetNode"/>
+              <Input_DroppableFleet VarName="$JuggernautToSpawn"/>
+              <Input_Count VarName="$Count1"/>
+              <Input_FleetName VarName="$LairFleetName"/>
+              <Output_FleetGUIDs VarName="$LairFleet"/>
+            </Action_SpawnFleets>
+          </StartActions>
+
+          <Objective Name="Step1">
+
+            <Sequence>
+              <Parallel CompletionPolicy="First">
+                <!-- if other player reach first and destroy the lair fleet -->
+                <Sequence>
+                  <Decorator_BattleEnded Status="Won" Initiator="OtherEmpires">
+                    <Condition_BattleEnded_FleetDestroyed>
+                      <Input_FleetGUIDs VarName="$LairFleet"/>
+                    </Condition_BattleEnded_FleetDestroyed>
+                  </Decorator_BattleEnded>
+                  <Action_Fail/>
+                </Sequence>
+                <!-- if other player destroy the academy fleet -->
+                <Sequence>
+                  <Decorator_BattleEnded Status="Won" Initiator="OtherEmpires">
+                    <Condition_BattleEnded_FleetDestroyed>
+                      <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                    </Condition_BattleEnded_FleetDestroyed>
+                  </Decorator_BattleEnded>
+                  <Action_Fail/>
+                </Sequence>
+                <!-- if player reach the lair first -->
+                <Sequence>
+                  <Decorator_FleetDocked Initiator="Empire">
+                    <Input_Systems VarName="$TargetNode"/>
+                  </Decorator_FleetDocked>
+
+                  <Action_Message Message="AFinalAbsolutionStep2">
+                    <Input_Empires VarName="$CurrentEmpire"/>
+                  </Action_Message>
+
+                  <Action_DestroyFleets>
+                    <Input_FleetGUIDs VarName="$LairFleet"/>
+                  </Action_DestroyFleets>
+
+                  <Action_SpawnFleets LockShipsInTheFleet="true">
+                    <!--<Input_Empire VarName="$Academy"/> -->
+                    <Input_Empire VarName="$Lesser"/>
+                    <Input_Locations VarName="$TargetNode"/>
+                    <Input_DroppableFleet VarName="$FinalFleet"/>
+                    <Input_Count VarName="$Count1"/>
+                    <Input_FleetName VarName="$AcademyFleetName"/>
+                    <Output_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                  </Action_SpawnFleets>
+
+                  <Action_CreateFleetMissions>
+                    <Input_MissionDefinitionName VarName="$FleetMission"/>
+                    <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                  </Action_CreateFleetMissions>
+
+                  <Action_AddQuestMarkers RevealsLocation="true">
+                    <Input_TargetGUIDs VarName="$RogueAcademyFleets"/>
+                    <Input_Empires VarName="$CurrentEmpire"/>
+                    <Output_Markers VarName="$Markers"/>
+                  </Action_AddQuestMarkers>
+
+                  <Parallel CompletionPolicy="First">
+
+                    <!--If Other Player defeats the enemy-->
+                    <Sequence>
+                      <Decorator_BattleEnded Status="Won" Initiator="OtherEmpires">
+                        <Condition_BattleEnded_FleetDestroyed>
+                          <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                        </Condition_BattleEnded_FleetDestroyed>
+                      </Decorator_BattleEnded>
+                      <Action_Fail/>
+                    </Sequence>
+                    <!--If Player defeats the enemy-->
+                    <Sequence>
+                      <Decorator_BattleEnded Status="Won" Initiator="Empire">
+                        <Condition_BattleEnded_FleetDestroyed>
+                          <Input_FleetGUIDs VarName="$RogueAcademyFleets"/>
+                        </Condition_BattleEnded_FleetDestroyed>
+                      </Decorator_BattleEnded>
+                    </Sequence>
+                  </Parallel>
+                </Sequence>
+              </Parallel>
+
+            </Sequence>
+
+          </Objective>
+        </ObjectiveSet>
+        
+        <Reward PreviewLocalizationKey="%chapter_4_a_final_absolution-Reward" Droplist="DroplistTechnologyEra3" EvaluationMethod="Dynamic" Picks="1"/>
+
+      </Step>
+    </Steps>
+
+  </QuestDefinition>
+</Datatable>

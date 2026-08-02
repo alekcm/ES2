@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/MajorFaction.xsd">
+    <!--Vaulters-->
+    <MajorFaction Name="FactionVaulters" Standard="true" Author="AMPLITUDE Studios" Priority="9" Difficulty="Normal" DifficultyAgainst="Advanced">
+        <Affinity Name="AffinityGameplayVaulters"/>
+
+        <Trait Name="IsMajorFaction"/>
+
+        <Trait Name="FactionTraitMinorSistersOfMercy"/>
+
+        <Trait Name="FactionTraitManualHomeSystem"/>
+        <Trait Name="FactionTraitMaterialExpertise"/>
+        <Trait Name="FactionTraitCorsairs"/>
+        
+        <Trait Name="FactionTraitBlackThumb2"/>
+        <Trait Name="FactionTraitCoreWorlds"/>
+
+        <Trait Name="FactionTraitTechnologyDefinitionScienceAndExploration1"/>
+        <Trait Name="FactionTraitTechnologyDefinitionScienceAndExploration2"/>
+
+        <TraitStartingSenate Priority="1">
+            <Government Name="GovernmentEmpire"/>
+            <PoliticsWeight Politics="Politics01" Weight="0"/>
+            <PoliticsWeight Politics="Politics02" Weight="5"/>
+            <PoliticsWeight Politics="Politics03" Weight="0"/>
+            <PoliticsWeight Politics="Politics04" Weight="0"/>
+            <PoliticsWeight Politics="Politics05" Weight="0"/>
+            <PoliticsWeight Politics="Politics06" Weight="2"/>
+        </TraitStartingSenate>
+
+        <Bailiff Name="DefaultMoneyBailiff"/>
+        <Bailiff Name="DefaultEmpirePointBailiff"/>
+        <Bailiff Name="DefaultProcessingPowerBailiff"/>
+
+        <MajorPopulation Affinity="AffinityVaulters"     Count="2"/>
+    </MajorFaction>
+</Datatable>

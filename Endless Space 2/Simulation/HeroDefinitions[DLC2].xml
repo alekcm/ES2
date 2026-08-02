@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HeroDefinition.xsd">
+
+    <!-- MajorHisshos -->
+
+    <HeroDefinition Name="HeroMajorHisshos01">
+        <Skill Name="HeroSkill01MajorHisshos01"/>
+        <Skill Name="HeroSkill02MajorHisshos01"/>
+
+        <Affinity Name="HeroAffinityMajorHisshos"/>
+        <Class Name="HeroClassAdmiral"/>
+        <Politics Name="HeroPolitics06"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall01Attacker"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeMajorHisshos"/>
+        <SkillTree Name="HeroSkillTreeAdmiral"/>
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroMajorHisshos02">
+        <Skill Name="HeroSkill01MajorHisshos02"/>
+        <Skill Name="HeroSkill02MajorHisshos02"/>
+
+        <Affinity Name="HeroAffinityMajorHisshos"/>
+        <Class Name="HeroClassAdventurer"/>
+        <Politics Name="HeroPolitics02"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall02Explorer"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeMajorHisshos"/>
+        <SkillTree Name="HeroSkillTreeAdventurer"/>
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroMajorHisshos03">
+        <Skill Name="HeroSkill01MajorHisshos03"/>
+        <Skill Name="HeroSkill02MajorHisshos03"/>
+
+        <Affinity Name="HeroAffinityMajorHisshos"/>
+        <Class Name="HeroClassCorporate"/>
+        <Politics Name="HeroPolitics05"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall03Supporter"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeMajorHisshos"/>
+        <SkillTree Name="HeroSkillTreeCorporate"/>
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroMajorHisshos04">
+        <Skill Name="HeroSkill01MajorHisshos04"/>
+        <Skill Name="HeroSkill02MajorHisshos04"/>
+
+        <Affinity Name="HeroAffinityMajorHisshos"/>
+        <Class Name="HeroClassAdmiral"/>
+        <Politics Name="HeroPolitics01"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall01Attacker"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeMajorHisshos"/>
+        <SkillTree Name="HeroSkillTreeAdmiral"/>
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroIllo01">
+        <Skill Name="HeroSkill01Illo01"/>
+        <Skill Name="HeroSkill02Illo01"/>
+
+        <Affinity Name="HeroAffinityAdvanced"/>
+        <Class Name="HeroClassAdministrator"/>
+        <Politics Name="HeroPolitics03"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall04Defender"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeMinorFaction03"/>
+        <SkillTree Name="HeroSkillTreeAdministrator"/>
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+</Datatable>

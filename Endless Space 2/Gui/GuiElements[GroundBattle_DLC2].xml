@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- MajorHisshos -->
+    <GuiElement Name="TroopInfantryAffinityGameplayMajorHisshos">
+        <Title>%TroopInfantryTitle</Title>
+        <Description>%TroopInfantryDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MajorHisshos/MajorHisshosInfantrySmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopTankAffinityGameplayMajorHisshos">
+        <Title>%TroopTankTitle</Title>
+        <Description>%TroopTankDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MajorHisshos/MajorHisshosTankSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopPlaneAffinityGameplayMajorHisshos">
+        <Title>%TroopPlaneTitle</Title>
+        <Description>%TroopPlaneDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MajorHisshos/MajorHisshosPlaneSmall" />
+        </Icons>
+    </GuiElement>
+
+    <!-- Hisshos special defense strategy. -->
+    <GuiElement Name="GroundBattleDefenderStrategyHisshosHonor">
+        <Title>%NotificationGroundBattleSetupDefenderStrategyHisshosHonorTitle</Title>
+        <Description>%NotificationGroundBattleSetupDefenderStrategyHisshosHonorDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleDefenderStrategyHisshosHonorLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="GroundBattleDefenderStrategyZoneEffectHisshosHonor">
+        <Title>%NotificationGroundBattleSetupDefenderStrategyHisshosHonorTitle</Title>
+        <Description>%NotificationGroundBattleSetupDefenderStrategyHisshosHonorDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleDefenderStrategyHisshosHonorLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeCapture">
+        <Title>%GroundBattleOutcomeCaptureTitle</Title>
+        <Description>%GroundBattleOutcomeCaptureDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeCaptureLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeCaptureTitleAttacker</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeCaptureDescriptionAttacker</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeCaptureTitleDefender</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeCaptureDescriptionDefender</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeCaptureMajorHisshos">
+        <Title>%GroundBattleOutcomeCaptureTitle</Title>
+        <Description>%GroundBattleOutcomeCaptureDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeCaptureLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeCaptureTitleAttacker</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeCaptureDescriptionAttacker</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeCaptureTitleDefender</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeCaptureDescriptionDefender</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeLoot">
+        <Title>%GroundBattleOutcomeLootTitle</Title>
+        <Description>%GroundBattleOutcomeLootDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeLootLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeLootTitleAttacker</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeLootDescriptionAttacker</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeLootTitleDefender</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeLootDescriptionDefender</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeLootVampirilis">
+        <Title>%GroundBattleOutcomeLootVampirilisTitle</Title>
+        <Description>%GroundBattleOutcomeLootDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeLootVampirilisLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeLootTitleAttackerVampirilis</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeLootDescriptionAttackerVampirilis</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeLootTitleDefenderVampirilis</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeLootDescriptionDefenderVampirilis</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeLootMajorHisshos">
+        <Title>%GroundBattleOutcomeLootMajorHisshosTitle</Title>
+        <Description>%GroundBattleOutcomeLootDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeLootMajorHisshosLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeLootTitleAttackerMajorHisshos</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeLootDescriptionAttackerMajorHisshos</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeLootTitleDefenderMajorHisshos</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeLootDescriptionDefenderMajorHisshos</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeLootHoratio">
+        <Title>%GroundBattleOutcomeLootHoratioTitle</Title>
+        <Description>%GroundBattleOutcomeLootDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeLootHoratioLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeLootTitleAttackerHoratio</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeLootDescriptionAttackerHoratio</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeLootTitleDefenderHoratio</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeLootDescriptionDefenderHoratio</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeRaze">
+        <Title>%GroundBattleOutcomeRazeTitle</Title>
+        <Description>%GroundBattleOutcomeRazeDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeRazeLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeRazeTitleAttacker</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeRazeDescriptionAttacker</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeRazeTitleDefender</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeRazeDescriptionDefender</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeRazeVampirilis">
+        <Title>%GroundBattleOutcomeRazeVampirilisTitle</Title>
+        <Description>%GroundBattleOutcomeRazeVampirilisDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeRazeVampirilisLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeRazeTitleAttackerVampirilis</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeRazeDescriptionAttackerVampirilis</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeRazeTitleDefenderVampirilis</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeRazeDescriptionDefenderVampirilis</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeRazeMajorHisshos">
+        <Title>%GroundBattleOutcomeRazeTitle</Title>
+        <Description>%GroundBattleOutcomeRazeDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeRazeLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeRazeTitleAttacker</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeRazeDescriptionAttacker</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeRazeTitleDefender</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeRazeDescriptionDefender</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeRazeCravers">
+        <Title>%GroundBattleOutcomeRazeCraversTitle</Title>
+        <Description>%GroundBattleOutcomeRazeCraversDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeRazeCraversLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeRazeTitleAttackerCravers</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeRazeDescriptionAttackerCravers</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeRazeTitleDefenderCravers</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeRazeDescriptionDefenderCravers</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <!-- Illo -->
+    <GuiElement Name="TroopInfantryAffinityGameplayIllo">
+        <Title>%TroopInfantryTitle</Title>
+        <Description>%TroopInfantryDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/IlloInfantrySmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopTankAffinityGameplayIllo">
+        <Title>%TroopTankTitle</Title>
+        <Description>%TroopTankDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/AdvancedTankSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopPlaneAffinityGameplayIllo">
+        <Title>%TroopPlaneTitle</Title>
+        <Description>%TroopPlaneDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/AdvancedPlaneSmall" />
+        </Icons>
+    </GuiElement>
+    
+    
+    <!-- DAMAGE DATA GUI ELEMENTS -->
+
+    <DamageDataGuiElement Name="DamageAppliedByInfantry">
+        <Title>%DamageAppliedByInfantryTitle</Title>
+        <Description>%DamageAppliedByInfantryDescription</Description>
+        <Icons>
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Pictos/Infantry" />
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/Common/InfantryIconMedium" />
+        </Icons>
+    </DamageDataGuiElement>
+
+    <DamageDataGuiElement Name="DamageAppliedByTank">
+        <Title>%DamageAppliedByTankTitle</Title>
+        <Description>%DamageAppliedByTankDescription</Description>
+        <Icons>
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Pictos/Tank" />
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/Common/TankIconMedium" />
+        </Icons>
+    </DamageDataGuiElement>
+
+    <DamageDataGuiElement Name="DamageAppliedByPlane">
+        <Title>%DamageAppliedByPlaneTitle</Title>
+        <Description>%DamageAppliedByPlaneDescription</Description>
+        <Icons>
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Pictos/Plane" />
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/Common/PlaneIconMedium" />
+        </Icons>
+    </DamageDataGuiElement>
+    
+    <DamageDataGuiElement Name="DamageAppliedByBombardment">
+        <Title>%DamageAppliedByBombardmentTitle</Title>
+        <Description>%DamageAppliedByBombardmentDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="BombardmentSmall" />
+            <Icon Size="Medium" Path="BombardmentMedium" />
+        </Icons>
+    </DamageDataGuiElement>
+    
+</Datatable>

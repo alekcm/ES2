@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/BattleEffectDefinition.xsd">
+
+    <BattleEffect_SetPropertyValue Name="WeaponModule_DisableAttack" Duration="-1" PropertyName="CanAttack" Operation="Set" InterpreterFormula="0"/>
+    <BattleEffect_SetPropertyValue Name="WeaponModule_EnableAttack" Duration="-1" PropertyName="CanAttack" Operation="Set" InterpreterFormula="1"/>
+    
+    <BattleEffect_SetPropertyValue Name="SquadronModule_DisableAttack" Duration="-1" PropertyName="CanAttack" Operation="Set" InterpreterFormula="0"/>
+    <BattleEffect_SetPropertyValue Name="SquadronModule_EnableAttack" Duration="-1" PropertyName="CanAttack" Operation="Set" InterpreterFormula="1"/>
+
+    <BattleEffect_SetPropertyValue Name="Ship_CannotBeTargeted" Duration="-1" PropertyName="CannotBeTargeted" Operation="Set" InterpreterFormula="1"/>
+    <BattleEffect_SetPropertyValue Name="Ship_CanBeTargeted" Duration="-1" PropertyName="CannotBeTargeted" Operation="Set" InterpreterFormula="0"/>
+
+    <BattleEffect_SetPropertyValue Name="Ship_Hide" Duration="-1" PropertyName="IsInvisible" Operation="Set" InterpreterFormula="1"/>
+    <BattleEffect_SetPropertyValue Name="Ship_Reveal" Duration="-1" PropertyName="IsInvisible" Operation="Set" InterpreterFormula="0"/>
+
+    <BattleEffect_ApplyDescriptor Name="Ship_AddModuleEvasionToShipsOfGroup" Duration="-1" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="AddModuleEvasionToShipsOfGroup"/>
+    </BattleEffect_ApplyDescriptor>
+    
+    <BattleEffect_SetPropertyValue Name="Group_RetrieveModuleVisionStrength" Duration="-1" PropertyName="VisionStrength" Operation="Set" InterpreterFormula="Max(Property(Target, @ClassGroup, VisionStrength), Property(Owner, VisionStrength))"/>
+    <BattleEffect_SetPropertyValue Name="Group_InformOpponentOfVisionStrength" Duration="-1" PropertyName="OpponentVisionStrength" Operation="Set" InterpreterFormula="Property(Owner, @'../ClassGroup', VisionStrength)"/>
+
+    <BattleEffect_SetPropertyValue Name="AttackingFlotilla_RecordInvisibilityStatusPhase1" PropertyName="AttackingFlotillaInvisibilityStatusPhase1" Operation="Set" InterpreterFormula="MaxProperty(Target, @ClassFlotilla/ClassShip, IsInvisible)"/>
+    <BattleEffect_SetPropertyValue Name="AttackingFlotilla_RecordInvisibilityStatusPhase2" PropertyName="AttackingFlotillaInvisibilityStatusPhase2" Operation="Set" InterpreterFormula="MaxProperty(Target, @ClassFlotilla/ClassShip, IsInvisible)"/>
+    <BattleEffect_SetPropertyValue Name="AttackingFlotilla_RecordInvisibilityStatusPhase3" PropertyName="AttackingFlotillaInvisibilityStatusPhase3" Operation="Set" InterpreterFormula="MaxProperty(Target, @ClassFlotilla/ClassShip, IsInvisible)"/>
+
+</Datatable>

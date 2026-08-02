@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/CuriosityDefinition.xsd">
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ########## ONLY ONE TYPE OF EFFECT PER CURIOSITY DEFINITION! ########### -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+
+ 
+    <CuriosityDefinition Name="Curiosity_Quest_ExplorationQuest08" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                  Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">           
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', Strategic1Stock) ge 5</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Quest_ExplorationQuest09" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                 Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', Strategic1Stock) ge 5</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Quest_ExplorationQuest25" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+              Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', Strategic2Stock) ge 10</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <QuestPrerequisites Target="$(Fleet)">
+            <PathPrerequisite Flags="Prerequisite,CannotContainArgosy" Inverted="true">ClassGarrisonFleet/ClassShip,ShipRoleSuperColonizer</PathPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Quest_Vaulters01" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest" Indestructible="true"
+             Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Fleet)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassGarrisonFleet/ClassShip,!ShipRoleHero', Level, true) ge 2</InterpreterPrerequisite>
+        </QuestPrerequisites>       
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+     <CuriosityDefinition Name="Curiosity_Quest_Vaulters02" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest" Indestructible="true"
+             Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', Strategic2Stock) ge 20</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Quest_Vaulters03" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest" Indestructible="true"
+           Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Fleet)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassGarrisonFleet/ClassHero', Level) ge 7</InterpreterPrerequisite>
+        </QuestPrerequisites>        
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+
+
+
+</Datatable>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+     <TutorialGuiElement Name="Tutorial_UC_HomeSystem">       
+        <PopupTitle>%Tutorial_UC_HomeSystemPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_HomeSystemPage1Popup-Description</Description>
+        </PopupPage>
+         <PopupPage>
+             <Description>%Tutorial_UC_HomeSystemPage2Popup-Description</Description>
+         </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Sanctuaries1">
+        <PopupTitle>%Tutorial_UC_Sanctuaries1Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Sanctuaries1Page1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_Sanctuaries1Page2Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_Sanctuaries1Page3Popup-Description</Description>
+            <Highlight Name="GameOverlay_ScanViewButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Sanctuaries2">
+        <PopupTitle>%Tutorial_UC_Sanctuaries2Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Sanctuaries2Page1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_Sanctuaries2Page2Popup-Description</Description>
+            <Highlight Name="PlanetLabel_GhostPanel" Type="Informative"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_Sanctuaries2Page3Popup-Description</Description>
+            <Highlight Name="ColonySidePanel_FidsiBanner" Type="Informative"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Hacking" HidePortrait="true">
+        <PopupTitle>%Tutorial_UC_HackingPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_HackingPage1Popup-Description</Description>
+            <Highlight Name="HackingDashboard_StartOperationButton" Type="Interactive"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_HackingPage2Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_HackingPage3Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_DefensiveProgram" HidePortrait="true">
+        <PopupTitle>%Tutorial_UC_DefensiveProgramPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_DefensiveProgramPage1Popup-Description</Description>
+            <Highlight Name="HackingDashboard_DefensiveProgramsButton" Type="Interactive"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_DefensiveProgramPage2Popup-Description</Description>
+            <Highlight Name="HackingSidePanel_ProcessingPowerGauge" Type="Informative"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_DefensiveProgramPage3Popup-Description</Description>
+            <Highlight Name="HackingSidePanel_ProcessingPowerGauge" Type="Informative"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Migration1">
+        <PopupTitle>%Tutorial_UC_Migration1Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Migration1Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Migration2">
+        <PopupTitle>%Tutorial_UC_Migration2Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Migration2Page1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_Migration2Page2Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_SanctuaryCohabitation1">
+        <PopupTitle>%Tutorial_UC_SanctuaryCohabitation1Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_SanctuaryCohabitation1Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_SanctuaryCohabitation2">
+        <PopupTitle>%Tutorial_UC_SanctuaryCohabitation2Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_SanctuaryCohabitation2Page1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_SanctuaryCohabitation2Page2Popup-Description</Description>
+            <Highlight Name="PlanetLabel_TurnGhostPopulationIntoTraitorButton" Type="Informative"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_UmbralShadow">
+        <PopupTitle>%Tutorial_UC_UmbralShadowPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_UmbralShadowPage1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_UmbralShadowPage2Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Shade1">
+        <PopupTitle>%Tutorial_UC_Shade1Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Shade1Popup-Description</Description>
+            <Highlight Name="GameOverlay_ScanViewButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Shade2" HidePortrait="true">
+        <PopupTitle>%Tutorial_UC_Shade2Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Shade2Popup-Description</Description>
+            <Highlight Name="HackingSidePanel_TraitorsPanel" Type="Informative"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_SanctuaryLink">
+        <PopupTitle>%Tutorial_UC_SanctuaryLinkPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_SanctuaryLinkPopup-Description</Description>
+            <Highlight Name="ShipsSpawnPointSidePanel_Frame" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_OffensiveProgram1">
+        <PopupTitle>%Tutorial_UC_OffensiveProgram1Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_OffensiveProgram1Popup-Description</Description>
+            <Highlight Name="GameOverlay_ScanViewButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_OffensiveProgram2" HidePortrait="true">
+        <PopupTitle>%Tutorial_UC_OffensiveProgram2Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_OffensiveProgram2Page1Popup-Description</Description>
+            <Highlight Name="HackingDashboard_OffensiveProgramsButton" Type="Interactive"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_OffensiveProgram2Page2Popup-Description</Description>
+            <Highlight Name="HackingDashboard_OffensiveProgramsButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Invisibility1">
+        <PopupTitle>%Tutorial_UC_Invisibility1Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Invisibility1Popup-Description</Description>
+            <Highlight Name="FleetsScreen_InvisibilityFleetActionButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Invisibility2">
+        <PopupTitle>%Tutorial_UC_Invisibility2Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Invisibility2Page1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_Invisibility2Page2Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Trace1">
+        <PopupTitle>%Tutorial_UC_Trace1Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Trace1Popup-Description</Description>
+            <Highlight Name="GameOverlay_ScanViewButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Trace2" HidePortrait="true">
+        <PopupTitle>%Tutorial_UC_Trace2Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Trace2Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_BeingHacked">
+        <PopupTitle>%Tutorial_UC_BeingHackedPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_BeingHackedPopup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_BeingTraced">
+        <PopupTitle>%Tutorial_UC_BeingTracedPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_BeingTracedPopup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_Hacking_Hook">
+        <PopupTitle>%Tutorial_UC_Hacking_HookPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_Hacking_HookPopup-Description</Description>
+            <Highlight Name="GameOverlay_ScanViewButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Invisibility">
+        <PopupTitle>%Tutorial_InvisibilityPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_InvisibilityPage1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_InvisibilityPage2Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_UmbralShadow_Hook">
+        <PopupTitle>%Tutorial_UC_UmbralShadow_HookPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_UmbralShadow_HookPage1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_UmbralShadow_HookPage2Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_UC_UmbralShadow_Hook_Bis">
+        <PopupTitle>%Tutorial_UC_UmbralShadow_HookPopup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_UC_UmbralShadow_HookPage1Popup-Description</Description>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_UC_UmbralShadow_HookPage2Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+</Datatable>

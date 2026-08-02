@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- #################################-->
+  <!-- #########    DLC 5    ###########-->
+  <!-- #################################-->
+  
+  <!--  Template for quests GUI
+  
+    The [  KEY  ] is the quest title in lowercase with '_' replacing the spaces.  
+   
+    KEY-Title
+    KEY-Description
+    KEY-Objective
+    KEY-ObjectiveTitle
+    KEY-ObjectiveDescription
+    KEY-ObjectiveTooltip
+    KEY-Outcome
+    KEY-OutcomeFailed
+    Dummy_KEY
+  
+    <QuestGuiElement Name="[  KEY  ]">
+    <Title>%[  KEY  ]-Title</Title>
+    <Description>%[  KEY  ]-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/[  KEY  ]" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%[  KEY  ]-ObjectiveTitle</Title>
+          <Description>%[  KEY  ]-ObjectiveDescription</Description>
+          <TooltipDescription>%[  KEY  ]-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%[  KEY  ]-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%[  KEY  ]-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%[  KEY  ]-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+    </QuestGuiElement>
+  
+  -->
+
+  <!-- Visions of a Common Enemy -->
+  <QuestGuiElement Name="visions_of_a_common_enemy">
+    <Title>%visions_of_a_common_enemy-Title</Title>
+    <Description>%visions_of_a_common_enemy-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/Visions_Of_A_Common_Enemy" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%visions_of_a_common_enemy-ObjectiveTitle</Title>
+          <Description>%visions_of_a_common_enemy-ObjectiveDescription</Description>
+          <TooltipDescription>%visions_of_a_common_enemy-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%visions_of_a_common_enemy-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%visions_of_a_common_enemy-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%visions_of_a_common_enemy-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Thieves And Traitors -->
+  <QuestGuiElement Name="thieves_and_traitors">
+    <Title>%thieves_and_traitors-Title</Title>
+    <Description>%thieves_and_traitors-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/thieves_and_traitors" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics06">
+          <Title>%thieves_and_traitors-ObjectiveTitle</Title>
+          <Description>%thieves_and_traitors-Objective-Description</Description>
+          <TooltipDescription>%thieves_and_traitors-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%thieves_and_traitors-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%thieves_and_traitors-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%thieves_and_traitors-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Thieves And Traitors Alternative (when Awakening DLC is not active) -->
+  <QuestGuiElement Name="thieves_and_traitors_alt">
+    <Title>%thieves_and_traitors-Title</Title>
+    <Description>%thieves_and_traitors-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/thieves_and_traitors" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics06">
+          <Title>%thieves_and_traitors-ObjectiveTitle</Title>
+          <Description>%thieves_and_traitors-Objective-Description</Description>
+          <TooltipDescription>%thieves_and_traitors-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%thieves_and_traitors-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%thieves_and_traitors-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%thieves_and_traitors-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+  
+  <!-- Incoming! -->
+  <QuestGuiElement Name="incoming">
+    <Title>%incoming-Title</Title>
+    <Description>%incoming-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/incoming" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%incoming-ObjectiveTitle</Title>
+          <Description>%incoming-ObjectiveDescription</Description>
+          <TooltipDescription>%incoming-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%incoming-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%incoming-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%incoming-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- A Hero proven in Battle -->
+  <QuestGuiElement Name="a_hero_proven_in_battle">
+    <Title>%a_hero_proven_in_battle-Title</Title>
+    <Description>%a_hero_proven_in_battle-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/a_hero_proven_in_battle" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics06">
+          <Title>%a_hero_proven_in_battle-ObjectiveTitle</Title>
+          <Description>%a_hero_proven_in_battle-ObjectiveDescription</Description>
+          <TooltipDescription>%a_hero_proven_in_battle-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%a_hero_proven_in_battle-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%a_hero_proven_in_battle-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%a_hero_proven_in_battle-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Chapter 0: Strange Tidings -->
+  <QuestGuiElement Name="chapter_0_strange_tidings">
+    <Title>%chapter_0_strange_tidings-Title</Title>
+    <Description>%chapter_0_strange_tidings-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/chapter_0_strange_tidings" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%chapter_0_strange_tidings-ObjectiveTitle</Title>
+          <Description>%chapter_0_strange_tidings-ObjectiveDescription</Description>
+          <TooltipDescription>%chapter_0_strange_tidings-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%chapter_0_strange_tidings-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%chapter_0_strange_tidings-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%chapter_0_strange_tidings-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Chapter 1: Strange Tidings -->
+  <QuestGuiElement Name="chapter_1_strange_tidings">
+    <Title>%chapter_1_strange_tidings-Title</Title>
+    <Description>%chapter_1_strange_tidings-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/chapter_1_strange_tidings" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics06">
+          <Title>%chapter_1_strange_tidings-ObjectiveTitle</Title>
+          <Description>%chapter_1_strange_tidings-ObjectiveDescription</Description>
+          <TooltipDescription>%chapter_1_strange_tidings-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%chapter_1_strange_tidings-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%chapter_1_strange_tidings-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%chapter_1_strange_tidings-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Chapter 2: Weapon Without a Target -->
+  <QuestGuiElement Name="chapter_2_weapon_without_a_target">
+    <Title>%chapter_2_weapon_without_a_target-Title</Title>
+    <Description>%chapter_2_weapon_without_a_target-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/weapon_without_a_target" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%chapter_2_weapon_without_a_target-ObjectiveTitle</Title>
+          <Description>%chapter_2_weapon_without_a_target-ObjectiveDescription</Description>
+          <TooltipDescription>%chapter_2_weapon_without_a_target-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%chapter_2_weapon_without_a_target-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%chapter_2_weapon_without_a_target-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%chapter_2_weapon_without_a_target-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Chapter 3: Anomalous Data -->
+  <QuestGuiElement Name="chapter_3_anomalous_data">
+    <Title>%chapter_3_anomalous_data-Title</Title>
+    <Description>%chapter_3_anomalous_data-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/chapter_3_anomalous_data" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%chapter_3_anomalous_data-ObjectiveTitle</Title>
+          <Description>%chapter_3_anomalous_data-ObjectiveDescription</Description>
+          <TooltipDescription>%chapter_3_anomalous_data-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%chapter_3_anomalous_data-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%chapter_3_anomalous_data-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%chapter_3_anomalous_data-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Chapter 4: A Final Absolution -->
+  <QuestGuiElement Name="chapter_4_a_final_absolution">
+    <Title>%chapter_4_a_final_absolution-Title</Title>
+    <Description>%chapter_4_a_final_absolution-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/a_final_absolution" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%chapter_4_a_final_absolution-ObjectiveTitle</Title>
+          <Description>%chapter_4_a_final_absolution-ObjectiveDescription</Description>
+          <TooltipDescription>%chapter_4_a_final_absolution-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%chapter_4_a_final_absolution-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%chapter_4_a_final_absolution-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1">%chapter_4_a_final_absolution-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+	
+	<GuiElement Name="AFinalAbsolutionStep2">
+		<Title>%chapter_4_a_final_absolution-Step2Title</Title>
+		<Description>%chapter_4_a_final_absolution-Step2Description</Description>
+		<Icons>
+			<Icon Size="Small" Path="Bitmaps/Atlased/Notifications/NotificationQuestSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Notifications/NotificationQuestSmall" />
+			<Icon Size="Large" Path="Bitmaps/Dynamic/DLC5/a_final_absolution" />
+		</Icons>
+	</GuiElement>
+
+  <!-- A Matter of Black and White -->
+  <QuestGuiElement Name="black_or_white_politics">
+    <Title>%black_or_white_politics-Title</Title>
+    <Description>%black_or_white_politics-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/a_matter_of_black_and_white" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics01">
+          <Title>%black_or_white_politics-Objective1Title</Title>
+          <Description>%black_or_white_politics-Objective1Description</Description>
+          <TooltipDescription>%black_or_white_politics-Objective1Tooltip</TooltipDescription>
+          <OutcomeCompleted>%black_or_white_politics-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%black_or_white_politics-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%black_or_white_politics-Objective1</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Name="Step1_Objective2" Politics="Politics04">
+          <Title>%black_or_white_politics-Objective2Title</Title>
+          <Description>%black_or_white_politics-Objective2Description</Description>
+          <TooltipDescription>%black_or_white_politics-Objective2Tooltip</TooltipDescription>
+          <OutcomeCompleted>%black_or_white_politics-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%black_or_white_politics-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective2">%black_or_white_politics-Objective2</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Wisdom Of The Past -->
+  <QuestGuiElement Name="wisdom_of_the_past">
+    <Title>%wisdom_of_the_past-Title</Title>
+    <Description>%wisdom_of_the_past-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/wisdom_of_the_past" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics02">
+          <Title>%wisdom_of_the_past-ObjectiveTitle</Title>
+          <Description>%wisdom_of_the_past-ObjectiveDescription</Description>
+          <TooltipDescription>%wisdom_of_the_past-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%wisdom_of_the_past-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%wisdom_of_the_past-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%wisdom_of_the_past-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- Death Without A Corpse -->
+  <QuestGuiElement Name="death_without_a_corpse">
+    <Title>%death_without_a_corpse-Title</Title>
+    <Description>%death_without_a_corpse-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/death_without_a_corpse" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%death_without_a_corpse-ObjectiveTitle</Title>
+          <Description>%death_without_a_corpse-ObjectiveDescription</Description>
+          <TooltipDescription>%death_without_a_corpse-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%death_without_a_corpse-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%death_without_a_corpse-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%death_without_a_corpse-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <!-- A Galaxy Far, Far Away -->
+  <QuestGuiElement Name="a_galaxy_far_far_away">
+    <Title>%a_galaxy_far_far_away-Title</Title>
+    <Description>%a_galaxy_far_far_away-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/DLC5/a_galaxy_far_far_away" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Name="Step1_Objective1" Politics="Politics03">
+          <Title>%a_galaxy_far_far_away-ObjectiveTitle</Title>
+          <Description>%a_galaxy_far_far_away-ObjectiveDescription</Description>
+          <TooltipDescription>%a_galaxy_far_far_away-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%a_galaxy_far_far_away-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%a_galaxy_far_far_away-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Step1_Objective1">%a_galaxy_far_far_away-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+	
+	
+	
+</Datatable>

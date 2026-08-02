@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/AnomalyReductionDefinition.xsd">
+
+    
+    <!-- MIXED ANOMALIES -->
+    <AnomalyReductionDefinition Name="AnomalyReduction52" Category="CategoryAnomalyReduction">
+        <Cost ResourceName="SystemProduction">480</Cost>
+        <TechnologyPrerequisite UnlockHidden="true" Flags="Technology,Prerequisite,Discard">TechnologyAnomalyReduction1</TechnologyPrerequisite>
+        <BaseAnomaly Name="PlanetAnomaly52"/>
+        <ResultAnomaly Name="PlanetAnomaly52Reduced"/>
+    </AnomalyReductionDefinition>
+
+    <AnomalyReductionDefinition Name="AnomalyReduction53" Category="CategoryAnomalyReduction">
+        <Cost ResourceName="SystemProduction">480</Cost>
+        <TechnologyPrerequisite UnlockHidden="true" Flags="Technology,Prerequisite,Discard">TechnologyAnomalyReduction1</TechnologyPrerequisite>
+        <BaseAnomaly Name="PlanetAnomaly53"/>
+        <ResultAnomaly Name="PlanetAnomaly53Reduced"/>
+    </AnomalyReductionDefinition>
+
+
+    <!-- NEGATIVE ANOMALIES -->
+    <AnomalyReductionDefinition Name="AnomalyReduction54" Category="CategoryAnomalyReduction">
+        <Cost ResourceName="SystemProduction">960</Cost>
+        <TechnologyPrerequisite UnlockHidden="true" Flags="Technology,Prerequisite,Discard">TechnologyAnomalyReduction2</TechnologyPrerequisite>
+        <BaseAnomaly Name="PlanetAnomaly54"/>
+        <ResultAnomaly Name="PlanetAnomaly54Reduced"/>
+    </AnomalyReductionDefinition>
+
+    <AnomalyReductionDefinition Name="AnomalyReduction55" Category="CategoryAnomalyReduction">
+        <Cost ResourceName="SystemProduction">960</Cost>
+        <TechnologyPrerequisite UnlockHidden="true" Flags="Technology,Prerequisite,Discard">TechnologyAnomalyReduction2</TechnologyPrerequisite>
+        <BaseAnomaly Name="PlanetAnomaly55"/>
+        <ResultAnomaly Name="PlanetAnomaly55Reduced"/>
+    </AnomalyReductionDefinition>
+    
+</Datatable>

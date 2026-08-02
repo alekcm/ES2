@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ZoneEffectDefinition.xsd">
+
+    <ZoneEffectDefinition_ApplyDescriptors Name="ZoneEffectPassiveHonorGain">
+        <AllowedTarget>Fleet</AllowedTarget>
+        <SimulationDescriptorReference Name="ZoneEffectPassiveHonorGain"/>
+    </ZoneEffectDefinition_ApplyDescriptors>
+
+    <ZoneEffectDefinition_ApplyDescriptors Name="ZoneEffectPassiveOverColonizationThresholdReduction">
+        <AllowedTarget>ColonizedStarSystem</AllowedTarget>
+        <SimulationDescriptorReference Name="ZoneEffectPassiveOverColonizationThresholdReduction"/>
+    </ZoneEffectDefinition_ApplyDescriptors>
+    
+    <ZoneEffectDefinition_ApplyDescriptors Name="ZoneEffectFleetBonuses">
+        <AllowedTarget>Fleet</AllowedTarget>
+        <SimulationDescriptorReference Name="ZoneEffectHonorActionFleetBonusesEffectJuggernautVersion"/>
+    </ZoneEffectDefinition_ApplyDescriptors>
+
+    <ZoneEffectDefinition_ApplyDescriptors Name="ZoneEffectFakePower">
+        <AllowedTarget>Fleet</AllowedTarget>
+        <SimulationDescriptorReference Name="ZoneEffectHonorActionFleetFakePowerEffectJuggernautVersion"/>
+    </ZoneEffectDefinition_ApplyDescriptors>
+
+    <ZoneEffectDefinition_ApplyDescriptors Name="ZoneEffectSystemBonuses">
+        <AllowedTarget>ColonizedStarSystem</AllowedTarget>
+        <SimulationDescriptorReference Name="ZoneEffectHonorActionSystemBonusesEffectJuggernautVersion"/>
+    </ZoneEffectDefinition_ApplyDescriptors>
+
+    <ZoneEffectDefinition_ApplyDescriptors Name="ZoneEffectSystemDefense">
+        <AllowedTarget>ColonizedStarSystem</AllowedTarget>
+        <SimulationDescriptorReference Name="ZoneEffectHonorActionSystemDefenseEffectJuggernautVersion"/>
+    </ZoneEffectDefinition_ApplyDescriptors>
+
+    <ZoneEffectDefinition_ApplyDescriptors Name="ZoneEffectFleetKamikaze">
+        <AllowedTarget>Fleet</AllowedTarget>
+        <SimulationDescriptorReference Name="ZoneEffectFleetActionKamikazeEffectJuggernautVersion"/>
+    </ZoneEffectDefinition_ApplyDescriptors>
+    
+</Datatable>

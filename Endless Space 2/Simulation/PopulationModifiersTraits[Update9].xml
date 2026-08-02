@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitPrimaryStrategicToFood01" SubCategory="Primary" ShowInCustom="true" Cost="5">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryStrategicToFood01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!-- -1 Depletion Point on Depleted Planets -->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryStrategicToFood01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryStrategicToFood01"/>
+            </Modifier>
+        </Modifiers>
+
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetStrategicToFood01"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryStrategicToScience01" SubCategory="Secondary" ShowInCustom="true" Cost="15">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryStrategicToScience01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!-- -1 Depletion Point on Depleted Planets -->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryStrategicToScience01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryStrategicToScience01"/>
+            </Modifier>
+        </Modifiers>
+
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetStrategicToScience01"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

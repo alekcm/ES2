@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <EmpireDiplomaticActionGuiElement Name="SupportPirateAction" AssociatedPolitics="Politics06">
+        <Title>%SupportPirateActionTitle</Title>
+        <Description>%SupportPirateActionDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/PirateEmpireInteraction/SupportPirateActionLarge" />
+        </Icons>
+        <PirateDialogueType>Support</PirateDialogueType>
+    </EmpireDiplomaticActionGuiElement>
+
+    <EmpireDiplomaticActionGuiElement Name="SabotagePirateAction" AssociatedPolitics="Politics03">
+        <Title>%SabotagePirateActionTitle</Title>
+        <Description>%SabotagePirateActionDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/PirateEmpireInteraction/SabotagePirateActionLarge" />
+        </Icons>
+        <PirateDialogueType>Sabotage</PirateDialogueType>
+    </EmpireDiplomaticActionGuiElement>
+
+    <EmpireDiplomaticActionGuiElement Name="BuyMarkPirateAction" AssociatedPolitics="Politics06">
+        <Title>%BuyMarkPirateActionTitle</Title>
+        <Description>%BuyMarkPirateActionDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/PirateEmpireInteraction/BuyMarkPirateActionLarge" />
+        </Icons>
+        <PirateDialogueType>BuyPirateMark</PirateDialogueType>
+    </EmpireDiplomaticActionGuiElement>
+
+    <EmpireDiplomaticActionGuiElement Name="PeacePirateAction" AssociatedPolitics="Politics03">
+        <Title>%PeacePirateActionTitle</Title>
+        <Description>%PeacePirateActionDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/PirateEmpireInteraction/PeacePirateActionLarge" />
+        </Icons>
+    </EmpireDiplomaticActionGuiElement>
+
+    <EmpireDiplomaticActionGuiElement Name="CancelPeacePirateAction" AssociatedPolitics="Politics06">
+        <Title>%CancelPeacePirateActionTitle</Title>
+        <Description>%CancelPeacePirateActionDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/PirateEmpireInteraction/CancelPeacePirateActionLarge" />
+        </Icons>
+        <ConfirmationMessage>%CancelPeacePirateActionConfirmationMessage</ConfirmationMessage>
+    </EmpireDiplomaticActionGuiElement>
+
+</Datatable>

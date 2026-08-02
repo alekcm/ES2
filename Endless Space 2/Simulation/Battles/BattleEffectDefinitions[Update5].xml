@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/BattleEffectDefinition.xsd">
+
+
+    <!--#####################-->
+    <!--### SWARM MISSILE ###-->
+    <!--#####################-->
+    <!-- Is cooling down bool-->
+    <BattleEffect_SetPropertyValue Name="WeaponSwarm_SetIsCooldingDownToFalse" PropertyName="IsCoolingDown" Operation="Set" InterpreterFormula="0"/>
+    <BattleEffect_SetPropertyValue Name="WeaponSwarm_SetIsCooldingDownToTrue" PropertyName="IsCoolingDown" Operation="Set" InterpreterFormula="1"/>
+    
+    <!-- Changing Salvo shot count-->
+    <BattleEffect_SetPropertyValue Name="WeaponSwarm_IncreaseSalvoShotCount" PropertyName="SalvoShotCount" Operation="Addition" InterpreterFormula="1"/>
+    <BattleEffect_SetPropertyValue Name="WeaponSwarm_ResetSalvoShotCount" PropertyName="SalvoShotCount" Operation="Set" InterpreterFormula="0"/>
+    
+    <!--Change the cooldown-->
+    <BattleEffect_SetPropertyValue Name="WeaponSwarm_InitializeCooldownChangeDuration" PropertyName="CooldownChangeDuration" Operation="Set" InterpreterFormula="Property(Owner, @ClassModuleWeaponMissileSwarm, CooldownVariation) + Property(Owner, @ClassModuleWeapon, Cooldown)"/>
+    <BattleEffect_ApplyDescriptor Name="WeaponSwarm_ApplyCooldownChange" Duration="$(CooldownChangeDuration)" StackingBehaviour="Reset">
+        <SimulationDescriptorReference Name="WeaponSwarmCooldownChange"/>
+    </BattleEffect_ApplyDescriptor>
+
+</Datatable>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+	<EntityActionGuiElement Name="LaunchMiningProbeFleetAction">
+		<Title>%LaunchMiningProbeFleetActionTitle</Title>
+		<Description>%LaunchMiningProbeFleetActionDescription</Description>
+		<Icons>
+			<Icon Size="Small" Path="Bitmaps/Dynamic/FleetActions/FleetActionLaunchMiningProbeSmall" />
+		</Icons>
+	</EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="InitiateTerraformPlanetFleetAction">
+        <Title>%InitiateTerraformPlanetFleetActionTitle</Title>
+        <Description>%InitiateTerraformPlanetFleetActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/FleetActions/FleetActionTerraformPlanetSmall" />
+        </Icons>
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="InitiateRestorePlanetFleetAction">
+        <Title>%InitiateRestorePlanetFleetActionTitle</Title>
+        <Description>%InitiateRestorePlanetFleetActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/FleetActions/FleetActionRestorePlanetSmall" />
+        </Icons>
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="InitiateReduceAnomalyFleetAction">
+        <Title>%InitiateReduceAnomalyFleetActionTitle</Title>
+        <Description>%InitiateReduceAnomalyFleetActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/FleetActions/FleetActionReduceAnomalySmall" />
+        </Icons>
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="FireObliteratorFleetAction">
+        <Title>%FireObliteratorFleetActionTitle</Title>
+        <Description>%FireObliteratorFleetActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/FleetActions/FleetActionFireObliteratorSmall" />
+        </Icons>
+        <TemporaryEffectTooltipElement TemporaryEffectName="ObliteratorMalus">
+            <EffectOverride>%TemporaryEffectObliteratorMalusEffectOverride</EffectOverride>
+        </TemporaryEffectTooltipElement>
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="FireIonWaveFleetAction">
+        <Title>%FireIonWaveFleetActionTitle</Title>
+        <Description>%FireIonWaveFleetActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/FleetActions/FleetActionFireIonWaveSmall" />
+        </Icons>
+    </EntityActionGuiElement>
+    
+    <EntityActionGuiElement Name="FleetActionKamikaze">
+        <Title>%FleetActionKamikazeTitle</Title>
+        <Description>%FleetActionKamikazeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/FleetActions/FleetActionKamikazeSmall" />
+        </Icons>
+    </EntityActionGuiElement>
+
+</Datatable>

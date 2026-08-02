@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TemporaryEffectDefinition.xsd">
+
+    <TemporaryEffectDefinition Name="FleetsImmobilization" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectFleetsImmobilization"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="GroundBattlePlaysHacked" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectGroundBattlePlaysHacked"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="SystemBlackout" Category="HackingEffects" Duration="5">
+        <Path>ClassColonizedStarSystem</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectSystemBlackout"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="FakeContextualRestriction" Category="HackingEffects" Duration="0">
+        <Path>FAKE</Path>
+        <SimulationDescriptorReference Name="FakeContextualRestriction"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="ScienceAndExplorationResearchMalus" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectScienceAndExplorationResearchMalus"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="EconomyAndTradeResearchMalus" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectEconomyAndTradeResearchMalus"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="MilitaryResearchMalus" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectMilitaryResearchMalus"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="EmpireDevelopmentResearchMalus" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectEmpireDevelopmentResearchMalus"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="LawCostMalus" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectLawCostMalus"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectMinorRelationDefinition Name="MinorRelationIncreaseFromHack" Category="MinorRelation" Duration="5">
+        <Path>ClassMinorRelationWithMajor</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectMinorRelationIncreaseFromHack"/>
+    </TemporaryEffectMinorRelationDefinition>
+
+    <TemporaryEffectMinorRelationDefinition Name="MinorRelationDecreaseFromHack" Category="MinorRelation" Duration="5">
+        <Path>ClassMinorRelationWithMajor</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectMinorRelationDecreaseFromHack"/>
+    </TemporaryEffectMinorRelationDefinition>
+
+    <TemporaryEffectMinorRelationDefinition Name="MinorPraiseAndQuestCostReductionFromHack" Category="MinorRelation" Duration="5">
+        <Path>ClassMinorRelationWithMajor</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectMinorPraiseAndQuestCostReductionFromHack"/>
+    </TemporaryEffectMinorRelationDefinition>
+
+    <TemporaryEffectMinorRelationDefinition Name="MinorQuestCostReductionFromHack" Category="MinorRelation" Duration="5">
+        <Path>ClassMinorRelationWithMajor</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectMinorQuestCostReductionFromHack"/>
+    </TemporaryEffectMinorRelationDefinition>
+
+    <TemporaryEffectMinorRelationDefinition Name="MinorGainsIncreaseFromHack" Category="MinorRelation" Duration="5">
+        <Path>ClassMinorRelationWithMajor</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectMinorGainsIncreaseFromHack"/>
+    </TemporaryEffectMinorRelationDefinition>
+
+    <TemporaryEffectDefinition Name="ReducedPirateActionsCost" Category="HackingEffects" Duration="5">
+        <Path>ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectReducedPirateActionsCost"/>
+    </TemporaryEffectDefinition>
+
+</Datatable>

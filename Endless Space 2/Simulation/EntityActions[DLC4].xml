@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EntityActionDefinition.xsd">
+
+
+  <CollectRelicsFleetAction Name="CollectRelicsFleetAction" Flags="CancelOnMovement" Duration="3">
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Discard,MustBeTemplar" Inverted="false">../ClassEmpire,AffinityTemplars</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+      <SimulationAlteration DescriptorReference="FleetActionCollectingRelics"/>
+    </EntityModifiers>
+
+    <EntityModifiers Filter="SameEmpire" Location="OrbitEntities">
+      <SimulationAlteration DescriptorReference="OwnFleetCollectingRelics"/>
+    </EntityModifiers>
+
+    <CancelActions Flags="CancelOnAnything" SameContext="false" SameInitiator="true"/>
+
+  </CollectRelicsFleetAction>
+
+  <!-- Nakalim: Slumbering Ruins -->
+  <SuperColonizeFleetAction Name="SlumberingRuinsColonizeFleetAction" FeedbackDuration="1.5" DelayAfterFeedback="1" InitialPopulation="1" DescriptorToApply="AwokenSlumberingRuins">
+
+    <EntityPrerequisites Location="Self">
+      <!--Hardcoded: On SlumberingRuins System-->
+      <InterpreterPrerequisite Flags="Prerequisite,Discard" Inverted="false">Property(Context,@'../ClassEmpire',CanSuperColonizeSlumberingRuins) gt 0</InterpreterPrerequisite>
+      <!--Also has hardcoded elements, but required to not show on Vaulters-->
+      <InterpreterPrerequisite          Flags="CannotColonizeUnderEnemyInfluence">not(Path(Context, @'FleetInfluenceStateHostile')) or Path(Context, @'./ClassEmpire/ClassSenate/LawP05L05Effect')</InterpreterPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="EncounterInProgress">FleetActionAttack</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="FleetActionColonize" />
+      <SimulationAlteration DescriptorReference="FleetActionBusy" />
+      <SimulationAlteration DescriptorReference="FleetActionHeroLocked" />
+    </EntityModifiers>
+
+    <!--<CustomCost Instant="true" ResourceName="EmpireMoney">Property(Context,@'../ClassEmpire',SuperColonizationCost)</CustomCost>-->
+    <!--<CustomCost Instant="true" ResourceName="Strategic1">Property(Context,@'../ClassEmpire',SuperColonizationCost) * Property(Context,@'../ClassEmpire',SuperColonizationStrategicCostFraction) / Property(Context,@'../ClassEmpire',DustInflation)</CustomCost>-->
+    <!--<CustomCost Instant="true" ResourceName="Strategic2">Property(Context,@'../ClassEmpire',SuperColonizationCost) * Property(Context,@'../ClassEmpire',SuperColonizationStrategicCostFraction) / Property(Context,@'../ClassEmpire',DustInflation)</CustomCost>-->
+    <CancelActions Flags="CancelOnAnything" SameContext="false" SameInitiator="true"/>
+
+    <TemporaryEffect Name="SlumberingRuinsBonusEffect" DurationProperty="SlumberingRuinsBonusDuration"/>
+    <Relics>3</Relics>
+
+  </SuperColonizeFleetAction>
+
+  <SleepFleetAction Name="TemplarSentryFleetAction1" Flags="CancelOnAnything">
+
+    <EntityPrerequisites Location="Self">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @'ClassGarrison,ClassGarrisonFleet', SentryActionLevel) eq 1</InterpreterPrerequisite>
+
+      <PathPrerequisite Inverted="true" Flags="MotherShipAttached">FleetActionMothershipAttached</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="EncounterInProgress">FleetActionAttack</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionExpedition</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionColonize</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="IsCreatingPortal">FleetActionCreatingPortal</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionReclaimMothership</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGroundBattle</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="FleetActionSleep"/>
+      <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+      <SimulationAlteration DescriptorReference="FleetActionHeroLocked" />
+      <SimulationAlteration DescriptorReference="FleetActionSentryEffect1" />
+    </EntityModifiers>
+
+    <CancelActions Flags="CancelOnAnything" SameContext="false" SameInitiator="true"/>
+
+    <MovementCostFormula Flags="ConsumeAll">
+      <!-- Consume all movement but having movement is not required to activate -->
+      <Formula>Property(Context, Movement)</Formula>
+      <!-- Often handled by the flag as the floats don't like this case -->
+    </MovementCostFormula>
+  </SleepFleetAction>
+
+  <SleepFleetAction Name="TemplarSentryFleetAction2" Flags="CancelOnAnything">
+
+    <EntityPrerequisites Location="Self">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @'ClassGarrison,ClassGarrisonFleet', SentryActionLevel) eq 2</InterpreterPrerequisite>
+
+      <PathPrerequisite Inverted="true" Flags="MotherShipAttached">FleetActionMothershipAttached</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="EncounterInProgress">FleetActionAttack</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionExpedition</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionColonize</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="IsCreatingPortal">FleetActionCreatingPortal</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionReclaimMothership</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGroundBattle</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="FleetActionSleep"/>
+      <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+      <SimulationAlteration DescriptorReference="FleetActionHeroLocked" />
+      <SimulationAlteration DescriptorReference="FleetActionSentryEffect2" />
+    </EntityModifiers>
+
+    <CancelActions Flags="CancelOnAnything" SameContext="false" SameInitiator="true"/>
+
+    <MovementCostFormula Flags="ConsumeAll">
+      <Formula>Property(Context, Movement)</Formula>
+    </MovementCostFormula>
+  </SleepFleetAction>
+
+  <CreateAllianceEmpireAction Name="CreateAllianceEmpireActionTemplar" ResultingDiplomaticRelationState="DiplomaticRelationStateMinorAdvancedAligned">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * 100 * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction)</CustomCost>
+
+    <PathPrerequisite Flags="Prerequisite,Discard" >ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Technology" UnlockHidden="true">TechnologyMinorFactionsGameplay</TechnologyPrerequisite>
+
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,Discard" Hidden="true" State="DiplomaticRelationStateMinorUnknown"/>
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,Discard" Hidden="true" State="DiplomaticRelationStateMinorAdvancedBrainwashed"/>
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,Discard" Hidden="true" State="DiplomaticRelationStateMinorAdvancedAligned"/>
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,CannotDoThisWhenAtWar" Hidden="true" State="DiplomaticRelationStateMinorAdvancedWar"/>
+
+    <RelationInterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @'ClassMinorRelationWithMajor', RelationPoint, true) ge 100 </RelationInterpreterPrerequisite>
+
+    <MinorEmpireInterpreterPrerequisite Flags="OwnershipType">$(OwnershipType) lt 2 or $(IsOwner) eq 1</MinorEmpireInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventMinorAlign</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>MinorEmpirePeaceDeclared</ScoreProviderEventOnSelf>
+  </CreateAllianceEmpireAction>
+</Datatable>

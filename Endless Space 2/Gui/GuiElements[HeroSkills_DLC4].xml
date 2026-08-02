@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!--TEMPLARS TREE-->
+    <ExtendedGuiElement Name="HeroSkillTreeTemplars">
+        <Title>%HeroSkillTreeTemplarsTitle</Title>
+        <Description>%HeroSkillTreeTemplarsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="/Atlased/Affinities/AffinityTemplarsSmall" />
+        </Icons>
+        <Color Red="231" Green="103" Blue="0" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <!--TEMPLARS SKILLS-->
+    <ExtendedGuiElement Name="HeroSkill01BranchTemplars">
+      <Title>%HeroSkill70_ApprovalFood_PercentFlat_Templars_Title</Title>
+      <Description>%HeroSkill70_ApprovalFood_PercentFlat_Templars_Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill70_ApprovalFood_PercentFlat_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill02BranchTemplars">
+      <Title>%HeroSkill02BranchTemplars_Title</Title>
+      <Description>%HeroSkill02BranchTemplars_Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill116_TroopBonus_Percent_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill03BranchTemplars">
+      <Title>%HeroSkill82_Influence_Percent_Title</Title>
+      <Description>%HeroSkill82_Influence_Percent_Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill82_Influence_Percent_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill04BranchTemplars">
+      <Title>%HeroSkillShip130_Fleet_Temple_Title</Title>
+        <Description>%HeroSkillShip130_Fleet_Temple_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill130_Ship_Fleet_Temple_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill05BranchTemplars">
+        <Title>%HeroSkillShip128_Probe_Title</Title>
+        <Description>%HeroSkillShip128_Probe_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill128_Ship_Probe_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill06BranchTemplars">
+       <Title>%HeroSkillShip129_Vision_Percent_Title</Title>
+        <Description>%HeroSkillShip129_Vision_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill129_Ship_Vision_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill07BranchTemplars">
+        <Title>%HeroSkillSystem131_System_Temple_Title</Title>
+        <Description>%HeroSkillSystem131_System_Temple_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill131_System_Temple_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <!--INDIVIDUAL SKILL
+    ###### MAJOR FACTION #####-->
+
+    <!--TEMPLARS-->
+
+    <!-- RELICS TREE -->
+
+    <ExtendedGuiElement Name="HeroSkillTreeRelics">
+      <Title>%HeroSkillTreeRelicsTitle</Title>
+      <Description>%HeroSkillTreeRelicsDescription</Description>
+      <Icons>
+        <Icon Size="Small" Path="/Atlased/Affinities/AffinityTemplarsSmall" />
+      </Icons>
+      <Color Red="231" Green="103" Blue="0" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="HeroSkill01BranchRelic">
+      <Title>%HeroSkill124_RelicSkill_Title</Title>
+      <Description>%HeroSkill124_RelicSkill_Description</Description>
+      <Icons>
+          <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill124_RelicSkill_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="HeroSkill02BranchRelic">
+      <Title>%HeroSkill125_RelicSkill_Title</Title>
+      <Description>%HeroSkill125_RelicSkill_Description</Description>
+      <Icons>
+          <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill125_RelicSkill_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="HeroSkill03BranchRelic">
+      <Title>%HeroSkill126_RelicSkill_Title</Title>
+      <Description>%HeroSkill126_RelicSkill_Description</Description>
+      <Icons>
+          <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill126_RelicSkill_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="HeroSkill04BranchRelic">
+      <Title>%HeroSkill127_RelicSkill_Title</Title>
+      <Description>%HeroSkill127_RelicSkill_Description</Description>
+      <Icons>
+          <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill127_RelicSkill_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HeroSkill_RelicBoost">
+    <Title>%HeroSkill_RelicBoost_Title</Title>
+    <Description>%HeroSkill_RelicBoost_Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill132_Relic_Small" />
+    </Icons>
+  </ExtendedGuiElement>
+</Datatable>

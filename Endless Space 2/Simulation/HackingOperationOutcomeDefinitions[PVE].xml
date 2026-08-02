@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HackingOperationOutcomeDefinition.xsd">
+
+    <!-- #################### -->
+    <!-- ## MAJOR ON MINOR ## -->
+    <!-- #################### -->
+
+    <HackingOperationOutcomeMinorRelationTemporaryEffectDefinition Name="HackingOperationOutcomeIncreaseMinorFactionRelation" Level="1" WarnIfMinorUnknown="true">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeMinor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="MinorRelationIncreaseFromHack"/>
+
+        <StatePrerequisite Inverted="true" Flags="CannotDoThisWhenAtWar" State="DiplomaticRelationStateMinorAdvancedWar"/>
+    </HackingOperationOutcomeMinorRelationTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeMinorSuzerainRelationTemporaryEffectDefinition Name="HackingOperationOutcomeDecreaseMinorFactionRelationWithSuzerain" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeMinor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="MinorRelationDecreaseFromHack"/>
+    </HackingOperationOutcomeMinorSuzerainRelationTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeMinorRelationTemporaryEffectDefinition Name="HackingOperationOutcomeReduceMinorFactionPraiseAssistCost" Level="1" WarnIfMinorUnknown="true">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeMinor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="MinorPraiseAndQuestCostReductionFromHack"/>
+
+        <StatePrerequisite Inverted="true" Flags="CannotDoThisWhenAtWar" State="DiplomaticRelationStateMinorAdvancedWar"/>
+    </HackingOperationOutcomeMinorRelationTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeMinorRelationTemporaryEffectDefinition Name="HackingOperationOutcomeIncreaseMinorFactionGains" Level="1" WarnIfMinorUnknown="true">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeMinor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="MinorGainsIncreaseFromHack"/>
+    </HackingOperationOutcomeMinorRelationTemporaryEffectDefinition>
+
+
+    <!-- ########################### -->
+    <!-- ## MAJOR ON PIRATE LAIRS ## -->
+    <!-- ########################### -->
+
+    <HackingOperationOutcomeTransferResourcesDefinition Name="HackingOperationOutcomeReducePirateReinforcements" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypePirate')</InterpreterPrerequisite>
+        <!-- ResourceTransfer parameters: Context/StockLocation = system, Empire = target, HackerEmpire = attacker -->
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <ResourceTransfer ResourceName="TurnsBeforeFleetSpawn">Property(Empire,GameSpeedMultiplier) * 4</ResourceTransfer>
+        <ResourceTransfer ResourceName="PirateReinforcements">-Min(Property(Empire,PirateReinforcementsStock,true),30)</ResourceTransfer>
+    </HackingOperationOutcomeTransferResourcesDefinition>
+
+    <HackingOperationOutcomeChangePirateRelationDefinition Name="HackingOperationOutcomeBoostPirateRelation" RelationPointsGain="15" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor,!FactionTraitPirateHaters</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypePirate')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeChangePirateRelationDefinition>
+
+    <HackingOperationOutcomeTemporaryEffectDefinition Name="HackingOperationOutcomeReducePirateActionsCost" ApplyOnHacker="true" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor,!FactionTraitPirateHaters</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypePirate')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="ReducedPirateActionsCost"/>
+    </HackingOperationOutcomeTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeStealPirateResourcesDefinition Name="HackingOperationOutcomeStealPirateResources" LootRatio="0.5" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypePirate')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeStealPirateResourcesDefinition>
+
+
+    <!-- ############################## -->
+    <!-- ## MINOR & PIRATES ON MAJOR ## -->
+    <!-- ############################## -->
+    <!-- If an outcome has a PathPrerequisite "!EmpireTypeMajor" it will be in the pool of Minor/Pirate outcomes. -->
+    <HackingOperationOutcomeTemporaryEffectDefinition Name="HackingOperationOutcomeScienceAndExplorationResearchMalus" Level="1">
+        <PathPrerequisite Flags="Discard">!EmpireTypeMajor</PathPrerequisite>
+        <PathPrerequisite Flags="Discard">!EmpireTypeAcademy</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="ScienceAndExplorationResearchMalus"/>
+    </HackingOperationOutcomeTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeTemporaryEffectDefinition Name="HackingOperationOutcomeEconomyAndTradeResearchMalus" Level="1">
+        <PathPrerequisite Flags="Discard">!EmpireTypeMajor</PathPrerequisite>
+        <PathPrerequisite Flags="Discard">!EmpireTypeAcademy</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="EconomyAndTradeResearchMalus"/>
+    </HackingOperationOutcomeTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeTemporaryEffectDefinition Name="HackingOperationOutcomeMilitaryResearchMalus" Level="1">
+        <PathPrerequisite Flags="Discard">!EmpireTypeMajor</PathPrerequisite>
+        <PathPrerequisite Flags="Discard">!EmpireTypeAcademy</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="MilitaryResearchMalus"/>
+    </HackingOperationOutcomeTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeTemporaryEffectDefinition Name="HackingOperationOutcomeEmpireDevelopmentResearchMalus" Level="1">
+        <PathPrerequisite Flags="Discard">!EmpireTypeMajor</PathPrerequisite>
+        <PathPrerequisite Flags="Discard">!EmpireTypeAcademy</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="EmpireDevelopmentResearchMalus"/>
+    </HackingOperationOutcomeTemporaryEffectDefinition>
+    
+    <HackingOperationOutcomeTemporaryEffectDefinition Name="HackingOperationOutcomeReducedConstructionRateFood" Level="1">
+        <PathPrerequisite Flags="Discard">!EmpireTypeMajor</PathPrerequisite>
+        <PathPrerequisite Flags="Discard">!EmpireTypeAcademy</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="SSIConstructionRateMalus"/>
+    </HackingOperationOutcomeTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeTemporaryEffectDefinition Name="HackingOperationOutcomeLawCostMalus" Level="1">
+        <PathPrerequisite Flags="Discard">!EmpireTypeMajor</PathPrerequisite>
+        <PathPrerequisite Flags="Discard">!EmpireTypeAcademy</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+        <TemporaryEffectReference Name="LawCostMalus"/>
+    </HackingOperationOutcomeTemporaryEffectDefinition>
+    
+</Datatable>

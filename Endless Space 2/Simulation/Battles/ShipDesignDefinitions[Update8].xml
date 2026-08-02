@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ShipDesignDefinition.xsd">
+
+
+    <!--######################## -->    
+    <!--######################## -->
+
+    <ShipDesignDefinition Name="MFPiratesMediumAttackAvgQuest01" Editable="false" Hidden="true">
+        <HullReference Name="HullMedium01MinorFactionPirates"/>
+        <ShipRoleReference Name="ShipRoleMediumAttacker"/>
+        <!-- Core -->
+        <SlotBinding SlotName="CoreSection.LargeWeapon01">
+            <ModuleReference Name="ModuleWeaponLaser1"/>
+        </SlotBinding>
+        <!-- S -->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <!-- E -->
+        <SlotBinding SlotName="SectionE.Defense01">
+            <ModuleReference Name="ModuleDefenseShield2"/>
+        </SlotBinding>
+        <!-- NE -->
+        <SlotBinding SlotName="SectionNE.Weapon01">
+            <ModuleReference Name="ModuleWeaponLaser2"/>
+        </SlotBinding>
+        <!-- SE -->
+        <SlotBinding SlotName="SectionSE.Support01">
+            <ModuleReference Name="ModuleSupportAnalyzerFakeQuest"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionSE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating2"/>
+        </SlotBinding>
+    </ShipDesignDefinition>
+  
+</Datatable>

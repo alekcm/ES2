@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+     <SimulationDescriptor Name="LawEffectP00L31-PopulationCollectionHarmony" Type="LawEffect">
+         <BinaryModifier TargetProperty="Happiness"  Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(OwnedStrategicDeposits)" SearchValueFromPath="true" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+  
+</Datatable>

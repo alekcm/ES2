@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/LawDefinition.xsd">
+
+    <!-- TODO: DEBUG -->
+
+    <!-- Note: Effects should only be given in the LawEffects. Do NOT reference descriptors in both Effects and at the end of the definition -->
+
+
+    <LawDefinition Name="LawP00PopulationCollectionSistersOfMercy" SubCategory="LawPolitics00" Duration="1">
+        <Politics Name="Politics00"/>
+        <LawEffectSimulation>
+            <SimulationDescriptorReference Name="LawEffectP00L25-PopulationCollectionSistersOfMercy"/>
+        </LawEffectSimulation>
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire/ClassPopulationEmpire,PopulationCollectionBonusSistersOfMercy3</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">GovernmentAnarchy</PathPrerequisite>
+        <SimulationDescriptorReference Name="LawPolitics00"/>
+    </LawDefinition>
+
+</Datatable>

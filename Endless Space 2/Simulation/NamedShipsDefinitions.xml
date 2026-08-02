@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/NamedShipsDefinition.xsd">
+
+  <NamedShipsDefinition Name="GrandAdmiral" >
+    <NamedShip AcademyRoleDescriptorName="AcademyRoleGrandAdmiral" ShipDesignDefinitionName="NameShipGrandAdmiral"/>
+    <CustomCost Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0)</CustomCost>
+    <CustomScrapSellValue Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0) * 0.5</CustomScrapSellValue>
+   </NamedShipsDefinition>
+
+  <NamedShipsDefinition Name="Librarian" >
+    <NamedShip AcademyRoleDescriptorName="AcademyRoleLibrarian" ShipDesignDefinitionName="NameShipLibrarian"/>
+    <CustomCost Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0)</CustomCost>
+    <CustomScrapSellValue Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0) * 0.5</CustomScrapSellValue>
+  </NamedShipsDefinition>
+
+  <NamedShipsDefinition Name="MasterOfDust" >
+    <NamedShip AcademyRoleDescriptorName="AcademyRoleMasterOfDust" ShipDesignDefinitionName="NameShipMasterOfDust"/>
+    <CustomCost Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0)</CustomCost>
+    <CustomScrapSellValue Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0) * 0.5</CustomScrapSellValue>
+  </NamedShipsDefinition>
+
+  <NamedShipsDefinition Name="VaultKeeper" >
+    <NamedShip AcademyRoleDescriptorName="AcademyRoleVaultKeeper" ShipDesignDefinitionName="NameShipVaultKeeper"/>
+    <CustomCost Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0)</CustomCost>
+    <CustomScrapSellValue Instant="true" ResourceName="EmpireMoney">(Property(Empire, @ClassEmpire, DustInflation) * (0.2 *  Property(Ship, @ClassShip, MaximumHealth)) / 10.0) * 0.5</CustomScrapSellValue>
+  </NamedShipsDefinition>
+
+</Datatable>

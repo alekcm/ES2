@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+    
+    
+      <SimulationDescriptor Name="PopulationCollectionBonusHarmony1" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics04ToPolitics04" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireAffinityHarmony"      TooltipOverride="%TooltipOverridePositivePolitics02"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusHarmony2" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="SystemResearchBonusFromCollection" Operation="Addition" Value="0.10" Path="../ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityHarmony" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusHarmony3" Type="PopulationCollectionBonus">
+    </SimulationDescriptor>
+  
+</Datatable>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- Actions. -->
+    <EntityActionGuiElement Name="RemoveTraitorsSystemAction">
+        <Title>%RemoveTraitorsSystemActionTitle</Title>
+        <Description>%RemoveTraitorsSystemActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="RemoveTraitorsSystemActionSmall" />
+        </Icons>
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="KillTraitorsSystemAction">
+        <Title>%KillTraitorsSystemActionTitle</Title>
+        <Description>%KillTraitorsSystemActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="KillTraitorsSystemActionSmall" />
+        </Icons>
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="RevealTraitorsSystemAction">
+        <Title>%RevealTraitorsSystemActionTitle</Title>
+        <Description>%RevealTraitorsSystemActionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="RevealTraitorsSystemActionSmall" />
+        </Icons>
+    </EntityActionGuiElement>
+
+    <ExtendedGuiElement Name="DisplacementSystemAction">
+        <Title>%DisplacementSystemActionTitle</Title>
+        <Description>%DisplacementSystemActionDescription</Description>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="DecolonizeGhostAction">
+        <Title>%DecolonizeGhostActionTitle</Title>
+        <Description>%DecolonizeGhostActionDescription</Description>
+    </ExtendedGuiElement>
+
+    
+    <!-- Action effect overrides. -->
+    <ExtendedGuiElement Name="StarSystemActionRemoveTraitors">
+        <Title>%RemoveTraitorsSystemActionTitle</Title>
+        <TooltipElement TargetPropertyNameOverride="FakeToAvoidBeingFilteredOut">
+            <EffectOverride>%RemoveTraitorsSystemActionEffectFormat</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemActionKillTraitors">
+        <Title>%KillTraitorsSystemActionTitle</Title>
+        <TooltipElement>
+            <EffectOverride>%KillTraitorsSystemActionEffectFormat</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemActionRevealTraitors">
+        <Title>%StarSystemActionRevealTraitorsTitle</Title>
+        <TooltipElement>
+            <EffectOverride>%StarSystemActionRevealTraitorsEffectFormat</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+</Datatable>

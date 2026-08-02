@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/IndustryConstructibleElement.xsd">
+
+    <PlanetColonizationConstructibleElement Name="PlanetTypeFakeColonization" Category="CategoryPlanetColonization"     SubCategory="PlanetColonization" PlanetType="PlanetTypeFake">
+        <SupervisorGain Name="Food" Weight="0.25"/>
+        <SupervisorGain Name="Industry" Weight="0.25"/>
+        <SupervisorGain Name="Dust" Weight="0.25"/>
+        <SupervisorGain Name="Science" Weight="0.25"/>
+        <InProgressSimulationDescriptorReference Name="PlanetStatusBeingColonized"/>
+        <CustomCost ResourceName="SystemProduction">160 * Property(StockLocation, @'ClassColonizedStarSystem', OwnedPlanets)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+    </PlanetColonizationConstructibleElement>
+
+    <PlanetColonizationConstructibleElement Name="PlanetTypeDestroyedColonization"    Category="CategoryPlanetColonization"     SubCategory="PlanetColonization" PlanetType="PlanetTypeDestroyed">
+        <SupervisorGain Name="Industry" Weight="1"/>
+        <InProgressSimulationDescriptorReference Name="PlanetStatusBeingColonized"/>
+        <Cost ResourceName="SystemProduction">640</Cost>
+        <PathPrerequisite Flags="Prerequisite,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Technology">TechnologyDiplomacy2</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+        <PopulationEvent Name="PopulationPoliticalEventColonizationDestroyed"/>
+    </PlanetColonizationConstructibleElement>
+    
+    <PlanetColonizationConstructibleElement Name="PlanetTypeDestroyedGasColonization"    Category="CategoryPlanetColonization"     SubCategory="PlanetColonization" PlanetType="PlanetTypeDestroyedGas">
+        <InProgressSimulationDescriptorReference Name="PlanetStatusBeingColonized"/>
+        <Cost ResourceName="SystemProduction">640</Cost>
+        <PathPrerequisite Flags="Prerequisite,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyDiplomacy2</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+        <PopulationEvent Name="PopulationPoliticalEventColonizationDestroyedGas"/>
+    </PlanetColonizationConstructibleElement>
+
+</Datatable>

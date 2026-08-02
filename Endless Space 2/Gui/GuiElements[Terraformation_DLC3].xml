@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- FAKE PLANET SIZE TERRAFORMATION -->
+    <ExtendedGuiElement Name="PlanetTerraformationFromSmallFakeToMediumFake">
+        <Title>%PlanetTerraformationFromSmallFakeToMediumFakeTitle</Title>
+        <Description>%PlanetTerraformationFromSmallFakeToMediumFakeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeMediumLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeMediumLarge"/>
+        </Icons>
+        <AltTitle>%PlanetTypeFakeTitle</AltTitle>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="PlanetTerraformationFromMediumFakeToLargeFake">
+        <Title>%PlanetTerraformationFromMediumFakeToLargeFakeTitle</Title>
+        <Description>%PlanetTerraformationFromMediumFakeToLargeFakeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLargeLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeLargeLarge"/>
+        </Icons>
+        <AltTitle>%PlanetTypeFakeTitle</AltTitle>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="PlanetTerraformationFromLargeFakeToHugeFake">
+        <Title>%PlanetTerraformationFromLargeFakeToHugeFakeTitle</Title>
+        <Description>%PlanetTerraformationFromLargeFakeToHugeFakeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeHugeLarge"/>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeFakeHugeLarge"/>
+        </Icons>
+        <AltTitle>%PlanetTypeFakeTitle</AltTitle>
+    </ExtendedGuiElement>
+
+</Datatable>

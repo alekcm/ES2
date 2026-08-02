@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HonorThresholdSetDefinition.xsd">
+
+    <!--
+            MinValue|MaxValue = -1 // Ignore Value.
+            Example: MinValue=80, MaxValue=-1 -> Range=[85;+inf[
+    -->
+
+    <!--#################################-->
+    <!--#            EMPIRE             #-->
+    <!--#################################-->
+
+    <HonorThresholdSetDefinition Name="HonorThresholdSetEmpireDefault" Class="ClassEmpire">
+
+        <!-- Shameful -->
+        <HonorThresholdDefinition Name="HonorThresholdEmpire0" MinValue="0" MaxValue="11">
+            <!-- TODO : Add Descriptors -->
+        </HonorThresholdDefinition>
+
+        <!-- Dishonored -->
+        <HonorThresholdDefinition Name="HonorThresholdEmpire1" MinValue="11" MaxValue="37">
+            <!-- TODO : Add Descriptors -->
+        </HonorThresholdDefinition>
+
+        <!-- Well-known -->
+        <HonorThresholdDefinition Name="HonorThresholdEmpire2" MinValue="37" MaxValue="63">
+            <!-- TODO : Add Descriptors -->
+        </HonorThresholdDefinition>
+
+        <!-- Honored -->
+        <HonorThresholdDefinition Name="HonorThresholdEmpire3" MinValue="63" MaxValue="89">
+            <!-- TODO : Add Descriptors -->
+        </HonorThresholdDefinition>
+
+        <!-- Exalted -->
+        <HonorThresholdDefinition Name="HonorThresholdEmpire4" MinValue="89" MaxValue="-1">
+            <!-- TODO : Add Descriptors -->
+        </HonorThresholdDefinition>
+
+    </HonorThresholdSetDefinition>
+
+</Datatable>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Droplist.xsd">
+
+    <!-- #####################################-->
+    <!-- #########     UPDATE 5    ###########-->
+    <!-- #####################################-->
+
+    <Droplist Name="DescriptorNameEventRemnant" Selector="Weighted" RetryOnFailure="true">
+        <String Value="QuestDescriptorRemnantAccepted"  Weight="4"/>
+        <String Value="QuestDescriptorRemnantChaos" Weight="1"/>
+    </Droplist>
+
+    <Droplist Name="Droplist_ExplorationQuest18-19_A" Picks="1" Fallback="DroplistTechnology">
+        <Unlock Name="ModuleSquadronBomberEnergy3Strategic4" SimulationTag="CompletedExplorationQuest18-19_A"/>
+    </Droplist>
+    <Droplist Name="Droplist_ExplorationQuest18-19_B" Picks="1" Fallback="DroplistTechnology">
+        <Unlock Name="ModuleSquadronFighterEnergy3Strategic4" SimulationTag="CompletedExplorationQuest18-19_B"/>
+    </Droplist>
+</Datatable>

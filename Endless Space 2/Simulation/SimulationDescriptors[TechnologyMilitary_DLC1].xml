@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- STAGE 2 -->
+    <SimulationDescriptor Name="TechnologyDefenseModule1Vaulters" Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyDefense1Vaulters" Type="Technology" IsSerializable="false"/>
+    
+    <SimulationDescriptor Name="TechnologyWeaponModuleAOE1"                  Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyWeaponModuleBoardingPod1"          Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyWeaponModuleBoardingPod2"          Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyWeaponModuleBoardingPod2Vaulters"  Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyDefenseModuleBoardingDefense1"     Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyWeaponModuleMissileEMP1"           Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyWeaponModuleBeamEMP1"              Type="Technology" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyLinkTo33Cravers" Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo33Corsairs" Type="Technology" IsSerializable="false"/>    
+    <SimulationDescriptor Name="TechnologyLinkTo19" Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo19Corsairs" Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo19Cravers" Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo19CraversCorsairs" Type="Technology" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyLinkMilitary33To19"                      Type="TechnologyLink"/>
+
+</Datatable>

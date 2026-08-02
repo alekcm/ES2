@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+  <!-- ########################################## -->
+  <!-- ######        MINOR FACTIONS        ###### -->
+  <!-- ########################################## -->
+
+  <!-- Minor -->
+  <FactionTrait Name="FactionTraitMinorBonusDamageOnAcademy" SubCategory="FactionTrait" Hidden="false" Cost="0">
+    <SimulationDescriptorReference Name="FactionTraitMinorBonusDamageOnAcademy"/>
+  </FactionTrait>
+    <FactionTrait Name="FactionTraitMinorBonusContributionToAcademy" SubCategory="FactionTrait" Hidden="false" Cost="0">
+        <SimulationDescriptorReference Name="FactionTraitMinorBonusContributionToAcademy"/>
+    </FactionTrait>
+
+</Datatable>

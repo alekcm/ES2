@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TechnologyLinkDefinition.xsd">
+  <!-- Vaulters -->
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique2Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2Vaulters</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull1Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique2Vaulters"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique3Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2Vaulters</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull2Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique3Vaulters"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique4ToUnique6Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull4Vaulters</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull3Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique4ToUnique6Vaulters"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique5ToUnique7Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull5Vaulters</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull4Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique5ToUnique7Vaulters"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique8ToUnique9Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull6Vaulters</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull5Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique8ToUnique9Vaulters"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEconomyAndTrade25To8Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyStrategicResourceGeneration1</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization13</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEconomyAndTrade25To8"/>
+  </TechnologyLinkDefinition>
+
+  <!-- Obsolete links -->
+  <!--<TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExploration25To6Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization3Vaulters</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization9Vaulters</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkScienceAndExploration25To6Vaulters"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExploration25To6VaultersNoPortals" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization3VaultersNoPortals</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization9VaultersNoPortals</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkScienceAndExploration25To6Vaulters"/>
+    </TechnologyLinkDefinition>
+
+    <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExploration25To6VaultersNoVaultersPopulation" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization3VaultersNoVaultersPopulation</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization9VaultersNoVaultersPopulation</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkScienceAndExploration25To6Vaulters"/>
+    </TechnologyLinkDefinition>-->
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExploration28To6Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo6Vaulters</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo28CommonVaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkScienceAndExploration28To6"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExploration28To6VaultersNoPortals" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo6VaultersNoPortals</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo28CommonVaultersNoPortals</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkScienceAndExploration28To6"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExploration28To6VaultersNoVaultersPopulation" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo6VaultersNoVaultersPopulation</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo28CommonVaultersNoVaultersPopulation</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkScienceAndExploration28To6"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExploration2To4Vaulters" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo2Vaulters</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyFreeMovementVaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkScienceAndExploration2To4"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionMilitary33To19" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyWeaponModuleBoardingPod1</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo19</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkMilitary33To19"/>
+  </TechnologyLinkDefinition>
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionMilitary33To19Cravers" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo33Cravers</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo19Cravers</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkMilitary33To19"/>
+  </TechnologyLinkDefinition>
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionMilitary33To19Corsairs" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo33Corsairs</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo19Corsairs</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkMilitary33To19"/>
+  </TechnologyLinkDefinition>
+
+</Datatable>

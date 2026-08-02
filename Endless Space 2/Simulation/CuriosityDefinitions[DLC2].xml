@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/CuriosityDefinition.xsd">
+
+    <CuriosityDefinition Name="Curiosity_Remains_Encounter" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeRemainsEncounter"
+                    Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <VisibilityPrerequisites>
+            <InterpreterPrerequisite Flags="Visibility">Property(Context, DetectionLevel) ge 1</InterpreterPrerequisite>
+        </VisibilityPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRemains_Encounter"/>
+        </DroplistEffect>
+        <PopulationEvent Name="PopulationPoliticalEventCuriosityTypeAtmospheric"/>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Remains_GroundBattle" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeRemainsGroundBattle"
+                    Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <VisibilityPrerequisites>
+            <InterpreterPrerequisite Flags="Visibility">Property(Context, DetectionLevel) ge 1</InterpreterPrerequisite>
+        </VisibilityPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRemains_GroundBattle"/>
+        </DroplistEffect>
+        <PopulationEvent Name="PopulationPoliticalEventCuriosityTypeUnderground"/>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Remains_PirateLair" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeRemainsPirateLair"
+                    Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <VisibilityPrerequisites>
+            <InterpreterPrerequisite Flags="Visibility">Property(Context, DetectionLevel) ge 1</InterpreterPrerequisite>
+        </VisibilityPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRemains_PirateLair"/>
+        </DroplistEffect>
+        <PopulationEvent Name="PopulationPoliticalEventCuriosityTypeRuins"/>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Remains_MinorFaction" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeRemainsMinorFaction"
+                    Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <VisibilityPrerequisites>
+            <InterpreterPrerequisite Flags="Visibility">Property(Context, DetectionLevel) ge 1</InterpreterPrerequisite>
+        </VisibilityPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRemains_MinorFaction"/>
+        </DroplistEffect>
+        <PopulationEvent Name="PopulationPoliticalEventCuriosityTypeLifeform"/>
+    </CuriosityDefinition>
+
+</Datatable>

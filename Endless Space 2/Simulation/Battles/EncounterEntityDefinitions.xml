@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/EncounterEntityDefinition.xsd">
+
+    <!-- DUMMY EXAMPLE DATA -->
+    <!-- Encounter entities can be added to the arenas if they are referenced by entities such as system improvements or anomalies-->
+    <!-- For them to spawn, an AdditionalEntitySpot must be available on the arena. These spots can be declared in the arena definition-->
+    <EncounterEffectArea Name="EffectAreaNebula">
+        <SimulationDescriptorReference Name="EffectAreaTypeNebula"/>
+        <EntityFilter EntityType="Ship" EntityTags="Alive">
+        </EntityFilter>
+        <!--<BattleActionReference Name="EffectArea_Test01"/>-->
+    </EncounterEffectArea>
+        
+</Datatable>

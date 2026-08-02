@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- Factions Starting Planets -->
+    <GuiElement Name="UniquePlanetTemplars">
+        <Title>%UniquePlanetTemplarsTitle</Title>
+        <Description>%UniquePlanetTemplarsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Notifications/UniquePlanetTemplarsSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/UniquePlanetTemplarsMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeTemplarsLarge" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Notifications/PlanetTypeUniqueTemplarsLarge" />
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeSteppesPlanetoid"/>
+        </Icons>
+    </GuiElement>
+
+</Datatable>

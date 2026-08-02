@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitPrimaryHappinessTemple" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationHappiness"        Operation="Addition"    Value="2"   Path="FAKEFORGUI/./PlanetWithTemple"  />
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			 Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationHappiness"        Operation="Addition"    Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetHasTemple)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitPrimaryHappinessTemple" Type="ClassPopulationPlanet">
+        <Modifier           TargetProperty="BonusPopulationHappiness"    Operation="Addition"    Value="2"   Path="FAKEFORGUI/./PlanetWithTemple"  />
+        <BinaryModifier     TargetProperty="BonusPopulationHappiness"    Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PlanetHasTemple)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+	<!-- FIDSI on Happy -->
+	<SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryFIDSIHappy" Type="ClassPopulationPlanet">
+		<Modifier TargetProperty="BonusPopulationFIDSI" Operation="Addition" Value="2" Path="FAKEFORGUI/./ClassColonizedStarSystem,HappinessStatusStarSystem3OrAbove"/>
+		<Modifier TargetProperty="BonusPopulationFIDSI" Operation="Addition" Value="2" Path="FAKEFORGUI/./ClassColonizedStarSystem,ObedienceStatusStarSystem3OrAbove"/>
+		<BinaryModifier TargetProperty="BonusPopulationFIDSI" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(HappinessStarSystemIsHappy)" TooltipHidden="true"/>
+	</SimulationDescriptor>
+
+	<SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryFIDSIHappy" Type="WithPopulationPlanet">
+		<Modifier TargetProperty="BonusPopulationFIDSI"		  Operation="Addition" Value="2" Path="FAKEFORGUI/./ClassColonizedStarSystem,HappinessStatusStarSystem3OrAbove"/>
+		<Modifier TargetProperty="BonusPopulationFIDSI"		  Operation="Addition" Value="2" Path="FAKEFORGUI/./ClassColonizedStarSystem,ObedienceStatusStarSystem3OrAbove"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue1"  Operation="Addition"  Left="2" BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationFIDSI" Operation="Addition"  Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(HappinessStarSystemIsHappy)" TooltipHidden="true"/>
+	</SimulationDescriptor>
+
+	<SimulationDescriptor Name="ClassPopulationAssimilatedPrimaryHappinessTemple" Type="ClassPopulationAssimilated">
+		<Modifier       TargetProperty="BonusPopulationHappiness"        Operation="Addition" Value="1" Path="ClassPopulation"/>
+	</SimulationDescriptor>	
+
+	<SimulationDescriptor Name="ClassPopulationAssimilatedSecondaryFIDSIHappy" Type="ClassPopulationAssimilated">
+		<Modifier TargetProperty="BonusPopulationFIDSI" Operation="Addition" Value="1" Path="ClassPopulation"/>
+	</SimulationDescriptor>
+
+	<!-- Dust on Happy -->
+	<SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryDustHappyEpic" Type="ClassPopulationPlanet">
+		<Modifier		TargetProperty="BonusPopulationDust"	    Operation="Addition" Value="4"  Path="FAKEFORGUI/./ClassColonizedStarSystem,HappinessStatusStarSystem3OrAbove"/>
+		<Modifier		TargetProperty="BonusPopulationDust"	    Operation="Addition" Value="4"  Path="FAKEFORGUI/./ClassColonizedStarSystem,ObedienceStatusStarSystem3OrAbove"/>
+		<BinaryModifier TargetProperty="BonusPopulationDust"		Operation="Addition" Left="4"   BinaryOperation="Multiplication" Right="$(HappinessStarSystemIsHappy)" TooltipHidden="true"/>
+	</SimulationDescriptor>
+
+	<SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryDustHappyEpic" Type="WithPopulationPlanet">
+		<Modifier		TargetProperty="BonusPopulationDust"	    Operation="Addition" Value="4"  Path="FAKEFORGUI/./ClassColonizedStarSystem,HappinessStatusStarSystem3OrAbove"/>
+		<Modifier		TargetProperty="BonusPopulationDust"	    Operation="Addition" Value="4"  Path="FAKEFORGUI/./ClassColonizedStarSystem,ObedienceStatusStarSystem3OrAbove"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue1"	    Operation="Addition" Left="4"   BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationDust"	    Operation="Addition" Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(HappinessStarSystemIsHappy)" TooltipHidden="true"/>
+	</SimulationDescriptor>
+
+	<SimulationDescriptor Name="ClassPopulationAssimilatedPlanetSecondaryDustHappyEpic" Type="ClassPopulationAssimilated">
+		<Modifier       TargetProperty="BonusPopulationDust"        Operation="Addition"    Value="2" Path="ClassPopulation"/>
+	</SimulationDescriptor>
+</Datatable>

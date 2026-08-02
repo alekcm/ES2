@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+
+    <FactionTrait Name="FactionTraitMinorHarmony" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartHarmony" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+        <Command Name="AddMinorPopulation" Arguments="AffinityHarmony,1" Priority="100"/>
+        <SimulationDescriptorReference Name="FactionTraitMinorHarmony"/>
+        <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorSowers,!FactionTraitMinorSefaloros,!FactionTraitMinorGalvrans,!FactionTraitMinorKalTikMas,!FactionTraitMinorIllo,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites> 
+    </FactionTrait>
+    
+</Datatable>

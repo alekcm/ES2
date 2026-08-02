@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/AcademyReparationScoresDefinition.xsd">
+
+  <AcademyReparationScoresDefinition Name="EventGroundBattleCreated"                     ReparationPointToAdd="20" ReparationAngerToAdd="4"  />
+  <AcademyReparationScoresDefinition Name="EventFleetGotAttackedByAnEnemy"               ReparationPointToAdd="10" ReparationAngerToAdd="2"  RelationPointChange="-15" MaxResultingRelationPoints="-15" />
+  <AcademyReparationScoresDefinition Name="EventAcademyImprovementScrapped"              ReparationPointToAdd="10" ReparationAngerToAdd="2"  />
+  <AcademyReparationScoresDefinition Name="EventResourcesTransferStartedOnSystem"        ReparationPointToAdd="10" ReparationAngerToAdd="2"  />
+  <AcademyReparationScoresDefinition Name="EventSystemGainedFromInfluence"               ReparationPointToAdd="45" ReparationAngerToAdd="10" />
+
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeCapture"                   ReparationPointToAdd="30" ReparationAngerToAdd="5"  RelationPointChange="-50" MaxResultingRelationPoints="-50" />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeCaptureMajorHisshos"       ReparationPointToAdd="30" ReparationAngerToAdd="5"  RelationPointChange="-50" MaxResultingRelationPoints="-50" />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeLoot"                      ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeLootVampirilis"            ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeLootMajorHisshos"          ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeLootHoratio"               ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeRaze"                      ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeRazeVampirilis"            ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeRazeMajorHisshos"          ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeRazeCravers"               ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="GroundBattleOutcomeCaptureDLC4"               ReparationPointToAdd="30" ReparationAngerToAdd="5"  RelationPointChange="-50" MaxResultingRelationPoints="-50" />
+
+  <AcademyReparationScoresDefinition Name="EventObliteratorProjectileImpactOnStarSystem" ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="EventIonWaveReport"                           ReparationPointToAdd="30" ReparationAngerToAdd="5"  RelationPointChange="-15" MaxResultingRelationPoints="-15" />
+  <AcademyReparationScoresDefinition Name="EventPlanetDestroyed"                         ReparationPointToAdd="30" ReparationAngerToAdd="5"  />
+  <AcademyReparationScoresDefinition Name="EventHackingOperationTraceSuccessful"         ReparationPointToAdd="10" ReparationAngerToAdd="5"  />
+  
+</Datatable>

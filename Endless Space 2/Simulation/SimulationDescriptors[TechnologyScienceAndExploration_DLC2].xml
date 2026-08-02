@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- GENERAL -->
+    <SimulationDescriptor Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage2" Type="TechnologyCount" IsSerializable="false">
+        <Modifier TargetProperty="EmpireTechScore"              Value="6" Operation="Addition"  TooltipHidden="true" Path="./ClassEmpire"     />
+        <Modifier TargetProperty="JuggernautTechnologiesResearched"  Operation="Addition"   Value="1"     Path="./ClassEmpire"/>
+        <Modifier TargetProperty="QuadrantScienceAndExplorationStage2UnlockedTechnologyCount"    Value="1"  Operation="Addition"  TooltipHidden="true"     />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage3" Type="TechnologyCount" IsSerializable="false">
+        <Modifier TargetProperty="EmpireTechScore"              Value="8" Operation="Addition"  TooltipHidden="true" Path="./ClassEmpire"     />
+        <Modifier TargetProperty="JuggernautTechnologiesResearched"  Operation="Addition"   Value="1"     Path="./ClassEmpire"/>
+        <Modifier TargetProperty="QuadrantScienceAndExplorationStage3UnlockedTechnologyCount"    Value="1"  Operation="Addition"  TooltipHidden="true"     />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage4" Type="TechnologyCount" IsSerializable="false">
+        <Modifier TargetProperty="EmpireTechScore"              Value="10" Operation="Addition"  TooltipHidden="true" Path="./ClassEmpire"     />
+        <Modifier TargetProperty="JuggernautTechnologiesResearched"  Operation="Addition"   Value="1"     Path="./ClassEmpire"/>
+        <Modifier TargetProperty="QuadrantScienceAndExplorationStage4UnlockedTechnologyCount"    Value="1"  Operation="Addition"  TooltipHidden="true"     />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage5" Type="TechnologyCount" IsSerializable="false">
+        <Modifier TargetProperty="EmpireTechScore"              Value="12" Operation="Addition"  TooltipHidden="true" Path="./ClassEmpire"     />
+        <Modifier TargetProperty="JuggernautTechnologiesResearched"  Operation="Addition"   Value="1"     Path="./ClassEmpire"/>
+        <Modifier TargetProperty="QuadrantScienceAndExplorationStage5UnlockedTechnologyCount"    Value="1"  Operation="Addition"  TooltipHidden="true"     />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage6" Type="TechnologyCount" IsSerializable="false">
+        <Modifier TargetProperty="EmpireTechScore"              Value="14" Operation="Addition"  TooltipHidden="true" Path="./ClassEmpire"     />
+        <Modifier TargetProperty="JuggernautTechnologiesResearched"  Operation="Addition"   Value="1"     Path="./ClassEmpire"/>
+        <Modifier TargetProperty="QuadrantScienceAndExplorationStage6UnlockedTechnologyCount"    Value="1"  Operation="Addition"  TooltipHidden="true"     />
+    </SimulationDescriptor>
+
+    <!-- STAGE 2 -->
+    <SimulationDescriptor Name="TechnologyJuggernautMovement1"  Type="Technology" IsSerializable="false" />
+    <SimulationDescriptor Name="TechnologyJuggernautVision1"    Type="Technology" IsSerializable="false" />
+    <SimulationDescriptor Name="TechnologyHonorHisshos"         Type="Technology" IsSerializable="false" />
+    
+    <!-- STAGE 3 -->
+    <!-- Research + anomaly reduc -->
+    <SimulationDescriptor Name="TechnologyJuggernautResearch1"  Type="Technology" IsSerializable="false" />
+
+    <!-- STAGE 4 -->
+    <!-- Analyzer + terraform -->
+    <SimulationDescriptor Name="TechnologyJuggernautResearch2"  Type="Technology" IsSerializable="false" />
+
+    <!-- STAGE 5 -->
+    <!-- Research adv + terraform adv -->
+    <SimulationDescriptor Name="TechnologyJuggernautResearch3"  Type="Technology" IsSerializable="false" />
+    
+    <!-- LINKS -->
+    <SimulationDescriptor Name="TechnologyLinkToScienceAndExplorationJuggernaut3"       Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkToScienceAndExplorationJuggernaut4"       Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkToScienceAndExplorationJuggernaut5"       Type="Technology" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyLinkScienceAndExplorationJuggernaut3To4"      Type="TechnologyLink" />
+    <SimulationDescriptor Name="TechnologyLinkScienceAndExplorationJuggernaut4To5"      Type="TechnologyLink" />
+
+</Datatable>

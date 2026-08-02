@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="LawEffectP00L25-PopulationCollectionMinorHacking" Type="LawEffect">
+        <Modifier TargetProperty="MaximumEmpireProcessingPowerStock" Operation="Percent" Value="0.2" Path="../ClassEmpire" SearchValueFromPath="true" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L32-QuestUC" Type="LawEffect">
+        <BinaryModifier  TargetProperty="SystemProduction"  Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(TraitorsCount)"  Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral"            Operation="Addition"        Value="1"     Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L32-QuestUCRepublic" Type="LawEffect">
+        <BinaryModifier  TargetProperty="SystemProduction"  Operation="Addition" Left="10" BinaryOperation="Multiplication" Right="$(TraitorsCount)"  Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L33-QuestUC" Type="LawEffect">
+        <BinaryModifier TargetProperty="EmpireEmpirePoint" Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(TraitorsCount)" Path="../ClassEmpire" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral"            Operation="Addition"        Value="1"     Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L33-QuestUCRepublic" Type="LawEffect">
+        <BinaryModifier TargetProperty="EmpireEmpirePoint" Operation="Addition" Left="6" BinaryOperation="Multiplication" Right="$(TraitorsCount)" Path="../ClassEmpire" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L34-QuestUC" Type="LawEffect">
+        <BinaryModifier TargetProperty="HackingWarpSpeed"       Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(BackdoorCount)" Path="../ClassEmpire" SearchValueFromPath="true" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="HackingNonWarpSpeed"    Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(BackdoorCount)" Path="../ClassEmpire" SearchValueFromPath="true" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="HackingNodeSpeed"       Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(BackdoorCount)" Path="../ClassEmpire" SearchValueFromPath="true" />
+        <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral"            Operation="Addition"        Value="1"     Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L34-QuestUCRepublic" Type="LawEffect">
+        <BinaryModifier TargetProperty="HackingWarpSpeed"       Operation="Percent" Left="0.1" BinaryOperation="Multiplication" Right="$(BackdoorCount)" Path="../ClassEmpire" SearchValueFromPath="true" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="HackingNonWarpSpeed"    Operation="Percent" Left="0.1" BinaryOperation="Multiplication" Right="$(BackdoorCount)" Path="../ClassEmpire" SearchValueFromPath="true" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="HackingNodeSpeed"       Operation="Percent" Left="0.1" BinaryOperation="Multiplication" Right="$(BackdoorCount)" Path="../ClassEmpire" SearchValueFromPath="true" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L35-QuestUC" Type="LawEffect">
+        <Modifier TargetProperty="BackdoorProcessingPowerMultiplier" Operation="Percent" Value="-0.75" Path="../ClassEmpire/ClassHacking/ClassHackingOperationBackdoor" TooltipOverride="%LawP00QuestUC04Effect"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral"            Operation="Addition"        Value="1"     Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L35-QuestUCRepublic" Type="LawEffect">
+        <Modifier TargetProperty="BackdoorProcessingPowerMultiplier" Operation="Percent" Value="-0.85" Path="../ClassEmpire/ClassHacking/ClassHackingOperationBackdoor" TooltipOverride="%LawP00QuestUC04RepublicEffect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP01L01UmbralChoir" Type="LawEffect">
+        <Modifier       TargetProperty="BoostHappinessOnColonies"           Operation="Addition"    Value="1"       Path="../ClassEmpire" TooltipHidden="true" />
+        <Modifier       TargetProperty="NetSystemGrowth"                    Operation="Addition"    Value="20"      Path="../ClassEmpire/ColonizedStarSystemStateGhost"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasIndustrialist" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP01L01UmbralChoirRepublic" Type="LawEffect">
+        <Modifier       TargetProperty="BoostHappinessOnColonies"           Operation="Addition"    Value="1"  Path="../ClassEmpire" TooltipHidden="true" />
+        <Modifier       TargetProperty="HappinessFromExpansion"             Operation="Addition"    Value="10" Path="../ClassEmpire/ColonizedStarSystem,TemporaryEffectColonyHappinessBoost" TooltipHidden="true" />
+        <Modifier       TargetProperty="NetSystemGrowth"                    Operation="Addition"    Value="30" Path="../ClassEmpire/ColonizedStarSystemStateGhost"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP04L02UmbralChoir" Type="LawEffect">
+      <BinaryModifier       TargetProperty="PlanetFood"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+        <BinaryModifier       TargetProperty="NetSystemGrowth"  Operation="Addition" Left="2"  BinaryOperation="Multiplication" Right="$(SuperPopulationCount)" Path="../ClassEmpire/BestSystem" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasEcologist" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP04L02UmbralChoirRepublic" Type="LawEffect">
+        <BinaryModifier       TargetProperty="PlanetFood"    Operation="Addition" Left="4" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+        <BinaryModifier       TargetProperty="NetSystemGrowth"  Operation="Addition" Left="4"  BinaryOperation="Multiplication" Right="$(SuperPopulationCount)" Path="../ClassEmpire/BestSystem" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP04L03UmbralChoir" Type="LawEffect">
+      <BinaryModifier TargetProperty="SystemResearch"               Operation="Percent"     Left="0.01" BinaryOperation="Multiplication" Right="$(BackdoorCount)"    Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+      <BinaryModifier TargetProperty="SystemProduction"             Operation="Percent"     Left="0.01" BinaryOperation="Multiplication" Right="$(BackdoorCount)"    Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true" />
+      <Modifier TargetProperty="DemocracyLawsDiversityHasEcologist" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP04L03UmbralChoirRepublic" Type="LawEffect">
+        <BinaryModifier TargetProperty="SystemResearch"               Operation="Percent"     Left="0.02" BinaryOperation="Multiplication" Right="$(BackdoorCount)"    Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+        <BinaryModifier TargetProperty="SystemProduction"             Operation="Percent"     Left="0.02" BinaryOperation="Multiplication" Right="$(BackdoorCount)"    Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP04L04UmbralChoir" Type="LawEffect">
+        <BinaryModifier TargetProperty="EmpireManpower"                     Operation="Addition" Left="20"  BinaryOperation="Multiplication" Right="$(SuperPopulationCount)" Path="../ClassEmpire" SearchValueFromPath="true"/>
+        <BinaryModifier TargetProperty="SystemFIDSIFlat"                    Operation="Addition" Left="10"  BinaryOperation="Multiplication" Right="$(SuperPopulationCount)" Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasEcologist"       Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP04L04UmbralChoirRepublic" Type="LawEffect">
+        <BinaryModifier TargetProperty="EmpireManpower"                     Operation="Addition" Left="30"  BinaryOperation="Multiplication" Right="$(SuperPopulationCount)" Path="../ClassEmpire" SearchValueFromPath="true"/>
+        <BinaryModifier TargetProperty="SystemFIDSIFlat"                    Operation="Addition" Left="15"  BinaryOperation="Multiplication" Right="$(SuperPopulationCount)" Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP05L02UmbralChoir" Type="LawEffect">
+        <Modifier TargetProperty="BonusPopulationDust"          Operation="Addition"     Value="5"       Path="../ClassEmpire/ClassColonizedStarSystem/ClassPlanet/ClassPopulation,PopulationMajor"/>
+        <Modifier TargetProperty="NetSystemGrowth"              Operation="Percent"      Value="0.1"     Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasReligious" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP05L02UmbralChoirRepublic" Type="LawEffect">
+        <Modifier TargetProperty="BonusPopulationDust"          Operation="Addition"     Value="10"       Path="../ClassEmpire/ClassColonizedStarSystem/ClassPlanet/ClassPopulation,PopulationMajor"/>
+        <Modifier TargetProperty="NetSystemGrowth"              Operation="Percent"      Value="0.15"     Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP05L04UmbralChoir" Type="LawEffect">
+        <BinaryModifier TargetProperty="SystemFIDSIPercent"           Operation="Addition"      Left="0.01" BinaryOperation="Multiplication" Right="$(TraitorsCount)"    Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="DemocracyLawsDiversityHasReligious" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP05L04UmbralChoirRepublic" Type="LawEffect">
+      <BinaryModifier TargetProperty="SystemFIDSIPercent"           Operation="Addition"      Left="0.02" BinaryOperation="Multiplication" Right="$(TraitorsCount)"    Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+</Datatable>

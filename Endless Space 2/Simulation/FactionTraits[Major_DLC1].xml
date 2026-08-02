@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+	<!-- Vaulters "The Argosy" trait -->
+	<FactionTrait Name="FactionTraitManualHomeSystem"   SubCategory="FactionTrait" TraitCategory="TraitCategoryStartModifiers" TraitSubCategory="TraitSubCategoryManualHomeSystem" Family="FactionTraitFamilyStartModifiers"  Hidden="false" Custom="true" Cost="10">
+        <Command Name="RevealNeighbours"/>
+        <Command Name="CreateFleet_HomeSystem"          Arguments="Explorer"/>
+
+		<SimulationDescriptorReference Name="FactionTraitManualHomeSystem"/>
+
+        <!-- Descriptors with no effect, only for GUI -->
+        <FakeSimulationDescriptorReference Name="FactionTraitGoldenAgePrefix"/>
+        <FakeSimulationDescriptorReference Name="GoldenAge"/>
+        <Prerequisites>!AffinityGameplayVenetians,!AffinityGameplayVampirilis,!AffinityGameplayUnfallen,!AffinityGameplayUmbralChoir,!FactionTraitStartWithTitanium,!FactionTraitStartWithHyperium,!FactionTraitStartWithPositiveAnomaly,!FactionTraitStartWithNegativeAnomaly,!FactionTraitFerventColonists1,!FactionTraitFerventColonists2,!FactionTraitApatheticColonists,!FactionTraitSlumberingRuins,!FactionTraitSlumberingRuinsNonTemplars,!FactionTraitSlumberingRuinsVaulters</Prerequisites>
+        <StartingFleet Priority="1">SuperColonizer</StartingFleet>
+        <UnlockedAbstractShipDesigns>SuperColonizer</UnlockedAbstractShipDesigns>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitCoreWorlds"   SubCategory="FactionTrait" TraitCategory="TraitCategoryExpansion" TraitSubCategory="TraitSubCategoryManualHomeSystem" Family="FactionTraitFamilyExpansionColonization" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="FactionTraitCoreWorlds"/>
+        <Prerequisites>!AffinityGameplayMajorHisshos</Prerequisites>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitMaterialExpertise"   SubCategory="FactionTrait" TraitCategory="TraitCategoryEconomy" TraitSubCategory="TraitSubCategoryMaterialExpertise" Family="FactionTraitFamilyEconomyDevelopment" Hidden="false" Custom="true" Cost="10">
+        <SimulationDescriptorReference Name="FactionTraitMaterialExpertise"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitCorsairs"   SubCategory="FactionTrait" TraitCategory="TraitCategoryFleetManagement" TraitSubCategory="TraitSubCategoryCorsair" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="FactionTraitCorsairs"/>
+        <Prerequisites>!FactionTraitPirateHaters</Prerequisites>
+    </FactionTrait>
+
+    <!-- For cF -->
+  <FactionTrait Name="FactionTraitMinorSistersOfMercy" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartSistersOfMercy" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+    <Command Name="AddMinorPopulation" Arguments="AffinitySistersOfMercy,1" Priority="100"/>
+    <SimulationDescriptorReference Name="FactionTraitMinorSistersOfMercy"/>
+    <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorKalTikMas,!FactionTraitMinorSefaloros,!FactionTraitMinorGalvrans,!FactionTraitMinorSowers,!FactionTraitMinorHarmony,!FactionTraitMinorIllo,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites>
+  </FactionTrait>
+
+</Datatable>

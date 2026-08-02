@@ -1,0 +1,3048 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+
+ 
+
+  <!--#######################################
+      #####           QUEST EXPLO     #######
+      ####################################### -->
+    
+    <!-- ###########  ICE AGE ###########-->
+
+   <QuestDefinition Name="ExplorationQuest04" Category="ExplorationQuest" SubCategory="Exploration" MinimumTurn="60" CheckRandom="true" TriggeringProbability="1">
+
+
+      <!--============ TAGS ============-->
+  
+        <Tags>EventCuriosityDiscoveredWithFleet,EventCuriosityDiscovered</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        
+  <!--============ VARIABLES ============-->
+ 
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <Var VarName="$QuestPlanet">
+                <From Source="$GameEvent.$Planet">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">ClassPlanet,PlanetTypeIce,!IsUniquePlanet</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$PlanetGameplayType" StringValue="PlanetGameplayTypeTemperate"/>
+          
+            <Var VarName="$Marker01"/>
+          <Var VarName="$PlanetGUID">
+              <From Source="$QuestPlanet.$GUID"/>
+          </Var>
+            <LocalizationVar Source="$QuestPlanet" LocalizationKey="$QuestPlanetName"/>
+        </Vars>
+
+  <!--============ PREREQUISITES ============-->
+      
+      <Prerequisites Target="$(Empire)">         
+          <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassResearch,TechnologyStageScienceAndExploration4</PathPrerequisite>
+          <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,EmpireTypeMajor,AffinityGameplayTimeLords</PathPrerequisite>
+          <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,EmpireTypeMajor,AffinityGameplayVampirilis</PathPrerequisite>
+          <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,EmpireTypeMajor,AffinityGameplayUmbralChoir</PathPrerequisite>
+          <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+      </Prerequisites>
+        
+  <!--============ STEPS ============-->
+  
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_AddQuestMarkers RevealsLocation="true">
+                            <Input_Targets VarName="$QuestPlanet"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker01"/>
+                        </Action_AddQuestMarkers>
+                    </StartActions>
+                    <Objective Name="Step1_Objective">
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_PlanetTerraformed>                              
+                                    <Input_PlanetGameplayType VarName="$PlanetGameplayType"/>
+                                    <Input_PlanetGUID VarName="$PlanetGUID"/>                               
+                                </Decorator_PlanetTerraformed>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_PlanetDestroyed>
+                                    <Input_Planet VarName="$QuestPlanet"/>
+                                </Decorator_PlanetDestroyed>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                </ObjectiveSet>
+                <Reward Droplist="DroplistExploration04" Picks="1"/>
+            </Step>
+        </Steps>
+    
+    </QuestDefinition>
+
+    <!-- ###########  FOREIGN CONTAMINANT ###########-->
+
+
+  <QuestDefinition Name="ExplorationQuest08" Category="ExplorationQuest" SubCategory="Exploration" MinimumTurn="20" TriggeringProbability="0.4">
+
+
+          <!--============ TAGS ============-->
+
+        <Tags>EventCuriosityDiscoveredWithFleet</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <Var VarName="$QuestPlanet">
+                <From Source="$GameEvent.$Planet"/>  
+            </Var>
+
+            <Var VarName="$QuestSystem01">
+                <From Source="$GameEvent.$StarSystem">
+                    <Where>
+                        <FilterSystemByStatus ColonizationState="NotColonized"/>
+                    </Where>
+                </From>
+            </Var>                      
+
+            <Var VarName="$Curiosity01" StringValue="Curiosity_Quest_ExplorationQuest08"/>
+            
+            <Var VarName="$Curiosity02" StringValue="Curiosity_Quest_ExplorationQuest09"/>
+            <Var VarName="$DroplistFleet01" StringValue="DroplistExploration08"/>
+            
+            <Var VarName="$Curiosity01GUID"/>
+            <Var VarName="$Curiosity02GUID"/>
+
+            <Var VarName="$Amount01" IntValue="5"/>
+            <Var VarName="$Amount02" IntValue="-5"/>
+
+            <Var VarName="$ResourceName01" StringValue="Strategic1"/>
+
+            <Var VarName="$Marker01"/>
+            <Var VarName="$Marker02"/>
+                        
+            <LocalizationVar Source="$QuestPlanet"     LocalizationKey="$QuestPlanetName"/>
+            <LocalizationVar Source="$QuestSystem01"     LocalizationKey="$QuestSystem01Name"/>
+            <LocalizationVar Source="$Amount01"        LocalizationKey="$Amount01Name"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">          
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', Strategic1Stock) ge 1</InterpreterPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', CurrentTurn) lt 150 </InterpreterPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+        
+        <!--============ STEPS ============-->
+
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        
+                        <Action_SpawnCuriosity>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Input_Planets VarName="$QuestPlanet"/>
+                            <Input_CuriosityDefinition VarName="$Curiosity01"/>
+                            <Output_CuriosityGUIDs VarName="$Curiosity01GUID"/>
+                        </Action_SpawnCuriosity>
+                        <Action_AddQuestMarkers RevealsLocation="true">
+                            <Input_Targets VarName="$QuestPlanet"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker01"/>
+                        </Action_AddQuestMarkers>
+
+                        <Action_SpawnCuriosity>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Input_Planets VarName="$QuestPlanet"/>
+                            <Input_CuriosityDefinition VarName="$Curiosity02"/>
+                            <Output_CuriosityGUIDs VarName="$Curiosity02GUID"/>
+                        </Action_SpawnCuriosity>
+                        <Action_AddQuestMarkers RevealsLocation="true">
+                            <Input_Targets VarName="$QuestPlanet"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker02"/>
+                        </Action_AddQuestMarkers>
+                        
+                    </StartActions>
+                    
+                    <Objective Name="Step1_Objective">
+                        <AIHint Category="Curiosity" Motivation="0.6">
+                            <Input_Var VarName="$Curiosity01GUID"/>
+                            <Input_Var VarName="$Curiosity02GUID"/>
+                        </AIHint>
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Parallel CompletionPolicy="All">
+                                    <Sequence>
+                                        <Decorator_CuriosityDiscovered Initiator="Empire">
+                                            <Input_CuriosityGUIDs VarName="$Curiosity01GUID"/>
+                                        </Decorator_CuriosityDiscovered>
+                                        <Action_TransferResource>
+                                            <Input_Location VarName="$CurrentEmpire"/>
+                                            <Input_ResourceName VarName="$ResourceName01"/>
+                                            <Input_Amount VarName="$Amount02"/>
+                                        </Action_TransferResource>
+                                    </Sequence>                
+                                
+                                    <Sequence>
+                                        <Decorator_CuriosityDiscovered Initiator="Empire">
+                                            <Input_CuriosityGUIDs VarName="$Curiosity02GUID"/>
+                                        </Decorator_CuriosityDiscovered>
+                                        <Action_TransferResource>
+                                            <Input_Location VarName="$CurrentEmpire"/>
+                                            <Input_ResourceName VarName="$ResourceName01"/>
+                                            <Input_Amount VarName="$Amount02"/>
+                                        </Action_TransferResource>
+                                    </Sequence>
+                                </Parallel>
+                            
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker02"/>
+                                </Action_RemoveQuestMarkers>
+
+                                <Action_SpawnFleets>
+                                    <Input_Empire VarName="$CurrentEmpire"/>
+                                    <Input_Locations VarName="$QuestSystem01"/>
+                                    <Input_DroplistName VarName="$DroplistFleet01"/>                                
+                                </Action_SpawnFleets>
+                            
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_PlanetDestroyed>
+                                    <Input_Planet VarName="$QuestPlanet"/>
+                                </Decorator_PlanetDestroyed>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                </ObjectiveSet>
+                <Reward LocalizationKey="%ExplorationQuest08Reward"/>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+
+    <!-- ###########  STATISTICS ###########-->
+
+    <QuestDefinition Name="ExplorationQuest24" Category="ExplorationQuest" SubCategory="Exploration" MinimumTurn="30" TriggeringProbability="0.2">  
+
+
+        <!--============ TAGS ============-->
+
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            
+            <!--TIMER-->
+            <Var VarName="$Timer"/>
+            <InterpretedVar VarName="$Duration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*20</Expression>
+            </InterpretedVar>
+           
+            <InterpretedVar VarName="$Amount03" Target="$(Empire)">
+                <Expression>MaxProperty(Context, @'ClassEmpire/ClassGarrison/ClassShip',OffensiveMilitaryPower)+30</Expression>
+            </InterpretedVar>
+
+            <InterpretedVar VarName="$Amount04" Target="$(Empire)">
+                <Expression>MaxProperty(Context, @'../ClassEmpire/ClassColonizedStarSystem', SystemProduction) + 30 </Expression>
+            </InterpretedVar>
+            
+            <InterpretedVar VarName="$Amount05" Target="$(Empire)">
+                <Expression>Max(1, Property(Context, @'../ClassEmpire', BankAccount, true)) + Max(1, Property(Context, @'../ClassEmpire', NetEmpireMoney, true)) + 100 </Expression>
+            </InterpretedVar>
+            
+            <Var VarName="$Expression3" StringValue="MaxProperty(Context, @'../ClassEmpire/ClassColonizedStarSystem', SystemProduction) ge $(Amount04)"/>            
+
+            <Var VarName="$Expression4" StringValue="Property(Context, @'../ClassEmpire', BankAccount, true) ge $(Amount05)"/>
+            <Var VarName="$Ship"/>           
+            <Var VarName="$Amount06" IntValue="2"/>
+
+            <Var VarName="$PoliticalEffect1"   StringValue="PopulationPoliticalEventNarrative63"/>
+            <Var VarName="$PoliticalEffect2"   StringValue="PopulationPoliticalEventNarrative64"/>
+            <Var VarName="$PoliticalEffect3"   StringValue="PopulationPoliticalEventNarrative65"/>
+            
+            <LocalizationVar LocalizationKey="$Amount03Name" Source="$Amount03"/>
+            <LocalizationVar LocalizationKey="$Amount04Name" Source="$Amount04"/>
+            <LocalizationVar LocalizationKey="$Amount05Name" Source="$Amount05"/>
+            <LocalizationVar LocalizationKey="$Amount06Name" Source="$Amount06"/>
+            <LocalizationVar LocalizationKey="$DurationName" Source="$Duration"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+
+        <Steps>
+            <Step Name="Step1">
+
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                    <ChoiceItem ObjectiveSetIndex="2"/>
+                </Choice>
+                
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_StartTimer>
+                            <Input_Duration VarName="$Duration"/>
+                            <Output_Timer VarName="$Timer"/>
+                        </Action_StartTimer>
+
+                        <Action_TriggerPopulationEvent>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$PoliticalEffect1"/>
+                        </Action_TriggerPopulationEvent>
+                        
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="15" MaxAutoResolutionTurn="30" AutoResolutionProbability="1" />
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_BeginTurn>                                  
+                                   <Condition_ShipStats>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_MinimumAmount VarName="$Amount06"/>
+                                        <Input_MinimumOffensiveMilitaryPower VarName="$Amount03"/>
+                                    </Condition_ShipStats>
+                                </Decorator_BeginTurn>       
+                            </Sequence>                           
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_TimerEnded>
+                                        <Input_Timer VarName="$Timer"/>
+                                    </Condition_TimerEnded>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistStrategics" Picks="1"/>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_StartTimer>
+                            <Input_Duration VarName="$Duration"/>
+                            <Output_Timer VarName="$Timer"/>
+                        </Action_StartTimer>
+
+                        <Action_TriggerPopulationEvent>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$PoliticalEffect2"/>
+                        </Action_TriggerPopulationEvent>
+
+                    </StartActions>
+                    <Objective Name="Step1_Objective2">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="15" MaxAutoResolutionTurn="30" AutoResolutionProbability="1" />
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_BeginTurn>                                 
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression3"/>
+                                    </Condition_CheckInterpreter>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_TimerEnded>
+                                        <Input_Timer VarName="$Timer"/>
+                                    </Condition_TimerEnded>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistMoney" Picks="1"/>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_StartTimer>
+                            <Input_Duration VarName="$Duration"/>
+                            <Output_Timer VarName="$Timer"/>
+                        </Action_StartTimer>
+
+                        <Action_TriggerPopulationEvent>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$PoliticalEffect3"/>
+                        </Action_TriggerPopulationEvent>
+                        
+                    </StartActions>
+                    <Objective Name="Step1_Objective3">
+                      <AIHint Category="Minimal" MinAutoResolutionTurn="15" MaxAutoResolutionTurn="30" AutoResolutionProbability="1" />
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression4"/>
+                                    </Condition_CheckInterpreter>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_TimerEnded>
+                                        <Input_Timer VarName="$Timer"/>
+                                    </Condition_TimerEnded>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistMinorRewards" Picks="1"/>
+                </ObjectiveSet>
+                
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+    
+
+  <!-- EVENT POLITICAL: MESSAGE FROM COROZ -->
+
+  <QuestDefinition Name="EventPolitical19" Category="Event" SubCategory="PoliticalEvent" MinimumTurn="50" TriggeringProbability="0.4" >
+
+    <!--============ TAGS ============-->
+    <Tags></Tags>
+
+    <QuestContextSolo/>
+
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                      NumberOfOccurrencesPerEmpire="1"
+                      NumberOfConcurrentInstances="0"/>
+
+
+    <!--============ VARIABLES ============-->
+    <Vars>
+      <Var VarName="$EffectTarget1">
+        <From Source="$Empire"/>
+      </Var>
+      <Var VarName="$EmpireSystem">
+        <Any>
+          <From Source="$EffectTarget1.$ColonizedStarSystems">
+            <Where>
+              <PathPrerequisite>ColonizedStarSystemStateColony</PathPrerequisite>
+            </Where>
+          </From>
+        </Any>
+      </Var>
+
+      <!--Choice1: Decrease all FIDSI-->
+      <Var VarName="$EffectName1"  StringValue="EventEffect64"/>
+      <!--Choice1: Politic= Militarist-->
+      <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative41"/>
+      <Var VarName="$EffectGUID1"/>
+
+      <!--Choice2: Decrease only Industry -->
+      <Var VarName="$EffectName2"  StringValue="EventEffect65"/>
+      <!--Choice2: Politic= Industry-->
+      <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative42"/>
+      <Var VarName="$EffectGUID2"/>
+      <LocalizationVar Source="$EmpireSystem" LocalizationKey="$SystemName"/>
+
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+
+    <Prerequisites Target="$(Empire)">
+        <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassSenate/ClassSenator,Politics02</PathPrerequisite>
+        <PathPrerequisite Inverted="true" Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityTimeLords,PopulationMajor</PathPrerequisite>      
+    </Prerequisites>
+
+    <!--============ STEPS ============-->
+    <Steps>
+      <Step Name="Step1">
+        <Choice DefaultChoiceIndex="0">
+          <ChoiceItem ObjectiveSetIndex="0"/>
+          <ChoiceItem ObjectiveSetIndex="1"/>
+        </Choice>
+        <!--============ STEP 1 ============-->
+        <ObjectiveSet>
+          <StartActions>
+            <Action_ApplyQuestEffect LogAction="true">
+              <Input_EffectName VarName="$EffectName1"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Output_GUID VarName="$EffectGUID1"/>
+            </Action_ApplyQuestEffect>
+            <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical16PopulationTitle">
+              <Input_Empire VarName="$EffectTarget1"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Input_PopulationEventDefinition VarName="$EventName1"/>
+            </Action_TriggerPopulationEvent>
+          </StartActions>
+          <Objective Name="Step1_Objective1">
+            <Sequence>
+              <Decorator_QuestEffectFinished>
+                <Input_GUID VarName="$EffectGUID1"/>
+              </Decorator_QuestEffectFinished>
+            </Sequence>
+          </Objective>
+        </ObjectiveSet>
+        <ObjectiveSet>
+          <StartActions>
+            <Action_ApplyQuestEffect LogAction="true">
+              <Input_EffectName VarName="$EffectName2"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Output_GUID VarName="$EffectGUID2"/>
+            </Action_ApplyQuestEffect>
+            <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity032PopulationTitle">
+              <Input_Empire VarName="$EffectTarget1"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Input_PopulationEventDefinition VarName="$EventName2"/>
+            </Action_TriggerPopulationEvent>
+          </StartActions>
+          <Objective Name="Step2_Objective1">
+            <Sequence>
+              <Decorator_QuestEffectFinished>
+                <Input_GUID VarName="$EffectGUID2"/>
+              </Decorator_QuestEffectFinished>
+            </Sequence>
+          </Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestDefinition>
+  
+  
+  <QuestDefinition Name="EventPolitical19Alt" Category="Event" SubCategory="PoliticalEvent" MinimumTurn="50" TriggeringProbability="0.4">
+
+    <!--============ TAGS ============-->
+    <Tags>BeginTurn</Tags>
+
+    <QuestContextSolo/>
+
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                      NumberOfOccurrencesPerEmpire="1"
+                      NumberOfConcurrentInstances="0"/>
+
+
+    <!--============ VARIABLES ============-->
+    <Vars>
+      <Var VarName="$EffectTarget1">
+        <From Source="$Empire"/>
+      </Var>
+      <Var VarName="$EmpireSystem">
+        <Any>
+          <From Source="$EffectTarget1.$ColonizedStarSystems">
+            <Where>
+              <PathPrerequisite>ColonizedStarSystemStateColony</PathPrerequisite>
+            </Where>
+          </From>
+        </Any>
+      </Var>
+
+      <!--Choice1: Increase Science, Decrease Food-->
+      <Var VarName="$EffectName1"  StringValue="EventEffect82"/>
+      <!--Choice1: Politic= Science-->
+      <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative60"/>
+      <Var VarName="$EffectGUID1"/>
+
+      <!--Choice2: Decrease Science, Increase Food -->
+      <Var VarName="$EffectName2"  StringValue="EventEffect83"/>
+      <!--Choice2: Politic= Ecologist-->
+      <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative61"/>
+      <Var VarName="$EffectGUID2"/>
+      <LocalizationVar Source="$EmpireSystem" LocalizationKey="$SystemName"/>
+
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+
+    <Prerequisites Target="$(Empire)">
+      <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassSenate/ClassSenator,Politics02</PathPrerequisite>
+      <PathPrerequisite Inverted="false" Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityTimeLords,PopulationMajor</PathPrerequisite>
+    </Prerequisites>
+
+    <!--============ STEPS ============-->
+    <Steps>
+      <Step Name="Step1">
+        <Choice DefaultChoiceIndex="0">
+          <ChoiceItem ObjectiveSetIndex="0"/>
+          <ChoiceItem ObjectiveSetIndex="1"/>
+        </Choice>
+        <!--============ STEP 1 ============-->
+        <ObjectiveSet>
+          <StartActions>
+            <Action_ApplyQuestEffect LogAction="true">
+              <Input_EffectName VarName="$EffectName1"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Output_GUID VarName="$EffectGUID1"/>
+            </Action_ApplyQuestEffect>
+            <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical16PopulationTitle">
+              <Input_Empire VarName="$EffectTarget1"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Input_PopulationEventDefinition VarName="$EventName1"/>
+            </Action_TriggerPopulationEvent>
+          </StartActions>
+          <Objective Name="Step1_Objective1">
+            <Sequence>
+              <Decorator_QuestEffectFinished>
+                <Input_GUID VarName="$EffectGUID1"/>
+              </Decorator_QuestEffectFinished>
+            </Sequence>
+          </Objective>
+        </ObjectiveSet>
+        <ObjectiveSet>
+          <StartActions>
+            <Action_ApplyQuestEffect LogAction="true">
+              <Input_EffectName VarName="$EffectName2"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Output_GUID VarName="$EffectGUID2"/>
+            </Action_ApplyQuestEffect>
+            <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity03PopulationTitle">
+              <Input_Empire VarName="$EffectTarget1"/>
+              <Input_Target VarName="$EmpireSystem"/>
+              <Input_PopulationEventDefinition VarName="$EventName2"/>
+            </Action_TriggerPopulationEvent>
+          </StartActions>
+          <Objective Name="Step2_Objective1">
+            <Sequence>
+              <Decorator_QuestEffectFinished>
+                <Input_GUID VarName="$EffectGUID2"/>
+              </Decorator_QuestEffectFinished>
+            </Sequence>
+          </Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestDefinition>
+
+    <!-- ###########  LOST EXPEDITION ###########-->
+
+    <QuestDefinition Name="ExplorationQuest25Bis" Category="ExplorationQuest" SubCategory="Exploration" MinimumTurn="30" TriggeringProbability="0.4">
+
+        <!--============ TAGS ============-->
+
+       <Tags>EventCuriosityDiscoveredWithFleet</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$MyColonizeStarSystem">
+                <Any>
+                   <From Source="$CurrentEmpire.$ColonizedStarSystems"/>
+                </Any>
+            </Var>
+            <Var VarName="$MyColonizedSystemLocation">
+                <From Source="$MyColonizeStarSystem.$StarSystem"/>
+            </Var>
+            
+            <Var VarName="$QuestPlanet">
+                <From Source="$GameEvent.$Planet"/>  
+            </Var>
+            <Var VarName="$QuestSystem01" IsGlobal="true">
+                <From Source="$GameEvent.$StarSystem">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassColonizedStarSystem</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$Amount01" IntValue="10"/>
+            
+            <Var VarName="$Curiosity01" StringValue="Curiosity_Quest_ExplorationQuest25"/>
+
+            <Var VarName="$PoliticalEffect1"   StringValue="PopulationPoliticalEventNarrative66"/>
+            <Var VarName="$Marker01"/>
+            <Var VarName="$Marker02"/>
+            <Var VarName="$Fleet01GUID" IsGlobal="true"/>
+
+            <Var VarName="$ResourceName01" StringValue="Strategic2"/>
+            <Var VarName="$Amount02" IntValue="-10"/>
+            <Var VarName="$CuriosityGUID"/>
+
+            <LocalizationVar VarName="$Amount01Name" Source="$Amount01"/>
+            <LocalizationVar VarName="$QuestPlanetName" Source="$QuestPlanet"/>
+            <LocalizationVar VarName="$MyColonizedSystemLocationName" Source="$MyColonizedSystemLocation"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+
+        <Steps>
+            <Step Name="Step1">
+
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisiste" Inverted="true">ClassEmpire,EmpireTypeMajor,AffinityGameplayUmbralChoir</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                </Choice>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SpawnCuriosity>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Input_Planets VarName="$QuestPlanet"/>
+                            <Input_CuriosityDefinition VarName="$Curiosity01"/>
+                            <Output_CuriosityGUIDs VarName="$CuriosityGUID"/>
+                        </Action_SpawnCuriosity>
+                        <Action_AddQuestMarkers>
+                            <Input_Targets VarName="$QuestPlanet"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker01"/>
+                        </Action_AddQuestMarkers>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <AIHint Category="Curiosity" Motivation="0.8">
+                            <Input_Var VarName="$CuriosityGUID"/>
+                        </AIHint>
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_CuriosityDiscovered Initiator="Empire">
+                                    <Input_CuriosityName VarName="$Curiosity01"/>
+                                    <Output_FleetGUID VarName="$Fleet01GUID"/>
+                                </Decorator_CuriosityDiscovered>
+                                <Action_TransferResource>
+                                    <Input_Location VarName="$CurrentEmpire"/>
+                                    <Input_ResourceName VarName="$ResourceName01"/>
+                                    <Input_Amount VarName="$Amount02"/>
+                                </Action_TransferResource>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_ChooseOutcome Name="Outcome1"/>
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_PlanetDestroyed>
+                                    <Input_Planet VarName="$QuestPlanet"/>
+                                </Decorator_PlanetDestroyed>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="8">
+                                <QuestTrigger>
+                                    <Tags>EventRandom12</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>EventRandom13</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Reward LocalizationKey="%ExplorationQuest25Reward"/>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_TriggerPopulationEvent>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$PoliticalEffect1"/>
+                        </Action_TriggerPopulationEvent>
+                        <Action_AddQuestMarkers>
+                            <Input_Targets VarName="$MyColonizedSystemLocation"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker02"/>
+                        </Action_AddQuestMarkers>
+                    </StartActions>
+                    <Objective Name="Step1_Objective2">
+                        <AIHint Category="Minimal" AutoResolutionProbability="1" MinAutoResolutionTurn="3" MaxAutoResolutionTurn="3"></AIHint>
+                       <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_NameChanged>                                    
+                                    <Input_Entities VarName="$MyColonizedSystemLocation"/>
+                                </Decorator_NameChanged>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker02"/>
+                                </Action_RemoveQuestMarkers>
+                            </Sequence>
+                           <Sequence>
+                               <Decorator_InvadeSystem Initiator="OtherEmpires">
+                                   <Input_System VarName="$MyColonizedSystemLocation"/>
+                                   <Input_GroundBattleOutcomeType>CaptureOrRaze</Input_GroundBattleOutcomeType>
+                               </Decorator_InvadeSystem>
+                               <Action_RemoveQuestMarkers>
+                                   <Input_Markers VarName="$Marker02"/>
+                               </Action_RemoveQuestMarkers>
+                               <Action_Fail/>
+                           </Sequence>
+                       </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistMinorRewards" Picks="1"/>
+                </ObjectiveSet>
+
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="EventRandom12" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1" CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <Tags>EventRandom12</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>          
+
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative67"/>
+            <Var VarName="$EffectName1"  StringValue="EventEffect85"/>
+            <Var VarName="$EffectGUID"/>
+            <Var VarName="$QuestSystem01" IsGlobal="true"/>
+            
+            <DroplistVar VarName="$FleetToSpawn" Droplist="Droplist_Fleet_EventRandom12"/>
+            <Var VarName="$FleetToSpawnGUID"/>
+
+            <LocalizationVar LocalizationKey="$QuestSystem01Name" Source="$QuestSystem01"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">           
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_SpawnFleets>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Locations VarName="$QuestSystem01"/>
+                            <Input_DroppableFleet VarName="$FleetToSpawn"/>
+                            <Output_FleetGUIDs VarName="$FleetToSpawnGUID"/>
+                        </Action_SpawnFleets>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventRandom12PopulationTitle">
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>                
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <QuestDefinition Name="EventRandom13" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1" CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <Tags>EventRandom13</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative68"/>
+            <Var VarName="$Duration" IntValue="10"/>
+            <Var VarName="$Fleet01GUID" IsGlobal="true"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_DestroyFleets>
+                            <Input_FleetGUIDs VarName="$Fleet01GUID"/>
+                        </Action_DestroyFleets>                        
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventRandom13PopulationTitle">
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                            </Decorator_Wait>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--           POPULATION QUEST 01       -->
+    <!--            Your Bag, Please         -->
+
+
+    <QuestDefinition Name="PopulationQuest01" Category="PopulationQuest" SubCategory="Population" MinimumTurn="20" TriggeringProbability="0.1">   
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$ListofEmpires">
+                <From Source="$Empires">
+                    <Where>
+                        <IsNot EntityVarName="$CurrentEmpire"/>
+                    </Where>
+                </From>
+            </Var>
+
+            <Var VarName="$MyColonizedStarSystem">
+                <Any>
+                    <From Source="$CurrentEmpire.$ColonizedStarSystems"/>
+                </Any>
+            </Var>
+            <Var VarName="$MyColonizedStarSystemLocation">
+                <From Source="$MyColonizedStarSystem.$StarSystem"/>
+            </Var>
+            <Var VarName="$Marker01"/>
+            <Var VarName="$DockedEmpire"/>
+            <Var VarName="$DiplomaticRelationColdWar"   StringValue="DiplomaticRelationStateColdWar"/>
+            <Var VarName="$DiplomaticRelationWar"       StringValue="DiplomaticRelationStateWar"/>
+            <Var VarName="$DiplomaticRelationMinorWar"  StringValue="DiplomaticRelationStateMinorAdvancedWar"/>
+            <Var VarName="$Pirates">
+                <From Source="$PirateEmpire"/>
+            </Var>
+
+            <Var VarName="$Duration" IntValue="1"/>
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative69"/>
+            <LocalizationVar LocalizationKey="$SystemName" Source="$MyColonizedStarSystem"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+
+        <Prerequisites Target="$(Empire)">
+            <!--From Era 2-->
+            <!--Possess the Home System-->
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassColonizedStarSystem,HomeSystem</PathPrerequisite>
+            <!--At least 3 other StarSystem-->
+            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire/ClassPopulationEmpireAffinityCravers</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire/ClassPopulationEmpireAffinityVampirilis</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,EmpireTypeMajor,AffinityGameplayUmbralChoir</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', ColonizedStarSystemStateColonyCount, true) ge 2</InterpreterPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step01">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_AddQuestMarkers>
+                            <Input_Targets VarName="$MyColonizedStarSystemLocation"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker01"/>
+                        </Action_AddQuestMarkers>
+                        <Action_TriggerPopulationEvent>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step01_Objective1" StartValue="0" EndValue="10">
+                        <!-- TODO -->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="10" MaxAutoResolutionTurn="20" AutoResolutionProbability="0.75" />
+                        <!--The Other Empires shouldn't dock their fleets arround your Systems-->
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <!--Just wait during 10 turns-->
+                                <Loop Count="10">
+                                    <Decorator_BeginTurn ProgressionIncrement="1"/>
+                                </Loop>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                            </Sequence>
+                            <Sequence>
+                                <!--if a MF we're in cold war with gets to the system-->
+                                <Decorator_FleetDocked Initiator="OtherEmpires">
+                                    <Condition_CheckDiplomaticRelation>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_OtherEmpire VarName="$DockedEmpire"/>
+                                        <Input_DiplomaticRelationState VarName="$DiplomaticRelationColdWar"/>
+                                    </Condition_CheckDiplomaticRelation>
+                                    <Output_Empire VarName="$DockedEmpire"/>
+                                    <Input_Systems VarName="$MyColonizedStarSystemLocation"/>
+                                </Decorator_FleetDocked>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_Fail/>
+                            </Sequence>
+                            <Sequence>
+                                <!--if a MF we're in war with gets to the system-->
+                                <Decorator_FleetDocked Initiator="OtherEmpires">
+                                    <Condition_CheckDiplomaticRelation>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_OtherEmpire VarName="$DockedEmpire"/>
+                                        <Input_DiplomaticRelationState VarName="$DiplomaticRelationWar"/>
+                                    </Condition_CheckDiplomaticRelation>
+                                    <Output_Empire VarName="$DockedEmpire"/>
+                                    <Input_Systems VarName="$MyColonizedStarSystemLocation"/>
+                                </Decorator_FleetDocked>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_Fail/>
+                            </Sequence>
+                            <Sequence>
+                                <!--if a mF we're in war with gets to the system-->
+                                <Decorator_FleetDocked Initiator="OtherEmpires">
+                                    <Condition_CheckDiplomaticRelation>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_OtherEmpire VarName="$DockedEmpire"/>
+                                        <Input_DiplomaticRelationState VarName="$DiplomaticRelationMinorWar"/>
+                                    </Condition_CheckDiplomaticRelation>
+                                    <Output_Empire VarName="$DockedEmpire"/>
+                                    <Input_Systems VarName="$MyColonizedStarSystemLocation"/>
+                                </Decorator_FleetDocked>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_Fail/>
+                            </Sequence>
+                            <Sequence>
+                                <!--if pirates gets to the system-->
+                                <Decorator_FleetDocked Initiator="OtherEmpires">
+                                    <Input_Systems VarName="$MyColonizedStarSystemLocation"/>
+                                    <Input_Empires VarName="$Pirates"/>
+                                </Decorator_FleetDocked>
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                </ObjectiveSet>
+                <Reward Droplist="DroplistMinorRewards" Picks="1"/>
+            </Step>
+        </Steps>
+    </QuestDefinition>      
+
+    <QuestDefinition Name="TutorialVaulters00" Category="Quest" SubCategory="TriggerByQuest" MinimumTurn="0" CheckRandom="false">
+        <!--============ TAGS ============-->
+        <Tags>Hidden,BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0" NumberOfOccurrencesPerEmpire="1" NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            
+            <Var VarName="$Expression1" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeTerran"/>
+            <Var VarName="$Expression2" StringValue="ClassGarrisonFleet/ClassShip,ShipRoleSuperColonizer"/>
+            <Var VarName="$Expression3" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeForest"/>
+            <Var VarName="$Expression4" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeAtoll"/>
+            <Var VarName="$Expression5" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeOcean"/>
+            <Var VarName="$Expression6" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeMonsoon"/>
+            <Var VarName="$Expression7" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeBoreal"/>
+            <Var VarName="$Expression8" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeTundra"/>
+            <Var VarName="$Expression9" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeJungle"/>
+            <Var VarName="$Expression10" StringValue="ClassStarSystem/ClassPlanet,PlanetTypeTropical"/>
+
+            <Var VarName="$SuperColonizer"/>
+            <Var VarName="$ColonizableNode"/>
+        </Vars>
+
+        <!--#### PREREQUISITES ####-->
+
+        <Prerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', TutorialLevel) ge 1 </InterpreterPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">AffinityVaulters,ClassEmpire,EmpireTypeMajor</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassGarrisonFleet/ClassShip,ShipRoleSuperColonizer</PathPrerequisite>
+
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+     
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_FleetDocked>
+                                    <Condition_IsVariableNotEmpty>
+                                        <Input_Variable VarName="$ColonizableNode"/>
+                                    </Condition_IsVariableNotEmpty>
+                                    <Condition_IsVariableNotEmpty>
+                                        <Input_Variable VarName="$SuperColonizer"/>
+                                    </Condition_IsVariableNotEmpty>
+                                    <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                        <Input_SimulationObject VarName="$ColonizableNode"/>
+                                        <Input_Path VarName="$Expression1"/>                                    
+                                    </Condition_CheckPath>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$SuperColonizer"/>
+                                        <Input_Path VarName="$Expression2"/>
+                                    </Condition_CheckPath>                                   
+                                    <Output_Node VarName="$ColonizableNode"/>
+                                    <Output_Fleet VarName="$SuperColonizer"/>                                  
+                                </Decorator_FleetDocked>
+                                <Action_ChooseOutcome Name="Outcome1"/>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_FleetDocked>
+                                    <Condition_IsVariableNotEmpty>
+                                        <Input_Variable VarName="$ColonizableNode"/>
+                                    </Condition_IsVariableNotEmpty>
+                                    <Condition_IsVariableNotEmpty>
+                                        <Input_Variable VarName="$SuperColonizer"/>
+                                    </Condition_IsVariableNotEmpty>
+                                    <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                        <Input_SimulationObject VarName="$ColonizableNode"/>
+                                        <Input_Path VarName="$Expression3"/>
+                                    </Condition_CheckPath>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$SuperColonizer"/>
+                                        <Input_Path VarName="$Expression2"/>
+                                    </Condition_CheckPath>
+                                    <Output_Node VarName="$ColonizableNode"/>
+                                    <Output_Fleet VarName="$SuperColonizer"/>
+                                </Decorator_FleetDocked>
+                                <Action_ChooseOutcome Name="Outcome1"/>
+                            </Sequence>
+                       
+
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$ColonizableNode"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$SuperColonizer"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                    <Input_SimulationObject VarName="$ColonizableNode"/>
+                                    <Input_Path VarName="$Expression4"/>
+                                </Condition_CheckPath>
+                                <Condition_CheckPath>
+                                    <Input_SimulationObject VarName="$SuperColonizer"/>
+                                    <Input_Path VarName="$Expression2"/>
+                                </Condition_CheckPath>
+                                <Output_Node VarName="$ColonizableNode"/>
+                                <Output_Fleet VarName="$SuperColonizer"/>
+                            </Decorator_FleetDocked>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$ColonizableNode"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$SuperColonizer"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                    <Input_SimulationObject VarName="$ColonizableNode"/>
+                                    <Input_Path VarName="$Expression5"/>
+                                </Condition_CheckPath>
+                                <Condition_CheckPath>
+                                    <Input_SimulationObject VarName="$SuperColonizer"/>
+                                    <Input_Path VarName="$Expression2"/>
+                                </Condition_CheckPath>
+                                <Output_Node VarName="$ColonizableNode"/>
+                                <Output_Fleet VarName="$SuperColonizer"/>
+                            </Decorator_FleetDocked>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$ColonizableNode"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$SuperColonizer"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                    <Input_SimulationObject VarName="$ColonizableNode"/>
+                                    <Input_Path VarName="$Expression6"/>
+                                </Condition_CheckPath>
+                                <Condition_CheckPath>
+                                    <Input_SimulationObject VarName="$SuperColonizer"/>
+                                    <Input_Path VarName="$Expression2"/>
+                                </Condition_CheckPath>
+                                <Output_Node VarName="$ColonizableNode"/>
+                                <Output_Fleet VarName="$SuperColonizer"/>
+                            </Decorator_FleetDocked>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$ColonizableNode"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$SuperColonizer"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                    <Input_SimulationObject VarName="$ColonizableNode"/>
+                                    <Input_Path VarName="$Expression7"/>
+                                </Condition_CheckPath>
+                                <Condition_CheckPath>
+                                    <Input_SimulationObject VarName="$SuperColonizer"/>
+                                    <Input_Path VarName="$Expression2"/>
+                                </Condition_CheckPath>
+                                <Output_Node VarName="$ColonizableNode"/>
+                                <Output_Fleet VarName="$SuperColonizer"/>
+                            </Decorator_FleetDocked>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$ColonizableNode"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$SuperColonizer"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                    <Input_SimulationObject VarName="$ColonizableNode"/>
+                                    <Input_Path VarName="$Expression8"/>
+                                </Condition_CheckPath>
+                                <Condition_CheckPath>
+                                    <Input_SimulationObject VarName="$SuperColonizer"/>
+                                    <Input_Path VarName="$Expression2"/>
+                                </Condition_CheckPath>
+                                <Output_Node VarName="$ColonizableNode"/>
+                                <Output_Fleet VarName="$SuperColonizer"/>
+                            </Decorator_FleetDocked>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$ColonizableNode"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$SuperColonizer"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                    <Input_SimulationObject VarName="$ColonizableNode"/>
+                                    <Input_Path VarName="$Expression9"/>
+                                </Condition_CheckPath>
+                                <Condition_CheckPath>
+                                    <Input_SimulationObject VarName="$SuperColonizer"/>
+                                    <Input_Path VarName="$Expression2"/>
+                                </Condition_CheckPath>
+                                <Output_Node VarName="$ColonizableNode"/>
+                                <Output_Fleet VarName="$SuperColonizer"/>
+                            </Decorator_FleetDocked>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$ColonizableNode"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_IsVariableNotEmpty>
+                                    <Input_Variable VarName="$SuperColonizer"/>
+                                </Condition_IsVariableNotEmpty>
+                                <Condition_CheckPath AllowFailureIfNoSimObject="true">
+                                    <Input_SimulationObject VarName="$ColonizableNode"/>
+                                    <Input_Path VarName="$Expression10"/>
+                                </Condition_CheckPath>
+                                <Condition_CheckPath>
+                                    <Input_SimulationObject VarName="$SuperColonizer"/>
+                                    <Input_Path VarName="$Expression2"/>
+                                </Condition_CheckPath>
+                                <Output_Node VarName="$ColonizableNode"/>
+                                <Output_Fleet VarName="$SuperColonizer"/>
+                            </Decorator_FleetDocked>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                            
+                        </Parallel>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>Tutorial_Vaulters03</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--#######################################
+        ##### DEEDS: EMPIRE DEVELOPMENT #######
+        ####################################### -->
+
+
+    <QuestDefinition Name="Deeds_Regular_EmpireDevelopment_Stage5_C" Category="Deeds" SubCategory="Regular">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,Hidden,TechnologyStageDefinitionEmpireDevelopment5</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti>
+            <Distribution Type="FreeForAll"/>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$AllEmpires">
+                <From Source="$Empires"/>
+            </Var>
+
+            <Var VarName="$HappinessObjective" IntValue="85"/>
+            <Var VarName="$Expression01" StringValue="Property(Context, @'ClassEmpire', Happiness)"/>
+
+            <LocalizationVar LocalizationKey="$HappinessObjectiveName" Source="$HappinessObjective"/>
+
+            <Var VarName="$Path" StringValue="EmpireTypeMajor/ClassResearch,TechnologyStageEmpireDevelopment5"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empires)">
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EmpireDevelopment_Stage5_A" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EmpireDevelopment_Stage5_A" QuestState="Completed"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_EmpireDevelopment_Stage5_A" QuestState="NotStarted"/>
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_EmpireDevelopment_Stage5_B" QuestState="NotStarted"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EmpireDevelopment_Stage5_B" QuestState="InProgress"/>            
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EmpireDevelopment_Stage5_B" QuestState="Completed"/>
+
+            <PathPrerequisite Flags="Prerequisite" Inverted="true">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ Step 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+
+                    <!--Teams are created here, that's why setting the empire in a variable can only be made from here-->
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+
+                    <Objective Name="Deeds_Regular_EmpireDevelopment_Stage5_C-Objective" StartValue="0" EndValue="$HappinessObjective">
+                        <Parallel CompletionPolicy="All">
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_IsProgressionComplete>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression01"/>
+                                    </Condition_IsProgressionComplete>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$CurrentEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                    </Condition_CheckPath>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistRegularDeedsStage5Quadrant4Bis" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <!--#######################################
+        ##### DEEDS: EMPIRE DEVELOPMENT #######
+        ####################################### -->
+
+    <!-- ============================================
+     ======== DEEDS: SCIENCE & EXPLORATION ==========
+     ================================================ -->
+    <QuestDefinition Name="Deeds_Regular_ScienceAndExploration_Stage2_C" Category="Deeds" SubCategory="Regular">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,Hidden,TechnologyStageDefinitionScienceAndExploration2</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti>
+            <Distribution Type="FreeForAll"/>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$AllEmpires">
+                <From Source="$Empires"/>
+            </Var>
+
+            <Var VarName="$NeededPercentage" IntValue="50"/>
+
+
+            <Var VarName="$Path" StringValue="EmpireTypeMajor/ClassResearch,TechnologyStageScienceAndExploration2"/>
+
+            <LocalizationVar LocalizationKey="$NeededPercentageName" Source="$NeededPercentage"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empires)" AnyTarget="true">
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage2_A" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage2_A" QuestState="Completed"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage2_A" QuestState="NotStarted"/>
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage2_B" QuestState="NotStarted"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage2_B" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage2_B" QuestState="Completed"/>
+
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ Step 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+
+                    <!--Teams are created here, that's why setting the empire in a variable can only be made from here-->
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                        <Var VarName="$Percentage">
+                            <From Source="$CurrentEmpire.$RevealedNodePercentage"/>
+                        </Var>
+                        <Var VarName="$Expression" StringValue="$(Percentage)"/>
+                    </Vars>
+
+                    <Objective Name="Deeds_Regular_ScienceAndExploration_Stage2_C-Objective" StartValue="$Percentage" EndValue="$NeededPercentage">
+                        <Parallel CompletionPolicy="All">
+
+                            <Sequence>
+                                <Decorator_ExploredNode Initiator="Empire" MinimumState="Revealed">
+                                    <Condition_IsProgressionComplete>
+                                        <Input_Expression VarName="$Expression"/>
+                                    </Condition_IsProgressionComplete>
+                                    <Output_Percentage VarName="$Percentage"/>
+                                </Decorator_ExploredNode>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$CurrentEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                    </Condition_CheckPath>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                        </Parallel>
+                    </Objective>
+
+                    <Reward Droplist="DroplistRegularDeedsStage2Quadrant3Bis" Picks="1"/>
+
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="Deeds_Regular_ScienceAndExploration_Stage5_C" Category="Deeds" SubCategory="Regular">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,Hidden,TechnologyStageDefinitionScienceAndExploration5</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti>
+            <Distribution Type="FreeForAll"/>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$AllEmpires">
+                <From Source="$Empires"/>
+            </Var>
+
+            <Var VarName="$Amount01" IntValue="14"/>
+            <Var VarName="$Expression01" StringValue="SumProperty(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet', AnomalyCount)"/>
+
+            <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>
+
+            <Var VarName="$Path" StringValue="EmpireTypeMajor/ClassResearch,TechnologyStageScienceAndExploration5"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empires)" AnyTarget="true">
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage5_A" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage5_A" QuestState="Completed"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage5_A" QuestState="NotStarted"/>
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage5_B" QuestState="NotStarted"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage5_B" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_ScienceAndExploration_Stage5_B" QuestState="Completed"/>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ Step 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+
+                    <!--Teams are created here, that's why setting the empire in a variable can only be made from here-->
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+
+                    <Objective Name="Deeds_Regular_ScienceAndExploration_Stage5_C-Objective" StartValue="0" EndValue="$Amount01">
+                        <Parallel CompletionPolicy="All">
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_IsProgressionComplete>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression01"/>
+                                    </Condition_IsProgressionComplete>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$CurrentEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                    </Condition_CheckPath>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistRegularDeedsStage5Quadrant3Bis" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <!--#######################################
+        ##### DEEDS: ECONOMY AND TRADE  #######
+        ####################################### -->
+
+
+    <QuestDefinition Name="Deeds_Regular_EconomyAndTrade_Stage2_C" Category="Deeds" SubCategory="Regular">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,Hidden,TechnologyStageDefinitionEconomyAndTrade2</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti>
+            <Distribution Type="FreeForAll"/>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$AllEmpires">
+                <From Source="$Empires"/>
+            </Var>
+
+            <Var VarName="$Amount01" IntValue="20"/>
+            <Var VarName="$Expression01" StringValue="Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassImprovement')"/>
+
+            <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>
+
+            <Var VarName="$Path" StringValue="EmpireTypeMajor/ClassResearch,TechnologyStageEconomyAndTrade2"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empires)" AnyTarget="true">
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage2_A" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage2_A" QuestState="Completed"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage2_A" QuestState="NotStarted"/>
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage2_B" QuestState="NotStarted"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage2_B" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage2_B" QuestState="Completed"/>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ Step 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+
+                    <!--Teams are created here, that's why setting the empire in a variable can only be made from here-->
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+
+                    <Objective Name="Deeds_Regular_EconomyAndTrade_Stage2_C-Objective" StartValue="0" EndValue="$Amount01">
+                        <Parallel CompletionPolicy="All">
+                            <Parallel CompletionPolicy="Any">
+                                <Sequence>
+                                    <Decorator_BeginTurn>
+                                        <Condition_IsProgressionComplete>
+                                            <Input_Context VarName="$CurrentEmpire"/>
+                                            <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                            <Input_Expression VarName="$Expression01"/>
+                                        </Condition_IsProgressionComplete>
+                                    </Decorator_BeginTurn>
+                                </Sequence>
+                                <Sequence>
+                                    <Decorator_ConstructionCompleted>
+                                        <Condition_IsProgressionComplete>
+                                            <Input_Context VarName="$CurrentEmpire"/>
+                                            <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                            <Input_Expression VarName="$Expression01"/>
+                                        </Condition_IsProgressionComplete>
+                                    </Decorator_ConstructionCompleted>
+                                </Sequence>
+                            </Parallel>
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$CurrentEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                    </Condition_CheckPath>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistRegularDeedsStage2Quadrant2Bis" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+
+    <QuestDefinition Name="Deeds_Regular_EconomyAndTrade_Stage3_C" Category="Deeds" SubCategory="Regular">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,Hidden,TechnologyStageDefinitionEconomyAndTrade3</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti>
+            <Distribution Type="FreeForAll"/>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$AllEmpires">
+                <From Source="$Empires"/>
+            </Var>
+
+            <Var VarName="$Amount01" IntValue="3"/>
+            <Var VarName="$Expression" StringValue="MaxProperty(Context, @'ClassEmpire/ClassColonizedStarSystem', SystemLevel)"/>
+
+            <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>
+
+            <Var VarName="$Path" StringValue="EmpireTypeMajor/ClassResearch,TechnologyStageEconomyAndTrade3"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empires)" AnyTarget="true">
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage3_A" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage3_A" QuestState="Completed"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage3_A" QuestState="NotStarted"/>
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage3_B" QuestState="NotStarted"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage3_B" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_EconomyAndTrade_Stage3_B" QuestState="Completed"/>
+
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ Step 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+
+                    <!--Teams are created here, that's why setting the empire in a variable can only be made from here-->
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+
+                    <Objective Name="Deeds_Regular_EconomyAndTrade_Stage3_C-Objective" StartValue="1" EndValue="$Amount01">
+                        <Parallel CompletionPolicy="All">
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_IsProgressionComplete>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression"/>
+                                    </Condition_IsProgressionComplete>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$CurrentEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                    </Condition_CheckPath>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistRegularDeedsStage3Quadrant2Bis" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="Deeds_Regular_Military_Stage3_C" Category="Deeds" SubCategory="Regular">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,Hidden,TechnologyStageDefinitionMilitary3</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti>
+            <Distribution Type="FreeForAll"/>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$AllEmpires">
+                <From Source="$Empires"/>
+            </Var>
+
+            <Var VarName="$Amount01" IntValue="3000"/>
+
+            <Var VarName="$Expression01" StringValue="Property(Context, @'ClassEmpire', MaximumEmpireManpowerStock)"/>
+
+            <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>
+
+            <Var VarName="$Path" StringValue="EmpireTypeMajor/ClassResearch,TechnologyStageMilitary3"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empires)" AnyTarget="true">
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage3_A" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage3_A" QuestState="Completed"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_Military_Stage3_A" QuestState="NotStarted"/>
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_Military_Stage3_B" QuestState="NotStarted"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage3_B" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage3_B" QuestState="Completed"/>
+
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ Step 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+
+                    <!--Teams are created here, that's why setting the empire in a variable can only be made from here-->
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+
+                    <Objective Name="Deeds_Regular_Military_Stage3_C-Objective" StartValue="0" EndValue="$Amount01">
+                        <Parallel CompletionPolicy="All">
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_IsProgressionComplete>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression01"/>
+                                    </Condition_IsProgressionComplete>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$CurrentEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                    </Condition_CheckPath>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistRegularDeedsStage3Quadrant1Bis" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="Deeds_Regular_Military_Stage4_C" Category="Deeds" SubCategory="Regular">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,Hidden,TechnologyStageDefinitionMilitary4</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti>
+            <Distribution Type="FreeForAll"/>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$AllEmpires">
+                <From Source="$Empires"/>
+            </Var>
+
+            <Var VarName="$Amount01" IntValue="15"/>
+
+            <Var VarName="$Expression" StringValue="Max(Property(Context, @'ClassEmpire', NetStrategic5), Property(Context, @'ClassEmpire', NetStrategic6))"/>
+
+            <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>
+
+            <Var VarName="$Path" StringValue="EmpireTypeMajor/ClassResearch,TechnologyStageMilitary4"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empires)" AnyTarget="true">
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage4_A" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage4_A" QuestState="Completed"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_Military_Stage4_A" QuestState="NotStarted"/>
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="Deeds_Regular_Military_Stage4_B" QuestState="NotStarted"/>
+
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage4_B" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="Deeds_Regular_Military_Stage4_B" QuestState="Completed"/>
+
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ Step 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+
+                    <!--Teams are created here, that's why setting the empire in a variable can only be made from here-->
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+
+                    <Objective Name="Deeds_Regular_Military_Stage4_C-Objective" StartValue="0" EndValue="$Amount01">
+                        <Parallel CompletionPolicy="All">
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_IsProgressionComplete>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression"/>
+                                    </Condition_IsProgressionComplete>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckPath>
+                                        <Input_SimulationObject VarName="$CurrentEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                    </Condition_CheckPath>
+                                </Decorator_BeginTurn>
+                            </Sequence>
+
+                        </Parallel>
+                    </Objective>
+                    <Reward Droplist="DroplistRegularDeedsStage4Quadrant1Bis" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+
+    <!--######################-->
+    <!--####   METAPLOT   ####-->
+    <!--######################-->
+
+
+    <QuestDefinition Name="EventMetaplot01" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1" CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <Tags>EventTechnologyUnlocked, BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <Var VarName="$EffectName1"  StringValue="EventEffect88"/>
+            <Var VarName="$EffectGUID"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassResearch,TechnologyMetaplotQuest1</PathPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID"/>
+                        </Action_ApplyQuestEffect>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="EventMetaplot02" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1" CheckRandom="false" IsInstant="true">
+
+        <!--============ TAGS ============-->
+        <Tags>EventTechnologyUnlocked, BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$HeroesList">
+                <From Source="$CurrentEmpire.$Heroes"/>
+            </Var>          
+                      
+            <Var VarName="$LevelToAdd" IntValue="4"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassResearch,TechnologyMetaplotQuest2</PathPrerequisite>
+        </Prerequisites>
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_AddLevelsToHeroes LogAction="true" LocalizationKey="%EventMetaplot02Effect">
+                            <Input_Heroes VarName="$HeroesList"/>                          
+                            <Input_Amount VarName="$LevelToAdd"/>
+                        </Action_AddLevelsToHeroes>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>                          
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <QuestDefinition Name="EventMetaplotHiddenTeamA" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1" CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <Tags>EventMetaplotHiddenTeamA,Hidden</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$DescriptorAntiDestruction" StringValue="SystemCannotBeDestroyed"/>
+            <Var VarName="$MetaplotSystems" IsGlobal="true"/>
+
+            <Var VarName="$EffectName1"  StringValue="MetaplotSystemRestoredEffect"/>
+            <Var VarName="$EffectGUID"/>
+
+        </Vars>
+       
+       <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyDescriptor Remove="true">
+                            <Input_DescriptorName VarName="$DescriptorAntiDestruction"/>
+                            <Input_Targets VarName="$MetaplotSystems"/>
+                        </Action_ApplyDescriptor>
+                        <Action_ApplyNodeEffect>
+                            <Input_Targets VarName="$MetaplotSystems"/>                           
+                            <Input_DefinitionName VarName="$EffectName1"/>
+                            <Output_NodeEffectGUID VarName="$EffectGUID"/>
+                        </Action_ApplyNodeEffect>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="EventMetaplotHiddenTeamB" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1" CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <Tags>EventMetaplotHiddenTeamB,Hidden</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <Var VarName="$MetaplotSystems" IsGlobal="true"/>
+            <Var VarName="$DescriptorAntiDestruction" StringValue="SystemCannotBeDestroyed"/>
+            <Var VarName="$EffectName1"  StringValue="MetaplotSystemDestroyedEffect"/>
+            <Var VarName="$EffectGUID"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+     
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <!--Avoid Destruction with the Obliterators-->
+                        <Action_ApplyDescriptor Remove="true">
+                            <Input_DescriptorName VarName="$DescriptorAntiDestruction"/>
+                            <Input_Targets VarName="$MetaplotSystems"/>
+                        </Action_ApplyDescriptor>
+
+
+                        <Action_ApplyNodeEffect>
+                            <Input_Targets VarName="$MetaplotSystems"/>
+                            <Input_DefinitionName VarName="$EffectName1"/>
+                            <Output_NodeEffectGUID VarName="$EffectGUID"/>
+                        </Action_ApplyNodeEffect>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--#######################################
+      #####           EVENTS          #######
+      ####################################### -->
+    
+    <!--####################################################
+        ##### A MILLION THINGS I HAVEN'T DONE PART 3  ######
+        #################################################### -->
+
+    <QuestDefinition Name="EventPoliticalResult12" Category="Event" SubCategory="TriggeredByaQuest" AlternateVersion="EventPoliticalResult12Bis">
+
+        <!--============ TAGS ============-->
+        <Tags>EventPoliticalResult12</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystems">
+                <From Source="$EffectTarget1.$ColonizedStarSystems"/>
+            </Var>
+            <!--Choice1: increase dust and pacifism-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect84"/>
+            <Var VarName="$EffectGUID1"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite" Inverted="true">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+        </Prerequisites>
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <QuestDefinition Name="EventPoliticalResult12a" Category="Event" SubCategory="TriggeredByaQuest">
+
+        <!--============ TAGS ============-->
+        <Tags>EventPoliticalResult12a</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystems">
+                <From Source="$EffectTarget1.$ColonizedStarSystems"/>
+            </Var>
+            <!--Choice1: increase pacifism-->
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative62"/>
+            <Var VarName="$EffectGUID1"/>
+
+            <Var VarName="$Duration" IntValue="10"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPoliticalResult12aPopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_Wait>
+                                <Input_WaitDuration VarName="$Duration"/>
+                            </Decorator_Wait>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="EventReveal06" Category="Event" SubCategory="Random" CheckRandom="false" BeginnerMinimumTurn="1">
+
+        <!--============ TAGS ============-->
+        <Tags>EventStarSystemNodeRevealed</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$AurigaSystem">
+                <From Source="$GameEvent.$StarSystem">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">ClassStarSystem/ClassPlanet,UniquePlanetAuriga</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystems">
+                <From Source="$EffectTarget1.$ColonizedStarSystems"/>
+            </Var>
+            <!--Choice1: increase dust and pacifism-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect89"/>
+            <Var VarName="$EffectName2"  StringValue="EventEffect181"/>
+            <Var VarName="$EffectGUID1"/>
+            <Var VarName="$EffectGUID2"/>
+
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative74"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">           
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityVaulters,PopulationMajor</PathPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite" Inverted="true">../ClassEmpire,EmpireTypeMajor,EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="1">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite">../ClassEmpire,EmpireTypeMajor,EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>                          
+                        </Prerequisites>
+                    </ChoiceItem>
+                </Choice>
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical16PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+                <!--============ STEP 2 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical16PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <QuestDefinition Name="EventReveal05" Category="Event" SubCategory="Random" CheckRandom="false" BeginnerMinimumTurn="1">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn,EventPlanetColonized</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            
+            <Var VarName="$AurigaSystem">
+                <From Source="$EffectTarget1.$ColonizedStarSystems">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">ClassColonizedStarSystem/UniquePlanetAuriga,ClassColonizedPlanet</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>           
+       
+            <!--Choice1: increase dust and pacifism-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect90"/>
+            <Var VarName="$EffectName2"  StringValue="EventEffect182"/>
+            <Var VarName="$EffectGUID1"/>
+            <Var VarName="$EffectGUID2"/>   
+            
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative75"/>
+
+            <Var VarName="$Path" StringValue="ClassEmpire/ClassColonizedStarSystem"/>
+            <Var VarName="$SubPath" StringValue="ClassColonizedStarSystem/ClassColonizedPlanet"/>
+            <!--/!\ Has to be the descriptor-->
+            <Var VarName="$Tag" StringValue="UniquePlanetAuriga"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony/UniquePlanetAuriga,ClassColonizedPlanet</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor/ClassPopulation,ClassPopulationEmpireAffinityVaulters,PopulationMajor</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+        
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                
+               <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite" Inverted="true">../ClassEmpire,EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="1">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite">../ClassEmpire,EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>                          
+                        </Prerequisites>
+                    </ChoiceItem>
+                </Choice>
+                
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$AurigaSystem"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical16PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$AurigaSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_QuestEffectFinished>
+                                    <Input_GUID VarName="$EffectGUID1"/>
+                                </Decorator_QuestEffectFinished>
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CountSimulationObjectsWithTag Composition="None"   SubComposition="Minimum">
+                                        <Input_SimulationObjects VarName="$EffectTarget1"/>
+                                        <Input_Path VarName="$Path"/>
+                                        <Input_SubPath VarName="$SubPath"/>
+                                        <Input_Tag VarName="$Tag"/>
+                                    </Condition_CountSimulationObjectsWithTag>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                </ObjectiveSet>
+            
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$AurigaSystem"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical16PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$AurigaSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+                                <Decorator_QuestEffectFinished>
+                                    <Input_GUID VarName="$EffectGUID2"/>
+                                </Decorator_QuestEffectFinished>
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CountSimulationObjectsWithTag Composition="None"   SubComposition="Minimum">
+                                        <Input_SimulationObjects VarName="$EffectTarget1"/>
+                                        <Input_Path VarName="$Path"/>
+                                        <Input_SubPath VarName="$SubPath"/>
+                                        <Input_Tag VarName="$Tag"/>
+                                    </Condition_CountSimulationObjectsWithTag>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- #####################################-->
+    <!-- #########   PIRATE QUEST   ###########-->
+    <!-- #####################################-->
+
+    <!-- #########     CHAPTER 0   ###########-->
+
+    <QuestDefinition Name="GlobalQuest11-Compet00" Category="CompetitiveQuest" SubCategory="Hidden" MinimumTurn="1" CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <Tags>Hidden,EventPirateEmpireEliminated</Tags>
+
+        <QuestContextMulti ParticipantsVarName="$Players"/>
+
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$Players">
+                <From Source="$Empires"/>  
+            </Var>
+                     
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ STEP 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>                   
+                    <Objective Name="Step1_Objective1">
+                        
+                        <Sequence>
+                            <Decorator_BeginTurn>                                
+                            </Decorator_BeginTurn>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>GlobalQuest11-Compet01</Tags>
+                                        <QuestContextMulti ParticipantsVarName="$Players"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- #########     CHAPTER 1   ###########-->
+
+    <QuestDefinition Name="GlobalQuest11-Compet01" Category="CompetitiveQuest" SubCategory="Global" MinimumTurn="1" CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <Tags>GlobalQuest11-Compet01</Tags>
+
+        <!--============ CONTEXT ============-->
+        <QuestContextMulti ParticipantsVarName="$LivingEmpires">
+            <Distribution Type="FreeForAll"></Distribution>
+        </QuestContextMulti>
+
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+        
+        <SubCategoryRepetitionRules NumberOfConcurrentInstances="3"/>
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$LivingEmpires">
+                <From Source="$Empires">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,!EmpireEliminated</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+
+            <Var VarName="$IAEmpire">
+                <From Source="$PirateEmpire"/>
+            </Var>
+
+            <Var VarName="$AcademySystem">
+                <Any>
+                    <From Source="$Constellations.$StarSystems">
+                        <Where>
+                            <PathPrerequisite Flags="Prerequisite">WorldAcademy</PathPrerequisite>
+                        </Where>
+                    </From>
+                </Any>
+            </Var>
+
+            <Var VarName="$SpawnStarSystem">
+                <Any>
+                    <From Source="$Constellations.$StarSystems">
+                        <Where>
+                            <PathPrerequisite Flags="Prerequisite">ClassStarSystem,!MajorHomeSystem</PathPrerequisite>
+                        </Where>
+                        <OrderBy>
+                            <SortSystemByDistance OriginVarName="$AcademySystem" SortBy="Nearest" MinimumDistance="20" MaximumDistance="70" MinimumCandidateCount="1"/>
+                        </OrderBy>
+
+                    </From>
+                </Any>
+            </Var>
+           
+            <Var VarName="$Marker01"/>
+            <Var VarName="$Amount01" IntValue="1"/>
+            
+            <DroplistVar VarName="$SpawnedFleet" Droplist="DroplistGlobalQuest11-Compet" />
+            <Var VarName="$SpawnedFleetGUID"/>
+            <Var VarName="$SpawnedFleetEntity"/>
+            
+            <Var VarName="$FleetMissionDefinitionName01" StringValue="GreenmanRoam"/>
+            <Var VarName="$DescriptorCommandPoint" StringValue="CommandPointDescriptor"/>
+            <Var VarName="$MissionGUID"/>
+            <Var VarName="$HeroPirateShip" StringValue="ShipDesignHeroSmall02Attacker"/>
+            <Var VarName="$DescriptorSpeed" StringValue="PirateLeaderFleet"/>
+            <Var VarName="$Path" StringValue="ClassEmpire/ClassGarrison"/>
+            <Var VarName="$SubPath" StringValue="ClassGarrison"/>
+            <!--/!\ Has to be the descriptor-->
+            <Var VarName="$Tag" StringValue="PirateLeaderFleet"/>      
+            <Var VarName="$PoliticalEffectMilitarist"   StringValue="PopulationPoliticalEventNarrative83"/>
+            <LocalizationVar Source="$SpawnStarSystem" LocalizationKey="$SpawnStarSystemName"/>
+        </Vars>
+
+        <Prerequisites>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+        
+        <!--============ OBJECTIVES ============-->
+        <Steps>
+            <Step Name="Step1">
+
+                <StartActions>
+                    <Action_ApplyDescriptor>
+                        <Input_DescriptorName VarName="$DescriptorCommandPoint"/>
+                        <Input_Targets VarName="$IAEmpire"/>
+                    </Action_ApplyDescriptor>
+                    <Action_SpawnFleets>
+                        <Input_Empire VarName="$IAEmpire"/>
+                        <Input_Locations VarName="$SpawnStarSystem" />
+                        <Input_DroppableFleet VarName="$SpawnedFleet"/>
+                        <Input_Count VarName="$Amount01"/>
+                        <Output_FleetGUIDs VarName="$SpawnedFleetGUID"/>
+                    </Action_SpawnFleets>
+                    
+                    <Action_ApplyDescriptor>
+                        <Input_DescriptorName VarName="$DescriptorSpeed"/>
+                        <Input_TargetGUIDs VarName="$SpawnedFleetGUID"/>                    
+                    </Action_ApplyDescriptor>
+                    
+                    <Action_CreateFleetMissions>
+                        <Input_MissionDefinitionName VarName="$FleetMissionDefinitionName01"/>
+                        <Input_FleetGUIDs VarName="$SpawnedFleetGUID"/>
+                        <Output_MissionGUIDs VarName="$MissionGUID"/>
+                    </Action_CreateFleetMissions>
+                    <Action_AddQuestMarkers>
+                        <Input_TargetGUIDs VarName="$SpawnedFleetGUID"/>
+                        <Input_Empires VarName="$LivingEmpires"/>
+                        <Output_Markers VarName="$Marker01"/>
+                    </Action_AddQuestMarkers>        
+                 
+                </StartActions>
+
+
+                <ObjectiveSet>
+
+                    <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+
+                    <StartActions>
+                        <Action_TriggerPopulationEvent>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$PoliticalEffectMilitarist"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+
+                    <!--===== QUEST OBJECTIVE: Be the 1st to colonize the targeted star system =====-->
+                    <Objective Name="Objective">
+                        <AIHint Category="DestroyFleet" Motivation="0.7">
+                            <Input_Var VarName="$SpawnedFleetGUID"/>
+                        </AIHint>
+                        <Parallel CompletionPolicy="First">
+                            <Sequence>
+
+                                <Decorator_BattleEnded>
+                                    <Condition_BattleEnded_FleetDestroyed>
+                                        <Input_FleetGUIDs VarName="$SpawnedFleetGUID"/>
+                                    </Condition_BattleEnded_FleetDestroyed>
+                                    <Input_Empire VarName="$CurrentEmpire"/>
+                                </Decorator_BattleEnded>
+                                
+                                <Action_RemoveQuestMarkers>
+                                    <Input_Markers VarName="$Marker01"/>
+                                </Action_RemoveQuestMarkers>
+                                                                                          
+                            </Sequence>
+                            <Sequence>
+
+                                <Decorator_BeginTurn>
+                                    <Condition_CountSimulationObjectsWithTag Composition="None"   SubComposition="Minimum">
+                                        <Input_SimulationObjects VarName="$IAEmpire"/>
+                                        <Input_Path VarName="$Path"/>
+                                        <Input_SubPath VarName="$SubPath"/>
+                                        <Input_Tag VarName="$Tag"/>
+                                    </Condition_CountSimulationObjectsWithTag>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+
+                            </Sequence>
+                        </Parallel>
+                        
+                    </Objective>
+                    <Reward Droplist="DroplistRewardGlobalQuest11" Picks="1"/>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!-- ####################################### -->
+    <!--               POPULATION QUEST            -->
+    <!-- ####################################### -->
+
+    <!--         PopulationQuest         -->
+    
+    <QuestDefinition Name="PopulationQuest15" Category="PopulationQuest" SubCategory="Population" MinimumTurn="20" TriggeringProbability="0.6">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+
+        <QuestContextSolo/>
+
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            
+            <!--Variables for Choice 1 -->
+            
+           <!--Compute the current Production of Dust on Empire-->
+            <InterpretedVar VarName="$Amount04" Target="$(Empire)">
+                <Expression>Floor(Property(Context, @'ClassEmpire', NetEmpireMoney))</Expression>
+            </InterpretedVar>
+            <!--Compute the current Production of Dust +100 in order to find a dynamic goal-->
+            <InterpretedVar VarName="$Amount01" Target="$(Empire)">
+                <Expression>Max(1, Floor(Property(Context, @'ClassEmpire', NetEmpireMoney) + 100 ))</Expression>
+            </InterpretedVar>
+
+            <!--Formula with test the amount of Dust -->
+            <Var VarName="$Expression01" StringValue="Property(Context, @'../ClassEmpire', NetEmpireMoney)"/>
+            
+            <!--Variables for Choice 2 -->
+            
+           <!--Compute the current amount of Strategic Deposit in total in your Empire-->
+            <InterpretedVar VarName="$Amount02" Target="$(Empire)">
+                <Expression>SumProperty(Context, @'../ClassEmpire/ClassColonizedStarSystem', OwnedStrategicDeposits)</Expression>
+            </InterpretedVar>
+            <!--Compute the current amount of Strategic Deposit in total in your Empire +2 in order to find a dynamic goal-->
+            <InterpretedVar VarName="$Amount03" Target="$(Empire)">
+                <Expression>SumProperty(Context, @'../ClassEmpire/ClassColonizedStarSystem', OwnedStrategicDeposits) + 2</Expression>
+            </InterpretedVar>
+           
+            <!--Formula with test the amoutn of Strategic Deposits -->
+            <Var VarName="$Expression02" StringValue="SumProperty(Context, @'../ClassEmpire/ClassColonizedStarSystem', OwnedStrategicDeposits)"/>
+          
+            
+            <!--Variable for Fail Conditions-->
+
+            <!--Formula with check if there is more less 1 Vaulter in the Empire -->
+            <Var VarName="$Expression04" StringValue="Property(Context, @'ClassEmpire/ClassPopulationEmpireAffinityVaulters', PopulationCount, true) lt 1"/>
+            
+            <InterpretedVar VarName="$Duration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*30</Expression>
+            </InterpretedVar>   
+            <Var VarName="$Timer"/>
+
+            <!--Localization Keys -->
+            <LocalizationVar Source="$Amount01"         LocalizationKey="$Amount01Name"/>
+            <LocalizationVar Source="$Amount03"         LocalizationKey="$Amount03Name"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulationEmpire,ClassPopulationEmpireAffinityVaulters', PopulationCount, true) ge 15 </InterpreterPrerequisite>          
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--Let's choose-->
+            <Step Name="Step1">
+                <!--============ STEP 1 - Choose ============-->
+
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>                   
+                </Choice>
+
+                <!--============ Improve your Dust production ============-->
+                <ObjectiveSet ObjectiveComposition="All">
+                    <StartActions>
+                        <Action_StartTimer>
+                            <Input_Duration VarName="$Duration"/>
+                            <Output_Timer VarName="$Timer"/>
+                        </Action_StartTimer>
+                    </StartActions>
+                    <Objective Name="Objective_1"  StartValue="$Amount04" EndValue="$Amount01">
+                        <AIHint Category="MaximizeResource" Motivation="0.7">
+                            <Resource>Dust</Resource>
+                        </AIHint>
+                        <Parallel CompletionPolicy="First">
+
+                            <Sequence> 
+                               
+                                <Decorator_BeginTurn>
+                                    <Condition_IsProgressionComplete>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression01"/>
+                                    </Condition_IsProgressionComplete>                                    
+                                </Decorator_BeginTurn>                                
+                                                               
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression04"/>
+                                    </Condition_CheckInterpreter>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_TimerEnded>
+                                        <Input_Timer VarName="$Timer"/>
+                                    </Condition_TimerEnded>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+
+                        </Parallel>
+                        
+                    </Objective>
+                    <Reward Droplist="DroplistRewardQuestPopVaulters02" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ Improve your amount of Strategic Deposits ============-->
+                <ObjectiveSet ObjectiveComposition="All">
+                    <StartActions>
+                        <Action_StartTimer>
+                            <Input_Duration VarName="$Duration"/>
+                            <Output_Timer VarName="$Timer"/>
+                        </Action_StartTimer>
+                    </StartActions>
+                    <Objective Name="Objective_2" StartValue="$Amount02" EndValue="$Amount03">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="20" MaxAutoResolutionTurn="35" AutoResolutionProbability="1" />
+                        <Parallel CompletionPolicy="First">
+                            
+                            <Sequence>                               
+                                <Decorator_BeginTurn>
+                                   <Condition_IsProgressionComplete>
+                                       <Input_Context VarName="$CurrentEmpire"/>
+                                       <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                       <Input_Expression VarName="$Expression02"/>
+                                   </Condition_IsProgressionComplete>
+                                </Decorator_BeginTurn>   
+                            </Sequence>
+                            
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$Expression04"/>
+                                    </Condition_CheckInterpreter>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+
+                            <Sequence>
+                                <Decorator_BeginTurn>
+                                    <Condition_TimerEnded>
+                                        <Input_Timer VarName="$Timer"/>
+                                    </Condition_TimerEnded>
+                                </Decorator_BeginTurn>
+                                <Action_Fail/>
+                            </Sequence>
+
+                        </Parallel>
+                        
+                    </Objective>
+                    <Reward Droplist="DroplistRewardQuestPopVaulters01" Picks="1"/>
+                </ObjectiveSet>
+                
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+
+</Datatable>

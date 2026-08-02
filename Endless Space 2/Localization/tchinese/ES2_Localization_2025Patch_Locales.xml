@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%PlanetInitialFIDSIFromMiningProbesTitle">採礦探測器</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionLabel">透過此選單，你可以花費你在學院處累積的信譽來換取恩惠。你可以透過在拍賣中捐獻、完成競爭性任務來獲得信譽。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementQuestGlobalCompet09TooltipEffect">船艦+3初始等級</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity2EffectOverride">總督英雄獲得經驗值+75%</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageEnergyFleetTitle">艦隊能量型傷害</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageProjectileFleetTitle">艦隊投射型傷害</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponCriticalHitFleetTitle">艦隊致命一擊機率</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementQuestUniquePlanet12TooltipEffect">帝國每解鎖一項技術，[dustColored]+5%</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter3Strategic3Title">極端打擊戰鬥艦</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber3Strategic4Title">極端重型轟炸艦</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaTitle">賽亞達</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaDescription">昔日的賽亞達曾是一片荒蕪的沙漠世界，而如今的它卻已化作海洋行星——廣袤無垠的蔚藍水域間僅有一些零星分佈的崎嶇島嶼。傳說中，巨浪之下埋藏著偉大文明的遺跡，可審視那些依舊浮於水面的陸地時，卻很難找到任何佐證。在這個世界裏，僅有少數幾個原始社會得以存續，但有傳聞說，在星球深處仍封印著一股強大的力量…… </LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Title">深邃守護者</LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Description">在這裏，那些近乎癲狂的永恆族不惜以禁忌知識作為交易籌碼……只為讓外來者遠離他們深埋於地下的聖地。</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Title">塞瓦·埃澤</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Description">塞瓦·埃澤出生於朝聖族的生態建築“光之視界”。在童年末期，她所在的家園艦隊遭到了聯合帝國追索小隊的長期追擊。最終，雙方爆發了激烈戰鬥，生態建築也在戰火中分崩離析。此役過後，塞瓦前往附近的一顆衛星，搜尋應急用的星塵儲備，卻不慎跌入了一個幽深的星塵池。不知怎的，她竟神奇地活了下來——不僅在幾天後從池中現身，還獲得了經過星塵強化的能力。然而此時，艦隊的遺存卻早已不知去向。於是，她便開始在銀河系中漂泊；過了一段時間後，她進入了學院。在學院的悉心指導下，她將自己的原始力量錘煉得更加純熟。如今，在解決了“光之視界”的恩怨之後，塞瓦成了一名自由自在的獨立特工，開始了四處闖蕩的生涯。</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedTitle">強化</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedDescription">此行星異常點已得到強化，其有益效果已獲得強化。</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderTitle">奇觀</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderDescription">此行星異常點獨一無二，能產生極為強大的效果。</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsDescription">借給其他帝國時無法用來入侵行星系
+無法被擄獲</LocalizationPair>
+  <LocalizationPair Name="%FailureNoTemplesOnGasPlanetsDescription">無法在氣態行星上建造神殿。</LocalizationPair>
+  <LocalizationPair Name="%PlanetImprovementTemple1TooltipOverride">移除基礎行星[fids]懲罰
+50%的基礎行星[scienceColored]被轉化為[prestigeColored]
+
+[blue-gray]（當星系被征服時，神殿將遭到摧毀，其文物也會被退回）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsGroupTooltipDescription">探索文物：
+啟用此文物可使所有船艦獲得一個強大的加成效果，提升其視野範圍和移動速度。</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsGroupTooltipDescription">擴張文物：
+啟用此文物可提升各大教堂的過度殖民門檻，同時撤銷建有神殿的行星上的基礎不認同度。</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsGroupTooltipDescription">外交文物：
+啟用此文物可使你與所有已知小型陣營的關係得被動提升，同時還將擴大所有行星系的影響半徑。</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsGroupTooltipDescription">政治文物：
+啟用此文物可獲得多種加成效果，具體效果取決於你所選出的政黨數。參政的政黨數量越少，加成效果越強。</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsButtonTooltipDescription">效果：
++25%行進點數效率
+船艦及行星系視野+5{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsButtonTooltipDescription">效果：
+每個大教堂+1過度殖民門檻
+行星上沒有基礎不認同度{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsButtonTooltipDescription">效果：
+啟用此欄位時+5%影響力半徑（上限100%）
+每回合+1與小型陣營的關係{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsButtonTooltipDescription">參政黨加成倍率：{2}
+效果：{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsSlotLocked">[red]此欄位已鎖定。你必須建造一個大教堂前往失落族才能解鎖另一個帝國文物欄位#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ConstructibleFilterInfiniteDescription">只顯示不限改良設施</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemImprovementInfiniteTitle">不限改良設施</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLunarAnomalyTooltip">[blue-gray]（僅可建造在擁有衛星異常點的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresPlanetAnomalyTooltip">[blue-gray]（僅可建造在擁有行星異常點的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyAnomalyTooltip">[blue-gray]（僅可建造在擁有異常點的星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetTooltip">[blue-gray]（僅可建造在擁有氣態行星的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresNegativeOrMixedAnomalyTooltip">[blue-gray]（僅可建造在擁有負面或混合異常點的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresStrategicDepositTooltip">[blue-gray]（僅可建造在擁有戰略資源庫存的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLuxuryDepositTooltip">[blue-gray]（僅可建造在擁有奢侈資源庫存的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyDepositTooltip">[blue-gray]（僅可建造在擁有資源庫存的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresTradeBuildingTooltip">[blue-gray]（僅可建造在擁有貿易總部或子公司的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetOrLunarAnomalyTooltip">[blue-gray]（僅可建造在擁有氣態行星或衛星異常點的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetTooltip">[blue-gray]（僅可建造在擁有貧瘠行星的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetOrTradeBuildingTooltip">[blue-gray]（僅可建造在擁有貿易總部、子公司或貧瘠行星的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrFertilePlanetTooltip">[blue-gray]（僅可建造在擁有貧瘠行星或肥沃行星的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrHotPlanetTooltip">[blue-gray]（僅可建造在擁有貧瘠行星或炎熱行星的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelSpaceBattle1Tooltip">[blue-gray]（需先建成行星系砲組）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelTooltip">[blue-gray]（僅可建造在擁有堡壘艦的行星系中）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleProjectileCanBeShotDownTitle">投射武器可被攔截擊落</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNoVisionDescription">必須擁有該行星系的視野</LocalizationPair>
+  <LocalizationPair Name="%LostTemplarsQuest-Chapter1-Part1-ReligiousObjective">調查$Amount01Name 個奇特點</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsDescription">將該行星系變成一個受保護國，獲取它的資源、陣營特性，並使其免受其他帝國的干預，但無需對其進行佔領。</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire1OrAboveTitle">挑釁及以上</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire2OrAboveTitle">滿意及以上</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire3OrAboveTitle">忠誠及以上</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem1OrAboveTitle">不滿意及以上</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem2OrAboveTitle">滿意及以上</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem3OrAboveTitle">愉悅及以上</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire1OrAboveTitle">挑釁及以上</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire2OrAboveTitle">順從及以上</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire3OrAboveTitle">忠誠及以上</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem1OrAboveTitle">挑釁及以上</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem2OrAboveTitle">順從及以上</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem3OrAboveTitle">忠誠及以上</LocalizationPair>
+  <LocalizationPair Name="%AssignmentCooldownBaseDurationTitle">指派冷卻</LocalizationPair>
+  <LocalizationPair Name="%MaximumPopulationTitle">[population]人口容量</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSplashFlotillaDamagePercentTitle">目標區艦隊所分攤的傷害</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAnnotationsRefusedSciencePartnership">你們拒絕了我們的提出的科技協議。</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementCitadelSpecializationEffectOverride">堅堡艦將使其所在的星系獲得以下加成：
+ • 星系[foodColored]+20%
+ • 星系[scienceColored]+20%
+ • 星系[industryColored]+20%
+ • 星系[prestigeColored]+10%
+ • [citadelDefenseColored]堅堡艦駐軍容量+1000
+ • 每有一 [citadelDefenseColored]，[population]堅堡艦駐軍容量+50</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeSmallDescription">小型船艦需要艦隊的#E3BDAC#1#REVERT# [commandPoint]（指揮點數）。
+船體弱點：#E3BDAC#120#REVERT#（見防禦吸收）</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesReductionTitle">受到的侵略轟炸傷害</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamageReductionTitle">受到的侵略轟炸傷害</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefensiveDamageReductionTitle">受到的防禦轟炸傷害</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundPopulationDestructionProbabilityTitle">在入侵期間殲滅的人口</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundImprovementDestructionProbabilityTitle">在入侵期間摧毀的改良設施</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelIndustryScienceEffectOverride">已建船艦生命值+10%
+已建船艦傷害值+10% </LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportMothershipAnchoredDefenseEffectTitle">方舟依附於行星系期間不會在太空戰役中受到攻擊
+但同時，方舟上的人員也無法參與入侵行動</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockAltTitle">[ManpowerColored]人力容量</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockTitle">[ManpowerColored]人力容量</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseRecoveryTitle">駐防復原率</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseTitle">行星系駐防</LocalizationPair>
+  <LocalizationPair Name="%MaximumSystemManpowerTitle">[systemDefenseColored]駐防容量</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseTitle">堡壘艦駐防</LocalizationPair>
+  <LocalizationPair Name="%MaximumCitadelManpowerTitle">[citadelDefenseColored] 堡壘艦駐防容量</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseDescription">此部隊在功能上與行星系駐防類似，但可以免受圍攻傷害。當你的行星系駐防滿員後，該部隊將開始自動補充兵員。補充的兵員數量不計入模擬軍營等類似效果。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescription">該行星系正遭受圍擊，其[systemDefenseColored]駐防人力將逐漸消耗殆盡。
+當前[systemDefenseColored] 駐防：{0}/{1}（{2}[systemDefenseColored]/[turn]）</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeWithFleetsDescription">該行星系正遭受圍擊，其[systemDefenseColored]駐防人力將逐漸消耗殆盡。
+當前[systemDefenseColored] 駐防：{0}/{1}（{2}[systemDefenseColored]/[turn]）
+
+若該行星系遭到入侵，其軌道上的艦隊將為該行星系駐防提供{3} [shipCrewColored]人力支援</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescriptionWithEmpireName">{3}的{4}正遭受圍擊，這將緩慢地削弱其防禦[systemDefenseColored]。
+當前[systemDefenseColored]：{0}/{1}（{2}[systemDefenseColored]/[turn]）</LocalizationPair>
+  <LocalizationPair Name="%NetSystemManpowerTitle">[systemDefenseColored]每回合駐防人力</LocalizationPair>
+  <LocalizationPair Name="%SystemManpowerLossTitle">[systemDefenseColored]駐防人力傷害</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandTitle">駐防</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandDescription">將艦隊派駐至目前起始行星系的飛船庫中，即可快速完成修復與補給。注意：你只能在自己的行星系中駐防。</LocalizationPair>
+  <LocalizationPair Name="%ModuleEffectGroundBattleAttackerManpowerLimitBonusTitle">入侵船員部署限制</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleDamageMultiplierTitle">行星系砲組傷害值</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipManpowerTitle">[shipCrewColored]船員容量</LocalizationPair>
+  <LocalizationPair Name="%MaxLocalManpowerAltTitle">[shipCrewColored]船員容量</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelSpaceBattle1Effects">為堡壘艦裝備爆炸效果砲組。該武器每階段可從軌道發動一次攻擊，對所有敵方船艦造成2000點傷害值。</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01MajorHisshosEra2TooltipEffect">解鎖老鷹級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02MajorHisshosEra2TooltipEffect">解鎖茶隼級船體的額外[Strat02HyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01MajorHisshosEra3TooltipEffect">解鎖鳶級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02MajorHisshosEra3TooltipEffect">解鎖獵鷹級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01MajorHisshosEra4TooltipEffect">解鎖鵰級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UmbralChoirEra2TooltipEffect">解鎖詩節級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UmbralChoirEra2TooltipEffect">解鎖詩歌級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UmbralChoirEra3TooltipEffect">解鎖讚美詩級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UmbralChoirEra3TooltipEffect">解鎖史詩級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UmbralChoirEra4TooltipEffect">解鎖組詩級船體的額外[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TemplarsEra2TooltipEffect">解鎖咒文級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TemplarsEra2TooltipEffect">解鎖禱詩級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TemplarsEra3TooltipEffect">解鎖伏地禮級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TemplarsEra3TooltipEffect">解鎖讚美詩級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TemplarsEra4TooltipEffect">解鎖祈願級船體的額外[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01CraversEra4TooltipEffect">解鎖女王級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01HoratioEra4TooltipEffect">解鎖元首級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01SophonsEra4TooltipEffect">解鎖佑塔級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TerransEra4TooltipEffect">解鎖契勒伐斯級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TimeLordsEra4TooltipEffect">解鎖質數級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UnfallenEra4TooltipEffect">解鎖森林級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VampirilisEra4TooltipEffect">解鎖歐塔姆級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VenetiansEra4TooltipEffect">解鎖米歐斯級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01CraversEra3TooltipEffect">解鎖主教級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01HoratioEra3TooltipEffect">解鎖領袖級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01SophonsEra3TooltipEffect">解鎖十億級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TerransEra3TooltipEffect">解鎖索普朗級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TimeLordsEra3TooltipEffect">解鎖三角形數級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UnfallenEra3TooltipEffect">解鎖火焰級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VampirilisEra3TooltipEffect">解鎖賈恩姆級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VenetiansEra3TooltipEffect">解鎖歐莫卡級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02CraversEra3TooltipEffect">解鎖守衛級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02HoratioEra3TooltipEffect">解鎖大領袖級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02SophonsEra3TooltipEffect">解鎖千萬億級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TerransEra3TooltipEffect">解鎖雪銳盾級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TimeLordsEra3TooltipEffect">解鎖四面體數級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UnfallenEra3TooltipEffect">解鎖光芒級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VampirilisEra3TooltipEffect">解鎖列藤姆級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VenetiansEra3TooltipEffect">解鎖蘭瑟倫級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership01TooltipEffect">解鎖方舟級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership02TooltipEffect">解鎖方舟級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01CraversEra2TooltipEffect">解鎖士兵級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01HoratioEra2TooltipEffect">解鎖馬奇歐級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01SophonsEra2TooltipEffect">解鎖公斤級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TerransEra2TooltipEffect">解鎖艾格瑞級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TimeLordsEra2TooltipEffect">解鎖自然數級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UnfallenEra2TooltipEffect">解鎖荊棘級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VampirilisEra2TooltipEffect">解鎖史露亞姆級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VenetiansEra2TooltipEffect">解鎖瓦姆級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02CraversEra2TooltipEffect">解鎖工人級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02HoratioEra2TooltipEffect">解鎖巴洛級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02SophonsEra2TooltipEffect">解鎖十進級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TerransEra2TooltipEffect">解鎖耶蘭奈夫級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TimeLordsEra2TooltipEffect">解鎖有理數級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UnfallenEra2TooltipEffect">解鎖壤土級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VampirilisEra2TooltipEffect">解鎖托伊山姆級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VenetiansEra2TooltipEffect">解鎖德列夫級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VaultersEra2TooltipEffect">解鎖箭矢級船體的額外[Strat01titaniumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VaultersEra2TooltipEffect">解鎖弩箭級船體的額外[Strat02hyperiumColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VaultersEra3TooltipEffect">解鎖鏃箭級船體的額外[Strat03adamantianColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VaultersEra3TooltipEffect">解鎖砲彈級船體的額外[Strat04anti-matterColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VaultersEra4TooltipEffect">解鎖長槍級船體的額外[Strat05orichalcixColored]/[Strat06quadrinixColored]個模組欄位
+[shipCrewColored] 船員容量+50%</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedCravers">vrrr -- kzzz -- tsk . . .開門見山：分享情報吧。蟲巢很少會做此提議。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedCravers">wrr -- bzzz -- klunk . . . 語氣平淡單調：你們獨特的智慧成果……已被吞噬，終將為我們所用。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedCravers">chttt -- wrrr -- fzzzt . . . 語氣失望：供奉資源之人啊，蟲巢將與你互通有無。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedCravers">vkk -- chttt -- ktsz . . .開門見山：協議達成。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedCravers">滿心歡喜：在你的領地上，我們會找到很多新的糧食。但你放心，我們絕不會對你下手。（我一想到這句話，就覺得順口極了，以至於它竟莫名其妙地成了我最喜歡的一句）</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedCravers">心不在焉：你發現了新的世界、新的糧食。就此離去吧。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedCravers">語氣平淡單調：蟲巢向來獨立自主。這一次也不會有任何改變。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHissho">願兩國彼此分享視野、互通有無，而不是像喪失尊嚴的獵物一般，在黑暗中相互隱藏、彼此隔絕。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHissho">若無智慧，利刃只會給持刃者自身帶來危險；而通過這份協議，你將為我們兩國帶來和平與繁榮。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHissho">你同意與我們開展貿易，實在是對我們技藝的褒獎。放心，這些產品的品質定不會讓你失望。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHissho">此次交易令騰納錫甚感欣喜。如此順利的合作，我們將銘記於心。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHissho">作為你們的客人，我一定會確保我們的人民尊重你們領地的每一寸；當然，我們也期待你們給予我們同樣的尊重。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHissho">我們的偵察兵會把發現彙報給你，以給你啟發。希望你好好利用這些情報。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHissho">你們打算獨自戰鬥？這個選擇雖令人遺憾，卻也值得敬重……祝你們好運，獨行的戰士們。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHoratio">這樣你就會明白，我的美對銀河系來說是多麽重要。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHoratio">何瑞修族的科學毫無疑問是最頂尖的，但要是能提供更多資料的話，可以更進一步。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHoratio">如果沒有奢華生活會是什麽樣？我相信，你一定會領略何瑞修族經濟天才智慧的結晶。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHoratio">凡何瑞修族經手的事，都會讓銀河系煥發新輝。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHoratio">對你來說，今天註定是重要的一天！因為從今日起，你便可自由踏入何瑞修族的完美王國，而何瑞修族也獲得了探索你帝國版圖的權利。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHoratio">就算以何瑞修族之能，亦難美化其未知之境。因此，你今天的行爲對銀河系大有幫助。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHoratio">你沒有看到與何瑞修族攜手合作的好處，這真令人遺憾。但我堅信，你遲早會理解到這一點。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTemplars">你會發現，我們擁有縱貫萬億紀元的歷史。然而時移世易，現在的我們已經有些跟不上時代了。因此，這一協議必將為信徒們帶來福祉。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTemplars">當我們使用那些和你交易來的材料重建神殿時，請記住：你的每一分奉獻，都將凝入這方方聖階之中。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTemplars">此次交易將令納卡林族受益匪淺。千年之後，當後世回溯我族復興歷史之時，這段佳話必將佔據濃墨重彩的一章。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTemplars">有了你的協助，我們搜尋遠古文物的行動將會輕鬆許多。今天，你幫了我們一個大忙。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTemplars">啊，在我們沉睡期間，銀河系確實發生了翻天覆地的變化……感謝你讓我們知道了這一點。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTemplars">真是個令人遺憾的選擇，但好在我們仍保持著和平。說起來，你看不到結盟帶來的益處，有沒有可能是因為我們沒能向你充分展示自己的歷史？</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedSophon">太棒了！讓我來看看，我們能……哦，呃，我們再額外贈送一些免費的視頻技術吧！（雷尤梅克，去把那些沉迷於老式技術的傢伙們找來，我搞不定這種格式……）</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedSophon">兩個腦袋肯定比一個強！當然，就此次合作而言，我認為四個腦袋更好！不管怎樣，讓我們一起來搞科研吧，朋友！</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedSophon">太好了！我已經等不及要看看你們的貨物了，而你們也可以來試試索芬族的產品，它們絕不會讓你後悔的！對了，等你們見識到我們的娛樂活動——絕對會讓你的大腦爽上天！</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedSophon">很好，我們肯定能在此基礎上開展合作。研發部門絕對會樂壞的，說不定還會出去大吃一頓呢！</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedSophon">別誤會，我們的望遠鏡是最棒的，但有了這份協議，我們就能近距離對比各個行星了。這肯定會更有趣！</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedSophon">此次共用定會加快我們的探索進程！希望你們也能喜歡我們的發現。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedSophon">哦！呃，不，那……那也行。好吧，那就繼續做朋友吧。和平相處好像也不錯，沒什麼大不了的……</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUmbralChoir">你幫由幽歌族拓展了對銀河系的認知，有形造物。對此，我們非常感激。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUmbralChoir">幽歌族期待與你分享宇宙知識，有形造物。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUmbralChoir">幽歌族希望能對你的貨物展開分析，有形造物。貨物交付座標已錄入你公司的網路系統。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUmbralChoir">這一步雖小，但卻意義非凡，有形造物。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUmbralChoir">幽歌族的領土將對你開放，有形造物。讓我們同沐於寧謐的虛空吧。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUmbralChoir">有形造物，你今天向我們展示的這些地圖，為雙方達成和睦的願景又增添了幾分可能。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUmbralChoir">你的拒絕令幽歌族陷入了一時沉寂，有形造物。但願日後你能加入我們的合唱。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUnfallen">與我們分享見聞，只會讓樞心更有力地跳動。你意下如何？</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUnfallen">在雙方共同的科學探索努力下，我們必將迎來興盛繁榮。謝謝你，朋友。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUnfallen">希望此次貿易能為雙方帶來更深層次的和諧，造福所有人民。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUnfallen">樞心對此次交易感到非常滿意。希望此舉能加速我們的和平進程。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUnfallen">如今我們已開放邊境，和平事業必將蓬勃發展、日益興盛。我們衷心期待，能在各自的世界彼此相見。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUnfallen">你的善舉在往昔的荒蕪之地上播下了和平的種子。感謝你提供的這些地圖</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUnfallen">樞心因你的拒絕而停止跳動，宛如嚴霜中凋零的花朵。不過，我們會繼續開展必要的工作，以構建我們之間更為牢固的紐帶。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTerrans">帝國的確可以成為摯友，但若對我們有所隱瞞，友善便無從談起。因此，哪怕只是為了你自身的利益考慮，我也懇請你簽署這份情報共用協議。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTerrans">太棒了！若能看到我們最傑出的學者們在彼此的大學裏授課，那將是何等壯觀的景象——現在，我們該來談談如何管控他們之間的政治分歧了……</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTerrans">哈哈！不需一槍一炮，就能收穫發展與財富。你這份協議讓我心情大好。來，在這些異域珍饈上市之前，咱們先好好享用一番吧</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTerrans">不知道帝國會如何利用這筆交易——換做是我的話，或許會下令建造一座新的歌劇院，或是一座大型工廠……</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTerrans">明智的決定。與帝國緊密合作只會增強你們的安全保障。當然，我也很樂意親臨貴國首都，共襄盛舉——希望你們已經做好招待我的準備了……</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTerrans">看到新的土地總是令人激動不已。也不知道未來會有多少愛國志士在這片土地上繁衍生息，難免讓人浮想聯翩。我會派人立即著手制定發展規劃。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTerrans">噢，野心不小嘛！帝國自然是能獨當一面的——但若不結盟，我們便沒有義務幫你出頭……</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVaulters">我的族人已達成共識：與你共用視野實為上策。如此一來，我們便可統籌情報，協調各方在寰宇之間的行進了。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVaulters">聽聞有機會開展共同研究，我的族人定會欣喜不已。願你我雙方人民都能因此繁榮昌盛。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVaulters">集市上商品琳琅滿目，新創意層出不窮；我們的工藝品也得以遠銷海外，這令我們倍感自豪——這裏有種家的感覺，宛如奧瑞加星一般親切。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVaulters">這是筆不錯的交易，也是我們雙方邁向更偉大成就的一小步。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVaulters">我的族人會以貴賓之禮款待你們，也會以主人之姿敬重你們。願兩國人民從此能和睦相處。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVaulters">宇宙中還有數不勝數的星辰在等待著探索。因此，能與貴方交換星圖，我們的天文學家定會欣喜若狂。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVaulters">既渴望在宇宙中協作求存，又對宇宙心懷恐懼——這種處境確實令人緊張。雖然協議未能達成，但我希望你最終能感受到我們的誠意。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedVampirilis">你已接受了我們的視野共用協議。令一切罪惡無所遁形的虛空族之光，今後也將為你而閃耀。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVampirilis">接受教會的相互啟迪，實乃明智之舉。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVampirilis">財富對於虔誠者毫無價值，但辛勤勞作將使我們的人民盡顯高貴。如此決定實乃明智之舉。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVampirilis">虛空族亦贊同此安排。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVampirilis">太好了！願你們能在這片神聖的領地上尋得諸聖之光。當然，我們也會將諸聖之光帶給你們那個世界的信徒。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVampirilis">獲知了這些地圖上的資訊之後，我們的艦隊便可更加安全地航行</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVampirilis">異端並不等同於異教——它專指那些本以接近神聖真理、卻以微妙方式誤導信徒之人……就如同那些表面同意和平、卻拒絕結盟的人一樣。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVenetians">市場調研的範圍和時效性終究有限。所以，為了更好地開展合作，我們不妨共用視野。你意下如何？</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVenetians">只有掌握了最前沿的科技，才有底氣去推銷最新產品。所以，我們合力研發如何？看看能搞出什麼成果！</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVenetians">難怪你能當領袖呢！你慧眼識珠，一眼就能看出好交易；當然，四大家族也總能帶來最棒的買賣。我們絕不會讓你後悔的！</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVenetians">假以時日，這筆交易帶來的紅利將會十分可觀。屆時，你定會滿意於此刻的決定。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVenetians">遊客湧入、投資注入、傭兵助力……到時候，你就會欣喜地發現，向四大家族開放邊境將帶來諸多收益！</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVenetians">四大家族會充分利用這些地圖的。我已經發現一些極具開發潛力的黃金地段了……</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVenetians">我尊重這種公事公辦的態度，但最好別考慮得太久——我們不會坐等機會，而是會主動出擊，爭取利益。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTimeLords">在情報事務上開展合作對我們雙方都有助益。因此，不妨考慮一下這種合作模式。如能聯手，我們便可在危機四伏的銀河系中及時互通消息。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTimeLords">由於我們各自的原生宇宙間存在差異，因此，要將我們的方法闡釋給貴方科學家恐怕會頗具難度，但我們定會全力以赴。在此，我謹代表所有裂谷族向你致謝。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTimeLords">我們會立即將貴方消費者獨特的產品需求傳遞給過去的我們。而且我可以言明：只要我們達成貿易合作，那麼在所有的時空維度裏，你都找不到品質更優的商品了。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTimeLords">很高興你已看出我們提案的價值所在。預測顯示，這些資源本身就是對未來的一筆絕佳投資。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTimeLords">或許假以時日，我們不僅能在你們的宇宙中生存下來，還能蓬勃發展。達成此次合作乃是這一進程中至關重要的一步，貴方的應允對我們而言更是莫大的幸事。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTimeLords">我們十分感激你們為我們的生存所做出的貢獻。這些地圖將幫助我們像瞭解曾經的柯洛茲一樣，清晰地認識你們所處的這個物質宇宙。</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTimeLords">我們完全理解你的謹慎態度。畢竟如今，謹慎早已融入我們生存的每時每刻。不過，我們仍希望你將來能夠回心轉意，與我們開展更加緊密的合作。</LocalizationPair>
+  <LocalizationPair Name="%RawMaximumPopulationTitle">[population]人口容量</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerManpowerLimitBonusTitle">入侵人力限制</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderManpowerLimitBonusTitle">入侵人力限制</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSiegePowerTitle">圍擊人力傷害</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponOpponentPenaltyTitle">對手減益</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSpecialEffectDurationTitle">減益時間</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDamageAOETitle">區艦隊承受傷害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerPhaseTitle">每階段重新充能防護罩</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerPhaseTitle">區艦隊每階段重新充能防護罩</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerSecondTitle">每秒重新充能防護罩</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerSecondTitle">區艦隊每秒重新充能防護罩</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerPhaseTitle">每階段回復生命值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerPhaseTitle">區艦隊每階段回復生命值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerSecondTitle">每秒回復生命值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerSecondTitle">區艦隊每秒回復生命值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeTitle">每秒擊殺船員數</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronCriticalAttackChanceTitle">連隊致命一擊機率加成</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterBattleTitle">艦隊在戰鬥後回復生命值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterPhaseTitle">艦隊每階段回復生命值</LocalizationPair>
+  <LocalizationPair Name="%DodgeChanceTitle">連隊迴避</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDodgeChanceTitle">連隊迴避</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponDPSTitle">每秒傷害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeDurationTitle">登艦時間</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectOverallCooldownTitle">發射間隔</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsCooldownTitle">冷卻</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShipManpowerKillAbsorption">船員傷害抵抗能力</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleEMPExplicationTitle">成功擊中目標後，EMP砲塔可在一段時間內讓所列子系統失效。</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsRawDamageTitle">原始傷害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPWeaponDefenseTitle">武器失效時間</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPShieldDefenseTitle">防護罩失效時間</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSTitle">高射炮每秒傷害值</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlakExplicationTitle">用其基礎動能武器同時發射，高射炮會瞄準來襲的投射武器、爆炸效果砲組、連隊和登艦艙。
+高射炮齊射傷害若高於飛彈生命值，或與之相等，就能一發擊毀瞄準的目標。</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportAdditionalManpowerTitle">[shipCrewColored]船員容量</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstSmallShipsTitle">對小型船艦傷害加成</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstMediumShipsTitle">對中型船艦傷害加成</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstLargeShipsTitle">對大型船艦傷害加成</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementObliteratorShieldEffects">可防禦一次滅絕攻擊以避免被完全摧毀
+行星系改良設施+50%且人口免於滅絕
+軌道艦隊對抗滅絕攻擊的傷害減免+50%
+統治英雄受傷機率-67%</LocalizationPair>
+  <LocalizationPair Name="%DockedFleetsHealthRegenerationRatioTitle">駐防船艦每回合再生最高生命值</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity3EffectOverride">駐防船艦每回合再生最高生命值+50%</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioTitle">軌道艦隊或駐防船艦每回合再生最高生命值</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroDescription">軌道艦隊或駐防船艦每回合再生最高生命值</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroTitle">軌道艦隊或駐防船艦每回合再生最高生命值</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioDescription">軌道艦隊或駐防船艦每回合再生最高生命值</LocalizationPair>
+  <LocalizationPair Name="%HealthPerTurnTitle">英雄復原率</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleExperienceFromBattlePercentModifierTitle">所獲經驗值</LocalizationPair>
+  <LocalizationPair Name="%ExperienceBonusPercentTitle">所獲經驗值</LocalizationPair>
+  <LocalizationPair Name="%ExperienceMultiplierTitle">經驗值加倍器</LocalizationPair>
+  <LocalizationPair Name="%LongRangePenaltyTitle">長距離準確度</LocalizationPair>
+  <LocalizationPair Name="%MediumRangePenaltyTitle">中距離準確度</LocalizationPair>
+  <LocalizationPair Name="%ShortRangePenaltyTitle">短距離準確度</LocalizationPair>
+  <LocalizationPair Name="%DeadZoneRangePenaltyTitle">極近距離準確度</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleAntiCrewExplicationTitle">船艦的傷害加成視承載船員多寡按比例加成，上限為20%。霰彈模組能有效降低此加成且改良登艦艙。</LocalizationPair>
+  <LocalizationPair Name="%ModuleInvisibilityAmbushTitle">隱蔽的區艦隊會保持隱形，並等到抵達預定的射程才開火。</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusTitle">士氣加成效果</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusIfOneShipTitle">區艦隊的落單船艦傷害值+25%</LocalizationPair>
+  <LocalizationPair Name="%ManpowerLostTransferPercentTitle">重獲損失船員成為人力</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusFromManpower">船員人力造成傷害</LocalizationPair>
+  <LocalizationPair Name="%PlayerDustPerAliveCPTitle">戰鬥結束後，每一點剩餘指揮點數可獲得[dustColored]</LocalizationPair>
+  <LocalizationPair Name="%ManpowerPercentKillPerPhaseTitle">艦隊每階段擊殺船員數</LocalizationPair>
+  <LocalizationPair Name="%DamageKineticTitle">子彈武器傷害值</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarCommandDescription">此行星系駐防擁有的船艦總指揮點數</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarHealthDescription">此行星系駐防的船艦累積生命值</LocalizationPair>
+  <LocalizationPair Name="%SophonsQuest-Chapter2.1-Diplomacy-C1Step1ObjectiveTooltip">使用「駐防」行動把船艦放入駐防，或是建造新船艦並留在駐防。</LocalizationPair>
+  <LocalizationPair Name="%ExplorationQuest26-Choice02ObjectiveTooltip">船艦必須停在你其中一個殖民地的駐防裡。</LocalizationPair>
+  <LocalizationPair Name="%FailureShipLockedInGarrisonDescription">你無法建立艦隊，因為有一艘船艦困在駐防裡。</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsManpowerDamageOverTimeDefenseTitle">登艦艙人力承受傷害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceTitle">致命一擊機率加成</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceKineticTitle">動能武器致命一擊機率加成</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceEnergyTitle">能量型武器致命一擊機率加成</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDefenseTitle">連隊傷害抵抗能力</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightBonusTitle">船艦仇恨值提高</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightPenaltyTitle">船艦仇恨值降低</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaMoraleBonusPercentTitle">士氣加成效果</LocalizationPair>
+  <LocalizationPair Name="%GlobalSpeedModuleTitle">行進點數效率</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipProbeStockTitle">最高探索探測器數</LocalizationPair>
+  <LocalizationPair Name="%ProbeStockTitle">探索探測器</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportProbeStockTitle">探索探測器</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsNetDepletionPointsOnOrbitTitle">每回合治癒的耗竭值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponTypeCollateralTitle">連帶</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderTroopsDamageMultiplierTitle">防禦部隊傷害值</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsDamageMultiplierTitle">入侵部隊傷害值</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsMaxHealthMultiplierTitle">入侵部隊生命值</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentPopulationDestructionProbabilityTitle">殲滅人口</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentImprovementDestructionProbabilityTitle">摧毀改良設施</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1GhostTooltipEffect2">增加600[systemDefenseColored]與駐防部署上限</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TooltipEffect2">增加300[systemDefenseColored]與駐防部署上限（視目前行星系所有權增減）</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TerransTooltipEffect2">增加400[Manpower]並提升駐防部署上限（視目前行星系所有權增減）</LocalizationPair>
+  <LocalizationPair Name="%BesiegedColonizedStarSystemTitle">遭受圍擊的行星系</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCuriosity2EffectOverride">每[systemDefenseColored]+0.08[industryColored]</LocalizationPair>
+  <LocalizationPair Name="%FailureMoreRelicsDescription">沒有足夠的文物[relicColored]</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherDescription">進去Amplifiers網站</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherTitle">Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%MessageBoxGames2GetherButtonTitle">各路資訊、疑難排解和好點子，請上Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%Update14Description">感謝各位踴躍參與去年一月的免費週末，你們解鎖了所有獎勵！巴思瑞索族小型陣營現在已經可以使用，還有來自這個種族的新英雄，以及一項充滿垃圾的新任務……前往Amplifiers解鎖！</LocalizationPair>
+  <LocalizationPair Name="%EarlyAccessSubscriberContentDescription">再多一位英雄輔佐，你統治銀河系會更加輕鬆。由於你對Amplitude和Amplifiers的關注，智者族天才烏瑟參．拉摩伊茲已經解鎖，可以在Amplifiers選擇！</LocalizationPair>
+  <LocalizationPair Name="%Update5Description">感謝大家踴躍參與Play-to-Win社群挑戰活動，所有玩家已共同解鎖全新的附加元件，包含聯合帝國文明專用的梅札瑞艦隊外觀、全新船艦模組包、一位新英雄、六分支銀河系類型、一個新的異常點，以及一個種族事件。立即在Amplifiers將其解鎖！</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisTitle">轉化慶典</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisDescription">由於我們和學院之間擁有穩固的關係，因此我們可以說服一整個行星系先建造方舟，再再將其轉化為萃素。</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirTitle">埋藏伺服器</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirDescription">在我們的要求下，學院會全面關閉他們的感應器，讓我們能默默在他們的行星系建立庇護所伺服器儲藏點。</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessTitle">政治封鎖</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessDescription">學院所給予的政治人情不是應有的權利；只要我們搶在依西安德前譴責某個帝國，在政治上。</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionTitle">遣返文物</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionDescription">雖然我們的缺席、共同信仰和帝國歷史讓我們對學院內文物所主張的所有權變得不太可靠，不過良好的關係能夠幫我們贏回一些文物。</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionTitle">安全顧問</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionDescription">學院持有的資產很少，所以他們維持著頂級的軍事和經濟安全。如果他們能跟我們分享知識，那我們的人民就可以因此受惠。</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionTitle">軍事榮譽</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionDescription">藉由讓部隊納入彼此的菁英階層，我們可以結合雪銳盾與學院的聲望，吸引愛國志士投奔並在全銀河建立聲望。</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionTitle">引導型研究</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionDescription">透過善待學院的科學家，我們的皇帝能獲得梅札瑞知識份子和銀河系科學社群的支持。 </LocalizationPair>
+</Datatable>

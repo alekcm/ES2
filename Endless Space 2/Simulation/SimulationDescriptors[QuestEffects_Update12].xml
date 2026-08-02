@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="EventEffect189SimEffect189" Type="EventEffect">
+        <Modifier       TargetProperty="EmpireResearch"     Operation="Percent"         Value="0.2" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="EventEffect190SimEffect190" Type="EventEffect">
+        <Modifier       TargetProperty="EmpireResearch"     Operation="Percent"         Value="0.2" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="EventEffect191SimEffect191" Type="EventEffect">
+        <BinaryModifier TargetProperty="EmpireEmpirePoint"               Operation="Addition"        Left="5"    BinaryOperation="Multiplication" Right="$(BhagabaCount)" Path="ClassEmpire" TooltipOverride="%UniquePlanetQuest-Chapter8-DescriptionTooltipEffect"/>
+    </SimulationDescriptor>
+    
+</Datatable>

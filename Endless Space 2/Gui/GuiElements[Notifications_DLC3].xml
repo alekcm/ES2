@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ExtendedGuiElement Name="NotificationHackingOperationOutcomeSelection">
+        <Title>%NotificationHackingOperationOutcomeSelectionTitle</Title>
+        <Description>%NotificationHackingOperationOutcomeSelectionDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingOperationOutcomeSelectionSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationOutcomeSelectionMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationOutcomeSelectionLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Positive" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationOutcomeApplied">
+        <Title>%NotificationHackingOperationOutcomeAppliedTitle</Title>
+        <Description>%NotificationHackingOperationOutcomeAppliedDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingOperationOutcomeAppliedSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationOutcomeAppliedMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationOutcomeAppliedLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Positive" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationResourcesStolenFromPirates">
+        <Title>%NotificationResourcesStolenFromPiratesTitle</Title>
+        <Description>%NotificationResourcesStolenFromPiratesDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingOperationOutcomeAppliedSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationOutcomeAppliedMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationOutcomeAppliedLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Positive" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingBeaconCreationFailed">
+        <Title>%NotificationHackingBeaconCreationFailedTitle</Title>
+        <Description>%NotificationHackingBeaconCreationFailedDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingBeaconCreationFailedSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingBeaconCreationFailedMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingBeaconCreationFailedLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Negative" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationDisplacementReport">
+        <Title>%NotificationDisplacementReportTitle</Title>
+        <Description>%NotificationDisplacementReportDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationDisplacementReportSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationDisplacementReportMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationDisplacementReportLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Neutral" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHiddenHomeSystemDetected">
+        <Icons>
+            <Icon Size="Small" Path="NotificationHiddenHomeSystemDetectedSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHiddenHomeSystemDetectedMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHiddenHomeSystemDetectedLarge" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHiddenHomeSystemDetectedMine">
+        <Title>%NotificationHiddenHomeSystemDetectedMineTitle</Title>
+        <Description>%NotificationHiddenHomeSystemDetectedMineDescription</Description>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Negative" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHiddenHomeSystemDetectedTheirs">
+        <Title>%NotificationHiddenHomeSystemDetectedTheirsTitle</Title>
+        <Description>%NotificationHiddenHomeSystemDetectedTheirsDescription</Description>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Positive" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationGhostSystemLost">
+        <Title>%NotificationGhostSystemLostTitle</Title>
+        <Description>%NotificationGhostSystemLostDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationGhostSystemLostSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationGhostSystemLostMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationGhostSystemLostLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Positive" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationGhostPlanetLost">
+        <Title>%NotificationGhostPlanetLostTitle</Title>
+        <Description>%NotificationGhostPlanetLostDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationGhostSystemLostSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationGhostSystemLostMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationGhostSystemLostLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Positive" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationGhostSystemDiscoveredOnOwnedSystem">
+        <Title>%NotificationGhostSystemDiscoveredOnOwnedSystemTitle</Title>
+        <Description>%NotificationGhostSystemDiscoveredOnOwnedSystemDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationGhostSystemDiscoveredOnOwnedSystemSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationGhostSystemDiscoveredOnOwnedSystemMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationGhostSystemDiscoveredOnOwnedSystemLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Positive" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationLeftUnassigned">
+        <Title>%NotificationHackingOperationLeftUnassignedTitle</Title>
+        <Description>%NotificationHackingOperationLeftUnassignedDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingOperationLeftUnassignedSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationLeftUnassignedMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationLeftUnassignedLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Neutral" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationCanceledByTrace">
+        <Title>%NotificationHackingOperationCanceledByTraceTitle</Title>
+        <Description>%NotificationHackingOperationCanceledByTraceDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingOperationCanceledByTraceSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationCanceledByTraceMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationCanceledByTraceLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Negative" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationTracedButNotCanceled">
+        <Title>%NotificationHackingOperationTracedButNotCanceledTitle</Title>
+        <Description>%NotificationHackingOperationTracedButNotCanceledDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingOperationCanceledByTraceSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationCanceledByTraceMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationCanceledByTraceLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Negative" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationMinorAndPirateHackingEnabled">
+        <Title>%NotificationMinorAndPirateHackingEnabledTitle</Title>
+        <Description>%NotificationMinorAndPirateHackingEnabledDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="NotificationHackingOperationOutcomeAppliedSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationOutcomeAppliedMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationMinorAndPirateHackingEnabledLarge" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="OnLoadEvent_Empire" Type="OnLoadEvent" />
+            <Sound EventName="NotifcationEmpire_Neutral" Type="OnFirstShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnShow" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+
+    <!-- Hacking events -->
+    <ExtendedGuiElement Name="NotificationHackingStatusChanged">
+        <Sounds>
+            <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+            <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+            <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationTraitorRemoved">
+        <Title>%NotificationTraitorRemovedTitle</Title>
+        <Description>%NotificationTraitorRemovedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="TraitorSmall" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationSuccessful">
+        <Title>%NotificationHackingOperationSuccessfulTitle</Title>
+        <Description>%NotificationHackingOperationSuccessfulDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationNodeStepComplete">
+        <Title>%NotificationHackingOperationNodeStepCompleteTitle</Title>
+        <Description>%NotificationHackingOperationNodeStepCompleteDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationMoveStepComplete">
+        <Title>%NotificationHackingOperationMoveStepCompleteTitle</Title>
+        <Description>%NotificationHackingOperationMoveStepCompleteDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationBackdoorCompleted">
+        <Title>%NotificationHackingOperationBackdoorCompletedTitle</Title>
+        <Description>%NotificationHackingOperationBackdoorCompletedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationBackdoorDestroyed">
+        <Title>%NotificationHackingOperationBackdoorDestroyedTitle</Title>
+        <Description>%NotificationHackingOperationBackdoorDestroyedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationBackdoorDiscovered">
+        <Title>%NotificationHackingOperationBackdoorDiscoveredTitle</Title>
+        <Description>%NotificationHackingOperationBackdoorDiscoveredDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationBackdoorLost">
+        <Title>%NotificationHackingOperationBackdoorLostTitle</Title>
+        <Description>%NotificationHackingOperationBackdoorLostDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationBackdoorSoonDestroyed">
+        <Title>%NotificationHackingOperationBackdoorSoonDestroyedTitle</Title>
+        <Description>%NotificationHackingOperationBackdoorSoonDestroyedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+            <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+            <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+            <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationBackdoorFailed">
+        <Title>%NotificationHackingOperationBackdoorFailedTitle</Title>
+        <Description>%NotificationHackingOperationBackdoorFailedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationCanceledByTargetLoss">
+        <Title>%NotificationHackingOperationCanceledByTargetLossTitle</Title>
+        <Description>%NotificationHackingOperationCanceledByTargetLossDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationCanceledByStartLoss">
+        <Title>%NotificationHackingOperationCanceledByStartLossTitle</Title>
+        <Description>%NotificationHackingOperationCanceledByStartLossDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationCanceledByRerouteLoss">
+        <Title>%NotificationHackingOperationCanceledByRerouteLossTitle</Title>
+        <Description>%NotificationHackingOperationCanceledByRerouteLossDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationTargetReplaced">
+        <Title>%NotificationHackingOperationTargetReplacedTitle</Title>
+        <Description>%NotificationHackingOperationTargetReplacedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationTraceSuccessful">
+        <Title>%NotificationHackingOperationTraceSuccessfulTitle</Title>
+        <Description>%NotificationHackingOperationTraceSuccessfulDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationDefenseHackingProgramEncountered">
+        <Title>%NotificationDefenseHackingProgramEncounteredTitle</Title>
+        <Description>%NotificationDefenseHackingProgramEncounteredDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+            <Icon Size="Small" Path="NotificationHackingOperationCanceledByTraceSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationCanceledByTraceMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingOperationCanceledByTraceLarge" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationDetected">
+        <Title>%NotificationHackingOperationDetectedTitle</Title>
+        <Description>%NotificationHackingOperationDetectedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingOperationOutcomesInvalid">
+        <Title>%NotificationHackingOperationOutcomesInvalidTitle</Title>
+        <Description>%NotificationHackingOperationOutcomesInvalidDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationTraitorPopulationDiscovered">
+        <Title>%NotificationTraitorPopulationDiscoveredTitle</Title>
+        <Description>%NotificationTraitorPopulationDiscoveredDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationTraitorPopulationRemovalSuccessful">
+        <Title>%NotificationTraitorPopulationRemovalSuccessfulTitle</Title>
+        <Description>%NotificationTraitorPopulationRemovalSuccessfulDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationTraitorPopulationRemovalFailed">
+        <Title>%NotificationTraitorPopulationRemovalFailedTitle</Title>
+        <Description>%NotificationTraitorPopulationRemovalFailedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="NotificationHackingProgramActivationFailed">
+        <Title>%NotificationHackingProgramActivationFailedTitle</Title>
+        <Description>%NotificationHackingProgramActivationFailedDescription</Description>
+        <Icons>
+            <Icon Size="Tiny" Path="NotificationHackingStatusChangedTiny" />
+        </Icons>
+        <Sounds>
+          <Sound EventName="Play_HackNtf_Neutral_OnLoadEvent" Type="OnLoadEvent" />
+          <Sound EventName="Play_HackNtf_Neutral_OnFirstShow" Type="OnFirstShow" />
+          <Sound EventName="Play_HackNtf_Neutral_OnClick" Type="OnShow" />
+          <Sound EventName="Play_ES2_GUI_Notif_OnHide" Type="OnHide" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+</Datatable>

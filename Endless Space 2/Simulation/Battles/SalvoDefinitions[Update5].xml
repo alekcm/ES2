@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/SalvoDefinition.xsd">
+
+
+    <!--#####################-->
+    <!--### SWARM MISSILE ###-->
+    <!--#####################-->
+    <Salvo Name="SalvoMissileSwarm1" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoMissileSwarm1"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileSwarm01</ProjectilePrefabFallback>
+    </Salvo>
+    <Salvo Name="SalvoMissileSwarm2" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoMissileSwarm2"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileSwarm02</ProjectilePrefabFallback>
+    </Salvo>
+    <Salvo Name="SalvoMissileSwarm3" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoMissileSwarm3"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileSwarm03</ProjectilePrefabFallback>
+    </Salvo>
+    
+    <!--#####################-->
+    <!--###    RAILGUN    ###-->
+    <!--#####################-->
+    <Salvo Name="SalvoKineticRailgun1">
+        <SimulationDescriptorReference Name="SalvoKineticRailgun1"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/KineticRailGun01</ProjectilePrefabFallback>
+    </Salvo>
+    <Salvo Name="SalvoKineticRailgun2">
+        <SimulationDescriptorReference Name="SalvoKineticRailgun2"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/KineticRailGun02</ProjectilePrefabFallback>
+    </Salvo>
+    <Salvo Name="SalvoKineticRailgun3">
+        <SimulationDescriptorReference Name="SalvoKineticRailgun3"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/KineticRailGun03</ProjectilePrefabFallback>
+    </Salvo>
+    
+</Datatable>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+
+    <SimulationDescriptor Name="EventEffect108SimEffect108" Type="EventEffect108">
+        <Modifier       TargetProperty="Happiness"          Operation="Addition"         Value="10" Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect109SimEffect109" Type="EventEffect109">       
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="EventEffect110SimEffect110" Type="EventEffect110">
+        <Modifier       TargetProperty="FleetManpowerRefillRateModifier"       Operation="Addition"     Value="-0.3"     Path="ClassEmpire/ClassGarrisonFleet"/>
+        <Modifier       TargetProperty="RetrofitCostMultiplier"                Operation="Percent"      Value="-0.2"    Path="ClassEmpire" TooltipOverride="%EventEffect111Effect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect111SimEffect111" Type="EventEffect111">       
+        <Modifier       TargetProperty="RetrofitCostMultiplier"                Operation="Percent"      Value="0.2"    Path="ClassEmpire" TooltipOverride="%EventEffect110Effect"/>
+        <Modifier       TargetProperty="FleetManpowerRefillRateModifier"       Operation="Addition"     Value="0.3"     Path="ClassEmpire/ClassGarrisonFleet"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect112SimEffect112" Type="EventEffect112">
+        <Modifier       TargetProperty="Happiness"          Operation="Addition"         Value="-5" Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect113SimEffect113" Type="EventEffect113">
+        <Modifier       TargetProperty="Happiness"                Operation="Addition"         Value="-5" Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier       TargetProperty="ExperiencePerTurn"        Operation="Percent"          Value="0.2" Path="ClassEmpire//ClassHero"/>      
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect128SimEffect128" Type="EventEffect128">
+        <Modifier       TargetProperty="Happiness"                Operation="Addition"         Value="10" Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier       TargetProperty="ExperiencePerTurn"        Operation="Percent"          Value="-0.1" Path="ClassEmpire//ClassHero"/>
+    </SimulationDescriptor>
+  
+  </Datatable>

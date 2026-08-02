@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TemporaryEffectDefinition.xsd">
+
+  <TemporaryEffectDefinition Name="ImmobilizeAcademyFleetsFromHack" Category="HackingEffects" Duration="5">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectFleetsImmobilization"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="SlumberingRuinsBonusEffect" Category="GoldenAge" Duration="5" Hidden="false">
+        <Path>ClassColonizedStarSystem</Path>
+        <SimulationDescriptorReference Name="SlumberingRuinsBonusEffect"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="CrusadeImmunity" Duration="20" Hidden="true">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectCrusadeImmunity"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="AcademyHeroAccessEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="true">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectAcademyHeroAccess"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="RecentAcademyMigrationCounter" Category="AcademyRelationWithMajor" Duration="3" Hidden="true">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectRecentAcademyMigrationCounter"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="SophonsUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectSophonsUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="CraversUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectCraversUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="TerransUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectTerransUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="MezariUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectMezariUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="SheredynUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectSheredynUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="HoratioUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectHoratioUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="TimeLordsUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectTimeLordsUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="UnfallenUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectUnfallenUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="VampirilisUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectVampirilisUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="VenetiansUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectVenetiansUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="VaultersUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectVaultersUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="MajorHisshosUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectMajorHisshosUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="UmbralChoirUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectUmbralChoirUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <TemporaryEffectDefinition Name="TemplarsUniqueAcademyEffect" Category="AcademyRelationWithMajor" Duration="20" Hidden="false">
+    <Path>ClassEmpire</Path>
+    <SimulationDescriptorReference Name="TemporaryEffectTemplarsUniqueAcademy"/>
+  </TemporaryEffectDefinition>
+
+  <!-- Deprecated, no longer hooked up to work -->
+  <TemporaryEffectDefinition Name="OnPirateBaseDestroyed" Category="AcademyRelationWithMajor" Duration="1" Hidden="true">
+    <Path>ClassEmpire</Path>
+  </TemporaryEffectDefinition>
+</Datatable>

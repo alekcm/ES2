@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+	
+  <FactionTrait Name="FactionTraitMinorSowers" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartSowers" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+    <Command Name="AddMinorPopulation" Arguments="AffinitySowers,1" Priority="100"/>
+    <SimulationDescriptorReference Name="FactionTraitMinorSowers"/>
+    <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorKalTikMas,!FactionTraitMinorSefaloros,!FactionTraitMinorGalvrans,!FactionTraitMinorHarmony,!FactionTraitMinorIllo,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites>
+  </FactionTrait>
+
+    <FactionTrait Name="FactionTraitMinorKalTikMas" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartKalTikMas" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+        <Command Name="AddMinorPopulation" Arguments="AffinityKalTikMas,1" Priority="100"/>
+        <SimulationDescriptorReference Name="FactionTraitMinorKalTikMas"/>
+        <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorSowers,!FactionTraitMinorSefaloros,!FactionTraitMinorGalvrans,!FactionTraitMinorHarmony,!FactionTraitMinorIllo,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites> 
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitMinorSefaloros" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartSefaloros" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+        <Command Name="AddMinorPopulation" Arguments="AffinitySefaloros,1" Priority="100"/>
+        <SimulationDescriptorReference Name="FactionTraitMinorSefaloros"/>
+        <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorSowers,!FactionTraitMinorKalTikMas,!FactionTraitMinorGalvrans,!FactionTraitMinorHarmony,!FactionTraitMinorIllo,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites> 
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitMinorGalvrans" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartGalvrans" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+        <Command Name="AddMinorPopulation" Arguments="AffinityGalvrans,1" Priority="100"/>
+        <SimulationDescriptorReference Name="FactionTraitMinorGalvrans"/>
+        <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorSowers,!FactionTraitMinorKalTikMas,!FactionTraitMinorSefaloros,!FactionTraitMinorHarmony,!FactionTraitMinorIllo,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites> 
+    </FactionTrait>
+</Datatable>

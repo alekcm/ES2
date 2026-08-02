@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- ******************** -->
+    <!-- **WEAPON CLASS** -->
+    <!-- ******************** -->
+    <SimulationDescriptor Name="ClassCitadelWeapon"  Type="ClassCitadelWeapon">
+        <Property Name="ShotsCountPerSalvo"/>
+        <Property Name="ShootTravelTime" BaseValue="0" MinValue="Negative"/>
+        
+        <Property Name="Cooldown"/>
+        <Property Name="PreparationDuration"/>
+        <Property Name="PreparationDurationFactorMin" BaseValue="1"/>
+        <Property Name="PreparationDurationFactorMax" BaseValue="1"/>
+        <Property Name="ShootingDuration"/>
+        
+        <!--Base gameplay values-->
+        <Property Name="Damage"                         BaseValue="0" MinValue="Negative"/>
+        <Property Name="DamagePerSecond"                BaseValue="0"/>
+        
+        <Property Name="CriticalHitChance"/>
+
+        <Property Name="Accuracy"                       BaseValue="1" MinValue="0.01"/>
+
+        <Property Name="DamageAgainstSmallShipsModifier"    BaseValue="0"/>
+        <Property Name="DamageAgainstMediumShipsModifier"   BaseValue="0"/>
+        <Property Name="DamageAgainstLargeShipsModifier"    BaseValue="0"/>
+        
+        <Property Name="OffensiveMilitaryPowerForSimplifiedBattles" BaseValue="0"/>
+
+        <BinaryModifier TargetProperty="DamagePerSecond" Operation="Addition" Left="$(Damage)" BinaryOperation="Division" Right="$(Cooldown)" Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier       TargetProperty="DamagePerSecond"    Operation="Addition"    Value="$(DamagePerSecond)"              Path="./ClassCitadel" TooltipHidden="true"/>
+
+        <!-- Used to set the offensive power of the module -->
+        <Modifier TargetProperty="OffensiveMilitaryPower"  Operation="Addition"       Value="1"    Path="ClassCitadelWeapon" TooltipHidden="true" Priority="0"/>
+        <Modifier       TargetProperty="OffensiveMilitaryPower"  Operation="Multiplication" Value="$(DamagePerSecond)"      Path="ClassCitadelWeapon" TooltipHidden="true" Priority="0"/>
+        <BinaryModifier TargetProperty="OffensiveMilitaryPower"  Operation="Multiplication" Left="1"    BinaryOperation="Addition"    Right="$(CriticalHitChance)"  Path="ClassCitadelWeapon" TooltipHidden="true" Priority="0"/>
+
+        <Modifier TargetProperty="OffensiveMilitaryPowerForSimplifiedBattles" Operation="Addition" Value="$(OffensiveMilitaryPower)" Path="ClassCitadelWeapon"/>
+        
+    </SimulationDescriptor>
+
+    <!--################################-->
+    <!--###             AOE          ###-->
+    <!--################################-->
+    <SimulationDescriptor Name="ClassCitadelWeaponAOE"  Type="ClassCitadelWeapon">
+        <!-- Properties -->
+        <Property Name="DamageAOE" BaseValue="0"/>
+
+        <!-- Modifiers -->
+        <Modifier TargetProperty="Cooldown"                     Operation="Addition"        Value="40"       Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="PreparationDuration"          Operation="Addition"        Value="0.5"      Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="PreparationDurationFactorMin" Operation="Multiplication"  Value="0.8"      Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="PreparationDurationFactorMax" Operation="Multiplication"  Value="1.2"      Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShootingDuration"             Operation="Addition"        Value="5"        Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShotsCountPerSalvo"           Operation="Addition"        Value="1"        Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShootTravelTime"              Operation="Addition"        Value="5"       Path="ClassCitadelWeapon" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="CriticalHitChance"            Operation="Addition"        Value="0"        Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShieldPenetrationFactor"      Operation="Addition"        Value="0.6"      Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="HullPlatingPenetrationFactor" Operation="Addition"        Value="0.1"      Path="ClassCitadelWeapon" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="DamageAgainstSmallShipsModifier"        Operation="Addition"        Value="1"       Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="DamageAgainstMediumShipsModifier"       Operation="Addition"        Value="1"       Path="ClassCitadelWeapon" TooltipHidden="true"/>
+        <Modifier TargetProperty="DamageAgainstLargeShipsModifier"        Operation="Addition"        Value="1"       Path="ClassCitadelWeapon" TooltipHidden="true"/>
+
+        <!-- We do not feedback DamagePerSecond for AoE weapons, but the explosion damage-->
+        <BinaryModifier TargetProperty="OffensiveMilitaryPower" Operation="Addition" Left="$(Damage)" BinaryOperation="Division" Right="5" Path="../ClassCitadel"  TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="DamageAOE"          Operation="Addition"    Value="$(Damage)"              Path="ClassCitadelWeapon" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!--Aoe weapon-->
+    <SimulationDescriptor Name="CitadelWeaponAOENuke1"  Type="CitadelWeapon">
+        <Modifier TargetProperty="Damage"            Operation="Addition" Value="2000"     Path="ClassCitadelWeapon"      TooltipHidden="true"/>
+    </SimulationDescriptor>
+    
+</Datatable>

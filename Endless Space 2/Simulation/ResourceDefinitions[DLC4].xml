@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ResourceDefinition.xsd">
+
+    <ResourceDefinition Name="AcademyStress" Type="Common">
+      <ResourceLocation Name="AcademyStress" LocationPath="EmpireTypeAcademy">
+          <StockPropertyName>Stress</StockPropertyName>
+      </ResourceLocation>
+  </ResourceDefinition>
+
+  <ResourceDefinition Name="AcademyEmpireShipMoney" Type="Academy">
+    <ResourceLocation Name="AcademyEmpireShipMoney" LocationPath="EmpireTypeAcademy">
+    </ResourceLocation>
+  </ResourceDefinition>
+
+  <ResourceDefinition Name="AcademyEmpireImprovementMoney" Type="Academy">
+    <ResourceLocation Name="AcademyEmpireImprovementMoney" LocationPath="ClassEmpire">
+    </ResourceLocation>
+  </ResourceDefinition>
+
+  <ResourceDefinition Name="AcademyEmpireDiplomacyMoney" Type="Academy">
+    <ResourceLocation Name="AcademyEmpireDiplomacyMoney" LocationPath="ClassEmpire">
+    </ResourceLocation>
+  </ResourceDefinition>
+
+  <ResourceDefinition Name="EmpireRelics" Type="Common">
+    <ResourceLocation Name="ResearchRelics" LocationPath="ClassEmpire">
+      <NetPropertyName>FakeNetResearchRelics</NetPropertyName>
+      <StockPropertyName>FakeEmpireRelicStock</StockPropertyName>
+    </ResourceLocation>
+  </ResourceDefinition>
+
+  <ResourceDefinition Name="CrusadeDeclarations" Type="Common">
+    <ResourceLocation Name="CrusadeDeclarations" LocationPath="ClassEmpire">
+      <MaximumStockPropertyName>MaximumCrusadeDeclarations</MaximumStockPropertyName>
+      <MinimumStockPropertyName>MinimumCrusadeDeclarations</MinimumStockPropertyName>
+      <NetPropertyName>NetCrusadeDeclarations</NetPropertyName>
+      <StockPropertyName>CrusadeDeclarationsStock</StockPropertyName>
+    </ResourceLocation>
+  </ResourceDefinition>
+
+  <ResourceDefinition Name="AcademyAuctionBlocks" Type="Common">
+    <ResourceLocation Name="AcademyAuctionBlocks" LocationPath="ClassEmpire">
+      <NetPropertyName>NetAcademyAuctionBlocks</NetPropertyName>
+      <StockPropertyName>AcademyAuctionBlocksStock</StockPropertyName>
+    </ResourceLocation>
+  </ResourceDefinition>
+</Datatable>

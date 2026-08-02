@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ************************ -->
+    <!-- ** Fleet group image  ** -->
+    <!-- ************************ -->
+
+    <GuiElement Name="GuiFleetGroup">
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderFleet" />
+        </Icons>
+    </GuiElement>
+    
+    <!-- ************************ -->
+    <!-- ** Fleet statuses ** -->
+    <!-- ************************ -->
+
+    <ExtendedGuiElement Name="FleetStatusOrbiting">
+        <Description>%FleetStatusOrbitingDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="HeaderSystem" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FleetStatusMoving">
+        <Description>%FleetStatusMovingDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="MovementPoint" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FleetStatusIntercepted">
+        <Title>%FleetStatusInterceptedTitle</Title>
+        <Description>%FleetStatusInterceptedDescription</Description>
+        <Icons>
+            <Icon Size="Small"          Path="FleetStatusInterceptedLarge"/>
+            <Icon Size="SmallExtended"  Path="FleetStatusInterceptedSmall"/>
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FleetStatusInvisible">
+        <Title>%FleetStatusInvisibleTitle</Title>
+        <Description>%FleetStatusInvisibleDescription</Description>
+        <Icons>
+            <Icon Size="Small"          Path="FleetStatusInvisibleLarge"/>
+            <Icon Size="SmallExtended"  Path="FleetStatusInvisibleSmall"/>
+        </Icons>
+        <Color Red="219" Green="219" Blue="219" Alpha="255" />
+        <AltDescription>%FleetStatusInvisibleShipDescription</AltDescription>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="FleetStatusInvisibilityDetected">
+        <Title>%FleetStatusInvisibilityDetectedTitle</Title>
+        <Description>%FleetStatusInvisibilityDetectedDescription</Description>
+        <Icons>
+            <Icon Size="Small"          Path="FleetStatusInvisibleLarge"/>
+            <Icon Size="SmallExtended"  Path="FleetStatusInvisibleSmall"/>
+        </Icons>
+        <Color Red="219" Green="219" Blue="219" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FleetStatusVisionStrength1">
+        <Title>%FleetStatusVisionStrength1Title</Title>
+        <Description>%FleetStatusVisionStrength1Description</Description>
+        <Icons>
+            <Icon Size="Small"          Path="FleetStatusVisionStrength1Small"/>
+            <Icon Size="SmallExtended"  Path="FleetStatusVisionStrength1SmallExtended"/>
+        </Icons>
+        <Color Red="219" Green="219" Blue="219" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FleetStatusVisionStrength2">
+        <Title>%FleetStatusVisionStrength2Title</Title>
+        <Description>%FleetStatusVisionStrength2Description</Description>
+        <Icons>
+            <Icon Size="Small"          Path="FleetStatusVisionStrength2Small"/>
+            <Icon Size="SmallExtended"  Path="FleetStatusVisionStrength2SmallExtended"/>
+        </Icons>
+        <Color Red="219" Green="219" Blue="219" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FleetStatusVisionStrength3">
+        <Title>%FleetStatusVisionStrength3Title</Title>
+        <Description>%FleetStatusVisionStrength3Description</Description>
+        <Icons>
+            <Icon Size="Small"          Path="FleetStatusVisionStrength3Small"/>
+            <Icon Size="SmallExtended"  Path="FleetStatusVisionStrength3SmallExtended"/>
+        </Icons>
+        <Color Red="219" Green="219" Blue="219" Alpha="255" />
+    </ExtendedGuiElement>
+
+</Datatable>

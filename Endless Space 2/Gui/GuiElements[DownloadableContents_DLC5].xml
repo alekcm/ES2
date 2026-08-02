@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- DLC5 -->
+    <DownloadableContentGuiElement Name="DLCDarkMatter" Notify="true">
+        <Title>%DLCDarkMatterTitle</Title>
+        <Description>%DLCDarkMatterDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="AffinityDarkMatterSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/DLC/DLCDarkMatterMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/DLC/DLCDarkMatterLarge" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/DLC/DLCDarkMatterMood" />
+        </Icons>
+        <LoreDescription>%DLCDarkMatterLoreDescription</LoreDescription>
+        <ContentDescription>%DLCDarkMatterContentDescription</ContentDescription>
+    </DownloadableContentGuiElement>
+
+</Datatable>

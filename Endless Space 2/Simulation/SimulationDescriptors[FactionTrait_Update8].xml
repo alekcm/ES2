@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+
+    <SimulationDescriptor Name="FactionTraitMinorSoilHealers" Type="FactionTraitMinor">
+        <BinaryModifier		TargetProperty="SystemGrowth"   Operation="Addition"    Left="25"   BinaryOperation="Multiplication" Right="$(OwnedMeagerPlanets)"  SearchValueFromPath="true"  Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <BinaryModifier TargetProperty="PlanetFIDSI"     Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(Population)" SearchValueFromPath="true"  Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetWithReducedAnomaly"/>
+        <Modifier TargetProperty="MinorTraitsAssimilated"   Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="FactionTraitMinorWorldArchitects" Type="FactionTraitMinor">
+    <Modifier TargetProperty="TerraformationModifier"   Operation="Percent" Value="-0.5"  Path="ClassEmpire"/>
+    <Modifier TargetProperty="MinorTraitsAssimilated"   Operation="Addition" Value="1"    Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMinorStarTrekkers" Type="FactionTraitMinor">
+        <Modifier TargetProperty="OverColonizationThreshold"        Operation="Addition" Value="1" Path="ClassEmpire" Priority="5"/>
+        <Modifier TargetProperty="MinorTraitsAssimilated"           Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="FactionTraitMinorStalwartStoics" Type="FactionTraitMinor">
+        <Modifier TargetProperty="OverPopulationPenaltiesReduction" Operation="Subtraction" Value="0.25"  Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <BinaryModifier		TargetProperty="Happiness"      Operation="Addition" Left="10" BinaryOperation="Multiplication" Right="$(OwnedMeagerPlanets)" SearchValueFromPath="true" Path="ClassEmpire/ClassColonizedStarSystem"/>
+
+        <BinaryModifier TargetProperty="SystemProductionHissho" Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(OwnedMeagerPlanets)" SearchValueFromPath="true" Path="ClassEmpire/ClassColonizedStarSystem" />
+        <Modifier TargetProperty="MinorTraitsAssimilated"   Operation="Addition" Value="1"    Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMinorWorkspaceOddity" Type="FactionTraitMinor">
+        <BinaryModifier TargetProperty="SystemProduction"   Operation="Addition"    Left="25"   BinaryOperation="Multiplication" Right="$(OwnedAnomalies)" SearchValueFromPath="true"  Path="ClassEmpire/ClassColonizedStarSystem" />
+        <Modifier TargetProperty="MinorTraitsAssimilated"   Operation="Addition"    Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="FactionTraitMinorBountifulFiltration" Type="FactionTraitMinor">
+        <Modifier TargetProperty="DepositValue"             Operation="Percent"     Value="0.5"     Path="ClassEmpire/ClassColonizedStarSystem/ClassPlanet,PlanetGameplayTypeTeeming/ClassResourceDeposit,ResourceTypeLuxury" TooltipHidden="true" />
+        <Modifier TargetProperty="LuxuryDepositValue"             Operation="Percent"     Value="0.5"     Path="PlanetGameplayTypeTeeming"/> <!--For feedback-->
+        <BinaryModifier TargetProperty="SystemProduction"   Operation="Addition"    Left="20"       BinaryOperation="Multiplication" Right="$(SystemLevel)" SearchValueFromPath="true"  Path="ClassEmpire/ClassColonizedStarSystem" />
+        <Modifier TargetProperty="MinorTraitsAssimilated"   Operation="Addition"    Value="1"       Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMinorMinesOverMatter" Type="FactionTraitMinor">
+        <BinaryModifier TargetProperty="SystemResearch"   Operation="Addition"    Left="40"   BinaryOperation="Multiplication" Right="$(OwnedStrategicDeposits)" SearchValueFromPath="true"  Path="ClassEmpire/ClassColonizedStarSystem" />
+        <Modifier TargetProperty="MinorTraitsAssimilated"                 Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="FactionTraitMinorCryoMining" Type="FactionTraitMinor">
+        <Modifier TargetProperty="DepositValue"             Operation="Percent"     Value="0.25"     Path="ClassEmpire/ClassColonizedStarSystem/ClassPlanet/ClassResourceDeposit,ResourceTypeStrategic" />
+        <BinaryModifier		TargetProperty="SystemResearch" Operation="Addition" Left="20" BinaryOperation="Multiplication" Right="$(OwnedColdPlanets)" SearchValueFromPath="true" Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="MinorTraitsAssimilated"   Operation="Addition" Value="1"    Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMinorSowers" Type="FactionTraitMinor"/>
+    <SimulationDescriptor Name="FactionTraitMinorSefaloros" Type="FactionTraitMinor"/>
+    <SimulationDescriptor Name="FactionTraitMinorKalTikMas" Type="FactionTraitMinor"/>
+    <SimulationDescriptor Name="FactionTraitMinorGalvrans" Type="FactionTraitMinor"/>
+
+</Datatable>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="EventEffect165SimEffect165" Type="EventEffect">
+        <Modifier TargetProperty="SystemEmpirePoint" Operation="Addition" Value="5" Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect166SimEffect166" Type="EventEffect">
+        <Modifier TargetProperty="SystemEmpirePoint" Operation="Addition" Value="7" Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect167SimEffect167" Type="EventEffect">
+        <Modifier TargetProperty="SystemEmpirePoint"    Operation="Addition" Value="7"   Path="ClassEmpire/ClassColonizedStarSystem"/>       
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect168SimEffect168" Type="EventEffect">
+        <Modifier TargetProperty="SystemEmpirePoint"    Operation="Addition" Value="-3"   Path="ClassEmpire/ClassColonizedStarSystem"/>       
+    </SimulationDescriptor>
+    
+     <SimulationDescriptor Name="EventEffect169SimEffect169" Type="EventEffect">
+        <Modifier TargetProperty="SystemEmpirePoint"    Operation="Addition" Value="-7"   Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="ShipDamage"    Operation="Addition" Value="0.3"   Path="ClassEmpire/ClassGarrisonFleet"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect170SimEffect170" Type="EventEffect">
+        <Modifier TargetProperty="BoostToHonorInShipBattle"    Operation="Addition" Value="0.2"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="BoostToHonorInShipBattle"    Operation="Percent" Value="0.2"   Path="ClassEmpire/ClassGarrisonFleet"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect171SimEffect171" Type="EventEffect">
+        <Modifier     TargetProperty="BoostToHonorInGroundBattle"            Operation="Addition"     Value="0.2"  Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier     TargetProperty="BoostToHonorInGroundBattle"    Operation="Percent" Value="0.2"   Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect172SimEffect172" Type="EventEffect">
+        <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Addition"   Value="-0.1"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Percent"    Value="-0.1"   Path="ClassEmpire/ClassGarrisonFleet"/>
+        <Modifier     TargetProperty="BoostToHonorInGroundBattle"    Operation="Addition"   Value="-0.1"  Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier     TargetProperty="BoostToHonorInGroundBattle"    Operation="Percent"    Value="-0.1"   Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="EventEffect173SimEffect173" Type="EventEffect">
+        <Modifier TargetProperty="SystemProduction"    Operation="Percent" Value="-0.15"   Path="ClassColonizedStarSystem,ColonizedStarSystemStateColony"/>
+        <Modifier TargetProperty="SystemEmpirePoint"   Operation="Percent" Value="0.15"    Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect174SimEffect174" Type="EventEffect">      
+        <Modifier TargetProperty="SystemGrowth"             Operation="Addition" Value="60"   Path="ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony" Priority="20"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect175SimEffect175" Type="EventEffect">    
+        <Modifier TargetProperty="TechnologyCostReduction"  Operation="Addition"    Value="-0.1"      Path="ClassEmpire/ClassResearch" Priority="20" TooltipHidden="true"/>
+        <Modifier TargetProperty="TechnologyCostReduction"  Operation="Addition"    Value="-0.1"      Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect176SimEffect176" Type="EventEffect">
+        <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Addition"   Value="0.25"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Percent"    Value="0.25"   Path="ClassEmpire/ClassGarrisonFleet"/>       
+        <Modifier TargetProperty="SystemProduction"               Operation="Addition"    Value="-20" Path="ClassColonizedStarSystem,ColonizedStarSystemStateColony"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect177SimEffect177" Type="EventEffect">
+        <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Addition"   Value="-0.10"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Percent"    Value="-0.10"   Path="ClassEmpire/ClassGarrisonFleet"/>
+        <Modifier TargetProperty="SystemProduction"               Operation="Addition"    Value="10"   Path="ClassColonizedStarSystem,ColonizedStarSystemStateColony"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect178SimEffect178" Type="EventEffect">
+        <Modifier TargetProperty="SystemEmpirePoint" Operation="Addition" Value="-5" Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect179SimEffect179" Type="EventEffect">
+        <Modifier TargetProperty="BoostToHonorInShipBattle"         Operation="Addition"   Value="0.1"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Percent"    Value="0.1"   Path="ClassEmpire/ClassGarrisonFleet"/>
+        <Modifier TargetProperty="GarrisonMoneyUpkeep"       Operation="Percent"         Value="0.1"  Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect180SimEffect180" Type="EventEffect">
+        <Modifier TargetProperty="SystemEmpirePoint"                 Operation="Addition"        Value="10"  Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+   <SimulationDescriptor Name="EventEffect181SimEffect181" Type="EventEffect">
+       <Modifier TargetProperty="BoostToHonorInShipBattle"         Operation="Addition"   Value="-0.5"   Path="ClassEmpire" TooltipHidden="true"/>
+       <Modifier TargetProperty="BoostToHonorInShipBattle"          Operation="Percent"    Value="-0.5"   Path="ClassEmpire/ClassGarrisonFleet"/>
+       <Modifier TargetProperty="SystemResearch"           Operation="Addition"        Value="20"      Path="ClassEmpire/ClassColonizedStarSystem"/>
+   </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect182SimEffect182" Type="EventEffect">
+        <Modifier     TargetProperty="BoostToHonorInGroundBattle"    Operation="Addition"   Value="-0.1"  Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier     TargetProperty="BoostToHonorInGroundBattle"    Operation="Percent"    Value="-0.1"   Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="SystemResearch"           Operation="Addition"        Value="50"       Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect183SimEffect183" Type="EventEffect">
+        <Modifier     TargetProperty="SystemEmpirePoint"    Operation="Addition"   Value="-5"  Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier     TargetProperty="SystemResearch"       Operation="Addition"   Value="10"  Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect184SimEffect184" Type="EventEffect">
+        <Modifier     TargetProperty="BoostToHonorInShipBattle"    Operation="Addition"   Value="0.2"  Path="ClassEmpire"/>
+        <Modifier     TargetProperty="EmpireResearch"              Operation="Addition"   Value="-15"   Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect185SimEffect185" Type="EventEffect">
+        <Modifier     TargetProperty="Happiness"            Operation="Addition"   Value="15"   Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier     TargetProperty="SystemResearch"       Operation="Addition"   Value="-20"   Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect186SimEffect186" Type="EventEffect">
+        <Modifier     TargetProperty="BoostToHonorInShipBattle"    Operation="Addition"   Value="-0.1"  Path="ClassEmpire"/>
+        <Modifier     TargetProperty="EmpireResearch"              Operation="Addition"   Value="25"    Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect187SimEffect187" Type="EventEffect">
+        <Modifier     TargetProperty="Happiness"              Operation="Addition"   Value="-10" Path="ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier     TargetProperty="SystemProduction"       Operation="Addition"   Value="20"  Path="ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EventEffect188SimEffect188" Type="EventEffect">
+    <Modifier     TargetProperty="EmpireResearch"              Operation="Addition"   Value="25" Path="ClassEmpire"/>
+  </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffectObliteratorFakeDenouncedEffect" Type="EventEffect">
+        <Modifier TargetProperty="ContextualDiplomacyPressureBonus"         Operation="Addition" Value="-0.5" Path="FAKE,ClassEmpire" TooltipOverride="%IncreasedPressureFromEmpiresOnObliteratorOwnerTooltipEffect"/>
+        <Modifier TargetProperty="ReceivedAggressiveTreatyCostReduction"    Operation="Addition" Value="-0.5" Path="FAKE,ClassEmpire" TooltipOverride="%ReducedAggressiveTreatyCostFromEmpiresOnObliteratorOwnerTooltipEffect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffectObliteratorDenouncedEffect" Type="EventEffect">
+        <Modifier TargetProperty="ContextualDiplomacyPressureBonus"         Operation="Addition" Value="-0.5" TooltipOverride="%IncreasedPressureFromEmpiresTooltipEffect"/>
+        <Modifier TargetProperty="ReceivedAggressiveTreatyCostReduction"    Operation="Addition" Value="-0.5" TooltipOverride="%ReducedAggressiveTreatyCostFromEmpiresTooltipEffect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffectObliteratorStudiedEffect" Type="EventEffect">
+        <Modifier     TargetProperty="ObliteratorShotCostMultiplier"            Operation="Percent" Value="-0.35"  Path="ClassEmpire"/>
+        <Modifier     TargetProperty="ObliteratorResearchCostMultiplier"        Operation="Percent" Value="-0.35"  Path="ClassEmpire/ClassResearch"/>
+        <Modifier     TargetProperty="ObliteratorConstructionCostMultiplier"    Operation="Percent" Value="-0.35"  Path="ClassEmpire"/>
+    </SimulationDescriptor>
+    
+</Datatable>

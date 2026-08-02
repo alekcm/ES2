@@ -1,0 +1,3423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionN" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.0476280935">
+    <Key StartTimeRatio="0" FieldOfView="45">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.8462944" Y="0.401124954" Z="0.9654541" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="6.599856" Y="-0.7987419" Z="6.11598253" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.8462944" Y="0.401124954" Z="0.9654541" />
+      <TargetToFollowOffset X="6.599856" Y="-0.7987419" Z="6.11598253" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-48.09518" Y="19.70331" Z="-292.052856" />
+      <CameraRotation X="-0.0305753052" Y="-0.883729756" Z="-0.0583139621" W="0.4633426" />
+      <CameraEuler X="352.449432" Y="235.336365" Z="0.000111530739" />
+      <UpVector X="0.1080793" Y="0.991329253" Z="0.0747338757" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.0352554321" Y="0.3172741" Z="0.115701675" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="6.718844" Y="-0.6537454" Z="3.835526" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.0352554321" Y="0.3172741" Z="0.115701675" />
+      <TargetToFollowOffset X="6.718844" Y="-0.6537454" Z="3.835526" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-48.2855721" Y="-10.4061661" Z="32.9504433" />
+      <CameraRotation X="-0.0317871459" Y="-0.859228551" Z="-0.0537879281" W="0.507762551" />
+      <CameraEuler X="352.835815" Y="241.162079" Z="0.0001071312" />
+      <UpVector X="0.109247833" Y="0.992192864" Z="0.0601515844" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionN/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionNE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.135790929">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-1.51621246" Y="-0.2881813" Z="2.24786377" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="8.076955" Y="1.48168993" Z="5.638117" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-1.51621246" Y="-0.2881813" Z="2.24786377" />
+      <TargetToFollowOffset X="8.076955" Y="1.48168993" Z="5.638117" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-54.9280434" Y="41.3806877" Z="-291.247772" />
+      <CameraRotation X="-0.0496152341" Y="0.8134384" Z="-0.07015768" W="-0.5752688" />
+      <CameraEuler X="9.858881" Y="250.536392" Z="6.802581E-05" />
+      <UpVector X="-0.161436915" Y="0.9852325" Z="-0.0570537038" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.08744812" Y="-0.0313339233" Z="0.291717529" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="7.689427" Y="1.28561962" Z="2.44295788" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.08744812" Y="-0.0313339233" Z="0.291717529" />
+      <TargetToFollowOffset X="7.689427" Y="1.28561962" Z="2.44295788" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-55.31557" Y="41.18892" Z="-269.4431" />
+      <CameraRotation X="-0.0488717668" Y="0.793208241" Z="-0.06422709" W="-0.603578568" />
+      <CameraEuler X="9.258374" Y="254.53743" Z="7.050098E-05" />
+      <UpVector X="-0.155063152" Y="0.986972868" Z="-0.04289498" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionNE/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07540532">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-2.901619" Y="0.3025055" Z="2.32843018" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="5.50439453" Y="0.6569573" Z="6.774336" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-2.901619" Y="0.3025055" Z="2.32843018" />
+      <TargetToFollowOffset X="5.50439453" Y="0.6569573" Z="6.774336" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-56.2216034" Y="40.6036949" Z="-292.595581" />
+      <CameraRotation X="-0.009573087" Y="0.856453538" Z="-0.0158898775" W="-0.515890658" />
+      <CameraEuler X="2.125887" Y="242.125885" Z="-0.000167988881" />
+      <UpVector X="-0.0327926874" Y="0.999311745" Z="-0.0173405558" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="0.988189" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.827957153" Y="-0.000213623047" Z="1.44415283" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="6.593061" Y="0.6589808" Z="3.78000355" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.827957153" Y="-0.000213623047" Z="1.44415283" />
+      <TargetToFollowOffset X="6.593061" Y="0.6589808" Z="3.78000355" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-55.13294" Y="40.60642" Z="-270.885284" />
+      <CameraRotation X="-0.0249282811" Y="0.805583656" Z="-0.03397897" W="-0.5909814" />
+      <CameraEuler X="4.83060455" Y="252.528015" Z="-0.0001008902" />
+      <UpVector X="-0.0803255141" Y="0.99644804" Z="-0.0252815019" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionE/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionSE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-2.90656281" Y="0.5502548" Z="-1.844574" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="5.041582" Y="1.43199348" Z="-7.516897" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-2.90656281" Y="0.5502548" Z="-1.844574" />
+      <TargetToFollowOffset X="5.041582" Y="1.43199348" Z="-7.516897" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-80.661026" Y="41.4890823" Z="-308.138123" />
+      <CameraRotation X="-0.040019393" Y="0.45729956" Z="-0.0206047911" W="-0.8881728" />
+      <CameraEuler X="5.159776" Y="305.514221" Z="-2.72176039E-05" />
+      <UpVector X="-0.07320291" Y="0.9959478" Z="0.0522431359" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="30">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.6044769" Y="0.313179016" Z="-0.6836548" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="5.34129763" Y="1.12035441" Z="-4.20948124" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.6044769" Y="0.313179016" Z="-0.6836548" />
+      <TargetToFollowOffset X="5.34129763" Y="1.12035441" Z="-4.20948124" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-80.3613052" Y="41.17744" Z="-279.830872" />
+      <CameraRotation X="-0.05047473" Y="0.494109541" Z="-0.0287504289" W="-0.8674569" />
+      <CameraEuler X="6.66021252" Y="300.667725" Z="-3.30936164E-05" />
+      <UpVector X="-0.0997595862" Y="0.993251443" Z="0.0591576323" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionSE/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionS" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0.7371311" Y="0.07702786" Z="2.00999451" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="5.4713645" Y="-0.289818943" Z="-1.99536932" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0.7371311" Y="0.07702786" Z="2.00999451" />
+      <TargetToFollowOffset X="5.4713645" Y="-0.289818943" Z="-1.99536932" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-12.5286369" Y="0.5236925" Z="-110.807281" />
+      <CameraRotation X="-0.0269104671" Y="-0.420592368" Z="-0.0124820452" W="0.9067646" />
+      <CameraEuler X="356.60022" Y="310.232635" Z="6.9491407E-06" />
+      <UpVector X="0.04527323" Y="0.998240054" Z="-0.03830321" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0.3630619" Y="0.183886349" Z="0.278869629" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="3.57469869" Y="-0.2898186" Z="-4.46374559" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0.3630619" Y="0.183886349" Z="0.278869629" />
+      <TargetToFollowOffset X="3.57469869" Y="-0.2898186" Z="-4.46374559" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-14.4253035" Y="0.524275661" Z="-88.2758255" />
+      <CameraRotation X="-0.0395011343" Y="-0.293000221" Z="-0.0121160476" W="0.9552192" />
+      <CameraEuler X="355.264" Y="325.894653" Z="4.133571E-05" />
+      <UpVector X="0.0462946445" Y="0.9965857" Z="-0.06836448" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionS/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionSW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.0873298645" Y="0.8821697" Z="2.5395813" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-7.810839" Y="0.6226015" Z="-0.4845725" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.0873298645" Y="0.8821697" Z="2.5395813" />
+      <TargetToFollowOffset X="-7.810839" Y="0.6226015" Z="-0.4845725" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-63.8408051" Y="21.06842" Z="-305.160126" />
+      <CameraRotation X="0.0129097262" Y="-0.563628435" Z="-0.008810696" W="-0.825880647" />
+      <CameraEuler X="358.2089" Y="68.62375" Z="3.37939273E-05" />
+      <UpVector X="-0.0291057453" Y="0.9995114" Z="-0.0113918632" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0.124343872" Y="0.720705032" Z="0.05050659" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-5.23332167" Y="0.625787556" Z="-2.97517824" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0.124343872" Y="0.720705032" Z="0.05050659" />
+      <TargetToFollowOffset X="-5.23332167" Y="0.625787556" Z="-2.97517824" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-61.2637825" Y="21.0648651" Z="-282.649384" />
+      <CameraRotation X="0.00667155441" Y="-0.5041464" Z="-0.003894974" W="-0.8635836" />
+      <CameraEuler X="359.114746" Y="60.55141" Z="2.24142314E-05" />
+      <UpVector X="-0.0134541523" Y="0.9998806" Z="-0.00759561546" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionSW/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="4.80913162" Y="1.44407463" Z="2.64559937" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-4.85154057" Y="-0.430026352" Z="9.053674" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="4.80913162" Y="1.44407463" Z="2.64559937" />
+      <TargetToFollowOffset X="-4.85154057" Y="-0.430026352" Z="9.053674" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-60.8819275" Y="20.0129032" Z="-295.619934" />
+      <CameraRotation X="0.03785393" Y="-0.8782824" Z="-0.07052833" W="-0.47139442" />
+      <CameraEuler X="350.817719" Y="123.55304" Z="2.55132582E-05" />
+      <UpVector X="-0.1329862" Y="0.987185657" Z="0.08819932" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="0.984252" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0.7927551" Y="0.606662452" Z="0.696937561" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-4.53614235" Y="-0.0338583477" Z="5.189986" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0.7927551" Y="0.606662452" Z="0.696937561" />
+      <TargetToFollowOffset X="-4.53614235" Y="-0.0338583477" Z="5.189986" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-22.76014" Y="0.6430863" Z="-73.5757141" />
+      <CameraRotation X="0.0193438027" Y="-0.905852854" Z="-0.0416133925" W="-0.421099335" />
+      <CameraEuler X="354.7396" Y="130.135849" Z="8.423805E-05" />
+      <UpVector X="-0.07009202" Y="0.9957883" Z="0.059099894" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionW/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipSmall_SectionNW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="5.572605" Y="1.84023285" Z="3.48308563" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-6.6634593" Y="0.319360852" Z="10.4914951" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="5.572605" Y="1.84023285" Z="3.48308563" />
+      <TargetToFollowOffset X="-6.6634593" Y="0.319360852" Z="10.4914951" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-24.8874588" Y="0.9927683" Z="-92.8804245" />
+      <CameraRotation X="0.0269340966" Y="-0.8639142" Z="-0.046467673" W="-0.500766933" />
+      <CameraEuler X="353.8424" Y="119.802643" Z="8.37259649E-05" />
+      <UpVector X="-0.0930764452" Y="0.9942306" Z="0.0533127561" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="30">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="1.88814926" Y="0.214409173" Z="1.9539566" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-6.184812" Y="0.435947925" Z="5.928777" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="1.88814926" Y="0.214409173" Z="1.9539566" />
+      <TargetToFollowOffset X="-6.184812" Y="0.435947925" Z="5.928777" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-24.4088116" Y="1.10894132" Z="-72.443306" />
+      <CameraRotation X="0.0065196245" Y="0.8489712" Z="-0.0104773324" W="0.52829504" />
+      <CameraEuler X="1.41411614" Y="116.213905" Z="-1.71340525E-05" />
+      <UpVector X="0.0221401937" Y="0.9996954" Z="-0.0109013356" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionNW/./ShipSizeSmall</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionN" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.0476280935">
+    <Key StartTimeRatio="0" FieldOfView="45">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="1.32187271" Y="0.9894066" Z="-4.828308" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="17.3489361" Y="1.88507473" Z="3.7157836" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="1.32187271" Y="0.9894066" Z="-4.828308" />
+      <TargetToFollowOffset X="17.3489361" Y="1.88507473" Z="3.7157836" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-17.6514187" Y="42.9943848" Z="-383.543762" />
+      <CameraRotation X="-0.0126793953" Y="0.8571925" Z="-0.0211313386" W="-0.514406145" />
+      <CameraEuler X="2.8242197" Y="241.936432" Z="0.000161559452" />
+      <UpVector X="-0.0434775464" Y="0.9987854" Z="-0.0231825337" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.2441864" Y="0.3498993" Z="0.110961914" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="9.478837" Y="2.36020637" Z="13.4004021" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.2441864" Y="0.3498993" Z="0.110961914" />
+      <TargetToFollowOffset X="9.478837" Y="2.36020637" Z="13.4004021" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-105.521149" Y="72.73716" Z="-646.3097" />
+      <CameraRotation X="-0.01890633" Y="0.94877857" Z="-0.0578639247" W="-0.310021877" />
+      <CameraEuler X="6.97999859" Y="216.190536" Z="0.000134183181" />
+      <UpVector X="-0.07175401" Y="0.992588639" Z="-0.09807735" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionN/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionNE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.135790929">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-16.4774857" Y="-2.88259125" Z="6.76886" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="8.962598" Y="1.813229" Z="22.5900517" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-16.4774857" Y="-2.88259125" Z="6.76886" />
+      <TargetToFollowOffset X="8.962598" Y="1.813229" Z="22.5900517" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-26.0374031" Y="71.81323" Z="-682.4099" />
+      <CameraRotation X="-0.0377230272" Y="0.871460736" Z="-0.06788437" W="-0.4842776" />
+      <CameraEuler X="8.908328" Y="238.122559" Z="8.64198E-05" />
+      <UpVector X="-0.131498039" Y="0.9879374" Z="-0.08178029" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="30">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-2.58156586" Y="-0.457290649" Z="2.65136719" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="14.448782" Y="1.59490132" Z="14.3411636" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-2.58156586" Y="-0.457290649" Z="2.65136719" />
+      <TargetToFollowOffset X="14.448782" Y="1.59490132" Z="14.3411636" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-56.78602" Y="221.2201" Z="-2165.469" />
+      <CameraRotation X="-0.0230559558" Y="0.883764565" Z="-0.043793913" W="-0.4653073" />
+      <CameraEuler X="5.673714" Y="235.534149" Z="0.00018317801" />
+      <UpVector X="-0.0815073252" Y="0.995101035" Z="-0.05595081" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionNE/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07540532">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-2.901619" Y="0.3025055" Z="2.32843018" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="5.50439453" Y="0.6569573" Z="6.774336" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-2.901619" Y="0.3025055" Z="2.32843018" />
+      <TargetToFollowOffset X="5.50439453" Y="0.6569573" Z="6.774336" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-56.2216034" Y="40.6036949" Z="-292.595581" />
+      <CameraRotation X="-0.009573087" Y="0.856453538" Z="-0.0158898775" W="-0.515890658" />
+      <CameraEuler X="2.125887" Y="242.125885" Z="-0.000167988881" />
+      <UpVector X="-0.0327926874" Y="0.999311745" Z="-0.0173405558" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="0.988189" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.827957153" Y="-0.000213623047" Z="1.44415283" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="6.593061" Y="0.6589808" Z="3.78000355" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.827957153" Y="-0.000213623047" Z="1.44415283" />
+      <TargetToFollowOffset X="6.593061" Y="0.6589808" Z="3.78000355" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-55.13294" Y="40.60642" Z="-270.885284" />
+      <CameraRotation X="-0.0249282811" Y="0.805583656" Z="-0.03397897" W="-0.5909814" />
+      <CameraEuler X="4.83060455" Y="252.528015" Z="-0.0001008902" />
+      <UpVector X="-0.0803255141" Y="0.99644804" Z="-0.0252815019" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionE/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionSE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.0891647339" Y="0.5927353" Z="8.373352" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="14.04095" Y="2.62977362" Z="-0.0366139077" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.0891647339" Y="0.5927353" Z="8.373352" />
+      <TargetToFollowOffset X="14.04095" Y="2.62977362" Z="-0.0366139077" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-57.9023552" Y="45.39798" Z="-409.4265" />
+      <CameraRotation X="-0.0536409058" Y="0.4933252" Z="-0.03049837" W="-0.867653549" />
+      <CameraEuler X="7.075359" Y="300.757141" Z="-4.51670639E-05" />
+      <UpVector X="-0.105848864" Y="0.992385" Z="0.0629922152" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="0.984252" FieldOfView="30">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-2.53253937" Y="1.09783173" Z="-2.071228" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="8.82963" Y="1.83786988" Z="-9.81918049" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-2.53253937" Y="1.09783173" Z="-2.071228" />
+      <TargetToFollowOffset X="8.82963" Y="1.83786988" Z="-9.81918049" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-63.1252441" Y="44.611702" Z="-394.602875" />
+      <CameraRotation X="-0.0236427244" Y="0.467028618" Z="-0.0124924546" W="-0.8838378" />
+      <CameraEuler X="3.06457" Y="304.295166" Z="-6.017037E-05" />
+      <UpVector X="-0.0441662669" Y="0.9985699" Z="0.0301240012" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionSE/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionS" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-4.377907" Y="0.620754242" Z="-0.9494629" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="2.86727762" Y="-0.727610767" Z="-13.6913872" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-4.377907" Y="0.620754242" Z="-0.9494629" />
+      <TargetToFollowOffset X="2.86727762" Y="-0.727610767" Z="-13.6913872" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-72.12686" Y="41.3515625" Z="-423.1313" />
+      <CameraRotation X="-0.04430355" Y="-0.255377561" Z="-0.011715048" W="0.965754747" />
+      <CameraEuler X="354.746857" Y="330.376251" Z="3.107983E-05" />
+      <UpVector X="0.0452559926" Y="0.9957999" Z="-0.0795892" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.185638428" Y="0.418956757" Z="-0.150543213" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="6.34414" Y="-0.799199462" Z="-10.05544" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.185638428" Y="0.418956757" Z="-0.150543213" />
+      <TargetToFollowOffset X="6.34414" Y="-0.799199462" Z="-10.05544" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-68.6460648" Y="41.269207" Z="-394.495544" />
+      <CameraRotation X="-0.0491440669" Y="-0.28687346" Z="-0.014737526" W="0.9565936" />
+      <CameraEuler X="354.118164" Y="326.613" Z="3.52972675E-05" />
+      <UpVector X="0.0563919023" Y="0.99473536" Z="-0.0855661854" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionS/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionSW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.0130233765" Y="0.8308182" Z="5.21972656" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-12.9292364" Y="0.4886917" Z="-0.109809257" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.0130233765" Y="0.8308182" Z="5.21972656" />
+      <TargetToFollowOffset X="-12.9292364" Y="0.4886917" Z="-0.109809257" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-129.979233" Y="101.177971" Z="-1012.82971" />
+      <CameraRotation X="0.0102195274" Y="-0.5560926" Z="-0.006838966" W="-0.8310294" />
+      <CameraEuler X="358.590851" Y="67.5778046" Z="4.33421155E-05" />
+      <UpVector X="-0.0227327719" Y="0.999697566" Z="-0.009379258" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0.154701233" Y="0.389648438" Z="-0.241455078" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-11.6064186" Y="0.6197362" Z="-6.424834" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0.154701233" Y="0.389648438" Z="-0.241455078" />
+      <TargetToFollowOffset X="-11.6064186" Y="0.6197362" Z="-6.424834" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-89.83435" Y="220.391815" Z="-2193.86475" />
+      <CameraRotation X="0.0075058043" Y="0.516970754" Z="-0.00453296024" W="0.855958164" />
+      <CameraEuler X="1.00479746" Y="62.2612038" Z="2.94330348E-05" />
+      <UpVector X="0.0155206118" Y="0.9998462" Z="0.008162493" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionSW/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="8.99371" Y="2.79546356" Z="4.20166" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-7.194496" Y="-0.5790379" Z="15.7848673" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="8.99371" Y="2.79546356" Z="4.20166" />
+      <TargetToFollowOffset X="-7.194496" Y="-0.5790379" Z="15.7848673" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-44.0962143" Y="100.101662" Z="-989.92334" />
+      <CameraRotation X="0.03839674" Y="-0.886205256" Z="-0.07468439" W="-0.455618471" />
+      <CameraEuler X="350.365631" Y="125.58252" Z="2.29486723E-05" />
+      <UpVector X="-0.136109948" Y="0.9858959" Z="0.09738287" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="0.984252" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="2.85771942" Y="0.7238312" Z="2.41333" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-7.784512" Y="-0.493146569" Z="9.366725" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="2.85771942" Y="0.7238312" Z="2.41333" />
+      <TargetToFollowOffset X="-7.784512" Y="-0.493146569" Z="9.366725" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-44.67521" Y="100.176529" Z="-971.7463" />
+      <CameraRotation X="0.0227099527" Y="-0.878477" Z="-0.04196765" W="-0.475395679" />
+      <CameraEuler X="354.529816" Y="123.159134" Z="0.000123077014" />
+      <UpVector X="-0.07980282" Y="0.995445967" Z="0.0521428026" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionW/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipMedium_SectionNW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="7.3758316" Y="2.22502136" Z="4.19030762" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-8.695951" Y="-0.102320783" Z="15.36504" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="7.3758316" Y="2.22502136" Z="4.19030762" />
+      <TargetToFollowOffset X="-8.695951" Y="-0.102320783" Z="15.36504" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-124.793861" Y="188.206985" Z="-1877.20789" />
+      <CameraRotation X="0.027396787" Y="-0.884682" Z="-0.0524153449" W="-0.462428" />
+      <CameraEuler X="353.2187" Y="124.807381" Z="0.000101455051" />
+      <UpVector X="-0.09695154" Y="0.9930041" Z="0.06740374" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="30">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="3.00898743" Y="0.291931152" Z="2.71069336" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-9.162737" Y="0.548982143" Z="10.1128531" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="3.00898743" Y="0.291931152" Z="2.71069336" />
+      <TargetToFollowOffset X="-9.162737" Y="0.548982143" Z="10.1128531" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-125.263123" Y="188.855881" Z="-1857.45691" />
+      <CameraRotation X="0.004421492" Y="0.8715907" Z="-0.007862662" W="0.490151316" />
+      <CameraEuler X="1.03369737" Y="121.296318" Z="-1.8652654E-05" />
+      <UpVector X="0.0154152513" Y="0.9998373" Z="-0.009371645" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionNW/./ShipSizeMedium</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionN" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.0476280935">
+    <Key StartTimeRatio="0" FieldOfView="45">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0.145179749" Y="0.848823547" Z="-11.4857788" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="30.3990421" Y="2.68728113" Z="5.418709" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0.145179749" Y="0.848823547" Z="-11.4857788" />
+      <TargetToFollowOffset X="30.3990421" Y="2.68728113" Z="5.418709" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-44.60096" Y="28.7572727" Z="-448.0112" />
+      <CameraRotation X="-0.01340908" Y="0.862186551" Z="-0.0228527077" W="-0.5058975" />
+      <CameraEuler X="3.03659868" Y="240.805511" Z="0" />
+      <UpVector X="-0.0462445132" Y="0.9985959" Z="-0.025839353" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="13.0518732" Y="2.96248937" Z="24.8045578" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="13.0518732" Y="2.96248937" Z="24.8045578" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-61.9481277" Y="29.0324821" Z="-403.625519" />
+      <CameraRotation X="-0.0126215173" Y="0.96947" Z="-0.0510913953" W="-0.239495948" />
+      <CameraEuler X="6.03343248" Y="207.7528" Z="0" />
+      <UpVector X="-0.04894473" Y="0.994460762" Z="-0.09301755" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionN/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionNE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.135790929">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-0.144821167" Y="1.9846344" Z="-10.7922363" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="33.59907" Y="5.36232758" Z="0.537168443" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-0.144821167" Y="1.9846344" Z="-10.7922363" />
+      <TargetToFollowOffset X="33.59907" Y="5.36232758" Z="0.537168443" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-41.40093" Y="31.43232" Z="-452.892731" />
+      <CameraRotation X="-0.0276074652" Y="0.8109681" Z="-0.0383910835" W="-0.5831764" />
+      <CameraEuler X="5.42069674" Y="251.440674" Z="0" />
+      <UpVector X="-0.08955509" Y="0.9955279" Z="-0.0300678462" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="35.83527" Y="6.676734" Z="19.233223" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="35.83527" Y="6.676734" Z="19.233223" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-39.16473" Y="32.746727" Z="-409.196869" />
+      <CameraRotation X="-0.04172048" Y="0.8553294" Z="-0.06974161" W="-0.511670947" />
+      <CameraEuler X="9.32291" Y="241.777" Z="0" />
+      <UpVector X="-0.142739013" Y="0.986791" Z="-0.0766097754" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionNE/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07540532">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-35.12059" Y="-1.16720581" Z="22.4276123" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="28.4577026" Y="2.04710746" Z="44.6700935" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-35.12059" Y="-1.16720581" Z="22.4276123" />
+      <TargetToFollowOffset X="28.4577026" Y="2.04710746" Z="44.6700935" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-46.5422974" Y="157.0471" Z="-1405.32983" />
+      <CameraRotation X="-0.0137976408" Y="0.8153105" Z="-0.0194414835" W="-0.5785331" />
+      <CameraEuler X="2.73212314" Y="250.717972" Z="-0.0002087715" />
+      <UpVector X="-0.0449938066" Y="0.9988633" Z="-0.0157369077" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="25">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="35.0586357" Y="4.06449175" Z="26.50388" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="35.0586357" Y="4.06449175" Z="26.50388" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-39.9413643" Y="159.0645" Z="-1398.49622" />
+      <CameraRotation X="-0.0205354318" Y="0.894328356" Z="-0.0412657224" W="-0.445030481" />
+      <CameraEuler X="5.28374" Y="232.911163" Z="-0.00010524792" />
+      <UpVector X="-0.07345985" Y="0.995750844" Z="-0.0555324256" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionE/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionSE" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-2.5574646" Y="2.987679" Z="7.11300659" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="29.5733929" Y="2.821056" Z="9.448156" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="-2.5574646" Y="2.987679" Z="7.11300659" />
+      <TargetToFollowOffset X="29.5733929" Y="2.821056" Z="9.448156" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-37.2966156" Y="0.990072" Z="-211.151733" />
+      <CameraRotation X="-0.00176025613" Y="-0.7322834" Z="-0.00189448718" W="0.6809951" />
+      <CameraEuler X="359.703674" Y="265.843262" Z="-0.000129508524" />
+      <UpVector X="0.00515828561" Y="0.999986649" Z="0.000377151649" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="30">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="26.4392319" Y="2.01103783" Z="-9.162234" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="26.4392319" Y="2.01103783" Z="-9.162234" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-40.1508865" Y="156.060272" Z="-1468.69128" />
+      <CameraRotation X="-0.0292247627" Y="0.579434633" Z="-0.0207961425" W="-0.814229" />
+      <CameraEuler X="4.111137" Y="289.125946" Z="-0.00011684074" />
+      <UpVector X="-0.0677333251" Y="0.997426867" Z="0.0234912876" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionSE/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionS" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="3.71808624" Y="1.60612488" Z="8.749878" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="31.4557133" Y="2.8599813" Z="-13.8923855" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="3.71808624" Y="1.60612488" Z="8.749878" />
+      <TargetToFollowOffset X="31.4557133" Y="2.8599813" Z="-13.8923855" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-43.54429" Y="70.06753" Z="-598.582336" />
+      <CameraRotation X="-0.0158427842" Y="0.428673536" Z="-0.007518493" W="-0.903289258" />
+      <CameraEuler X="2.00961423" Y="309.224823" Z="-9.07692765E-07" />
+      <UpVector X="-0.0271655135" Y="0.99938494" Z="0.0221752767" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="14.7528009" Y="4.903093" Z="-20.9704437" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="14.7528009" Y="4.903093" Z="-20.9704437" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-60.24717" Y="159.652908" Z="-1497.953" />
+      <CameraRotation X="-0.089918755" Y="0.300336063" Z="-0.0284528974" W="-0.949159265" />
+      <CameraEuler X="10.8235655" Y="324.882843" Z="5.6717734E-05" />
+      <UpVector X="-0.108024359" Y="0.9822101" Z="0.153603584" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionS/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionSW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="4.732445" Y="2.95198059" Z="23.6865234" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-38.26786" Y="-0.7047663" Z="7.727261" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="4.732445" Y="2.95198059" Z="23.6865234" />
+      <TargetToFollowOffset X="-38.26786" Y="-0.7047663" Z="7.727261" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-121.267967" Y="153.906662" Z="-1476.60718" />
+      <CameraRotation X="0.032656353" Y="-0.570533752" Z="-0.02271428" W="-0.820310235" />
+      <CameraEuler X="355.44046" Y="69.63797" Z="0.000138536314" />
+      <UpVector X="-0.07452862" Y="0.996835232" Z="-0.0276581552" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-25.4133358" Y="-2.515085" Z="-9.494582" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="-25.4133358" Y="-2.515085" Z="-9.494582" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-108.413643" Y="152.1005" Z="-1468.86462" />
+      <CameraRotation X="0.0379652046" Y="-0.5695375" Z="-0.0263485331" W="-0.8206653" />
+      <CameraEuler X="354.702545" Y="69.5209" Z="8.25282041E-05" />
+      <UpVector X="-0.08649187" Y="0.9957288" Z="-0.0323004946" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionSW/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="27.1233978" Y="4.0071106" Z="21.7231445" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-36.8029976" Y="5.48161125" Z="44.9409" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="27.1233978" Y="4.0071106" Z="21.7231445" />
+      <TargetToFollowOffset X="-36.8029976" Y="5.48161125" Z="44.9409" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-123.802994" Y="90.061615" Z="-1066.119" />
+      <CameraRotation X="0.006219944" Y="0.8189077" Z="-0.00887561" W="0.573823" />
+      <CameraEuler X="1.24197781" Y="109.960793" Z="6.08456648E-05" />
+      <UpVector X="0.0203731786" Y="0.9997651" Z="-0.007398317" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="0.984252" FieldOfView="35">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-30.0893745" Y="5.48838139" Z="19.9812279" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="-30.0893745" Y="5.48838139" Z="19.9812279" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-105.089371" Y="160.488388" Z="-1405.41248" />
+      <CameraRotation X="0.03560444" Y="0.8787444" Z="-0.06638157" W="0.471310884" />
+      <CameraEuler X="8.640048" Y="123.586617" Z="9.80156256E-05" />
+      <UpVector X="0.125147134" Y="0.988651633" Z="-0.08310336" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionW/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+  <Shot xsi:type="Shot_EncounterEvent" Name="Hit_BoardingPods_ShipLarge_SectionNW" Duration="3" LateStartTimeRatio="0.15" EarlyEndTimeRatio="0.85" LateEndTimeRatio="1.2" EventStartTimeRatio="0.07937349">
+    <Key StartTimeRatio="0" FieldOfView="50">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="13.4263077" Y="3.55330276" Z="8.719147" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-21.0194149" Y="1.0354718" Z="31.94516" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="13.4263077" Y="3.55330276" Z="8.719147" />
+      <TargetToFollowOffset X="-21.0194149" Y="1.0354718" Z="31.94516" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-100.63942" Y="26.0854645" Z="-433.53476" />
+      <CameraRotation X="0.0142081957" Y="-0.8825062" Z="-0.0267181844" W="-0.469326347" />
+      <CameraEuler X="356.5318" Y="123.990936" Z="8.350258E-05" />
+      <UpVector X="-0.0501567349" Y="0.9981685" Z="0.033821363" />
+      <Transition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Position" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="Rotation" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+        <LayerTransition StartTimeRatio="0" LayerTags="FieldOfView" LayerOptions="None">
+          <Curve>
+            <keys>
+              <Keyframe>
+                <time>0</time>
+                <value>0</value>
+                <inTangent>0</inTangent>
+                <outTangent>1</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+              <Keyframe>
+                <time>1</time>
+                <value>1</value>
+                <inTangent>1</inTangent>
+                <outTangent>0</outTangent>
+                <tangentMode>0</tangentMode>
+              </Keyframe>
+            </keys>
+            <preWrapMode>ClampForever</preWrapMode>
+            <postWrapMode>ClampForever</postWrapMode>
+          </Curve>
+        </LayerTransition>
+      </Transition>
+    </Key>
+    <Key StartTimeRatio="1" FieldOfView="30">
+      <MainTargetOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="0" Y="0" Z="0" />
+      </MainTargetOffset>
+      <MainTargetToFollowOffset>
+        <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+          <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+        </TargetFilter>
+        <TargetOffset X="-20.1506977" Y="3.24569488" Z="18.2096825" />
+      </MainTargetToFollowOffset>
+      <AdditionalTargetOffsets />
+      <AdditionalTargetToFollowOffsets />
+      <TargetFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetFilter>
+      <TargetToFollowFilter AttachedToTarget="true" IgnoreTargetStatus="true">
+        <SelectionMethod_EncounterEntity EventEntityRole="Target" />
+      </TargetToFollowFilter>
+      <TargetOffset X="0" Y="0" Z="0" />
+      <TargetToFollowOffset X="-20.1506977" Y="3.24569488" Z="18.2096825" />
+      <CameraLocalOffset X="0" Y="0" Z="0" />
+      <CameraPosition X="-95.1506958" Y="58.2456932" Z="-756.7904" />
+      <CameraRotation X="0.0241252743" Y="0.9122961" Z="-0.0543186627" W="0.405195326" />
+      <CameraEuler X="6.81479168" Y="132.1033" Z="-3.18143975E-05" />
+      <UpVector X="0.0880381241" Y="0.9929349" Z="-0.0795585141" />
+    </Key>
+    <EventPrerequisite RealizationEvent="Hit">
+      <EventInitiatorFilter />
+      <EventTargetFilter EntityType="ShipSection">
+        <PathPrerequisite Flags="">SectionNW/./ShipSizeLarge</PathPrerequisite>
+      </EventTargetFilter>
+    </EventPrerequisite>
+  </Shot>
+</Datatable>

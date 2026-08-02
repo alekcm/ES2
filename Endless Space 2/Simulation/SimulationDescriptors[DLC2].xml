@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- ############################################################################## -->
+    <!-- #############################   JUGGERNAUTS   ################################ -->
+    <!-- ############################################################################## -->
+
+    <!-- Applied on system when building a juggernaut. -->
+    <SimulationDescriptor Name="BuildingJuggernaut" Type="BuildingJuggernaut">
+        <Modifier TargetProperty="JuggernautCountIncludingQueuedOnes" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassMiningProbe" Type="ClassMiningProbe">
+
+        <!-- Values copied from the planet. -->
+        <Property Name="Strategic1"   IsSealed="true"/>
+        <Property Name="Strategic2"   IsSealed="true"/>
+        <Property Name="Strategic3"   IsSealed="true"/>
+        <Property Name="Strategic4"   IsSealed="true"/>
+        <Property Name="Strategic5"   IsSealed="true"/>
+        <Property Name="Strategic6"   IsSealed="true"/>
+
+        <Property Name="Luxury1"      IsSealed="true"/>
+        <Property Name="Luxury2"      IsSealed="true"/>
+        <Property Name="Luxury3"      IsSealed="true"/>
+        <Property Name="Luxury4"      IsSealed="true"/>
+        <Property Name="Luxury5"      IsSealed="true"/>
+        <Property Name="Luxury6"      IsSealed="true"/>
+        <Property Name="Luxury7"      IsSealed="true"/>
+        <Property Name="Luxury8"      IsSealed="true"/>
+        <Property Name="Luxury9"      IsSealed="true"/>
+        <Property Name="Luxury10"     IsSealed="true"/>
+        <Property Name="Luxury11"     IsSealed="true"/>
+        <Property Name="Luxury12"     IsSealed="true"/>
+        <Property Name="Luxury13"     IsSealed="true"/>
+        <Property Name="Luxury14"     IsSealed="true"/>
+        <Property Name="Luxury15"     IsSealed="true"/>
+        <Property Name="Luxury16"     IsSealed="true"/>
+        <Property Name="Luxury17"     IsSealed="true"/>
+        <Property Name="Luxury18"     IsSealed="true"/>
+        <Property Name="Luxury19"     IsSealed="true"/>
+        <Property Name="Luxury20"     IsSealed="true"/>
+        <Property Name="Luxury21"     IsSealed="true"/>
+        <Property Name="Luxury22"     IsSealed="true"/>
+        <Property Name="Luxury23"     IsSealed="true"/>
+        <Property Name="Luxury24"     IsSealed="true"/>
+
+        <!-- Final values, used by the Empire (which does a Sum) -->
+        <Property Name="NetStrategic1"  />
+        <Property Name="NetStrategic2"  />
+        <Property Name="NetStrategic3"  />
+        <Property Name="NetStrategic4"  />
+        <Property Name="NetStrategic5"  />
+        <Property Name="NetStrategic6"  />
+
+        <Property Name="NetLuxury1"     />
+        <Property Name="NetLuxury2"     />
+        <Property Name="NetLuxury3"     />
+        <Property Name="NetLuxury4"     />
+        <Property Name="NetLuxury5"     />
+        <Property Name="NetLuxury6"     />
+        <Property Name="NetLuxury7"     />
+        <Property Name="NetLuxury8"     />
+        <Property Name="NetLuxury9"     />
+        <Property Name="NetLuxury10"    />
+        <Property Name="NetLuxury11"    />
+        <Property Name="NetLuxury12"    />
+        <Property Name="NetLuxury13"    />
+        <Property Name="NetLuxury14"    />
+        <Property Name="NetLuxury15"    />
+        <Property Name="NetLuxury16"    />
+        <Property Name="NetLuxury17"    />
+        <Property Name="NetLuxury18"    />
+        <Property Name="NetLuxury19"    />
+        <Property Name="NetLuxury20"    />
+        <Property Name="NetLuxury21"    />
+        <Property Name="NetLuxury22"    />
+        <Property Name="NetLuxury23"    />
+        <Property Name="NetLuxury24"    />
+
+        <!-- Says if a strat is exploitable or not. -->
+        <Property Name="AllowToExploitStrategicCommon1"      MaxValue="1"/>
+        <Property Name="AllowToExploitStrategicCommon2"      MaxValue="1"/>
+        <Property Name="AllowToExploitStrategicUncommon1"    MaxValue="1"/>
+        <Property Name="AllowToExploitStrategicUncommon2"    MaxValue="1"/>
+        <Property Name="AllowToExploitStrategicRare1"        MaxValue="1"/>
+        <Property Name="AllowToExploitStrategicRare2"        MaxValue="1"/>
+
+        <!-- FIDS for specific mining probes (added to planets or something) -->
+        <Property Name="PlanetInitialFood"      IsSealed="true"/>
+        <Property Name="PlanetInitialIndustry"  IsSealed="true"/>
+        <Property Name="PlanetInitialDust"      IsSealed="true"/>
+        <Property Name="PlanetInitialScience"   IsSealed="true"/>
+
+        <!-- Given by the fleet, when mining probe is created. -->
+        <Property Name="DepositValueMultiplier" IsSealed="true"/>
+        <Property Name="PlanetStatsMultiplier"  IsSealed="true"/>
+
+
+        <!-- Net = planet net x fleet multiplier. -->
+        <BinaryModifier TargetProperty="NetStrategic1"  Operation="Addition" Left="$(Strategic1)"   BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetStrategic2"  Operation="Addition" Left="$(Strategic2)"   BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetStrategic3"  Operation="Addition" Left="$(Strategic3)"   BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetStrategic4"  Operation="Addition" Left="$(Strategic4)"   BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetStrategic5"  Operation="Addition" Left="$(Strategic5)"   BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetStrategic6"  Operation="Addition" Left="$(Strategic6)"   BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+
+        <BinaryModifier TargetProperty="NetLuxury1"     Operation="Addition" Left="$(Luxury1)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury2"     Operation="Addition" Left="$(Luxury2)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury3"     Operation="Addition" Left="$(Luxury3)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury4"     Operation="Addition" Left="$(Luxury4)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury5"     Operation="Addition" Left="$(Luxury5)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury6"     Operation="Addition" Left="$(Luxury6)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury7"     Operation="Addition" Left="$(Luxury7)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury8"     Operation="Addition" Left="$(Luxury8)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury9"     Operation="Addition" Left="$(Luxury9)"      BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury10"    Operation="Addition" Left="$(Luxury10)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury11"    Operation="Addition" Left="$(Luxury11)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury12"    Operation="Addition" Left="$(Luxury12)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury13"    Operation="Addition" Left="$(Luxury13)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury14"    Operation="Addition" Left="$(Luxury14)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury15"    Operation="Addition" Left="$(Luxury15)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury16"    Operation="Addition" Left="$(Luxury16)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury17"    Operation="Addition" Left="$(Luxury17)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury18"    Operation="Addition" Left="$(Luxury18)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury19"    Operation="Addition" Left="$(Luxury19)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury20"    Operation="Addition" Left="$(Luxury20)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury21"    Operation="Addition" Left="$(Luxury21)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury22"    Operation="Addition" Left="$(Luxury22)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury23"    Operation="Addition" Left="$(Luxury23)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+        <BinaryModifier TargetProperty="NetLuxury24"    Operation="Addition" Left="$(Luxury24)"     BinaryOperation="Multiplication" Right="$(DepositValueMultiplier)"/>
+
+        <!-- Make sure the probe only exploits what it can. -->
+        <Modifier TargetProperty="NetStrategic1" Operation="Multiplication" Value="$(AllowToExploitStrategicCommon1)"   />
+        <Modifier TargetProperty="NetStrategic2" Operation="Multiplication" Value="$(AllowToExploitStrategicCommon2)"   />
+        <Modifier TargetProperty="NetStrategic3" Operation="Multiplication" Value="$(AllowToExploitStrategicUncommon1)" />
+        <Modifier TargetProperty="NetStrategic4" Operation="Multiplication" Value="$(AllowToExploitStrategicUncommon2)" />
+        <Modifier TargetProperty="NetStrategic5" Operation="Multiplication" Value="$(AllowToExploitStrategicRare1)"     />
+        <Modifier TargetProperty="NetStrategic6" Operation="Multiplication" Value="$(AllowToExploitStrategicRare2)"     />
+
+        <!-- Apply portion of exploited planet FIDS on best system's planets. -->
+        <BinaryModifier TargetProperty="PlanetInitialFoodFromMiningProbes"      Operation="Addition" Left="$(PlanetInitialFood)"        BinaryOperation="Multiplication" Right="$(PlanetStatsMultiplier)" Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem/ClassPlanet"/>
+        <BinaryModifier TargetProperty="PlanetInitialIndustryFromMiningProbes"  Operation="Addition" Left="$(PlanetInitialIndustry)"    BinaryOperation="Multiplication" Right="$(PlanetStatsMultiplier)" Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem/ClassPlanet"/>
+        <BinaryModifier TargetProperty="PlanetInitialDustFromMiningProbes"      Operation="Addition" Left="$(PlanetInitialDust)"        BinaryOperation="Multiplication" Right="$(PlanetStatsMultiplier)" Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem/ClassPlanet"/>
+        <BinaryModifier TargetProperty="PlanetInitialScienceFromMiningProbes"   Operation="Addition" Left="$(PlanetInitialScience)"     BinaryOperation="Multiplication" Right="$(PlanetStatsMultiplier)" Path="../ClassEmpire/ClassColonizedStarSystem,BestSystem/ClassPlanet"/>
+
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FleetActionTerraforming" Type="FleetActionTerraforming" IsSerializable="false"/>
+    <SimulationDescriptor Name="FleetActionReducingAnomalies" Type="FleetActionReducingAnomalies" IsSerializable="false"/>
+    <SimulationDescriptor Name="FleetActionLaunchingMiningProbe" Type="FleetActionLaunchingMiningProbe" IsSerializable="false"/>
+
+    <!-- Applied to a fleet when orbiting a special node. Referenced in SpecialNodeDefinitions. -->
+    <SimulationDescriptor Name="FleetOrbitingSpecialNode"               Type="FleetOrbitingSpecialNode">
+        <!-- Says if a strat is exploitable or not. -->
+        <Property Name="CanExploitStrategic1"       BaseValue="0"      MaxValue="1"/>
+        <Property Name="CanExploitStrategic2"       BaseValue="0"      MaxValue="1"/>
+        <Property Name="CanExploitStrategic3"       BaseValue="0"      MaxValue="1"/>
+        <Property Name="CanExploitStrategic4"       BaseValue="0"      MaxValue="1"/>
+        <Property Name="CanExploitStrategic5"       BaseValue="0"      MaxValue="1"/>
+        <Property Name="CanExploitStrategic6"       BaseValue="0"      MaxValue="1"/>
+
+        <!-- Final values, used by the Empire (which does a Sum) -->
+        <Property Name="NetStrategic1"  />
+        <Property Name="NetStrategic2"  />
+        <Property Name="NetStrategic3"  />
+        <Property Name="NetStrategic4"  />
+        <Property Name="NetStrategic5"  />
+        <Property Name="NetStrategic6"  />
+
+        <Modifier TargetProperty="EmpireResearch"       Operation="Addition" Value="$(NetEmpireResearchOnSpecialNodes)"     Path="!TimeBubbleFreezeTime/../ClassEmpire" EnforceContext="true"/>
+        <Modifier TargetProperty="EmpireMoney"          Operation="Addition" Value="$(NetEmpireMoneyOnSpecialNodes)"        Path="!TimeBubbleFreezeTime/../ClassEmpire" EnforceContext="true"/>
+        <Modifier TargetProperty="EmpireEmpirePoint"    Operation="Addition" Value="$(NetEmpireEmpirePointOnSpecialNodes)"  Path="!TimeBubbleFreezeTime/../ClassEmpire" EnforceContext="true"/>
+        <Modifier TargetProperty="EmpireLifeforce"      Operation="Addition" Value="$(NetEmpireLifeForceOnSpecialNodes)"    Path="!TimeBubbleFreezeTime/../ClassEmpire" EnforceContext="true"/>
+
+        <Modifier TargetProperty="TechnologyCostQuadrantScienceAndExplorationMultiplier"    Operation="Addition" Value="$(TechnologyCostQuadrantScienceAndExplorationMultiplierFromSpecialNodes)"   Path="!TimeBubbleFreezeTime/../ClassEmpire/ClassResearch" EnforceContext="true"/>
+        <Modifier TargetProperty="TechnologyCostQuadrantEconomyAndTradeMultiplier"          Operation="Addition" Value="$(TechnologyCostQuadrantEconomyAndTradeMultiplierFromSpecialNodes)"         Path="!TimeBubbleFreezeTime/../ClassEmpire/ClassResearch" EnforceContext="true"/>
+        <Modifier TargetProperty="TechnologyCostQuadrantMilitaryMultiplier"                 Operation="Addition" Value="$(TechnologyCostQuadrantMilitaryMultiplierFromSpecialNodes)"                Path="!TimeBubbleFreezeTime/../ClassEmpire/ClassResearch" EnforceContext="true"/>
+        <Modifier TargetProperty="TechnologyCostQuadrantEmpireDevelopmentMultiplier"        Operation="Addition" Value="$(TechnologyCostQuadrantEmpireDevelopmentMultiplierFromSpecialNodes)"       Path="!TimeBubbleFreezeTime/../ClassEmpire/ClassResearch" EnforceContext="true"/>
+
+        <BinaryModifier TargetProperty="NetStrategic1" Operation="Addition" Left="$(NetStrategic1FromSpecialNodes)" BinaryOperation="Multiplication" Right="$(CanExploitStrategic1)" EnforceContext="true" />
+        <BinaryModifier TargetProperty="NetStrategic2" Operation="Addition" Left="$(NetStrategic2FromSpecialNodes)" BinaryOperation="Multiplication" Right="$(CanExploitStrategic2)" EnforceContext="true" />
+        <BinaryModifier TargetProperty="NetStrategic3" Operation="Addition" Left="$(NetStrategic3FromSpecialNodes)" BinaryOperation="Multiplication" Right="$(CanExploitStrategic3)" EnforceContext="true" />
+        <BinaryModifier TargetProperty="NetStrategic4" Operation="Addition" Left="$(NetStrategic4FromSpecialNodes)" BinaryOperation="Multiplication" Right="$(CanExploitStrategic4)" EnforceContext="true" />
+        <BinaryModifier TargetProperty="NetStrategic5" Operation="Addition" Left="$(NetStrategic5FromSpecialNodes)" BinaryOperation="Multiplication" Right="$(CanExploitStrategic5)" EnforceContext="true" />
+        <BinaryModifier TargetProperty="NetStrategic6" Operation="Addition" Left="$(NetStrategic6FromSpecialNodes)" BinaryOperation="Multiplication" Right="$(CanExploitStrategic6)" EnforceContext="true" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FleetOrbitingSpecialNodeBlackHole"      Type="FleetOrbitingSpecialNode"/>
+    <SimulationDescriptor Name="FleetOrbitingSpecialNodeAsteroidField"  Type="FleetOrbitingSpecialNode"/>
+    <SimulationDescriptor Name="FleetOrbitingSpecialNodeCollapsingStar" Type="FleetOrbitingSpecialNode"/>
+    <SimulationDescriptor Name="FleetOrbitingSpecialNodeSolarNebula"    Type="FleetOrbitingSpecialNode"/>
+    <SimulationDescriptor Name="FleetOrbitingSpecialNodeNeutronStar"    Type="FleetOrbitingSpecialNode"/>
+    <SimulationDescriptor Name="FleetOrbitingSpecialNodeSpaceClouds"    Type="FleetOrbitingSpecialNode"/>
+    <SimulationDescriptor Name="FleetOrbitingSpecialNodeVaulters"       Type="FleetOrbitingSpecialNode"/>
+
+    <SimulationDescriptor Name="ClassSpecialNodeEffect" Type="ClassSpecialNodeEffect">
+        <Property Name="SystemResearch"/>
+        <Property Name="SystemProduction"/>
+        <Property Name="SystemEmpirePoint"/>
+        <Property Name="SystemMoney"/>
+        <Property Name="HealthRegenerationRatio"/>
+        <Property Name="DockedFleetsHealthRegenerationRatio"/>
+        <Property Name="SystemPopulation"/>
+
+        <Property Name="SpecialNodeEffectMultiplier" BaseValue="1" IsSealed="true"/>
+
+
+        <BinaryModifier TargetProperty="SystemResearch"                         Operation="Addition" Left="$(SystemResearch)"                       BinaryOperation="Multiplication" Right="$(SpecialNodeEffectMultiplier)" Path="../ClassColonizedStarSystem"/>
+        <BinaryModifier TargetProperty="SystemProduction"                       Operation="Addition" Left="$(SystemProduction)"                     BinaryOperation="Multiplication" Right="$(SpecialNodeEffectMultiplier)" Path="../ClassColonizedStarSystem"/>
+        <BinaryModifier TargetProperty="SystemEmpirePoint"                      Operation="Addition" Left="$(SystemEmpirePoint)"                    BinaryOperation="Multiplication" Right="$(SpecialNodeEffectMultiplier)" Path="../ClassColonizedStarSystem"/>
+        <BinaryModifier TargetProperty="SystemMoney"                            Operation="Addition" Left="$(SystemMoney)"                          BinaryOperation="Multiplication" Right="$(SpecialNodeEffectMultiplier)" Path="../ClassColonizedStarSystem"/>
+        <BinaryModifier TargetProperty="HealthRegenerationRatio"                Operation="Addition" Left="$(HealthRegenerationRatio)"              BinaryOperation="Multiplication" Right="$(SpecialNodeEffectMultiplier)" Path="../ClassColonizedStarSystem/ClassGarrison/ClassShip"/>
+        <BinaryModifier TargetProperty="DockedFleetsHealthRegenerationRatio"    Operation="Addition" Left="$(DockedFleetsHealthRegenerationRatio)"  BinaryOperation="Multiplication" Right="$(SpecialNodeEffectMultiplier)" Path="../ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+
+    <SimulationDescriptor Name="SystemSupportModuleEffect" Type="SystemSupportModuleEffect">
+        <Modifier TargetProperty="HasBonusesFromDockedFleets"   Operation="Addition"    Value="1"  Path="ClassColonizedStarSystem" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Don't forget to change the values in GUI only descriptors in SimulationDescriptors[ModuleDLC2] if any change is made here -->
+    <SimulationDescriptor Name="SystemSupportModuleEffectFIDSFlat" Type="SystemSupportModuleEffect">
+        <Modifier TargetProperty="SystemFIDSFlat"      Operation="Addition"    Value="10"  Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="SystemSupportModuleEffectFIDSDynamic" Type="SystemSupportModuleEffect">
+        <Modifier TargetProperty="SystemFIDSPercent"   Operation="Addition"    Value="0.05" Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="SystemSupportModuleEffectTradeEnhancer" Type="SystemSupportModuleEffect">
+        <Modifier TargetProperty="TradingRouteSystemBaseIncome"   Operation="Percent"    Value="0.5" Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ShipActionSpecializing" Type="ShipActionSpecializing" IsSerializable="false"/>
+    <SimulationDescriptor Name="ShipActionSpecializingCitadel" Type="ShipActionSpecializing" IsSerializable="false"/>
+
+
+    <!-- ############################################################################## -->
+    <!-- ######################   STAR SYSTEM IMPROVEMENTS   ########################## -->
+    <!-- ############################################################################## -->
+
+    <SimulationDescriptor Name="StarSystemImprovementIncreasedJuggernautLimit" Type="StarSystemImprovementIncreasedJuggernautLimit">
+        <Modifier TargetProperty="MaximumJuggernauts"                               Operation="Addition"            Value="1"   Path="./ClassColonizedStarSystem/./ClassEmpire"                                                     Priority="20" />
+        <Modifier TargetProperty="GarrisonMoneyUpkeepMultiplierFromJuggernauts"     Operation="Multiplication"      Value="1.5"   Path="./ClassColonizedStarSystem/./ClassEmpire/ClassGarrisonFleet/ClassShip,ShipSizeJuggernaut"     Priority="20"/>
+        <Modifier TargetProperty="UpkeepMultiplierFromJuggernauts"                  Operation="Multiplication"      Value="2"   Path="../ClassEmpire/ClassColonizedStarSystem/ClassCitadel"                                         Priority="20"   TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemImprovementObliteratorShield" Type="StarSystemImprovementObliteratorShield">
+      <Modifier TargetProperty="HasObliteratorDefense"         Operation="Addition"   Value="1"   Path="./ClassColonizedStarSystem" TooltipOverride="%StarSystemImprovementObliteratorShieldEffects"/>
+      <Modifier TargetProperty="VisionRange"                   Operation="Addition"   Value="4"   Path="./ClassColonizedStarSystem"/>
+      <Modifier TargetProperty="ObliterationImprovementWeight" Operation="Force"      Value="100" TooltipHidden="true"/>
+      <Modifier TargetProperty="GroundBattleBombardmentAttackerDamageReduction"       Operation="Subtraction" Value="0.5" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemImprovementCitadelSpaceBattle" Type="StarSystemImprovementCitadel">
+      <Modifier TargetProperty="SpaceBattleCanFire" Operation="Force" Value="1" Path="./ClassColonizedStarSystem/ClassCitadel" TooltipOverride="%StarSystemImprovementCitadelSpaceBattle1Effects" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemImprovementCitadelSpaceBattle1" Type="StarSystemImprovementCitadel">
+      <Modifier TargetProperty="MaximumCitadelManpower" Operation="Addition" Value="500" Path="./ClassColonizedStarSystem/ClassCitadel"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemImprovementCitadelSpaceBattle2" Type="StarSystemImprovementCitadel">
+      <Modifier TargetProperty="SpaceBattleDamageMultiplier"          Operation="Percent"     Value="0.5"     Path="./ClassColonizedStarSystem/ClassCitadel" />
+      <Modifier TargetProperty="DockedFleetsHealthRegenerationRatio"  Operation="Addition"    Value="0.20"    Path="./ClassColonizedStarSystem" />
+      <Modifier TargetProperty="VisionRange"                          Operation="Addition"    Value="2"       Path="./ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemImprovementCitadelDefense1" Type="StarSystemImprovementCitadel">
+      <Modifier TargetProperty="SystemManpowerLoss"                   Operation="Percent"     Value="-0.5"    Path="./ClassColonizedStarSystem,BesiegedColonizedStarSystem"   Priority="1" UseIfInsteadOfWhere="true"/>
+      <BinaryModifier TargetProperty="MaximumSystemManpower"          Operation="Addition"    Left="40"       BinaryOperation="Multiplication" Right="$(Population)"    Path="./ColonizedStarSystemStateColony,ClassColonizedStarSystem" SearchValueFromPath="true"/>
+      <Modifier TargetProperty="GroundBattleDefenderManpowerLimit"    Operation="Addition"    Value="500"      Path="./ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemImprovementCitadelIndustryScience" Type="StarSystemImprovementCitadel">
+      <Modifier TargetProperty="SystemProduction" Operation="Percent" Value="0.2" Path="./ClassColonizedStarSystem"/>
+      <Modifier TargetProperty="SystemResearch"   Operation="Percent" Value="0.2" Path="./ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ShipConstructionEffectCitadelIndustryScience" Type="ShipConstructionEffect">
+      <Modifier TargetProperty="MaximumHealth" Operation="Percent" Value="0.1" Path="ClassShip/ClassSectionCore"/>
+      <Modifier TargetProperty="Damage"        Operation="Percent" Value="0.1" Path="ClassShip"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemImprovementCitadelWeaponizedSystem" Type="StarSystemImprovementCitadel">
+      <Modifier TargetProperty="NetSystemManpower"                                Operation="Addition" Value="200"  Path="./ClassColonizedStarSystem" />
+      <BinaryModifier TargetProperty="SystemProduction"                           Operation="Addition" Left="0.05"   BinaryOperation="Multiplication" Right="$(SystemManpowerStock)" Path="./ClassColonizedStarSystem" SearchValueFromPath="true"/>
+      <Modifier TargetProperty="SystemProduction"                                 Operation="Percent"  Value="0.2"  Path="./ClassColonizedStarSystem"/>
+      <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"    Operation="Percent"  Value="0.25" Path="./ClassColonizedStarSystem"/>
+      <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"       Operation="Percent"  Value="0.25" Path="./ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ShipWeaponsDeactivated" Type="ShipWeaponsDeactivated"/>
+
+    <!-- ############################################################################## -->
+    <!-- ######################            HONOR             ########################## -->
+    <!-- ############################################################################## -->
+
+    <SimulationDescriptor Name="EmpireHonorMalusWeak" Type="EmpireHonorMalus">
+        <Modifier TargetProperty="UnclampedNetEmpireHonor" Operation="Subtraction" Value="2" Priority="2" Path="../ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireHonorMalusMedium" Type="EmpireHonorMalus">
+        <Modifier TargetProperty="UnclampedNetEmpireHonor" Operation="Subtraction" Value="4" Priority="10" Path="../ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HonorActionFleetBonusesEffect" Type="HonorAction">
+        <Modifier TargetProperty="Damage"                           Operation="Addition" Value="0.2" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="ShipHullPlatingAbsorptionPercent" Operation="Addition" Value="0.2" Path="ClassGarrisonFleet"/>
+        <Modifier TargetProperty="ShipShieldAbsorptionPercent"      Operation="Addition" Value="0.2" Path="ClassGarrisonFleet"/>
+
+        <Modifier TargetProperty="HasHonorFleetBonuses"             Operation="Addition" Value="1" TooltipHidden="true"/>
+        <Modifier TargetProperty="HasVisibleHonorAction"            Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HonorActionFleetFakePowerEffect" Type="HonorAction">
+        <Modifier TargetProperty="VisionRange"                      Operation="Addition" Value="2" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="MaximumMovement"                  Operation="Addition" Value="2" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="ShownMilitaryPowerMultiplier"     Operation="Percent" Value="0.5" Path="ClassGarrisonFleet"/>
+        <Modifier TargetProperty="ShownMilitaryPowerMultiplier"     Operation="Percent" Value="0.5" Path="ClassGarrisonFleet/ClassShip" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShownHealthMultiplier"            Operation="Percent" Value="0.5" Path="ClassGarrisonFleet"/>
+        <Modifier TargetProperty="ShownHealthMultiplier"            Operation="Percent" Value="0.5" Path="ClassGarrisonFleet/ClassShip" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="HasVisibleHonorAction"             Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HonorActionSystemBonusesEffect" Type="HonorAction">
+        <Modifier TargetProperty="SystemProduction"                 Operation="Percent" Value="0.25" Path="ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="HasHonorSystemBonuses"            Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HonorActionSystemDefenseEffect" Type="HonorAction">
+        <Modifier TargetProperty="NetSystemManpower"                 Operation="Percent" Value="0.20" Path="ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="HonorStrategyUnlocked" Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FleetActionKamikaze" Type="FleetActionKamikaze" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="FleetActionKamikazeEffect" Type="FleetActionKamikazeEffect">
+        <Modifier TargetProperty="HonorGainMultiplier"              Operation="Addition" Value="1" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="Damage" Operation="Addition" Value="2" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="ShipIsKamikaze" Operation="Addition" Value="1" Path="ClassGarrisonFleet/ClassShip" TooltipOverride="%FleetActionKamikazeEffect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ZoneEffectHonorActionFleetBonusesEffectJuggernautVersion" Type="ZoneEffect">
+        <Modifier TargetProperty="Damage"                           Operation="Addition" Value="0.15" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="ShipHullPlatingAbsorptionPercent" Operation="Addition" Value="0.15" Path="ClassGarrisonFleet"/>
+        <Modifier TargetProperty="ShipShieldAbsorptionPercent"      Operation="Addition" Value="0.15" Path="ClassGarrisonFleet"/>
+
+        <Modifier TargetProperty="HasHonorFleetBonuses"             Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ZoneEffectHonorActionFleetFakePowerEffectJuggernautVersion" Type="ZoneEffect">
+        <Modifier TargetProperty="VisionRange"                      Operation="Addition" Value="1" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="MaximumMovement"                  Operation="Addition" Value="1" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="ShownMilitaryPowerMultiplier"     Operation="Percent" Value="0.35" Path="ClassGarrisonFleet"/>
+        <Modifier TargetProperty="ShownMilitaryPowerMultiplier"     Operation="Percent" Value="0.35" Path="ClassGarrisonFleet/ClassShip" TooltipHidden="true"/>
+        <Modifier TargetProperty="ShownHealthMultiplier"            Operation="Percent" Value="0.35" Path="ClassGarrisonFleet"/>
+        <Modifier TargetProperty="ShownHealthMultiplier"            Operation="Percent" Value="0.35" Path="ClassGarrisonFleet/ClassShip" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ZoneEffectHonorActionSystemBonusesEffectJuggernautVersion" Type="ZoneEffect">
+        <Modifier TargetProperty="SystemProduction"                 Operation="Percent" Value="0.2" Path="ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="HasHonorSystemBonuses"            Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ZoneEffectHonorActionSystemDefenseEffectJuggernautVersion" Type="ZoneEffect">
+        <Modifier TargetProperty="NetSystemManpower"                 Operation="Percent" Value="0.15" Path="ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="HonorStrategyUnlocked" Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ZoneEffectFleetActionKamikazeEffectJuggernautVersion" Type="ZoneEffect">
+        <Modifier TargetProperty="Damage" Operation="Addition" Value="0.75" Path="ClassGarrisonFleet/ClassShip"/>
+        <Modifier TargetProperty="ShipIsKamikaze" Operation="Addition" Value="1" Path="ClassGarrisonFleet/ClassShip" TooltipOverride="%FleetActionKamikazeEffect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ZoneEffectPassiveOverColonizationThresholdReduction" Type="ZoneEffect">
+        <BinaryModifier TargetProperty="NetEmpireHonorFromZoneEffect"      Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(HonorEmpireImprovementStopGap)"  Path="ClassColonizedStarSystem" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+
+    <!-- Hisshos special defense strategy. -->
+    <SimulationDescriptor Name="GroundBattleDefenderStrategyHisshosHonor" Type="GroundBattleDefenderStrategy">
+        <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier" Operation="Addition" Value="0.5"/>
+        <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Subtraction" Value="0.75" />
+        <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Subtraction" Value="0.75" />
+        <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="1500" />
+        <Modifier TargetProperty="GroundBattleBombardmentDefensiveDamageReduction" Operation="Subtraction" Value="0.6" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="GroundBattleDefenderStrategyZoneEffectHisshosHonor" Type="GroundBattleDefenderStrategy">
+        <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier" Operation="Addition" Value="0.25"/>
+        <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Subtraction" Value="0.50" />
+        <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Subtraction" Value="0.50" />
+        <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="750" />
+        <Modifier TargetProperty="GroundBattleBombardmentDefensiveDamageReduction" Operation="Subtraction" Value="0.5" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectSystemPillageHappinessMalus" Type="TemporaryEffect">
+        <Modifier TargetProperty="Happiness" Operation="Addition" Value="-10" Path="ClassSenate,!GovernmentDictatorship,!GovernmentDictatorshipCravers/../ClassEmpire/ClassColonizedStarSystem" TooltipOverride="%HappinessOnNonDictatorship"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectSystemRazeHappinessMalus" Type="TemporaryEffect">
+        <Modifier TargetProperty="Happiness" Operation="Addition" Value="-15" Path="ClassSenate,!GovernmentDictatorship,!GovernmentDictatorshipCravers/../ClassEmpire/ClassColonizedStarSystem" TooltipOverride="%HappinessOnNonDictatorship"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LostSystemEffectDecayRateIncrease" Type="LostSystemEffect">
+        <Modifier TargetProperty="LostSystemDecayRate" Operation="Percent" Value="1" Path="ClassColonizedStarSystem,ColonizedStarSystemStateLost"/>
+    </SimulationDescriptor>
+
+    <!-- Fake descriptors for GUI purposes... Loc key example: %StarSystemImprovementHisshosFestivalGrowthTooltipEffect -->
+    <SimulationDescriptor Name="StarSystemImprovementHisshosPopulationSacrifice" Type="StarSystemImprovementHisshosPopulationSacrifice"/>
+    <SimulationDescriptor Name="StarSystemImprovementHisshosFestivalGrowth" Type="StarSystemImprovementHisshosFestivalGrowth"/>
+    <SimulationDescriptor Name="StarSystemImprovementHisshosFestivalManpower" Type="StarSystemImprovementHisshosFestivalManpower"/>
+    <SimulationDescriptor Name="StarSystemImprovementHisshosFestivalOwnership" Type="StarSystemImprovementHisshosFestivalOwnership"/>
+    <SimulationDescriptor Name="StarSystemImprovementHisshosFestivalOwnershipNonHissho" Type="StarSystemImprovementHisshosFestivalOwnershipNonHissho"/>
+
+    <!-- Effects of the TemporaryEffects: DON'T FORGET TO MODIFY THE LOCALIZATION WHEN CHANGING THESE EFFECTS. -->
+    <SimulationDescriptor Name="TemporaryEffectHisshosFestivalGrowthEffect" Type="TemporaryEffectHisshosFestival">
+        <Modifier TargetProperty="SystemMoney" Operation="Percent" Value="0.50" Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectHisshosFestivalManpowerEffect" Type="TemporaryEffectHisshosFestival">
+        <Modifier TargetProperty="PassiveEnrollmentRate" Operation="Addition" Value="0.50" Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectHisshosFestivalOwnershipEffect" Type="TemporaryEffectHisshosFestival">
+        <!--<Modifier TargetProperty="OwnerShipRecoveryRate" Operation="Percent" Value="1" Path="ClassColonizedStarSystem"/>-->
+        <Modifier TargetProperty="Happiness" Operation="Addition" Value="10" Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="BestSystem" Type="BestSystem"/>
+
+</Datatable>

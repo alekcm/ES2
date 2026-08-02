@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationCollectionBonusTrait.xsd">
+
+    <!-- WHEN ADDING TRAITS THAT ARE RESTRICTED TO A SPECIFIC DLC, PLEASE LET A PROGRAMMER KNOW !
+    CHANGES ARE REQUIRED ON THE CODE SIDE -->
+
+    <!-- Umbral Choir -->
+    <PopulationCollectionBonusTrait Name="PopulationCollectionBonusTraitUmbralChoir" Cost="0" CustomEquivalent="PopulationCollectionBonusTraitCustomFactionHacking" ShowInCustom="false">
+        <CollectionBonus Threshold="10">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusUmbralChoir1"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel1"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="20">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusUmbralChoir2"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel2"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="50">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusUmbralChoir3"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel3"/>
+        </CollectionBonus>
+    </PopulationCollectionBonusTrait>
+
+    <!-- MinorHacking -->
+    <PopulationCollectionBonusTrait Name="PopulationCollectionBonusTraitMinorHacking" Cost="0" ShowInCustom="false">
+        <CollectionBonus Threshold="5">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusMinorHacking1"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel1"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="10">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusMinorHacking2"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel2"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="20">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusMinorHacking3"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel3"/>
+        </CollectionBonus>
+    </PopulationCollectionBonusTrait>
+
+    <!-- Super Populations -->
+    <PopulationCollectionBonusTrait Name="PopulationCollectionBonusTraitSuperPopulation" Cost="0" ShowInCustom="false">
+        <CollectionBonus Threshold="5">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusSuperPopulation1"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel1"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="15">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusSuperPopulation2"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel2"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="30">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusSuperPopulation3"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel3"/>
+        </CollectionBonus>
+    </PopulationCollectionBonusTrait>
+
+    <!-- Custom Factions -->
+    <PopulationCollectionBonusTrait Name="PopulationCollectionBonusTraitCustomFactionHacking" Cost="10" ShowInCustom="true">
+        <CollectionBonus Threshold="10">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusUmbralChoir1"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel1"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="20">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusUmbralChoir2"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel2"/>
+        </CollectionBonus>
+
+        <CollectionBonus Threshold="50">
+            <SimulationDescriptorReference Name="PopulationCollectionBonusUmbralChoir3"/>
+            <SimulationDescriptorReference Name="PopulationCollectionBonusLevel3"/>
+        </CollectionBonus>
+    </PopulationCollectionBonusTrait>
+</Datatable>

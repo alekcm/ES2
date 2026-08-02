@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiTooltipDescription.xsd">
+
+    <GuiTooltipDescription TooltipClass="FactionTraitUnlockTechnologyStage" TooltipWindow="TooltipWindow" ShowAnchors="true">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"  DoNotHandleCompactMode="true"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescription"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffectsUnsorted"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSimple"/>
+    </GuiTooltipDescription>
+
+
+  <GuiTooltipDescription TooltipClass="CollectRelicConstructible" TooltipWindow="TooltipWindow">
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescription" HideInCompactMode="true"/>
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCollectRelicsEffects"/>
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCosts"/>
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+    <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureFailureInfos"/>
+    <!--PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureRemainingTurnsCostProvider"/-->
+  </GuiTooltipDescription>
+
+</Datatable>

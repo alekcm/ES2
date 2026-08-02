@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HeroDefinition.xsd">
+
+    <!-- Templars -->
+    <HeroDefinition Name="HeroTemplars01">
+      <Skill Name="HeroSkill01TimeLords01"/>
+      <Skill Name="HeroSkill02TimeLords01"/>
+
+        <Affinity Name="HeroAffinityTemplars"/>
+        <Class Name="HeroClassAdventurer"/>
+        <Politics Name="HeroPolitics05"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall02Explorer"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeTemplars"/>
+        <SkillTree Name="HeroSkillTreeAdventurer"/>
+
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroTemplars02">
+      <Skill Name="HeroSkill01Horatio02"/>
+      <Skill Name="HeroSkill02Horatio02"/>
+
+        <Affinity Name="HeroAffinityTemplars"/>
+        <Class Name="HeroClassCorporate"/>
+        <Politics Name="HeroPolitics04"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall03Supporter"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeTemplars"/>
+        <SkillTree Name="HeroSkillTreeCorporate"/>
+
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroTemplars03">
+      <Skill Name="HeroSkill01Terrans04"/>
+      <Skill Name="HeroSkill02Terrans04"/>
+
+        <Affinity Name="HeroAffinityTemplars"/>
+        <Class Name="HeroClassAdmiral"/>
+        <Politics Name="HeroPolitics06"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall01Attacker"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeTemplars"/>
+        <SkillTree Name="HeroSkillTreeAdmiral"/>
+
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroTemplars04">
+      <Skill Name="HeroSkill01Unfallen04"/>
+      <Skill Name="HeroSkill02Unfallen04"/>
+
+        <Affinity Name="HeroAffinityTemplars"/>
+        <Class Name="HeroClassAdventurer"/>
+        <Politics Name="HeroPolitics04"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall02Explorer"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeTemplars"/>
+        <SkillTree Name="HeroSkillTreeAdventurer"/>
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+
+    <HeroDefinition Name="HeroTemplars05" Hidden="true">
+      <Skill Name="HeroSkill02TimeLords01"/>
+      <Skill Name="HeroSkill02Unfallen04"/>
+
+        <Affinity Name="HeroAffinityTemplars"/>
+        <Class Name="HeroClassAdventurer"/>
+        <Politics Name="HeroPolitics03"/>
+
+        <ShipDesign Name="ShipDesignHeroSmall02Explorer"/>
+
+        <SkillTree Name="HeroSkillTreeGeneric"/>
+        <SkillTree Name="HeroSkillTreeTemplars"/>
+        <SkillTree Name="HeroSkillTreeAdventurer"/>
+        <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+  
+    <HeroDefinition Name="HeroOraculars01">
+      <Skill Name="HeroSkill01Illo01"/>
+      <Skill Name="HeroSkill02Eyders01"/>
+
+      <Affinity Name="HeroAffinityAdvanced"/>
+      <Class Name="HeroClassAdministrator"/>
+      <Politics Name="HeroPolitics05"/>
+
+      <ShipDesign Name="ShipDesignHeroSmall04Defender"/>
+
+      <SkillTree Name="HeroSkillTreeGeneric"/>
+      <SkillTree Name="HeroSkillTreeMinorFaction03"/>
+      <SkillTree Name="HeroSkillTreeAdministrator"/>
+      <LevelUpRuleReference Name="HeroLevelUpRule"/>
+    </HeroDefinition>
+  
+</Datatable>

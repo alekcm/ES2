@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ExtendedGuiElement Name="FactionTraitMinorHarmony">
+        <Title>%FactionTraitMinorHarmonyTitle</Title>
+        <Description>%FactionTraitMinorHarmonyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitMinorHarmonyTooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+    
+    <GuiElement Name="FactionTraitMinorMindOverBody">
+        <Title>%FactionTraitMinorMindOverBodyTitle</Title>
+        <Description>%FactionTraitMinorMindOverBodyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+    <GuiElement Name="FactionTraitMinorMineralStrutures">
+        <Title>%FactionTraitMinorMineralStruturesTitle</Title>
+        <Description>%FactionTraitMinorMineralStruturesDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+
+
+    <GuiElement Name="PopulationModifiersTraitPrimaryStrategicToFood01">
+        <Title>%PopulationModifiersTraitPrimaryStrategicToFood01Title</Title>
+    </GuiElement>
+    
+    <GuiElement Name="PopulationModifiersTraitSecondaryStrategicToScience01">
+        <Title>%PopulationModifiersTraitSecondaryStrategicToScience01Title</Title>
+    </GuiElement>
+    
+      <GuiElement Name="ClassPopulationPlanetModifiersTraitPrimaryStrategicToFood01">
+        <Title>%PopulationModifiersTraitPrimaryStrategicToFood01Title</Title>
+    </GuiElement>
+
+    <GuiElement Name="ClassPopulationPlanetModifiersTraitSecondaryStrategicToScience01">
+        <Title>%PopulationModifiersTraitSecondaryStrategicToScience01Title</Title>
+    </GuiElement>
+
+    <GuiElement Name="ClassPopulationAssimilatedPlanetStrategicToScience01">
+        <Title>%PopulationModifiersAssimilatedPlanetStrategicToScience01Title</Title>
+    </GuiElement>
+    
+</Datatable>

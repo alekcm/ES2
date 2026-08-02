@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%QuestTypeQuestTitle">挑戰</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Title">宇宙公敵</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Description">自治混蛋組合，這是一群在銀河系各處違法亂紀又自視甚高的海盜擁護者（連這裡也不例外，深受其害已長達數十載），如今又再次觸動到了你情報機構的注意。
+謠傳這些海盜不僅結黨成群，甚至還裝備著他們最近從一處永恆族遺跡中發掘的武器。雖然很難分辨其中有幾分真話，或全都是胡說八道，但傳送私人和公開訊號表達銀河系與匪徒勢不兩立，應該也不會有什麼壞處。</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Objective">在接下來$Timer [turn]回合中獲得一個新盟友。</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-ObjectiveTitle">團結抗敵</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-ObjectiveDescription">昭告天下齊心對抗「自治混蛋組合」。你的情報機構會私下傳達出非常清楚的訊息…</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-ObjectiveTooltip">結盟可在外交介面設定，並需要影響力才能獲得。</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Outcome">銀河系中的文明力量似乎又再次讓「自治混蛋組合」逃之夭夭了，可惜他們就像蟑螂一樣頑強，一旦四處孳生了，遲早又會捲土重來。</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-OutcomeFailed">看來「自治混蛋組合」無論在未來如何作亂，我們都只能隻身抗敵了。但希望他們會走上老路，沉淪在自相殘殺和相互內鬨的爭鬥中。</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Title">小偷和叛徒</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Description">看來學院中的特定反叛分子終於決定要正式反對依西安德的未來計畫了，據說他們不願意為他的聖戰承擔風險，其中剛好就包含智慧生物滅絕的可能性。
+闖出學院後，這些叛變的異議英雄駕駛船艦在銀河中團結合作，企圖煽動叛亂並破壞依西安德長期的戰略大計。由於不再相信自己所謂的追隨者，學院領袖請求你幫忙解決他們。</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Objective">找出三支反叛者的艦隊並擊敗他們。</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-ObjectiveTitle">追緝叛徒</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Objective-Description">徹底解決反對依西安德偉大計劃的叛變英雄。</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-ObjectiveTooltip">艦隊位置已用任務標記進行標示。</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Outcome">要解決這些異議英雄可不是一件易事，如果你最終選擇和依西安德同一陣線，你便可以獲得一個強大盟友。如果沒這個打算，至少你能消除他的戒心…</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-OutcomeFailed">你未能達成任務！</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-AcademyTraitorsFleetName">背叛者號</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Reward">位於叛徒遭擊敗處的學院[ship]船艦</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-RewardFleetName">學院贈禮</LocalizationPair>
+  <LocalizationPair Name="%incoming-Title">殺來了！</LocalizationPair>
+  <LocalizationPair Name="%incoming-Description">所以他們又來亂了，是嗎？根據偵察資料顯示，一夥海盜已經瞄準了你的其中一個系統。如果他們在你眼皮子底下得逞了，絕對會對下一次選情造成負面影響。你真的甘心讓一些罪犯打亂你精心規劃的帝國大計嗎？
+
+無論是運用你的艦隊，或者明確宣告他們注定要走向滅亡，這些海盜必須得到致命的教訓。一如往常，唯有你的政治智慧，或預算考量，才能決定處理這件事的方針。</LocalizationPair>
+  <LocalizationPair Name="%incoming-Objective">摧毀艦隊或指派守護者級的英雄。</LocalizationPair>
+  <LocalizationPair Name="%incoming-ObjectiveTitle">防禦</LocalizationPair>
+  <LocalizationPair Name="%incoming-ObjectiveDescription">移除$YourSiegedSystemName系統中的海盜威脅，無論是直接將其摧毀，或是指派一名守護者級英雄進行防禦。他們將會在$Timer [turn]回合內到達。</LocalizationPair>
+  <LocalizationPair Name="%incoming-ObjectiveTooltip">可在英雄概覽介面查看英雄職業類型。</LocalizationPair>
+  <LocalizationPair Name="%incoming-Outcome">無論是「自治混蛋組合」在刺探弱點，或是其他獨立團夥所為，讓他們知道「這是個天大的壞主意」也無傷大雅吧。</LocalizationPair>
+  <LocalizationPair Name="%incoming-OutcomeFailed">好吧，跟你預料的完全不一樣。真好奇他們會在社群媒體上替你取什麼難聽綽號呢？</LocalizationPair>
+  <LocalizationPair Name="%incoming-PiratesFleetName">混蛋組合號</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Title">戰火中崛起</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Description">一位英雄帶著非同尋常的請求前來，想要獲得一個正式的許可，也就是你的命令，批准其狩獵銀河系中其他的英雄。當然了，這聽起來有點奇怪。是古老傳統嗎？捉弄人的儀式？還是開過頭的玩笑？
+無論如何，當英雄戰勝時，不僅自己會獲得力量，你也會從中受益，而帝國的顯赫惡名和形象更會水漲船高。非常好…那就讓英雄玩個盡興吧，只要你能從中漁翁得利就行了，狩獵開始！</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Objective">在$DurationName [turn]回合內找到並擊敗一名英雄率領的$ShipsCountName船艦。</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-ObjectiveTitle">開戰</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-ObjectiveDescription">是時候用戰爭決一高下了！在$DurationName回合內，在英雄率領的$ShipsCountName艦隊上釋放你的英雄。</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-ObjectiveTooltip">秘訣：這些敵方艦隊中會有一艘英雄艦在輪替</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Outcome">雖然讓英雄們像表演才藝一樣自相殘殺有點不太像樣，但至少你的英雄會得到珍貴經驗值，也會感謝你開明的想法。</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-OutcomeFailed">英雄船艦通常並不會遭受攻擊，這確實是事實。希望你的英雄至少能學到點東西，而不是對學院心生怨懟。</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-EnemyName">反對者英雄</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-EnemyFleetName">反對者號</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Title">第一章：暗潮洶湧</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Description">那些遭人遺忘又長久深埋的危險秘密通常只會有一個問題，那就是到頭來，總有蠢人會把它挖出來…
+ 
+黑熊座科技城的考古學家和研究者發現了永恆族製造出超級武器的證據。雖然製作出毀滅性武器並不令人意外，但令人擔憂的是，這件武器可能已經啟動了，或至少是可以啟動的狀態。沒有時間浪費了，快派出你的探索者搞清楚事情原委，以免那件武器最後指向了你。</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Objective">需要檢驗數個星座的奇特點，並比較數據來發掘一件永恆族超級武器的起源。</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-ObjectiveTitle">研究</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-ObjectiveDescription">調查銀河系中醒目標示的奇特點。</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-ObjectiveTooltip">待檢驗的奇特點將會顯示一個任務指標</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Outcome">你所掌握到的情報顯示，這些武器的效果十分驚人。它們的攻擊鎖定範圍小至船艦大至星球，但有時似乎也會朝著宇宙虛空開火，這目前還有點摸不著頭緒…</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-OutcomeFailed">可惜的是，你的科學社群對這件事不太感興趣，也有可能是預算不夠，所以無法完成任務。這些謎團只好繼續神秘下去了…</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Title">第二章：沒有目標的武器</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Description">這項永恆族武器系統還有許多元素需要分析和理解，從能量來源、對焦技術到鎖定系統都還是個謎。任何想要知道真相的帝國都有一項非常明確的任務：就是更加瞭解永恆族控制和汲取的能量。
+ 
+是時候讓研究機構全力以赴探索未知了。</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Objective">為了能夠理解永恆族武器系統的元素，增加陣營的科學產出，或和另一個帝國簽署科學協定</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-ObjectiveTitle">學習</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-ObjectiveDescription">增加科學產量至$Amount02或和另一個帝國簽署科學協定。</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-ObjectiveTooltip">提升科學產量的方法包括改良設施、法條、英雄技能和奢侈資源</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Outcome">你的科學家和工程師收穫頗豐，但依舊沒有頭緒；更多知識就帶來了更多問題，向來如此。以這個情況來說，問題就是：為什麼？</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-OutcomeFailed">看來你在追求知識的道路上力有未逮，永恆族武器系統的祕密將繼續神秘下去。</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Title">第三章：異常資料</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Description">當永恆族追求極致時，他們可沒在開玩笑。這件謎樣武器並不是用傳統方式發射，而是吸取星體和黑洞的伽馬射線來形成超乎想像的射線強度。
+ 
+雖然研究者第一時間對它的存在和功用感到敬佩不已，但他們很快就相當好奇它到底造成了什麼影響。武器似乎有頻繁使用的跡象，但卻沒有找到很多與其相關的殘骸。實際上，它似乎經常在沒有明顯目標的情況下對著宇宙發射。</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Objective">蒐集額外資訊，無論是武器使用方面，或是武器的攻擊目標。</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-ObjectiveTitle">調查</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-ObjectiveDescription">發掘一顆永恆族相關的獨特新行星，或探索$Amount03 %的銀河系。</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-ObjectiveTooltip">探索艦可設定為自動探索，進而發現銀河系的隱藏區域 </LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Outcome">已有足夠新資訊可提供建構模組的計畫。希望透過這個模組，研究者終於能獲得一些實質答案。</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-OutcomeFailed">銀河系實在過於廣大，或是你的船艦實在太慢了。沒有足夠訊息可持續進行調查，這項永恆族謎團將繼續神秘下去。</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Title">第四章：最終赦免</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Description">在發現的資料中，有一個地點在所有的造訪經歷或描述中脫穎而出。在離目標不遠處就有個永恆族遺跡，如果幸運的話，或許會留下一些使用武器和其效果的細節。老實說，這個遺跡在武器使用時可能扮演了觀察站的角色。
+ 
+或許呢，這終於能解釋永恆族到底在宇宙虛空中追擊什麼…另一方面，完全無從得知武器是否是處於啟動的狀態。請求支援或許是個明智的決定；你永遠不知道誰會對你獲得的知識有興趣。</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Objective">查看你科學家確認的地點上遺留的東西。</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-ObjectiveTitle">確認</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-ObjectiveDescription">派一支艦隊到任務旗幟所在位置。</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-ObjectiveTooltip">探索標記的位置</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Step2Title">打敗學院艦隊！</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Step2Description">知識是屬於勝者的…</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Outcome">交手下的生還者對你吐露出了細節。這項武器就是永恆族最血腥的發明，過去用來吸取神祇般生物「失落族」的生命。在數千年前，當這個武器發射時，那些鎖定的位置並非虛空，而是擁有生命的生物，但現在早已滅絕。</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-OutcomeFailed">可惜的是，你無法判斷那個位置上究竟發生過什麼。無論真相為何，學院都熱切地想知道，這表明一切很有可能和失落族有關。</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-LairFleet">巢穴艦隊</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-AcademyFleet">學院艦隊</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Reward">隨機3級[technology]科技</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Title">顧此失彼</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Description">經濟發展或環境永續性？這個一直以來都伴隨著智慧生物發展的難題，依舊沒有獲得最終的解答。即使到了現在，各陣營在政府中都有不同聲音在背後強力支持。
+ 
+要冒著傷害生態環境的風險增加工業產出，或冒著經濟力量衰退的風險推廣保育和負責任的發展？作為帝國的最高領導者，你擁有最終決定權。</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1">推動$IndustrialistLawsCountLocale項工業法條讓生態黨憤怒。</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1Title">工業黨</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1Description">通過$IndustrialistLawsCountLocale項工業法條。</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1Tooltip">使用國會介面來選擇和通過法條</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2">推動$EcologistLawsCountLocale項生態法條讓工業黨憤怒。</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2Title">生態黨</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2Description">通過$EcologistLawsCountLocale項生態法條。</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2Tooltip">使用國會介面來選擇和通過法條</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Outcome">完成了！立法持續進步，而你帝國的道路也稍微改變了。那就繼續往前走吧，邁向某天兩派勢力不再相互牴觸的未來。</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-OutcomeFailed">有時候實在是難以抉擇，沒有一個選擇最終能夠圓滿。但不用擔心，即便沒有你，他們也能毫無困難地繼續鬥嘴下去。</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics_Reward">Random [technology] Technology</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Title">過去的智慧</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Description">好奇的考古學家跟你說了一個叫做納卡林族的古老星際航行民族，但他們或許要翻新歷史了。根據史料記載，他們在文明殞落時集體進入了冬眠狀態，但有關他們文化和歷史方面的資訊卻相當稀少。
+你願意重新導航部分探索艦，前去探究這個不尋常故事的祕密嗎？或許你甚至有機會理解他們部分獨特又強大的科技。</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Objective">他們的文明相當古老，所以探索遺跡類型的奇特點有機會學到更多。</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-ObjectiveTitle">發現</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-ObjectiveDescription">調查$NumberRuinsLocale種遺跡類型的奇特點。</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-ObjectiveTooltip">可在任何地方尋獲，隨著科學等級提升會出現更多。</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Outcome">太奇妙了！他們顯然是失落族的崇拜者，許多科技都是這個謎團般物種的餽贈。讓我們看看你現在擁有的這個文物怎麼運作吧…</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-OutcomeFailed">不幸的是，沒有足夠的奇特點（或時間）來探究納卡林族的祕密，所以儘管你知曉銀河系大多數的歷史，這部分將永遠成謎。</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past_Reward">位於最近發現奇特點之處的納卡林族[ship]船艦</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past_reward_fleet_name">納卡林族獎勵艦隊</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Title">消逝無蹤的死亡</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Description">失落族是個由原始星塵形成的巨大超凡生物，曾經居住在行星和星座之間的虛無空間，這是一個公認的事實。記錄顯示出他們被狩獵到滅絕而亡，誰知道他們留下了什麼？你能收集到多少他們的榮耀或死亡餘燼？
+或許呢，如果你派遣一艘船艦通過這片未知虛空，遠離星軌，就能找到一些他們遺留下的蹤跡。但那前提是，真有什麼東西留了下來…</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Objective">未使用星軌的情況下在$NumberLocale個星座間航行，這樣或許就能找到失落族遭到永恆族追殺滅絕前的蹤跡。</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-ObjectiveTitle">航越未知</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-ObjectiveDescription">以曲速航道科技在未使用星軌的情況下航行$NumberLocale次。</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-ObjectiveTooltip">曲速航道科技位於技術樹的科學象限。</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Outcome">美麗又哀愁，如同所有死亡，一些極好之物逝去，一些珍貴之物留了下來。以失落族的狀況來說，那遺留下來的東西就是他們的星塵…</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-OutcomeFailed">就像失落族一樣，你的努力似乎還是來不及了。或許某些隱藏的事物註定不該被發現。</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Title">遙遠銀河系</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Description">這幾個星期以來，感應器一直異常關閉並傳送回出乎意料的掃描結果。雖然最終歸咎於裝備或操作員壓力、太陽風和不穩定的通訊，但真相似乎更為詭異。
+ 
+事實上，這些感應器和掃瞄異常點應該被視為一種侵入者警示系統，看來其他銀河系的未知隱形生物開始在我們週遭打轉了。
+ 
+他們不見得在科技上更為進步，但絕對跟我們有很大的不同，所以我們必須用自己的科技主動出擊去瞭解他們。</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Objective">建造$Number間「光學研究實驗室」或「科研都市」改良設施。</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-ObjectiveTitle">進階科技</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-ObjectiveDescription">最適合瞭解這些生物的科技會在「光學研究實驗室」或「科研都市」進行研發。</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-ObjectiveTooltip">這些科技位於技術樹的科學象限。部分改良設施可能不適用每個陣營。</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Outcome">出乎意料又…令人愉悅？不管這些奇怪的個體是什麼，他們很高興和我們取得聯繫並堅持自己沒有惡意。或者呢，如果他們造成了什麼傷害也是無意的。一個來自他們的科技小禮物或許能讓你一瞥那奇特的世界。</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-OutcomeFailed">哎呀，科學發展可能會變得既複雜又困難，不管這些奇怪的生物是什麼，你都得用一些其他方式來認識並瞭解他們。</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Reward">最後最近建造改良設施之處的本影幽歌族[ship]船艦</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away_fleet_name">本影幽歌族獎勵艦隊</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterTitle">《Endless Space 2：暗物質》</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterDescription">《Endless Space 2：暗物質》從諸多事件中暗藏危機之處窺視永恆宇宙，並探索那不時在黑暗深處閃現之物……
+</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterLoreDescription">一系列調查奇異事件的任務將會把永恆族的覆滅連結到與不穩定物質相關的單純問題，而你將在其中享受 12 個新增的探索任務所帶來的體驗及冒險，全部設定在永恆宇宙中遼闊的神奇太空。</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterContentDescription">《Endless Space 2：暗物質》從諸多事件中暗藏危機之處窺視永恆宇宙，並探索那不時在黑暗深處閃現之物……</LocalizationPair>
+  <LocalizationPair Name="%HeroAffinityPugTitle">巴哥犬</LocalizationPair>
+  <LocalizationPair Name="%HeroAffinityPugDescription">巴哥犬性情剛烈而忠實，在戰場核心和商場談判時都是優質的夥伴。</LocalizationPair>
+  <LocalizationPair Name="%HeroPug01Title">史柏儒．麥西米爾</LocalizationPair>
+  <LocalizationPair Name="%HeroPug01Description">史柏儒是家族第七代的七胞胎中的第七隻幼犬，其出身疑似因外力介入而成謎。史柏儒早年的生涯與其他荒誕可疑的居家寵物沒有太大的差別，但是這一切都在其隨著某艘騰躍族船艦離開奧瑞加星而改變了。在「九大磁石」上的一次星塵事件中，史柏儒受到了薰染而成長為不尋常的領袖。雖然因為身形的緣故而常常被看輕，然而史柏儒熟練的戰鎚武藝通常能迫使他人遵從，或是吞回自己的嘲諷。</LocalizationPair>
+  <LocalizationPair Name="%PugHeroAddOnTitle">史柏儒．麥西米爾</LocalizationPair>
+  <LocalizationPair Name="%PugHeroAddOnDescription">巴哥犬性情剛烈而忠實，在戰場核心和商場談判時都是優質的夥伴。</LocalizationPair>
+</Datatable>

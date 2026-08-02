@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- #####################################-->
+    <!-- #########     UPDATE 5    ###########-->
+    <!-- #####################################-->
+
+
+    <QuestGuiElement Name="EventRandom14">
+        <Title>%EventRandom14-Title</Title>
+        <Description>%EventRandom14-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventRandom14Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="Step1_Objective1" Politics="Politics04">
+                    <Title>%EventRandom14-Choice01Title</Title>
+                    <Description>%EventRandom14-Choice01Description</Description>
+                </ObjectiveSet>
+                <ObjectiveSet Name="Step1_Objective2" Politics="Politics06">
+                    <Title>%EventRandom14-Choice02Title</Title>
+                    <Description>%EventRandom14-Choice02Description</Description>
+                </ObjectiveSet>               
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventRandom15">
+        <Title>%EventRandom15-Title</Title>
+        <Description>%EventRandom15-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventRandom14Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="Step1_Objective1" Politics="Politics04">
+                    <Title>%EventRandom15-Choice01Title</Title>
+                    <Description>%EventRandom15-Choice01Description</Description>
+                </ObjectiveSet>
+                <ObjectiveSet Name="Step1_Objective2" Politics="Politics06">
+                    <Title>%EventRandom15-Choice02Title</Title>
+                    <Description>%EventRandom15-Choice02Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventRandom16">
+        <Title>%EventRandom16-Title</Title>
+        <Description>%EventRandom16-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventRandom14Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="Step1_Objective1" Politics="Politics06">
+                    <Title>%EventRandom16-Choice01Title</Title>
+                    <Description>%EventRandom16-Choice01Description</Description>
+                </ObjectiveSet>                
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventRandom17">
+        <Title>%EventRandom17-Title</Title>
+        <Description>%EventRandom17-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventRandom14Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="Step1_Objective1" Politics="Politics04">
+                    <Title>%EventRandom17-Choice01Title</Title>
+                    <Description>%EventRandom17-Choice01Description</Description>
+                </ObjectiveSet>
+                <ObjectiveSet Name="Step2_Objective2" Politics="Politics05">
+                    <Title>%EventRandom17-Choice02Title</Title>
+                    <Description>%EventRandom17-Choice02Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+</Datatable>

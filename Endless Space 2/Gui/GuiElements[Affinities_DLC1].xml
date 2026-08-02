@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+    
+  <!-- Vaulters -->
+  <AffinityGuiElement Name="AffinityMappingVaulters" PreloadCount="3" >
+    <Title>%AffinityVaultersTitle</Title>
+    <Description>%AffinityVaultersDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityVaultersSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityVaultersMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityVaultersMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityVaultersLarge" />
+      <Icon Size="Leader" Path="Bitmaps/Dynamic/Affinities/AffinityVaultersLeader" />
+      <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityVaultersMood" />
+      <Icon Size="SmallExtended" Path="Bitmaps/Atlased/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetVaultersSmall" />
+      <Icon Size="MediumExtended" Path="Bitmaps/Dynamic/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetVaultersMedium" />
+      <Icon Size="Loading" Path="Bitmaps/Dynamic/Moods/LoadingScreen09" />
+    </Icons>
+    <SymbolString>[vaulters]</SymbolString>
+    <Sounds>
+      <Sound EventName="Play_ES2_Voices_OUTRO_Vaulters" Type="Outro"/>
+    </Sounds>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <Movies>
+      <Movie Path="Movies/Factions/Vaulters_Intro.mp4" Type="Intro" />
+      <Movie Path="Movies/Factions/Vaulters_Outro.mp4" Type="Outro" />
+    </Movies>
+    <ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitVaultersLeaders01</ModelPath>
+  </AffinityGuiElement>
+    
+      <!-- Vaulters Science -->
+  <AffinityGuiElement Name="AffinityMappingVaultersScience">
+    <Title>%AffinityVaultersScienceTitle</Title>
+    <Description>%AffinityVaultersScienceDescription</Description>
+    <Icons>
+   <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityVaultersScienceSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityVaultersScienceMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityVaultersScienceMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityVaultersScienceLarge" />
+      <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityVaultersScienceMood" />
+    </Icons>
+    <SymbolString>[vaultersScience]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </AffinityGuiElement>  
+    
+        <!-- Vaulters Military -->
+  <AffinityGuiElement Name="AffinityMappingVaultersMilitary">
+    <Title>%AffinityVaultersMilitaryTitle</Title>
+    <Description>%AffinityVaultersMilitaryDescription</Description>
+    <Icons>
+   <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityVaultersMilitarySmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityVaultersMilitaryMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityVaultersMilitaryMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityVaultersMilitaryLarge" />
+      <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityVaultersMilitaryMood" />
+    </Icons>
+    <SymbolString>[vaultersMilitary]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </AffinityGuiElement>    
+
+  <!-- Sisters of Mercy -->
+  <AffinityGuiElement Name="AffinityMappingSistersOfMercy">
+    <Title>%AffinityGameplaySistersOfMercyTitle</Title>
+    <Description>%AffinityGameplaySistersOfMercyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinitySistersOfMercySmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinitySistersOfMercyMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinitySistersOfMercyMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinitySistersOfMercyLarge" />
+      <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinitySistersOfMercyMood" />
+    </Icons>
+    <SymbolString>[sistersOfMercy]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </AffinityGuiElement>    
+  
+</Datatable>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/CuriosityDefinition.xsd">
+
+    <CuriosityDefinition Name="Curiosity_Update12" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                    Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <VisibilityPrerequisites>
+            <InterpreterPrerequisite Flags="Visibility">Property(Context, DetectionLevel) ge 1</InterpreterPrerequisite>
+        </VisibilityPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>      
+    </CuriosityDefinition>  
+
+    <CuriosityDefinition Name="Curiosity_Update12_Quest_Chapter4B" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                 Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Fleet)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassGarrisonFleet/ClassHero', Level, true) ge 10</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Update12_Quest_Chapter4C" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                 Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', Strategic5Stock) ge 15</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <QuestPrerequisites Target="$(Fleet)">
+            <!--<InterpreterPrerequisite Flags="Prerequisite">SumProperty(Context, @'ClassGarrisonFleet/ClassHero,HeroAssigned', Level) ge 1</InterpreterPrerequisite>-->
+            <PathPrerequisite Flags ="Prerequisite">ClassGarrisonFleet/ClassHero</PathPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+    
+</Datatable>

@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- ########################### -->
+  <!-- ########  HISSHOS  ######## -->
+  <!-- ########################### -->
+
+  <!-- MajorHisshos -->
+  <ExtendedGuiElement Name="AffinityGameplayTechnologyMajorHisshos">
+    <Title>%AffinityGameplayMajorHisshosTitle</Title>
+    <Description>%AffinityGameplayMajorHisshosDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityGameplaySmall" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityMajorHisshos">
+    <Title>%ClassPopulationEmpireAffinityMajorHisshosTitle</Title>
+  </ExtendedGuiElement>
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityMajorHisshosCount">
+    <Title>%ClassPopulationEmpireAffinityMajorHisshosTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityMajorHisshos">
+    <Title>%ClassPopulationStarSystemAffinityMajorHisshosTitle</Title>
+    <SymbolString>[MajorHisshos]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityMajorHisshosCount">
+    <Title>%ClassPopulationStarSystemAffinityMajorHisshosTitle</Title>
+    <SymbolString>[MajorHisshos]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityMajorHisshos">
+    <Title>%PopulationMajorHisshosTitle</Title>
+    <AltTitle>%PopulationMajorHisshosTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityMajorHisshosCount">
+    <Title>%PopulationMajorHisshosTitle</Title>
+    <Description>%PopulationMajorHisshosDescription</Description>
+    <SymbolString>[MajorHisshos]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationMajorHisshosTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AffinityMajorHisshos">
+    <Title>%AffinityMajorHisshosTitle</Title>
+    <Description>%AffinityMajorHisshosDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityMajorHisshosSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityMajorHisshosMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityMajorHisshosMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityMajorHisshosLarge" />
+      <Icon Size="Leader" Path="Bitmaps/Dynamic/Affinities/AffinityMajorHisshosLeader" />
+    </Icons>
+    <SymbolString>[MajorHisshos]</SymbolString>
+    <Color Red="233" Green="105" Blue="237" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetSystemManpowerHisshos">
+    <Title>%NetSystemManpowerTitle</Title>
+    <Description>%NetSystemManpowerDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/CategoryManpowerSystemSmall" />
+    </Icons>
+    <SymbolString>[manPowerColored]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetSystemManpowerPercentHisshos">
+    <Title>%NetSystemManpowerTitle</Title>
+    <Description>%NetSystemManpowerDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/CategoryManpowerSystemSmall" />
+    </Icons>
+    <SymbolString>[manPowerColored]</SymbolString>
+    <TooltipElement Percent="true" />
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusPopulationFoodHissho">
+    <Icons>
+      <Icon Size="Small" Path="FIDSIFood" />
+    </Icons>
+    <SymbolString>[foodColored]</SymbolString>
+    <TooltipElement Percent="false" />
+    <Color Red="176" Green="198" Blue="93" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemEmpirePointFromHisshoBonus">
+    <Title>%SystemEmpirePointTitle</Title>
+    <Description>%SystemEmpirePointDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIEmpire" />
+    </Icons>
+    <SymbolString>[prestige]</SymbolString>
+    <Color Red="165" Green="85" Blue="231" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusPopulationDefenseHissho">
+    <Title>%BonusPopulationDefenseTitle</Title>
+    <Description>%BonusPopulationDefenseDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="CategoryManpowerSystemSmall" />
+    </Icons>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%MaximumSystemManpowerTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusPopulationPrestigeHissho">
+    <Icons>
+      <Icon Size="Small" Path="FIDSIEmpire" />
+    </Icons>
+    <SymbolString>[prestige]</SymbolString>
+    <TooltipElement Percent="false" />
+    <Color Red="165" Green="85" Blue="231" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusPopulationScienceHissho">
+    <Icons>
+      <Icon Size="Small" Path="FIDSIScience" />
+    </Icons>
+    <SymbolString>[science]</SymbolString>
+    <TooltipElement Percent="false" />
+    <Color Red="82" Green="201" Blue="231" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemProductionHissho">
+    <Title>%NetSystemProductionTitle</Title>
+    <Description>%NetSystemProductionDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIIndustry" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIIndustryLarge" />
+    </Icons>
+    <SymbolString>[industry]</SymbolString>
+    <TooltipElement PercentFormat="#####0.#%"/>
+    <Color Red="223" Green="130" Blue="105" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusPopulationDustHissho">
+    <Icons>
+      <Icon Size="Small" Path="FIDSIDust" />
+    </Icons>
+    <SymbolString>[dust]</SymbolString>
+    <TooltipElement Percent="false" />
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HonorOvercolonizationPenalty">
+    <Title>%HappinessOverColonizationPenalties</Title>
+    <SymbolString>[OverColonization]</SymbolString>
+    <TooltipElement Percent="true"/>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="OverColonizationPenaltiesReductionHissho">
+    <Title>%OverColonizationPenaltiesReductionTitle</Title>
+    <TooltipElement Percent="true"/>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetSystemManpowerBonusFromCollectionHissho">
+    <Title>%NetSystemManpowerTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetSystemManpowerPercentBonusFromCollection">
+    <Title>%NetSystemManpowerTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PassiveEnrollmentRateHissho">
+    <Title>%PassiveEnrollmentRateTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemGrowthBonusFromCollectionHissho">
+    <Title>%SystemGrowthBonusFromCollectionTitle</Title>
+    <TooltipElement Percent="true"/>
+    <AltTitle>%SystemGrowthBonusFromCollectionAltTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="JuggernautCount">
+    <Title>%JuggernautCountTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="MaximumHonorZoneRadius">
+    <Title>%MaximumHonorZoneRadiusTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="MaximumCitadelManpower">
+    <Title>%MaximumCitadelManpowerTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SystemCountForHisshoLaw">
+    <Title>%SystemCountForHisshoLawTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SystemsAboveOverColonizationCount">
+    <Title>%SystemsAboveOverColonizationCountTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="BestSystem">
+    <Title>%HomeSystemTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="HomeSystemNetSystemGrowthForHisshoImprovement">
+    <Title>%HomeSystemNetSystemGrowthForHisshoImprovementTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="HomeSystemNetSystemProductionForHisshoImprovement">
+    <Title>%HomeSystemNetSystemProductionForHisshoImprovementTitle</Title>
+  </GuiElement>
+
+
+
+
+  <!-- HONOR -->
+
+  <ExtendedGuiElement Name="EmpireHonor">
+    <Title>%HonorTitle</Title>
+    <Description>%HonorDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/HonorSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/HonorLarge" />
+    </Icons>
+    <SymbolString>[honor]</SymbolString>
+    <Color Red="189" Green="78" Blue="88" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetEmpireHonor">
+    <Title>%HonorTitle</Title>
+    <Description>%HonorDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/HonorSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/HonorLarge" />
+    </Icons>
+    <SymbolString>[honor]</SymbolString>
+    <Color Red="189" Green="78" Blue="88" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="UnclampedNetEmpireHonor">
+    <Title>%HonorTitle</Title>
+    <Description>%HonorDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/HonorSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/HonorLarge" />
+    </Icons>
+    <SymbolString>[honor]</SymbolString>
+    <Color Red="189" Green="78" Blue="88" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BaseHonorReductionValue">
+    <Title>%EmpireImprovementHonorBoostJuggernautTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireHonorDecay">
+    <Title>%HonorDecayTitle</Title>
+    <Description>%HonorDecayDescription</Description>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireHonorDecayReduction">
+    <Title>%HonorDecayTitle</Title>
+    <Description>%HonorDecayDescription</Description>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BaseEmpireHonorLoss">
+    <Title>%BaseHonorDecayTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HonorGainMultiplier">
+    <Title>%HonorGainMultiplier</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireObedience">
+    <Title>%EmpireObedienceTitle</Title>
+    <Description>%EmpireObedienceDescription</Description>
+    <SymbolString>[obedience]</SymbolString>
+    <Color Red="189" Green="78" Blue="88" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="StarSystemObedience">
+    <Title>%StarSystemObedienceTitle</Title>
+    <Description>%StarSystemObedienceDescription</Description>
+    <SymbolString>[obedience]</SymbolString>
+    <Color Red="189" Green="78" Blue="88" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="Obedience">
+    <Title>%ObedienceTitle</Title>
+    <Description>%ObedienceDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="ObedienceSmall"/>
+    </Icons>
+    <SymbolString>[obedience]</SymbolString>
+    <TooltipElement PercentFormat="#####0.#%"/>
+    <Color Red="189" Green="78" Blue="88" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BoostToHonorInShipBattle">
+    <Title>%BoostToHonorInShipBattleTitle</Title>
+    <TooltipElement Percent="true"/>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BoostToHonorInGroundBattle">
+    <Title>%BoostToHonorInGroundBattleTitle</Title>
+    <TooltipElement Percent="true"/>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BoostToHonorInQuestAndDeeds">
+    <Title>%BoostToHonorInQuestAndDeedsTitle</Title>
+    <TooltipElement Percent="true"/>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HonorBoostGroundBattlePerHomeSystem">
+    <Title>%HonorBoostGroundBattlePerHomeSystemTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HonorBoostShipBattlePerHomeSystem">
+    <Title>%HonorBoostShipBattlePerHomeSystemTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="RecipeIngredientEffectTier1Luxury6FIDSHisshos">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+    <SymbolString>[FIDS]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="RecipeIngredientEffectTier2Luxury14FIDSHisshos">
+    <Title>%SystemFIDSFlatTitle</Title>
+    <SymbolString>[FIDS]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityHisshos">
+    <Title>%ClassPopulationEmpireAffinityHisshosTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityHisshosCount">
+    <Title>%ClassPopulationEmpireAffinityHisshosTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityHisshos">
+    <Title>%ClassPopulationStarSystemAffinityHisshosTitle</Title>
+    <SymbolString>[hisshos]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityHisshosCount">
+    <Title>%ClassPopulationStarSystemAffinityHisshosTitle</Title>
+    <SymbolString>[hisshos]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityHisshos">
+    <Title>%PopulationHisshosTitle</Title>
+    <Description>%PopulationHisshosDescription</Description>
+    <SymbolString>[hisshos]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationHisshosTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityHisshosCount">
+    <Title>%PopulationHisshosTitle</Title>
+    <Description>%PopulationHisshosDescription</Description>
+    <SymbolString>[hisshos]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationHisshosTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AffinityHisshos">
+    <Title>%AffinityHisshosTitle</Title>
+    <Description>%AffinityHisshosDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityHisshosSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityHisshosMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityHisshosMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityHisshosLarge" />
+    </Icons>
+    <SymbolString>[hisshos]</SymbolString>
+    <Color Red="255" Green="141" Blue="102" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <GuiElement Name="EmpireHonorMalusWeak">
+    <Title>%FromContextualDiplomacyTerm</Title>
+  </GuiElement>
+
+  <GuiElement Name="EmpireHonorMalusMedium">
+    <Title>%FromContextualDiplomacyTerm</Title>
+  </GuiElement>
+
+  <GuiElement Name="NetEmpireHonorFromZoneEffect">
+    <Title>%NetEmpireHonorFromZoneEffect</Title>
+  </GuiElement>
+
+  <GuiElement Name="TemporaryEffectHisshosFestivalGrowthEffect">
+    <Title>%StarSystemImprovementHisshosFestivalGrowthTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="TemporaryEffectHisshosFestivalManpowerEffect">
+    <Title>%StarSystemImprovementHisshosFestivalManpowerTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="TemporaryEffectHisshosFestivalOwnershipEffect">
+    <Title>%StarSystemImprovementHisshosPopulationSacrificeTitle</Title>
+  </GuiElement>
+
+  <!-- Illo -->
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityIllo">
+    <Title>%ClassPopulationEmpireAffinityIlloTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityIlloCount">
+    <Title>%ClassPopulationEmpireAffinityIlloTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityIllo">
+    <Title>%ClassPopulationStarSystemAffinityIlloTitle</Title>
+    <SymbolString>[Illo]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityIlloCount">
+    <Title>%ClassPopulationStarSystemAffinityIlloTitle</Title>
+    <SymbolString>[Illo]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityIllo">
+    <Title>%PopulationIlloTitle</Title>
+    <Description>%PopulationIlloDescription</Description>
+    <SymbolString>[Illo]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationIlloTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityIlloCount">
+    <Title>%PopulationIlloTitle</Title>
+    <Description>%PopulationIlloDescription</Description>
+    <SymbolString>[Illo]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationIlloTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AffinityIllo">
+    <Title>%AffinityIlloTitle</Title>
+    <Description>%AffinityIlloDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityIlloSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityIlloMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityIlloMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityIlloLarge" />
+    </Icons>
+    <SymbolString>[Illo]</SymbolString>
+    <Color Red="255" Green="141" Blue="102" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <GuiElement Name="OverColonizationThresholdHissho">
+    <Title>%OverColonizationThresholdTitleHissho</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="RecipeIngredientEffectTier3Luxury22FIDSHisshos">
+    <Title>%SystemFIDSPercentTitle</Title>
+    <SymbolString>[FIDS]</SymbolString>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <!-- ########################### -->
+  <!-- ######  JUGGERNAUTS  ###### -->
+  <!-- ########################### -->
+
+  <ExtendedGuiElement Name="ShipMiningProbe">
+    <Title>%ShipMiningProbeTitle</Title>
+    <Description>%ShipMiningProbeDescription</Description>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemFIDSIFlat">
+    <Title>%SystemFIDSIFlatTitle</Title>
+    <SymbolString>[FIDSI]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemFIDSFlat">
+    <Title>%SystemFIDSFlatTitle</Title>
+    <SymbolString>[FIDS]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemFIDSPercent">
+    <Title>%SystemFIDSPercentTitle</Title>
+    <SymbolString>[FIDS]</SymbolString>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="TradingRouteSystemBaseIncome">
+    <Title>%TradingRouteIncomeModifierTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetStrategic1FromSpecialNodes">
+    <Title>%NetStrategic1FromSpecialNodesTitle</Title>
+    <SymbolString>[Strat01titaniumColored]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetStrategic2FromSpecialNodes">
+    <Title>%NetStrategic2FromSpecialNodesTitle</Title>
+    <SymbolString>[Strat02hyperiumColored]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetStrategic3FromSpecialNodes">
+    <Title>%NetStrategic3FromSpecialNodesTitle</Title>
+    <SymbolString>[Strat03adamantianColored]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetStrategic4FromSpecialNodes">
+    <Title>%NetStrategic4FromSpecialNodesTitle</Title>
+    <SymbolString>[Strat04anti-matterColored]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetStrategic5FromSpecialNodes">
+    <Title>%NetStrategic5FromSpecialNodesTitle</Title>
+    <SymbolString>[Strat05orichalcixColored]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetStrategic6FromSpecialNodes">
+    <Title>%NetStrategic6FromSpecialNodesTitle</Title>
+    <SymbolString>[Strat06quadrinixColored]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetEmpireLifeForceOnSpecialNodes">
+    <SymbolString>[lifeforceColored]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemManpowerLoss">
+    <Title>%SystemManpowerLossTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MiningProbeDepositValueMultiplier">
+    <Title>%MiningProbeDepositValueMultiplierTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MiningProbePlanetStatsMultiplier">
+    <Title>%MiningProbePlanetStatsMultiplierTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ObliteratorProjectileSpeed">
+    <Title>%ObliteratorProjectileSpeedTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusTurnsBeforeFreeObliteratorShot">
+    <Title>%BonusTurnsBeforeFreeObliteratorShotTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ShownMilitaryPowerMultiplier">
+    <Title>%ShownMilitaryPowerMultiplierTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ShownHealthMultiplier">
+    <Title>%ShownHealthMultiplierTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassSectionCoreJuggernaut">
+    <Title>%ClassSectionCoreMultipleTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MaximumJuggernauts">
+    <Title>%MaximumJuggernautsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="GarrisonMoneyUpkeepMultiplierFromJuggernauts">
+    <SymbolString>[upkeep]</SymbolString>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="Multiplier">
+    <Title>%MultiplierTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="JuggernautShipProductionCostReduction">
+    <Title>%JuggernautShipProductionCostReductionTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassCitadel">
+    <Title>%ClassCitadelTitle</Title>
+    <SymbolString>[citadel]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HasObliteratorDefense">
+    <Title>%CitadelObliteratorDefenseTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MaximumCitadelManpowerRefillRate">
+    <Title>%MaximumCitadelManpowerRefillRateTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SpaceBattleDamageMultiplier">
+    <Title>%SpaceBattleDamageMultiplierTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="CitadelDefense">
+    <Title>%CitadelDefenseTitle</Title>
+    <Description>%CitadelDefenseDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="CategoryManpowerCitadelSmall" />
+    </Icons>
+    <SymbolString>[citadelDefense]</SymbolString>
+    <AltTitle>%CitadelDefenseTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="DamageBonusIfOneShip">
+    <Title>%DamageBonusIfOneShipTitle</Title>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="DefenseBonusIfOneShip">
+    <Title>%DefenseBonusIfOneShipTitle</Title>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ObliteratorShotCost">
+    <Title>%ObliteratorShotCostTitle</Title>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ObliteratorShotCostMultiplier">
+    <Title>%ObliteratorShotCostTitle</Title>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ObliteratorResearchCostMultiplier">
+    <Title>%ObliteratorResearchCostMultiplierTitle</Title>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ObliteratorConstructionCostMultiplier">
+    <Title>%ObliteratorConstructionCostMultiplierTitle</Title>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusHonorOnInfluencedFleets">
+    <Title>%BonusHonorOnInfluencedFleetsTitle</Title>
+    <TooltipElement Percent="true" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EncounterFlatHonorGains">
+    <Title>%EncounterFlatHonorGainsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFoodFromMiningProbes">
+    <Title>%PlanetInitialFIDSIFromMiningProbesTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIFood" />
+    </Icons>
+    <Color Red="176" Green="198" Blue="93" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialIndustryFromMiningProbes">
+    <Title>%PlanetInitialFIDSIFromMiningProbesTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIIndustry" />
+    </Icons>
+    <Color Red="223" Green="130" Blue="105" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialDustFromMiningProbes">
+    <Title>%PlanetInitialFIDSIFromMiningProbesTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIDust" />
+    </Icons>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialScienceFromMiningProbes">
+    <Title>%PlanetInitialFIDSIFromMiningProbesTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIScience" />
+    </Icons>
+    <Color Red="82" Green="201" Blue="231" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialPrestigeFromMiningProbes">
+    <Title>%PlanetInitialFIDSIFromMiningProbesTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIEmpire" />
+    </Icons>
+    <Color Red="165" Green="85" Blue="231" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <GuiElement Name="TaxRateBuyoutMultiplier">
+    <Title>%TaxRateBuyoutMultiplierTitle</Title>
+  </GuiElement>
+</Datatable>

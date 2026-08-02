@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!--HeroSkill120-->
+    <SimulationDescriptor Name="HeroSkillSystem120_ProcessingPower_Flat_0" Type="HeroSkillSystem" IsSerializable="false">
+        <Modifier TargetProperty="MaximumEmpireProcessingPowerStock"					Operation="Addition"			Value="5"		Path="../ClassEmpire" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="HeroSkillSystem120_ProcessingPower_Flat_1" Type="HeroSkillSystem" IsSerializable="false">
+        <Modifier TargetProperty="MaximumEmpireProcessingPowerStock"					Operation="Addition"			Value="10"		Path="../ClassEmpire" />
+    </SimulationDescriptor>
+
+    <!--HeroSkill120-->
+    <SimulationDescriptor Name="HeroSkillSystem121_HackingSpeed_Percent_3" Type="HeroSkillSystem" IsSerializable="false">
+        <Modifier TargetProperty="HackingWarpSpeed"				Operation="Percent"						Value="0.05"			Path="../ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HackingNonWarpSpeed"			Operation="Percent"						Value="0.05"			Path="../ClassEmpire" TooltipHidden="true" />
+        <Modifier TargetProperty="HackingNodeSpeed"				Operation="Percent"						Value="0.05"			Path="../ClassEmpire"  />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="HeroSkillSystem121_HackingSpeed_Percent_4" Type="HeroSkillSystem" IsSerializable="false">
+        <Modifier TargetProperty="HackingWarpSpeed"				Operation="Percent"						Value="0.1"			Path="../ClassEmpire" TooltipHidden="true" />
+        <Modifier TargetProperty="HackingNonWarpSpeed"			Operation="Percent"						Value="0.1"			Path="../ClassEmpire" TooltipHidden="true" />
+        <Modifier TargetProperty="HackingNodeSpeed"				Operation="Percent"						Value="0.1"			Path="../ClassEmpire" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="HeroSkillSenator121_HackingSpeed_Percent_3" Type="HeroSkillSenator" IsSerializable="false">
+        <Property Name="DictatorshipBonus" BaseValue="-1" MinValue="Negative"/>
+        <!--Base effect-->
+        <Modifier TargetProperty="FinalProcessingPowerAllocation" Operation="Percent" Value="-0.1" Path="../ClassEmpire/ClassHacking/!CostCannotBeBoostedByPrograms,ClassHackingProgram"/>
+        <!--Added bonus for dictatorship-->
+        <Modifier TargetProperty="DictatorshipBonus" Operation="Addition" Value="$(SenatorSkillEffectDictatorshipMultiplier)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="FinalProcessingPowerAllocation" Operation="Percent" Left="$(DictatorshipBonus)" BinaryOperation="Division" Right="-50" Path="../ClassEmpire/ClassHacking/!CostCannotBeBoostedByPrograms,ClassHackingProgram" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!--HeroSkill120-->
+    <SimulationDescriptor Name="HeroSkillSystem122_FIDSI_Flat_4" Type="HeroSkillSystem" IsSerializable="false">
+        <BinaryModifier TargetProperty="SystemHeroFIDSIPercent"			Operation="Addition"				Left="0.01" BinaryOperation="Multiplication" Right="$(TraitorsCount)"			Path="ClassColonizedStarSystem" SearchValueFromPath="true" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HeroSkillShip123_FleetVisionStrength_Flat_3" Type="HeroSkillShip" IsSerializable="false">
+      <Modifier TargetProperty="VisionStrength"			Operation="Force"				Value="3" 			Path="./ClassGarrisonFleet" Priority="5" />
+    </SimulationDescriptor>
+    
+    
+
+</Datatable>

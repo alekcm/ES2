@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+<!-- The GUIElements that start with "TemporaryEffect" are the one that will be fedback indepently from the effects see the golden Age for the Vaulters for example -->
+  
+    <GuiElement Name="GoldenAge">
+        <Title>%GoldenAgeTitle</Title>
+        <Description>%GoldenAgeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="GoldenAgeSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/Colonization/GoldenAgeLarge"/>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/Colonization/GoldenAgeSmall" />
+        </Icons>
+    </GuiElement>
+  
+    <ExtendedGuiElement Name="TemporaryEffectGoldenAge">
+        <Title>%TemporaryEffectGoldenAgeTitle</Title>
+        <Description>%TemporaryEffectGoldenAgeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="GoldenAgeSmall" />
+        </Icons>
+        <AltTitle>%GoldenAgeTitle</AltTitle>
+        <AltDescription>%GoldenAgeDescription</AltDescription>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="PirateEmpireSupported">
+        <Title>%PopulationEventPiratesSupportMilitaristTitle</Title>
+    </GuiElement>
+
+    <GuiElement Name="PirateEmpireSabotaged">
+        <Title>%PopulationEventPiratesSabotagePacifistTitle</Title>
+    </GuiElement>
+
+    <GuiElement Name="FIDSMalusFromDemand">
+        <Title>%TemporaryEffectFIDSMalusFromDemand</Title>
+    </GuiElement>
+
+    <GuiElement Name="FIDSMalusFromDemand2">
+        <Title>%TemporaryEffectFIDSMalusFromDemand2</Title>
+    </GuiElement>
+
+</Datatable>

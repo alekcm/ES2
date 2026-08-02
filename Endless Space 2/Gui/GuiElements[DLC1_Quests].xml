@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+
+  <!-- ######################### -->
+  <!-- ######## MODULES ######## -->
+  <!-- ######################### -->
+  <!-- MODULE QUEST -->
+  <ExtendedGuiElement Name="ModuleDefenseHullPlatingQuest1">
+    <Title>%ModuleDefenseHullPlatingQuest1Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleDefenseHullPlatingQuest1" />
+    </Icons>
+    <Sounds>
+      <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddDefenseModule" Type="OnEquipModule" />
+      <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+    </Sounds>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ModuleWeaponMissileQuest1">
+    <Title>%ModuleWeaponMissileQuest1Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponMissileQuest1" />
+    </Icons>
+    <Sounds>
+      <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddWeaponModule" Type="OnEquipModule" />
+      <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+    </Sounds>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ModuleSupportEngineQuest1">
+    <Title>%ModuleSupportEngineQuest1Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSupportEngineQuest1" />
+    </Icons>
+    <Sounds>
+      <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+      <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+    </Sounds>
+  </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ModuleDefenseHullQuest01">
+        <Title>%ModuleDefenseHullQuest01Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleDefenseHullQuest01" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddWeaponModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+        <TooltipElement Ignore="false">
+            <EffectOverride>%ModuleDefenseHullQuest01Effect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ModuleSupportExperienceQuest01">
+        <Title>%ModuleSupportExperienceQuest01Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSupportExperienceQuest01" />
+        </Icons>  
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddWeaponModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>       
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ModuleWeaponKineticFlackQuest01">
+        <Title>%ModuleWeaponKineticFlackQuest01Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponKineticFlackQuest01Small" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddWeaponModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>       
+    </ExtendedGuiElement>
+
+    <GuiElement Name="ClassModuleSpecialHeroOnly">
+        <Title>%ClassModuleSpecialHeroOnlyTitle</Title>
+        <Description>%ClassModuleSpecialHeroOnlyDescription</Description>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="EmpireImprovementQuestVaulters12">
+        <Title>%EmpireImprovementQuestVaulters12Title</Title>
+        <Description>%EmpireImprovementQuestVaulters12Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="EmpireImprovementQuestVaulters12Small" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementQuestVaulters12Large" />
+        </Icons>
+    </ExtendedGuiElement> 
+
+   
+
+
+
+  
+  <!-- EVENTPOLITICAL19 -->
+
+        <QuestGuiElement Name="EventPolitical19">
+        <Title>%EventPolitical19Title</Title>
+        <Description>%EventPolitical19Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical19Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+            <ObjectiveSet Politics="Politics02">
+                <Title>%EventPolitical19Choice01Title</Title>
+                <Description>%EventPolitical19Choice01Description</Description>
+                <Objective Name="Step1_Objective1">%EventPolitical19Choice01Description</Objective>
+            </ObjectiveSet>
+            <ObjectiveSet Politics="Politics04">
+                <Title>%EventPolitical19Choice02Title</Title>
+                <Description>%EventPolitical19Choice02Description</Description>
+                <Objective Name="Step2_Objective1">%EventPolitical19Choice02Description</Objective>
+            </ObjectiveSet>
+            </Step>
+        </Steps>
+        </QuestGuiElement>  
+
+  <!-- EVENTPOLITICAL19ALT-->
+    
+  
+          <QuestGuiElement Name="EventPolitical19Alt">
+            <Title>%EventPolitical19AltTitle</Title>
+            <Description>%EventPolitical19AltDescription</Description>
+            <Icons>
+              <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical19AltLarge" Size="Quest" />
+            </Icons>
+            <Steps>
+              <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                  <Title>%EventPolitical19AltChoice01Title</Title>
+                  <Description>%EventPolitical19AltChoice01Description</Description>
+                  <Objective Name="Step1_Objective1">%EventPolitical19AltChoice01Description</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                  <Title>%EventPolitical19AltChoice02Title</Title>
+                  <Description>%EventPolitical19AltChoice02Description</Description>
+                  <Objective Name="Step2_Objective1">%EventPolitical19AltChoice02Description</Objective>
+                </ObjectiveSet>
+              </Step>
+            </Steps>
+          </QuestGuiElement>
+
+    <!--EVENT RANDOM 12-->
+
+    <QuestGuiElement Name="EventRandom12">
+        <Title>%EventRandom12-Title</Title>
+        <Description>%EventRandom12-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest08Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventRandom12-Choice01Title</Title>
+                    <Description>%EventRandom12-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventPolitical19AltChoice01Description</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventRandom13">
+        <Title>%EventRandom13-Title</Title>
+        <Description>%EventRandom13-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest08Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventRandom13-Choice01Title</Title>
+                    <Description>%EventRandom13-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventPolitical19AltChoice01Description</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>   
+
+    <!--#####################################-->
+    <!--#######         QUEST        ########-->
+    <!--#####################################-->
+
+  <!--EXPLORATION QUEST 04-->
+
+        <QuestGuiElement Name="ExplorationQuest04">
+        <Title>%ExplorationQuest04IntroTitle</Title>
+        <Description>%ExplorationQuest04IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest04Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+            <ObjectiveSet Politics="Politics00">           
+                <Description>%ExplorationQuest04Choice01Description</Description>
+                <TooltipDescription>%ExplorationQuest04Choice01ObjectiveTooltip</TooltipDescription>
+                <OutcomeCompleted>%ExplorationQuest04Choice01Outcome</OutcomeCompleted>
+                <OutcomeFailed>%ExplorationQuest04Failed</OutcomeFailed>
+                <Objective Name="Step1_Objective">%ExplorationQuest04Choice01Objective</Objective>
+            </ObjectiveSet>
+            </Step>
+        </Steps>
+        </QuestGuiElement>
+
+    <!--EXPLORATION QUEST 08-->
+
+    <QuestGuiElement Name="ExplorationQuest08">
+        <Title>%ExplorationQuest08IntroTitle</Title>
+        <Description>%ExplorationQuest08IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest08Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Description>%ExplorationQuest08Choice01Description</Description>
+                    <TooltipDescription>%ExplorationQuest08Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExplorationQuest08Choice01Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%ExplorationQuest08Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective">%ExplorationQuest08Choice01Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--EXPLORATION QUEST 24-->
+
+    <QuestGuiElement Name="ExplorationQuest24">
+        <Title>%ExplorationQuest24-IntroTitle</Title>
+        <Description>%ExplorationQuest24-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest24Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%ExplorationQuest24-Choice01Title</Title>
+                    <Description>%ExplorationQuest24-Choice01Description</Description>
+                    <TooltipDescription>%ExplorationQuest24-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExplorationQuest24-Choice01Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%ExplorationQuest24Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective1">%ExplorationQuest24-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%ExplorationQuest24-Choice02Title</Title>
+                    <Description>%ExplorationQuest24-Choice02Description</Description>
+                    <TooltipDescription>%ExplorationQuest24-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExplorationQuest24-Choice02Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%ExplorationQuest24Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective2">%ExplorationQuest24-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%ExplorationQuest24-Choice03Title</Title>
+                    <Description>%ExplorationQuest24-Choice03Description</Description>
+                    <TooltipDescription>%ExplorationQuest24-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExplorationQuest24-Choice03Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%ExplorationQuest24Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective3">%ExplorationQuest24-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+   <!--EXPLORATION QUEST 25-->
+
+    <QuestGuiElement Name="ExplorationQuest25Bis">
+        <Title>%ExplorationQuest25-IntroTitle</Title>
+        <Description>%ExplorationQuest25-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Exploration/ExplorationQuest25Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%ExplorationQuest25-Choice01Title</Title>
+                    <Description>%ExplorationQuest25-Choice01Description</Description>
+                    <TooltipDescription>%ExplorationQuest25-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExplorationQuest25-Choice01Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%ExplorationQuest25Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective1">%ExplorationQuest25-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%ExplorationQuest25-Choice02Title</Title>
+                    <Description>%ExplorationQuest25-Choice02Description</Description>
+                    <TooltipDescription>%ExplorationQuest25-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%ExplorationQuest25-Choice02Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%ExplorationQuest25Failed</OutcomeFailed>
+                    <Objective Name="Step1_Objective2">%ExplorationQuest25-Choice02Objective</Objective>
+                </ObjectiveSet>               
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- POPULATION QUEST 01 -->
+    
+    <QuestGuiElement Name="PopulationQuest01">
+        <Title>%PopulationQuest01-Title</Title>
+        <Description>%PopulationQuest01-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step01">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest01-Title</Title>
+                    <Description>%PopulationQuest01-Description01</Description>
+                    <TooltipDescription>%PopulationQuest01-Objective01Tooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest01-Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%PopulationQuest01-Failed</OutcomeFailed>
+                    <Objective Name="Step01_Objective1">%PopulationQuest01-Objective01</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    
+      
+    <!--################################-->
+    <!--#####    VAULTER QUEST    ######-->
+    <!--################################-->
+
+    <QuestGuiElement Name="VaultersQuest-Chapter1-Part1">
+        <Title>%VaultersQuest-Chapter1-Part1-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter1-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter1-1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter1-Part1-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter1-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter1-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter1-Part1-MilitaristOutcome</OutcomeCompleted>             
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter1-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter1-Part1-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter1-Part1-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter1-Part1-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter1-Part1-ScientistOutcome</OutcomeCompleted>                    
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter1-Part1-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="VaultersQuest-Chapter1-Part2A">
+        <Title>%VaultersQuest-Chapter1-Part2A-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter1-Part2A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter1-2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter1-Part2A-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter1-Part2A-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter1-Part2A-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter1-Part2A-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter1-Part2A-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter1-Part2A-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter1-Part2A-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter1-Part2A-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter1-Part2A-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter1-Part2A-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="VaultersQuest-Chapter1-Part2B">
+        <Title>%VaultersQuest-Chapter1-Part2B-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter1-Part2B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter1-2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter1-Part2B-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter1-Part2B-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter1-Part2B-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter1-Part2B-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter1-Part2B-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter1-Part2B-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter1-Part2B-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter1-Part2B-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter1-Part2B-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter1-Part2B-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="VaultersQuest-Chapter2A">
+        <Title>%VaultersQuest-Chapter2A-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter2A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter2A-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter2A-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter2A-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter2A-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter2A-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter2A-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter2A-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter2A-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter2A-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter2A-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+    <QuestGuiElement Name="VaultersQuest-Chapter2B">
+        <Title>%VaultersQuest-Chapter2B-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter2B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter2B-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter2B-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter2B-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter2B-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter2B-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter2B-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter2B-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter2B-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter2B-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter2B-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="VaultersQuest-Chapter3-Part1">
+        <Title>%VaultersQuest-Chapter3-Part1-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter3-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter3-1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter3-Part1-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter3-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter3-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter3-Part1-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter3-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter3-Part1-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter3-Part1-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter3-Part1-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter3-Part1-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter3-Part1-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="VaultersQuest-Chapter3-Part2">
+        <Title>%VaultersQuest-Chapter3-Part2-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter3-Part2-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter3-2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter3-Part2-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter3-Part2-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter3-Part2-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter3-Part2-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter3-Part2-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter3-Part2-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter3-Part2-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter3-Part2-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter3-Part2-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter3-Part2-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="VaultersQuest-Chapter4-Militarist-Part1">
+        <Title>%VaultersQuest-Chapter4-Militarist-Part1-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter4-Militarist-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter4-A" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter4-Militarist-Part1-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter4-Militarist-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter4-Militarist-Part1-MilitaristObjectiveTooltip</TooltipDescription>                    
+                    <OutcomeCompleted Name="Outcome1">%VaultersQuest-Chapter4-Militarist-Part1-MilitaristOutcome1</OutcomeCompleted>
+                    <OutcomeCompleted Name="Outcome2">%VaultersQuest-Chapter4-Militarist-Part1-MilitaristOutcome2</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter4-Militarist-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter4-Militarist-Part1-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter4-Militarist-Part1-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter4-Militarist-Part1-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter4-Militarist-Part1-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter4-Militarist-Part1-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="VaultersQuest-Chapter4-Science-Part1">
+        <Title>%VaultersQuest-Chapter4-Science-Part1-IntroTitle</Title>
+        <Description>%VaultersQuest-Chapter4-Science-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter4-B" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter4-Science-Part1-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter4-Science-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter4-Science-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted Name="Outcome1">%VaultersQuest-Chapter4-Science-Part1-MilitaristOutcome1</OutcomeCompleted>
+                    <OutcomeCompleted Name="Outcome2">%VaultersQuest-Chapter4-Science-Part1-MilitaristOutcome2</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%VaultersQuest-Chapter4-Science-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter4-Science-Part1-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter4-Science-Part1-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter4-Science-Part1-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter4-Science-Part1-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Scientist">%VaultersQuest-Chapter4-Science-Part1-ScientistObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%VaultersQuest-Chapter4-Science-Part1-MilitaristChoice</Title>
+                    <Description>%VaultersQuest-Chapter4-Science-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter4-Science-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter4-Science-Part1-MilitaristOutcome1</OutcomeCompleted>                   
+                    <Objective Name="Objective_Vodyani">%VaultersQuest-Chapter4-Science-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%VaultersQuest-Chapter4-Science-Part1-ScientistChoice</Title>
+                    <Description>%VaultersQuest-Chapter4-Science-Part1-ScientistDescription</Description>
+                    <TooltipDescription>%VaultersQuest-Chapter4-Science-Part1-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%VaultersQuest-Chapter4-Science-Part1-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_VodyaniBis">%VaultersQuest-Chapter4-Science-Part1-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--######################-->
+    <!--####   METAPLOT   ####-->
+    <!--######################-->
+
+    <QuestGuiElement Name="EventMetaplot01">
+        <Title>%EventMetaplot01-Title</Title>
+        <Description>%EventMetaplot01-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventMetaplot01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%EventMetaplot01-Choice01Title</Title>
+                    <Description>%EventMetaplot01-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventMetaplot01-Choice01Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventMetaplot02">
+        <Title>%EventMetaplot02-Title</Title>
+        <Description>%EventMetaplot02-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventMetaplot02Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%EventMetaplot02-Choice01Title</Title>
+                    <Description>%EventMetaplot02-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventMetaplot02-Choice01Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+    <QuestGuiElement Name="EventMetaplotHiddenTeamA">
+        <Title>%EventMetaplotHiddenTeamA-Title</Title>
+        <Description>%EventMetaplotHiddenTeamA-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical19AltLarge" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%EventMetaplotHiddenTeamA-Choice01Title</Title>
+                    <Description>%EventMetaplotHiddenTeamA-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventMetaplotHiddenTeamA-Choice01Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventMetaplotHiddenTeamB">
+        <Title>%EventMetaplotHiddenTeamB-Title</Title>
+        <Description>%EventMetaplotHiddenTeamB-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical19AltLarge" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%EventMetaplotHiddenTeamB-Choice01Title</Title>
+                    <Description>%EventMetaplotHiddenTeamB-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventMetaplotHiddenTeamB-Choice01Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--#######################################
+      #####           EVENTS          #######
+      ####################################### -->
+        
+    <!-- EVENTPOLITICAL12 -->
+    <QuestGuiElement Name="EventPoliticalResult12">
+        <Title>%EventPoliticalResult12-Title</Title>
+        <Description>%EventPoliticalResult12-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical09Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%EventPoliticalResult12-Choice01Title</Title>
+                    <Description>%EventPoliticalResult12-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventPoliticalResult12-Description</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- EVENTPOLITICAL12a -->
+
+    <QuestGuiElement Name="EventPoliticalResult12a">
+        <Title>%EventPoliticalResult12a-Title</Title>
+        <Description>%EventPoliticalResult12a-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical09Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%EventPoliticalResult12a-Choice01Title</Title>
+                    <Description>%EventPoliticalResult12a-Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventPoliticalResult12a-Description</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement> 
+
+    <QuestGuiElement Name="EventReveal06">
+        <Title>%EventReveal04-Title</Title>
+        <Description>%EventReveal04-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventReveal04Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventReveal04-Choice01Title</Title>
+                    <Description>%EventReveal04-Choice01Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventReveal04-Choice01Title</Title>
+                    <Description>%EventReveal04-Choice01Description</Description>                  
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+    <QuestGuiElement Name="EventReveal05">
+        <Title>%EventReveal05-Title</Title>
+        <Description>%EventReveal05-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventReveal05Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventReveal05-Choice01Title</Title>
+                    <Description>%EventReveal05-Choice01Description</Description>                   
+                </ObjectiveSet>
+               <ObjectiveSet Politics="Politics02">
+                    <Title>%EventReveal05-Choice01Title</Title>
+                    <Description>%EventReveal05-Choice01Description</Description>                 
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="GlobalQuest11-Compet01">
+        <Title>%GlobalQuest11-Compet01-Intro-Title</Title>
+        <Description>%GlobalQuest11-Compet01-Intro-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Global/GlobalQuest11Compet01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Description>%GlobalQuest11-Compet01-Description</Description>
+                    <TooltipDescription>%GlobalQuest11-Compet01-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%GlobalQuest11-Compet01-Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%GlobalQuest11-Compet01-Failed</OutcomeFailed>
+                    <Objective Name="Objective">%GlobalQuest11-Compet01-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+
+    <!--#######################################
+        ##### DEEDS: EMPIRE DEVELOPMENT #######
+        ####################################### -->
+    <QuestGuiElement Name="Deeds_Regular_EmpireDevelopment_Stage5_C">
+        <Title>%Deeds_Regular_EmpireDevelopment_Stage5_C-Title</Title>
+        <Description>%Deeds_Regular_EmpireDevelopment_Stage5_C-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage5_CQuest" Size="Quest"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage5_C" Size="Medium"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage5_CInverted" Size="MediumInverted"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage5_CLarge" Size="Large"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <TooltipDescription>%Deeds_Regular_EmpireDevelopment_Stage5_C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Deeds_Regular_EmpireDevelopment_Stage5_C-Completed</OutcomeCompleted>
+                    <OutcomeFailed>%Deeds_Regular_EmpireDevelopment_Stage5_C-Failed</OutcomeFailed>
+                    <Objective Name="Deeds_Regular_EmpireDevelopment_Stage5_C-Objective">%Deeds_Regular_EmpireDevelopment_Stage5_C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Deeds_Regular_ScienceAndExploration_Stage2_C">
+        <Title>%Deeds_Regular_ScienceAndExploration_Stage2_C-Title</Title>
+        <Description>%Deeds_Regular_ScienceAndExploration_Stage2_C-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage2_CQuest" Size="Quest"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage2_C" Size="Medium"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage2_CInverted" Size="MediumInverted"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage2_CLarge" Size="Large"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <TooltipDescription>%Deeds_Regular_ScienceAndExploration_Stage2_C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Deeds_Regular_ScienceAndExploration_Stage2_C-Completed</OutcomeCompleted>
+                    <OutcomeFailed>%Deeds_Regular_ScienceAndExploration_Stage2_B-Failed</OutcomeFailed>
+                    <Objective Name="Deeds_Regular_ScienceAndExploration_Stage2_C-Objective">%Deeds_Regular_ScienceAndExploration_Stage2_C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Deeds_Regular_ScienceAndExploration_Stage5_C">
+        <Title>%Deeds_Regular_ScienceAndExploration_Stage5_C-Title</Title>
+        <Description>%Deeds_Regular_ScienceAndExploration_Stage5_C-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage5_CQuest" Size="Quest"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage5_C" Size="Medium"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage5_CInverted" Size="MediumInverted"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_ScienceAndExploration_Stage5_CLarge" Size="Large"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <TooltipDescription>%Deeds_Regular_ScienceAndExploration_Stage5_C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Deeds_Regular_ScienceAndExploration_Stage5_C-Completed</OutcomeCompleted>
+                    <OutcomeFailed>%Deeds_Regular_ScienceAndExploration_Stage5_C-Failed</OutcomeFailed>
+                    <Objective Name="Deeds_Regular_ScienceAndExploration_Stage5_C-Objective">%Deeds_Regular_ScienceAndExploration_Stage5_C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Deeds_Regular_EconomyAndTrade_Stage2_C">
+        <Title>%Deeds_Regular_EconomyAndTrade_Stage2_C-Title</Title>
+        <Description>%Deeds_Regular_EconomyAndTrade_Stage2_C-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage2_CQuest" Size="Quest"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage2_A" Size="Medium"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage2_AInverted" Size="MediumInverted"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage2_CLarge" Size="Large"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <TooltipDescription>%Deeds_Regular_EconomyAndTrade_Stage2_C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Deeds_Regular_EconomyAndTrade_Stage2_C-Completed</OutcomeCompleted>
+                    <OutcomeFailed>%Deeds_Regular_EconomyAndTrade_Stage2_C-Failed</OutcomeFailed>
+                    <Objective Name="Deeds_Regular_EconomyAndTrade_Stage2_C-Objective">%Deeds_Regular_EconomyAndTrade_Stage2_C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+    <QuestGuiElement Name="Deeds_Regular_EconomyAndTrade_Stage3_C">
+        <Title>%Deeds_Regular_EconomyAndTrade_Stage3_C-Title</Title>
+        <Description>%Deeds_Regular_EconomyAndTrade_Stage3_C-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage3_CQuest" Size="Quest"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage3_C" Size="Medium"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage3_CInverted" Size="MediumInverted"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage3_CLarge" Size="Large"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <TooltipDescription>%Deeds_Regular_EconomyAndTrade_Stage3_C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Deeds_Regular_EconomyAndTrade_Stage3_C-Completed</OutcomeCompleted>
+                    <OutcomeFailed>%Deeds_Regular_EconomyAndTrade_Stage3_C-Failed</OutcomeFailed>
+                    <Objective Name="Deeds_Regular_EconomyAndTrade_Stage3_C-Objective">%Deeds_Regular_EconomyAndTrade_Stage3_C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Deeds_Regular_Military_Stage3_C">
+        <Title>%Deeds_Regular_Military_Stage3_C-Title</Title>
+        <Description>%Deeds_Regular_Military_Stage3_C-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_Military_Stage3_AQuest" Size="Quest"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_Military_Stage3_C" Size="Medium"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_Military_Stage3_CInverted" Size="MediumInverted"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_Military_Stage3_ALarge" Size="Large"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <TooltipDescription>%Deeds_Regular_Military_Stage3_C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Deeds_Regular_Military_Stage3_C-Completed</OutcomeCompleted>
+                    <OutcomeFailed>%Deeds_Regular_Military_Stage3_C-Failed</OutcomeFailed>
+                    <Objective Name="Deeds_Regular_Military_Stage3_C-Objective">%Deeds_Regular_Military_Stage3_C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="Deeds_Regular_Military_Stage4_C">
+        <Title>%Deeds_Regular_Military_Stage4_C-Title</Title>
+        <Description>%Deeds_Regular_Military_Stage4_C-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_Military_Stage4_CQuest" Size="Quest"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage2_A" Size="Medium"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EconomyAndTrade_Stage2_AInverted" Size="MediumInverted"/>
+            <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_Military_Stage4_CLarge" Size="Large"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <TooltipDescription>%Deeds_Regular_Military_Stage4_C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%Deeds_Regular_Military_Stage4_C-Completed</OutcomeCompleted>
+                    <OutcomeFailed>%Deeds_Regular_Military_Stage4_C-Failed</OutcomeFailed>
+                    <Objective Name="Deeds_Regular_Military_Stage4_C-Objective">%Deeds_Regular_Military_Stage4_C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--POPULATION QUEST VAULTERS-->
+
+    <QuestGuiElement Name="PopulationQuest15">
+        <Title>%PopulationQuest15-IntroTitle</Title>
+        <Description>%PopulationQuest15-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersPopQuest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest15-Choice01Title</Title>
+                    <Description>%PopulationQuest15-Choice01Description</Description>
+                    <TooltipDescription>%PopulationQuest15-Choice01ObjectiveTooltip</TooltipDescription>                    
+                    <OutcomeCompleted Name="Outcome1">%PopulationQuest15-Choice01Outcome</OutcomeCompleted>                    
+                    <Objective Name="Objective_1">%PopulationQuest15-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest15-Choice02Title</Title>
+                    <Description>%PopulationQuest15-Choice02Description</Description>
+                    <TooltipDescription>%PopulationQuest15-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest15-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_2">%PopulationQuest15-Choice02Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+</Datatable>

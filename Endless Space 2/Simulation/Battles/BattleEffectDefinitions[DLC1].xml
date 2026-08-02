@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/BattleEffectDefinition.xsd">
+
+
+    <!--################################-->
+    <!--###         STRAT WINS       ###-->
+    <!--################################-->
+    <BattleEffect_EmpireReward_Resource Name="Group_OpponentRecyclingStrategic1GainReward"    ResourceName="Strategic1"  
+                                        InterpreterFormula="Property(Owner, @ClassGroup, OpponentRecyclingStrategic1PerCP) * Property(Owner, @ClassGroup, DestroyedCP)" />
+    
+    <BattleEffect_EmpireReward_Resource Name="Group_OpponentRecyclingStrategic2GainReward"    ResourceName="Strategic2"
+                                        InterpreterFormula="Property(Owner, @ClassGroup, OpponentRecyclingStrategic2PerCP) * Property(Owner, @ClassGroup, DestroyedCP)" />
+
+    <!--################################-->
+    <!--###         BOARDING         ###-->
+    <!--################################-->
+    <!--Base damage for the boarding pod-->
+    <BattleEffect_SetPropertyValue Name="Salvo_SetManpowerDamageOverTime" PropertyName="ManpowerDamageOverTime" Operation="Set"
+                                   InterpreterFormula="Property(Owner, @ClassModuleWeaponBoardingPod, ManpowerDamageOverTime)"/>
+
+    <!--Level comparison multiplier-->
+    <BattleEffect_SetPropertyValue Name="Salvo_ComputeInfantryEfficiencyMultiplier" PropertyName="InfantryEfficiency" Operation="Set"
+                                   InterpreterFormula="1 + (Property(Owner, @'../ClassShip', EmpireInfantryLevel) - Property(InitiatorTarget, @'../ClassShip', EmpireInfantryLevel)) * 0.05
+                                   + ((Property(Owner, @'../ClassShip', EmpireInfantryHP) - 4 * Property(InitiatorTarget, @'../ClassShip', EmpireInfantryMinDamage)) - 
+                                   (Property(InitiatorTarget, @'../ClassShip', EmpireInfantryHP) - 4 * Property(Owner, @'../ClassShip', EmpireInfantryMinDamage))) * 0.005"/>
+    
+    <BattleEffect_SetPropertyValue Name="Salvo_MultiplyManpowerDamageOverTimeWithInfantryEfficiency" PropertyName="ManpowerDamageOverTime" Operation="Set"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, ManpowerDamageOverTime) * Property(Initiator, @ClassSalvo, InfantryEfficiency)"/>
+
+    <!--Manpower damage defenses-->
+    <BattleEffect_SetPropertyValue Name="Salvo_ComputeManpowerDamageAbsorbed" PropertyName="ManpowerDamageAbsorbed" Operation="Set"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, ManpowerDamageOverTime) * Property(InitiatorTarget, @'../ClassShip', ManpowerDamageOverTimeDefense)"/>
+
+    <BattleEffect_SetPropertyValue Name="Salvo_RemoveManpowerDamageAbsorbedFromManpowerDamageOverTime" PropertyName="ManpowerDamageOverTime" Operation="Subtraction"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, ManpowerDamageAbsorbed)"/>
+
+    <!--Set the last mp damage ot-->
+    <BattleEffect_SetPropertyValue Name="BoardingPod_SetLastManpowerDamageOverTime" PropertyName="LastManpowerDamageOverTime" Operation="Set"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, ManpowerDamageOverTime)"/>
+
+    <!-- Boarding descriptors-->
+    <BattleEffect_ApplyDescriptor Name="SalvoTarget_ApplyBoardingPodDescriptor" Duration="5" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="BoardingPodEffectActive"/>
+    </BattleEffect_ApplyDescriptor>
+
+    <!--Remove the manpower on ship, with a frequency descriptor-->
+    <BattleEffect_SetPropertyValue Name="SalvoTarget_ReduceManpower"     PropertyName="ShipManpowerStock"        Operation="Subtraction"
+            InterpreterFormula="Property(Owner, @ClassModuleWeaponBoardingPod, LastManpowerDamageOverTime)"
+            Frequency="1" Duration="5" StackingBehaviour="Stack" />
+
+    <!-- Deactivation descriptor-->
+    <BattleEffect_SetStatus Name="SalvoTarget_Deactivate" Status="Deactivated"/>
+
+    <!--################################-->
+    <!--###             AOE          ###-->
+    <!--################################-->
+
+    <!-- For flotilla shield & bonuses and stuff-->
+    <BattleEffect_SetPropertyValue Name="SalvoAOE_InitEffectiveDamage" PropertyName="EffectiveDamage" Operation="Set"
+                                   InterpreterFormula="Property(Owner, @ClassModuleWeapon, Damage)"/>
+    
+    <BattleEffect_SetPropertyValue Name="SalvoAOE_ApplyDamageBonusPerTargetCommandPoints"      PropertyName="EffectiveDamage"          Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @../ClassShip, DamageBonusPerTargetCommandPoints) * Property(InitiatorTarget, @ClassFlotilla, CommandPoints)"/>
+
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetSmall_UpdateHealthFromSalvo"         PropertyName="Health"               Operation="Subtraction"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstSmallShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetMedium_UpdateHealthFromSalvo"         PropertyName="Health"               Operation="Subtraction"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstMediumShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetLarge_UpdateHealthFromSalvo"         PropertyName="Health"               Operation="Subtraction"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstLargeShipsModifier)" />
+    
+
+    <!-- Statistics-->
+    <!--Changing amount of FakeDamage on core section-->
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetSmall_UpdateFakeDamageReceivededForAOEStatsFromSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstSmallShipsModifier)" />
+    
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetMedium_UpdateFakeDamageReceivededForAOEStatsFromSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstMediumShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetLarge_UpdateFakeDamageReceivededForAOEStatsFromSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstLargeShipsModifier)" />    
+
+    <!--Summing it up on Flotilla-->
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetFlotilla_UpdateFakeDamageReceivededForAOEStatsFromSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Addition"
+                                   InterpreterFormula="SumProperty(InitiatorTarget, @'ClassFlotilla/ClassShip/ClassSection,ClassSectionCore', FakeDamageReceivededForAOEStats)" />
+
+    <BattleEffect_SetPropertyValue Name="AttackingFlotilla_UpdateDamageAppliedByAOEFromSalvo"  PropertyName="DamageAppliedByAOE"     Operation="Addition"
+                                   InterpreterFormula="Property(InitiatorTarget, @ClassFlotilla,  FakeDamageReceivededForAOEStats)" />
+
+    <BattleEffect_SetPropertyValue Name="AttackingEntity_UpdateDamageAppliedByAOEFromSalvo"     PropertyName="DamageApplied" Operation="Addition"
+                                   InterpreterFormula="Property(InitiatorTarget, @ClassFlotilla,  FakeDamageReceivededForAOEStats)" />
+    
+    <BattleEffect_SetPropertyValue Name="AttackingFlotilla_UpdateDamageAppliedCurrentPhaseByAOEFromSalvo"     PropertyName="DamageAppliedCurrentPhase"        Operation="Addition"
+                                   InterpreterFormula="Property(InitiatorTarget, @ClassFlotilla,  FakeDamageReceivededForAOEStats)" />
+
+    <BattleEffect_SetPropertyValue Name="AOETargetedFlotillaEntity_UpdateDamageReceivedFromSalvo"         PropertyName="DamageReceived"               Operation="Addition"
+                                   InterpreterFormula="Property(InitiatorTarget, @ClassFlotilla,  FakeDamageReceivededForAOEStats)" />
+
+    <BattleEffect_SetPropertyValue Name="SalvoAOETarget_ResetFakeDamageReceivededForAOEStatsFromSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Set"
+                                   InterpreterFormula="0" />
+    
+    <BattleEffect_SetPropertyValue Name="SalvoAOETargetFlotilla_ResetFakeDamageReceivededForAOEStatsFromSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Set"
+                                   InterpreterFormula="0" />
+    
+    <!--Battle Damage Display-->
+    <BattleEffect_SetPropertyValue Name="AOETargetedSmallEntity_UpdateDamageReceivedFromSalvo"     PropertyName="DamageReceived"        Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstSmallShipsModifier)" />
+    
+    <BattleEffect_SetPropertyValue Name="AOETargetedMediumEntity_UpdateDamageReceivedFromSalvo"     PropertyName="DamageReceived"        Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstMediumShipsModifier)" />
+    
+    <BattleEffect_SetPropertyValue Name="AOETargetedLargeEntity_UpdateDamageReceivedFromSalvo"     PropertyName="DamageReceived"        Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EffectiveDamage) * Property(Owner, @ClassModuleWeapon, DamageAgainstLargeShipsModifier)" />
+
+    <!--################################-->
+    <!--###             EMP          ###-->
+    <!--################################-->
+    <!-- Duration is on the target of the BE -->
+    <BattleEffect_SetPropertyValue Name="Weapon_SetWeaponDeactivationTime" PropertyName="WeaponDeactivationDuration" Operation="Set"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EMPDurationForWeapons) - (Property(InitiatorTarget,@'../ClassShip', EMPWeaponDefense) * Property(Initiator, @ClassSalvo, EMPDurationForWeapons))"/>
+
+    <BattleEffect_SetPropertyValue Name="Ship_SetWeaponsDeactivationTime" PropertyName="WeaponsDeactivationDuration" Operation="Set"
+                               InterpreterFormula="Property(Initiator, @ClassSalvo, EMPDurationForWeapons) - (Property(Target,@'ClassShip', EMPWeaponDefense) * Property(Initiator, @ClassSalvo, EMPDurationForWeapons))"/>
+
+    <BattleEffect_SetPropertyValue Name="Ship_SetShieldDeactivationTime" PropertyName="ShieldDeactivationDuration" Operation="Set"
+                                   InterpreterFormula="Property(Initiator, @ClassSalvo, EMPDurationForShields) - (Property(InitiatorTarget,@'../ClassShip', EMPShieldDefense) * Property(Initiator, @ClassSalvo, EMPDurationForShields))"/>
+    
+    <BattleEffect_SetPropertyValue Name="Salvo_SetEMPDurationForShields" PropertyName="EMPDurationForShields" Operation="Set"
+                                   InterpreterFormula="Property(Owner, @ModuleWeaponEMP, EMPDurationForShields)"/>
+    
+    <BattleEffect_SetPropertyValue Name="Salvo_SetEMPDurationForWeapons" PropertyName="EMPDurationForWeapons" Operation="Set"
+                                   InterpreterFormula="Property(Owner, @ModuleWeaponEMP, EMPDurationForWeapons)"/>
+
+    <!-- Deactivation descriptors-->
+    <BattleEffect_ApplyDescriptor Name="Weapon_EMPWeaponDeactivation" Duration="$(WeaponDeactivationDuration)" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="EncounterEntityStatusDisabled"/>
+    </BattleEffect_ApplyDescriptor>
+
+    <BattleEffect_ApplyDescriptor Name="Ship_EMPWeaponsDeactivation" Duration="$(WeaponsDeactivationDuration)" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="WeaponsStatusDisabled"/>
+    </BattleEffect_ApplyDescriptor>
+
+    <BattleEffect_ApplyDescriptor Name="Ship_EMPShieldDeactivation" Duration="$(ShieldDeactivationDuration)" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="ShieldStatusDisabled"/>
+    </BattleEffect_ApplyDescriptor>
+</Datatable>

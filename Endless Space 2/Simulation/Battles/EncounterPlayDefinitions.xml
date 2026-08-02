@@ -1,0 +1,1880 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/EncounterPlayDefinition.xsd">
+
+  <!-- Note on Prerequuistes:
+         Play Prerequisites have the context Garrison and Empire - and are checked if the 'Play' is available for the Encounter.
+             2 flags are used to check the play prerequisites : Discard that hides the play in the UI and Disable that greys it out.
+         Flotilla Prerequisites are not actual 'flotilla prerequisites' (flotillas are always available - use duplicate play pre-requsites).
+         Flotilla prerequisites are for ships trying to enter the flotilla. Context = Ship in question-->
+
+  <!-- *************************** -->
+  <!--         Playbook Arena      -->
+  <!-- *************************** -->
+
+  <!-- Shield Wall -->
+  <EncounterPlayDefinition Name="PlayDefensiveBalancedShortRangeDefense" FamilyName="FamilyDefensiveBalanced">
+    <AIBattleSituations Situation="Short" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Long" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="0.5"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck1</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectShortRangeDefense"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Prudent Positions -->
+  <EncounterPlayDefinition Name="PlayDefensiveLongDamageReduction" FamilyName="FamilyDefensiveLong">
+    <AIBattleSituations Situation="Short" Mode="Against" Value="0.75"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.75"/>
+    <!-- <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck4</TechnologyPrerequisite> -->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectDamageReductionAll"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Power to Shields -->
+  <EncounterPlayDefinition Name="PlayDefensiveLongShieldIncrease" FamilyName="FamilyDefensiveLong">
+    <!-- <AIBattleSituations Situation="EnergyDefense" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="ShipToProtect" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="1"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="1"/> -->
+    <AIBattleSituations Situation="EnergyDefense" Mode="Use" Value="0.25"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.75"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectShieldIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Hard Target-->
+  <EncounterPlayDefinition Name="PlayDefensiveMediumLongRangeDefense" FamilyName="FamilyDefensiveMedium">
+    <AIBattleSituations Situation="Medium" Mode="Use" Value="1"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck2</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectLongRangeDefense"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Turtle -->
+  <EncounterPlayDefinition Name="PlayDefensiveShortHullPlatingIncrease" FamilyName="FamilyDefensiveShort">
+    <!-- <AIBattleSituations Situation="ProjectileDefense" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="ShipToProtect" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="1"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="1"/> -->
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Long" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="0.75"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectHullPlatingIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Evasive Maneuvers -->
+  <EncounterPlayDefinition Name="PlayDefensiveShortAccuracyReduction" FamilyName="FamilyDefensiveShort">
+    <AIBattleSituations Situation="Long" Mode="Against" Value="1"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="Short" Mode="Against" Value="-1"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck3</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="OtherGroups">
+      <SimulationDescriptorReference Name="PlayEffectAccuracyReductionOther"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Plasma Distortion -->
+  <EncounterPlayDefinition Name="PlayOffensiveBalancedShieldPenetrationIncrease" FamilyName="FamilyOffensiveBalanced">
+    <!-- <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="0"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="-1"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="1"/> -->
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="-0.5"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectShieldPenetrationIncrease"/>
+    </StatusModifier>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectShieldPenetrationIncreaseAll"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Plasma Distortion++ -->
+  <EncounterPlayDefinition Name="PlayOffensiveBalancedShieldPenetrationIncrease2" FamilyName="FamilyOffensiveBalanced">
+    <!-- <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="0"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="-1"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="1"/> -->
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="0.75"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="-0.75"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectShieldPenetrationIncrease2"/>
+    </StatusModifier>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectShieldPenetrationIncreaseAll2"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Bigger is Better -->
+  <EncounterPlayDefinition Name="PlayOffensiveBalancedDamageIncrease" FamilyName="FamilyOffensiveBalanced">
+    <AIBattleSituations Situation="LargeShip" Mode="Against" Value="0.75"/>
+    <AIBattleSituations Situation="SmallShip" Mode="Use" Value="0.75"/>
+    <AIBattleSituations Situation="SmallShip" Mode="Against" Value="-1.5"/>
+    <AIBattleSituations Situation="Medium" Mode="Use" Value="1"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck4</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectDamageIncreasePerTargetCommandPoints"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Barrage Fire -->
+  <EncounterPlayDefinition Name="PlayOffensiveLongDamageIncreasePerShip" FamilyName="FamilyOffensiveLong">
+    <AIBattleSituations Situation="HigherShipsNumber" Mode="Against" Value="0.75"/>
+    <AIBattleSituations Situation="Short" Mode="Against" Value="0.75"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="Long" Mode="Against" Value="-0.5"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="-1"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck4</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectDamageIncreasePerShipAtLongRange"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Gravity Distortion -->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumProjectilePenertrationIncrease" FamilyName="FamilyOffensiveMedium">
+    <!-- <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="0"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="-1"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="1"/> -->
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="-0.5"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="0.5"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectHullPlatingPenetrationIncrease"/>
+    </StatusModifier>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectHullPlatingPenetrationIncreaseAll"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Gravity Distortion++ -->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumProjectilePenertrationIncrease2" FamilyName="FamilyOffensiveMedium">
+    <!-- <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="0"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="-1"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="1"/> -->
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Against" Value="-0.75"/>
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="0.75"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectHullPlatingPenetrationIncrease2"/>
+    </StatusModifier>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectHullPlatingPenetrationIncreaseAll2"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Team Spirit in curio -->
+  <EncounterPlayDefinition Name="PlayOffensiveShortMoraleBonusIncrease" FamilyName="FamilyOffensiveShort">
+    <AIBattleSituations Situation="HigherShipsNumber" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="Long" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="HigherShipsNumber" Mode="Against" Value="-0.5"/>
+    <!-- <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck4</TechnologyPrerequisite> -->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectMoraleBonusIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Soft Targets (Unused) -->
+  <EncounterPlayDefinition Name="PlayOffensiveShortWeakestTargeting" FamilyName="FamilyOffensiveShort">
+    <AIBattleSituations Situation="ShipToProtect" Mode="Against" Value="0.25"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck3</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="OtherGroups">
+      <SimulationDescriptorReference Name="PlayEffectWeakestTargetingOther"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Revive & Rebuild (Unused - Dust per CP Killed) -->
+  <EncounterPlayDefinition Name="PlayPostBalancedRecycling" FamilyName="FamilyPostBalanced">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.25"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="-0.25"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectPlayerRecycling"/>
+      <BattleActionReference Name="Group_ComputePlayerRecyclingDustGain"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Post-Op Analysis -->
+  <EncounterPlayDefinition Name="PlayPostBalancedXPIncrease" FamilyName="FamilyPostBalanced">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.25"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="-0.5"/>
+    <AIBattleSituations Situation="Medium" Mode="Use" Value="1"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck1</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectXPEnhancedGroup"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Take Trophies -->
+  <EncounterPlayDefinition Name="PlayPostBalancedOpponentRecycling" FamilyName="FamilyPostBalanced">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="-0.5"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="0.25"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.25"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck3</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectOpponentRecycling"/>
+      <BattleActionReference Name="Group_ComputeOpponentRecyclingDustGain"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+  <!-- Repair and Recover -->
+  <EncounterPlayDefinition Name="PlayPostMediumRepair" FamilyName="FamilyPostMedium">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="-0.5"/>
+    <AIBattleSituations Situation="Medium" Mode="Use" Value="0.5"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck2</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectCoreRepairGroup"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+
+  </EncounterPlayDefinition>
+
+
+  <!-- New plays -->
+
+  <!-- Hopeless -->
+  <EncounterPlayDefinition Name="PlayDefensiveMediumMoralePenalty" FamilyName="FamilyDefensiveMedium">
+    <AIBattleSituations Situation="HigherShipsNumber" Mode="Against" Value="0.75"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.75"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectMoralePenalty"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2" CommandPointMin="4">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="4">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3" CommandPointMin="4">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Unlucky Arms -->
+  <EncounterPlayDefinition Name="PlayDefensiveLongCriticReduction" FamilyName="FamilyDefensiveLong">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.5"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.75"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck2</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectCriticReduction"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Get Lucky -->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumCriticIncrease" FamilyName="FamilyOffensiveMedium">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="0.25"/>
+    <AIBattleSituations Situation="Medium" Mode="Use" Value="0.75"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck1</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectCriticIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Unused -->
+  <EncounterPlayDefinition Name="PlayPostShortInfluenceGain" FamilyName="FamilyPostShort">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="-1"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck1</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectInfluenceGain"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Science from Scrap (Unused) -->
+  <EncounterPlayDefinition Name="PlayPostShortScienceGain" FamilyName="FamilyPostShort">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="-1"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectScienceGain"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Irradiation (Unused) -->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumEnergyManpowerKillIncrease" FamilyName="FamilyOffensiveMedium">
+    <AIBattleSituations Situation="EnergyWeapon" Mode="Use" Value="0.25"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck2</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectEnergyManpowerKillIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Shrapnel Munitions (Unused) -->
+  <EncounterPlayDefinition Name="PlayOffensiveShortProjectileManpowerKillIncrease" FamilyName="FamilyOffensiveShort">
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="0.25"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck1</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectProjectileManpowerKillIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Lifepods Away -->
+  <EncounterPlayDefinition Name="PlayPostLongEmpireManpowerSaving" FamilyName="FamilyPostLong">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.5"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck6</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectEmpireManpowerSaving"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Needs of the Many -->
+  <EncounterPlayDefinition Name="PlayOffensiveShortManpowerAgainstDamage" FamilyName="FamilyOffensiveShort">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.5"/>
+    <!-- <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck3</TechnologyPrerequisite> -->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectManpowerAgainstDamage"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Radiation Shield (Unused) -->
+  <EncounterPlayDefinition Name="PlayDefensiveShortEnergyManpowerAbsorptionIncrease" FamilyName="FamilyDefensiveShort">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck4</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectEnergyManpowerAbsorptionIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Anti-Shrapnel Hull (Unused) -->
+  <EncounterPlayDefinition Name="PlayDefensiveLongProjectileManpowerAbsorptionIncrease" FamilyName="FamilyDefensiveLong">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck3</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectProjectileManpowerAbsorptionIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Grim Recycling -->
+  <EncounterPlayDefinition Name="PlayDefensiveBalancedLostShipRepair" FamilyName="FamilyDefensiveBalanced">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.5"/>
+    <AIBattleSituations Situation="HigherShipsNumber" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.75"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck2</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectLostShipDefenseBoost"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Emergency Battery (Unused) -->
+  <EncounterPlayDefinition Name="PlayDefensiveBalancedShieldReload" FamilyName="FamilyDefensiveBalanced">
+    <AIBattleSituations Situation="EnergyDefense" Mode="Use" Value="0.25"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectShieldReload"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Fewer the Proud -->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumLostShipDamageIncrease" FamilyName="FamilyOffensiveMedium">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.5"/>
+    <AIBattleSituations Situation="HigherShipsNumber" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.25"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck1</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectLostShipDamageIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- En Passant -->
+  <EncounterPlayDefinition Name="PlayPostShortMovementGain" FamilyName="FamilyPostShort">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.75"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck4</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectMovementGain"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Full Reserves -->
+  <EncounterPlayDefinition Name="PlayPostBalancedActionGain" FamilyName="FamilyPostBalanced">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.75"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck3</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectActionGain"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Unused -->
+  <EncounterPlayDefinition Name="PlayOffensiveBalancedInfluenceAgainstDamage" FamilyName="FamilyOffensiveBalanced">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectInfluenceAgainstDamage"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Temporal Drag -->
+  <EncounterPlayDefinition Name="PlayDefensiveLongCooldownIncrease" FamilyName="FamilyOffensiveLong">
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.5"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck3</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectCooldownIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Diplomatic Immunity (Unused) -->
+  <EncounterPlayDefinition Name="PlayDefensiveLongUnarmedDefenseIncrease" FamilyName="FamilyDefensiveLong">
+    <AIBattleSituations Situation="ShipToProtect" Mode="Use" Value="0.25"/>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck2</TechnologyPrerequisite>-->
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectUnarmedDefenseIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Smart Survivors (Unused) -->
+  <EncounterPlayDefinition Name="PlayPostLongLostShipXPIncrease" FamilyName="FamilyPostLong">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectLostShipXPIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Shredyn Slugs -->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumProjectileHullPlatingPenetrationIncrease" FamilyName="FamilyOffensiveMedium">
+    <AIBattleSituations Situation="ProjectileWeapon" Mode="Use" Value="1"/>
+    <AIBattleSituations Situation="ProjectileDefense" Mode="Against" Value="1"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.75"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeckQuest01</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectProjectileHullPlatingPenetrationIncrease"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Easy Targets (Unused) -->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumDefenseReductionPerCP" FamilyName="FamilyOffensiveMedium">
+    <AIBattleSituations Situation="SmallShip" Mode="Use" Value="0"/>
+    <AIBattleSituations Situation="SmallShip" Mode="Against" Value="-1"/>
+    <AIBattleSituations Situation="LargeShip" Mode="Against" Value="0.25"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="AllGroups">
+      <SimulationDescriptorReference Name="PlayEffectDefenseReductionPerCP"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- Collateral Damage -->
+  <EncounterPlayDefinition Name="PlayOffensiveLongSplashDamage" FamilyName="FamilyOffensiveLong">
+    <AIBattleSituations Situation="SmallShip" Mode="Against" Value="0.5"/>
+    <AIBattleSituations Situation="LargeShip" Mode="Against" Value="-0.75"/>
+    <AIBattleSituations Situation="HigherShipsNumber" Mode="Against" Value="0.5"/>
+    <AIBattleSituations Situation="Long" Mode="Use" Value="0.5"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectSplashDamage"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!-- *************************** -->
+  <!--        F/B Update		      -->
+  <!-- *************************** -->
+
+  <!-- Scramble Targeting Systems: Accuracy penalty on the opponent fleet per squadron the user has -->
+  <EncounterPlayDefinition Name="PlayOffensiveShortAccuracyReductionPerSquadron" FamilyName="FamilyOffensiveShort">
+    <AIBattleSituations Situation="Bomber" Mode="Use" Value="0.75"/>
+    <AIBattleSituations Situation="Fighter" Mode="Use" Value="0.75"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Short" Mode="Use" Value="0.25"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck7</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyLong"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectAccuracyReductionPerSquadron"/>
+    </StatusModifier>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="OtherGroups">
+      <SimulationDescriptorReference Name="PlayEffectAccuracyReductionPerSquadronOther"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!--Wing Coordination: +1% Damage on Squadrons per Squadron in Fleet-->
+  <EncounterPlayDefinition Name="PlayOffensiveMediumSquadronDamageIncreasePerSquadron" FamilyName="FamilyOffensiveMedium">
+    <AIBattleSituations Situation="Fighter" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="Bomber" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.25"/>
+    <AIBattleSituations Situation="Medium" Mode="Use" Value="0.25"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeckQuest02</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectSquadronDamageIncreasePerSquadron"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Medium" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!--Squadron Repairs: +5% Health repaired on Ship with surviving Squadron Modules-->
+  <EncounterPlayDefinition Name="PlayPostLongShipRepairWithSquadron" FamilyName="FamilyPostLong">
+    <AIBattleSituations Situation="MorePowerful" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Fighter" Mode="Against" Value="-1"/>
+    <AIBattleSituations Situation="Bomber" Mode="Against" Value="0.25"/>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectShipRepairWithSquadron"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!--Strafing Run: All Fighters escort bombers, +10% Critical Attack Chance on Squadrons-->
+  <EncounterPlayDefinition Name="PlayOffensiveBalancedSquadronOffenseBoost" FamilyName="FamilyOffensiveBalanced">
+    <AIBattleSituations Situation="Fighter" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="Bomber" Mode="Use" Value="0.5"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="0.5"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck7</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectSquadronOffenseBoost"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+
+  <!--Close Air Defense	All Fighters escort Ships, +10% Dodge on Squadrons-->
+  <EncounterPlayDefinition Name="PlayDefensiveMediumSquadronDefenseBoost" FamilyName="FamilyDefensiveMedium">
+    <AIBattleSituations Situation="Fighter" Mode="Use" Value="0.75"/>
+    <AIBattleSituations Situation="Fighter" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="Bomber" Mode="Against" Value="0.25"/>
+    <AIBattleSituations Situation="MorePowerful" Mode="Use" Value="-0.75"/>
+    <AIBattleSituations Situation="Medium" Mode="Use" Value="0.5"/>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeck7</TechnologyPrerequisite>
+    <CounterRule FamilyName="FamilyShort"/>
+    <StatusModifier  StatusTags="Regular Counter Countered">
+      <SimulationDescriptorReference Name="PlayEffectSquadronDefenseBoost"/>
+    </StatusModifier>
+    <StatusModifier  StatusTags="Regular Counter Countered" ApplicationScopeTags="OtherGroups">
+      <SimulationDescriptorReference Name="PlayEffectSquadronDefenseBoostOther"/>
+    </StatusModifier>
+    <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla02" OptimalRangeName="Medium" CommandPointMin="1">
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <Flotilla Name="Flotilla03" OptimalRangeName="Medium" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </Flotilla>
+    <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+      <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+      <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+      <FormationReference Name="Formation03"/>
+    </ReinforcementFlotilla>
+    <ReinforcementSpawnParameters PhaseIndex="1">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="2">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+    </ReinforcementSpawnParameters>
+    <ReinforcementSpawnParameters PhaseIndex="3">
+      <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+    </ReinforcementSpawnParameters>
+  </EncounterPlayDefinition>
+</Datatable>

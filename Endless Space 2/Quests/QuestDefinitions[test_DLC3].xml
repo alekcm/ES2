@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+
+    <QuestDefinition Name="TestNodeHacked" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$MyEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$TargetEmpire">
+                <First>
+                    <From Source="$MajorEmpires">
+                        <Where>
+                            <IsNot EntityVarName="$MyEmpire"/>
+                        </Where>
+                    </From>
+                </First>
+            </Var>
+            <Var VarName="$TargetSystem">
+                <From Source="$TargetEmpire.$ColonizedStarSystems.$StarSystem"/>
+            </Var>
+            <Var VarName="$ColonyEmpire"/>
+            <Var VarName="$Colony"/>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_NodeHacked NodeFilter="OnlyHackTarget" Initiator="Empire" HackingOperationFilter="OnlyRegular">
+                                <Input_Nodes VarName="$TargetSystem"/>
+                                <Output_ColonizedStarSystem VarName="$Colony"/>
+                                <Output_ColonyEmpire VarName="$ColonyEmpire"/>
+                            </Decorator_NodeHacked>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestTraitorSpawned" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$MyEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$TargetEmpire">
+                <First>
+                    <From Source="$MajorEmpires">
+                        <Where>
+                            <IsNot EntityVarName="$MyEmpire"/>
+                        </Where>
+                    </From>
+                </First>
+            </Var>
+            <Var VarName="$TargetSystem">
+                <Any>
+                    <From Source="$TargetEmpire.$HomeColonizedStarSystem"/>
+                </Any>
+            </Var>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_TraitorSpawned Initiator="Empire">
+                                <Input_ColonizedStarSystem VarName="$TargetSystem"/>
+                                <Input_Empire VarName="$TargetEmpire"/>
+                            </Decorator_TraitorSpawned>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestConditionHasTraitors" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$MyEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$OtherEmpires">
+                <From Source="$Empires">
+                    <Where>
+                        <IsNot EntityVarName="$MyEmpire"/>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$Count">
+                <Count>
+                    <From Source="$OtherEmpires.$ColonizedStarSystems">
+                        <Where>
+                            <FilterColonizedStarSystemByTraitorPresence TraitorOwnerVarName="$MyEmpire"/>
+                        </Where>
+                    </From>
+                </Count>
+            </Var>
+            <Var VarName="$MinimumAmount" IntValue="2"/>
+            <Var VarName="$Expression" StringValue="$(Count)"/>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1" StartValue="$Count" EndValue="$MinimumAmount">
+                        <Sequence>
+                            <Decorator_BeginTurn StopAtFirstFailedCondition="false">
+                                <Condition_HasTraitors>
+                                    <Input_Empire VarName="$MyEmpire"/>
+                                    <Input_MinimumSystemAmount VarName="$MinimumAmount"/>
+                                    <Output_Count VarName="$Count"/>
+                                </Condition_HasTraitors>
+                                <Condition_IsProgressionComplete>
+                                    <Input_Expression VarName="$Expression"/>
+                                </Condition_IsProgressionComplete>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestColoOrInvadeGhost" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$MyEmpire">
+                <From Source="$Empire"/>
+            </Var>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Parallel CompletionPolicy="First">
+                            <Decorator_ColonizedSystem ColonyStateFilter="None" Initiator="Empire"/>
+                            <Decorator_InvadeSystem>
+                                <Input_GroundBattleOutcomeType>Capture</Input_GroundBattleOutcomeType>
+                            </Decorator_InvadeSystem>
+                        </Parallel>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestKillFleetOnMovement" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$Fleet"/>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_FleetDocked>
+                                <Output_Fleet VarName="$Fleet"/>
+                            </Decorator_FleetDocked>
+                            <Action_DestroyFleets>
+                                <Input_Fleets VarName="$Fleet"/>
+                            </Action_DestroyFleets>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestTraceStarted" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$TargetEmpire">
+                <First>
+                    <From Source="$MajorEmpires">
+                        <Where>
+                            <IsNot EntityVarName="$CurrentEmpire"/>
+                        </Where>
+                    </From>
+                </First>
+            </Var>
+            <Var VarName="$Node"/>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_HackingOperationStarted HackingOperationFilter="OnlyTrace">
+                                <Input_HackerEmpire VarName="$CurrentEmpire"/>
+                                <Input_TracedEmpire VarName="$TargetEmpire"/>
+                                <Output_Node VarName="$Node"/>
+                            </Decorator_HackingOperationStarted>
+                            <Decorator_BeginTurn/>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestInvisibilitySwitched" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_FleetInvisibilityChanged Initiator="Empire"/>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestBeacon" Category="Test" SubCategory="">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$BeaconNode">
+                <Any>
+                    <From Source="$Empire.$Beacons.$GameNode"/>
+                </Any>
+            </Var>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Action_AddQuestMarkers>
+                                <Input_Targets VarName="$BeaconNode"/>
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Action_AddQuestMarkers>
+                            <Decorator_BeginTurn/>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <QuestDefinition Name="TestKillFleets" Category="Test" SubCategory="" SingleCheckPerTurn="true">
+
+        <!--============ TAGS ============-->
+        <Tags></Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="0"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$Fleets">
+                <From Source="$Empire.$Fleets"/>
+            </Var>
+        </Vars>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Action_DestroyFleets>
+                                <Input_Fleets VarName="$Fleets"/>
+                            </Action_DestroyFleets>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+</Datatable>

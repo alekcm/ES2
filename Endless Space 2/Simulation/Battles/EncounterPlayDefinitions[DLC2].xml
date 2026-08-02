@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/EncounterPlayDefinition.xsd">
+
+    <!-- Note on Prerequuistes:
+         Play Prerequisites have the context Garrison and Empire - and are checked if the 'Play' is available for the Encounter.
+             2 flags are used to check the play prerequisites : Discard that hides the play in the UI and Disable that greys it out.
+         Flotilla Prerequisites are not actual 'flotilla prerequisites' (flotillas are always available - use duplicate play pre-requsites).
+         Flotilla prerequisites are for ships trying to enter the flotilla. Context = Ship in question-->
+
+    <!-- *************************** -->
+    <!--         Playbook Arena      -->
+    <!-- *************************** -->
+
+    <EncounterPlayDefinition Name="PlayOffensiveShortDamageBoost" FamilyName="FamilyOffensiveShort">
+        <AIBattleSituations Situation="Long" Mode="Against" Value="1"/>
+        <AIBattleSituations Situation="Short" Mode="Against" Value="-1"/>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeckQuestHisshos05</TechnologyPrerequisite>
+        <CounterRule FamilyName="FamilyShort"/>
+        <StatusModifier  StatusTags="Regular Counter Countered">
+            <SimulationDescriptorReference Name="PlayEffectDamageIncreaseIfAlone"/>
+        </StatusModifier>
+        <Flotilla Name="Flotilla01" OptimalRangeName="Short" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+            <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </Flotilla>
+        <Flotilla Name="Flotilla02" OptimalRangeName="Short" CommandPointMin="1">
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </Flotilla>
+        <Flotilla Name="Flotilla03" OptimalRangeName="Short" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+            <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </Flotilla>
+        <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+            <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </ReinforcementFlotilla>
+        <ReinforcementSpawnParameters PhaseIndex="1">
+            <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+        </ReinforcementSpawnParameters>
+        <ReinforcementSpawnParameters PhaseIndex="2">
+            <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+        </ReinforcementSpawnParameters>
+        <ReinforcementSpawnParameters PhaseIndex="3">
+            <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+        </ReinforcementSpawnParameters>
+
+    </EncounterPlayDefinition>
+
+    <EncounterPlayDefinition Name="PlayDefensiveLongDefenseBoost" FamilyName="FamilyDefensiveLong">
+        <AIBattleSituations Situation="Short" Mode="Against" Value="1"/>
+        <AIBattleSituations Situation="Long" Mode="Against" Value="-1"/>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology" UnlockHidden="true">TechnologyPlayDeckQuestHisshos06</TechnologyPrerequisite>
+        <CounterRule FamilyName="FamilyLong"/>
+        <StatusModifier  StatusTags="Regular Counter Countered">
+            <SimulationDescriptorReference Name="PlayEffectDefenseIncreaseIfAlone"/>
+        </StatusModifier>
+        <Flotilla Name="Flotilla01" OptimalRangeName="Long" UICommandPointsMinForUnlock="5" UIShipsMinForUnlock="2">
+            <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 5 and $(ShipsCount) ge 2</InterpreterPrerequisite>
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </Flotilla>
+        <Flotilla Name="Flotilla02" OptimalRangeName="Long" CommandPointMin="1">
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </Flotilla>
+        <Flotilla Name="Flotilla03" OptimalRangeName="Long" UICommandPointsMinForUnlock="10" UIShipsMinForUnlock="3">
+            <InterpreterPrerequisite Flags="Prerequisite,Discard">$(CommandPoints) ge 10 and $(ShipsCount) ge 3</InterpreterPrerequisite>
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </Flotilla>
+        <ReinforcementFlotilla Name="ReinforcementFlotilla01" CommandPointMax="10">
+            <TechnologyPrerequisite Flags="Technology,Discard">TechnologyUnknown</TechnologyPrerequisite>
+            <ShipSizeQuota ShipSize="ShipSizeJuggernaut" Quota="1"/>
+            <FormationReference Name="Formation03"/>
+        </ReinforcementFlotilla>
+        <ReinforcementSpawnParameters PhaseIndex="1">
+            <SimulationDescriptorReference Name="FlotillaReinforcementPhase1"/>
+        </ReinforcementSpawnParameters>
+        <ReinforcementSpawnParameters PhaseIndex="2">
+            <SimulationDescriptorReference Name="FlotillaReinforcementPhase2"/>
+        </ReinforcementSpawnParameters>
+        <ReinforcementSpawnParameters PhaseIndex="3">
+            <SimulationDescriptorReference Name="FlotillaReinforcementPhase3"/>
+        </ReinforcementSpawnParameters>
+
+    </EncounterPlayDefinition>
+
+</Datatable>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <GuiElement Name="PlayOffensiveShortDamageBoost">
+        <Title>%PlayOffensiveShortDamageBoostTitle</Title>
+        <Description>%PlayOffensiveShortDamageBoostDescription</Description>
+        <Icons>
+            <Icon Size="Small"  Path="CuriosityUnlockEncounterOffensivePlay"/>
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Battle/BattleCardBackgrounds/BattleCardBackgroundGeneric" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="PlayDefensiveLongDefenseBoost">
+        <Title>%PlayDefensiveLongDefenseBoostTitle</Title>
+        <Description>%PlayDefensiveLongDefenseBoostDescription</Description>
+        <Icons>
+            <Icon Size="Small"  Path="CuriosityUnlockEncounterDefensivePlay"/>
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/Battle/BattleCardBackgrounds/BattleCardBackgroundGeneric" />
+        </Icons>
+    </GuiElement>
+
+    <DamageDataGuiElement Name="DamageAppliedByCitadel">
+        <Title>%DamageAppliedByCitadelTitle</Title>
+        <Description>%DamageAppliedByCitadelDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="JuggernautCitadelSmall"/>
+            <Icon Size="Medium" Path="JuggernautCitadelMedium"/>
+        </Icons>
+    </DamageDataGuiElement>
+
+</Datatable>

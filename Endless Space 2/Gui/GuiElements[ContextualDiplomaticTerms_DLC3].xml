@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+    
+    <!-- ###### COLONIZATION CONCURRENCE ###### -->
+    <ContextualDiplomaticTermGuiElement Name="ContextualHackingTrace">
+        <Title>%ContextualHackingTraceTitle</Title>
+        <Description>%ContextualHackingTraceDialogue</Description>
+        <Icons>
+            <Icon Size="Small" Path="CategoryContextualTerm" />
+            <Icon Size="SmallExtended" Path="CategoryContextualTermNew" />
+        </Icons>
+        <TermTitle>%ContextualHackingTraceTermTitle</TermTitle>
+        <TermDescription>%ContextualHackingTraceTermDescription</TermDescription>
+    </ContextualDiplomaticTermGuiElement>
+
+    <!-- Choices -->
+    <ExtendedGuiElement Name="ContextualHackingTraceAccept">
+        <Title>%ContextualHackingTraceAcceptTitle</Title>
+        <Description>%ContextualHackingTraceAcceptDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="PoliticsPacifistSmall" />
+            <Icon Size="Medium" Path="PoliticsPacifistMedium" />
+        </Icons>
+        <Color Red="165" Green="85" Blue="231" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ContextualHackingTraceRefuse">
+        <Title>%ContextualHackingTraceRefuseTitle</Title>
+        <Description>%ContextualHackingTraceRefuseDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="PoliticsScientistSmall" />
+            <Icon Size="Medium" Path="PoliticsScientistMedium" />
+        </Icons>
+        <Color Red="176" Green="198" Blue="93" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <GuiElement Name="ContextualHackingTraceRefused">
+        <Title>%ContextualHackingTraceRefusedTitle</Title>
+        <Description>%ContextualHackingTraceRefusedDialogue</Description>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="ContextualHackingTraceRefusedDefend">
+        <Title>%ContextualHackingTraceRefusedDefendTitle</Title>
+        <Description>%ContextualHackingTraceRefusedDefendDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="PoliticsEcologistSmall" />
+            <Icon Size="Medium" Path="PoliticsEcologistMedium" />
+        </Icons>
+        <Color Red="184" Green="39" Blue="56" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ContextualHackingTraceRefusedAttack">
+        <Title>%ContextualHackingTraceRefusedAttackTitle</Title>
+        <Description>%ContextualHackingTraceRefusedAttackDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="PoliticsScientistSmall" />
+            <Icon Size="Medium" Path="PoliticsScientistSmall" />
+        </Icons>
+        <Color Red="217" Green="194" Blue="130" Alpha="255" />
+    </ExtendedGuiElement>
+
+</Datatable>

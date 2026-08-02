@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <!-- HULLS -->
+
+  <!-- Hull4 (medium attacker) unlocks additional slots for small attacker ships -->
+  <SimulationDescriptor Name="EmpireImprovementSlotsSmall01Templars"  Type="EmpireImprovement">
+    <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassShip,ShipHull01,ShipSizeSmall" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- Hull5 (medium defender) unlocks additional slots for small support ships -->
+  <SimulationDescriptor Name="EmpireImprovementSlotsSmall02Templars"  Type="EmpireImprovement"      >
+    <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipHull02,ShipSizeSmall" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- Hull6 (large ship) unlocks additional slots for all medium ships -->
+  <SimulationDescriptor Name="EmpireImprovementSlotsMedium01Templars" Type="EmpireImprovement">
+    <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull01" TooltipHidden="true" />
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="EmpireImprovementSlotsMedium02Templars" Type="EmpireImprovement">
+    <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull02" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- Hull6Slots unlocks additional slots for large ships-->
+  <SimulationDescriptor Name="EmpireImprovementSlotsLarge01Templars" Type="EmpireImprovement">
+    <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeLarge" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- ECONOMY -->
+
+  <!-- HACKING -->
+
+  <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Templars"  Type="EmpireImprovement"/>
+
+  <!--QUEST-->
+
+  <SimulationDescriptor Name="EmpireImprovementTemplarsFinalQuest1" Type="EmpireImprovement">
+    <Modifier TargetProperty="PlanetScienceModifier" Operation="Force" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassPlanet" Priority="1" TooltipOverride="%EmpireImprovementTemplarsFinalQuest1TooltipOverride"/>
+    <Modifier TargetProperty="CanUseRawPlanetScience"             Operation="Force"   Value="1"    Path="ClassEmpire" TooltipHidden="true" Priority="1"/>
+    <Modifier TargetProperty="CanUseRawPlanetScience"             Operation="Force"   Value="1"    Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true" Priority="1"/>
+    <Modifier TargetProperty="CannotUseRawPlanetScience"          Operation="Force"   Value="0"    Path="ClassEmpire" TooltipHidden="true" Priority="1"/>
+    <Modifier TargetProperty="CannotUseRawPlanetScience"          Operation="Force"   Value="0"    Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true" Priority="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementTemplarsFinalQuest2" Type="EmpireImprovement">
+    <Modifier TargetProperty="SciencePerUnassignedRelic" Operation="Multiplication" Value="2" Path="ClassEmpire" TooltipOverride="%EmpireImprovementTemplarsFinalQuest2TooltipOverride"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementAcademyDiplomacy" Type="EmpireImprovement">
+    <Modifier TargetProperty="AcademyFactionGameplayUnlocked" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor" TooltipOverride="%UnlockedAcademyDiplomacyTooltip"/>
+  </SimulationDescriptor>
+</Datatable>

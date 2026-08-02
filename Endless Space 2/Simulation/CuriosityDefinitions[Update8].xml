@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/CuriosityDefinition.xsd">
+
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+    <!-- ########## ONLY ONE TYPE OF EFFECT PER CURIOSITY DEFINITION! ########### -->
+    <!-- ######################################################################## -->
+    <!-- ######################################################################## -->
+
+    <CuriosityDefinition Name="Curiosity_Quest_MinorPopulation04" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                   Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulationEmpireAffinityMavros', PopulationCount, true) ge 1 and Property(Context, @'ClassEmpire/ClassPopulationEmpireAffinitySophons', PopulationCount, true) ge 1</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Quest_MinorPopulation05" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                     Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+         <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', BankAccount) ge 500</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>        
+    </CuriosityDefinition>
+
+    <CuriosityDefinition Name="Curiosity_Quest_MinorPopulation06" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Fleet)">
+            <InterpreterPrerequisite Flags="Prerequisite">SumProperty(Context, @'ClassGarrisonFleet/ClassHero,HeroAssigned', Level) ge 4</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+
+    <CuriosityDefinition Name="Curiosity_Quest_MinorPopulation07" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                  Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire', BankAccount) ge 500</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+    
+    <CuriosityDefinition Name="Curiosity_Quest_MinorPopulation25" SubCategory="PlanetAnomaly" DisplayedType="CuriosityTypeQuest"
+                   Difficulty="1" DiscoverOnColonization="false" ScoreProvider="CuriosityDiscovered">
+        <QuestPrerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulationEmpireAffinitySefaloros', PopulationCount, true) ge 1</InterpreterPrerequisite>
+        </QuestPrerequisites>
+        <DroplistEffect>
+            <Droplist Name="CuriosityDroplistRuins_Era1"/>
+        </DroplistEffect>
+    </CuriosityDefinition>
+
+</Datatable>

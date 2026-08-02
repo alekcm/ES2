@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityVaulters" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityVaulters" Type="ClassPopulationStarSystem" />
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinityVaulters" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityVaultersScience" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityVaultersScience" Type="ClassPopulationStarSystem" />
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinityVaultersScience" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityVaultersMilitary" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityVaultersMilitary" Type="ClassPopulationStarSystem" />
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinityVaultersMilitary" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinitySistersOfMercy" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinitySistersOfMercy" Type="ClassPopulationStarSystem"/>
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinitySistersOfMercy" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+</Datatable>

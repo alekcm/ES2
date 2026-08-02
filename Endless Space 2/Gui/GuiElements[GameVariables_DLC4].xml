@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <ExtendedGuiElement Name="AffinityTemplars">
+    <Title>%AffinityTemplarsTitle</Title>
+    <Description>%AffinityTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityTemplarsSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityTemplarsMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityTemplarsMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsLarge" />
+      <Icon Size="Leader" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsLeader" />
+    </Icons>
+    <SymbolString>[templar]</SymbolString>
+    <Color Red="233" Green="105" Blue="237" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AffinityGameplayTechnologyTemplars">
+    <Title>%AffinityGameplayTemplarsTitle</Title>
+    <Description>%AffinityGameplayTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityGameplaySmall" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AcademyEmpireDiplomacyMoney">
+    <Title>%AcademyEmpireDiplomacyMoneyTitle</Title>
+    <Description>%AcademyEmpireDiplomacyMoneyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="AcademyFIDSIDust" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/AcademyFIDSIDustLarge" />
+    </Icons>
+    <SymbolString>[dust]</SymbolString>
+    <Color Red="0" Green="148" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AcademyEmpireImprovementMoney">
+    <Title>%AcademyEmpireImprovementMoneyTitle</Title>
+    <SymbolString>[dust]</SymbolString>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AcademyEmpireShipMoney">
+    <Title>%AcademyEmpireShipMoneyTitle</Title>
+    <SymbolString>[dust]</SymbolString>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FIDIRelics">
+    <Title>%FIDIRelicsTitle</Title>
+    <Description>%FIDIRelicsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/RelicSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/RelicLarge" />
+    </Icons>
+    <SymbolString>[relic]</SymbolString>
+    <Color Red="10" Green="205" Blue="180" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ResearchRelics">
+    <Title>%ResearchRelicsTitle</Title>
+    <Description>%ResearchRelicsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/RelicSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/RelicLarge" />
+    </Icons>
+    <SymbolString>[relic]</SymbolString>
+    <Color Red="10" Green="205" Blue="180" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HeroRelics">
+    <Title>%HeroRelicsTitle</Title>
+    <Description>%HeroRelicsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/RelicSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/RelicLarge" />
+    </Icons>
+    <SymbolString>[relic]</SymbolString>
+    <Color Red="10" Green="205" Blue="180" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetEmpireRelics">
+    <Title>%RelicsTitle</Title>
+    <Description>%RelicsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/RelicSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/RelicLarge" />
+    </Icons>
+    <SymbolString>[relic]</SymbolString>
+    <Color Red="10" Green="205" Blue="180" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireRelics">
+    <Title>%RelicsTitle</Title>
+    <Description>%RelicsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/RelicSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/RelicLarge" />
+    </Icons>
+    <SymbolString>[relic]</SymbolString>
+    <Color Red="10" Green="205" Blue="180" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityTemplarsCount">
+    <Title>%PopulationTemplarsTitle</Title>
+    <SymbolString>[templar]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationTemplarsTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityTemplars">
+    <Title>%ClassPopulationStarSystemAffinityTemplarsTitle</Title>
+    <SymbolString>[templar]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NetRelicsResearch">
+    <Title>%NetRelicsResearchTitle</Title>
+    <Description>%NetRelicsResearchDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIScience" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIScienceLarge" />
+    </Icons>
+    <SymbolString>[science]</SymbolString>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AcademySystemsDust">
+    <Title>%AcademySystemsDustTitle</Title>
+    <Description>%AcademySystemsDustDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIDust" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIDustLarge" />
+    </Icons>
+    <SymbolString>[dust]</SymbolString>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AcademySystemsScience">
+    <Title>%AcademySystemsScienceTitle</Title>
+    <Description>%AcademySystemsScienceDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIScience" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIScienceLarge" />
+    </Icons>
+    <SymbolString>[dust]</SymbolString>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AcademySystemsEmpirePoints">
+    <Title>%AcademySystemsEmpirePointsTitle</Title>
+    <Description>%AcademySystemsEmpirePointsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIEmpire" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIEmpirePointLarge" />
+    </Icons>
+    <SymbolString>[dust]</SymbolString>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FleetOrbitingAcademyNode">
+    <Title>%FleetOrbitingAcademyNodeTitle</Title>
+    <Description>%FleetOrbitingAcademyNodeDescription</Description>
+  </ExtendedGuiElement>
+
+  <!-- Minor Faction -->
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityMinorOraculars">
+    <Title>%ClassPopulationEmpireAffinityMinorOracularTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityMinorOracularsCount">
+    <Title>%ClassPopulationEmpireAffinityMinorOracularTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityMinorOraculars">
+    <Title>%ClassPopulationStarSystemAffinityMinorOracularTitle</Title>
+    <SymbolString>[oracular]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityMinorOracularsCount">
+    <Title>%ClassPopulationStarSystemAffinityMinorOracularTitle</Title>
+    <SymbolString>[oracular]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityMinorOraculars">
+    <Title>%PopulationMinorOracularTitle</Title>
+    <Description>%PopulationMinorOracularDescription</Description>
+    <SymbolString>[oracular]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationMinorOracularTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityMinorOracularsCount">
+    <Title>%PopulationMinorOracularTitle</Title>
+    <Description>%PopulationMinorOracularDescription</Description>
+    <SymbolString>[oracular]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationMinorOracularTitle</AltTitle>
+  </ExtendedGuiElement>
+
+
+  <ExtendedGuiElement Name="AffinityMinorOraculars">
+    <Title>%AffinityMinorOracularsTitle</Title>
+    <Description>%AffinityMinorOracularsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityMinorOracularsSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityMinorOracularsMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityMinorOracularsMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityMinorOracularsLarge" />
+    </Icons>
+    <SymbolString>[oracular]</SymbolString>
+    <Color Red="255" Green="141" Blue="102" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemConvertedForAcademy">
+    <Title>%SystemConvertedForAcademyTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AcademySystemsTitheModifier">
+    <Title>%AcademySystemsTitheModifierTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EcologistVoicesModifier">
+    <Title>%EcologistVoicesModifierTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="TemplePopulationModifier">
+    <Title>%TemplePopulationModifierTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireInfluenceRelics">
+    <Title>%EmpireInfluenceRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireDustRelics">
+    <Title>%EmpireDustRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireFoodRelics">
+    <Title>%EmpireFoodRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireIndustryRelics">
+    <Title>%EmpireIndustryRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassModuleWeaponOnAcademyShips">
+    <Title>%ClassModuleWeaponOnAcademyShipsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="DefaultPlanetScienceMalus">
+    <Title>%FactionTraitScienceReductionTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemFIDSIPercentFromImprovementUniqueTemplars">
+    <Title>%StarSystemImprovementUniqueTemplarsTitle</Title>
+    <SymbolString>[FIDSI]</SymbolString>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSBonus">
+    <Title>%PlanetInitialFIDSBonusTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="RelicSlotsUnlocked">
+    <Title>%RelicSlotsUnlockedTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SystemInfluenceRadius">
+    <Title>%SystemInfluenceRadiusTitle</Title>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="FleetsInInfluenceZone">
+    <Title>%FleetsInInfluenceZoneTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="TroopHealthPerTemple">
+    <Title>%TroopHealthPerTempleTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="AwokenSlumberingRuins">
+    <Title>%AwokenSlumberingRuinsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SlumberingRuins">
+    <Title>%SlumberingRuinsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="EmpireTypeMajor">
+    <Title>%EmpireTypeMajorTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="false">
+    <Title>%false</Title>
+  </GuiElement>
+
+  <GuiElement Name="FAKE">
+    <Title>%FAKE</Title>
+  </GuiElement>
+
+  <GuiElement Name="ScienceBonusFromRelicsPerFertilePlanet">
+    <Title>%StarSystemImprovementScience6TemplarsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="ScienceBonusFromRelicsPerAnomaly">
+    <Title>%StarSystemImprovementScience2TemplarsTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="PlanetIndustryFromSenatorSkill">
+    <Title>%HeroSenatorSkillTitle</Title>
+    <AltTitle>%PlanetInitialIndustryPerPopulationTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetFIDSIFromSenatorSkill">
+    <Title>%HeroSenatorSkillTitle</Title>
+    <AltTitle>%PlanetFIDSIFromSenatorSkillTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="PlanetFoodFromDevelopment">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetIndustryFromDevelopment">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetDustFromDevelopment">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetScienceFromDevelopment">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetPrestigeFromDevelopment">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetFIDSFromDevelopment">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetFIDSIFromDevelopment">
+    <Title>%EmpireImprovementLevelingSystemsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="FoodFromPopulation">
+    <Title>%ClassPopulationTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="IndustryFromPopulation">
+    <Title>%ClassPopulationTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="DustFromPopulation">
+    <Title>%ClassPopulationTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="ScienceFromPopulation">
+    <Title>%ClassPopulationTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PrestigeFromPopulation">
+    <Title>%ClassPopulationTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetInitialFIDSBonusPerPopulation">
+    <Title>%PlanetInitialFIDSBonusPerPopulationTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetScienceModifier">
+    <Title>%PlanetScienceModifierTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="InfluenceRadiusModifier">
+    <Title>%InfluenceRadiusModifierTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="RelationPointsTrend">
+    <Title>%RelationPointsTrendTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="SciencePerUnassignedRelic">
+    <Title>%SciencePerUnassignedRelicTitle</Title>
+    <AltTitle>%ResearchRelicsTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDS">
+    <Icons>
+      <Icon Size="Small" Path="FIDSI" />
+    </Icons>
+    <SymbolString>[FIDS]</SymbolString>
+    <AltTitle>%PlanetInitialFIDSTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSI">
+    <Icons>
+      <Icon Size="Small" Path="FIDSI" />
+    </Icons>
+    <SymbolString>[FIDSI]</SymbolString>
+    <AltTitle>%PlanetInitialFIDSITitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFoodPerPopulation">
+    <Title>%PlanetInitialFoodPerPopulationTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIFood" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIFoodLarge" />
+    </Icons>
+    <Color Red="176" Green="198" Blue="93" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialIndustryPerPopulation">
+    <Title>%PlanetInitialIndustryPerPopulationTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIIndustry" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIIndustryLarge" />
+    </Icons>
+    <Color Red="223" Green="130" Blue="105" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialDustPerPopulation">
+    <Title>%PlanetInitialDustPerPopulationTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIDust" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIDustLarge" />
+    </Icons>
+    <Color Red="230" Green="195" Blue="97" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialSciencePerPopulation">
+    <Title>%PlanetInitialSciencePerPopulationTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIScience" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIScienceLarge" />
+    </Icons>
+    <Color Red="82" Green="201" Blue="231" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialPrestigePerPopulation">
+    <Title>%PlanetInitialPrestigePerPopulationTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="FIDSIEmpire" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/FIDSIEmpirePointLarge" />
+    </Icons>
+    <Color Red="165" Green="85" Blue="231" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSPerPopulation">
+    <Title>%PlanetInitialFIDSPerPopulationTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSIPerPopulation">
+    <Title>%PlanetInitialFIDSIPerPopulationTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSBonusPerPopulationFood">
+    <Title>%AffinityGameplayTemplarsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSBonusPerPopulationIndustry">
+    <Title>%AffinityGameplayTemplarsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSBonusPerPopulationDust">
+    <Title>%AffinityGameplayTemplarsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSBonusPerPopulationScience">
+    <Title>%AffinityGameplayTemplarsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSPenaltyFood">
+    <Title>%PlanetInitialFIDSPenaltyBreakdownTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSPenaltyIndustry">
+    <Title>%PlanetInitialFIDSPenaltyBreakdownTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSPenaltyDust">
+    <Title>%PlanetInitialFIDSPenaltyBreakdownTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlanetInitialFIDSPenaltyScience">
+    <Title>%PlanetInitialFIDSPenaltyBreakdownTitle</Title>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="ShipHull02">
+    <Title>%ShipRoleSmallSupportTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="ShipHull01">
+    <Title>%ShipRoleSmallAttackerTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="AcademyRelationPointCostMultiplier">
+    <Title>%AcademyRelationPointCostMultiplierTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="CandidateCountPerPopulation">
+    <Title>%CandidateCountPerPopulationTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="NumberOfTemples">
+    <Title>%NumberOfTemplesTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PressureTrend">
+    <Title>%PressureTrendTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ScienceScrappingBonus">
+    <Title>%ScienceScrappingBonusTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PartnerScienceTradingCostReduction">
+    <Title>%PartnerScienceTradingCostReductionTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="TempleScienceToInfluenceFactor">
+    <Title>%TempleScienceToInfluenceFactorTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HeroRecruitmentUnlocked">
+    <Title>%HeroRecruitmentUnlockedTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="Trend">
+    <Title>%TrendTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BombardmentLevel">
+    <Title>%BombardmentLevelTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BombardmentLevelTemplars">
+    <Title>%BombardmentLevelTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SentryActionLevel">
+    <Title>%SentryActionLevelTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="SpaceBattleCanFire">
+    <Title>%SpaceBattleCanFireTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HackingSpeedMultiplier">
+    <Title>%HackingSpeedMultiplierTitle</Title>
+    <SymbolString>[HackingSpeed]</SymbolString>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicIndustrialStrategicBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicScientistRelicDustBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicScientistRelicInfluenceBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicScientistRelicManpowerBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicPacifistTradeValueBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicPacifistFleetRegenBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicPacifistTroopHealthBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ActualPoliticalRelicEcologistLuxuryBoost">
+    <Title>%EmpireRelicsTitle</Title>
+  </ExtendedGuiElement>
+</Datatable>

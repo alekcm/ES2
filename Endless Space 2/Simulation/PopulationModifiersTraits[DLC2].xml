@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryManpower" SubCategory="Secondary" ShowInCustom="true" Cost="5">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryManpower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+2 Manpower per Population-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryManpower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryManpower"/>
+            </Modifier>
+        </Modifiers>
+
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetManpowerHissho"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitPrimaryInfluenceOnHot01" SubCategory="Secondary" ShowInCustom="true" Cost="5">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <!-- +1 influence on Hot -->
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitPrimaryInfluenceOnHot01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!-- +1 influence on Hot -->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryInfluenceOnHot01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryInfluenceOnHot01"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetInfluenceOnHot01"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitPrimaryHappinessAndHisshoAlternateMilitaryPower" SubCategory="Primary" ShowInCustom="false" Cost="5">
+        <!--Local Bonus: Hedonists-->
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitPrimaryHappinessAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+2 Happiness per Population-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryHappinessAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryHappinessAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+        </Modifiers>
+
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetHappiness"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <!--Contextual Bonus: Hardened Dwellers-->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryHappinessSterileAndHisshoAlternateMilitaryPower" SubCategory="Secondary" ShowInCustom="false" Cost="10">
+        <Tags>PlanetGameplayTypeMeager,BonusPopulationHappiness</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryHappinessSterileAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+4 Happiness on Sterile-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessSterileAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessSterileAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+        </Modifiers>
+
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetHappinessSterile"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <!--Contextual Bonus: Euphorists-->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryHappinessFertileAndHisshoAlternateMilitaryPower" SubCategory="Secondary" ShowInCustom="false" Cost="10">
+        <Tags>PlanetGameplayTypeTeeming,BonusPopulationHappiness</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryHappinessFertileAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+4 Happiness on Fertile-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessFertileAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessFertileAndHisshoAlternateMilitaryPower"/>
+            </Modifier>
+        </Modifiers>
+
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetHappinessFertile"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

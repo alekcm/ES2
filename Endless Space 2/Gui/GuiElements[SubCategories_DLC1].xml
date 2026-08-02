@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ExtendedGuiElement Name="SubCategoryModuleWeaponBoardingPod">
+        <Title>%CategoryWeaponBoardingPodTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="WeaponTypeBoardingPodSmall"/>
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="SubCategoryModuleWeaponAOE">
+        <Title>%CategoryModuleWeaponAOETitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="WeaponTypeAOESmall"/>
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="SubCategoryDLCActivated">
+        <Title>%SubCategoryDLCActivatedTitle</Title>
+        <Color Red="60" Green="161" Blue="46" Alpha="255" />
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="SubCategoryDLCDeactivated">
+        <Title>%SubCategoryDLCDeactivatedTitle</Title>
+        <Color Red="213" Green="72" Blue="17" Alpha="255" />
+    </ExtendedGuiElement>
+
+</Datatable>

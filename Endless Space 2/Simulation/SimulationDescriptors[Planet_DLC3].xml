@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="PlanetTypeFake" Type="PlanetType" >
+        <Property Name="PlanetClass" BaseValue="1" />
+        <Property   Name="OwnedFakePlanets"                 BaseValue="1"/>
+        
+        <Modifier TargetProperty="PlanetInitialFoodPerPopulation"            Operation="Addition" Value="3"     />
+        <Modifier TargetProperty="PlanetInitialIndustryPerPopulation"        Operation="Addition" Value="3"     />
+        <Modifier TargetProperty="PlanetInitialDustPerPopulation"            Operation="Addition" Value="3"     />
+        <Modifier TargetProperty="PlanetInitialSciencePerPopulation"         Operation="Addition" Value="3"     />
+        <Modifier TargetProperty="PlanetInitialPrestigePerPopulation"        Operation="Addition" Value="0"     />
+
+        <Modifier   TargetProperty="PlanetIsFake"               Operation="Force"     Value="1"   Path="ClassPlanet/ClassPopulationPlanet"    TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PlanetTypeFakeResourceIncreaseForMedium" Type="PlanetTypeFakeResourceIncrease">
+        <Modifier TargetProperty="PlanetInitialFoodPerPopulation"            Operation="Addition" Value="0"  />
+        <Modifier TargetProperty="PlanetInitialIndustryPerPopulation"        Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialDustPerPopulation"            Operation="Addition" Value="0"  />
+        <Modifier TargetProperty="PlanetInitialSciencePerPopulation"         Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialPrestigePerPopulation"        Operation="Addition" Value="1"  />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PlanetTypeFakeResourceIncreaseForLarge" Type="PlanetTypeFakeResourceIncrease">
+        <Modifier TargetProperty="PlanetInitialFoodPerPopulation"            Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialIndustryPerPopulation"        Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialDustPerPopulation"            Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialSciencePerPopulation"         Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialPrestigePerPopulation"        Operation="Addition" Value="1"  />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PlanetTypeFakeResourceIncreaseForHuge" Type="PlanetTypeFakeResourceIncrease">
+        <Modifier TargetProperty="PlanetInitialFoodPerPopulation"            Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialIndustryPerPopulation"        Operation="Addition" Value="2"  />
+        <Modifier TargetProperty="PlanetInitialDustPerPopulation"            Operation="Addition" Value="1"  />
+        <Modifier TargetProperty="PlanetInitialSciencePerPopulation"         Operation="Addition" Value="2"  />
+        <Modifier TargetProperty="PlanetInitialPrestigePerPopulation"        Operation="Addition" Value="1"  />
+    </SimulationDescriptor>
+</Datatable>

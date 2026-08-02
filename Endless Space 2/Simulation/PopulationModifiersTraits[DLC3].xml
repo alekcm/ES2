@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <!-- WHEN ADDING TRAITS THAT ARE RESTRICTED TO A SPECIFIC DLC, PLEASE LET A PROGRAMMER KNOW !
+    CHANGES ARE REQUIRED ON THE CODE SIDE -->
+    
+    <PopulationModifiersTrait Name="PopulationModifiersTraitPrimaryProcessingPower01" SubCategory="Primary" ShowInCustom="true" Cost="5">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitPrimaryProcessingPower01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+1 Science per Population-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryProcessingPower01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryProcessingPower01"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetProcessingPower01"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryScienceFakePlanet" SubCategory="Secondary" ShowInCustom="false" Cost="5">
+        <Tags>PlanetTypeFake,BonusPopulationProcessingPower</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryScienceFakePlanet"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+1 Science per Population on Fake Planet-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryScienceFakePlanet"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryScienceFakePlanet"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetScienceFakePlanet"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitPrimaryProcessingPowerOnSmall01" SubCategory="Secondary" ShowInCustom="false" Cost="5">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <!-- +10 Processing Power on Small -->
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitPrimaryProcessingPowerOnSmall01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!-- +10 Processing Power on Small -->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryProcessingPowerOnSmall01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryProcessingPowerOnSmall01"/>
+            </Modifier>
+        </Modifiers>
+
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetProcessingPowerOnSmall01"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    
+    <!-- Super population -->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSuperPopulation" SubCategory="Secondary" ShowInCustom="false" Cost="0">
+        <Modifiers>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireSuperPopulation"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemSuperPopulation"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetSuperPopulation"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

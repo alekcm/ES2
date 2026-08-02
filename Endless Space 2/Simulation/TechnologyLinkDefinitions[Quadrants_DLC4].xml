@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TechnologyLinkDefinition.xsd">
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique2Templars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2Templars</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull1Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique2Templars"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique3Templars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2Templars</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull2Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique3Templars"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique4ToUnique6Templars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull4Templars</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull3Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique4ToUnique6Templars"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique5ToUnique7Templars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull5Templars</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull4Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique5ToUnique7Templars"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique8ToUnique9Templars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull6Templars</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull5Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique8ToUnique9Templars"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopment5To17Templars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization12</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo17Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopment5To17"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopment17To12Templars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo17Templars</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo12FromTemplars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopment17To12"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopment17To12VenetiansTemplars" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo17Templars</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkTo12VenetiansFromTemplars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopment17To12"/>
+  </TechnologyLinkDefinition>
+
+</Datatable>

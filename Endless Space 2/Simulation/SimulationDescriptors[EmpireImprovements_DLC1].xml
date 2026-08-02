@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall01Vaulters" Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassShip,ShipHull01,ShipSizeSmall" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall02Vaulters" Type="EmpireImprovement"      >
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipHull02,ShipSizeSmall" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementSlotsMedium01Vaulters"    Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull01" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="EmpireImprovementSlotsMedium02Vaulters"    Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull02" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementSlotsLarge01Vaulters" Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeLarge" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+
+    <SimulationDescriptor Name="EmpireImprovementQuestVaulters12" Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="EmpireResearch" Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(DefenseBuildingCount)" Path="ClassEmpire" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+
+    <!-- ##################################### -->
+    <!-- #####  VAULTERS SPECIAL TECH   ###### -->
+    <!-- ###################################### -->
+
+    <SimulationDescriptor Name="EmpireImprovementFreeMovementVaulters"       Type="EmpireImprovement">
+        <Modifier TargetProperty="FreeMovementSpeed"                Operation="Addition"    Value="0.4"    Path="ClassEmpire/ClassGarrisonFleet/ClassShip" TooltipHidden="true" />
+        <Modifier TargetProperty="BaseFreeMovementSpeed"            Operation="Addition"    Value="0.4"    Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="ProbeVisionRange"                 Operation="Percent"    Value="0.25"    Path="ClassEmpire"/>
+    </SimulationDescriptor>
+   
+     <SimulationDescriptor Name="EmpireImprovementUnique11Vaulters"       Type="EmpireImprovement">
+         <Modifier TargetProperty="PortalMaximumCost"               Operation="Force"    Value="1"     Path="ClassEmpire/ClassGarrisonFleet/ClassShip" TooltipOverride="%EmpireImprovementUnique11VaultersEffect"/>
+         <Modifier TargetProperty="BasePortalMaximumCost"           Operation="Force"    Value="1"     Path="ClassEmpire" TooltipHidden="true"/>
+     </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementUnique11SuperColonizer"       Type="EmpireImprovement"/>
+
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalGrowth" Type="EmpireImprovement">
+        <!-- If you change the value, don't forget to update it in StarSystemImprovementPortal (for feedback) -->
+        <Modifier TargetProperty="NetSystemManpower"                    Operation="Addition" Value="20"     Path="ClassEmpire/ClassColonizedStarSystem/ClassImprovement,StarSystemImprovementPortal/./ClassColonizedStarSystem" />
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalOverpopulation" Type="EmpireImprovement">
+        <!-- If you change the value, don't forget to update it in StarSystemImprovementPortal (for feedback) -->
+        <Modifier TargetProperty="ShouldApplyOverPopulationPenalties"   Operation="Force" Value="0"         Path="ClassEmpire/ClassColonizedStarSystem/ClassImprovement,StarSystemImprovementPortal/./ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalPacificConversion" Type="EmpireImprovement">
+        <!-- If you change the value, don't forget to update it in StarSystemImprovementPortal (for feedback) -->
+        <Modifier TargetProperty="InfluenceConversionRateModifier"      Operation="Percent" Value="-0.5" Path="ClassEmpire/ClassColonizedStarSystem/ClassImprovement,StarSystemImprovementPortal/./ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalShipRegeneration" Type="EmpireImprovement">
+        <!-- If you change the value, don't forget to update it in StarSystemImprovementPortal (for feedback) -->
+        <Modifier TargetProperty="DockedFleetsHealthRegenerationRatio"  Operation="Addition" Value="0.15"   Path="ClassEmpire/ClassColonizedStarSystem/ClassImprovement,StarSystemImprovementPortal/./ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <!-- More fake tags for portal upgrade effects; these tags are given by the empire improvement -->
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalGrowthFakeEffect" Type="EmpireImprovement" />
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalOverpopulationFakeEffect" Type="EmpireImprovement" />
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalPacificConversionFakeEffect" Type="EmpireImprovement" />
+    <SimulationDescriptor Name="EmpireImprovementImprovedPortalShipRegenerationFakeEffect" Type="EmpireImprovement" />
+
+    <!--############################-->
+    <!--## FREE CONTENT VAULTERS  ##-->
+    <!--############################-->
+
+    <SimulationDescriptor Name="EmpireImprovementQuestMetaplot1" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumShipManpower"								Operation="Percent"			Value="0.2"		Path="ClassEmpire/ClassGarrison/ClassShip" Priority="100" />
+        <Modifier TargetProperty="MaximumShipManpower"								Operation="Percent"			Value="0.2"		Path="ClassEmpire/ClassColonizedStarSystem/ClassGarrison/ClassShip" TooltipHidden="true"  Priority="100"/>      
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementQuestMetaplot2" Type="EmpireImprovement">
+        <Modifier TargetProperty="CriticalHitChance"								Operation="Addition"	    Value="0.2"		Path="ClassEmpire/ClassGarrisonFleet/ClassShip"/>
+    </SimulationDescriptor>
+
+    <!-- ################################################### -->
+    <!-- #######               DEEDS             ####### -->
+    <!-- ################################################### -->
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds01" Type="EmpireImprovement">
+        <Modifier TargetProperty="BasePressureMultiplier" Operation="Percent" Value="0.5" Path="../ClassEmpire/ClassDiplomacy" TooltipOverride="%EmpireImprovementDeeds01TooltipsEffect" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds02" Type="EmpireImprovement">
+        <Modifier TargetProperty="DiplomacyCostReduction" Operation="Percent" Value="-0.5" Path="../ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds03" Type="EmpireImprovement">
+        <Modifier TargetProperty="RetrofitCostMultiplier" Operation="Percent" Value="-0.25" Path="../ClassEmpire" TooltipOverride="%EmpireImprovementDeeds03TooltipsEffect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds04" Type="EmpireImprovement">
+        <Modifier TargetProperty="LawUpkeep" Operation="Percent" Value="-0.5" Path="../ClassEmpire" TooltipOverride="%EmpireImprovementDeeds04TooltipsEffect"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds05" Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="EmpireMoney" Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(ScienceBuildingCount)" Path="ClassEmpire" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds06" Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="EmpireEmpirePoint" Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(ScienceBuildingCount)" Path="ClassEmpire" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds07" Type="EmpireImprovement">
+        <Modifier TargetProperty="TerraformationModifier"             Operation="Addition" Value="-0.5"  Path="ClassEmpire" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDeeds08" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumCommandPoints"               Operation="Addition" Value="2"  Path="ClassEmpire" />
+    </SimulationDescriptor>
+</Datatable>

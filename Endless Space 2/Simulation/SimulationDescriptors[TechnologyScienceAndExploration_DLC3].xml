@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="TechnologyLinkTo28UmbralChoir"              Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo25UmbralChoirTimeLords"     Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo28UmbralChoirUnfallen"      Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo28UmbralChoirTimeLords"     Type="TechnologyLink" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyGlobalHappinessUmbralChoir"       Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo7UmbralChoir"               Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo7UmbralChoirUnfallen"       Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo5UmbralChoirTimeLords"      Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo7UmbralChoirTimeLords"      Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyLinkTo6UmbralChoirTimeLords"      Type="TechnologyLink" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyScience4UmbralChoir"              Type="Technology" IsSerializable="false"/>
+    
+    <SimulationDescriptor Name="TechnologyUnique1UmbralChoir"               Type="Technology" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyWormhole2"                        Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyMovementBonus"                    Type="Technology" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyScienceOnGas"                     Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyAnomalyReduction3"                Type="Technology" IsSerializable="false"/>
+
+
+    <SimulationDescriptor Name="TechnologyHackRouteBonus1"                  Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyHackBonus1"                       Type="Technology" IsSerializable="false"/>
+    <SimulationDescriptor Name="TechnologyHackBonus2"                       Type="Technology" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="TechnologyOffensiveProgram1"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyOffensiveProgram2"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyOffensiveProgram3"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyOffensiveProgram4"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDefensiveProgram1"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDefensiveProgram2"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDefensiveProgram3"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDefensiveProgram4"                Type="Technology" IsSerializable="false">
+        <Modifier TargetProperty="UnlockedProgramCount" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+
+</Datatable>

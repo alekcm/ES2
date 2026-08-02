@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/SpecialNodeDefinition.xsd">
+
+    <SpecialNodeDefinition Name="SpecialNodeBlackHole" IgnoreForGalaxyDiscovery="false" StartInvisible="false" Category="CategorySpecialNodeBlackHole" RequiredHackingProgress="200">
+        <SimulationDescriptorReference Name="SpecialNodeEffectBlackHole"/>
+        <EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNodeBlackHole"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeBlackHole"/>
+    </SpecialNodeDefinition>
+
+    <SpecialNodeDefinition Name="SpecialNodeAsteroidField" IgnoreForGalaxyDiscovery="false" StartInvisible="false" Category="CategorySpecialNodeAsteroidField" RequiredHackingProgress="200">
+        <SimulationDescriptorReference Name="SpecialNodeEffectAsteroidField"/>
+        <EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNodeAsteroidField"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeAsteroidField"/>
+    </SpecialNodeDefinition>
+
+    <SpecialNodeDefinition Name="SpecialNodeAsteroidField2" IgnoreForGalaxyDiscovery="true" StartInvisible="true" Category="CategorySpecialNodeAsteroidField" RequiredHackingProgress="200">
+        <TechnologyPrerequisite Flags="Prerequisite,Technology" Inverted="false">TechnologyStellarDiscovery</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="SpecialNodeEffectAsteroidField"/>
+        <EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNodeAsteroidField"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeAsteroidField"/>
+    </SpecialNodeDefinition>
+
+    <SpecialNodeDefinition Name="SpecialNodeCollapsingStar" IgnoreForGalaxyDiscovery="false" StartInvisible="false" Category="CategorySpecialNodeCollapsingStar" RequiredHackingProgress="200">
+        <SimulationDescriptorReference Name="SpecialNodeEffectCollapsingStar"/>
+        <EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNodeEffectCollapsingStar"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeCollapsingStar"/>
+    </SpecialNodeDefinition>
+
+    <SpecialNodeDefinition Name="SpecialNodeSolarNebula" IgnoreForGalaxyDiscovery="false" StartInvisible="false" Category="CategorySpecialNodeSolarNebula" RequiredHackingProgress="200">
+        <SimulationDescriptorReference Name="SpecialNodeEffectSolarNebula"/>
+        <EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNodeSolarNebula"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeSolarNebula"/>
+    </SpecialNodeDefinition>
+
+    <SpecialNodeDefinition Name="SpecialNodeNeutronStar" IgnoreForGalaxyDiscovery="false" StartInvisible="false" Category="CategorySpecialNodeNeutronStar" RequiredHackingProgress="200">
+        <SimulationDescriptorReference Name="SpecialNodeEffectNeutronStar"/>
+		<EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNeutronStar"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeNeutronStar"/>
+    </SpecialNodeDefinition>
+
+    <SpecialNodeDefinition Name="SpecialNodeSpaceClouds" IgnoreForGalaxyDiscovery="false" StartInvisible="false" Category="CategorySpecialNodeSpaceClouds" RequiredHackingProgress="200">
+        <SimulationDescriptorReference Name="SpecialNodeEffectSpaceClouds"/>
+        <EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNodeSpaceClouds"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeSpaceClouds"/>
+    </SpecialNodeDefinition>
+
+    <SpecialNodeDefinition Name="SpecialNodeVaulters" IgnoreForGalaxyDiscovery="false" StartInvisible="false" Category="CategorySpecialNodeVaulters" RequiredHackingProgress="200">
+        <SimulationDescriptorReference Name="SpecialNodeEffectVaulters"/>
+        <EncounterGlobalEffectDescriptorReference Name="ArenaEffectSpecialNodeVaulters"/>
+        
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNode"/>
+        <DockedFleetsSimulationDescriptorReference Name="FleetOrbitingSpecialNodeVaulters"/>
+    </SpecialNodeDefinition>
+    
+</Datatable>

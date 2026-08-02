@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/AnomalyDefinition.xsd">
+
+    <!-- Artificial Life -->
+    <AnomalyDefinition Name="PlanetAnomaly50" Quality="Positive">
+        <SimulationDescriptorReference Name="PlanetAnomaly50"/>
+        <GeneratorInfo>
+            <PlanetFilterNot>PlanetTypeDestroyed</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBarren</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeIce</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasCold</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArctic</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSnow</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBoreal</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTundra</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasTemperate</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSteppes</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeOcean</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTerran</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeForest</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeMonsoon</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSwamp</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAtoll</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTropical</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeVeldt</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeJungle</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasWarm</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArid</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeDesert</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasHot</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAsh</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeLava</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasBurning</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasFrozen</PlanetFilterNot>
+        </GeneratorInfo>
+    </AnomalyDefinition>
+    
+    <!-- Dust Accretor -->
+    <AnomalyDefinition Name="PlanetAnomaly51" Quality="Positive">
+        <SimulationDescriptorReference Name="PlanetAnomaly51"/>
+        <GeneratorInfo>
+            <PlanetFilterNot>PlanetTypeDestroyed</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBarren</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeIce</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasCold</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArctic</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSnow</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBoreal</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTundra</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasTemperate</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSteppes</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeOcean</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTerran</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeForest</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeMonsoon</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSwamp</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAtoll</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTropical</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeVeldt</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeJungle</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasWarm</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArid</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeDesert</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasHot</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAsh</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeLava</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasBurning</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasFrozen</PlanetFilterNot>
+        </GeneratorInfo>
+    </AnomalyDefinition>
+
+    <!-- Flickering Matter -->
+    <AnomalyDefinition Name="PlanetAnomaly52" Quality="Mixed">
+        <SimulationDescriptorReference Name="PlanetAnomaly52"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyMixed"/>
+        <GeneratorInfo>
+            <PlanetFilterNot>PlanetTypeDestroyed</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBarren</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeIce</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasCold</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArctic</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSnow</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBoreal</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTundra</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasTemperate</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSteppes</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeOcean</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTerran</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeForest</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeMonsoon</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSwamp</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAtoll</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTropical</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeVeldt</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeJungle</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasWarm</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArid</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeDesert</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasHot</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAsh</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeLava</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasBurning</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasFrozen</PlanetFilterNot>
+        </GeneratorInfo>
+    </AnomalyDefinition>
+    <AnomalyDefinition Name="PlanetAnomaly52Reduced" Quality="Reduced">
+        <SimulationDescriptorReference Name="PlanetAnomaly52Reduced"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyReduced"/>
+        <GeneratorInfo/>
+    </AnomalyDefinition>
+
+    <!-- Pseudo-Atmosphere -->
+    <AnomalyDefinition Name="PlanetAnomaly53" Quality="Mixed">
+        <SimulationDescriptorReference Name="PlanetAnomaly53"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyMixed"/>
+        <GeneratorInfo>
+            <PlanetFilterNot>PlanetTypeDestroyed</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBarren</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeIce</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasCold</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArctic</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSnow</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBoreal</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTundra</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasTemperate</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSteppes</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeOcean</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTerran</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeForest</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeMonsoon</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSwamp</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAtoll</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTropical</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeVeldt</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeJungle</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasWarm</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArid</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeDesert</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasHot</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAsh</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeLava</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasBurning</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasFrozen</PlanetFilterNot>
+        </GeneratorInfo>
+    </AnomalyDefinition>
+    <AnomalyDefinition Name="PlanetAnomaly53Reduced" Quality="Reduced">
+        <SimulationDescriptorReference Name="PlanetAnomaly53Reduced"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyReduced"/>
+        <GeneratorInfo/>
+    </AnomalyDefinition>
+
+    <!-- Low-Quality Foundations -->
+    <AnomalyDefinition Name="PlanetAnomaly54" Quality="Negative">
+        <SimulationDescriptorReference Name="PlanetAnomaly54"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyNegative"/>
+        <GeneratorInfo>
+            <PlanetFilterNot>PlanetTypeDestroyed</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBarren</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeIce</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasCold</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArctic</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSnow</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBoreal</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTundra</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasTemperate</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSteppes</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeOcean</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTerran</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeForest</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeMonsoon</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSwamp</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAtoll</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTropical</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeVeldt</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeJungle</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasWarm</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArid</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeDesert</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasHot</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAsh</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeLava</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasBurning</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasFrozen</PlanetFilterNot>
+        </GeneratorInfo>
+    </AnomalyDefinition>
+    <AnomalyDefinition Name="PlanetAnomaly54Reduced" Quality="Reduced">
+        <SimulationDescriptorReference Name="PlanetAnomaly54Reduced"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyReduced"/>
+        <GeneratorInfo/>
+    </AnomalyDefinition>
+
+    <!-- Uninhabitable Area -->
+    <AnomalyDefinition Name="PlanetAnomaly55" Quality="Negative">
+        <SimulationDescriptorReference Name="PlanetAnomaly55"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyNegative"/>
+        <GeneratorInfo>
+            <PlanetFilterNot>PlanetTypeDestroyed</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBarren</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeIce</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasCold</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArctic</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSnow</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeBoreal</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTundra</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasTemperate</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSteppes</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeOcean</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTerran</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeForest</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeMonsoon</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeSwamp</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAtoll</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeTropical</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeVeldt</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeJungle</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasWarm</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeArid</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeDesert</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasHot</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeAsh</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeLava</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasBurning</PlanetFilterNot>
+            <PlanetFilterNot>PlanetTypeGasFrozen</PlanetFilterNot>
+        </GeneratorInfo>
+    </AnomalyDefinition>
+    <AnomalyDefinition Name="PlanetAnomaly55Reduced" Quality="Reduced">
+        <SimulationDescriptorReference Name="PlanetAnomaly55Reduced"/>
+        <SimulationDescriptorReference Name="PlanetAnomalyReduced"/>
+        <GeneratorInfo/>
+    </AnomalyDefinition>
+    
+</Datatable>

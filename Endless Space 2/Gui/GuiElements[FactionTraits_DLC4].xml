@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- AFFINITY GAMEPLAY -->
+  <ExtendedGuiElement Name="AffinityGameplayTemplars">
+    <Title>%AffinityGameplayTemplarsTitle</Title>
+    <Description>%AffinityGameplayTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityTemplarsSmall" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%AffinityGameplayTemplarsTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <!-- ####       Major Traits        ####-->
+
+  <!-- Technological Head Start-->
+  <ExtendedGuiElement Name="FactionTraitTechnologicalHeadStart">
+    <Title>%FactionTraitTechnologicalHeadStartTitle</Title>
+    <Description>%FactionTraitTechnologicalHeadStartDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitTechnologicalHeadStartEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitTechnologicalHeadStartLess">
+    <Title>%FactionTraitTechnologicalHeadStartTitle</Title>
+    <Description>%FactionTraitTechnologicalHeadStartDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitTechnologicalHeadStartLessEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitScienceReduction">
+    <Title>%FactionTraitScienceReductionTitle</Title>
+    <Description>%FactionTraitScienceReductionDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <!-- ####       Minor Traits        ####-->
+  <!-- Minor of the Hisshos -->
+  <ExtendedGuiElement Name="FactionTraitMinorMinorOraculars">
+    <Title>%FactionTraitMinorOracularsTitle</Title>
+    <Description>%FactionTraitMinorOracularsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitMinorOracularsTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="FactionTraitMinorBonusDamageOnAcademy">
+    <Title>%FactionTraitMinorBonusDamageOnAcademyTitle</Title>
+    <Description>%FactionTraitMinorBonusDamageOnAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="FactionTraitMinorBonusContributionToAcademy">
+    <Title>%FactionTraitMinorBonusContributionToAcademyTitle</Title>
+    <Description>%FactionTraitMinorBonusContributionToAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="PopulationModifiersTraitPrimaryHappinessTemple">
+    <Title>%PopulationModifiersTraitPrimaryHappinessTempleTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PopulationModifiersTraitSecondaryFIDSIHappy">
+    <Title>%PopulationModifiersTraitSecondaryFIDSIHappyTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PopulationModifiersTraitSecondaryDustHappyEpic">
+    <Title>%PopulationModifiersTraitSecondaryDustHappyEpicTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitConstellationVision">
+    <Title>%FactionTraitConstellationVisionTitle</Title>
+    <Description>%FactionTraitConstellationVisionDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitConstellationVisionTooltipOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitSlumberingRuins">
+    <Title>%FactionTraitSlumberingRuinsTitle</Title>
+    <Description>%FactionTraitSlumberingRuinsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitSlumberingRuinsTooltipOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitSlumberingRuinsNonTemplars">
+    <Title>%FactionTraitSlumberingRuinsTitle</Title>
+    <Description>%FactionTraitSlumberingRuinsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitSlumberingRuinsTooltipOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitSlumberingRuinsVaulters">
+    <Title>%FactionTraitSlumberingRuinsTitle</Title>
+    <Description>%FactionTraitSlumberingRuinsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitSlumberingRuinsTooltipOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitAcademyBesties">
+    <Title>%FactionTraitAcademyBestiesTitle</Title>
+    <Description>%FactionTraitAcademyBestiesDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitAcademyBestiesTooltipOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AffinityGameplayAcademyEmpire">
+    <Title>%AcademySideGlobalAcademyTitle</Title>
+    <Description>%AcademySideGlobalAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Labels/AcademyConversionLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+</Datatable>

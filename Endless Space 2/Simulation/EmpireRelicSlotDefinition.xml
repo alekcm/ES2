@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EmpireRelicSlotDefinition.xsd">
+
+  <EmpireRelicSlotDefinition Name="EmpireRelicSlot00" RelicStock="EmpireExplorationRelics" ProductionBoost="EmpireExplorationBoostMultiplier" ProductionBoostMultiplier="EmpireExplorationBoostMultiplier" GuiSymbol="[explorer]" RelicsPerLevel="2" MaxRelicAssignLevels="1">
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @ClassEmpire, RelicSlotsUnlocked) gt Property(Context, @ClassEmpire, RelicSlotsUsed) or Property(Context, @ClassEmpire, HasExplorationRelic) ge 1</InterpreterPrerequisite>
+    <!-- The or allows for the slot to always be unlocked if a relic is in it, otherwise you can't remove it if at the slot limit-->
+  </EmpireRelicSlotDefinition>
+
+  <EmpireRelicSlotDefinition Name="EmpireRelicSlot01" RelicStock="EmpireExpansionRelics" ProductionBoost="EmpireExpansionBoostMultiplier" ProductionBoostMultiplier="EmpireExpansionBoostMultiplier" GuiSymbol="[colonizer]" RelicsPerLevel="2" MaxRelicAssignLevels="1">
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @ClassEmpire, RelicSlotsUnlocked) gt Property(Context, @ClassEmpire, RelicSlotsUsed) or Property(Context, @ClassEmpire, HasExpansionRelic) ge 1</InterpreterPrerequisite>
+    <!--<TechnologyPrerequisite Flags="Prerequisite,Technology">TechnologyColonization6TimeLords</TechnologyPrerequisite> -->
+  </EmpireRelicSlotDefinition>
+
+  <EmpireRelicSlotDefinition Name="EmpireRelicSlot02" RelicStock="EmpireDiplomacyRelics" ProductionBoost="EmpireDiplomacyBoostMultiplier" ProductionBoostMultiplier="EmpireDiplomacyBoostMultiplier" GuiSymbol="[DiploStateTruce]" RelicsPerLevel="2" MaxRelicAssignLevels="1">
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @ClassEmpire, RelicSlotsUnlocked) gt Property(Context, @ClassEmpire, RelicSlotsUsed) or Property(Context, @ClassEmpire, HasDiplomacyRelic) ge 1</InterpreterPrerequisite>
+   <!-- <TechnologyPrerequisite Flags="Prerequisite,Technology">TechnologyColonization6TimeLords</TechnologyPrerequisite> -->
+  </EmpireRelicSlotDefinition>
+
+  <EmpireRelicSlotDefinition Name="EmpireRelicSlot03" RelicStock="EmpirePoliticalRelics" ProductionBoost="EmpirePoliticalBoostMultiplier" ProductionBoostMultiplier="EmpirePoliticalBoostMultiplier" GuiSymbol="[affinity]" RelicsPerLevel="2" MaxRelicAssignLevels="1">
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @ClassEmpire, RelicSlotsUnlocked) gt Property(Context, @ClassEmpire, RelicSlotsUsed) or Property(Context, @ClassEmpire, HasPoliticalRelic) ge 1</InterpreterPrerequisite>
+  </EmpireRelicSlotDefinition>
+
+</Datatable>

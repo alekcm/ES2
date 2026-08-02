@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="InvisibilityFleetAction" Type="InvisibilityFleetAction" IsSerializable="false">
+        <Modifier TargetProperty="IsInvisible" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="InvisibilityFleetActionAddAntivision" Type="InvisibilityFleetActionAddAntivision" IsSerializable="false">
+        <Modifier TargetProperty="AntiVisionStrength" Operation="Addition" Value="$(AntiVisionStrengthForModule)" Path="ClassGarrisonFleet" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FleetSeenByAnotherEmpire" Type="FleetSeenByAnotherEmpire">
+        <Modifier TargetProperty="InvisibilityDetected" Operation="Addition" Value="$(IsInvisible)"/>
+    </SimulationDescriptor>
+
+</Datatable>

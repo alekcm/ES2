@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+
+
+    <!-- ####################################### -->
+    <!--        Is the Academy Discovered        -->
+    <!-- ####################################### -->
+
+    <QuestDefinition Name="IsTheAcademyDiscovered" Category="ExplorationQuest" SubCategory="Hidden" MinimumTurn="1">
+
+        <!--============ TAGS ============-->
+        <Tags>Hidden,BeginTurn</Tags>
+
+        <QuestContextSolo/>
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <!--Empire fulfilling this quest-->
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <!--Academy-->
+            <Var VarName="$Academy">
+                <Any>
+                    <From Source="$Constellations.$StarSystems">
+                        <Where>
+                            <PathPrerequisite Flags="Prerequisite">ClassStarSystem,UniqueStarSystemAcademy</PathPrerequisite>
+                        </Where>
+                    </From>
+                </Any>
+            </Var>
+            <!--Descriptor to apply to the empire-->
+            <Var VarName="$Descriptor01" StringValue="HasDiscoveredTheAcademy"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ STEP 1 ============-->
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <Objective Name="Step1_Objective1">
+                        <AIHint Category="Minimal"/>
+                        <Sequence>
+                            <!--Wait for the Academy to be discovered by the player-->
+                            <Decorator_ExploredNode Initiator="Empire">
+                                <Input_NodeList VarName="$Academy"/>
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Decorator_ExploredNode>
+                            <!--Add the tag "HasDiscoveredTheAcademy" on the Empire-->
+                            <Action_ApplyDescriptor>
+                                <Input_DescriptorName VarName="$Descriptor01"/>
+                                <Input_Targets VarName="$CurrentEmpire"/>
+                            </Action_ApplyDescriptor>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ####################################### -->
+    <!--           UC Population Quest           -->
+    <!-- ####################################### -->
+
+    <QuestDefinition Name="PopulationQuest26" Category="PopulationQuest" SubCategory="Population" MinimumTurn="30" TriggeringProbability="1">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <!--Empire fulfilling this quest-->
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <!--The maximum amount of Hacking Operations when the quest starts-->
+            <InterpretedVar VarName="$MaximumHackingOperationAmount" Target="$(Empire)">
+                <Expression>Property(Context,@'ClassEmpire',MaximumHackingOperationsCount)</Expression>
+            </InterpretedVar>
+            <!--Academy node-->
+            <Var VarName="$Academy">
+                <Any>
+                    <From Source="$Constellations.$StarSystems">
+                        <Where>
+                            <PathPrerequisite Flags="Prerequisite">ClassStarSystem,UniqueStarSystemAcademy</PathPrerequisite>
+                        </Where>
+                    </From>
+                </Any>
+            </Var>
+
+            <!--OBJECTIVE 1-->
+            <!--Quest marker-->
+            <Var VarName="$Marker01"/>
+
+            <!--OBJECTIVE 2-->
+            <!--Is the fleet invisible-->
+            <Var VarName="$InvisibleFleetPath" StringValue="ClassGarrisonFleet,InvisibilityFleetAction"/>
+            <!--Fleet in orbit-->
+            <Var VarName="$Fleet"/>
+            <Var VarName="$MinimumFleetAmount" IntValue="1"/>
+
+            <!--OBJECTIVE 3-->
+            <!--Current amount of heroes on fleet-->
+            <InterpretedVar VarName="$AdmiralAmount" Target="$(Empire)">
+                <Expression>Count(Context,@'ClassEmpire/ClassGarrisonFleet/ClassHero')</Expression>
+            </InterpretedVar>
+            <!--Amount of heroes to get on fleets-->
+            <InterpretedVar VarName="$AdmiralObjectiveAmount" Target="$(Empire)">
+                <Expression>Property(Context,@'ClassEmpire/ClassEducation',HeroCount) +1</Expression>
+            </InterpretedVar>
+            <!--Expression to get the current amount of heroes on fleet-->
+            <Var VarName="$AdmiralAmountExpression" StringValue="Count(Context,@'ClassEmpire/ClassGarrisonFleet/ClassHero')"/>
+
+            <!--OBJECTIVE 4-->
+            <!--Duration of the timer-->
+            <InterpretedVar VarName="$Duration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*20</Expression>
+            </InterpretedVar>
+            <!--Timer itself-->
+            <Var VarName="$Timer"/>
+            <!--Amount of nodes to hack before the end of the timer-->
+            <InterpretedVar VarName="$NodesToHackAmount" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*10</Expression>
+            </InterpretedVar>
+
+            <!--LOCALIZATION VARIABLE-->
+            <LocalizationVar  LocalizationKey="$AdmiralObjectiveAmountName" Source="$AdmiralObjectiveAmount"/>
+            <LocalizationVar  LocalizationKey="$NodesToHackAmountName" Source="$NodesToHackAmount"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context,@'ClassEmpire/ClassPopulationEmpire,ClassPopulationEmpireAffinityUmbralChoir',PopulationCount,true) ge 15 </InterpreterPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCUC</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite">ClassEmpire,HasDiscoveredTheAcademy</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="1">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,HasDiscoveredTheAcademy</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="2"/>
+                    <ChoiceItem ObjectiveSetIndex="3">
+                        <Prerequisites Target="$(Empire)">
+                            <InterpreterPrerequisite Flags="Prerequisite">$(MaximumHackingOperationAmount) ge 3</InterpreterPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                </Choice>
+
+                <!--============ OBJECTIVE SET 0 - If Academy discovered ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <!--Add a quest marker-->
+                        <Action_AddQuestMarkers>
+                            <Input_Targets VarName="$Academy"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker01"/>
+                        </Action_AddQuestMarkers>
+                    </StartActions>
+                    <Objective Name="Objective0">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <!--Hack through the Academy-->
+                        <Sequence>
+                            <Decorator_NodeHacked Initiator="Empire">
+                                <Input_Nodes VarName="$Academy"/>
+                            </Decorator_NodeHacked>
+                            <Action_RemoveQuestMarkers>
+                                <Input_Markers VarName="$Marker01"/>
+                            </Action_RemoveQuestMarkers>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistPopulationQuest26-Objective0" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 1 - If Academy not discovered ============-->
+                <ObjectiveSet>
+                    <Objective Name="Objective1">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <!--Do something-->
+                        <Sequence>
+                            <!--Wait for the Academy to be discovered by the player-->
+                            <Decorator_ExploredNode Initiator="Empire">
+                                <Input_NodeList VarName="$Academy"/>
+                                <Input_Empires VarName="$CurrentEmpire"/>
+                            </Decorator_ExploredNode>
+
+                            <!--Have an invisible fleet orbiting the Academy-->
+                            <Parallel CompletionPolicy="First">
+
+                                <Sequence>
+                                    <Decorator_FleetDocked Initiator="Empire" StopAtFirstFailedCondition="true">
+                                        <Condition_CheckPath>
+                                            <Input_SimulationObject VarName="$Fleet"/>
+                                            <Input_Path VarName="$InvisibleFleetPath"/>
+                                        </Condition_CheckPath>
+                                        <Input_System VarName="$Academy"/>
+                                        <Output_Fleet VarName="$Fleet"/>
+                                    </Decorator_FleetDocked>
+                                </Sequence>
+
+                                <Sequence>
+                                    <Decorator_BeginTurn StopAtFirstFailedCondition="true">
+                                        <Condition_FleetStatsOnNode>
+                                            <Input_Nodes VarName="$Academy"/>
+                                            <Input_Empire VarName="$CurrentEmpire"/>
+                                            <Input_MinimumAmount VarName="$MinimumFleetAmount"/>
+                                            <Output_Fleets VarName="$Fleet"/>
+                                        </Condition_FleetStatsOnNode>
+                                        <Condition_CheckPath>
+                                            <Input_SimulationObject VarName="$Fleet"/>
+                                            <Input_Path VarName="$InvisibleFleetPath"/>
+                                        </Condition_CheckPath>
+                                    </Decorator_BeginTurn>
+                                </Sequence>
+
+                            </Parallel>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistPopulationQuest26-Objective1" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 2 ============-->
+                <ObjectiveSet>
+                    <Objective Name="Objective2" StartValue="$AdmiralAmount" EndValue="$AdmiralObjectiveAmount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <!--Get $AdmiralObjectiveAmount Heroes on fleets-->
+                        <Sequence>
+                            <Decorator_BeginTurn>
+                                <Condition_HasHeroes HeroAssignationFilter="Fleet">
+                                    <Input_Empire VarName="$CurrentEmpire"/>
+                                    <Input_MinimumAmount VarName="$AdmiralObjectiveAmount"/>
+                                </Condition_HasHeroes>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistPopulationQuest26-Objective2" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 3 - If at least 3 Hacking Routes ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_StartTimer>
+                            <Input_Duration VarName="$Duration"/>
+                            <Output_Timer VarName="$Timer"/>
+                        </Action_StartTimer>
+                    </StartActions>
+                    <Objective Name="Objective3" StartValue="0" EndValue="$NodesToHackAmount">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="0.5"/>
+                        <Sequence>
+                            <Parallel CompletionPolicy="First">
+
+                                <!--Hack through -->
+                                <Sequence>
+                                    <Loop>
+                                        <Decorator_NodeHacked Initiator="Empire" ProgressionIncrement="1"/>
+                                        <Input_Count VarName="$NodesToHackAmount"/>
+                                    </Loop>
+                                </Sequence>
+
+                                <!--If the timer ends, fail the quest-->
+                                <Sequence>
+                                    <Decorator_BeginTurn>
+                                        <Condition_TimerEnded>
+                                            <Input_Timer VarName="$Timer"/>
+                                        </Condition_TimerEnded>
+                                    </Decorator_BeginTurn>
+                                    <Action_Fail/>
+                                </Sequence>
+
+                            </Parallel>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistPopulationQuest26-Objective3" Picks="1"/>
+                </ObjectiveSet>
+
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+
+
+</Datatable>

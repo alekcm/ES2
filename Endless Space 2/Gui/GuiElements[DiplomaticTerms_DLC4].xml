@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <DiplomaticTermGuiElement Name="AcademyResourceDeal" GenericFormatName="Deal" Priority="22">
+    <Title>%DiplomaticTermAcademyResourceDealTitle</Title>
+    <Description>%DiplomaticTermAcademyResourceDealDescription</Description>
+    <QuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)$(AIContext)</QuoteFormat>
+    <FallbackQuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)</FallbackQuoteFormat>
+  </DiplomaticTermGuiElement>
+
+  <DiplomaticTermGuiElement Name="DeclareCrusadeAgainstColdWar" Priority="1" GenericFormatName="Declaration">
+    <Title>%DeclareCrusadeAgainstTitle</Title>
+    <Description>%DeclareCrusadeAgainstDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Diplomacy/DiplomaticTermGeneric" />
+    </Icons>
+    <QuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)$(AIContext)</QuoteFormat>
+    <FallbackQuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)</FallbackQuoteFormat>
+  </DiplomaticTermGuiElement>
+
+  <DiplomaticTermGuiElement Name="DeclareCrusadeAgainstWar" Priority="1" GenericFormatName="Declaration">
+    <Title>%DeclareCrusadeAgainstTitle</Title>
+    <Description>%DeclareCrusadeAgainstDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Diplomacy/DiplomaticTermGeneric" />
+    </Icons>
+    <QuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)$(AIContext)</QuoteFormat>
+    <FallbackQuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)</FallbackQuoteFormat>
+  </DiplomaticTermGuiElement>
+
+  <DiplomaticTermGuiElement Name="DeclareCrusadeAgainstPeace" Priority="1" GenericFormatName="Declaration">
+    <Title>%DeclareCrusadeAgainstTitle</Title>
+    <Description>%DeclareCrusadeAgainstDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Diplomacy/DiplomaticTermGeneric" />
+    </Icons>
+    <QuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)$(AIContext)</QuoteFormat>
+    <FallbackQuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)</FallbackQuoteFormat>
+  </DiplomaticTermGuiElement>
+
+  <DiplomaticTermGuiElement Name="DeclareCrusadeAgainstTruce" Priority="1" GenericFormatName="Declaration">
+    <Title>%DeclareCrusadeAgainstTitle</Title>
+    <Description>%DeclareCrusadeAgainstDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Diplomacy/DiplomaticTermGeneric" />
+    </Icons>
+    <QuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)$(AIContext)</QuoteFormat>
+    <FallbackQuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)</FallbackQuoteFormat>
+  </DiplomaticTermGuiElement>
+
+  <DiplomaticTermGuiElement Name="BlockAcademyAuctionAgainst" Priority="1" GenericFormatName="Declaration">
+    <Title>%BlockAcademyAuctionAgainstTitle</Title>
+    <Description>%BlockAcademyAuctionAgainstDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Diplomacy/DiplomaticTermGeneric" />
+    </Icons>
+    <QuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)$(AIContext)</QuoteFormat>
+    <FallbackQuoteFormat>$(SenderOrReceiver)$(ContractState)$(Affinity)</FallbackQuoteFormat>
+  </DiplomaticTermGuiElement>
+</Datatable>

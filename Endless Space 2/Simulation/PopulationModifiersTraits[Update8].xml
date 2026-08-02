@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryAntiDepletion01" SubCategory="Secondary" ShowInCustom="true" Cost="10">
+        <!--Contextual Bonus: Planet Menders-->
+        <Tags>PlanetDepletion</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryAntiDepletion01"/> 
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!-- -0.5 Depletion Point on Depleted Planets -->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryAntiDepletion01"/> 
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryAntiDepletion01"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--Bonus given to the Population that assimilates them-->
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetAntiDepletion01"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryHappinessSterile" SubCategory="Secondary" ShowInCustom="true" Cost="10">
+        <!--Contextual Bonus: Hardened Dwellers-->
+        <Tags>PlanetGameplayTypeMeager,BonusPopulationHappiness</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryHappinessSterile"/> 
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+4 Happiness on Sterile-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessSterile"/> 
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessSterile"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--Bonus given to the Population that assimilates them-->
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetHappinessSterile"/> 
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryIndustryFertile" SubCategory="Secondary" ShowInCustom="true" Cost="5">
+        <!--Contextual Bonus: Biomimetic Builders-->
+        <Tags>PlanetGameplayTypeTeeming,BonusPopulationIndustry</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryIndustryFertile"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+1 Industry on Fertile-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryIndustryFertile"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryIndustryFertile"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--Bonus given to the Population that assimilates them-->
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetIndustryFertile"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

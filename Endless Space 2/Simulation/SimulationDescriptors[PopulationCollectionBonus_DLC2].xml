@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <!--MajorHisshos-->
+  <SimulationDescriptor Name="PopulationCollectionBonusMajorHisshos1" Type="PopulationCollectionBonus">
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="false"   TooltipOverride="%TooltipOverridePositivePolitics06"/>
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityMajorHisshosCount"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom0Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom1Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom2Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom3Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom4Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom5Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom6Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom7Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom8Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom9Count"     TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom10Count"    TooltipHidden="true"   />
+    <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1" Path="PopulationCollectionBonusMajorHisshos1,ClassPopulationEmpireAffinityCustom11Count"    TooltipHidden="true"   />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PopulationCollectionBonusMajorHisshos2" Type="PopulationCollectionBonus">
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Percent" Value="0.15" Path="FAKEFORGUI/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityMajorHisshos" />
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="../ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityMajorHisshos" SearchValueFromPath="true" TooltipHidden="true" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PopulationCollectionBonusMajorHisshos3" Type="PopulationCollectionBonus">
+    <Modifier TargetProperty="ShipProductionCostReduction"			Operation="Subtraction"		Value="0.25"			Path="../ClassEmpire,EmpireTypeMajor/ClassColonizedStarSystem" />
+  </SimulationDescriptor>
+
+  <!-- Illo -->
+  <SimulationDescriptor Name="PopulationCollectionBonusIllo1" Type="PopulationCollectionBonus">
+    <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireAffinityIllo"      TooltipOverride="%TooltipOverridePositivePolitics05"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="PopulationCollectionBonusIllo2" Type="PopulationCollectionBonus">
+    <Modifier TargetProperty="SystemEmpirePointBonusFromCollection" Operation="Addition" Value="0.10" Path="../ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityIllo" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="PopulationCollectionBonusIllo3" Type="PopulationCollectionBonus">
+  </SimulationDescriptor>
+
+  <!--##########################################-->
+  <!--CUSTOM FACTION VERSIONS OF LEVEL 2 BONUSES-->
+  <!--##########################################-->
+
+  <SimulationDescriptor Name="PopulationCollectionBonusCustomFactionManpowerProductionCost2" Type="PopulationCollectionBonus">
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom0Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom0Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom1Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom1Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom2Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom2Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom3Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom3Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom4Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom4Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom5Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom5Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom6Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom6Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom7Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom7Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom8Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom8Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom9Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom9Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom10Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom10Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Addition" Value="0.15" Path="PopulationCollectionBonusCustomFactionManpowerProductionCost2,ClassPopulationEmpireAffinityCustom11Count/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityCustom11Count" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemManpowerPercentBonusFromCollection" Operation="Percent"  Value="0.15" Path="FAKEFORGUI/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemCustomFaction" />
+  </SimulationDescriptor>
+
+
+</Datatable>

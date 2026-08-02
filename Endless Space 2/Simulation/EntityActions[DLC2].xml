@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EntityActionDefinition.xsd">
+
+    <LaunchMiningProbeFleetAction Name="LaunchMiningProbeFleetAction" FeedbackDuration="1.5" DelayAfterFeedback="1">
+
+        <EntityPrerequisites Location="Self">
+            <!-- Hide button if module not equipped. -->
+            <InterpreterPrerequisite Flags="Discard" Inverted="false">Property(Context, MaximumShipMiningProbeStock) gt 0</InterpreterPrerequisite>
+
+            <!-- Grey out if under enemy influence. -->
+            <PathPrerequisite Flags="UnderEnemyInfluence" Inverted="true">FleetInfluenceStateHostile</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="EncounterInProgress">../FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">../FleetActionGroundBattle</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="FleetActionLaunchingMiningProbe"/>
+            <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+        </EntityModifiers>
+
+        <DownloadableContentPrerequisite Flags="Discard">DLCHisshos</DownloadableContentPrerequisite>
+
+        <CancelActions Flags="CancelOnAnything,CancelOnMiningProbeLaunch" SameContext="false" SameInitiator="true"/>
+
+        <MovementCostFormula Flags="NoMiningProbeInStock">
+            <Formula>Clamp01(Property(Context, MaximumShipMiningProbeStock)) * (1 / Max(1, Property(Context, MaximumShipMiningProbeStock))) * Property(Context, MaximumMovement)</Formula>
+            <CostOnShipWithLowestMovementImpact ResourceName="ShipMiningProbe" Instant="true">1</CostOnShipWithLowestMovementImpact>
+        </MovementCostFormula>
+
+    </LaunchMiningProbeFleetAction>
+
+
+    <InitiateTerraformationEmpireActionFleetAction Name="InitiateTerraformPlanetFleetAction">
+
+        <EntityPrerequisites Location="Self">
+            <!-- Hide button if module not equipped. -->
+            <InterpreterPrerequisite Flags="Discard" Inverted="false">Property(Context, NetTerraformationProduction) gt 0</InterpreterPrerequisite>
+
+            <!-- Grey out button if technology is not owned. -->
+            <InterpreterPrerequisite Flags="NeedTerraformationTechnology">Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation1') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation1TimeLords') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation2') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation2TimeLords')</InterpreterPrerequisite>
+
+            <!-- Grey out if under enemy influence. -->
+            <PathPrerequisite Flags="UnderEnemyInfluence" Inverted="true">FleetInfluenceStateHostile</PathPrerequisite>
+
+            <!-- Grey out button if busy. -->
+            <PathPrerequisite Inverted="true" Flags="FleetIsSleeping">FleetActionSleep</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="MotherShipAttached">FleetActionMothershipAttached</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionExpedition</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionColonize</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionReclaimMothership</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGroundBattle</PathPrerequisite>
+            <!--<PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGuarding</PathPrerequisite>-->
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionPrivateer</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EmpireLocalActionName>TerraformPlanetEmpireLocalAction</EmpireLocalActionName>
+
+    </InitiateTerraformationEmpireActionFleetAction>
+
+    <InitiateRestorationEmpireActionFleetAction Name="InitiateRestorePlanetFleetAction">
+
+        <EntityPrerequisites Location="Self">
+            <!-- Hide button if module not equipped. -->
+            <InterpreterPrerequisite Flags="Discard" Inverted="false">Property(Context, NetRestorationProduction) gt 0</InterpreterPrerequisite>
+
+            <!-- Grey out button if technology is not owned. -->
+            <InterpreterPrerequisite Flags="NeedTerraformationTechnology">Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation1') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation1TimeLords') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation2') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyTerraformation2TimeLords')</InterpreterPrerequisite>
+
+            <!-- Grey out if under enemy influence. -->
+            <PathPrerequisite Flags="UnderEnemyInfluence" Inverted="true">FleetInfluenceStateHostile</PathPrerequisite>
+
+            <!-- Grey out button if busy. -->
+            <PathPrerequisite Inverted="true" Flags="FleetIsSleeping">FleetActionSleep</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="MotherShipAttached">FleetActionMothershipAttached</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionExpedition</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionColonize</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionReclaimMothership</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGroundBattle</PathPrerequisite>
+            <!--<PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGuarding</PathPrerequisite>-->
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionPrivateer</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EmpireLocalActionName>RestorePlanetEmpireLocalAction</EmpireLocalActionName>
+
+    </InitiateRestorationEmpireActionFleetAction>
+
+
+    <TerraformPlanetEmpireLocalAction Name="TerraformPlanetEmpireLocalAction" SecondaryFleetProductionMultiplier="0.5" Flags="CancelOnMovement,CancelOnRetreat">
+        <FleetAlterations>
+            <SimulationAlteration DescriptorReference="FleetActionTerraforming"/>
+            <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+        </FleetAlterations>
+    </TerraformPlanetEmpireLocalAction>
+
+    <TerraformPlanetEmpireLocalAction Name="RestorePlanetEmpireLocalAction" SecondaryFleetProductionMultiplier="0.5" Flags="CancelOnMovement,CancelOnRetreat">
+        <FleetAlterations>
+            <SimulationAlteration DescriptorReference="FleetActionTerraforming"/>
+            <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+        </FleetAlterations>
+    </TerraformPlanetEmpireLocalAction>
+
+
+    <InitiateAnomalyReductionEmpireActionFleetAction Name="InitiateReduceAnomalyFleetAction">
+
+        <EntityPrerequisites Location="Self">
+            <!-- Hide button if module not equipped. -->
+            <InterpreterPrerequisite Flags="Discard" Inverted="false">Property(Context, NetAnomalyReductionProduction) gt 0</InterpreterPrerequisite>
+
+            <!-- Grey out button if technology is not owned. -->
+            <InterpreterPrerequisite Flags="NeedAnomalyReductionTechnology">Path(Context, @'../ClassEmpire/ClassResearch,TechnologyAnomalyReduction1') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyAnomalyReduction2') or Path(Context, @'../ClassEmpire/ClassResearch,TechnologyMoonExploration')</InterpreterPrerequisite>
+
+            <!-- Grey out if under enemy influence. -->
+            <PathPrerequisite Flags="UnderEnemyInfluence" Inverted="true">FleetInfluenceStateHostile</PathPrerequisite>
+
+            <!-- Grey out button if busy. -->
+            <PathPrerequisite Inverted="true" Flags="FleetIsSleeping">FleetActionSleep</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="MotherShipAttached">FleetActionMothershipAttached</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionExpedition</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionColonize</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionReclaimMothership</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGroundBattle</PathPrerequisite>
+            <!--<PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGuarding</PathPrerequisite>-->
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionPrivateer</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EmpireLocalActionName>ReduceAnomalyEmpireLocalAction</EmpireLocalActionName>
+
+    </InitiateAnomalyReductionEmpireActionFleetAction>
+
+
+    <ReduceAnomalyEmpireLocalAction Name="ReduceAnomalyEmpireLocalAction" SecondaryFleetProductionMultiplier="0.5" Flags="CancelOnMovement,CancelOnRetreat">
+        <FleetAlterations>
+            <SimulationAlteration DescriptorReference="FleetActionReducingAnomalies"/>
+            <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+        </FleetAlterations>
+    </ReduceAnomalyEmpireLocalAction>
+
+
+    <SpecializeJuggernautRetrofitShipAction Name="JuggernautSpecializationObliterator" ShipDesignName="Juggernauts_Obliterator" RequestedTurnsCount="2">
+
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite                 Flags="Discard">ShipRoleJuggernaut</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="EncounterInProgress">../FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">../FleetActionGroundBattle</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="SpecializationInProgress">ShipActionSpecializing</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="ShipStateLockedInGarrison"/>
+            <SimulationAlteration DescriptorReference="ShipActionSpecializing"/>
+        </EntityModifiers>
+
+        <CustomCost Instant="true" ResourceName="EmpireMoney">1600 * Property(Context, @'../ClassEmpire', DustInflation) * Property(Context, @'../ClassEmpire', ObliteratorConstructionCostMultiplier)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic1">50 * Property(Context, @'../ClassEmpire', ObliteratorConstructionCostMultiplier)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic2">50 * Property(Context, @'../ClassEmpire', ObliteratorConstructionCostMultiplier)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic3">50 * Property(Context, @'../ClassEmpire', ObliteratorConstructionCostMultiplier)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic4">50 * Property(Context, @'../ClassEmpire', ObliteratorConstructionCostMultiplier)</CustomCost>
+
+        <GameSettingPrerequisite    Flags="Prerequisite,Discard,NoSuperWeaponsAllowed">AllowSuperWeapons,True</GameSettingPrerequisite>
+        <TechnologyPrerequisite     Flags="Prerequisite,Technology">TechnologyJuggernautObliteratorSpecialization</TechnologyPrerequisite>
+
+        <SystemInterpreterPrerequisite Flags="RequiresSpaceport">Property(Context,SystemLevel) ge 2</SystemInterpreterPrerequisite>
+
+
+    </SpecializeJuggernautRetrofitShipAction>
+
+
+    <SpecializeJuggernautRetrofitShipAction Name="JuggernautSpecializationBattleship" ShipDesignName="Juggernauts_Battleship" RequestedTurnsCount="2">
+
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite                 Flags="Discard">ShipRoleJuggernaut</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="EncounterInProgress">../FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">../FleetActionGroundBattle</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="SpecializationInProgress">ShipActionSpecializing</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="ShipStateLockedInGarrison"/>
+            <SimulationAlteration DescriptorReference="ShipActionSpecializing"/>
+        </EntityModifiers>
+
+        <CustomCost Instant="true" ResourceName="EmpireMoney">1200 * Property(Context, @'../ClassEmpire', DustInflation)</CustomCost>
+        <Cost Instant="true" ResourceName="Strategic1">15</Cost>
+        <Cost Instant="true" ResourceName="Strategic2">15</Cost>
+
+        <TechnologyPrerequisite Flags="Prerequisite,Technology">TechnologyJuggernautBattleshipSpecialization</TechnologyPrerequisite>
+
+        <SystemInterpreterPrerequisite Flags="RequiresSpaceport">Property(Context,SystemLevel) ge 2</SystemInterpreterPrerequisite>
+
+    </SpecializeJuggernautRetrofitShipAction>
+
+
+    <SpecializeJuggernautCitadelShipAction Name="JuggernautSpecializationCitadel" RequestedTurnsCount="2" SilentRecovery="true" CitadelDefinitionName="Citadel1">
+
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite                 Flags="Discard">ShipRoleJuggernaut</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="EncounterInProgress">../FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">../FleetActionGroundBattle</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="SpecializationInProgress">ShipActionSpecializing</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="ShipStateLockedInGarrison"/>
+            <SimulationAlteration DescriptorReference="ShipActionSpecializing"/>
+            <SimulationAlteration DescriptorReference="ShipActionSpecializingCitadel"/>
+        </EntityModifiers>
+
+        <CustomCost Instant="true" ResourceName="EmpireMoney">800 * Property(Context, @'../ClassEmpire', DustInflation)</CustomCost>
+        <Cost Instant="true" ResourceName="Strategic1">30</Cost>
+        <Cost Instant="true" ResourceName="Strategic2">30</Cost>
+        <Cost Instant="true" ResourceName="EmpireManpower">600</Cost>
+
+        <TechnologyPrerequisite Flags="Prerequisite,Technology">TechnologyJuggernautCitadelSpecialization</TechnologyPrerequisite>
+
+        <SystemInterpreterPrerequisite Flags="RequiresSpaceport">Property(Context,SystemLevel) ge 2</SystemInterpreterPrerequisite>
+        <SystemPathPrerequisite Flags="AlreadyHasACitadel" Inverted="true">ClassColonizedStarSystem/ClassCitadel</SystemPathPrerequisite>
+        <SystemPathPrerequisite Flags="AlreadyHasACitadel" Inverted="true">ClassColonizedStarSystem/ClassGarrison/ClassShip,ShipActionSpecializingCitadel</SystemPathPrerequisite>
+
+
+    </SpecializeJuggernautCitadelShipAction>
+
+    <FireObliteratorFleetAction Name="FireObliteratorFleetAction">
+
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite                 Flags="Discard">ClassGarrison/ShipRoleObliterator</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="EncounterInProgress">FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGroundBattle</PathPrerequisite>
+
+            <!-- Grey out if under enemy influence. -->
+            <PathPrerequisite Flags="UnderEnemyInfluence" Inverted="true">FleetInfluenceStateHostile</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <CustomCost Instant="true" ResourceName="EmpireHonor">25  * Property(Context, @'../ClassEmpire', CanUseHonor)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic3">Property(Context,@'ClassGarrison/ClassShip,ShipRoleObliterator',ObliteratorShotCost)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic4">Property(Context,@'ClassGarrison/ClassShip,ShipRoleObliterator',ObliteratorShotCost)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic5">Property(Context,@'ClassGarrison/ClassShip,ShipRoleObliterator',ObliteratorShotCost)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic6">Property(Context,@'ClassGarrison/ClassShip,ShipRoleObliterator',ObliteratorShotCost)</CustomCost>
+
+        <DownloadableContentPrerequisite Flags="Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <TemporaryEffect Name="ObliteratorMalus"/>
+    </FireObliteratorFleetAction>
+
+    <MoveToObliteratorProjectileAction Name="MoveToObliteratorProjectileAction" DepartureDelayInSeconds="0.5" DurationInSeconds="1" TurnBeginEstimatedDurationInSeconds="2">
+    </MoveToObliteratorProjectileAction>
+
+
+    <FireIonWaveFleetAction Name="FireIonWaveFleetAction" DamageRatio="1" Duration="3" Cooldown="15">
+
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite                 Flags="Discard">ClassGarrisonFleet/ShipRoleBattleship</PathPrerequisite>
+
+            <PathPrerequisite Inverted="true" Flags="EncounterInProgress">FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="FleetIsBusy">FleetActionGroundBattle</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <TechnologyPrerequisite Flags="Prerequisite,Discard">TechnologyJuggernautBattleshipAbility</TechnologyPrerequisite>
+
+        <DownloadableContentPrerequisite Flags="Discard">DLCHisshos</DownloadableContentPrerequisite>
+
+        <BattleshipSimulationDescriptorReference Name="ShipWeaponsDeactivated"/>
+
+    </FireIonWaveFleetAction>
+
+    <!-- ****************************************** -->
+    <!--                HONOR ACTIONS               -->
+    <!-- ****************************************** -->
+
+    <!-- DEFEND YOUR HOMES -->
+    <!-- WARN AI TEAM OF ANY CHANGES -->
+    <HonorActionDefinition Name="HonorActionSystemDefense" Duration="10" HonorThresholdReference="HonorThresholdEmpire1" HonorCheckType="OverMinValue" CumulateTargetDescriptorsAndZoneEffects="false">
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite Inverted="true" Flags="Prerequisite,ActionInProgress">HonorActionSystemDefense</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="HonorActionSystemDefense"/>
+        </EntityModifiers>
+
+        <CustomCost Instant="true" ResourceName="EmpireMoney">50 * (1 + Property(Context,HonorActionsUsageCount) * 0.15)</CustomCost>
+        <!--<CustomCost Instant="true" ResourceName="EmpireHonor">Min(2 + Property(Context,SystemCount) * 3, 25)</CustomCost>-->
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+        <AllowedTarget>ColonizedStarSystem</AllowedTarget>
+        <AllowedTarget>Juggernaut</AllowedTarget>
+
+        <PrerequisitesOnTarget>
+            <PathPrerequisite Inverted="true" Flags="StarSystemStateIsntColony">ColonizedStarSystemStateOutpost</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="StarSystemStateIsntColony">ColonizedStarSystemStateLost</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="SystemIsBeingInvaded">GroundBattleInProgress</PathPrerequisite>
+        </PrerequisitesOnTarget>
+
+        <DescriptorsOnTarget>
+            <SimulationDescriptorReference Name="HonorActionSystemDefenseEffect"/>
+        </DescriptorsOnTarget>
+
+        <ZoneEffectsOnTarget>
+            <ZoneEffectReference Name="ZoneEffectSystemDefense"/>
+        </ZoneEffectsOnTarget>
+    </HonorActionDefinition>
+
+    <!-- INTIMIDATION -->
+    <!-- WARN AI TEAM OF ANY CHANGES -->
+    <HonorActionDefinition Name="HonorActionFleetFakePower" Duration="10" HonorThresholdReference="HonorThresholdEmpire2" HonorCheckType="OverMinValue" CumulateTargetDescriptorsAndZoneEffects="true">
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite Inverted="true" Flags="Prerequisite,ActionInProgress">HonorActionFleetFakePower</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="HonorActionFleetFakePower"/>
+        </EntityModifiers>
+
+        <CustomCost Instant="true" ResourceName="EmpireMoney">50 * (1 + Property(Context,HonorActionsUsageCount) * 0.15)</CustomCost>
+        <CustomCost Instant="true" ResourceName="EmpireHonor">3</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+        <AllowedTarget>Fleet</AllowedTarget>
+        <AllowedTarget>Juggernaut</AllowedTarget>
+
+        <PrerequisitesOnTarget>
+            <PathPrerequisite Inverted="true">FleetActionAttack</PathPrerequisite>
+        </PrerequisitesOnTarget>
+
+        <DescriptorsOnTarget>
+            <SimulationDescriptorReference Name="HonorActionFleetFakePowerEffect"/>
+        </DescriptorsOnTarget>
+
+        <ZoneEffectsOnTarget>
+            <ZoneEffectReference Name="ZoneEffectFakePower"/>
+        </ZoneEffectsOnTarget>
+    </HonorActionDefinition>
+
+    <!-- INSPIRING PRESENCE -->
+    <!-- WARN AI TEAM OF ANY CHANGES -->
+    <HonorActionDefinition Name="HonorActionSystemBonuses" Duration="10" HonorThresholdReference="HonorThresholdEmpire3" HonorCheckType="OverMinValue" CumulateTargetDescriptorsAndZoneEffects="false">
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite Inverted="true" Flags="Prerequisite,ActionInProgress">HonorActionSystemBonuses</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="HonorActionSystemBonuses"/>
+        </EntityModifiers>
+
+        <CustomCost Instant="true" ResourceName="EmpireMoney">50 * (1 + Property(Context,HonorActionsUsageCount) * 0.15)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic1">2 * (1 + Property(Context,HonorActionsUsageCount) * 0.15)</CustomCost>
+        <CustomCost Instant="true" ResourceName="EmpireHonor">5</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+        <AllowedTarget>ColonizedStarSystem</AllowedTarget>
+        <AllowedTarget>Juggernaut</AllowedTarget>
+
+        <PrerequisitesOnTarget>
+            <PathPrerequisite Inverted="true" Flags="StarSystemStateIsntColony">ColonizedStarSystemStateOutpost</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="StarSystemStateIsntColony">ColonizedStarSystemStateLost</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="SystemIsBeingInvaded">GroundBattleInProgress</PathPrerequisite>
+        </PrerequisitesOnTarget>
+
+        <DescriptorsOnTarget>
+            <SimulationDescriptorReference Name="HonorActionSystemBonusesEffect"/>
+        </DescriptorsOnTarget>
+
+        <ZoneEffectsOnTarget>
+            <ZoneEffectReference Name="ZoneEffectSystemBonuses"/>
+        </ZoneEffectsOnTarget>
+    </HonorActionDefinition>
+
+    <!-- WARD OF THE EMPEROR -->
+    <!-- WARN AI TEAM OF ANY CHANGES -->
+    <HonorActionDefinition Name="HonorActionFleetBonuses" Duration="10" HonorThresholdReference="HonorThresholdEmpire4" HonorCheckType="OverMinValue" CumulateTargetDescriptorsAndZoneEffects="false">
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite Inverted="true" Flags="Prerequisite,ActionInProgress">HonorActionFleetBonuses</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite">FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="HonorActionFleetBonuses"/>
+        </EntityModifiers>
+
+        <CustomCost Instant="true" ResourceName="EmpireMoney">50 * (1 + Property(Context,HonorActionsUsageCount) * 0.15)</CustomCost>
+        <CustomCost Instant="true" ResourceName="Strategic2">2 * (1 + Property(Context,HonorActionsUsageCount) * 0.15)</CustomCost>
+        <CustomCost Instant="true" ResourceName="EmpireHonor">8</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+        <AllowedTarget>Fleet</AllowedTarget>
+        <AllowedTarget>Juggernaut</AllowedTarget>
+
+        <PrerequisitesOnTarget>
+            <PathPrerequisite Inverted="true">FleetActionAttack</PathPrerequisite>
+        </PrerequisitesOnTarget>
+
+        <DescriptorsOnTarget>
+            <SimulationDescriptorReference Name="HonorActionFleetBonusesEffect"/>
+        </DescriptorsOnTarget>
+
+        <ZoneEffectsOnTarget>
+            <ZoneEffectReference Name="ZoneEffectFleetBonuses"/>
+        </ZoneEffectsOnTarget>
+    </HonorActionDefinition>
+
+    <!-- KAMIKAZE -->
+    <HonorFleetActionDefinition Name="FleetActionKamikaze" HonorThresholdReference="HonorThresholdEmpire2" HonorCheckType="UnderMinValue" CumulateTargetDescriptorsAndZoneEffects="false">
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite Inverted="true" Flags="EncounterInProgress">FleetActionAttack</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="ActionInProgress">FleetActionKamikaze</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite,Discard">ClassGarrison/ShipRoleSuperColonizer</PathPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="Prerequisite,Discard">AcademyMasterFleet</PathPrerequisite>
+            <InterpreterPrerequisite Inverted="false" Flags="NoOffensiveMilitaryPower">Property(Context,@'ClassGarrison',OffensiveMilitaryPower) gt 0</InterpreterPrerequisite>
+            <PathPrerequisite Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="FleetActionKamikaze"/>
+        </EntityModifiers>
+
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+        <!-- Note: using these descriptors instead of SimulationAlterations because they are not supposed to combine with zone effects. For kamikaze however there are no zone effects... -->
+        <SimulationDescriptorReference Name="FleetActionKamikazeEffect"/>
+        <!--<ZoneEffectReference Name="ZoneEffectFleetKamikaze"/>-->
+    </HonorFleetActionDefinition>
+
+    <!-- Hisshos outpost action -->
+    <OutpostActionFinishDefinition Name="OutpostActionFinishHisshos" Duration="0">
+        <EntityPrerequisites Location="Self">
+            <PathPrerequisite Flags="Prerequisite,SystemIsBeingGuarded" Inverted="true">BlockadedColonizedStarSystem</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite,SystemIsBeingDecolonized" Inverted="true">DecolonizedColonizedStarSystem</PathPrerequisite>
+        </EntityPrerequisites>
+
+        <CustomCost Instant="true" ResourceName="EmpireHonor">Min(Max(Exp(4.4 - (Property(Context,@'ClassStarSystem',SystemGrowthStock) / (100 * Property(Context,@'../ClassEmpire',GameSpeedMultiplier)))), 10 + Max(5 * (Property(Context,@'../ClassEmpire',ColonizedStarSystemStateColonyCount) - Property(Context,@'../ClassEmpire',OverColonizationThreshold)), 0)), 75)</CustomCost>
+
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    </OutpostActionFinishDefinition>
+
+</Datatable>

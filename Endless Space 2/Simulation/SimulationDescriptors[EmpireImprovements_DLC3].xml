@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- HULLS -->
+    
+    <!-- Hull4 (medium attacker) unlocks additional slots for small attacker ships -->
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall01UmbralChoir" Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassShip,ShipHull01,ShipSizeSmall" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Hull5 (medium defender) unlocks additional slots for small support ships -->
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall02UmbralChoir" Type="EmpireImprovement"      >
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipHull02,ShipSizeSmall" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Hull6 (large ship) unlocks additional slots for all medium ships -->
+    <SimulationDescriptor Name="EmpireImprovementSlotsMedium01UmbralChoir"    Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull01" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="EmpireImprovementSlotsMedium02UmbralChoir"    Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeMedium,ShipHull02" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <!-- Hull6Slots unlocks additional slots for large ships-->
+    <SimulationDescriptor Name="EmpireImprovementSlotsLarge01UmbralChoir" Type="EmpireImprovement">
+        <Modifier TargetProperty="ShipStage" Value="1"  Operation="Addition" Path="ClassEmpire//ClassGarrison/ClassShip,ShipSizeLarge" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    
+    
+    <!-- ECONOMY -->
+    
+    <SimulationDescriptor Name="EmpireImprovementMovementBonus4"              Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumMovement"         Operation="Addition" Value="2" Path="ClassEmpire/ClassGarrison/ClassShip" Priority="10"/>
+        <Modifier TargetProperty="MaximumMovement"         Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassGarrison/ClassShip" TooltipHidden="true" Priority="10"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHappinessUmbralChoir"       Type="EmpireImprovement" >
+        <BinaryModifier TargetProperty="Happiness" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateGhostCount)" Path="ClassEmpire/ClassColonizedStarSystem" TooltipOverride="%EmpireImprovementHappinessUmbralChoirEffectOverride"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementTerraformationUmbralChoir1"    Type="EmpireImprovement">
+        <!-- This is used to make the terraformation button under the planets appear -->
+        <Modifier TargetProperty="TerraformationGameplayUnlocked" Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="EmpireImprovementTerraformationUmbralChoir2"    Type="EmpireImprovement" />
+    <SimulationDescriptor Name="EmpireImprovementTerraformationUmbralChoir3"    Type="EmpireImprovement"/>
+
+    <SimulationDescriptor Name="EmpireImprovementTradeUmbralChoir"              Type="EmpireImprovement"/>
+
+    <SimulationDescriptor Name="EmpireImprovementSubsidiaries1UmbralChoir"      Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="BaseEmpireMoney"     Operation="Addition" Left="25" BinaryOperation="Multiplication" Right="$(Level)" Path="ClassEmpire/DepartmentOfCommerce/ClassTradingCompany" SearchValueFromPath="true" TooltipOverride="%EmpireImprovementSubsidiaries1UmbralChoirEffectOverride" />
+    </SimulationDescriptor>
+
+    <!-- Doubles the value of traitors converted into resources when the HS is full -->
+    <SimulationDescriptor Name="EmpireImprovementInfluenceConversionUmbralChoir"       Type="EmpireImprovement">
+        <Modifier TargetProperty="TraitorResourceConversionMultiplier" Value="1"  Operation="Addition" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="EmpireImprovementStageEconomyAndTrade3NoSpacePort" Type="EmpireImprovementStage">
+        <!-- Only used to feedback the additional population slots for Vodyani on system upgrade - no GP effect -->
+        <Modifier TargetProperty="HasMothership" Operation="Addition" Value="1" Path="ClassEmpire,AffinityGameplayVampirilis" TooltipOverride="%EmpireImprovementStageEconomyAndTradeVampirilisEffectOverride" TooltipHiddenIfPathInvalid="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="EmpireImprovementStageEconomyAndTrade4NoSpacePort" Type="EmpireImprovementStage">
+        <Modifier TargetProperty="HasMothership" Operation="Addition" Value="1" Path="ClassEmpire,AffinityGameplayVampirilis" TooltipOverride="%EmpireImprovementStageEconomyAndTradeVampirilisEffectOverride" TooltipHiddenIfPathInvalid="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="EmpireImprovementStageEconomyAndTrade5NoSpacePort" Type="EmpireImprovementStage">
+        <Modifier TargetProperty="HasMothership" Operation="Addition" Value="1" Path="ClassEmpire,AffinityGameplayVampirilis" TooltipOverride="%EmpireImprovementStageEconomyAndTradeVampirilisEffectOverride" TooltipHiddenIfPathInvalid="true"/>
+    </SimulationDescriptor>
+
+
+    <!-- HACKING -->
+    
+    <SimulationDescriptor Name="EmpireImprovementHackingRouteBonus1" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumHackingOperationsCount" Value="1"  Operation="Addition" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHackingRouteBonus2" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumHackingOperationsCount" Value="1"  Operation="Addition" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHackingRouteBonus3" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumHackingOperationsCount" Value="1"  Operation="Addition" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHackingBonus1" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumHackingOperationsCount" Value="1"  Operation="Addition" Path="ClassEmpire"/>      
+        <Modifier TargetProperty="HackingNodeSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" Priority="0"/>
+        <Modifier TargetProperty="HackingWarpSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true" Priority="0"/>
+        <Modifier TargetProperty="HackingNonWarpSpeed"  Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true" Priority="0"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHackingBonus2" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumHackingOperationsCount" Value="1"  Operation="Addition" Path="ClassEmpire"/>
+        <Modifier TargetProperty="HackingNodeSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" Priority="0"/>
+        <Modifier TargetProperty="HackingWarpSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true" Priority="0"/>
+        <Modifier TargetProperty="HackingNonWarpSpeed"  Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true" Priority="0"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHackingSpeedBonus3" Type="EmpireImprovement">
+        <Modifier TargetProperty="HackingNodeSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" Priority="0"/>
+        <Modifier TargetProperty="HackingWarpSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true" Priority="0"/>
+        <Modifier TargetProperty="HackingNonWarpSpeed"  Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true" Priority="0"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementKillTraitors"                Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementRevealTraitors"              Type="EmpireImprovement"/>
+    
+    <!-- INVISIBILITY -->
+
+    <SimulationDescriptor Name="EmpireImprovementDetectionProbeLevel2" Type="EmpireImprovement">
+      <Modifier TargetProperty="DetectionProbeVisionStrength"     Value="2"  Operation="Force" Path="ClassEmpire" Priority="0"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementDetectionProbeLevel3" Type="EmpireImprovement">
+      <Modifier TargetProperty="DetectionProbeVisionStrength"     Value="3"  Operation="Force" Path="ClassEmpire" Priority="1"/>
+    </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementInvisibilityLevel2" Type="EmpireImprovement">
+    <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Force" Value="2" Path="ClassEmpire/ClassGarrisonFleet/ClassShip" Priority="0" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementInvisibilityLevel3" Type="EmpireImprovement">
+    <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Force" Value="3" Path="ClassEmpire/ClassGarrisonFleet/ClassShip" Priority="1" />
+  </SimulationDescriptor>
+    
+    <!--QUEST-->
+
+    <SimulationDescriptor Name="EmpireImprovementHeroXpGain" Type="EmpireImprovement">
+        <Modifier TargetProperty="ExperiencePerTurn"    Operation="Addition"  Value="2" Path="ClassEmpire/ClassGarrison/ClassHero"/>
+        <Modifier TargetProperty="ExperiencePerTurn"    Operation="Addition"  Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassHero" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHeroReduceAssignmentCooldown" Type="EmpireImprovement">
+        <Modifier TargetProperty="AssignmentCooldownDecrementPerTurn"    Operation="Percent"  Value="1" Path="ClassEmpire/ClassGarrison/ClassHero"/>
+        <Modifier TargetProperty="AssignmentCooldownDecrementPerTurn"    Operation="Percent"  Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassHero" TooltipHidden="true"/>
+        <Modifier TargetProperty="AssignmentCooldownDecrementPerTurn"    Operation="Percent"  Value="1" Path="ClassEmpire/ClassHero" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="EmpireImprovementEvasionBonus" Type="EmpireImprovement">
+        <Modifier TargetProperty="Evasion" Operation="Addition" Value="0.2" Path="ClassEmpire/ClassGarrisonFleet"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementProcessingPowerPerSystem" Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="MaximumEmpireProcessingPowerStock" Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(SystemCount)" Path="ClassEmpire" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHackingRouteBonus4" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumHackingOperationsCount" Value="1"  Operation="Addition" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementSciencePerTraitor" Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="EmpireResearch" Operation="Percent" Left="0.01" BinaryOperation="Multiplication" Right="$(TraitorsCount)" Path="ClassEmpire" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="HappinessPerPeace"                Operation="Addition"        Value="5"  Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="HappinessPerAlliance"             Operation="Addition"        Value="10"  Path="../ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementHackingSpeedOnNodes" Type="EmpireImprovement">
+        <Modifier TargetProperty="HackingNodeSpeed"                 Operation="Percent" Value="0.1" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementInvisibleFleetSpeed" Type="EmpireImprovement">
+        <Modifier TargetProperty="MaximumMovement"                  Operation="Addition" Value="2" Path="ClassEmpire/InvisibilityFleetAction/ClassShip"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementSciencePerCpPerHero" Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="EmpireResearch"             Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(TotalCommandPointsOnHeroFleet)" TooltipOverride="%EmpireImprovementSciencePerCpPerHeroTooltipDescription"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementProcessingPowerPerHackingRoute" Type="EmpireImprovement">
+        <BinaryModifier TargetProperty="MaximumEmpireProcessingPowerStock" Operation="Addition" Left="10" BinaryOperation="Multiplication" Right="$(MaximumHackingOperationsCount)"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Sophons"               Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Cravers"               Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Lumeris"               Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Vampirilis"            Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04UnitedEmpire"          Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Horatios"              Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04TimeLords"             Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Unfallens"             Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04Vaulters"              Type="EmpireImprovement"/>
+    <SimulationDescriptor Name="EmpireImprovementSlotsSmall04MajorHisshos"          Type="EmpireImprovement"/>
+  <SimulationDescriptor Name="EmpireImprovementSlotsSmall04UmbralChoirs"          Type="EmpireImprovement"/>
+
+</Datatable>

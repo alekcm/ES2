@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/LibrarianQuestionDefinitions.xsd">
+
+  <LibrarianQuestionDefinition Name="WondersQuestion" Category="Economical">
+    <AnswerKey>%WondersAnswer</AnswerKey>
+    <FallbackAnswerKey>%WondersFallbackAnswer</FallbackAnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="DustQuestion" Category="Economical">
+    <AnswerKey>%DustAnswer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="InfluenceQuestion" Category="Economical">
+    <AnswerKey>%InfluenceAnswer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="StrategicQuestion" Category="Economical">
+    <AnswerKey>%StrategicAnswer</AnswerKey>
+    <FallbackAnswerKey>%StrategicFallbackAnswer</FallbackAnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="EmpireScienceQuestion" Category="Technological">
+    <AnswerKey>%EmpireScienceAnswer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="SystemScienceQuestion" Category="Technological">
+    <AnswerKey>%SystemScienceAnswer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="MostFleetsQuestion" Category="Military">
+    <AnswerKey>%MostFleetsAnswer</AnswerKey>
+    <FallbackAnswerKey>%MostFleetsFallbackAnswer</FallbackAnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="MostManpowerQuestion" Category="Military">
+    <AnswerKey>%MostManpowerAnswer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="MostMinorFactionsQuestion" Category="Diplomacy">
+    <AnswerKey>%MostMinorFactionsAnswer</AnswerKey>
+    <FallbackAnswerKey>%MostMinorFactionsFallbackAnswer</FallbackAnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="HigherReparationsQuestion" Category="Diplomacy">
+    <AnswerKey>%HigherReparationsAnswer</AnswerKey>
+    <FallbackAnswerKey>%HigherReparationsFallbackAnswer</FallbackAnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.1*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="LoreQuestion1" Category="Lore">
+    <AnswerKey>%LoreQuestion1Answer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.05*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="LoreQuestion2" Category="Lore">
+    <AnswerKey>%LoreQuestion2Answer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.05*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="LoreQuestion3" Category="Lore">
+    <AnswerKey>%LoreQuestion3Answer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.05*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="LoreQuestion4" Category="Lore">
+    <AnswerKey>%LoreQuestion4Answer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.05*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="LoreQuestion5" Category="Lore">
+    <AnswerKey>%LoreQuestion5Answer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.05*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+  <LibrarianQuestionDefinition Name="LoreQuestion6" Category="Lore">
+    <AnswerKey>%LoreQuestion6Answer</AnswerKey>
+    <CustomCost ResourceName="EmpireMoney">(5 + 0.05*(Property(Context, @../ClassEmpire, BankAccount, true)) + 0.05*(Property(Context, @../ClassEmpire, EmpireMoney, true)))*0.75</CustomCost>
+  </LibrarianQuestionDefinition>
+
+</Datatable>

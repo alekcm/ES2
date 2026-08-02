@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ModuleDefinition.xsd">
+
+    <!-- AI uses family to recognize modules ; discuss with AI before any changes to families -->
+
+    <!-- ####################### -->
+    <!-- ######  Support  ###### -->
+    <!-- ####################### -->
+    
+    <SupportModule Name="ModuleSupportInvisibilityLevel1" Family="Invisibility" Level="1">
+        <Cost ResourceName="SystemProduction">90</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyArmyCap1</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibility</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition" Inverted="true">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Edition" Inverted="true">Path(Context, @'ClassShip,ShipRoleObliterator') or Path(Context, @'ClassShip,ShipRoleBattleship')</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibility"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityLevel1"/>
+        <SimulationDescriptorReference Name="ClassModuleNotOnObliteratorOrBattleShip"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityLevel2" Family="Invisibility" Level="2" GuiCategory="CategoryStrategic1">
+        <Cost ResourceName="SystemProduction">135</Cost>
+      <Cost ResourceName="Strategic1" Instant="true">10</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck1</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibility</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition" Inverted="true">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Edition" Inverted="true">Path(Context, @'ClassShip,ShipRoleObliterator') or Path(Context, @'ClassShip,ShipRoleBattleship')</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibility"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityLevel2"/>
+        <SimulationDescriptorReference Name="ClassModuleNotOnObliteratorOrBattleShip"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityAmbush" Family="Invisibility" Level="3" GuiCategory="CategoryStrategic3">
+        <Cost ResourceName="SystemProduction">180</Cost>
+        <Cost ResourceName="Strategic3" Instant="true">20</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck3</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibility</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition" Inverted="true">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Edition" Inverted="true">Path(Context, @'ClassShip,ShipRoleObliterator') or Path(Context, @'ClassShip,ShipRoleBattleship')</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibility"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityLevel3"/>      
+        <SimulationDescriptorReference Name="ModuleInvisibilityAmbush"/>
+        <SimulationDescriptorReference Name="ClassModuleNotOnObliteratorOrBattleShip"/>
+        <BattleActionReference Name="SupportModule_FirstPhaseStart_HideFlotilla"/>
+        <BattleActionReference Name="SupportModule_PostPhaseStart_RevealFlotilla"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityFullCombat" Family="Invisibility" Level="3" GuiCategory="CategoryStrategic6">
+        <Cost ResourceName="SystemProduction">180</Cost>
+        <Cost ResourceName="Strategic6" Instant="true">20</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck5</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibility</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition" Inverted="true">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Edition" Inverted="true">Path(Context, @'ClassShip,ShipRoleObliterator') or Path(Context, @'ClassShip,ShipRoleBattleship')</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibility"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityLevel3"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityFullCombat"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityFullCombat1"/>
+        <SimulationDescriptorReference Name="ClassModuleNotOnObliteratorOrBattleShip"/>
+        <BattleActionReference Name="SupportModule_FirstPhaseStart_AddEvasionIfNotDetected"/>      
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityAmbushUmbralChoir" Family="Invisibility" Level="3" GuiCategory="CategoryStrategic3">
+        <Cost ResourceName="SystemProduction">180</Cost>
+        <Cost ResourceName="Strategic3" Instant="true">20</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck3</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibilityUmbralChoir</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition" Inverted="false">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Edition" Inverted="true">Path(Context, @'ClassShip,ShipRoleObliterator') or Path(Context, @'ClassShip,ShipRoleBattleship')</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>    
+        <SimulationDescriptorReference Name="ModuleInvisibilityAmbush"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityUmbralChoir"/>
+        <SimulationDescriptorReference Name="ClassModuleNotOnObliteratorOrBattleShip"/>
+        <BattleActionReference Name="SupportModule_FirstPhaseStart_HideFlotillaUmbralChoir"/>
+        <BattleActionReference Name="SupportModule_PostPhaseStart_RevealFlotilla"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityFullCombatUmbralChoir" Family="Invisibility" Level="3" GuiCategory="CategoryStrategic6">
+        <Cost ResourceName="SystemProduction">180</Cost>
+        <Cost ResourceName="Strategic6" Instant="true">20</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck5</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibilityUmbralChoir</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition" Inverted="false">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Edition" Inverted="true">Path(Context, @'ClassShip,ShipRoleObliterator') or Path(Context, @'ClassShip,ShipRoleBattleship')</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityFullCombat"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityFullCombat1"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityUmbralChoir"/>
+        <SimulationDescriptorReference Name="ClassModuleNotOnObliteratorOrBattleShip"/>
+        <BattleActionReference Name="SupportModule_FirstPhaseStart_AddEvasionIfNotDetectedUmbralChoir"/>      
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityDetectionLevel1" Family="Detection" Level="1">
+        <Cost ResourceName="SystemProduction">90</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck2</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibilityDetection</PathPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetection"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionLevel1"/>
+        <BattleActionReference Name="SupportModule_BattleStart_GiveVisionStrengthToGroup"/>
+        <BattleActionReference Name="SupportModule_BattleStart_GroupInteraction_InformOpponentOfVisionStrength"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityDetectionLevel2" Family="Detection" Level="2" GuiCategory="CategoryStrategic2">
+        <Cost ResourceName="SystemProduction">135</Cost>
+        <Cost ResourceName="Strategic2" Instant="true">10</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck4</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibilityDetection</PathPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetection"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionLevel2"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionProbe"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityDetectionProbeLevel1"/>
+        <BattleActionReference Name="SupportModule_BattleStart_GiveVisionStrengthToGroup"/>
+        <BattleActionReference Name="SupportModule_BattleStart_GroupInteraction_InformOpponentOfVisionStrength"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityDetectionLevel3" Family="Detection" Level="3" GuiCategory="CategoryStrategic4">
+        <Cost ResourceName="SystemProduction">180</Cost>
+        <Cost ResourceName="Strategic4" Instant="true">20</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlayDeck6</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ClassModuleInvisibilityDetection</PathPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetection"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionLevel3"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionProbe"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityDetectionProbeLevel2"/>
+        <BattleActionReference Name="SupportModule_BattleStart_GiveVisionStrengthToGroup"/>
+        <BattleActionReference Name="SupportModule_BattleStart_GroupInteraction_InformOpponentOfVisionStrength"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportJuggernautUmbralChoir" Family="FleetEnhancerBase" Level="4">
+        <Cost ResourceName="SystemProduction">200</Cost>
+        <AIBattleSituations Situation="EnergyDefense" Mode="Use" Value="1"/>
+        <AIBattleSituations Situation="EnergyWeapon" Mode="Against" Value="1"/>
+        <InterpreterPrerequisite Flags="Edition">Path(Context, @'ClassShip,ShipRoleCarrier') or Path(Context, @'ClassShip,ShipRoleBattleship')</InterpreterPrerequisite>
+        <PathPrerequisite Flags="UnlockAvailability,Edition,Faction,AffinityGameplayTechnologyUmbralChoir" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Edition">TechnologyJuggernautFactionModule</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCHisshos</DownloadableContentPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Edition">DLCUC</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityAmbush"/>
+        <!--<SimulationDescriptorReference Name="ClassModuleInvisibilityUmbralChoir"/>-->
+        <SimulationDescriptorReference Name="ClassModuleCarrierBattleshipOnly"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibility"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityLevel3"/>
+        <SimulationDescriptorReference Name="ModuleSupportJuggernautFleetEnhancer"/>
+        <SimulationDescriptorReference Name="ModuleSupportJuggernautFleetEnhancerUmbralChoir"/>
+        <BattleActionReference Name="SupportModule_FirstPhaseStart_HideFlotilla"/>
+        <BattleActionReference Name="SupportModule_PostPhaseStart_RevealFlotilla"/>
+        <BattleActionReference Name="BattleActionSupportInitialize"/>
+    </SupportModule>
+
+    <!-- AI FAMILY DATA TO REPLACE -->
+    <!--<SupportModule Name="ModuleSupportInvisibilityDetectionProbeLevel1" Family="FleetEnhancer" Level="1">
+        <Cost ResourceName="SystemProduction">75</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyWeaponModuleBoardingPod1</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionProbe"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityDetectionProbeLevel1"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityDetectionProbeLevel2" Family="FleetEnhancer" Level="2" GuiCategory="CategoryStrategic5">
+        <Cost ResourceName="SystemProduction">100</Cost>
+        <Cost ResourceName="Strategic5" Instant="true">10</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyPlaneUnlock</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionProbe"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityDetectionProbeLevel2"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportInvisibilityDetectionProbeLevel3" Family="FleetEnhancer" Level="3" GuiCategory="CategoryStrategic6">
+        <Cost ResourceName="SystemProduction">125</Cost>
+        <Cost ResourceName="Strategic6" Instant="true">20</Cost>
+        <TechnologyPrerequisite Flags="Edition">TechnologyUniqueShip1</TechnologyPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInvisibilityDetectionProbe"/>
+        <SimulationDescriptorReference Name="ModuleInvisibilityDetectionProbeLevel3"/>
+    </SupportModule>-->
+
+    <SupportModule Name="ModuleSupportInfluenceProduction" Family="JournalistBase" Level="1">
+        <Cost ResourceName="SystemProduction">90</Cost>
+        <PathPrerequisite Flags="Edition" Inverted="false">../ClassEmpire/ClassQuests,CompletedQuestUC1-2APacifist</PathPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ModuleSupportInfluenceProduction</PathPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleInfluenceProduction"/>
+        <SimulationDescriptorReference Name="ModuleSupportInfluenceProduction"/>
+    </SupportModule>
+
+    <SupportModule Name="ModuleSupportScienceProduction" Family="AnalyzerBase" Level="2">
+        <Cost ResourceName="SystemProduction">90</Cost>
+        <PathPrerequisite Flags="Edition" Inverted="false">../ClassEmpire/ClassQuests,CompletedQuestUC1-2BScientist</PathPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="NoMoreThanOneModuleOfThisType,Edition,Disable" Inverted="true">ClassShip/ClassSection/ClassModule,ModuleSupportScienceProduction</PathPrerequisite>
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>
+        <SimulationDescriptorReference Name="ClassModuleScienceProduction"/>
+        <SimulationDescriptorReference Name="ModuleSupportScienceProduction"/>
+    </SupportModule>
+
+</Datatable>

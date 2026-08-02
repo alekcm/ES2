@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+  <!-- ########################################## -->
+  <!-- ######        MINOR FACTIONS        ###### -->
+  <!-- ########################################## -->
+
+  <!-- MinorHacking -->
+  <FactionTrait Name="FactionTraitMinorProcessingPowerCostReduction01" SubCategory="FactionTrait" Hidden="false" Cost="0">
+    <SimulationDescriptorReference Name="FactionTraitMinorProcessingPowerCostReduction01"/>
+  </FactionTrait>
+    <FactionTrait Name="FactionTraitMinorBonusHackingSpeed" SubCategory="FactionTrait" Hidden="false" Cost="0">
+        <SimulationDescriptorReference Name="FactionTraitMinorBonusHackingSpeed"/>
+    </FactionTrait>
+
+</Datatable>

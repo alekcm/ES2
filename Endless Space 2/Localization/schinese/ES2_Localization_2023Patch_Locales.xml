@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%FactionTraitConstellationVisionTitle">基础牢固</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitConstellationVisionDescription">虽然还有更加遥远的地方尚未揭晓，但我们利用天文台以及探测计划，逐渐揭露了附近的星系。</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitConstellationVisionTooltipOverride">从被揭露的初始区域开始</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTraitTemplarsTitle">狂热搜罗</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTraitTemplarsDescription">这种搜罗侧重于满意度和入侵力量。</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTemplarsTooltipOverride">解锁纳卡琳族地面作战攻击策略：搜查（强化“先发轰炸”，轰炸伤害获得较大加成）
+解锁纳卡琳族地面作战防御策略：反抗（强化“集结”，轰炸伤害获得较大加成）</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride1">无来自行星的[scienceColored]</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride2">获得技术的[prestigeColored]花费+300%</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride3">摧毁船舰获得的[scienceColored]-50%</LocalizationPair>
+  <LocalizationPair Name="%AffinityGameplayTemplarsTooltipEffect">舰队可发掘并收集文物，未分配的文物可以生成科学。花费文物即可：
+• 在行星上创建一座圣殿，移除四大资源的减损效果
+• 强化英雄
+• 获得强有力的派系特性
+
+可以建造教堂来获得强大的星系加成，并增加文物栏位上限
+
+可以使小型派系成为附庸，获取其同化特性同时使其保持独立，并持续获得该派系的资源。此类附庸派系生产的所有舰队会自动转移给你。</LocalizationPair>
+  <LocalizationPair Name="%PopulationModifiersTraitSecondaryFIDSIHappyTitle">狂热劳动</LocalizationPair>
+  <LocalizationPair Name="%PopulationModifiersTraitSecondaryDustHappyEpicTitle">神秘清道夫</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsTitle">沉睡遗迹</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsDescription">帝国初始有三个完整的殖民地安全地隐藏在母星附近和银河系中心之间的地带，沉睡已久。舰队或其他新殖民地可以唤醒这些殖民地。</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsTooltipOverride">标记为沉睡遗迹的星系可以被唤醒来恢复资源、人口和星系升级。要唤醒遗迹，可向未殖民星系派遣一支舰队，并使用舰队的“唤醒”行动，或在已征服的星系上建造相关的星系改良设施。
+
+请注意，拥有此特性的其他帝国也可以唤醒遗迹，连属于你的遗迹也包括在内。
+
+每一个拥有此特性的派系都会有三个这样的遗迹散布其首脑星系以外的星系中。
+
+你收到派系任务的第一步时，你尚未发现的遗迹将被揭露。</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitApatheticColonistsEffect">殖民地向前哨基地输送的[foodColored]-25%
+前哨基地生产的[foodColored]-25%</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitTechnologicalHeadStartLessEffectOverride">从初阶技术已解锁的状态开始</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesTitle">远古校友</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesDescription">帝国带着永驻的善意、官僚经验和致力于为整个星系提供慷慨捐助的热忱，持续稳定地为学院及其章程提供有影响力的赞助。</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesTooltipOverride">可以捐赠已转化或已征服的星系给学院，以此换取关系点数
+
+从学院已揭露的状态开始</LocalizationPair>
+  <LocalizationPair Name="%PersonalityImperiousTitle">专横</LocalizationPair>
+  <LocalizationPair Name="%PersonalityImperiousDescription">这个帝国将专注于扩张和施加影响力。</LocalizationPair>
+  <LocalizationPair Name="%DeclareCrusadeAgainstTitle">宣告远征</LocalizationPair>
+  <LocalizationPair Name="%DeclareCrusadeAgainstDescription">宣告向另一帝国发动远征后，其他所有帝国可攻击其船舰和星系。被攻击帝国只能通过与学院谈判终止远征。</LocalizationPair>
+  <LocalizationPair Name="%BlockAcademyAuctionAgainstTitle">学院拍卖禁令</LocalizationPair>
+  <LocalizationPair Name="%BlockAcademyAuctionAgainstDescription">对另一帝国宣告禁令后，该帝国不可再向学院进行捐赠，持续20回合（根据游戏速度调整）。通过学院外交可获得其他用途。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsTitle">研究静居所</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsDescription">偏远的修道院、大教堂和研究村位于冰封的荒原中，使得帝国能够将其最专注的科学家放入一个天然适合研究的环境之中，与虔诚教徒隔离开来。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience4TemplarsTitle">自然哲学所</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience4TemplarsDescription">从一开始，人们因为相信失落族而不至于对其一无所知，因为信仰自然哲学而使其免受异端邪说的侵害；通过在宗教中心建立实验场所，让神职研究者可以静心地高效工作。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsTitle">精神阐释基金会</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsDescription">这是由失落族的捐赠而建立的一项广受欢迎的终身教育计划，基金会围绕失落族的文物组织免费的展览和课程，将社区利益与众信徒的广泛洞察结合在一起。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScienceOnGasTemplarsTitle">崇高大学</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScienceOnGasTemplarsDescription">从遍布银河系的异常中可以看出失落族的崇高影响以及残害他们的无尽是多么残忍无情，由此，专门的历史与科学学院成为了纳卡琳族的重要机构。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience8TemplarsTitle">天空校园</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience8TemplarsDescription">不论技术上多么容易，飞行对感官的刺激、对灵魂的激荡使其永远是一个奇迹般的存在。飞行城也是如此，这里能激发众信徒灵感，在堪称化学与物理之乐土的气态巨星上，创造不可思议的新技术奇迹。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementDefense1TemplarsTitle">整体防御</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementDefense1TemplarsDescription">虽然同等重视星系其余各处，但把防御措施与训练计划引入历史遗址与神圣场所，将提升保持健康与遵守训练规程的重要性，使其成为一项共同的精神义务。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueTemplarsEffectOverride">一定半径范围内敌对船舰生命值每回合-5%
+一定半径范围内你的船舰生命值每回合+20%</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemCollectRelicImprovementTitle">资源改良设施</LocalizationPair>
+  <LocalizationPair Name="%SubCategoryCollectRelicTitle">文物</LocalizationPair>
+  <LocalizationPair Name="%StarSystemCollectRelicImprovementTitle">收集文物</LocalizationPair>
+  <LocalizationPair Name="%StarSystemCollectRelicImprovementDescription">在此星系上收集文物。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementOnlyOnAwakenedRuinsTitle">[blue-gray]（仅可建造在觉醒的遗迹上）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%SciencePerUnassignedRelicTitle">来自[Relic]的基础[scienceColored]</LocalizationPair>
+  <LocalizationPair Name="%FailureNotEnoughTemplesDescription">在你的帝国中，每有4座圣殿，才可建造1座教堂。</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyFleetCannotInvadeDescription">拥有学院船舰的舰队不可用于入侵星系。</LocalizationPair>
+  <LocalizationPair Name="%FailureYouDontOwnTheAcademyDLC4Description">你目前未占有学院，也尚未通过协商获得特工档案。</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyRequiresAlliedDescription">你必须与学院结盟才能提出该请求。</LocalizationPair>
+  <LocalizationPair Name="%FailureNotEnoughAcademyRelationDescription">你需要与学院有更多联系才能获得。</LocalizationPair>
+  <LocalizationPair Name="%FailureTooManyPopulationOrderedDescription">你在最近的回合中已经索要了太多人口！请给学院一点时间来为之后的请求做准备。</LocalizationPair>
+  <LocalizationPair Name="%FailureMetaplotInProgressDescription">学院目前的资源有点紧张！</LocalizationPair>
+  <LocalizationPair Name="%FailureDoesntOwnAcademyDescription">学院未占有母星系时，无法批准请求。</LocalizationPair>
+  <LocalizationPair Name="%FailureBoostAlreadyActiveDescription">此增益已激活。</LocalizationPair>
+  <LocalizationPair Name="%FailureAlreadyHasCrusadeDescription">已经向这个帝国宣告过远征。</LocalizationPair>
+  <LocalizationPair Name="%FailureHasCrusadeImmunityDescription">这个帝国已经与学院协商了远征豁免。</LocalizationPair>
+  <LocalizationPair Name="%FailureAlreadyCantAccessAcademyAuctionsDescription">这个帝国已经被禁止参加学院拍卖。</LocalizationPair>
+  <LocalizationPair Name="%FailureFavoredByTheAcademyDescription">你只能用这个对付不受学院优待的帝国。</LocalizationPair>
+  <LocalizationPair Name="%FailureOnlyOneCathedralDescription">一次只能建造一座教堂</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1Title">重力磁等离子体覆层</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2Title">高级爆炸型无人机</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3Title">城市模拟</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1Description">通过将行星磁场武器化，或在一些情况下对其重力井施加电荷，等离子弹在下落时可避免大气散射，而等离子地雷能够更有效地保存能量，或是在地面上停留更长时间避免能量泄露。</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2Description">虽然部署爆炸型无人机已经有上千年，但通用空气动力学使制造此类无人机实现了大规模量产，这是由于其生产线对环境并无限制；因此这些无人机迅速成为有组织的轰炸战役和殖民防御团体的主力。</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3Description">通过全新的地理扫描技术，能够快速复制地理信息然后将其模拟到娱乐星系中，使非虚构内容更准确，让虚构内容更具感染力，同时让休闲战争游戏更具价值。因此，无论是为了保卫自己的家园，还是为了更好地潜入别人的家园，公民们都会熟悉模拟区域特有的各种常规防御技巧。</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1EffectOverride">地面作战策略轰炸伤害升级：
+• 先发轰炸设定为2500
+• 集结设定为1850</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2EffectOverride">地面作战策略轰炸伤害升级：
+• 先发轰炸设定为3000
+• 集结设定为2250</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3EffectOverride">地面作战策略轰炸伤害升级：
+• 先发轰炸设定为3500
+• 集结设定为2750</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1TemplarsEffectOverride">• 搜查设定为3000
+• 反抗设定为2250</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2TemplarsEffectOverride">• 搜查设定为3750
+• 反抗设定为2750</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3TemplarsEffectOverride">• 搜查设定为4500
+• 反抗设定为3500</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementAcademyDiplomacyTitle">学术联络</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementAcademyDiplomacyDescription">学院的先知已经联系了我们，一旦我们将一些当地语言翻译完成并为我们的大使确定必要的住宿，简易的大使星系便可立即建立起来。</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill_RelicBoost_Title">神圣事业</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill_RelicBoost_Description">受托照管文物能在心理上带来好处，这当然很重要，但更大的好处在于通过适当的训练和教会认可的星尘“指纹”，可以将神秘的失落族知识框架和技能印迹传递给英雄们。</LocalizationPair>
+  <LocalizationPair Name="%HeroSkillShip129_Vision_0_TooltipOverride">解锁新舰队行动，神圣哨兵：
+探测舰队的视野+10
+舰队上的[upkeepColored]-50%
+激活时消耗所有机动值</LocalizationPair>
+  <LocalizationPair Name="%HeroSkillShip129_Vision_1_TooltipOverride">解锁新舰队行动，神圣哨兵：
+探测舰队的视野+20
+舰队上的[upkeepColored]-100%
+激活时消耗所有机动值</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill02BranchTemplars_Title">轨道炮术家</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill02BranchTemplars_Description">星尘增强了对物理和数学的掌握，使得此英雄不仅可以用舰队轨道武器实现更好的射击效果，还可以用星尘操纵的陨石和太空碎片进行即兴轰炸。</LocalizationPair>
+  <LocalizationPair Name="%HeroRelicTitle">英雄文物</LocalizationPair>
+  <LocalizationPair Name="%TempleRelicsBranchDescription">分配给圣殿的文物。
+已建造{0}/{1}座教堂。
+还需要{2}座圣殿才可再建造一座教堂。</LocalizationPair>
+  <LocalizationPair Name="%ResearchRelicsBranchDescription">未分配的文物可以产出[scienceColored]科技。
+ 
+遗迹科技产出：{0}点[scienceColored]</LocalizationPair>
+  <LocalizationPair Name="%FIDIRelicsBranchDescription">分配给帝国的文物。
+已解锁文物栏位上限{0}/4</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSBonusTitle">基础行星[fids]</LocalizationPair>
+  <LocalizationPair Name="%SystemInfluenceRadiusTitle">星系影响半径</LocalizationPair>
+  <LocalizationPair Name="%FleetsInInfluenceZoneTitle">在这个星系影响区域里拥有的舰队</LocalizationPair>
+  <LocalizationPair Name="%RelicSlotsUnlockedTitle">帝国文物栏位上限</LocalizationPair>
+  <LocalizationPair Name="%CathedralOnSystemStarSystemLabel">这个星系中有一座纳卡琳教堂，这个星系的行星上共有{0}座圣殿。</LocalizationPair>
+  <LocalizationPair Name="%CathedralOnSystemOneTempleStarSystemLabel">这个星系中有一座纳卡琳教堂，这个星系的行星上有1座圣殿。</LocalizationPair>
+  <LocalizationPair Name="%TempleOnSystemStarSystemLabel">这个星系的{0}颗行星上有1座纳卡琳圣殿。</LocalizationPair>
+  <LocalizationPair Name="%OneTempleOnSystemStarSystemLabel">这个星系的1颗行星上有1座纳卡琳圣殿。</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectOwnerTooltip">教堂会对敌方船舰造成伤害，同时加快你方船舰的恢复速度。在这个星系的影响半径范围内，船舰每回合恢复最大生命值的20%。</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectHostileTooltip">教堂会对位于其影响半径范围内的敌方船舰造成伤害；由于你是这个派系的敌人，你的舰队每回合将承受相当于其最大生命值5%的伤害。该效果可摧毁船舰。</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectNeutralTooltip">教堂会对位于其影响半径范围内的敌方船舰造成伤害；但你不是这个派系的敌人。</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsStarSystemLabel">这个星系包含隐藏的沉睡遗迹，等待着你来唤醒。</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsAwakenedStarSystemLabel">这个星系包含隐藏的沉睡遗迹，但这些遗迹已经被唤醒。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelConvertedForAcademyTooltip">你已将这个星系赠予学院。</LocalizationPair>
+  <LocalizationPair Name="%MinimumFIDSTitle">[fids]下限</LocalizationPair>
+  <LocalizationPair Name="%MinimumFIDSITitle">[fidsi]下限</LocalizationPair>
+  <LocalizationPair Name="%MinimumFoodTitle">[foodColored]下限</LocalizationPair>
+  <LocalizationPair Name="%MinimumIndustryTitle">[industryColored]下限</LocalizationPair>
+  <LocalizationPair Name="%MinimumDustTitle">[DustColored]下限</LocalizationPair>
+  <LocalizationPair Name="%MinimumScienceTitle">[scienceColored]下限</LocalizationPair>
+  <LocalizationPair Name="%MinimumPrestigeTitle">[prestigeColored]下限</LocalizationPair>
+  <LocalizationPair Name="%MinimumApprovalTitle">[happinessColored]下限</LocalizationPair>
+  <LocalizationPair Name="%HappinessMalusReductionTitle">初始不满度</LocalizationPair>
+  <LocalizationPair Name="%HeroPointMultiplierTitle">英雄解锁点数</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsTooltipOverride">每颗拥有特异点的行星上，每有一个[Relic]，获得[scienceColored]+2</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsTooltipOverride">星系中每颗肥沃型行星上，每有一个[Relic]，获得[scienceColored]+2</LocalizationPair>
+  <LocalizationPair Name="%TroopHealthPerTempleTitle">每座圣殿的防御部队生命值</LocalizationPair>
+  <LocalizationPair Name="%false">FALSE</LocalizationPair>
+  <LocalizationPair Name="%FAKE">FAKE</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinitySophonsTitle">索芬之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityCraversTitle">吞噬者之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVenetiansTitle">鲁莫锐司族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVampirilisTitle">沃狄亚尼族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTerransTitle">人族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityMezariTitle">梅扎里族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinitySheredynTitle">谢瑞盾族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityHoratioTitle">何瑞修克隆族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTimeLordsTitle">裂隙族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityUnfallenTitle">不落族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVaultersTitle">腾跃族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityMajorHisshosTitle">必胜族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityUmbralChoirTitle">本影幽歌族之影</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTemplarsTitle">纳卡琳族之影</LocalizationPair>
+  <LocalizationPair Name="%MoneyRatioLostFromTraitorsTitle25">沃狄亚尼族旅行社</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamagesTitle">防御性轰炸伤害</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesTitle">攻击性轰炸伤害</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSBonusPerPopulationTitle">最后的帝国[fids]减损</LocalizationPair>
+  <LocalizationPair Name="%PlanetScienceModifierTitle">科学为信仰让步[scienceColored]减损</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSTitle">行星</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSITitle">行星</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFoodPerPopulationTitle">[foodColored]/[population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialIndustryPerPopulationTitle">[industryColored]/[population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialDustPerPopulationTitle">[dustColored]/[population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialSciencePerPopulationTitle">[scienceColored]/[population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialPrestigePerPopulationTitle">[prestigeColored]/[population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSPerPopulationTitle">[FIDS]/[population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSIPerPopulationTitle">[FIDSI]/[population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSPenaltyBreakdownTitle">缺失殖民技术</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSIFromSenatorSkillTitle">每个英雄等级每[population]的[FIDSI]</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointCostMultiplierTitle">学院外交关系点数花费</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsTitle">学院关系点数</LocalizationPair>
+  <LocalizationPair Name="%CandidateCountPerPopulationTitle">每[population]的候选人</LocalizationPair>
+  <LocalizationPair Name="%NumberOfTemplesTitle">圣殿数量</LocalizationPair>
+  <LocalizationPair Name="%ScienceScrappingBonusTitle">每摧毁一点命令点数获得[scienceColored]加成</LocalizationPair>
+  <LocalizationPair Name="%PartnerScienceTradingCostReductionTitle">获得技术的[prestigeColored]花费</LocalizationPair>
+  <LocalizationPair Name="%TempleScienceToInfluenceFactorTitle">行星初始[scienceColored]已添加到行星初始[prestigeColored]</LocalizationPair>
+  <LocalizationPair Name="%HeroRecruitmentUnlockedTitle">已解锁英雄招募</LocalizationPair>
+  <LocalizationPair Name="%TrendTitle">每回合关系点数</LocalizationPair>
+  <LocalizationPair Name="%BombardmentLevelTitle">轰炸等级</LocalizationPair>
+  <LocalizationPair Name="%SentryActionLevelTitle">哨兵等级</LocalizationPair>
+  <LocalizationPair Name="%HackingSpeedMultiplierTitle">侵入速度倍增器</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleCanFireTitle">坚堡舰可以发射</LocalizationPair>
+  <LocalizationPair Name="%TradingRouteIncomeTitle">贸易公司</LocalizationPair>
+  <LocalizationPair Name="%TradingRouteLeechTitle">受制约的贸易公司</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSITitle">[fidsi]加成</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSTitle">[fids]加成</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics01ButtonTooltipDescription">[industrialistColored]+{0}%圣殿战略存量生成</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics02ButtonTooltipDescription">每有一个未分配文物，[scientistColored]+{0}星尘
+每有一个未分配文物，[scientistColored]+{1}影响力
+每有一个未分配文物，[scientistColored]+{2}人力</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics03ButtonTooltipDescription">[pacifistColored]+{0}%教堂星系上的贸易价值
+[pacifistColored]+{1}%在友方领地的舰队生命值回复
+星系上每有一座圣殿，[pacifistColored]+{2}%部队生命值</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics04ButtonTooltipDescription">[ecologistColored]+{0}%圣殿奢侈品存量生成</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics05ButtonTooltipDescription">[religiousColored]英雄可以被分配到友方领地以外的舰队
+[religiousColored]解锁下一个英雄需要{0}%英雄点数</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics06ButtonTooltipDescription">[militaristColored]舰队可以在友方领地之外翻新
+[militaristColored]{0}%翻新星尘花费</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsButtonTooltipDescriptionNoRelicsAsigned">[gray]这个栏位目前已禁用，点击花费2件[Relic]来激活它。#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsButtonTooltipDescriptionRelicsAsigned">[gray]点击以禁用这个栏位，并退回2件[Relic]。#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsDescription">当前可用的文物数量。
+
+花费2件文物以激活以下任一栏位，并获得其列出的效果。你可以在任何时候禁用已激活的文物栏位，其花费将全额退回。</LocalizationPair>
+  <LocalizationPair Name="%FailureRelicsAssignedLimitReachedDescription"> </LocalizationPair>
+  <LocalizationPair Name="%AwokenSlumberingRuinsTitle">已唤醒的沉睡遗迹</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsTitle">沉睡遗迹</LocalizationPair>
+  <LocalizationPair Name="%OnOrbit">在这个英雄绕行的星系上</LocalizationPair>
+  <LocalizationPair Name="%OnOwnedOrbit">在这个英雄绕行的你方星系上</LocalizationPair>
+  <LocalizationPair Name="%OnHostileOrbit">在这个英雄绕行的敌方星系上</LocalizationPair>
+  <LocalizationPair Name="%OnNeutralOrbit">在这个英雄绕行的中立方星系上</LocalizationPair>
+  <LocalizationPair Name="%OnFriendlyOrbit">在这个英雄绕行的友方星系上</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneTitle">秘传</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneDescription">你的希尔米萨拉族奥秘派已经指出这个行星上隐藏着大量星尘。</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneRewardsDescription">将提供大量星尘。</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitle">捐赠给学院</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescription">你不会自己掌控{0}，而是将其所属权送给学院，以换取一些优待与资源。</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitleAttacker">{0}已被强制捐赠给学院</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescriptionAttacker">你捕获了{0}并将其捐赠给了学院，学院给予了你一些资源和优待。</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitleDefender">{0}已被{1}强制捐赠给学院</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescriptionDefender">{1}已被{0}捕获，{0}随后将其捐赠给学院。你要在不激怒学院的情况下拿回这个星系是不可能的。</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategy3TemplarsTitle">搜查</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategy3TemplarsDescription">召唤古老的星尘技术来扫除敌人及其设施，而不会造成额外附带伤害。</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4TemplarsTitle">反抗</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4TemplarsDescription">部署隐藏的远古防御系统，配合信徒们的伟大起义打击敌人。</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4Title">集结</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4Description">所有的防御都是为了夺回阵地，打破敌人的进攻。如果入侵者即将被击败或者你有额外的预备队，将会生效。</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategyAcademyFactionTitle">神盾</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategyAcademyFactionDescription">学院的许多低级星尘使用者和训练有素的狂热分子拿起手中的每一件武器，保卫他们的领土。</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategyAcademyFactionTitle">调停</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategyAcademyFactionDescription">从高空轨道部署精英星尘使用者特种部队，以确保重要目标的安全，同时将人口风险降至最低。</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeButtonDescription">唤醒沉睡遗迹</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeNotOrbitingButtonDescription">唤醒这个星系的遗迹，立即进行殖民，同时授予资源、人口和星系改良设施。此类遗迹必须与舰队一起围绕轨道运行才能被唤醒。</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeNormalColonizerButtonDescription">唤醒这个星系的遗迹，立即进行殖民，同时授予资源、人口和星系改良设施。这样做不会消耗你的舰队，但前提是该星系上尚未建立前哨基地。</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeFleetActionTitle">唤醒</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeFleetActionDescription">立即对这个星系进行殖民，授予资源、人口和星系改良设施，但前提是该星系上尚未建立前哨基地。</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction1Title">神圣哨兵</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction1Description">激活后可牺牲该舰队的剩余机动值，为其提供大量视野增益。</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction2Title">神圣哨兵</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction2Description">激活后可牺牲该舰队的剩余机动值，为其提供大量视野增益。</LocalizationPair>
+  <LocalizationPair Name="%FailureConsumeAllDescription">#A4ABB5#（消耗剩余机动值）#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsBonusEffectTitle">从沉睡中醒来</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsBonusEffectDescription">居民们从假死状态中活过来，机器嗡嗡作响开始运转，整个社会的灯光再次点缀着夜晚的风景。在这一过程结束之前，该星系将从其远古储备中提取资源。</LocalizationPair>
+  <LocalizationPair Name="%TemporaryEffectSlumberingRuinsBonusTitle">从沉睡中醒来(#E3BDAC#{0}#REVERT#[turn])</LocalizationPair>
+  <LocalizationPair Name="%TemporaryEffectSlumberingRuinsBonusDescription">居民们从假死状态中活过来，机器嗡嗡作响开始运转，整个社会的灯光再次点缀着夜晚的风景。在这一过程结束之前，该星系将从其远古储备中提取资源。
+剩余回合：{0}[turn]</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemAwakenImprovementTitle">唤醒星系</LocalizationPair>
+  <LocalizationPair Name="%SubCategoryAwakenTitle">沉睡遗迹</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementTitle">复活殖民地</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementDescription">我们将派人深入，将我们的亲属从休眠中唤醒，并重新激活失落的基础设施。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementEffectOverride">唤醒这个星系，将获得资源、人口和星系改良设施。</LocalizationPair>
+  <LocalizationPair Name="%AcademyConvertedSystemTitheBonus">转化后的星系已经被割让给了学院。因此，学院愿意以此优待作为交换来达成你的另一个请求。</LocalizationPair>
+  <LocalizationPair Name="%SystemConvertedForAcademyTitle">割让给学院的星系</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Templars_Academy2Popup-Description">赠予星系可使你与学院的关系更加紧密，你可以在学院外交界面中通过赠予来换取优待。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyPowerDescription">学院的能量等级。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyRolesCountdownDescription">距学院功能竞标开始还剩下的回合数。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyRequestCountdownDescription">距学院功能竞标结束还剩下的回合数。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyMetaplotCountdownDescription">学院目前忙于搜寻吸神石。</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyDormantCountdownDescription">学院目前正在筹备中；他们很快就会提出请求。</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowTitle">学院外交</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowDescription">这是学院外交界面</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowActionsTitle">行动</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowActionsDescription">显示当前可用以与学院互动的外交行动。</LocalizationPair>
+  <LocalizationPair Name="%AcademySideLevelDescriptionAwakening">学院的能量等级也决定了新进英雄的等级。</LocalizationPair>
+  <LocalizationPair Name="%AcademyModalSwitchTitle">切换至学院功能</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalSwitchTitle">切换至学院外交</LocalizationPair>
+  <LocalizationPair Name="%AcademyModalSwitchIcon">[Hero]</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalSwitchIcon">[DiploStateTruce]</LocalizationPair>
+  <LocalizationPair Name="%AcademySwitchDescription">切换至学院功能界面</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacySwitchDescription">切换至学院外交界面</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectTitle">关系效果：</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectWar">你与学院可以互相攻击对方的舰队以及包围对方的星系
+你与学院可以互相入侵对方的星系</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectHostile">你与学院可以互相攻击对方的舰队以及包围对方的星系</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectNeutral">你与学院可以互相攻击对方的擅闯舰队</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectFriendly">学院人口可以移民至你的星系
+你与学院不可互相攻击对方</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectAlly">学院人口可以移民至你的星系
+你与学院不可互相攻击对方
+你可以在学院星系修理并翻新你的舰队
+你与学院可以互相保护对方的星系</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateHostileTitle">敌对</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateHostileDescription">在此种外交状态下，帝国可以攻击其领土内的学院，但不能入侵其星系。外交不受限制，但学院的怒气正逐渐上升……</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAcademyAcademyDiplomaticRelationStateHostile">敌对</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateFriendlyTitle">友好</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateFriendlyDescription">在此种外交状态下，帝国与学院的关系被认为是友好的。帝国享有学院的一系列优待，并且不可对其做出敌对行动。</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAcademyAcademyDiplomaticRelationStateFriendly">友好</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeWarTooltip">与学院交战</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeHostileTooltip">与学院敌对</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeNeutralTooltip">与学院保持中立</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeFriendlyTooltip">与学院交好，学院人口可以移民</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeAllyTooltip">与学院结盟，你可以在学院星系中修理和翻新你的舰队</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStatusTitle">状态</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStatusDescription">显示你与学院的关系信息以及学院本身的信息。</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyTrendDescription">这个数值显示了你与学院的关系好/坏程度。</LocalizationPair>
+  <LocalizationPair Name="%UnlockedAcademyDiplomacyTooltip">允许与学院进行外交</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyRolesDisabledDescription">你不能通过捐赠获取功能，但之前的任何捐赠仍然有效。</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromQuests">{0}来自任务</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromMinors">{0}来自小型文明</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromBuildings">{0}来自建筑物</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromRoles">{0}来自功能</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromDeeds">{0}来自功绩</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromPirates">{0}来自剿灭海盗</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromHeroes">{0}来自英雄</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromOther">{0}来自其他</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnNoneAffecting">你没有能影响学院关系趋势的修改器。</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionTitle">学院优待</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureRelationsImpactTitle">关系影响：</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureRelationsImpactNone">无</LocalizationPair>
+  <LocalizationPair Name="%NotEnougthAcademyRelationPoints">负担不起关系花费</LocalizationPair>
+  <LocalizationPair Name="%GainRelationAcademyActionTitle">[#52008a#Debug#REVERT#] Gain Relation</LocalizationPair>
+  <LocalizationPair Name="%GainRelationAcademyActionDescription">[#52008a#Debug#REVERT#] Gain Relation Description.</LocalizationPair>
+  <LocalizationPair Name="%HeroStatusAccessAcademyActionTitle">特工档案</LocalizationPair>
+  <LocalizationPair Name="%HeroStatusAccessAcademyActionDescription">查阅学院办公室资料，获取银河系英雄们所在的位置及其任务。</LocalizationPair>
+  <LocalizationPair Name="%CrusadeImmunityAcademyActionTitle">安全保障</LocalizationPair>
+  <LocalizationPair Name="%CrusadeImmunityAcademyActionDescription">通过斡旋获得学院的承诺，避免被宣告为远征对象，而且目前任何正在进行的针对你的远征将会终止。</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionTitle">索要星系</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionDescription">学院是一个中立的非政府机构，不适合管理领土；向其索要并从其手中接管一个星系。</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUnfallenTitle">有备而来的缠绕</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUnfallenDescription">通过与学院的当地人合作，我们几乎可以在一夜之间缠绕这个行星，在学院的庇佑下，将其纳入我们的帝国，延续我们的和平使命。</LocalizationPair>
+  <LocalizationPair Name="%RequestFleetAcademyActionTitle">索要舰队</LocalizationPair>
+  <LocalizationPair Name="%RequestFleetAcademyActionDescription">用学院当前可用的最强船舰创建一支舰队，并使其赠予给你。</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticMigrationActionTitle">索要移民</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticMigrationActionDescription">触发移民，使得随机一个来自学院星系的人口类型移民至距离你的帝国最近的星系。</LocalizationPair>
+  <LocalizationPair Name="%StartWarAcademyActionTitle">宣战</LocalizationPair>
+  <LocalizationPair Name="%StartWarAcademyActionDescription">发动战争，将关系点数设定为-100，并禁止学院拍卖。</LocalizationPair>
+  <LocalizationPair Name="%StopWarAcademyActionTitle">停火</LocalizationPair>
+  <LocalizationPair Name="%StopWarAcademyActionDescription">阻止战争，将关系设定为0点，并允许参与学院拍卖。</LocalizationPair>
+  <LocalizationPair Name="%UserIntructionCaptionTakeSystemTitle">点击左键选择一个星系，点击右键取消操作</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNotAcademyOwnedDescription">必须是隶属于学院的星系</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemAcademyHomeSystemDescription">不能是学院的母星系</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemExsistingGhostSystemDescription">必须尚未拥有幽灵星系</LocalizationPair>
+  <LocalizationPair Name="%SophonsUniqueAcademyActionTitle">研究调解</LocalizationPair>
+  <LocalizationPair Name="%SophonsUniqueAcademyActionDescription">学院的研究人员也会接受成为发言人和调解人的训练，但凡我们邀请他们加入的国际研究小组都受益匪浅。</LocalizationPair>
+  <LocalizationPair Name="%CraversUniqueAcademyActionTitle">人质环保主义</LocalizationPair>
+  <LocalizationPair Name="%CraversUniqueAcademyActionDescription">只要我们保持俘虏的健康，学院便愿意提供生态咨询和轻度防护性地形改造服务。</LocalizationPair>
+  <LocalizationPair Name="%TerransUniqueAcademyActionTitle">学术加冕</LocalizationPair>
+  <LocalizationPair Name="%TerransUniqueAcademyActionDescription">邀请学院代表来主持宣誓就职、封爵仪式、公司选举和帝国官员加冕仪式，将为我们增添一层合法性。</LocalizationPair>
+  <LocalizationPair Name="%HoratioUniqueAcademyActionTitle">度假目的地</LocalizationPair>
+  <LocalizationPair Name="%HoratioUniqueAcademyActionDescription">尽管学院会好奇他们去哪里了，但良好的关系意味着我们领土上的英雄们及其下属可以轻松获得度假套餐。</LocalizationPair>
+  <LocalizationPair Name="%TimeLordsUniqueAcademyActionTitle">难民援助</LocalizationPair>
+  <LocalizationPair Name="%TimeLordsUniqueAcademyActionDescription">学院认识到了裂隙族的困境，将部署制造顾问以及开采工具来筹备我们的新家园。</LocalizationPair>
+  <LocalizationPair Name="%UnfallenUniqueAcademyActionTitle">园艺补助金</LocalizationPair>
+  <LocalizationPair Name="%UnfallenUniqueAcademyActionDescription">不落族的枝蔓网络因其外交和基础设施潜力受到了学院的高度追捧；他们将为友方领土提供地图绘制和援助服务。</LocalizationPair>
+  <LocalizationPair Name="%VampirilisUniqueAcademyActionTitle">原素支援</LocalizationPair>
+  <LocalizationPair Name="%VampirilisUniqueAcademyActionDescription">学院倾向于尽可能防止混乱袭击的发生，并会扩大对我们的粮食支援项目，以满足我们对原素的渴望。</LocalizationPair>
+  <LocalizationPair Name="%VenetiansUniqueAcademyActionTitle">英勇宣传</LocalizationPair>
+  <LocalizationPair Name="%VenetiansUniqueAcademyActionDescription">政治晚宴和巨额捐款可以将学院英雄变成银河系的品牌大使。</LocalizationPair>
+  <LocalizationPair Name="%MajorHisshosUniqueAcademyActionTitle">培训交流</LocalizationPair>
+  <LocalizationPair Name="%MajorHisshosUniqueAcademyActionDescription">通过与学院进行平等的师生交流，巩固我们作为主要银河系参与方的形象，并提升我们战士的形象。</LocalizationPair>
+  <LocalizationPair Name="%UmbralChoirUniqueAcademyActionTitle">应急预案</LocalizationPair>
+  <LocalizationPair Name="%UmbralChoirUniqueAcademyActionDescription">学院拥有非常古老而实用的银河系地图，渴望看到和平盟友的统治遍布每一个阴暗角落；这将促成一次令人愉快的布置安排。</LocalizationPair>
+  <LocalizationPair Name="%ShipDesignNameShipMasterOfDustDescription">功能：使节</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Academy_DustMasterPopup-Title">欢迎使节</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Academy_DustMaster1Popup-Description">你的任务是保护银河系的和谐以及弱势群体的利益！在这个职位上，你将从伊西扬德和群众的政治支持中受益。</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustTitle">使节</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustDescription">使节的任务是保护银河系的和谐以及弱势群体的利益，在这个职位上，使节将从伊西扬德和群众的政治支持中受益。</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustEffectOverride">使节可以获得所有小型派系的增益，对其宣战的成本更高，并且使节可以对敌人发起远征。</LocalizationPair>
+  <LocalizationPair Name="%ShipDesignSmall01AttackerAcademyDescription">功能：攻击者</LocalizationPair>
+  <LocalizationPair Name="%NegotiationModalWindowMakeOfferButtonCantAffordCrusadeDeclarations">你方的远征宣告次数已耗尽</LocalizationPair>
+  <LocalizationPair Name="%NegotiatonModalWindowMakeOfferButtonTheyCantAffordCrusadeDeclarations">他方的远征宣告次数已耗尽</LocalizationPair>
+  <LocalizationPair Name="%NegotiationModalWindowMakeOfferButtonCantAffordAcademyAuctionBlocks">你方的学院拍卖禁令已耗尽</LocalizationPair>
+  <LocalizationPair Name="%NegotiatonModalWindowMakeOfferButtonTheyCantAffordAcademyAuctionBlocks">他方的学院拍卖禁令已耗尽</LocalizationPair>
+  <LocalizationPair Name="%NotificationAcademyRequestDescription">学院还需要额外{0}才能继续发展、研究、以及进行特殊项目。
+
+所有参与者都将获得学院的信用点，这些信用点可以用来换取优待。</LocalizationPair>
+  <LocalizationPair Name="%NotificationAcademyRolesDescription">为了促进合作和信任，学院的领导层可能会将关键的职位提供给各个参与派系。
+
+所有参与者都收到了信用点，可以用来换取学院的优待。</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasAnomalyTitle">拥有特异点的行星</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasDepositLuxuryTitle">拥有奢侈品存量的行星</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasDepositStrategicTitle">拥有战略库存的行星</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasMoonTitle">有卫星的行星</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusMinorOraculars3_TooltipEffect">解锁星尘探测法规</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsShortTitle">星尘探测</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsTitle">星尘先知勘探工程计划</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsDescription">作为资源开采行业医保法和政府公共工程计划的延伸，该倡议为星尘敏感人群提供公职和先进设施，致力追踪到大量星尘储备，为我们的帝国提供资金。</LocalizationPair>
+  <LocalizationPair Name="%LawEffectP00L26-PopulationCollectionMinorOracularsEffectOverride">揭露秘传的珍奇，一旦搜索到，则会提供大量的星尘。</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusDamageOnAcademyTitle">失落的肠卜术</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusDamageOnAcademyDescription">希尔米萨拉族是通过毁灭与腐烂之物收集星尘的专家。</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusContributionToAcademyTitle">失落的考古学</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusContributionToAcademyDescription">希尔米萨拉族了解星尘在长期未受干扰或不寻常的地方集聚的模式。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionTitle">学院扩展</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionDescription">增加学院AI的难度（提升对玩家的挑战程度）。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionNoneTitle">无</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionNoneDescription">学院的玩法不受《Awakening》DLC影响。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionLowTitle">低</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionLowDescription">没有玩家的帮助，学院无法扩展其初始星系。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionMediumTitle">中</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionMediumDescription">学院将在游戏初始阶段扩展。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionHighTitle">高</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionHighDescription">学院如同其他帝国一样有过度殖民阈值。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionEndlessTitle">无尽模式</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionEndlessDescription">学院将在整个游戏期间扩展。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEasyDescription">学院将生成由普通船舰组成的小型舰队。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyNormalDescription">学院将生成由普通船舰组成的中型舰队。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyHardDescription">学院将生成由普通船舰组成的大型舰队。</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEndlessTitle">无尽模式</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEndlessDescription">学院将生成由强大船舰组成的大型舰队。</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementTemplarsFinalQuest1TooltipOverride">行星无[scienceColored]减损</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementTemplarsFinalQuest2TooltipOverride">来自[Relic]的基础[scienceColored]x2</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsTitle">学院专著</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedEffectOverride">这个小型派系已经变成了一个受尊敬的附庸国和受保护国，你可以获取它的资源、派系特性，并使其免受外部竞争的影响，但要永久地让其居民管理他们自己的本地利益。</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedTitle">已结盟</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedDescription">这个小型派系已经变成了一个受尊敬的附庸国和受保护国，你可以获取它的资源和派系特性。</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsTitle">结盟</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSwarmMissilesExplicationTitle">簇射飞弹会在短时间内发射许多飞弹，目的是掩护其他飞弹、EMP飞弹和BEB穿过敌人的高射炮防御系统。高阶的簇射飞弹进行一次连发可掩护数量更多的友方射弹。</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleOnlyOnePerFlotillaTitle">每支小型舰队只计一次效果</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleOnlyOnePerShipTitle">每艘船舰仅能安装一次</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPFlotillaDefenseTitle">小型舰队EMP失效持续时间</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleMaximumShieldCapForFlotillaTitle">小型舰队护盾能力</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleShieldAbsorptionForFlotillaTitle">小型舰队护盾吸收</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSquadronExplicationTitle">敌方高射炮会在歼击舰与轰炸舰之间优先攻击前者。
+截击舰：对敌方分遣舰队施加快速而强有力的打击
+猛攻舰：缓慢的坦克式打击，尤其擅长对付小型船舰
+重型轰炸舰：持久耐受较高火力，但速度缓慢
+轻型轰炸舰：速度快且伤害高，但较为脆弱</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlotillaShieldExplicationTitle">小型舰队护盾可提升小型舰队中每一艘船舰的护盾能力和能量防御。</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaShipManpowerKillPerHitPercentTitle">每一击可致死的小型舰队船员数量</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaManpowerDamageOverTimeIncreaseTitle">小型舰队登船舱模块的人力伤害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDamageTitle">分遣舰队伤害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronSpeedTitle">分遣舰队速度</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleHullWeaknessTitle">船体弱点</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSSquadronTitle">每一次齐射对分遣舰队高射炮的伤害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlakDamageModifierTitle">高射炮伤害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectEfficiencyAgainstSquadronModifierTitle">分遣舰队高射炮伤害值修改器</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectMediumRangeBonusTitle">中距离加成精确度</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDefenseAgainstSquadronTitle">受到分遣舰队的伤害值</LocalizationPair>
+  <LocalizationPair Name="%MaximumDamageBonusFromManpowerTitle">船舰船员伤害值加成</LocalizationPair>
+  <LocalizationPair Name="%CriticalHitChanceTitle">暴击率</LocalizationPair>
+  <LocalizationPair Name="%CriticalAttackChanceTitle">暴击率</LocalizationPair>
+  <LocalizationPair Name="%SquadronCriticalDamageBonusTitle">分遣舰队暴击伤害加成</LocalizationPair>
+  <LocalizationPair Name="%SquadronTypeFighterTitle">歼击舰</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBombersCountDescription">轰炸舰单位累计数量
+针对船舰：
+能量轰炸舰拥有90%船体穿透力和30%护盾穿透力
+射弹轰炸机拥有30%的船体穿透力和90%的护盾穿透力</LocalizationPair>
+  <LocalizationPair Name="%ShipStatFightersCountDescription">歼击舰单位累计数量
+针对船舰：
+能量歼击舰拥有60%船体穿透力和40%护盾穿透力
+射弹歼击舰拥有40%的船体穿透力和60%的护盾穿透力</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleMediumSupportShipOnlyTitle">只能安装在中型[support]船舰上</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusEvasionTitle">舰队躲避</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus1DefensiveTitle">防御</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus1DefensiveDescription">EMP失效持续时间-50%
+受到暴击伤害值-50%
+模块：
+船舰生命值+10%
+护盾能力+10%
+船壳板和护盾防御+10%</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus2DefensiveTitle">庇护者</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus2DefensiveDescription">每个防御模块EMP失效持续时间-10%
+每个防御模块受到暴击伤害值-10%</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDamageTitle">每次高射炮齐射造成的伤害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakFireRateTitle">高射炮射速</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaFlakDamageModifierTitle">小型舰队高射炮伤害值</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaFlakFireRateModifierTitle">小型舰队高射炮射速</LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportEMPFlotillaDefenseTitle">EMP干扰场</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneAntiCarrierModuleDescription">只能配备一个锁定弹模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneAntiCrewModuleDescription">只能配备一个榴弹模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneFlakEnhancerModuleDescription">只能配备一个智能高射炮模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneSquadronOffenseEnhancerDescription">只能配备一个攻击倍增器模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneWeaponKineticRailgunDescription">只能配备一个磁轨炮模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneSquadronDefenseEnhancerDescription">只能配备一个分遣舰队变速器模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneJammerModuleDescription">只能配备一个干扰器模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneBaitModuleDescription">只能配备一个干扰器模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneEMPFlotillaDefenseDescription">只能配备一个EMP干扰场模块。</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneFlakScramblerDescription">只能配备一个斥力甲板模块。</LocalizationPair>
+  <LocalizationPair Name="%ModuleWeaponMissileEMP1Strategic4Title2">护盾干扰飞弹</LocalizationPair>
+  <LocalizationPair Name="%ModuleWeaponBeamEMP1Strategic3Title2">武器干涉波束</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary3EffectOverride2">船舰初始等级+1</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary4EffectOverride2">船舰初始等级+1</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary5EffectOverride2">船舰初始等级+1</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip1TooltipEffect">船舰初始等级+1</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueShip1TooltipEffect">船舰初始等级+4</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip2TooltipEffect">船舰初始等级+2
+已建船舰生命值+10%</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip1CraversTooltipEffect">船舰初始等级+3
+已建船舰生命值+10%</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleSmallAttackerDescription">这艘船舰的功能是在中短程距离内重创敌军。
+主要目标：保护者和协调者船舰
+次要目标：航母舰
+第三目标：攻击者和搜寻者船舰</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleMediumAttackerDescription">这艘船舰的功能是在中短程距离内重创敌军。
+主要目标：保护者和协调者船舰
+次要目标：航母舰
+第三目标：攻击者和搜寻者船舰</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleSmallSupportDescription">这艘船舰的功能是在战斗中保护和援助其他船舰。
+主要目标：航母舰
+次要目标：攻击者和搜寻者船舰
+第三目标：保护者和协调者船舰</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleMediumSupportDescription">这艘船舰的功能是在战斗中保护和援助其他船舰。
+主要目标：航母舰
+次要目标：攻击者和搜寻者船舰
+第三目标：保护者和协调者船舰</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleHeroDescription">这类飞船上必须有一个英雄。已取消全部的[commandPoint]（命令点数）花费。英雄船舰如同攻击者船舰一样瞄准和被敌舰瞄准。
+主要目标：保护者和协调者船舰
+次要目标：航母舰
+第三目标：攻击者和搜寻者船舰</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleBattleshipDescription">军舰率先瞄准无敌舰。
+无敌舰是银河系最庞大和最强力的舰船。你可以将其部署在舰队中，并进行进一步的升级，获得更多的栏位，或解锁离子波能力。这种强大的能力可以对当前交点中所有的舰队造成伤害。</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleJuggernautDescription">军舰率先瞄准巨兽舰。
+巨兽舰的功能繁多，具体取决于你给它们装配的模块。可着重发展经济、科技或军事方面的能力。</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleCarrierDescription">这艘船舰的功能是运送战士和投弹手前去参加战斗。
+主要目标：航母舰
+次要目标：攻击者、协调者、搜寻者同等船舰</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleJammer1ExplicationTitle">将这种干扰器用在军舰上时，确保了该舰在其他军舰之后成为目标。</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleJammer2ExplicationTitle">将这种干扰器用在任何船舰（包括巨兽舰）上时，确保了该舰最后成为目标。</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleBait1ExplicationTitle">将这种透镜用在军舰上时，确保了该舰在其他军舰之前成为目标。</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleBait2ExplicationTitle">将这种透镜用在任何船舰（包括巨兽舰）上时，确保了该舰首先成为目标。</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyAgressiveDescription">侧重于制造更大的伤害。
+每个歼击舰分遣舰队都攻击敌人。</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyDefensiveDescription">侧重于减少所受到的伤害。
+每个歼击舰分遣舰队都留在友军船舰上抵御敌人的轰炸舰。</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyPostDescription">侧重于获取战后加成。
+一半歼击舰分遣舰队防守，另一半攻击敌人。</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveLongShieldIncreaseDescription">为护盾提供能量以提升主要针对能量武器的防御。</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedDamageIncreaseDescription">根据船舰大小提高准确性；用于对抗拥有大型船舰的对手。</LocalizationPair>
+  <LocalizationPair Name="%PlayPostLongEmpireManpowerSavingDescription">失去的部分人力返回帝国储备。</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveLongCooldownIncreaseDescription">禁用支援模块。</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectCooldownIncreaseEffectOverride">双方舰队：
+小型舰队护盾、护盾重载和船舰修理战斗效果都不起作用。</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectMovementGainTooltipOverride">船舰战斗后补充机动点数</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortMoraleBonusIncreaseDescription">改善士气加成的效果，当敌人拥有较少的现役小型舰队时，可提升你的船舰伤害值、精确度和闪避值。</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveShortAccuracyReductionDescription">扰乱敌方中远距离瞄准系统。</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectAccuracyReductionOtherEffectOverride">敌方舰队：</LocalizationPair>
+  <LocalizationPair Name="%PlayPostBalancedActionGainDescription">战斗后获一个行动点数。</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveLongSplashDamageDescription">所受伤害的一部份将分摊到小型舰队的其他船舰上。</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedShieldPenetrationIncrease2Title">等离子扭曲++</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedShieldPenetrationIncrease2Description">获等离子扭曲改良版。</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveMediumSquadronDefenseBoostTitle">封闭空域</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveMediumSquadronDefenseBoostDescription">歼击舰并不负责发动攻击，而是受命保卫舰队的其他船舰。由于它们熟悉各船舰的优劣，且拥有高度的机动性，使其在可能的空战中具有优势。</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectSquadronDefenseBoostOtherEffectOverride">敌方舰队：</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortAccuracyReductionPerSquadronTitle">扰乱瞄准系统</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortAccuracyReductionPerSquadronDescription">歼击舰和轰炸舰扰乱敌方瞄准系统，吸引敌人的火力，提高舰队中船舰的幸存几率。</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectAccuracyReductionPerSquadronOtherTooltip">敌方舰队：
+每个分遣舰队所有射程的精确度-0.5%</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter1Title">初级猛攻歼击舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter2Title">高级猛攻歼击舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber1Title">初级重型轰炸舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber2Title">高级重型轰炸舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomberEnergy1Title">初级轻型等离子轰炸舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighterEnergy1Title">初级截击歼击舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomberEnergy2Title">高级轻型等离子轰炸舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighterEnergy2Title">高级截击歼击舰</LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportFlakEnhancer1Title">协同高射炮</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull1Title">完善的攻击者设计</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected2Hull1Title">完善的攻击者设计</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull1TooltipEffect">攻击者生命值+500
+将攻击者模块倍增器设定为x1.25
+此模块倍增器的增加不影响船舰的四大资源和战略花费</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull2Title">完善的保护者设计</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull2TooltipEffect">保护者生命值+500
+将保护者模块倍增器设定为x1.25
+此模块倍增器的增加不影响船舰的四大资源和战略花费</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleColonizationExplicationTitle">允许这艘船舰牺牲自己，以殖民一颗宜居行星</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveMediumProjectilePenertrationIncrease2Title">重力扭曲++</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeMediumDescription">中型船舰需要舰队的#E3BDAC#3#REVERT#[commandPoint]（命令点数）。
+船体弱点：#E3BDAC#300#REVERT#（请参防御吸收）</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeLargeDescription">大型船舰需要舰队的#E3BDAC#6#REVERT#[commandPoint]（命令点数）。
+船体弱点：#E3BDAC#800#REVERT#（请参防御吸收）</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeJuggernautDescription">巨兽型船舰在舰队中占据#E3BDAC#10#REVERT# [commandPoint]（命令点数）；如果未经专门化，则必须单独构成一支舰队。
+船体弱点： #E3BDAC#600#REVERT#（请参防御吸收）</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeMothershipDescription">方舟需要舰队的#E3BDAC#8#REVERT#[commandPoint]（命令点数）。
+船体弱点：#E3BDAC#1000#REVERT#（请参防御吸收）</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectMoralePenaltyEffectOverride">对双方舰队：
+士气加成变为-100%折减</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSupportAntiCarrierExplicationTitle">锁定弹模块能使小型舰队的每一艘船舰根据目标船舰的命令点数造成更大伤害。即便协调者被摧毁，此效果仍将生效。</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageBonusPerTargetCommandPointsFlotillaTitle">小型舰队船舰每项目标命令点数的伤害值</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyEconomicTitle">经济学院外交</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyScientificTitle">科学学院外交</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyMilitaryTitle">军事学院外交</LocalizationPair>
+  <LocalizationPair Name="%StartedWarWithAcademyTitle">向学院宣战</LocalizationPair>
+</Datatable>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinitySowers" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinitySowers" Type="ClassPopulationStarSystem"/>
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinitySowers" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityKalTikMas" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityKalTikMas" Type="ClassPopulationStarSystem" />
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinityKalTikMas" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinitySefaloros" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinitySefaloros" Type="ClassPopulationStarSystem" />
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinitySefaloros" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationEmpireAffinityGalvrans" Type="ClassPopulationEmpire"/>
+    <SimulationDescriptor Name="ClassPopulationStarSystemAffinityGalvrans" Type="ClassPopulationStarSystem" />
+    <SimulationDescriptor Name="ClassPopulationAssimilatedEmpireAffinityGalvrans" Type="ClassPopulationAssimilated">
+        <Modifier		TargetProperty="PopulationsAssimilated"			Operation="Addition"		Value="1"	Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+</Datatable>

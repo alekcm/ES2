@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TraitorBonusThresholdDefinition.xsd">
+
+    <TraitorBonusThresholdDefinition Name="TraitorBonusThreshold1" Count="5">
+        <SimulationDescriptorReference Name="TraitorBonusThreshold1"/>
+        
+        <!-- EmpirePropertyName = net resource on the traitored empire. -->
+        <!-- RatioPropertyName = multiplier for the property above. -->
+        <!-- GainsPropertyName = where to put EmpirePropertyName x RatioPropertyName. -->
+        <Resource EmpirePropertyName="NetEmpireMoney"    RatioPropertyName="MoneyRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic1"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic2"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic3"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic4"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic5"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic6"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury1"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury2"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury3"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury4"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury5"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury6"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury7"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury8"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury9"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury10"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury11"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury12"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury13"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury14"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury15"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury16"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury17"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury18"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury19"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury20"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury21"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury22"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury23"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury24"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+    </TraitorBonusThresholdDefinition>
+
+    <TraitorBonusThresholdDefinition Name="TraitorBonusThreshold2" Count="10">
+        <SimulationDescriptorReference Name="TraitorBonusThreshold2"/>
+
+        <Resource EmpirePropertyName="NetEmpireMoney"    RatioPropertyName="MoneyRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic1"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic2"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic3"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic4"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic5"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic6"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury1"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury2"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury3"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury4"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury5"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury6"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury7"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury8"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury9"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury10"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury11"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury12"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury13"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury14"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury15"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury16"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury17"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury18"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury19"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury20"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury21"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury22"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury23"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury24"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+    </TraitorBonusThresholdDefinition>
+
+    <TraitorBonusThresholdDefinition Name="TraitorBonusThreshold3" Count="20">
+        <SimulationDescriptorReference Name="TraitorBonusThreshold3"/>
+
+        <Resource EmpirePropertyName="NetEmpireMoney"    RatioPropertyName="MoneyRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic1"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic2"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic3"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic4"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic5"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetStrategic6"     RatioPropertyName="StrategicRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury1"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury2"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury3"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury4"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury5"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury6"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury7"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury8"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury9"        RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury10"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury11"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury12"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury13"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury14"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury15"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury16"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury17"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury18"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury19"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury20"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury21"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury22"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury23"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+        <Resource EmpirePropertyName="NetLuxury24"       RatioPropertyName="LuxuryRatioLostFromTraitors"/>
+    </TraitorBonusThresholdDefinition>
+
+</Datatable>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="IsUniquePlanet"    Type="IsUniquePlanet">
+    <Modifier TargetProperty="OwnedUniquePlanetAndGovernor"    Operation="Addition" Value="1" Path="./ClassColonizedStarSystem" TooltipHidden="true" />
+    <Modifier TargetProperty="hasUniquePlanet"    Operation="Addition" Value="1" Path="./ClassColonizedStarSystem" TooltipHidden="true" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetAcademy"    Type="UniquePlanet"/>
+
+  <SimulationDescriptor Name="HomePlanet"    Type="HomePlanet">
+    <Modifier TargetProperty="PlanetInitialFIDSPenalty" Operation="Force" Value="0" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetTor" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="10" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="12" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetAuriga" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="12" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="7" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetKyros" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="5" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="12" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="10" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetBilgeli" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="4" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="6" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="8" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="5" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetSahar" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="1" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="12" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="5" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="4" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetSykagoja" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="12" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="7" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="5" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetVeil" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="7" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="3" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="8" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="5" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetTeonha" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="15" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetCravers"    Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="0" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetHoratio"    Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="3" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="0" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetSophons"    Type="UniquePlanet">
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="3" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="0" />
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetTimeLords"    Type="UniquePlanet">
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="0" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetTerrans"    Type="UniquePlanet">
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="1" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="0" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetTerransTutorial"    Type="UniquePlanet">
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="1" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="0" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetVampirilis" Type="UniquePlanet" >
+    <Modifier TargetProperty="PlanetInitialFood"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialIndustry"    Operation="Addition" Value="2" />
+    <Modifier TargetProperty="PlanetInitialDust"        Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialScience"     Operation="Addition" Value="0" />
+    <Modifier TargetProperty="PlanetInitialPrestige"    Operation="Addition" Value="0" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="UniquePlanetVenetians"  Type="UniquePlanet" />
+
+  <SimulationDescriptor Name="UniquePlanetUnfallen"  Type="UniquePlanet" />
+
+  <!-- Custom unique planet for modding purposes. Add them to the GalaxyGeneratorWeightTable "UniquePlanetList" to find them in-game. Add a GuiElement as well. -->
+  <!-- You can override this one to add Modifiers, so they have different stats. -->
+  <!-- You can create up to 10 custom unique planets, named exactly the same way as this one, or the visuals won't work. -->
+  <SimulationDescriptor Name="UniquePlanetCustom01"  Type="UniquePlanet" />
+</Datatable>

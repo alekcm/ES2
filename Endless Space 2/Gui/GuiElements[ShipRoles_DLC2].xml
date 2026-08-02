@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ExtendedGuiElement Name="ShipRoleJuggernaut">
+        <Title>%ShipRoleJuggernautTitle</Title>
+        <Description>%ShipRoleJuggernautDescription</Description>
+        <Icons>
+            <Icon Size="Small"          Path="ShipRoleJuggernautSmall" />
+            <Icon Size="SmallInverted"  Path="ShipTypeJuggernautSmallInverted" />
+            <Icon Size="Medium"         Path="ShipTypeJuggernautMedium" />
+            <Icon Size="MediumInverted" Path="ShipTypeJuggernautMediumGlow" />
+        </Icons>
+        <SymbolString>[juggernaut]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ShipRoleBattleship">
+        <Title>%ShipRoleBattleshipTitle</Title>
+        <Description>%ShipRoleBattleshipDescription</Description>
+        <Icons>
+            <Icon Size="Small"          Path="ShipRoleBattleshipSmall" />
+            <Icon Size="SmallInverted"  Path="ShipTypeJuggernautSmallInverted" />
+            <Icon Size="Medium"         Path="ShipTypeJuggernautMedium" />
+            <Icon Size="MediumInverted" Path="ShipTypeJuggernautMediumGlow" />
+        </Icons>
+        <SymbolString>[battleship]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ShipRoleObliterator">
+        <Title>%ShipRoleObliteratorTitle</Title>
+        <Description>%ShipRoleObliteratorDescription</Description>
+        <Icons>
+            <Icon Size="Small"          Path="ShipRoleObliteratorSmall" />
+            <Icon Size="SmallInverted"  Path="ShipTypeJuggernautSmallInverted" />
+            <Icon Size="Medium"         Path="ShipTypeJuggernautMedium" />
+            <Icon Size="MediumInverted" Path="ShipTypeJuggernautMediumGlow" />
+        </Icons>
+        <SymbolString>[obliterator]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>
+</Datatable>

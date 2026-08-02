@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- HULLS -->
+
+  <SkinnedGuiElement Name="EmpireImprovementPerfected1Hull1UmbralChoir">
+    <Title>%EmpireImprovementPerfected1Hull1Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall01UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall01UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementPerfected1Hull1TooltipEffect</EffectOverride>
+    </TooltipElement>
+  </SkinnedGuiElement>
+
+  <SkinnedGuiElement Name="EmpireImprovementPerfected1Hull2UmbralChoir">
+    <Title>%EmpireImprovementPerfected1Hull2Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall02UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall02UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementPerfected1Hull2TooltipEffect</EffectOverride>
+    </TooltipElement>
+  </SkinnedGuiElement>
+
+  <!-- Hull4 (medium attacker) unlocks additional slots for small attacker ships -->
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall01UmbralChoir">
+    <Title>%EmpireImprovementSlotsSmall01UmbralChoirEra2Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall01UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall01UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall01UmbralChoirEra2TooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <!-- Hull5 (medium defender) unlocks additional slots for small support ships -->
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall02UmbralChoir">
+    <Title>%EmpireImprovementSlotsSmall02UmbralChoirEra2Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall02UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall02UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall02UmbralChoirEra2TooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+
+  <!-- Hull6 (large ship) unlocks additional slots for all medium ships -->
+  <ExtendedGuiElement Name="EmpireImprovementSlotsMedium01UmbralChoir">
+    <Title>%EmpireImprovementSlotsMedium01UmbralChoirEra3Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullMedium01UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullMedium01UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsMedium01UmbralChoirEra3TooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsMedium02UmbralChoir">
+    <Title>%EmpireImprovementSlotsMedium02UmbralChoirEra3Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullMedium02UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullMedium02UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsMedium02UmbralChoirEra3TooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <!-- Hull6Slots unlocks additional slots for large ships-->
+  <ExtendedGuiElement Name="EmpireImprovementSlotsLarge01UmbralChoir">
+    <Title>%EmpireImprovementSlotsLarge01UmbralChoirEra4Title</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullLarge01UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullLarge01UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsLarge01UmbralChoirEra4TooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04Sophons">
+    <Title>%EmpireImprovementSlotsSmall04SophonsTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Sophons/ShipHullSmall01SophonsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Sophons/ShipHullSmall01SophonsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04SophonsTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04Cravers">
+    <Title>%EmpireImprovementSlotsSmall04CraversTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Cravers/ShipHullSmall01CraversSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Cravers/ShipHullSmall01CraversLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04CraversTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04Lumeris">
+    <Title>%EmpireImprovementSlotsSmall04LumerisTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Venetians/ShipHullSmall01VenetiansSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Venetians/ShipHullSmall01VenetiansLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04LumerisTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04Vampirilis">
+    <Title>%EmpireImprovementSlotsSmall04VampirilisTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04VampirilisTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04UnitedEmpire">
+    <Title>%EmpireImprovementSlotsSmall04UnitedEmpireTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Terrans/ShipHullSmall01TerransSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Terrans/ShipHullSmall01TerransLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04UnitedEmpireTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04Horatios">
+    <Title>%EmpireImprovementSlotsSmall04HoratiosTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Horatio/ShipHullSmall01HoratioSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Horatio/ShipHullSmall01HoratioLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04HoratiosTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04TimeLords">
+    <Title>%EmpireImprovementSlotsSmall04TimeLordsTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/TimeLords/ShipHullSmall01TimeLordsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/TimeLords/ShipHullSmall01TimeLordsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04TimeLordsTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04Unfallens">
+    <Title>%EmpireImprovementSlotsSmall04UnfallensTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Unfallen/ShipHullSmall01UnfallenSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Unfallen/ShipHullSmall01UnfallenLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04UnfallensTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04Vaulters">
+    <Title>%EmpireImprovementSlotsSmall04VaultersTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vaulters/ShipHullSmall01VaultersSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vaulters/ShipHullSmall01VaultersLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04VaultersTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04MajorHisshos">
+    <Title>%EmpireImprovementSlotsSmall04MajorsHisshosTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/MajorHisshos/ShipHullSmall01MajorHisshosSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/MajorHisshos/ShipHullSmall01MajorHisshosLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04MajorHisshosTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSlotsSmall04UmbralChoirs">
+    <Title>%EmpireImprovementSlotsSmall04UmbralChoirTitle</Title>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall03UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/UmbralChoir/ShipHullSmall03UmbralChoirLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementSlotsSmall04UmbralChoirTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+
+  <!-- ECONOMY -->
+
+  <ExtendedGuiElement Name="EmpireImprovementHappinessUmbralChoir">
+    <Title>%EmpireImprovementHappinessUmbralChoirTitle</Title>
+    <Description>%EmpireImprovementHappinessUmbralChoirDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHappinessSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHappinessLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementMovementBonus4">
+    <Title>%EmpireImprovementMovementBonus4Title</Title>
+    <Description>%EmpireImprovementMovementBonus4Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementMovementSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementMovementLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementTerraformationUmbralChoir1">
+    <Title>%EmpireImprovementTerraformationUmbralChoir1Title</Title>
+    <Description>%EmpireImprovementTerraformationUmbralChoir1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementTerraformationUmbralChoir1EffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementTerraformationUmbralChoir2">
+    <Title>%EmpireImprovementTerraformationUmbralChoir2Title</Title>
+    <Description>%EmpireImprovementTerraformationUmbralChoir1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformation2Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformation2Large" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementTerraformationUmbralChoir2EffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementTerraformationUmbralChoir3">
+    <Title>%EmpireImprovementTerraformationUmbralChoir3Title</Title>
+    <Description>%EmpireImprovementTerraformationUmbralChoir1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformation3Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformation3Large" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementTerraformationUmbralChoir3EffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementTradeUmbralChoir">
+    <Title>%EmpireImprovementTradeUmbralChoirTitle</Title>
+    <Description>%EmpireImprovementTradeUmbralChoirDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementTradeUmbralChoirEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSubsidiaries1UmbralChoir">
+    <Title>%EmpireImprovementSubsidiaries1UmbralChoirTitle</Title>
+    <Description>%EmpireImprovementSubsidiaries1UmbralChoirDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementSubsidiaries1UmbralChoirSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementSubsidiaries1UmbralChoirLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementInfluenceConversionUmbralChoir">
+    <Title>%EmpireImprovementInfluenceConversionUmbralChoirTitle</Title>
+    <Description>%EmpireImprovementInfluenceConversionUmbralChoirDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="EmpireImprovementPrestigeSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementPrestigeLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementInfluenceConversionUmbralChoirEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+
+  <!-- HACKING -->
+
+  <ExtendedGuiElement Name="EmpireImprovementHackingBonus1">
+    <Title>%EmpireImprovementHackingBonus1Title</Title>
+    <Description>%EmpireImprovementHackingBonus1Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHackingBonus1Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHackingBonus1Large" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementHackingBonus2">
+    <Title>%EmpireImprovementHackingBonus2Title</Title>
+    <Description>%EmpireImprovementHackingBonus2Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHackingBonus2Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHackingBonus2Large" />
+    </Icons>
+  </ExtendedGuiElement>
+
+
+  <!-- INVISIBILITY -->
+
+  <ExtendedGuiElement Name="EmpireImprovementDetectionProbeLevel2">
+    <Title>%EmpireImprovementDetectionProbeLevel2Title</Title>
+    <Description>%EmpireImprovementDetectionProbeLevel2Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementDetectionProbeLevel2Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementDetectionProbeLevel2Large" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementDetectionProbeLevel3">
+    <Title>%EmpireImprovementDetectionProbeLevel3Title</Title>
+    <Description>%EmpireImprovementDetectionProbeLevel3Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementDetectionProbeLevel3Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementDetectionProbeLevel3Large" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementInvisibilityLevel2">
+    <Title>%EmpireImprovementInvisibilityLevel2Title</Title>
+    <Description>%EmpireImprovementInvisibilityLevel2Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementInvisibilityLevel2Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementInvisibilityLevel2Large" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementInvisibilityLevel3">
+    <Title>%EmpireImprovementInvisibilityLevel3Title</Title>
+    <Description>%EmpireImprovementInvisibilityLevel3Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementInvisibilityLevel3Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementInvisibilityLevel3Large" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementKillTraitors">
+    <Title>%EmpireImprovementKillTraitorsTitle</Title>
+    <Description>%EmpireImprovementKillTraitorsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementKillTraitorsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementKillTraitorsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementKillTraitorsEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementRevealTraitors">
+    <Title>%EmpireImprovementRevealTraitorsTitle</Title>
+    <Description>%EmpireImprovementRevealTraitorsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementRevealTraitorsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementRevealTraitorsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementRevealTraitorsEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <!-- ################################ -->
+  <!-- ###########  QUEST    ########## -->
+  <!-- ################################ -->
+
+
+  <!--###### UmbralChoir ######-->
+
+  <ExtendedGuiElement Name="EmpireImprovementQuestUmbralChoir01">
+    <Title>%EmpireImprovementQuestSophons01Title</Title>
+    <Description>%EmpireImprovementQuestSophons01Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="EmpireImprovementDiplomacySmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementShipIndustryLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementHeroXpGain">
+    <Title>%EmpireImprovementHeroXpGainTitle</Title>
+    <Description>%EmpireImprovementHeroXpGainDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/FakeImprovementDefaultLarge" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/FakeImprovementDefaultLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementHeroReduceAssignmentCooldown">
+    <Title>%EmpireImprovementHeroReduceAssignmentCooldownTitle</Title>
+    <Description>%EmpireImprovementHeroReduceAssignmentCooldownDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/FakeImprovementDefaultLarge" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/FakeImprovementDefaultLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementEvasionBonus">
+    <Title>%EmpireImprovementEvasionBonusTitle</Title>
+    <Description>%EmpireImprovementEvasionBonusDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementEvasionBonusSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementEvasionBonusLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementProcessingPowerPerSystem">
+    <Title>%EmpireImprovementProcessingPowerPerSystemTitle</Title>
+    <Description>%EmpireImprovementProcessingPowerPerSystemDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementProcessingPowerPerSystemSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementProcessingPowerPerSystemLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementHackingRouteBonus4">
+    <Title>%EmpireImprovementHackingRouteBonus4Title</Title>
+    <Description>%EmpireImprovementHackingRouteBonus4Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHackingRouteBonus4Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementHackingRouteBonus4Large" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSciencePerTraitor">
+    <Title>%EmpireImprovementSciencePerTraitorTitle</Title>
+    <Description>%EmpireImprovementSciencePerTraitorDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementSciencePerTraitorSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementSciencePerTraitorLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementHackingSpeedOnNodes">
+    <Title>%EmpireImprovementHackingSpeedOnNodesTitle</Title>
+    <Description>%EmpireImprovementHackingSpeedOnNodesDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementMovementSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementMovementLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementInvisibleFleetSpeed">
+    <Title>%EmpireImprovementInvisibleFleetSpeedTitle</Title>
+    <Description>%EmpireImprovementInvisibleFleetSpeedDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementInvisibleFleetSpeedSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementInvisibleFleetSpeedLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementSciencePerCpPerHero">
+    <Title>%EmpireImprovementSciencePerCpPerHeroTitle</Title>
+    <Description>%EmpireImprovementSciencePerCpPerHeroDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementSciencePerCpPerHeroSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementSciencePerCpPerHeroLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireImprovementProcessingPowerPerHackingRoute">
+    <Title>%EmpireImprovementProcessingPowerPerHackingRouteTitle</Title>
+    <Description>%EmpireImprovementProcessingPowerPerHackingRouteDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementProcessingPowerPerHackingRouteSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementProcessingPowerPerHackingRouteLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+
+  <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade3NoSpacePort" SkinName="Mothership">
+    <Title>%EmpireImprovementStageEconomyAndTrade3Title</Title>
+    <Description>%EmpireImprovementStageEconomyAndTrade3Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade3Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade3Large" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementStageEconomyAndTrade3NoSpacePortEffectOverride</EffectOverride>
+    </TooltipElement>
+  </SkinnedGuiElement>
+
+  <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade3NoSpacePortMothership" SkinName="Pathfinders">
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade3LargeMothership" />
+    </Icons>
+  </SkinnedGuiElement>
+
+  <GuiElement Name="EmpireImprovementStageEconomyAndTrade3NoSpacePortMothershipPathfinders">
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade3LargeMothershipPathfinders" />
+    </Icons>
+  </GuiElement>
+
+  <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade4NoSpacePort" SkinName="Mothership">
+    <Title>%EmpireImprovementStageEconomyAndTrade4Title</Title>
+    <Description>%EmpireImprovementStageEconomyAndTrade4Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade4Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade4Large" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementStageEconomyAndTrade4NoSpacePortEffectOverride</EffectOverride>
+    </TooltipElement>
+  </SkinnedGuiElement>
+
+  <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade4NoSpacePortMothership" SkinName="Pathfinders">
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade4LargeMothership" />
+    </Icons>
+  </SkinnedGuiElement>
+
+  <GuiElement Name="EmpireImprovementStageEconomyAndTrade4NoSpacePortMothershipPathfinders">
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade4LargeMothershipPathfinders" />
+    </Icons>
+  </GuiElement>
+
+  <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade5NoSpacePort" SkinName="Mothership">
+    <Title>%EmpireImprovementStageEconomyAndTrade5Title</Title>
+    <Description>%EmpireImprovementStageEconomyAndTrade5Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade5Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade5Large" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%EmpireImprovementStageEconomyAndTrade5NoSpacePortEffectOverride</EffectOverride>
+    </TooltipElement>
+  </SkinnedGuiElement>
+
+  <SkinnedGuiElement Name="EmpireImprovementStageEconomyAndTrade5NoSpacePortMothership" SkinName="Pathfinders">
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade5LargeMothership" />
+    </Icons>
+  </SkinnedGuiElement>
+
+  <GuiElement Name="EmpireImprovementStageEconomyAndTrade5NoSpacePortMothershipPathfinders">
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementStageEconomyAndTrade5LargeMothershipPathfinders" />
+    </Icons>
+  </GuiElement>
+
+
+</Datatable>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="ClassModuleHeroOnly" Type="ClassModuleHeroOnly"/>
+    
+    <!-- Better Speed Quest Modules  -->    
+    <SimulationDescriptor Name="ModuleIncreasedSpeedQuest" Type="ModuleIncreasedSpeedQuest">
+        <Property Name="MaximumMovement"/>
+        <Property Name="GlobalSpeedBonus"/>
+
+        <Modifier TargetProperty="MaximumMovement"                 Operation="Addition"    Value="$(MaximumMovement)"                   Path="../ClassShip"/>
+        <Modifier TargetProperty="GlobalSpeed"                     Operation="Percent"     Value="$(GlobalSpeedBonus)"                  Path="../ClassShip"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleIncreasedSpeedQuest01" Type="ModuleIncreasedSpeedQuest">
+        <Modifier TargetProperty="MaximumMovement"                  Operation="Addition"    Value="3"       Path="ModuleIncreasedSpeedQuest"/>
+        <Modifier TargetProperty="GlobalSpeedBonus"                 Operation="Addition"    Value="0.25"    Path="ModuleIncreasedSpeedQuest"/>
+    </SimulationDescriptor>
+
+    <!-- Better Probe Quest Modules  -->
+    <SimulationDescriptor Name="ModuleImprovedProbeStockQuest" Type="ModuleImprovedProbeStockQuest">
+        <Property Name="MaximumShipProbeStockPercentBonus"/>
+
+        <Modifier TargetProperty="MaximumShipProbeStock"            Operation="Percent"         Value="$(MaximumShipProbeStockPercentBonus)"   Path="../ClassShip" Priority="2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleImprovedProbeStockQuest01" Type="ModuleImprovedProbeStockQuest">
+        <Modifier TargetProperty="MaximumShipProbeStockPercentBonus"            Operation="Addition"        Value="0.5"    Path="ModuleImprovedProbeStockQuest"/>
+    </SimulationDescriptor>
+
+    <!-- Better Probe Regen Quest Modules  -->
+    <SimulationDescriptor Name="ModuleImprovedProbeRegenQuest" Type="ModuleImprovedProbeRegenQuest">
+        <Property Name="NetShipProbeCoolDownBonus" BaseValue="0"/>
+
+        <Modifier TargetProperty="NetShipProbe"                     Operation="Percent"           Value="$(NetShipProbeCoolDownBonus)"             Path="../ClassShip" Priority="2"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="ModuleImprovedProbeRegenQuest01" Type="ModuleImprovedProbeRegenQuest">
+        <Modifier TargetProperty="NetShipProbeCoolDownBonus"                     Operation="Addition"           Value="1"    Path="ModuleImprovedProbeRegenQuest"/>
+    </SimulationDescriptor>
+
+    <!-- Better Hero Quest Modules  -->
+    <SimulationDescriptor Name="ModuleHeroQuest" Type="ModuleHeroQuest">
+        <Property Name="ExperienceFromBattlePercentModifier" BaseValue="0"/>
+        <Property Name="HeroRecoveryRate"/>
+        <Property Name="FlotillaRepairAfterPhase"/>
+
+        <Modifier TargetProperty="ExperienceBonusPercentFromModule"                  Operation="Percent"     Value="$(ExperienceFromBattlePercentModifier)"         Path="../ClassGarrison/ClassShip"   Priority="1"/>        
+        <Modifier TargetProperty="HeroRecoveryRate"                                  Operation="Percent"     Value="$(HeroRecoveryRate)"                            Path="../ClassShip"/>
+        <Modifier TargetProperty="RepairAfterPhase"                                  Operation="Addition"    Value="$(FlotillaRepairAfterPhase)"                    Path="../ClassGarrison/ClassShip"   Priority="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleHeroQuest01" Type="ModuleHeroQuest">
+        <Modifier TargetProperty="ExperienceFromBattlePercentModifier"                   Operation="Addition"    Value="0.2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleHeroQuest02" Type="ModuleHeroQuest">
+        <Modifier TargetProperty="FlotillaRepairAfterPhase"                    Operation="Addition"     Value="0.05"/>
+        <Modifier TargetProperty="DefensiveMilitaryPower"                      Operation="Percent"      Value="0.8" Path="../ClassShip"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleHeroQuest03" Type="ModuleHeroQuest">
+        <Modifier TargetProperty="FlotillaMoraleBonusPercent"             Operation="Addition"    Value="0.5" Path="ClassModuleSupport"/>
+    </SimulationDescriptor>
+
+</Datatable>

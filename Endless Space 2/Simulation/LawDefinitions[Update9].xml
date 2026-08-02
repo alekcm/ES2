@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/LawDefinition.xsd">
+
+  <LawDefinition Name="LawP00PopulationCollectionHarmony" SubCategory="LawPolitics00" Duration="1">
+        <Politics Name="Politics00"/>
+        <LawEffectSimulation>
+            <SimulationDescriptorReference Name="LawEffectP00L31-PopulationCollectionHarmony"/> 
+        </LawEffectSimulation>
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire/ClassPopulationEmpire,PopulationCollectionBonusHarmony3</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire,!AffinityGameplayMajorHisshos</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">GovernmentAnarchy</PathPrerequisite>
+        <SimulationDescriptorReference Name="LawPolitics00"/>
+    </LawDefinition>
+
+ </Datatable>

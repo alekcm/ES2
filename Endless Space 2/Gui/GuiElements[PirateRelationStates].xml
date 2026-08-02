@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ExtendedGuiElement Name="DiplomaticRelationStatePirateAggressive">
+        <Title>%DiplomaticRelationStatePirateAggressiveTitle</Title>
+        <Description>%DiplomaticRelationStatePirateAggressiveDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateWarSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateWarMedium" />
+        </Icons>
+        <Color Red="255" Green="50" Blue="50" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="DiplomaticRelationStatePirateNeutral">
+        <Title>%DiplomaticRelationStatePirateNeutralTitle</Title>
+        <Description>%DiplomaticRelationStatePirateNeutralDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateNeutralSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateNeutralMedium" />
+        </Icons>
+        <Color Red="200" Green="255" Blue="200" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="DiplomaticRelationStatePirateCordial">
+        <Title>%DiplomaticRelationStatePirateCordialTitle</Title>
+        <Description>%DiplomaticRelationStatePirateCordialDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateCordialSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateCordialMedium" />
+        </Icons>
+        <Color Red="130" Green="255" Blue="150" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="DiplomaticRelationStatePirateBestFriend">
+        <Title>%DiplomaticRelationStatePiratePeaceTitle</Title>
+        <Description>%DiplomaticRelationStatePiratePeaceDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateFriendlySmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateFriendlyMedium" />
+        </Icons>
+        <Color Red="130" Green="255" Blue="150" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="DiplomaticRelationStatePiratePeace">
+        <Title>%DiplomaticRelationStatePiratePeaceForcedTitle</Title>
+        <Description>%DiplomaticRelationStatePiratePeaceDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateFriendlySmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/DiplomaticRelationStates/DiplomaticRelationStateFriendlyMedium" />
+        </Icons>
+        <Color Red="130" Green="255" Blue="150" Alpha="255"/>
+    </ExtendedGuiElement>
+
+</Datatable>

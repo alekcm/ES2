@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/StarSystemNodeDefinition.xsd">
+   
+  
+    <!--UNFALLEN EMPIRE-->
+    <StarSystemNodeDefinition Name="QuestNodeVaulters">
+     <SimulationDescriptorReference Name="StarTypeRedDwarf"/>
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeMeager"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeCold"/>
+            <SimulationDescriptorReference Name="PlanetSizeMedium"/>
+            <SimulationDescriptorReference Name="PlanetTypeArctic"/>
+            <ResourceDeposit>
+                <DefinitionReference Name="StrategicDeposit2"/>
+                <SizeDescriptorReference Name="DepositSizeAverage"/>
+            </ResourceDeposit>            
+        </PlanetDefinition>
+        
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeCold"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeTeeming"/>
+            <SimulationDescriptorReference Name="PlanetSizeHuge"/>
+            <SimulationDescriptorReference Name="PlanetTypeBoreal"/>
+            <AnomalyReference Name="PlanetAnomaly15"/>
+        </PlanetDefinition>
+        
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeCold"/>         
+            <SimulationDescriptorReference Name="PlanetSizeMedium"/>
+            <SimulationDescriptorReference Name="PlanetTypeSnow"/>
+            <AnomalyReference Name="PlanetAnomaly09"/>
+            <ResourceDeposit>
+                <DefinitionReference Name="StrategicDeposit2"/>
+                <SizeDescriptorReference Name="DepositSizeAverage"/>
+            </ResourceDeposit>            
+            <ResourceDeposit>
+                <DefinitionReference Name="StrategicDeposit5"/>
+                <SizeDescriptorReference Name="DepositSizeAbundant"/>
+            </ResourceDeposit>
+        </PlanetDefinition>
+        
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeTemperate"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeTeeming"/>
+            <SimulationDescriptorReference Name="PlanetSizeMedium"/>
+            <SimulationDescriptorReference Name="PlanetTypeTerran"/>
+            <ResourceDeposit>
+                <DefinitionReference Name="StrategicDeposit4"/>
+                <SizeDescriptorReference Name="DepositSizeAverage"/>
+            </ResourceDeposit>
+        </PlanetDefinition>
+    </StarSystemNodeDefinition>
+
+    
+
+    
+</Datatable>

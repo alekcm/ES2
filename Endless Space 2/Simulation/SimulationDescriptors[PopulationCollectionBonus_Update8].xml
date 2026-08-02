@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+    
+    
+    <SimulationDescriptor Name="PopulationCollectionBonusSowers1" Type="PopulationCollectionBonus">
+      <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireAffinitySowers"      TooltipOverride="%TooltipOverridePositivePolitics05"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusSowers2" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="SystemGrowthBonusFromCollection" Operation="Addition" Value="0.10" Path="PopulationCollectionBonusSowers2,ClassPopulationEmpireAffinitySowersCount/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinitySowers" SearchValueFromPath="true" TooltipHidden="true"/>
+        <Modifier TargetProperty="SystemGrowthBonusFromCollection" Operation="Addition" Value="0.10" Path="false/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinitySowers" SearchValueFromPath="true"/>    
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusSowers3" Type="PopulationCollectionBonus">
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationCollectionBonusKalTikMas1" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics04ToPolitics04" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireAffinityKalTikMas"      TooltipOverride="%TooltipOverridePositivePolitics04"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusKalTikMas2" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="HappinessBonusFromCollection" Operation="Addition" Value="10" Path="PopulationCollectionBonusKalTikMas2,ClassPopulationEmpireAffinityKalTikMasCount/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityKalTikMas" SearchValueFromPath="true" TooltipHidden="true"/>
+        <Modifier TargetProperty="HappinessBonusFromCollection" Operation="Addition" Value="10" Path="false/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityKalTikMas" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="NetSystemManpowerBonusFromCollectionHissho" Operation="Addition" Value="50" Path="../ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityKalTikMas" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusKalTikMas3" Type="PopulationCollectionBonus">
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationCollectionBonusSefaloros1" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics01ToPolitics01" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireAffinitySefaloros"      TooltipOverride="%TooltipOverridePositivePolitics01"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusSefaloros2" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="SystemProductionBonusFromCollection" Operation="Addition" Value="0.10" Path="PopulationCollectionBonusSefaloros2,ClassPopulationEmpireAffinitySefalorosCount/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinitySefaloros" SearchValueFromPath="true" TooltipHidden="true"/>
+        <Modifier TargetProperty="SystemProductionBonusFromCollection" Operation="Addition" Value="0.10" Path="false/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinitySefaloros" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusSefaloros3" Type="PopulationCollectionBonus">
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationCollectionBonusGalvrans1" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics02ToPolitics02" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireAffinityGalvrans"      TooltipOverride="%TooltipOverridePositivePolitics02"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusGalvrans2" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="SystemResearchBonusFromCollection" Operation="Addition" Value="0.10" Path="PopulationCollectionBonusGalvrans2,ClassPopulationEmpireAffinityGalvransCount/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityGalvrans" SearchValueFromPath="true" TooltipHidden="true"/>
+        <Modifier TargetProperty="SystemResearchBonusFromCollection" Operation="Addition" Value="0.10" Path="false/./ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityGalvrans" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusGalvrans3" Type="PopulationCollectionBonus">
+    </SimulationDescriptor>
+  
+</Datatable>

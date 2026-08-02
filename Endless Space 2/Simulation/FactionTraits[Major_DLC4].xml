@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+  <!-- WHEN ADDING TRAITS THAT ARE RESTRICTED TO A SPECIFIC DLC, PLEASE LET A PROGRAMMER KNOW !
+    CHANGES ARE REQUIRED ON THE CODE SIDE -->
+
+  <FactionTrait Name="FactionTraitTechnologicalHeadStart" SubCategory="FactionTrait" TraitCategory="FactionTraitUnlockTechnologyStage" TraitSubCategory="TraitSubCategoryTechnologicalHeadStart" Family="FactionTraitFamilyStartingTechnologies" Hidden="false" Custom="true" Cost="70" HiddenOnFailPrerequisites="true" Level="2">
+
+    <!-- The command "UnlockTechnologyStage" will unlock only these techs which passes the prerequistes validation,
+        so we unlock them in order in case of any tech dependency appears-->
+    <!-- To unlock specific techs use "UnlockTechnology" command.-->
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionEconomyAndTrade1"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionEmpireDevelopment1"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionMilitary1"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionScienceAndExploration1"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionEconomyAndTrade2"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionEmpireDevelopment2"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionMilitary2"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionScienceAndExploration2"/>
+
+    <SimulationDescriptorReference Name="FactionTraitTechnologicalHeadStart"/>
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitTechnologicalHeadStartLess" SubCategory="FactionTrait" TraitCategory="FactionTraitUnlockTechnologyStage" TraitSubCategory="TraitSubCategoryTechnologicalHeadStart" Family="FactionTraitFamilyStartingTechnologies" Hidden="false" Custom="true" Cost="30" HiddenOnFailPrerequisites="true" Level="1">
+
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionEconomyAndTrade1"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionEmpireDevelopment1"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionMilitary1"/>
+    <Command Name="UnlockTechnologyStage"                Arguments="TechnologyStageDefinitionScienceAndExploration1"/>
+
+    <SimulationDescriptorReference Name="FactionTraitTechnologicalHeadStartLess"/>
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitScienceReduction" SubCategory="FactionTrait" TraitCategory="TraitCategoryStartModifiers" TraitSubCategory="TraitSubCategoryNoScienceFromPlanets" Family="FactionTraitFamilyStartModifiers" Hidden="false" Custom="true" Cost="-15">
+    <SimulationDescriptorReference Name="FactionTraitScienceReduction" />
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitMinorMinorOraculars" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartOraculars" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+    <Command Name="AddMinorPopulation" Arguments="AffinityMinorOraculars,1" Priority="100"/>
+    <SimulationDescriptorReference Name="FactionTraitMinorMinorOraculars"/>
+    <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorKalTikMas,!FactionTraitMinorSefaloros,!FactionTraitMinorGalvrans,!FactionTraitMinorSowers,!FactionTraitMinorHarmony,!FactionTraitMinorIllo,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo</Prerequisites>
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitConstellationVision" SubCategory="FactionTrait" TraitCategory="TraitCategoryExploration" TraitSubCategory="TraitSubCategoryFactionTraitStartingVision" Family="FactionTraitFamilyExploration" Hidden="false" Custom="true" Cost="10">
+    <SimulationDescriptorReference Name="FactionTraitConstellationVision"/>
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitSlumberingRuins" SubCategory="FactionTrait" TraitCategory="TraitCategoryExploration" TraitSubCategory="TraitSubCategoryFactionTraitSlumberingRuins" Family="FactionTraitFamilyExploration" Hidden="false" Custom="true" Cost="20" HiddenOnFailPrerequisites="true">
+    <SimulationDescriptorReference Name="FactionTraitSlumberingRuins"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementColonyBase"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementStartingFoodIndustry"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementStartingDustScience"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementDefense1Templars"/>
+    <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUnfallen,!FactionTraitManualHomeSystem,!AffinityGameplayUmbralChoir,AffinityMappingTemplars</Prerequisites>
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitSlumberingRuinsNonTemplars" SubCategory="FactionTrait" TraitCategory="TraitCategoryExploration" TraitSubCategory="TraitSubCategoryFactionTraitSlumberingRuins" Family="FactionTraitFamilyExploration" Hidden="false" Custom="true" Cost="20" HiddenOnFailPrerequisites="true">
+    <SimulationDescriptorReference Name="FactionTraitSlumberingRuinsNonTemplars"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementColonyBase"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementStartingFoodIndustry"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementStartingDustScience"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementDefense1"/>
+    <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUnfallen,!FactionTraitManualHomeSystem,!AffinityGameplayUmbralChoir,!AffinityMappingTemplars</Prerequisites>
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitSlumberingRuinsVaulters" SubCategory="FactionTrait" TraitCategory="TraitCategoryExploration" TraitSubCategory="TraitSubCategoryFactionTraitSlumberingRuins" Family="FactionTraitFamilyExploration" Hidden="false" Custom="true" Cost="20" HiddenOnFailPrerequisites="true">
+    <SimulationDescriptorReference Name="FactionTraitSlumberingRuinsVaulters"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementColonyBase"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementStartingFoodIndustry"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementStartingDustScience"/>
+    <RuinsImprovementReference     Name="StarSystemImprovementDefense1Vaulters"/>
+    <Prerequisites>AffinityGameplayVaulters,!AffinityMappingTemplars</Prerequisites>
+  </FactionTrait>
+
+  <FactionTrait Name="FactionTraitAcademyBesties" SubCategory="FactionTrait" TraitCategory="TraitCategoryDiplomacy" TraitSubCategory="TraitSubCategoryFactionTraitAcademyBesties" Family="FactionTraitFamilyPoliticsDiplomacy" Hidden="false" Custom="true" Cost="10">
+    <SimulationDescriptorReference Name="FactionTraitAcademyBesties"/>
+  </FactionTrait>
+</Datatable>

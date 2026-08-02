@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ########################################## -->
+    <!-- ######        MAJOR FACTIONS        ###### -->
+    <!-- ########################################## -->
+    <!-- AffinityGuiElement is mapped with the AffinityMapping of the Faction's MajorPopulation -->
+
+    <AffinityGuiElement Name="AffinityMappingTemplars" PreloadCount="3" >
+        <Title>%AffinityTemplarsTitle</Title>
+        <Description>%AffinityTemplarsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityTemplarsSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityTemplarsMedium" />
+            <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityTemplarsMediumInverted" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsLarge" />
+            <Icon Size="Leader" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsLeader" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsMood" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetTemplarsSmall" />
+            <Icon Size="MediumExtended" Path="Bitmaps/Dynamic/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetTemplarsMedium" />
+            <Icon Size="Loading" Path="Bitmaps/Dynamic/Moods/LoadingScreen12" />
+        </Icons>
+        <SymbolString>[templar]</SymbolString>
+        <Sounds>
+            <Sound EventName="Play_ES2_Voices_OUTRO_Templars" Type="Outro"/>
+        </Sounds>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+        <Movies>
+            <Movie Path="Movies/Factions/Templars_Intro.mp4" Type="Intro" />
+            <Movie Path="Movies/Factions/Templars_Outro.mp4" Type="Outro" />
+        </Movies>
+        <ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitTemplarsLeaders01</ModelPath>
+    </AffinityGuiElement>
+
+
+    <AffinityGuiElement Name="AffinityMappingAcademyEmpire" PreloadCount="3" >
+        <Title>%AffinityAcademyTitle</Title>
+        <Description>%AffinityAcademyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityAcademySmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityAcademyMedium" />
+            <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityAcademyMediumInverted" />
+            <!--Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsLarge" />
+            <Icon Size="Leader" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsLeader" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityTemplarsMood" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetTemplarsSmall" />
+            <Icon Size="MediumExtended" Path="Bitmaps/Dynamic/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetTemplarsMedium" />
+            <Icon Size="Loading" Path="Bitmaps/Dynamic/Moods/LoadingScreen12" /-->
+        </Icons>
+        <SymbolString>[academy]</SymbolString>
+        <Sounds>
+            <Sound EventName="Play_ES2_Voices_OUTRO_UmbralChoir" Type="Outro"/>
+        </Sounds>
+        <Color Red="255" Green="229" Blue="156" Alpha="255" />
+        <ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitAcademyLeaders01_Requests</ModelPath>
+        <EliminatedModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitAcademyDestroyed01</EliminatedModelPath>
+    </AffinityGuiElement>
+
+  <!-- Minor Faction -->
+  <AffinityGuiElement Name="AffinityMappingMinorOraculars">
+    <Title>%AffinityGameplayMinorOracularsTitle</Title>
+    <Description>%AffinityGameplayMinorOracularsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityMinorOracularsSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityMinorOracularsMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityMinorOracularsMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityMinorOracularsLarge" />
+      <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityMinorOracularsMood" />
+    </Icons>
+    <SymbolString>[oracular]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </AffinityGuiElement>
+</Datatable>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/PropertyFilteringRuleDefinition.xsd">
+
+  <PropertyFilteringRuleDefinition Name="RuleNoHappiness" Category="Empire">
+    <InterpreterPrerequisite>Property(Context, CanUseHonor) ge 1</InterpreterPrerequisite>
+    <PropertyName>Happiness</PropertyName>
+    <PropertyName>HappinessRaw</PropertyName>
+    <PropertyName>HappinessPerPeace</PropertyName>
+    <PropertyName>HappinessPerAlliance</PropertyName>
+    <PropertyName>HappinessPerWar</PropertyName>
+    <PropertyName>HappinessPerHomeSystem</PropertyName>
+    <PropertyName>HappinessSum</PropertyName>
+    <PropertyName>HappinessFromExpansion</PropertyName>
+    <PropertyName>HappinessFromCollection</PropertyName>
+    <PropertyName>HappinessBonusFromCollection</PropertyName>
+    <PropertyName>HappinessBonusFromFleetPresence</PropertyName>
+    <PropertyName>HappinessBonusPerRepresentative</PropertyName>
+    <PropertyName>HappinessPenaltyPerRepresentative</PropertyName>
+    <PropertyName>HappinessOnNonDictatorship</PropertyName>
+    <PropertyName>BoostHappinessOnColonies</PropertyName>
+    <PropertyName>BonusPopulationHappiness</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier1Luxury6</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier2Luxury14</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier3Luxury22</PropertyName>
+    <PropertyName>OverPopulationPenaltiesReduction</PropertyName>
+    <PropertyName>OverPopulationPenalties</PropertyName>
+    <PathTag>HappinessStatusEmpire0</PathTag>
+    <PathTag>HappinessStatusEmpire1</PathTag>
+    <PathTag>HappinessStatusEmpire1OrAbove</PathTag>
+    <PathTag>HappinessStatusEmpire2</PathTag>
+    <PathTag>HappinessStatusEmpire2OrAbove</PathTag>
+    <PathTag>HappinessStatusEmpire3</PathTag>
+    <PathTag>HappinessStatusEmpire3OrAbove</PathTag>
+    <PathTag>HappinessStatusEmpire4</PathTag>
+    <PathTag>HappinessStatusStarSystem0</PathTag>
+    <PathTag>HappinessStatusStarSystem1</PathTag>
+    <PathTag>HappinessStatusStarSystem1OrAbove</PathTag>
+    <PathTag>HappinessStatusStarSystem2</PathTag>
+    <PathTag>HappinessStatusStarSystem2OrAbove</PathTag>
+    <PathTag>HappinessStatusStarSystem3</PathTag>
+    <PathTag>HappinessStatusStarSystem3OrAbove</PathTag>
+    <PathTag>HappinessStatusStarSystem4</PathTag>
+  </PropertyFilteringRuleDefinition>
+
+  <PropertyFilteringRuleDefinition Name="RuleNoHonorOrObedience" Category="Empire">
+    <InterpreterPrerequisite>Property(Context, CanUseHonor) lt 1</InterpreterPrerequisite>
+    <PropertyName>Obedience</PropertyName>
+    <PropertyName>NetEmpireHonor</PropertyName>
+    <PropertyName>UnclampedNetEmpireHonor</PropertyName>
+    <PropertyName>HonorOvercolonizationPenalty</PropertyName>
+    <PropertyName>NetSystemManpowerHisshos</PropertyName>
+    <PropertyName>NetSystemManpowerPercentHisshos</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier1Luxury6FIDSHisshos</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier2Luxury14FIDSHisshos</PropertyName>
+    <PropertyName>BonusPopulationFoodHissho</PropertyName>
+    <PropertyName>BonusPopulationScienceHissho</PropertyName>
+    <PropertyName>BonusPopulationDustHissho</PropertyName>
+    <PropertyName>BonusPopulationPrestigeHissho</PropertyName>
+    <PropertyName>BonusPopulationSystemManpowerHissho</PropertyName>
+    <PropertyName>BonusPopulationDefenseHissho</PropertyName>
+    <PropertyName>SystemGrowthBonusFromCollectionHissho</PropertyName>
+    <PropertyName>SystemEmpirePointFromHisshoBonus</PropertyName>
+    <PropertyName>NetSystemManpowerBonusFromCollectionHissho</PropertyName>
+    <PropertyName>OverColonizationPenaltiesReductionHissho</PropertyName>
+    <PropertyName>SystemProductionHissho</PropertyName>
+    <PropertyName>PlanetRawFoodHisshos</PropertyName>
+    <PropertyName>PlanetRawIndustryHisshos</PropertyName>
+    <PropertyName>PlanetRawDustHisshos</PropertyName>
+    <PropertyName>PlanetRawScienceHisshos</PropertyName>
+    <PropertyName>PlanetRawPrestigeHisshos</PropertyName>
+    <PathTag>ObedienceStatusEmpire0</PathTag>
+    <PathTag>ObedienceStatusEmpire1</PathTag>
+    <PathTag>ObedienceStatusEmpire1OrAbove</PathTag>
+    <PathTag>ObedienceStatusEmpire2</PathTag>
+    <PathTag>ObedienceStatusEmpire2OrAbove</PathTag>
+    <PathTag>ObedienceStatusEmpire3</PathTag>
+    <PathTag>ObedienceStatusEmpire3OrAbove</PathTag>
+    <PathTag>ObedienceStatusEmpire4</PathTag>
+    <PathTag>ObedienceStatusStarSystem0</PathTag>
+    <PathTag>ObedienceStatusStarSystem1</PathTag>
+    <PathTag>ObedienceStatusStarSystem1OrAbove</PathTag>
+    <PathTag>ObedienceStatusStarSystem2</PathTag>
+    <PathTag>ObedienceStatusStarSystem2OrAbove</PathTag>
+    <PathTag>ObedienceStatusStarSystem3</PathTag>
+    <PathTag>ObedienceStatusStarSystem3OrAbove</PathTag>
+    <PathTag>ObedienceStatusStarSystem4</PathTag>
+  </PropertyFilteringRuleDefinition>
+
+  <!-- For Custom Factions -->
+  <PropertyFilteringRuleDefinition Name="RuleNoHappinessCustomPanel" Category="Affinity">
+    <InterpreterPrerequisite>$(CanUseHonor) ge 1</InterpreterPrerequisite>
+    <PropertyName>Happiness</PropertyName>
+    <PropertyName>HappinessRaw</PropertyName>
+    <PropertyName>HappinessPerPeace</PropertyName>
+    <PropertyName>HappinessPerAlliance</PropertyName>
+    <PropertyName>HappinessPerWar</PropertyName>
+    <PropertyName>HappinessPerHomeSystem</PropertyName>
+    <PropertyName>HappinessSum</PropertyName>
+    <PropertyName>HappinessFromExpansion</PropertyName>
+    <PropertyName>HappinessFromCollection</PropertyName>
+    <PropertyName>HappinessBonusFromCollection</PropertyName>
+    <PropertyName>HappinessBonusFromFleetPresence</PropertyName>
+    <PropertyName>HappinessBonusPerRepresentative</PropertyName>
+    <PropertyName>HappinessPenaltyPerRepresentative</PropertyName>
+    <PropertyName>BoostHappinessOnColonies</PropertyName>
+    <PropertyName>BonusPopulationHappiness</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier1Luxury6</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier2Luxury14</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier3Luxury22</PropertyName>
+    <PropertyName>OverPopulationPenaltiesReduction</PropertyName>
+    <PropertyName>OverPopulationPenalties</PropertyName>
+    <PathTag>HappinessStatusEmpire0</PathTag>
+    <PathTag>HappinessStatusEmpire1</PathTag>
+    <PathTag>HappinessStatusEmpire1OrAbove</PathTag>
+    <PathTag>HappinessStatusEmpire2</PathTag>
+    <PathTag>HappinessStatusEmpire2OrAbove</PathTag>
+    <PathTag>HappinessStatusEmpire3</PathTag>
+    <PathTag>HappinessStatusEmpire3OrAbove</PathTag>
+    <PathTag>HappinessStatusEmpire4</PathTag>
+    <PathTag>HappinessStatusStarSystem0</PathTag>
+    <PathTag>HappinessStatusStarSystem1</PathTag>
+    <PathTag>HappinessStatusStarSystem1OrAbove</PathTag>
+    <PathTag>HappinessStatusStarSystem2</PathTag>
+    <PathTag>HappinessStatusStarSystem2OrAbove</PathTag>
+    <PathTag>HappinessStatusStarSystem3</PathTag>
+    <PathTag>HappinessStatusStarSystem3OrAbove</PathTag>
+    <PathTag>HappinessStatusStarSystem4</PathTag>
+  </PropertyFilteringRuleDefinition>
+
+  <PropertyFilteringRuleDefinition Name="RuleNoHonorOrObedienceCustomPanel" Category="Affinity">
+    <InterpreterPrerequisite>$(CanUseHonor) lt 1</InterpreterPrerequisite>
+    <PropertyName>Obedience</PropertyName>
+    <PropertyName>NetEmpireHonor</PropertyName>
+    <PropertyName>UnclampedNetEmpireHonor</PropertyName>
+    <PropertyName>HonorOvercolonizationPenalty</PropertyName>
+    <PropertyName>NetSystemManpowerHisshos</PropertyName>
+    <PropertyName>NetSystemManpowerPercentHisshos</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier1Luxury6FIDSHisshos</PropertyName>
+    <PropertyName>RecipeIngredientEffectTier2Luxury14FIDSHisshos</PropertyName>
+    <PropertyName>BonusPopulationFoodHissho</PropertyName>
+    <PropertyName>BonusPopulationScienceHissho</PropertyName>
+    <PropertyName>BonusPopulationDustHissho</PropertyName>
+    <PropertyName>BonusPopulationPrestigeHissho</PropertyName>
+    <PropertyName>BonusPopulationSystemManpowerHissho</PropertyName>
+    <PropertyName>BonusPopulationDefenseHissho</PropertyName>
+    <PropertyName>SystemGrowthBonusFromCollection</PropertyName>
+    <PropertyName>SystemEmpirePointFromHisshoBonus</PropertyName>
+    <PropertyName>NetSystemManpowerBonusFromCollectionHissho</PropertyName>
+    <PropertyName>OverColonizationPenaltiesReductionHissho</PropertyName>
+    <PropertyName>SystemProductionHissho</PropertyName>
+    <PathTag>ObedienceStatusEmpire0</PathTag>
+    <PathTag>ObedienceStatusEmpire1</PathTag>
+    <PathTag>ObedienceStatusEmpire1OrAbove</PathTag>
+    <PathTag>ObedienceStatusEmpire2</PathTag>
+    <PathTag>ObedienceStatusEmpire2OrAbove</PathTag>
+    <PathTag>ObedienceStatusEmpire3</PathTag>
+    <PathTag>ObedienceStatusEmpire3OrAbove</PathTag>
+    <PathTag>ObedienceStatusEmpire4</PathTag>
+    <PathTag>ObedienceStatusStarSystem0</PathTag>
+    <PathTag>ObedienceStatusStarSystem1</PathTag>
+    <PathTag>ObedienceStatusStarSystem1OrAbove</PathTag>
+    <PathTag>ObedienceStatusStarSystem2</PathTag>
+    <PathTag>ObedienceStatusStarSystem2OrAbove</PathTag>
+    <PathTag>ObedienceStatusStarSystem3</PathTag>
+    <PathTag>ObedienceStatusStarSystem3OrAbove</PathTag>
+    <PathTag>ObedienceStatusStarSystem4</PathTag>
+  </PropertyFilteringRuleDefinition>
+
+  <!-- From DLC4 "FactionTraitScienceReduction"-->
+  <PropertyFilteringRuleDefinition Name="RuleCanUseRawPlanetScience" Category="Empire">
+    <InterpreterPrerequisite>Property(Context, CanUseRawPlanetScience) ge 1</InterpreterPrerequisite>
+    <PropertyName>RecipeIngredientEffectTier2Luxury12Bis</PropertyName>
+  </PropertyFilteringRuleDefinition>
+
+  <PropertyFilteringRuleDefinition Name="RuleCannotUseRawPlanetScience" Category="Empire">
+    <InterpreterPrerequisite>Property(Context, CannotUseRawPlanetScience) ge 1</InterpreterPrerequisite>
+    <!--<PropertyName>PlanetRawScience</PropertyName>-->
+    <!-- We could hide all "research per pop" modifiers. If we want to, just uncomment this line. -->
+    <PropertyName>RecipeIngredientEffectTier2Luxury12</PropertyName>
+  </PropertyFilteringRuleDefinition>
+
+
+
+  <!-- Prevent hacking properties from showing up outside of Penumbra -->
+  <PropertyFilteringRuleDefinition Name="DLC3Hacking" Category="Empire">
+    <DownloadableContentPrerequisite Inverted="true">DLCUC</DownloadableContentPrerequisite>
+    <PropertyName>HackingSpeedMultiplierFromTimeBubble</PropertyName>
+    <PropertyName>MaximumEmpireProcessingPowerStock</PropertyName>
+    <PropertyName>MaximumEmpireProcessingPowerStockOvercolonizationMultiplier</PropertyName>
+    <PropertyName>MaximumEmpireProcessingPowerStock</PropertyName>
+    <PropertyName>BonusPopulationProcessingPower</PropertyName>
+    <PropertyName>HackingSpeedPercentMultiplier</PropertyName>
+    <PropertyName>HackingWarpSpeed</PropertyName>
+    <PropertyName>HackingNonWarpSpeed</PropertyName>
+    <PropertyName>HackingNodeSpeed</PropertyName>
+    <PropertyName>MaximumHackingFreeMoveRange</PropertyName>
+    <PropertyName>MaximumHackingOperationsCount</PropertyName>
+    <PropertyName>FinalProcessingPowerAllocation</PropertyName>
+    <PropertyName>HackingSpeedMultiplierForSelf</PropertyName>
+    <PropertyName>HackingSpeedMultiplierForSelfPreview</PropertyName>
+    <PropertyName>HackingSpeedMultiplierForOthers</PropertyName>
+  </PropertyFilteringRuleDefinition>
+
+  <PropertyFilteringRuleDefinition Name="DLC3HackingAffinity" Category="Affinity">
+    <DownloadableContentPrerequisite Inverted="true">DLCUC</DownloadableContentPrerequisite>
+    <PropertyName>HackingSpeedMultiplierFromTimeBubble</PropertyName>
+    <PropertyName>MaximumEmpireProcessingPowerStock</PropertyName>
+    <PropertyName>MaximumEmpireProcessingPowerStockOvercolonizationMultiplier</PropertyName>
+    <PropertyName>MaximumEmpireProcessingPowerStock</PropertyName>
+    <PropertyName>BonusPopulationProcessingPower</PropertyName>
+    <PropertyName>HackingSpeedPercentMultiplier</PropertyName>
+    <PropertyName>HackingWarpSpeed</PropertyName>
+    <PropertyName>HackingNonWarpSpeed</PropertyName>
+    <PropertyName>HackingNodeSpeed</PropertyName>
+    <PropertyName>MaximumHackingFreeMoveRange</PropertyName>
+    <PropertyName>MaximumHackingOperationsCount</PropertyName>
+    <PropertyName>FinalProcessingPowerAllocation</PropertyName>
+    <PropertyName>HackingSpeedMultiplierForSelf</PropertyName>
+    <PropertyName>HackingSpeedMultiplierForSelfPreview</PropertyName>
+    <PropertyName>HackingSpeedMultiplierForOthers</PropertyName>
+  </PropertyFilteringRuleDefinition>
+
+  <PropertyFilteringRuleDefinition Name="DLC4Properties" Category="Empire">
+    <DownloadableContentPrerequisite Inverted="true">DLCTemplars</DownloadableContentPrerequisite>
+    <PropertyName>BombardmentLevelTemplars</PropertyName>
+  </PropertyFilteringRuleDefinition>
+
+  <PropertyFilteringRuleDefinition Name="DLC4PropertiesAffinity" Category="Affinity">
+    <DownloadableContentPrerequisite Inverted="true">DLCTemplars</DownloadableContentPrerequisite>
+    <PropertyName>BombardmentLevelTemplars</PropertyName>
+  </PropertyFilteringRuleDefinition>
+</Datatable>

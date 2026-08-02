@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/GalaxyGeneratorWeightTableDefinition.xsd">
+
+    <GalaxyGeneratorWeightTable Name="FactionTemplars_StarTypes">
+        <Entry Tag="StarTypeTemplars"             Weight="1"/>
+    </GalaxyGeneratorWeightTable>
+
+    <GalaxyGeneratorWeightTable Name="FactionTemplars_PlanetTypes">
+        <Entry Tag="PlanetTypeDesert"             Weight="1"/>
+    </GalaxyGeneratorWeightTable>
+
+    <GalaxyGeneratorWeightTable Name="MinorFactionOraculars_PlanetTypes">
+        <Entry Tag="PlanetTypeTerran"             Weight="1"/>
+    </GalaxyGeneratorWeightTable>
+
+    <!-- PLANETS WEIGHTS FOR ACADEMY HOME -->
+    
+    <GalaxyGeneratorWeightTable Name="AcademyHome_PlanetTypes">
+        <Entry Tag="PlanetTypeTerran"           Weight="1" />
+        <Entry Tag="PlanetTypeForest"           Weight="1" />
+        <Entry Tag="PlanetTypeOcean"            Weight="1" />
+        <Entry Tag="PlanetTypeAtoll"            Weight="1" />
+        <Entry Tag="PlanetTypeBoreal"           Weight="1" />
+        <Entry Tag="PlanetTypeJungle"           Weight="1" />
+        <Entry Tag="PlanetTypeMonsoon"          Weight="1" />
+        <Entry Tag="PlanetTypeTundra"           Weight="1" />
+        <Entry Tag="PlanetTypeSteppes"          Weight="1" />
+    </GalaxyGeneratorWeightTable>
+
+    <GalaxyGeneratorWeightTable Name="AcademyHome_PlanetSizes">
+        <Entry Tag="PlanetSizeTiny"         Weight="1"/>
+        <Entry Tag="PlanetSizeSmall"        Weight="1"/>
+        <Entry Tag="PlanetSizeMedium"       Weight="1"/>
+        <Entry Tag="PlanetSizeLarge"        Weight="1"/>
+        <Entry Tag="PlanetSizeHuge"         Weight="1"/>
+    </GalaxyGeneratorWeightTable>
+
+
+    <!-- Star Templar -->
+    <GalaxyGeneratorWeightTable Name="StarTypeTemplars_PlanetQuantity">
+        <Entry Tag="PlanetQuantityOne"          Weight="5"/>
+        <Entry Tag="PlanetQuantityTwo"          Weight="20"/>
+        <Entry Tag="PlanetQuantityThree"        Weight="40"/>
+        <Entry Tag="PlanetQuantityFour"         Weight="30"/>
+        <Entry Tag="PlanetQuantityFive"         Weight="20"/>
+    </GalaxyGeneratorWeightTable>
+
+    <GalaxyGeneratorWeightTable Name="StarTypeTemplars_PlanetTypes">
+        <Entry Tag="PlanetTypeTerran"           Weight="1" />
+        <Entry Tag="PlanetTypeForest"           Weight="1" />
+        <Entry Tag="PlanetTypeOcean"            Weight="1" />
+        <Entry Tag="PlanetTypeAtoll"            Weight="1" />
+        <Entry Tag="PlanetTypeBoreal"           Weight="1" />
+        <Entry Tag="PlanetTypeJungle"           Weight="1" />
+        <Entry Tag="PlanetTypeMonsoon"          Weight="1" />
+        <Entry Tag="PlanetTypeTundra"           Weight="1" />
+        <Entry Tag="PlanetTypeTropical"         Weight="5" />
+        <Entry Tag="PlanetTypeVeldt"            Weight="5" />
+        <Entry Tag="PlanetTypeSteppes"          Weight="1" />
+        <Entry Tag="PlanetTypeArid"             Weight="5" />
+        <Entry Tag="PlanetTypeDesert"           Weight="15" />
+        <Entry Tag="PlanetTypeSnow"             Weight="0" />
+        <Entry Tag="PlanetTypeArctic"           Weight="0" />
+        <Entry Tag="PlanetTypeAsh"              Weight="20" />
+        <Entry Tag="PlanetTypeBarren"           Weight="0" />
+        <Entry Tag="PlanetTypeSwamp"            Weight="0" />
+        <Entry Tag="PlanetTypeLava"             Weight="20" />
+        <Entry Tag="PlanetTypeIce"              Weight="0" />
+
+        <Entry Tag="PlanetTypeGasFrozen"        Weight="2"/>
+        <Entry Tag="PlanetTypeGasCold"          Weight="2"/>
+        <Entry Tag="PlanetTypeGasTemperate"     Weight="2"/>
+        <Entry Tag="PlanetTypeGasWarm"          Weight="2"/>
+        <Entry Tag="PlanetTypeGasHot"           Weight="2"/>
+        <Entry Tag="PlanetTypeGasBurning"       Weight="2"/>
+    </GalaxyGeneratorWeightTable>
+
+
+</Datatable>

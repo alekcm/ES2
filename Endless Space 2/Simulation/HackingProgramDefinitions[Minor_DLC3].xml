@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HackingProgramDefinition.xsd">
+    <!-- Flag "UnlockPrerequisite" is required to specify which Descriptor must be added on a major empire which unlocks this program. -->
+    
+    <!-- Accelerator -->
+    <!-- DEPRECATED -->
+    <OffenseHackingProgramDefinition Name="SpeedupHackingOffenseHackingProgramMinor" ProcessingPowerAllocation="15" IsValidForMinorEmpire="true" Deprecated="true">
+        <PathPrerequisite Flags="Discard,UnlockPrerequisite">SpeedupHackingOffenseHackingProgramMinorUnlocked</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Prerequisite,Discard">false</InterpreterPrerequisite>
+        <SelfDescriptors>
+            <SimulationDescriptorReference Name="HackingProgramEffectSpeedupHacking"/>
+        </SelfDescriptors>
+    </OffenseHackingProgramDefinition>
+
+    <!-- Accelerator v2 -->
+    <OffenseHackingProgramDefinition Name="SpeedupHackingOffenseHackingProgramMinorV2" ProcessingPowerAllocation="15" IsValidForMinorEmpire="true" InstantActivation="true">
+        <PathPrerequisite Flags="Discard,UnlockPrerequisite">SpeedupHackingOffenseHackingProgramMinorUnlocked</PathPrerequisite>
+        <OperationEffect OperationOwner="OnlyMe" OperationType="OnlyOperation">
+            <SimulationDescriptorReference Name="HackingProgramEffectSpeedupHackingOperation"/>
+        </OperationEffect>
+    </OffenseHackingProgramDefinition>
+
+    <!-- Overload -->
+    <OffenseHackingProgramDefinition Name="IncreasePPAllocationOffenseHackingProgramMinor" ProcessingPowerAllocation="15" IsValidForMinorEmpire="true">
+        <PathPrerequisite Flags="Discard,UnlockPrerequisite">IncreasePPAllocationOffenseHackingProgramMinorUnlocked</PathPrerequisite>
+        <TargetDescriptors>
+            <SimulationDescriptorReference Name="HackingProgramEffectInstantIncreasePPAllocation"/>
+        </TargetDescriptors>
+    </OffenseHackingProgramDefinition>
+
+    <!-- Encrypt-->
+    <DefenseHackingProgramDefinition Name="SlowDownHackingDefenseHackingProgramMinor" ProcessingPowerAllocation="15" IsValidForMinorEmpire="true">
+        <PathPrerequisite Flags="Discard,UnlockPrerequisite">SlowDownHackingDefenseHackingProgramMinorUnlocked</PathPrerequisite>
+        <TargetDescriptors>
+            <SimulationDescriptorReference Name="HackingProgramEffectSlowDownHacking"/>
+        </TargetDescriptors>
+    </DefenseHackingProgramDefinition>
+
+    <!-- Interrogate-->
+    <DefenseHackingProgramDefinition Name="IncreaseHackerPPAllocationDefenseHackingProgramMinor" ProcessingPowerAllocation="15" TargetHackerDescriptorApplicationRule="OnlyOthers" IsValidForMinorEmpire="true">
+        <PathPrerequisite Flags="Discard,UnlockPrerequisite">IncreaseHackerPPAllocationDefenseHackingProgramMinorUnlocked</PathPrerequisite>
+        <TargetHackerDescriptors>
+            <SimulationDescriptorReference Name="HackingProgramEffectIncreaseHackerPPAllocation"/>
+        </TargetHackerDescriptors>
+    </DefenseHackingProgramDefinition>
+
+</Datatable>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+    <!-- Vaulters -->
+    <GuiElement Name="CategoryFactionVaulters">
+      <Title>%PopulationVaultersTitle</Title>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityVaultersSmall" />
+      </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryHeroSkillTreeVaulters">
+      <Title>%CategoryHeroSkillTreeVaultersTitle</Title>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityVaultersSmall" />
+      </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="CategoryTechnologyFactionVaulters">
+      <Title>%CategoryTechnologyFactionVaultersTitle</Title>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryTechnologySmall" />
+      </Icons>
+      <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryPortalUpgrade">
+        <Title>%CategoryPortalUpgradeTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryPortalUpgrade" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryDLCExclusive">
+        <Title>%DLCTypeExclusiveTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryDLCSmall" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryDLCPersonal">
+        <Title>%DLCTypePersonalTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryDLCSmall" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryDLCAddon">
+        <Title>%DLCTypeAddonTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryDLCSmall" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+    
+</Datatable>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ####################################### -->
+    <!--              UC Main Quest              -->
+    <!-- ####################################### -->
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter1-Part1">
+        <Title>%UmbralChoirQuest-Chapter1-Part1-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter1-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter1-Part1-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter1-Part1-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter1-Part1-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter1-Part1-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter1-Part1-PacifistObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%UmbralChoirQuest-Chapter1-Part1-ScientistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter1-Part1-ScientistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter1-Part1-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter1-Part1-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UmbralChoirQuest-Chapter1-Part1-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter1-Part2A">
+        <Title>%UmbralChoirQuest-Chapter1-Part2A-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter1-Part2A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter1-Part2A-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter1-Part2A-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter1-Part2A-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter1-Part2A-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter1-Part2A-PacifistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter1-Part2B">
+        <Title>%UmbralChoirQuest-Chapter1-Part2B-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter1-Part2B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%UmbralChoirQuest-Chapter1-Part2B-ScientistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter1-Part2B-ScientistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter1-Part2B-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter1-Part2B-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter1-Part2B-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter2">
+        <Title>%UmbralChoirQuest-Chapter2-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter2-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter2-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter2-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter2-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter2-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter2-PacifistObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%UmbralChoirQuest-Chapter2-ScientistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter2-ScientistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter2-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter2-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UmbralChoirQuest-Chapter2-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter2Bis">
+        <Title>%UmbralChoirQuest-Chapter2-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter2-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter2-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter2-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter2-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter2-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter2-PacifistObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%UmbralChoirQuest-Chapter2-ScientistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter2-ScientistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter2-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter2-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UmbralChoirQuest-Chapter2Bis-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter3A">
+        <Title>%UmbralChoirQuest-Chapter3A-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter3A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter3A" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%UmbralChoirQuest-Chapter3A-MilitaristTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter3A-MilitaristDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter3A-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter3A-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter3A-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter3A-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter3A-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter3A-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter3A-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UmbralChoirQuest-Chapter3A-PacifistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter3B">
+        <Title>%UmbralChoirQuest-Chapter3B-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter3B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter3B" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%UmbralChoirQuest-Chapter3B-ScientistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter3B-ScientistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter3B-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter3B-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter3B-ScientistObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter3B-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter3B-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter3B-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter3B-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UmbralChoirQuest-Chapter3B-PacifistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter4A">
+        <Title>%UmbralChoirQuest-Chapter4A-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter4A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter4AB" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%UmbralChoirQuest-Chapter4A-MilitaristTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter4A-MilitaristDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter4A-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter4A-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter4A-MilitaristObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter4B">
+        <Title>%UmbralChoirQuest-Chapter4B-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter4B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter4AB" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter4B-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter4B-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter4B-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter4B-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter4B-PacifistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter4C">
+        <Title>%UmbralChoirQuest-Chapter4C-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter4C-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter4CD" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%UmbralChoirQuest-Chapter4C-ScientistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter4C-ScientistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter4C-ScientistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter4C-ScientistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter4C-ScientistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UmbralChoirQuest-Chapter4D">
+        <Title>%UmbralChoirQuest-Chapter4D-IntroTitle</Title>
+        <Description>%UmbralChoirQuest-Chapter4D-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter4CD" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%UmbralChoirQuest-Chapter4D-PacifistTitle</Title>
+                    <Description>%UmbralChoirQuest-Chapter4D-PacifistDescription</Description>
+                    <TooltipDescription>%UmbralChoirQuest-Chapter4D-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UmbralChoirQuest-Chapter4D-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%UmbralChoirQuest-Chapter4D-PacifistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+    <!-- ####################################### -->
+    <!--           UC Population Quest           -->
+    <!-- ####################################### -->
+
+    <QuestGuiElement Name="PopulationQuest26">
+        <Title>%PopulationQuest26-IntroTitle</Title>
+        <Description>%PopulationQuest26-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest26Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest26-1Title</Title>
+                    <Description>%PopulationQuest26-1Description</Description>
+                    <TooltipDescription>%PopulationQuest26-1ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest26-1Outcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%PopulationQuest26-1Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest26-2Title</Title>
+                    <Description>%PopulationQuest26-2Description</Description>
+                    <TooltipDescription>%PopulationQuest26-2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest26-2Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%PopulationQuest26-2Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest26-3Title</Title>
+                    <Description>%PopulationQuest26-3Description</Description>
+                    <TooltipDescription>%PopulationQuest26-3ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest26-3Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%PopulationQuest26-3Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest26-4Title</Title>
+                    <Description>%PopulationQuest26-4Description</Description>
+                    <TooltipDescription>%PopulationQuest26-4ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest26-4Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%PopulationQuest26-4Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+</Datatable>

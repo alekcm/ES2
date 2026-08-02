@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+
+  <!-- ###################################### -->
+  <!-- #######          STAGE 3       ####### -->
+  <!-- ###################################### -->
+
+  <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration6Vaulters" TechnologyStage="TechnologyStageDefinitionScienceAndExploration3" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier)  * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExploration28To6'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyVaulters">ClassEmpire,AffinityGameplayVaulters/ClassPopulationEmpireAffinityVaulters</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="false">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyPortalUpgradeShipRegeneration"/>
+    <SimulationDescriptorReference Name="TechnologyColonization9"/>
+    <SimulationDescriptorReference Name="TechnologyColonization9Vaulters"/>
+    <SimulationDescriptorReference Name="TechnologyLinkTo6Vaulters"/>
+    <SimulationDescriptorReference Name="TechnologyScience3Vaulters"/>
+    <SimulationDescriptorReference Name="TechnologyOffensiveProgram4"/>
+    <SimulationDescriptorReference Name="TechnologyDefensiveProgram2"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+
+    <HelperVariable Name="AvailableIcePlanets"/>
+    <HelperVariable Name="SciencePercent"/>
+    <HelperFormula>$(AvailableIcePlanets) * 1  + $(SciencePercent) * 10 </HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration6VaultersNoPortals" TechnologyStage="TechnologyStageDefinitionScienceAndExploration3" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier)  * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExploration28To6'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityVaulters" Inverted="false">ClassEmpire,AffinityMappingVaulters</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyColonization9"/>
+    <SimulationDescriptorReference Name="TechnologyColonization9VaultersNoPortals"/>
+    <SimulationDescriptorReference Name="TechnologyLinkTo6VaultersNoPortals"/>
+    <SimulationDescriptorReference Name="TechnologyScience3Vaulters"/>
+    <SimulationDescriptorReference Name="TechnologyOffensiveProgram4"/>
+    <SimulationDescriptorReference Name="TechnologyDefensiveProgram2"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+
+    <HelperVariable Name="AvailableIcePlanets"/>
+    <HelperVariable Name="SciencePercent"/>
+    <HelperFormula>$(AvailableIcePlanets) * 1  + $(SciencePercent) * 10 </HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration6VaultersNoVaultersPopulation" TechnologyStage="TechnologyStageDefinitionScienceAndExploration3" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier)  * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExploration28To6'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityMappingVaulters</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,AffinityGameplayVaulters" Inverted="false">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyPortalUpgradeShipRegeneration"/>
+    <SimulationDescriptorReference Name="TechnologyColonization9"/>
+    <SimulationDescriptorReference Name="TechnologyColonization9VaultersNoVaultersPopulation"/>
+    <SimulationDescriptorReference Name="TechnologyLinkTo6VaultersNoVaultersPopulation"/>
+    <SimulationDescriptorReference Name="TechnologyScience3"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+
+    <HelperVariable Name="AvailableIcePlanets"/>
+    <HelperVariable Name="SciencePercent"/>
+    <HelperFormula>$(AvailableIcePlanets) * 1  + $(SciencePercent) * 10 </HelperFormula>
+  </TechnologyDefinition>
+
+
+  <!-- ###################################### -->
+  <!-- #######          STAGE 4       ####### -->
+  <!-- ###################################### -->
+  <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration14Vaulters" TechnologyStage="TechnologyStageDefinitionScienceAndExploration4" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExploration8To14'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityVaulters" Inverted="false">ClassEmpire,AffinityMappingVaulters</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyFreeMovement2"/>
+    <SimulationDescriptorReference Name="TechnologyEngine4Vaulters"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>40 * $(TurnVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+  <!-- ##################################### -->
+  <!-- #####  VAULTERS SPECIAL TECH   ###### -->
+  <!-- ###################################### -->
+
+  <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration4Vaulters" TechnologyStage="TechnologyStageDefinitionScienceAndExploration2" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExploration2To4'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityVaulters">ClassEmpire,AffinityMappingVaulters</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayTimeLords</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyColonization4"/>
+    <SimulationDescriptorReference Name="TechnologyFreeMovementVaulters"/>
+    <SimulationDescriptorReference Name="TechnologyExploration1"/>
+    <SimulationDescriptorReference Name="TechnologyOffensiveProgram2"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage2"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+    <HelperVariable Name="AvailableVeldtPlanets"/>
+    <HelperVariable Name="ExplorationRatioVariable"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>$(AvailableVeldtPlanets) * 1 + $(TurnVariable) * 10 + $(ExplorationRatioVariable) * 5</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique11Vaulters" TechnologyStage="TechnologyStageDefinitionScienceAndExploration5" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyVaulters">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard">ClassEmpire,FactionTraitManualHomeSystem</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyUnique11Vaulters"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+    <HelperVariable Name="ExplorationRatioVariable"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>$(TurnVariable) * 10 + $(ExplorationRatioVariable) * 2.5</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration32Vaulters" TechnologyStage="TechnologyStageDefinitionScienceAndExploration4" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyVaulters">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard">ClassEmpire,FactionTraitManualHomeSystem</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyUniqueSuperColonizerMobilePortal"/>
+    <SimulationDescriptorReference Name="TechnologyScience7"/>
+    <SimulationDescriptorReference Name="TechnologyDefensiveProgram3"/>
+    <SimulationDescriptorReference Name="TechnologyDefensiveProgram4"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+    <HelperVariable Name="SciencePercent"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>20 * $(TurnVariable) + $(SciencePercent) * 10</HelperFormula>
+  </TechnologyDefinition>
+
+
+  <!-- ###################################### -->
+  <!-- #####        EMP DEFENSE       ####### -->
+  <!-- ###################################### -->
+  <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration33" TechnologyStage="TechnologyStageDefinitionScienceAndExploration4" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked" Visibility="Hidden">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+  </TechnologyDefinition>
+
+</Datatable>

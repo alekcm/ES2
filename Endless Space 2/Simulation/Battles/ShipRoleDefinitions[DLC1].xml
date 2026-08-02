@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ShipRoleDefinition.xsd">
+
+    <ShipRoleDefinition Name="ShipRoleSuperColonizer">
+        <SimulationDescriptorReference Name="ShipRoleSuperColonizer"/>
+        <SimulationDescriptorReference Name="CannotBeScrapped"/>
+        <SimulationDescriptorReference Name="ShipRoleTypeCivilian"/>
+        <!--<SimulationDescriptorReference Name="ShipStatBonus1Movement3"/>-->
+        <SimulationDescriptorReference Name="ShipStatBonus2Vision"/>
+        <SimulationDescriptorReference Name="ShipTypeIndestructible"/>
+
+        <PathPrerequisite Flags="Edition">ClassEmpire,FactionTraitManualHomeSystem</PathPrerequisite>
+        
+        <PopulationEvent Name="PopulationPoliticalEventCivilianShip"/>
+        <TradableDefinition Name="TradableShipColonizer"/>
+    </ShipRoleDefinition>
+</Datatable>

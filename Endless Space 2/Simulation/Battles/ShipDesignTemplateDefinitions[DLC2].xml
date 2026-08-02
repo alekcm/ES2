@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ShipDesignTemplateDefinition.xsd">
+    <!--#####################
+    ####  MajorHisshos  #####
+    ######################-->
+    <!--S01 Small Attacker-->
+    <ShipDesignTemplateDefinition Name="HullSmall01MajorHisshos_SmallAttacker" Hull="HullSmall01MajorHisshos" ShipRole="ShipRoleSmallAttacker">
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Support01">
+            <TemplateModule Family="CrewBase"           Weight="4"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Defense01">
+            <TemplateModule Family="ShieldBase"         Weight="3"/>
+            <TemplateModule Family="HullPlatingBase"    Weight="1"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.DefenseSupport01">
+            <TemplateModule Family="CrewBase"           Weight="4"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.Weapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.Weapon03">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon04">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.DefenseSupport01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--S02 Small Support-->
+    <ShipDesignTemplateDefinition Name="HullSmall02MajorHisshos_SmallSupport" Hull="HullSmall02MajorHisshos" ShipRole="ShipRoleSmallSupport">
+
+        <TemplateSlotBinding SlotName="CoreSection.DefenseSupport01">
+            <TemplateModule Family="CrewBase"           Weight="4"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.DefenseSupport01">
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="ShieldBase"         Weight="2"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.DefenseSupport01">
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="ShieldBase"         Weight="2"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.DefenseSupport01">
+            <TemplateModule Family="ShieldBase"         Weight="2"/>
+            <TemplateModule Family="HullPlatingBase"    Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--S03 Small Colonizer-->
+    <ShipDesignTemplateDefinition Name="HullSmall03MajorHisshos_Colonizer" Hull="HullSmall03MajorHisshos" ShipRole="ShipRoleColonizer">
+
+        <TemplateSlotBinding SlotName="CoreSection.DefenseSupport01">
+            <TemplateModule Family="ShieldBase"         Weight="2"/>
+            <TemplateModule Family="HullPlatingBase"    Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Defense01">
+            <TemplateModule Family="ColonizationBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+    
+    <!--S07 Super Colonizer-->
+    <ShipDesignTemplateDefinition Name="HullMedium03MajorHisshos_SuperColonizer" Hull="HullMedium03MajorHisshos" ShipRole="ShipRoleSuperColonizer">
+
+        <TemplateSlotBinding SlotName="SectionN.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+        
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--S04 Small Explorer-->
+    <ShipDesignTemplateDefinition Name="HullSmall04MajorHisshos_Explorer" Hull="HullSmall04MajorHisshos" ShipRole="ShipRoleExploration">
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon03">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.DefenseSupport01">
+            <TemplateModule Family="ExplorationBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.DefenseSupport01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <ShipDesignTemplateDefinition Name="HullSmall04MajorHisshos_ExplorerShipBound" Hull="HullSmall04MajorHisshosShipBound" ShipRole="ShipRoleExploration">
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon03">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.DefenseSupport01">
+            <TemplateModule Family="ExplorationBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.DefenseSupport01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--S05 Leecher -->
+    <ShipDesignTemplateDefinition Name="HullSmall05MajorHisshos_Leecher" Hull="HullSmall05MajorHisshos" ShipRole="ShipRoleLeecher">
+
+        <TemplateSlotBinding SlotName="CoreSection.Support01">
+            <TemplateModule Family="GrowthLogisticsBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon01">
+            <TemplateModule Family="GrowthLogisticsBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Support01">
+            <TemplateModule Family="GrowthLogisticsBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="GrowthLogisticsBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--S06 Root Creator-->
+    <ShipDesignTemplateDefinition Name="HullSmall06MajorHisshos_RootCreator" Hull="HullSmall06MajorHisshos" ShipRole="ShipRoleRootCreator">
+
+        <TemplateSlotBinding SlotName="CoreSection.Support01">
+            <TemplateModule Family="RootCreationBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Defense01">
+            <TemplateModule Family="ShieldBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Defense01">
+            <TemplateModule Family="ShieldBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--M01 Medium Attacker-->
+    <ShipDesignTemplateDefinition Name="HullMedium01MajorHisshos_MediumAttacker" Hull="HullMedium01MajorHisshos" ShipRole="ShipRoleMediumAttacker">
+
+        <TemplateSlotBinding SlotName="CoreSection.LargeWeapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.DefenseSupport01">
+            <TemplateModule Family="EnergyEnhancerBase" Weight="3"/>
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.DefenseSupport02">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+
+        <TemplateSlotBinding SlotName="SectionE.Defense01">
+            <TemplateModule Family="HullPlatingBase"    Weight="4"/>
+            <TemplateModule Family="ShieldBase"         Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Defense01">
+            <TemplateModule Family="HullPlatingBase"    Weight="4"/>
+            <TemplateModule Family="ShieldBase"         Weight="3"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--M02 Medium Support-->
+    <ShipDesignTemplateDefinition Name="HullMedium02MajorHisshos_MediumSupport" Hull="HullMedium02MajorHisshos" ShipRole="ShipRoleMediumSupport">
+
+        <TemplateSlotBinding SlotName="CoreSection.LargeWeapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Support01">
+            <TemplateModule Family="EnergyEnhancerBase" Weight="3"/>
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.DefenseSupport01">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.DefenseSupport01">
+            <TemplateModule Family="EnergyEnhancerBase" Weight="3"/>
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Defense01">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Support01">
+            <TemplateModule Family="EnergyEnhancerBase" Weight="3"/>
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Defense01">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EnergyEnhancerBase" Weight="3"/>
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+
+    </ShipDesignTemplateDefinition>
+
+    <!--L00 Mothership-->
+    <ShipDesignTemplateDefinition Name="HullLarge00MajorHisshos_Mothership" Hull="HullLarge00MajorHisshos" ShipRole="ShipRoleMothership">
+
+        <TemplateSlotBinding SlotName="CoreSection.Defense01">
+            <TemplateModule Family="HullPlatingBase"          Weight="4"/>
+            <TemplateModule Family="ShieldBase"               Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.SupportDefense01">
+            <TemplateModule Family="MothershipDustBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Support02">
+            <TemplateModule Family="MothershipScienceBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Support03">
+            <TemplateModule Family="MothershipIndustryBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Support04">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Support05">
+            <TemplateModule Family="MothershipLifeforceBase"/>
+        </TemplateSlotBinding>
+
+
+        <TemplateSlotBinding SlotName="SectionN.LargeWeapon01">
+            <TemplateModule Family="LaserBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Defense01">
+            <TemplateModule Family="HullPlatingBase"      Weight="4"/>
+            <TemplateModule Family="ShieldBase"           Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon01">
+            <TemplateModule Family="LaserBase"            Weight="4"/>
+            <TemplateModule Family="BeamBase"             Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Defense01">
+            <TemplateModule Family="HullPlatingBase"      Weight="4"/>
+            <TemplateModule Family="ShieldBase"           Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.Weapon01">
+            <TemplateModule Family="LaserBase"            Weight="4"/>
+            <TemplateModule Family="BeamBase"             Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.DefenseSupport01">
+            <TemplateModule Family="HullPlatingBase"      Weight="4"/>
+            <TemplateModule Family="ShieldBase"           Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon01">
+            <TemplateModule Family="LaserBase"            Weight="4"/>
+            <TemplateModule Family="BeamBase"             Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Defense01">
+            <TemplateModule Family="HullPlatingBase"      Weight="4"/>
+            <TemplateModule Family="ShieldBase"           Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.LargeWeapon01">
+            <TemplateModule Family="BeamBase"/>
+        </TemplateSlotBinding>
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+        <TemplateSlotBinding SlotName="SectionS.DefenseSupport01">
+            <TemplateModule Family="ShieldBase"      Weight="4"/>
+            <TemplateModule Family="HullPlatingBase" Weight="3"/>
+        </TemplateSlotBinding>
+
+    </ShipDesignTemplateDefinition>
+
+    <!--L01 Carrier-->
+    <ShipDesignTemplateDefinition Name="HullLarge01MajorHisshos_Carrier" Hull="HullLarge01MajorHisshos" ShipRole="ShipRoleCarrier">
+
+        <TemplateSlotBinding SlotName="CoreSection.LargeWeapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.LargeWeapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="CoreSection.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionN.Support01">
+            <TemplateModule Family="EnergyEnhancerBase" Weight="3"/>
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionNE.Weapon02">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionE.Defense01">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="2"/>
+        </TemplateSlotBinding>
+        
+        <TemplateSlotBinding SlotName="SectionE.Defense02">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="2"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.Weapon01">
+            <TemplateModule Family="KineticBase"          Weight="4"/>
+            <TemplateModule Family="MissileBase"          Weight="3"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionSE.DefenseSupport01">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="2"/>
+        </TemplateSlotBinding>       
+
+        <TemplateSlotBinding SlotName="SectionS.Support01">
+            <TemplateModule Family="EngineBase"/>
+        </TemplateSlotBinding>
+
+        <TemplateSlotBinding SlotName="SectionS.DefenseSupport01">
+            <TemplateModule Family="ShieldBase"          Weight="4"/>
+            <TemplateModule Family="HullPlatingBase"     Weight="2"/>
+        </TemplateSlotBinding>
+        
+        <TemplateSlotBinding SlotName="SectionS.DefenseSupport01">
+            <TemplateModule Family="EnergyEnhancerBase" Weight="3"/>
+            <TemplateModule Family="CrewBase"           Weight="2"/>
+            <TemplateModule Family="EngineBase"         Weight="0.5"/>
+        </TemplateSlotBinding>
+
+
+    </ShipDesignTemplateDefinition>
+</Datatable>

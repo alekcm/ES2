@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EntityActionDefinition.xsd">
+
+  <!-- OUTPOST -->
+
+  <DecolonizeStarSystemAction Name="DecolonizeStarSystemAction">
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Inverted="true" Flags="Prerequisite,SystemIsBeingBlockaded">BlockadedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="Prerequisite,SystemIsBeingInvaded">GroundBattleInProgress</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="DecolonizedColonizedStarSystem"/>
+    </EntityModifiers>
+
+  </DecolonizeStarSystemAction>
+
+  <!-- ################################################# -->
+  <!-- ############# COMMON TO ALL FACTION ############# -->
+  <!-- ################################################# -->
+
+  <!-- Absorb 10 Growth each turn from opponents' outposts -->
+  <OutpostActionWithTargetsDefinition Name="OutpostActionStealGrowth2" Duration="10" Target="AllOutposts" ApplySelfDescriptorsOncePerTarget="true">
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingGuarded" Inverted="true">BlockadedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingDecolonized" Inverted="true">DecolonizedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">OutpostActionDescriptorStealGrowth2</PathPrerequisite>
+    </EntityPrerequisites>
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="OutpostActionDescriptorStealGrowth2"/>
+    </EntityModifiers>
+    <CustomCost Instant="true" ResourceName="EmpireManpower">50 + 25 * $(NumberOfOpponentOutposts)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityTimeLords</PathPrerequisite>
+
+    <TargetDescriptors>
+      <SimulationDescriptorReference Name="OutpostActionStealGrowth2TargetEffect"/>
+    </TargetDescriptors>
+    <SelfDescriptors>
+      <SimulationDescriptorReference Name="OutpostActionStealGrowth2SelfEffect"/>
+    </SelfDescriptors>
+  </OutpostActionWithTargetsDefinition>
+
+  <!-- Add flat growth on outpost -->
+  <OutpostActionDefinition Name="OutpostActionBoostGrowthWithDust" Duration="10">
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingGuarded" Inverted="true">BlockadedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingDecolonized" Inverted="true">DecolonizedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">OutpostActionIncreaseLocalGrowthEffect</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="OutpostActionIncreaseLocalGrowthEffect"/>
+    </EntityModifiers>
+
+    <CustomCost Instant="true" ResourceName="EmpireMoney">50 + 100 * Property(StockLocation, @../ClassEmpire, SystemCount)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+  </OutpostActionDefinition>
+
+  <!-- Double growth taken from colony-->
+  <OutpostActionDefinition Name="OutpostActionIncreaseMigrationRate" Duration="10" RequiresMigrationFlux="true">
+
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingGuarded" Inverted="true">BlockadedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingDecolonized" Inverted="true">DecolonizedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">OutpostActionIncreaseMigrationRate</PathPrerequisite>
+    </EntityPrerequisites>
+
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="OutpostActionIncreaseMigrationRate"/>
+    </EntityModifiers>
+
+    <CustomCost Instant="true" ResourceName="EmpireEmpirePoint">25  + 50 * Property(StockLocation, @../ClassEmpire, SystemCount)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+    <MigrationFluxSimulationDescriptorReference Name="OutpostActionIncreaseMigrationRateEffect"/>
+  </OutpostActionDefinition>
+
+  <!-- ################################################# -->
+  <!-- ###############    TIME LORDS     ############### -->
+  <!-- ################################################# -->
+  <OutpostActionWithTargetsDefinition Name="OutpostActionStealGrowth2TimeLords" Duration="10" Target="AllOutposts" ApplySelfDescriptorsOncePerTarget="true">
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingGuarded" Inverted="true">BlockadedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingDecolonized" Inverted="true">DecolonizedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">OutpostActionDescriptorStealGrowth2</PathPrerequisite>
+    </EntityPrerequisites>
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="OutpostActionDescriptorStealGrowth2"/>
+    </EntityModifiers>
+    <CustomCost Instant="true" ResourceName="EmpireManpower">50 + 25 * $(NumberOfOpponentOutposts)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="false">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+    <TargetDescriptors>
+      <SimulationDescriptorReference Name="OutpostActionStealGrowth2TargetEffect"/>
+    </TargetDescriptors>
+    <SelfDescriptors>
+      <SimulationDescriptorReference Name="OutpostActionStealGrowth2SelfTimeLordsEffect"/>
+    </SelfDescriptors>
+  </OutpostActionWithTargetsDefinition>
+
+  <!-- Add flat growth on outpost -->
+  <OutpostActionDefinition Name="OutpostActionBoostGrowthWithDustTimeLords" Duration="10">
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingGuarded" Inverted="true">BlockadedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingDecolonized" Inverted="true">DecolonizedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">OutpostActionIncreaseLocalGrowthTimeLordsEffect</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="OutpostActionIncreaseLocalGrowthTimeLordsEffect"/>
+    </EntityModifiers>
+
+    <CustomCost Instant="true" ResourceName="Strategic1">5  + 5 * Property(StockLocation, @../ClassEmpire, SystemCount)</CustomCost>
+
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="false">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+  </OutpostActionDefinition>
+
+  <!-- Double growth taken from colony-->
+  <OutpostActionDefinition Name="OutpostActionIncreaseProductionTimeLords" Duration="10" RequiresMigrationFlux="false">
+
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingGuarded" Inverted="true">BlockadedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite,SystemIsBeingDecolonized" Inverted="true">DecolonizedColonizedStarSystem</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">OutpostActionIncreaseProductionTimeLordsEffect</PathPrerequisite>
+    </EntityPrerequisites>
+
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="OutpostActionIncreaseProductionTimeLordsEffect"/>
+    </EntityModifiers>
+
+    <CustomCost Instant="true" ResourceName="Strategic2">5  + 5 * Property(StockLocation, @../ClassEmpire, SystemCount)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="false">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+
+  </OutpostActionDefinition>
+
+
+  <!-- INVASION -->
+
+  <GroundBattleStarSystemAction Name="GroundBattleStarSystemAction" Flags="CancelOnAttack,CancelOnGuard">
+
+    <!-- Checked on the ColonizedStarSystem -->
+    <EntityPrerequisites Location="OrbitEntities">
+      <PathPrerequisite Inverted="true" Flags="Prerequisite,GroundBattleInProgress">GroundBattleInProgress</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <!-- Checked on the ColonizedStarSystem and the StarSystemNode -->
+    <EntityPrerequisites Location="OrbitEntities">
+      <PathPrerequisite Inverted="true" Flags="CannotBeInvaded">CannotBeInvaded</PathPrerequisite>
+    </EntityPrerequisites>
+
+
+    <!-- Checked on the initiator fleet -->
+    <PathPrerequisiteOnInitiatorFleet Inverted="true" Flags="FleetIsInvisible">InvisibilityFleetAction</PathPrerequisiteOnInitiatorFleet>
+    <PathPrerequisiteOnInitiatorFleet Inverted="true" Flags="EncounterInProgress">FleetActionAttack</PathPrerequisiteOnInitiatorFleet>
+    <PathPrerequisiteOnInitiatorFleet Inverted="true" Flags="FleetCannotFight">CannotFight</PathPrerequisiteOnInitiatorFleet>
+    <InterpreterPrerequisiteOnInitiatorFleet          Flags="AcademyFleetCannotInvade">Property(Context, @'ClassGarrisonFleet',CanInvade) eq 1</InterpreterPrerequisiteOnInitiatorFleet>
+    <!--PathPrerequisiteOnInitiatorFleet Inverted="true" Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisiteOnInitiatorFleet-->
+    <InterpreterPrerequisiteOnInitiatorFleet          Flags="RequireManpower">Property(Context, @'ClassGarrisonFleet',ShipManpowerStock) ge Property(Context,@'../ClassEmpire', InfantryManpowerCost)</InterpreterPrerequisiteOnInitiatorFleet>
+
+  </GroundBattleStarSystemAction>
+
+
+  <!-- SIEGE -->
+
+  <SiegeStarSystemAction Name="SiegeStarSystemAction">
+
+    <!-- These prerequisites are checked on the system -->
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Inverted="true" Flags="SiegeInProgress">BesiegedColonizedStarSystem</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <!-- These modifiers are applied on the system -->
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="BesiegedColonizedStarSystem" />
+    </EntityModifiers>
+
+    <!-- Checked on the fleets orbiting the system, owned by the system's owner: not invisible/privateer/attached mothership, has offensive or defensive military power. -->
+    <EntityPrerequisites Location="DockedEntities" Filter="SameEmpire">
+      <InterpreterPrerequisite Inverted="true" Flags="OpponentMilitaryPower">(Property(Context, @'ClassGarrisonFleet,!FleetActionMothershipAttached,!FleetActionPrivateer,!InvisibilityFleetAction',OffensiveMilitaryPower, true) + Property(Context, @'ClassGarrisonFleet,!FleetActionMothershipAttached,!FleetActionPrivateer,!InvisibilityFleetAction',DefensiveMilitaryPower, true) ) gt 0 </InterpreterPrerequisite>
+    </EntityPrerequisites>
+
+    <!-- These prerequisites are checked on the fleet: not invisible, not lesser (or lesser which can siege), has military power or bonus siege power. -->
+    <PathPrerequisiteOnInitiatorFleet Inverted="true" Flags="FleetIsInvisible">InvisibilityFleetAction</PathPrerequisiteOnInitiatorFleet>
+    <InterpreterPrerequisiteOnInitiatorFleet Inverted="false" Flags="RequireMilitaryPower">Path(Context, @'../ClassEmpire,!EmpireTypeLesser') or Path(Context, @'ClassGarrisonFleet,CanSiege/../ClassEmpire,EmpireTypeLesser')</InterpreterPrerequisiteOnInitiatorFleet>
+    <InterpreterPrerequisiteOnInitiatorFleet Inverted="false" Flags="Discard"> (Property(Context, @ClassGarrisonFleet,OffensiveMilitaryPower, true) gt 0) or (Property(Context, @ClassGarrisonFleet,SiegePower, true) - (2 * Property(Context, @ClassGarrisonFleet,CommandPoints, true)) gt 0)</InterpreterPrerequisiteOnInitiatorFleet>
+
+  </SiegeStarSystemAction>
+
+
+  <!-- PROPAGANDAS -->
+
+  <PropagandaSystemAction Name="NeutralPropagandaSystemAction">
+  </PropagandaSystemAction>
+
+  <PropagandaSystemAction Name="Politics01PropagandaSystemAction">
+    <SupportPrerequisite Flags="Cancel" Politics="Politics01">1</SupportPrerequisite>
+    <PoliticsDefinition Name="Politics01"/>
+    <PoliticalScoreGainFormula>Clamp(2 ^ ($(Duration) * 0.5), 0, 200)</PoliticalScoreGainFormula>
+  </PropagandaSystemAction>
+
+  <PropagandaSystemAction Name="Politics02PropagandaSystemAction">
+    <SupportPrerequisite Flags="Cancel" Politics="Politics02">1</SupportPrerequisite>
+    <PoliticsDefinition Name="Politics02"/>
+    <PoliticalScoreGainFormula>Clamp(2 ^ ($(Duration) * 0.5), 0, 200)</PoliticalScoreGainFormula>
+  </PropagandaSystemAction>
+
+  <PropagandaSystemAction Name="Politics03PropagandaSystemAction">
+    <SupportPrerequisite Flags="Cancel" Politics="Politics03">1</SupportPrerequisite>
+    <PoliticsDefinition Name="Politics03"/>
+    <PoliticalScoreGainFormula>Clamp(2 ^ ($(Duration) * 0.5), 0, 200)</PoliticalScoreGainFormula>
+  </PropagandaSystemAction>
+
+  <PropagandaSystemAction Name="Politics04PropagandaSystemAction">
+    <SupportPrerequisite Flags="Cancel" Politics="Politics04">1</SupportPrerequisite>
+    <PoliticsDefinition Name="Politics04"/>
+    <PoliticalScoreGainFormula>Clamp(2 ^ ($(Duration) * 0.5), 0, 200)</PoliticalScoreGainFormula>
+  </PropagandaSystemAction>
+
+  <PropagandaSystemAction Name="Politics05PropagandaSystemAction">
+    <SupportPrerequisite Flags="Cancel" Politics="Politics05">1</SupportPrerequisite>
+    <PoliticsDefinition Name="Politics05"/>
+    <PoliticalScoreGainFormula>Clamp(2 ^ ($(Duration) * 0.5), 0, 200)</PoliticalScoreGainFormula>
+  </PropagandaSystemAction>
+
+  <PropagandaSystemAction Name="Politics06PropagandaSystemAction">
+    <SupportPrerequisite Flags="Cancel" Politics="Politics06">1</SupportPrerequisite>
+    <PoliticsDefinition Name="Politics06"/>
+    <PoliticalScoreGainFormula>Clamp(2 ^ ($(Duration) * 0.5), 0, 200)</PoliticalScoreGainFormula>
+  </PropagandaSystemAction>
+</Datatable>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/MajorFaction.xsd">
+
+  <!-- ########################################## -->
+  <!-- ######        MAJOR FACTIONS        ###### -->
+  <!-- ########################################## -->
+
+  <!-- Lost Templars -->
+  <MajorFaction Name="FactionTemplars" Standard="true" Author="AMPLITUDE Studios" Priority="6" Difficulty="Expert" DifficultyAgainst="Expert">
+    <Affinity Name="AffinityGameplayTemplars"/>
+
+    <Trait Name="IsMajorFaction"/>
+    <Trait Name="FactionTraitScienceReduction"/>
+    <Trait Name="FactionTraitTechnologicalHeadStart"/>
+    <Trait Name="FactionTraitSlumberingRuins"/>
+    <Trait Name="FactionTraitConstellationVision"/>
+    <Trait Name="FactionTraitApatheticColonists"/>
+    <Trait Name="FactionTraitAcademyBesties"/>
+    <Trait Name="FactionTraitMinorMinorOraculars"/>
+
+    <TraitStartingSenate Priority="100">
+      <Government Name="GovernmentRepublic"/>
+      <PoliticsWeight Politics="Politics01" Weight="0"/>
+      <PoliticsWeight Politics="Politics02" Weight="0"/>
+      <PoliticsWeight Politics="Politics03" Weight="0"/>
+      <PoliticsWeight Politics="Politics04" Weight="3"/>
+      <PoliticsWeight Politics="Politics05" Weight="6"/>
+      <PoliticsWeight Politics="Politics06" Weight="0"/>
+    </TraitStartingSenate>
+
+    <Bailiff Name="DefaultMoneyBailiff"/>
+    <Bailiff Name="DefaultEmpirePointBailiff"/>
+    <Bailiff Name="DefaultProcessingPowerBailiff"/>
+
+    <MajorPopulation Affinity="AffinityTemplars"     Count="2"/>
+  </MajorFaction>
+</Datatable>

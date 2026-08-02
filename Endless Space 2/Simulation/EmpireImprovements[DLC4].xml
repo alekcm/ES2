@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EmpireImprovementDefinition.xsd">
+  <!-- HULLS -->
+
+  <!-- Perfected1Hull1 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull1Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull1Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull1" />
+  </EmpireImprovementDefinition>
+
+  <!-- Perfected1Hull2 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull2Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull2Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull2" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull4 (medium attacker) unlocks additional slots for small attacker ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall01Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveHull1Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall01Templars" />
+    <!-- Points to the actual tooltip description that will be displayed -->
+  </EmpireImprovementDefinition>
+
+  <!-- Hull5 (medium defender) unlocks additional slots for small support ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall02Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary"  >
+    <TechnologyPrerequisite>TechnologyImproveHull2Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall02Templars" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6 (large ship) unlocks additional slots for all medium ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium01Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveHull3Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium01Templars" />
+  </EmpireImprovementDefinition>
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium02Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveHull4Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium02Templars" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6Slots unlocks additional slots for large ships-->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsLarge01Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite>TechnologyImproveHull5Templars</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsLarge01Templars" />
+  </EmpireImprovementDefinition>
+
+  <!--<EmpireImprovementDefinition Name="EmpireImprovementWormhole2" Category="CategoryMovementBonus" SubCategory="SubCategoryExploration">
+        <TechnologyPrerequisite>TechnologyWormhole2</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="EmpireImprovementWormhole2" />
+    </EmpireImprovementDefinition>-->
+
+  <!-- ECONOMY -->
+
+
+
+  <!--##########################################-->
+  <!--###########	     HACKING       ###########-->
+  <!--##########################################-->
+
+  <!-- Hacking Route improvements -->
+
+  <!-- Hacking Speed improvements -->
+
+
+  <!--##########################################-->
+  <!--####      EXPLORER IMPROVEMENTS       ####-->
+  <!--##########################################-->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Templars" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullTemplars</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyTemplars" Inverted="false">AffinityGameplayTemplars</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Templars" />
+  </EmpireImprovementDefinition>
+
+  <!--########################################-->
+  <!--###########	     QUEST       ###########-->
+  <!--########################################-->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementTemplarsFinalQuest1" Category="CategoryEmpireImprovement" SubCategory="SubCategoryInfluence" >
+    <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestTemplars05</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementTemplarsFinalQuest1" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementTemplarsFinalQuest2" Category="CategoryEmpireImprovement" SubCategory="SubCategoryEmpire" >
+    <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestTemplars06</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementTemplarsFinalQuest2" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementEmpirePointByRelic" Category="CategoryEmpireImprovement" SubCategory="SubCategoryEmpire" >
+    <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,EmpireImprovementEmpirePointByRelic-Reward</PathPrerequisite>
+    <SimulationDescriptorReference Name="RelicEmpirePoint"/>
+  </EmpireImprovementDefinition>
+
+  <!--########################################-->
+  <!--###########	 GROUND COMBAT   ###########-->
+  <!--########################################-->
+  <EmpireImprovementDefinition Name="EmpireImprovementImproveStrategies1" Category="CategoryEmpireImprovement" SubCategory="SubCategoryMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyDefenseModule1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImproveStrategies1" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImproveStrategies2" Category="CategoryEmpireImprovement" SubCategory="SubCategoryMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologySupportModuleMilitary4Rare</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImproveStrategies2" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImproveStrategies3" Category="CategoryEmpireImprovement" SubCategory="SubCategoryMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyUniqueDefense1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImproveStrategies3" />
+  </EmpireImprovementDefinition>
+
+  <!-- Academy Diplomacy -->
+  <EmpireImprovementDefinition Name="EmpireImprovementAcademyDiplomacy" Category="CategoryTreaty" SubCategory="SubCategoryDiplomacy" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementAcademyDiplomacy" />
+  </EmpireImprovementDefinition>
+</Datatable>

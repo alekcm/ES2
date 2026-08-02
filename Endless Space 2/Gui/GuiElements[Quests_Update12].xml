@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter1">
+    <Title>%UniquePlanetQuest-Chapter1-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter1-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter1" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+          <ObjectiveSet Politics="Politics00">
+              <Title>%UniquePlanetQuest-Chapter1-Choice03Title</Title>
+              <Description>%UniquePlanetQuest-Chapter1-Choice03Description</Description>
+              <TooltipDescription>%UniquePlanetQuest-Chapter1-Choice03ObjectiveTooltip</TooltipDescription>
+              <OutcomeCompleted>%UniquePlanetQuest-Chapter1-Choice03Outcome</OutcomeCompleted>
+              <Objective Name="Objective3">%UniquePlanetQuest-Chapter1-Choice03Objective</Objective>
+          </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter1-Choice01Title</Title>
+          <Description>%UniquePlanetQuest-Chapter1-Choice01Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter1-Choice01ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter1-Choice01Outcome</OutcomeCompleted>
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter1-Choice01Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter1-Choice02Outcome</OutcomeCompleted>
+          <Objective Name="Objective2">%UniquePlanetQuest-Chapter1-Choice02Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter1Bis">
+    <Title>%UniquePlanetQuest-Chapter1-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter1-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter1" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+          <ObjectiveSet Politics="Politics00">
+              <Title>%UniquePlanetQuest-Chapter1-Choice03Title</Title>
+              <Description>%UniquePlanetQuest-Chapter1-Choice03Description</Description>
+              <TooltipDescription>%UniquePlanetQuest-Chapter1-Choice03ObjectiveTooltip</TooltipDescription>
+              <OutcomeCompleted>%UniquePlanetQuest-Chapter1-Choice03Outcome</OutcomeCompleted>
+              <Objective Name="Objective3">%UniquePlanetQuest-Chapter1-Choice03Objective</Objective>
+          </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter1-Choice01Title</Title>
+          <Description>%UniquePlanetQuest-Chapter1-Choice01Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter1-Choice01ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter1-Choice01Outcome</OutcomeCompleted>
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter1-Choice01Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter1-Choice02Outcome</OutcomeCompleted>
+          <Objective Name="Objective2">%UniquePlanetQuest-Chapter1-Choice02Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter2-Step1">
+    <Title>%UniquePlanetQuest-Chapter2-Step1-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter2-Step1-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter2" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice01Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice01Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice01ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice01Outcome</OutcomeCompleted>        
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter2-Step1-Choice01Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice02OutcomeFailed</OutcomeFailed>
+            <Objective Name="Objective2">%UniquePlanetQuest-Chapter2-Step1-Choice02Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice03OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective3">%UniquePlanetQuest-Chapter2-Step1-Choice03Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice02OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective4">%UniquePlanetQuest-Chapter2-Step1-Choice02Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice03OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective5">%UniquePlanetQuest-Chapter2-Step1-Choice03Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter2-Step1Bis">
+    <Title>%UniquePlanetQuest-Chapter2-Step1-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter2-Step1-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter2" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice01Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice01Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice01ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice01Outcome</OutcomeCompleted>
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter2-Step1-Choice01Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice02OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective2">%UniquePlanetQuest-Chapter2-Step1-Choice02Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice02OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective3">%UniquePlanetQuest-Chapter2-Step1-Choice02Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice02OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective4">%UniquePlanetQuest-Chapter2-Step1-Choice02Objective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step1-Choice02Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step1-Choice02Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step1-Choice02ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step1-Choice02Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step1-Choice03OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective5">%UniquePlanetQuest-Chapter2-Step1-Choice03Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter2-Step2">
+    <Title>%UniquePlanetQuest-Chapter2-Step2-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter2-Step2-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter2A" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step2-Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step2-Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step2-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step2-Outcome</OutcomeCompleted>
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter2-Step2-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter2-Step3">
+    <Title>%UniquePlanetQuest-Chapter2-Step3-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter2-Step3-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter2-Step3" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step3-Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step3-Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step3-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step3-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step3-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter2-Step3-Objective</Objective>
+        </ObjectiveSet>       
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter2-Step3Bis">
+    <Title>%UniquePlanetQuest-Chapter2-Step3-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter2-Step3Bis-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter2-Step3" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step3-Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step3-Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step3-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step3-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step3-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter2-Step3Bis-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <QuestGuiElement Name="UniquePlanetQuest-Chapter2-Step3Ter">
+    <Title>%UniquePlanetQuest-Chapter2-Step3-IntroTitle</Title>
+    <Description>%UniquePlanetQuest-Chapter2-Step3-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter2-Step3" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics00">
+          <Title>%UniquePlanetQuest-Chapter2-Step3-Title</Title>
+          <Description>%UniquePlanetQuest-Chapter2-Step3-Description</Description>
+          <TooltipDescription>%UniquePlanetQuest-Chapter2-Step3-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%UniquePlanetQuest-Chapter2-Step3-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%UniquePlanetQuest-Chapter2-Step3-OutcomeFailed</OutcomeFailed>
+          <Objective Name="Objective1">%UniquePlanetQuest-Chapter2-Step3Bis-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter3A">
+        <Title>%UniquePlanetQuest-Chapter3A-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter3A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter3A" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter3A-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter3A-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter3A-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter3A-Outcome</OutcomeCompleted>
+                    <OutcomeFailed>%UniquePlanetQuest-Chapter3A-OutcomeFailed</OutcomeFailed>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter3A-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter3B">
+        <Title>%UniquePlanetQuest-Chapter3B-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter3B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter3B" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter3B-Choice01Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter3B-Choice01Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter3B-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter3B-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter3B-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter3B-Choice02Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter3B-Choice02Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter3B-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter3B-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%UniquePlanetQuest-Chapter3B-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter3B-Choice03Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter3B-Choice03Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter3B-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter3B-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%UniquePlanetQuest-Chapter3B-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter3B-Choice03Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter3B-Choice03Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter3B-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter3B-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective4">%UniquePlanetQuest-Chapter3B-Choice03AltObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter3C">
+        <Title>%UniquePlanetQuest-Chapter3C-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter3C-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter3C" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter3C-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter3C-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter3C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter3C-Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter3C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter4A">
+        <Title>%UniquePlanetQuest-Chapter4A-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter4A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter4A" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter4A-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter4A-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter4A-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter4A-Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter4A-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter4B">
+        <Title>%UniquePlanetQuest-Chapter4B-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter4B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter4B" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter4B-Choice01Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter4B-Choice01Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter4B-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter4B-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter4B-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter4B-Choice02Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter4B-Choice02Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter4B-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter4B-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%UniquePlanetQuest-Chapter4B-Choice02Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter4C">
+        <Title>%UniquePlanetQuest-Chapter4C-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter4C-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter4C" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter4C-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter4C-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter4C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter4C-Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter4C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter5A">
+        <Title>%UniquePlanetQuest-Chapter5A-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter5A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter5A" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter5A-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter5A-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter5A-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter5A-Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter5A-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter5B">
+        <Title>%UniquePlanetQuest-Chapter5B-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter5B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter5B" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter5B-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter5B-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter5B-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter5B-Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter5B-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter5C">
+        <Title>%UniquePlanetQuest-Chapter5C-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter5C-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter5C" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter5C-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter5C-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter5C-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter5C-Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter5C-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter5D">
+        <Title>%UniquePlanetQuest-Chapter5D-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter5D-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter5D" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter5D-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter5D-Description</Description>
+                    <TooltipDescription>%UniquePlanetQuest-Chapter5D-ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%UniquePlanetQuest-Chapter5D-Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%UniquePlanetQuest-Chapter5D-Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter6">
+        <Title>%UniquePlanetQuest-Chapter6-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter6-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter6" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter6-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter6-Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter7">
+        <Title>%UniquePlanetQuest-Chapter7-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter7-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter7" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter7-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter7-Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="UniquePlanetQuest-Chapter8">
+        <Title>%UniquePlanetQuest-Chapter8-IntroTitle</Title>
+        <Description>%UniquePlanetQuest-Chapter8-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter8" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%UniquePlanetQuest-Chapter8-Title</Title>
+                    <Description>%UniquePlanetQuest-Chapter8-Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+  
+</Datatable>

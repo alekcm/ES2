@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+    
+    <FactionTrait Name="FactionTraitStartWithJuggernaut"   SubCategory="FactionTrait" TraitCategory="TraitCategoryShips" TraitSubCategory="TraitSubCategoryStartWithJuggernaut" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="10">
+        <Command Name="CreateFleet_HomeSystem"          Arguments="SupportJuggernaut"/>
+        
+        <SimulationDescriptorReference Name="FactionTraitStartWithJuggernaut"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitSacredTradition"   SubCategory="FactionTrait" TraitCategory="TraitCategoryExpansion" TraitSubCategory="TraitSubCategorySacredTradition" Family="FactionTraitFamilyExpansionColonization" Hidden="false" Custom="true" Cost="10">
+        <SimulationDescriptorReference Name="FactionTraitSacredTradition"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitHisshosFestivals"   SubCategory="FactionTrait" TraitCategory="TraitCategoryExpansion" TraitSubCategory="TraitSubCategoryHisshosFestivals" Family="FactionTraitFamilyExpansionColonization" Hidden="false" Custom="true" Cost="10">
+        <SimulationDescriptorReference Name="FactionTraitHisshosFestivals"/>
+    </FactionTrait>
+    
+    <FactionTrait Name="FactionTraitMinorIllo" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartIllo" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+        <Command Name="AddMinorPopulation" Arguments="AffinityIllo,1" Priority="100"/>
+        <SimulationDescriptorReference Name="FactionTraitMinorIllo"/>
+        <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorKalTikMas,!FactionTraitMinorSefaloros,!FactionTraitMinorGalvrans,!FactionTraitMinorSowers,!FactionTraitMinorHarmony,!FactionTraitMinorMinorHacking,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites> 
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitTechnologyDefinitionEmpireDevelopment1MajorHisshos" SubCategory="FactionTrait" TraitCategory="TraitCategoryStartingTechnology" TraitSubCategory="FactionTraitTechnologyDefinitionEmpireDevelopment1MajorHisshos" Family="FactionTraitFamilyStartingTechnologies" Hidden="false" Custom="true" Cost="10" HiddenOnFailPrerequisites="true">
+        <Command Name="UnlockTechnology"                Arguments="TechnologyDefinitionEmpireDevelopment1MajorHisshos"/>
+        <SimulationDescriptorReference Name="FactionTraitTechnologyDefinitionEmpireDevelopment1MajorHisshos"/>
+
+        <Prerequisites>AffinityGameplayMajorHisshos, !FactionTraitTechnologicalHeadStart,!FactionTraitTechnologicalHeadStartLess</Prerequisites>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitMiningExperts"   SubCategory="FactionTrait" TraitCategory="TraitCategoryEconomy" TraitSubCategory="TraitSubCategoryMiningExperts" Family="FactionTraitFamilyEconomyDevelopment" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="FactionTraitMiningExperts"/>
+        <ShipDesign Abstract="SupportJuggernaut"    ShipDesign="Juggernauts_SupportJuggernautHisshos" Priority="1"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitPirateHaters"   SubCategory="FactionTrait" TraitCategory="TraitCategoryDiplomacy" TraitSubCategory="TraitSubCategoryPirateHaters" Family="FactionTraitFamilyPoliticsDiplomacy" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="FactionTraitPirateHaters"/>
+        <Prerequisites>!FactionTraitCorsairs</Prerequisites>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitJuggernautSpecialists"   SubCategory="FactionTrait" TraitCategory="TraitCategoryShips" TraitSubCategory="TraitSubCategoryFactionTraitJuggernautSpecialists" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="FactionTraitJuggernautSpecialists"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitNativeObliteratorProtection"   SubCategory="FactionTrait" TraitCategory="TraitCategoryEconomy" TraitSubCategory="TraitSubCategoryFactionTraitNativeObliteratorProtection" Family="FactionTraitFamilyEconomyDevelopment" Hidden="false" Custom="true" Cost="15">
+        <SimulationDescriptorReference Name="FactionTraitNativeObliteratorProtection"/>
+        <Prerequisites>!AffinityGameplayUmbralChoir</Prerequisites>
+    </FactionTrait>
+
+</Datatable>

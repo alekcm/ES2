@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ContextualPromptGuiElement Name="HackingOperationValidateTarget" ShowCloseButton="true">
+        <Title>%HackingOperationValidateTargetTitle</Title>
+        <Component Name="HackingOperationValidationComponent" PrefabPath="Prefabs/Gui/Items/ContextualPromptComponents/HackingOperationValidationComponent" />
+        <Button Name="Yes" Callback="OnValidateHackingOperationTarget">
+            <Title>%HackingOperationValidateTargetYesTitle</Title>
+            <Description>%HackingOperationValidateTargetYesDescription</Description>
+            <Icons>
+                <Icon Size="Small" Path="ButtonOKSmall" />
+            </Icons>
+        </Button>
+    </ContextualPromptGuiElement>
+
+    <ContextualPromptGuiElement Name="ToggleHackingOperation" ShowCloseButton="true">
+        <Title>%ChooseHackingOperationTitle</Title>
+        <Component Name="HackingOperationSelectorComponent" PrefabPath="Prefabs/Gui/Items/ContextualPromptComponents/HackingOperationSelectorComponent" />
+    </ContextualPromptGuiElement>
+
+    <ContextualPromptGuiElement Name="PickHackingOperation" ShowCloseButton="true">
+        <Title>%ChooseHackingOperationTitle</Title>
+        <Component Name="HackingOperationPickerComponent" PrefabPath="Prefabs/Gui/Items/ContextualPromptComponents/HackingOperationPickerComponent" />
+    </ContextualPromptGuiElement>
+
+    <ContextualPromptGuiElement Name="OvercappingAllocationProviders" ShowCloseButton="false" CloseOnExternalClick="true">
+        <Description>%ProcessingPowerOvercapWarningDescription</Description>
+        <Component Name="AllocationProvidersListComponent" PrefabPath="Prefabs/Gui/Items/ContextualPromptComponents/AllocationProvidersListComponent" />
+    </ContextualPromptGuiElement>
+
+</Datatable>

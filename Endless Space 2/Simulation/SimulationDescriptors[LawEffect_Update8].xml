@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+   
+    <SimulationDescriptor Name="LawEffectP00L27-PopulationCollectionSowers" Type="LawEffect">
+        <BinaryModifier		TargetProperty="SystemGrowth"       Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(OwnedTeemingPlanets)" SearchValueFromPath="true" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <BinaryModifier		TargetProperty="SystemProduction"   Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(OwnedTeemingPlanets)" SearchValueFromPath="true" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <BinaryModifier		TargetProperty="SystemMoney"        Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(OwnedTeemingPlanets)" SearchValueFromPath="true" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <BinaryModifier		TargetProperty="SystemResearch"     Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(OwnedTeemingPlanets)" SearchValueFromPath="true" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L28-PopulationCollectionKalTikMas" Type="LawEffect">
+        <BinaryModifier TargetProperty="MovementBonusFromKalTikMasLaw"  Operation="Addition" Left="0.25" BinaryOperation="Multiplication" Right="$(SystemCount)" SearchValueFromPath="true" Path="../ClassEmpire" TooltipOverride="%LawEffectP00L28-PopulationCollectionKalTikMasTooltipEffect"/>       
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="LawEffectP00L29-PopulationCollectionSefaloros" Type="LawEffect">        
+        <BinaryModifier TargetProperty="BuildingProductionCostReduction"  Operation="Addition" Left="$(OwnedLuxuryDeposits)" BinaryOperation="Multiplication" Right="-0.1" SearchValueFromPath="true"  Path="../ClassEmpire/ClassColonizedStarSystem"/> <!--Fake Effect for feedback-->       
+    </SimulationDescriptor>
+  
+    <SimulationDescriptor Name="LawEffectP00L30-PopulationCollectionGalvrans" Type="LawEffect">
+        <BinaryModifier TargetProperty="TechnologyCostModifierFromGalvransLaw" Operation="Subtraction" Left="0.01" BinaryOperation="Multiplication" Right="$(StrategicDepositCount)" SearchValueFromPath="true"  Path="../ClassEmpire" TooltipOverride="%LawEffectP00L30-PopulationCollectionGalvransTooltipEffect" />   
+    </SimulationDescriptor>
+  
+</Datatable>

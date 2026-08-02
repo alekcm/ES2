@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <GuiElement Name="CategoryFactionUmbralChoir">
+        <Title>%PopulationUmbralChoirTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityUmbralChoirSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryHeroSkillTreeUmbralChoir">
+        <Title>%CategoryHeroSkillTreeUmbralChoirTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityUmbralChoirSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryHackingProgram">
+        <Title>%CategoryHackingProgramTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/HackingPrograms/HackingProgramSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryHackingImprovements">
+        <Title>%CategoryHackingImprovementTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/HackingPrograms/HackingProgramSmall" />
+        </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="CategoryOffensiveHackingProgram">
+        <Title>%CategoryOffensiveHackingProgramTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/HackingPrograms/OffenseHackingProgramMedium" />
+        </Icons>
+        <Color Red="244" Green="67" Blue="54" Alpha="255" />
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryDefensiveHackingProgram">
+        <Title>%CategoryDefensiveHackingProgramTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/HackingPrograms/DefenseHackingProgramMedium" />
+        </Icons>
+        <Color Red="41" Green="182" Blue="246" Alpha="255" />
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="CategoryOperationCancellationMalus">
+        <Title>%CategoryOperationCancellationMalusTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/HackingPrograms/HackingProgramSmall" />
+        </Icons>
+        <Color Red="208" Green="208" Blue="208" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryHackingBeacon">
+        <Title>%CategoryHackingBeaconTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/HackingBeaconSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Categories/HackingBeaconMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/StarSystems/HackingBeaconLarge" />
+        </Icons>
+        <Color Red="208" Green="208" Blue="208" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    
+    <ExtendedGuiElement Name="CategoryTechnologyFactionUmbralChoir">
+        <Title>%CategoryTechnologyFactionUmbralChoirTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryTechnologySmall" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="CategoryStarSystemAction">
+        <Title>%CategoryStarSystemActionTitle</Title>
+    </GuiElement>
+
+    <GuiElement Name="CategoryRevealTraitors">
+        <Title>%EmpireImprovementRevealTraitorsTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryRevealTraitorsSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryKillTraitors">
+        <Title>%EmpireImprovementKillTraitorsTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryKillTraitorsSmall" />
+        </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="CategoryHackingOperationBackdoor">
+        <Title>%CategoryHackingOperationBackdoorTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="HackingOperationBackdoorSmall" />
+        </Icons>
+        <Color Red="208" Green="208" Blue="208" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="CategoryInvisibleSmall">
+        <Title>%CategoryInvisibleSmall</Title>
+        <Icons>
+            <Icon Size="Small" Path="FleetStatusInvisibleSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryDetectionSmall">
+        <Title>%CategoryDetectionSmall</Title>
+        <Icons>
+            <Icon Size="Small" Path="FleetStatusVisionStrength1Small" />
+        </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="CategorySuperPopulation">
+        <Title>%CategorySuperPopulationTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="PopulationInvertedSmall" />
+        </Icons>
+        <Color Red="240" Green="187" Blue="74" Alpha="255" />
+    </ExtendedGuiElement>
+
+</Datatable>

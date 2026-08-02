@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HackingOperationOutcomeDefinition.xsd">
+
+  <!-- TRACE ACADEMY AS MAJOR -->
+  <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeAbortAcademyOperation" Composition="All" Level="1">
+    <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+    <PathPrerequisite Flags="Discard" Inverted="true">IsAcademyFaction</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="true">Path(Target,@'../ClassEmpire,EmpireTypeMajor')</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+    <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_AbortOperation"/>
+  </HackingOperationOutcomeSetDefinition>
+  <!-- TRACE MAJOR AS ACADEMY -->
+  <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeAbortOperationAsAcademy" Composition="All" Level="1">
+    <PathPrerequisite Flags="Discard" Inverted="true">EmpireTypeMajor</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+    <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_AbortOperation"/>
+  </HackingOperationOutcomeSetDefinition>
+  
+</Datatable>

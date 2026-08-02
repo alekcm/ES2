@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/BattleActionDefinition.xsd">
+
+    <!--#####################-->
+    <!--### SWARM MISSILE ###-->
+    <!--#####################-->
+    <BattleAction Name="WeaponSwarm_Initialize">
+        <EventPrerequisite EventType="BattleStart"/>
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner" EntityType="Module"/>
+            </TargetFilter>
+            <BattleEffectReference Name="WeaponSwarm_InitializeCooldownChangeDuration"/>
+        </BattleEffectApplicationContext>
+    </BattleAction>
+    
+    <BattleAction Name="WeaponSwarm_SwarmLaunched">
+        <EventPrerequisite EventType="Attack_SalvoLaunched">
+            <EventInitiatorFilter EntityType="Salvo" EntityTags="SameModule"/>
+        </EventPrerequisite>
+
+        <BattleEffectApplicationContext>
+            <InterpreterPrerequisite>Property(Owner, @ClassModuleWeaponMissileSwarm, IsCoolingDown) eq 1</InterpreterPrerequisite>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner" EntityType="Module"/>
+            </TargetFilter>
+            <BattleEffectReference Name="WeaponSwarm_SetIsCooldingDownToFalse"/>
+        </BattleEffectApplicationContext>
+        
+        <BattleEffectApplicationContext>
+            <InterpreterPrerequisite>(Property(Owner, @ClassModuleWeaponMissileSwarm, SalvoShotCount) le (Property(Owner, @ClassModuleWeaponMissileSwarm, MaxSalvoShotCount)-1)) and (Property(Owner, @ClassModuleWeaponMissileSwarm, IsCoolingDown) ne 1)</InterpreterPrerequisite>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner" EntityType="Module"/>
+            </TargetFilter>
+            <BattleEffectReference Name="WeaponSwarm_IncreaseSalvoShotCount"/>
+        </BattleEffectApplicationContext>
+
+        <BattleEffectApplicationContext>
+            <InterpreterPrerequisite>(Property(Owner, @ClassModuleWeaponMissileSwarm, SalvoShotCount) gt (Property(Owner, @ClassModuleWeaponMissileSwarm, MaxSalvoShotCount)-1)) and (Property(Owner, @ClassModuleWeaponMissileSwarm, IsCoolingDown) ne 1)</InterpreterPrerequisite>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner" EntityType="Module"/>
+            </TargetFilter>
+            <BattleEffectReference Name="WeaponSwarm_ResetSalvoShotCount"/>
+            <BattleEffectReference Name="WeaponSwarm_SetIsCooldingDownToTrue"/>
+            <BattleEffectReference Name="WeaponSwarm_ApplyCooldownChange"/>
+        </BattleEffectApplicationContext>
+    </BattleAction>
+
+
+    <BattleAction Name="WeaponMissileSwarm_SalvoPostHitTarget_StatisticsRecording">
+        <EventPrerequisite EventType="Attack_PostHitTarget">
+            <EventInitiatorFilter EntityType="Salvo" EntityTags="SameModule">
+                <PathPrerequisite Flags="">../ClassModuleWeaponMissileSwarm</PathPrerequisite>
+            </EventInitiatorFilter>
+        </EventPrerequisite>
+        <!-- Add the effective Missile damage to the attacking ship for statistics -->
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner">
+                </EntityFilter>
+                <ParentEntityFilter EntityType="Flotilla">
+                </ParentEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="AttackingFlotilla_UpdateDamageAppliedByMissileFromSalvo"/>
+        </BattleEffectApplicationContext>
+        <BattleEffectApplicationContext>
+            <InterpreterPrerequisite Flags="Prerequisite" Inverted="false">Path(Initiator, @'ClassSalvo,CriticalHit')</InterpreterPrerequisite>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner">
+                </EntityFilter>
+                <ParentEntityFilter EntityType="Flotilla">
+                </ParentEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="AttackingFlotilla_UpdateDamageAppliedByMissileCriticalFromSalvo"/>
+        </BattleEffectApplicationContext>
+    </BattleAction>
+
+    <!--#####################-->
+    <!--###    RAILGUN    ###-->
+    <!--#####################-->
+    <BattleAction Name="WeaponRailgun_SalvoPrepareHitTarget">
+        <EventPrerequisite EventType="Attack_PrepareHitTarget">
+            <EventInitiatorFilter EntityType="Salvo" EntityTags="SameModule"/>
+        </EventPrerequisite>
+        <!-- Reduce critical hit damage (from special defense) -->
+        <BattleEffectApplicationContext>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(InitiatorTarget, @../ClassShip, OpponentCriticalHitDamagePercent) ne 0 or Property(Initiator, @ClassSalvo, CriticalHitDamageBonus) ne 0</InterpreterPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Path(Initiator, @'ClassSalvo,CriticalHit')</InterpreterPrerequisite>
+            <TargetFilter>
+                <EntityFilter EntityRole="Initiator"/>
+            </TargetFilter>
+            <BattleEffectReference Name="Salvo_ApplyOpponentCriticalHitDamagePercent"/>
+        </BattleEffectApplicationContext>
+    </BattleAction>
+</Datatable>

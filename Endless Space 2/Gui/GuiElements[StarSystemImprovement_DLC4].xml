@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- Quest Rewards -->
+
+  <GuiElement Name="StarSystemImprovementQuestTemplars01">
+    <Title>%StarSystemImprovementQuestTemplars01Title</Title>
+    <Description>%StarSystemImprovementQuestTemplars01Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars01Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars01Large" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="StarSystemImprovementQuestTemplars02">
+    <Title>%StarSystemImprovementQuestTemplars02Title</Title>
+    <Description>%StarSystemImprovementQuestTemplars02Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars02Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars02Large" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="StarSystemImprovementQuestTemplars03">
+    <Title>%StarSystemImprovementQuestTemplars03Title</Title>
+    <Description>%StarSystemImprovementQuestTemplars03Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars03Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars03Large" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="StarSystemImprovementQuestTemplars04">
+    <Title>%StarSystemImprovementQuestTemplars04Title</Title>
+    <Description>%StarSystemImprovementQuestTemplars04Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars04Small" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementQuestTemplars04Large" />
+    </Icons>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="StarSystemImprovementUniqueTemplars">
+    <Title>%StarSystemImprovementUniqueTemplarsTitle</Title>
+    <Description>%StarSystemImprovementUniqueTemplarsDescription</Description>
+
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementUniqueTemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementUniqueTemplarsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%StarSystemImprovementUniqueTemplarsEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+
+  <!-- Collect Relic on System -->
+  <ExtendedGuiElement Name="StarSystemCollectRelicImprovement">
+    <Title>%StarSystemCollectRelicImprovementTitle</Title>
+    <Description>%StarSystemCollectRelicImprovementDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemCollectRelicImprovementSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemCollectRelicImprovementLarge" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <!-- Awaken System -->
+  <ExtendedGuiElement Name="StarSystemAwakenImprovement">
+    <Title>%StarSystemAwakenImprovementTitle</Title>
+    <Description>%StarSystemAwakenImprovementDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Curiosities/CuriosityTypeRuinsMedium" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Curiosities/CuriosityTypeRuinsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%StarSystemAwakenImprovementEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="StarSystemAwakenImprovementNonTemplars">
+    <Title>%StarSystemAwakenImprovementTitle</Title>
+    <Description>%StarSystemAwakenImprovementDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Curiosities/CuriosityTypeRuinsMedium" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Curiosities/CuriosityTypeRuinsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%StarSystemAwakenImprovementEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="StarSystemAwakenImprovementVaulters">
+    <Title>%StarSystemAwakenImprovementTitle</Title>
+    <Description>%StarSystemAwakenImprovementDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Curiosities/CuriosityTypeRuinsMedium" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Curiosities/CuriosityTypeRuinsLarge" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%StarSystemAwakenImprovementEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <!-- Magnetic Field Generators -->
+  <GuiElement Name="StarSystemImprovementScience2Templars">
+    <Title>%StarSystemImprovementScience2TemplarsTitle</Title>
+    <Description>%StarSystemImprovementScience2TemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience2TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience2TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!-- Graviton-Shielded Laboratories -->
+  <GuiElement Name="StarSystemImprovementScience4ScienceReduction">
+    <Title>%StarSystemImprovementScience4TemplarsTitle</Title>
+    <Description>%StarSystemImprovementScience4TemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience4SophonsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience4SophonsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="StarSystemImprovementScience4SophonsScienceReduction">
+    <Title>%StarSystemImprovementScience4SophonsTitle</Title>
+    <Description>%StarSystemImprovementScience4SophonsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience4SophonsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience4SophonsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!-- Punctuated Evolution Foundation -->
+  <GuiElement Name="StarSystemImprovementScience6Templars">
+    <Title>%StarSystemImprovementScience6TemplarsTitle</Title>
+    <Description>%StarSystemImprovementScience6TemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience6TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience6TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!-- Pocket Laboratories -->
+  <GuiElement Name="StarSystemImprovementScienceOnGasTemplars">
+    <Title>%StarSystemImprovementScienceOnGasTemplarsTitle</Title>
+    <Description>%StarSystemImprovementScienceOnGasTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScienceOnGasSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScienceOnGasLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!-- School of Geniuses -->
+  <GuiElement Name="StarSystemImprovementScience8Templars">
+    <Title>%StarSystemImprovementScience8TemplarsTitle</Title>
+    <Description>%StarSystemImprovementScience8TemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience8TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementScience8TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!-- Impervious Bunkers -->
+  <GuiElement Name="StarSystemImprovementDefense1Templars">
+    <Title>%StarSystemImprovementDefense1TemplarsTitle</Title>
+    <Description>%StarSystemImprovementDefense1TemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementDefense1VaultersSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementDefense1VaultersLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!-- Only on Awakened Ruins tooltip tag -->
+  <GuiElement Name="StarSystemImprovementOnlyOnAwakenedRuins">
+    <Title>%StarSystemImprovementOnlyOnAwakenedRuinsTitle</Title>
+  </GuiElement>
+</Datatable>

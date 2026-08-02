@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- #####################################-->
+    <!-- #########     UPDATE 7    ###########-->
+    <!-- #####################################-->
+
+
+    <!-- #########   BOTS/EPISTIS   ###########-->
+
+
+    <QuestGuiElement Name="EventCuriosity10Bis">
+        <Title>%EventCuriosity10Title</Title>
+        <Description>%EventCuriosity10Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventCuriosity09Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step2_1">
+                <ObjectiveSet>
+                    <Title>%EventCuriosity10Choice01Title</Title>
+                    <Description>%EventCuriosity10Choice01Description</Description>                   
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventCuriosity17Bis">
+        <Title>%EventCuriosity17Title</Title>
+        <Description>%EventCuriosity17Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventCuriosity16Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="Step2_1" Politics="Politics03">
+                    <Title>%EventCuriosity17Choice01Title</Title>
+                    <Description>%EventCuriosity17Choice01Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Name="Step2_2" Politics="Politics06">
+                    <Title>%EventCuriosity17Choice02Title</Title>
+                    <Description>%EventCuriosity17Choice02Description</Description>                   
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventPolitical01Bis">
+        <Title>%EventPolitical01Title</Title>
+        <Description>%EventPolitical01Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%EventPolitical01Choice01Title</Title>
+                    <Description>%EventPolitical01Choice01Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%EventPolitical01Choice02Title</Title>
+                    <Description>%EventPolitical01Choice02Description</Description>                   
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventPolitical02Bis">
+        <Title>%EventPolitical02Title</Title>
+        <Description>%EventPolitical02Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical01Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%EventPolitical02Choice01Title</Title>
+                    <Description>%EventPolitical02Choice01Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%EventPolitical02Choice02Title</Title>
+                    <Description>%EventPolitical02Choice02Description</Description>                 
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventPolitical08Bis">
+        <Title>%EventPolitical08Title</Title>
+        <Description>%EventPolitical08Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical06Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%EventPolitical08Choice01Title</Title>
+                    <Description>%EventPolitical08Choice01Description</Description>                   
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventPoliticalResult12Bis">
+        <Title>%EventPoliticalResult12-Title</Title>
+        <Description>%EventPoliticalResult12-Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical09Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%EventPoliticalResult12-Choice01Title</Title>
+                    <Description>%EventPoliticalResult12-Choice01Description</Description>                   
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventPolitical13Bis">
+        <Title>%EventPolitical13Title</Title>
+        <Description>%EventPolitical13Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical13Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%EventPolitical13Choice01Title</Title>
+                    <Description>%EventPolitical13Choice01Description</Description>                  
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%EventPolitical13Choice02Title</Title>
+                    <Description>%EventPolitical13Choice02Description</Description>                  
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+     <QuestGuiElement Name="EventPolitical16Bis">
+        <Title>%EventPolitical16Title</Title>
+        <Description>%EventPolitical16Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical16Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%EventPolitical16Choice01Title</Title>
+                    <Description>%EventPolitical16Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%EventPolitical16Choice01Description</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventPolitical16Choice02Title</Title>
+                    <Description>%EventPolitical16Choice02Description</Description>
+                    <Objective Name="Step2_Objective1">%EventPolitical16Choice02Description</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <QuestGuiElement Name="EventPolitical22Bis">
+        <Title>%EventPolitical22Title</Title>
+        <Description>%EventPolitical22Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventPolitical22Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%EventPolitical22Choice01Title</Title>
+                    <Description>%EventPolitical22Choice01Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%EventPolitical22Choice02Title</Title>
+                    <Description>%EventPolitical22Choice02Description</Description>                   
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventRandom04Bis">
+        <Title>%EventRandom04Title</Title>
+        <Description>%EventRandom04Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventRandom04Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventRandom04Choice01Title</Title>
+                    <Description>%EventRandom04Choice01Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%EventRandom04Choice02Title</Title>
+                    <Description>%EventRandom04Choice02Description</Description>                   
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventRandom06Bis">
+        <Title>%EventRandom06Title</Title>
+        <Description>%EventRandom06Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventCuriosity17Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%EventRandom06Choice01Title</Title>
+                    <Description>%EventRandom06Choice01Description</Description>
+                    <Objective Name="Step2_1_Objective1">%TestChoiceEvent-Step2_1_Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="EventRandom08Bis">
+        <Title>%EventRandom08Title</Title>
+        <Description>%EventRandom08Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventRandom08Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Name="Step2_1" Politics="Politics04">
+                    <Title>%EventRandom08Choice01Title</Title>
+                    <Description>%EventRandom08Choice01Description</Description>
+                    <Objective Name="Step1_Objective1">%TestChoiceEvent-Step2_1_Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Name="Step2_2" Politics="Politics06">
+                    <Title>%EventRandom08Choice02Title</Title>
+                    <Description>%EventRandom08Choice02Description</Description>
+                    <Objective Name="Step2_Objective1">%TestChoiceEvent-Step2_1_Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <!--########################-->
+    <!--#### HISSHOS QUEST #####-->
+    <!--########################-->
+    
+    
+    <!--HISSHOS QUEST CHAPTER 1 PART 1-->    
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter1-Part1">
+        <Title>%MajorHisshosQuest-Chapter1-Part1-IntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter1-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap1-1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MajorHisshosQuest-Chapter1-Part1-MilitaristChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter1-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter1-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter1-Part1-MilitaristOutcome</OutcomeCompleted>                  
+                    <Objective Name="Objective_Militarist">%MajorHisshosQuest-Chapter1-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MajorHisshosQuest-Chapter1-Part1-ReligiousChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter1-Part1-ReligiousDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter1-Part1-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter1-Part1-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious">%MajorHisshosQuest-Chapter1-Part1-ReligiousObjective</Objective>
+                </ObjectiveSet>             
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 1 PART 2 - MILITARIST-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter1-Part2-Militarist">
+        <Title>%MajorHisshosQuest-Chapter1-Part2-MilitaristIntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter1-Part2-MilitaristIntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap1-2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MajorHisshosQuest-Chapter1-Part2-MilitaristChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter1-Part2-MilitaristDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter1-Part2-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter1-Part2-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%MajorHisshosQuest-Chapter1-Part2-MilitaristObjective</Objective>
+                </ObjectiveSet>              
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 1 PART 2 - RELIGIOUS-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter1-Part2-Religious">
+        <Title>%MajorHisshosQuest-Chapter1-Part2-ReligiousIntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter1-Part2-ReligiousIntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap1-2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MajorHisshosQuest-Chapter1-Part2-ReligiousChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter1-Part2-ReligiousDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter1-Part2-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter1-Part2-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious1">%MajorHisshosQuest-Chapter1-Part2-ReligiousObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MajorHisshosQuest-Chapter1-Part2-ReligiousBisChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter1-Part2-ReligiousBisDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter1-Part2-ReligiousBisObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter1-Part2-ReligiousBisOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious2">%MajorHisshosQuest-Chapter1-Part2-ReligiousBisObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 2 PART 1-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter2-Part1">
+        <Title>%MajorHisshosQuest-Chapter2-Part1-IntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter2-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap2-1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MajorHisshosQuest-Chapter2-Part1-MilitaristChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter2-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter2-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter2-Part1-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%MajorHisshosQuest-Chapter2-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MajorHisshosQuest-Chapter2-Part1-ReligiousChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter2-Part1-ReligiousDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter2-Part1-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter2-Part1-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious1">%MajorHisshosQuest-Chapter2-Part1-ReligiousObjective</Objective>
+                </ObjectiveSet>
+                   <ObjectiveSet Politics="Politics05">
+                    <Title>%MajorHisshosQuest-Chapter2-Part1-ReligiousChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter2-Part1-ReligiousDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter2-Part1-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter2-Part1-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious2">%MajorHisshosQuest-Chapter2-Part1-ReligiousObjective</Objective>
+                </ObjectiveSet>               
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 3 PART 1-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter3-Part1">
+        <Title>%MajorHisshosQuest-Chapter3-Part1-IntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter3-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap3-1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MajorHisshosQuest-Chapter3-Part1-MilitaristChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter3-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter3-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter3-Part1-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%MajorHisshosQuest-Chapter3-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MajorHisshosQuest-Chapter3-Part1-ReligiousChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter3-Part1-ReligiousDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter3-Part1-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter3-Part1-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious">%MajorHisshosQuest-Chapter3-Part1-ReligiousObjective</Objective>
+                </ObjectiveSet>               
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+    <!--HISSHOS QUEST CHAPTER 3 PART 2-MILITARIST-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter3-Part2-Militarist">
+        <Title>%MajorHisshosQuest-Chapter3-Part2-MilitaristIntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter3-Part2-MilitaristIntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap3-2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MajorHisshosQuest-Chapter3-Part2-MilitaristChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter3-Part2-MilitaristDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter3-Part2-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter3-Part2-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%MajorHisshosQuest-Chapter3-Part2-MilitaristObjective</Objective>
+                </ObjectiveSet>               
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 3 PART 2- RELIGIOUS-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter3-Part2-Religious">
+        <Title>%MajorHisshosQuest-Chapter3-Part2-ReligiousIntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter3-Part2-ReligiousIntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap3-2Religious" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MajorHisshosQuest-Chapter3-Part2-ReligiousChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter3-Part2-ReligiousDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter3-Part2-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter3-Part2-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious">%MajorHisshosQuest-Chapter3-Part2-ReligiousObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 4 PART 1 MILITARIST-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter4-Part1-Militarist">
+        <Title>%MajorHisshosQuest-Chapter4-Part1-MilitaristIntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter4-Part1-MilitaristIntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap4-1" Size="Quest" />
+        </Icons>
+        <Steps>            
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MajorHisshosQuest-Chapter4-Part1-MilitaristChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter4-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter4-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter4-Part1-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%MajorHisshosQuest-Chapter4-Part1-MilitaristObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MajorHisshosQuest-Chapter4-Part1-MilitaristChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter4-Part1-MilitaristDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter4-Part1-MilitaristObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter4-Part1-MilitaristOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_MilitaristBis">%MajorHisshosQuest-Chapter4-Part1-MilitaristBisObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 4 PART 1 RELIGIOUS-->
+    <QuestGuiElement Name="MajorHisshosQuest-Chapter4-Part1-Religious">
+        <Title>%MajorHisshosQuest-Chapter4-Part1-ReligiousIntroTitle</Title>
+        <Description>%MajorHisshosQuest-Chapter4-Part1-ReligiousIntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap4-1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">               
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MajorHisshosQuest-Chapter4-Part1-ReligiousChoice</Title>
+                    <Description>%MajorHisshosQuest-Chapter4-Part1-ReligiousDescription</Description>
+                    <TooltipDescription>%MajorHisshosQuest-Chapter4-Part1-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MajorHisshosQuest-Chapter4-Part1-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Religious">%MajorHisshosQuest-Chapter4-Part1-ReligiousObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--#######################################-->
+    <!--###### EVENT: HISSHOS SYKAGOJA  #######-->
+    <!--#######################################-->
+
+    <QuestGuiElement Name="EventReveal07">
+        <Title>%EventReveal07Title</Title>
+        <Description>%EventReveal07Description</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventReveal07Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%EventReveal07Choice01Title</Title>
+                    <Description>%EventReveal07Choice01Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%EventReveal07Choice02Title</Title>
+                    <Description>%EventReveal07Choice02Description</Description>                   
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%EventReveal07Choice03Title</Title>
+                    <Description>%EventReveal07Choice03Description</Description>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%EventReveal07Choice04Title</Title>
+                    <Description>%EventReveal07Choice04Description</Description>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%EventReveal07Choice05Title</Title>
+                    <Description>%EventReveal07Choice05Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--#######################################-->
+    <!--###### EVENT: OBLITERATOR FIRE  #######-->
+    <!--#######################################-->
+
+    <QuestGuiElement Name="DiplomaticEventObliteratorFire">
+        <Title>%DiplomaticEventObliteratorFireTitle</Title>
+        <Description>%DiplomaticEventObliteratorFireDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Notifications/NotificationFireObliteratorActionReadyLarge" Size="Quest"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%DiplomaticEventObliteratorFireChoice01Title</Title>
+                    <Description>%DiplomaticEventObliteratorFireChoice01Description</Description>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%DiplomaticEventObliteratorFireChoice02Title</Title>
+                    <Description>%DiplomaticEventObliteratorFireChoice02Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="DiplomaticEventObliteratorFireNoAlly">
+        <Title>%DiplomaticEventObliteratorFireTitle</Title>
+        <Description>%DiplomaticEventObliteratorFireDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Notifications/NotificationFireObliteratorActionReadyLarge" Size="Quest"/>
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%DiplomaticEventObliteratorFireChoice01Title</Title>
+                    <Description>%DiplomaticEventObliteratorFireChoice01Description</Description>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%DiplomaticEventObliteratorFireChoice02Title</Title>
+                    <Description>%DiplomaticEventObliteratorFireChoice02Description</Description>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="DiplomaticEventObliteratorFireDenounced">
+        <Title>%DiplomaticEventObliteratorFireDenouncedTitle</Title>
+        <Description>%DiplomaticEventObliteratorFireDenouncedDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Notifications/NotificationFireObliteratorActionReadyLarge" Size="Quest"/>
+        </Icons>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 2 PART 1-->
+    <QuestGuiElement Name="PopulationQuest17">
+        <Title>%PopulationQuest17-IntroTitle</Title>
+        <Description>%PopulationQuest17-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest17Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%PopulationQuest17-Choice01Title</Title>
+                    <Description>%PopulationQuest17-Choice01Description</Description>
+                    <TooltipDescription>%PopulationQuest17-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest17-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_1">%PopulationQuest17-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%PopulationQuest17-Choice02Title</Title>
+                    <Description>%PopulationQuest17-Choice02Description</Description>
+                    <TooltipDescription>%PopulationQuest17-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest17-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_2">%PopulationQuest17-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%PopulationQuest17-Choice03Title</Title>
+                    <Description>%PopulationQuest17-Choice03Description</Description>
+                    <TooltipDescription>%PopulationQuest17-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest17-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_3">%PopulationQuest17-Choice03Objective</Objective>
+                </ObjectiveSet>              
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%PopulationQuest17-Choice05Title</Title>
+                    <Description>%PopulationQuest17-Choice05Description</Description>
+                    <TooltipDescription>%PopulationQuest17-Choice05ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest17-Choice05Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_4">%PopulationQuest17-Choice05Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!--HISSHOS QUEST CHAPTER 2 PART 1-->
+    <QuestGuiElement Name="PopulationQuest18">
+        <Title>%PopulationQuest17-IntroTitle</Title>
+        <Description>%PopulationQuest17-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest17Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%PopulationQuest17-Choice01Title</Title>
+                    <Description>%PopulationQuest17-Choice01Description</Description>
+                    <TooltipDescription>%PopulationQuest17-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest17-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_1">%PopulationQuest17-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%PopulationQuest17-Choice02Title</Title>
+                    <Description>%PopulationQuest17-Choice02Description</Description>
+                    <TooltipDescription>%PopulationQuest17-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest17-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_2">%PopulationQuest17-Choice02Objective</Objective>
+                </ObjectiveSet>               
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%PopulationQuest17-Choice05Title</Title>
+                    <Description>%PopulationQuest17-Choice05Description</Description>
+                    <TooltipDescription>%PopulationQuest17-Choice05ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest17-Choice05Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_3">%PopulationQuest17-Choice05Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+  <QuestGuiElement Name="EventCuriosity20">
+    <Title>%EventCuriosity20Title</Title>
+    <Description>%EventCuriosity20Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/NarrativeEvents/EventCuriosity20Large" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet>
+          <Title>%EventCuriosity20Choice01Title</Title>
+          <Description>%EventCuriosity20Choice01Description</Description>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>  
+ 
+
+  <QuestGuiElement Name="GlobalQuest06-Coop">
+    <Title>%GlobalQuest06-Coop-Intro-Title</Title>
+    <Description>%GlobalQuest06-Coop-Intro-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Global/GlobalQuest06CoopLarge" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet>
+          <Description>%GlobalQuest06-Coop-Description</Description>
+          <TooltipDescription>%GlobalQuest06-Coop-ObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%GlobalQuest06-Coop-Outcome</OutcomeCompleted>
+          <OutcomeFailed>%GlobalQuest06-Coop-Failed</OutcomeFailed>
+          <Objective Name="Objective" ProgressionFeedback="TeamContribution">%GlobalQuest06-Coop-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+</Datatable>

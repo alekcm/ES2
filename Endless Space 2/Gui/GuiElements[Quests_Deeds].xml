@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+   
+
+  <!--======================================
+    ================= REGULAR ================
+    ==========================================-->
+
+  <QuestGuiElement Name="Deeds_Regular_EmpireDevelopment_Stage4_C">
+    <Title>%Deeds_Regular_EmpireDevelopment_Stage4_C-Title</Title>
+    <Description>%Deeds_Regular_EmpireDevelopment_Stage4_C-Description</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage4_AQuest" Size="Quest"/>
+      <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage4_A" Size="Medium"/>
+      <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage4_AInverted" Size="MediumInverted"/>
+      <Icon Path="Bitmaps/Dynamic/Deeds/Deeds_Regular_EmpireDevelopment_Stage4_ALarge" Size="Large"/>
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet>
+            <TooltipDescription>%Deeds_Regular_EmpireDevelopment_Stage4_C-ObjectiveTooltip</TooltipDescription>
+            <OutcomeCompleted>%Deeds_Regular_EmpireDevelopment_Stage4_C-Completed</OutcomeCompleted>
+            <OutcomeFailed>%Deeds_Regular_EmpireDevelopment_Stage4_C-Failed</OutcomeFailed>
+            <Objective Name="Deeds_Regular_EmpireDevelopment_Stage4_C-Objective">%Deeds_Regular_EmpireDevelopment_Stage4_C-Objective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>     
+  </QuestGuiElement>
+
+
+
+
+</Datatable>

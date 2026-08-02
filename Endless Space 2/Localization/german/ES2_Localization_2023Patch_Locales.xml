@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%FactionTraitConstellationVisionTitle">Fundiert</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitConstellationVisionDescription">Während entferntere Orte unbekannt bleiben, werden Sternensysteme in der Nähe durch unsere Observatorien und Sondenprogramme entdeckt.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitConstellationVisionTooltipOverride">Mit dem anfangs entdeckten Bereich anfangen</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTraitTemplarsTitle">Eifrige Sammlung</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTraitTemplarsDescription">Bei dieser Sammlung liegt der Fokus auf Zustimmung und Invasionsstärke.</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTemplarsTooltipOverride">Bodenschlacht-Offensivstrategie der Nakalim freigeschaltet: Durchkämmen (verbesserte „Präventive Bombardierung“ mit großem Bonus bei Bombardement-Schaden)
+Bodenschlacht-Defensivstrategie der Nakalim freigeschaltet: Rebellieren (verbesserte „Geschlossenheit“ mit großem Bonus bei Bombardement-Schaden)</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride1">Keine [scienceColored] von Planeten</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride2">+300 % [prestigeColored]-Kosten für den Erhalt von Technologien</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride3">-50 % [scienceColored] erhalten von Schiffszerstörung</LocalizationPair>
+  <LocalizationPair Name="%AffinityGameplayTemplarsTooltipEffect">Relikte können von Flotten entdeckt und gesammelt werden und generieren Wissenschaft, wenn sie nicht zugewiesen werden. Gib Relikte aus, um:
+• Einen Tempel auf einem Planeten zu errichten, der den WIND-Malus entfernt
+• Helden zu ermächtigen
+• Mächtige neue Fraktionsmerkmale zu gewähren
+
+Kann Kathedralen für mächtige Systemboni und Erhöhung der maximalen Reliktplätze errichten
+
+Kann Nebenfraktionen zu Vasallen machen, um ihr Assimilationsmerkmal zu erwerben und sie gleichzeitig unabhängig zu erhalten und weiter die Fraktionsressourcen zu empfangen. Alle Flotten, die sie produzieren, werden automatisch an dich übertragen.</LocalizationPair>
+  <LocalizationPair Name="%PopulationModifiersTraitSecondaryFIDSIHappyTitle">Eifrige Arbeit</LocalizationPair>
+  <LocalizationPair Name="%PopulationModifiersTraitSecondaryDustHappyEpicTitle">Esoterische Plünderer</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsTitle">Schlummernde Ruinen</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsDescription">Das Imperium beginnt mit drei lange inaktiven, fertigen Kolonien, die sicher zwischen der Heimatwelt und dem Kern der Galaxie verborgen liegen. Diese können durch Flotten oder andere neue Kolonien zum Leben erweckt werden.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsTooltipOverride">Systeme, die als schlummernde Ruinen markiert sind, können erweckt werden, um Ressourcen, Bevölkerung und Systemverbesserungen zu erhalten. Wenn du eine Ruine erwecken willst, schicke eine Flotte zu einem nicht kolonisierten System und setze die Erwecken-Aktion der Flotte ein oder richte die entsprechende Systemverbesserung in einem eroberten System ein.
+
+Beachte, dass auch andere Imperien, die dieses Merkmal besitzen, Ruinen erwecken können, auch solche, die dir gehören.
+
+Jede Fraktion mit diesem Merkmal hat drei von diesen Ruinen über Nicht-Hauptsysteme verstreut.
+
+Ruinen, die du noch nicht entdeckt hast, werden enthüllt, wenn du den ersten Schritt deiner Fraktionsquest erhältst.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitApatheticColonistsEffect">-25 % [foodColored] wird von Kolonien an Außenposten gesendet
+-25 % [foodColored] wird auf den Außenposten produziert</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitTechnologicalHeadStartLessEffectOverride">Zu Beginn ist hier die erste Technologiestufe freigeschaltet</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesTitle">Alte Bundesgenossen</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesDescription">Dieses Imperium ist eine verlässliche und einflussreiche Stütze der Akademie und ihrer Agenda, mit unbeirrbarem Wohlwollen und der bürokratischen Erfahrung und dem Engagement, extravagante Spenden kompletter Systeme zu machen.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesTooltipOverride">Kann der Akademie bekehrte oder eroberte Systeme im Austausch für Beziehungspunkte spenden
+
+Zu Beginn wird die Akademie angezeigt</LocalizationPair>
+  <LocalizationPair Name="%PersonalityImperiousTitle">Imperial</LocalizationPair>
+  <LocalizationPair Name="%PersonalityImperiousDescription">Dieses Imperium konzentriert sich auf Expansion und Ausübung seines Einflusses.</LocalizationPair>
+  <LocalizationPair Name="%DeclareCrusadeAgainstTitle">Kreuzzug verkünden</LocalizationPair>
+  <LocalizationPair Name="%DeclareCrusadeAgainstDescription">Verkündet ein Imperium einem anderen Imperium einen Kreuzzug, können alle anderen Imperien diese Schiffe und Systeme angreifen. Der Kreuzzug hält an, bis er schließlich durch Verhandlungen mit der Akademie beendet wird.</LocalizationPair>
+  <LocalizationPair Name="%BlockAcademyAuctionAgainstTitle">Akademieauktionssperre</LocalizationPair>
+  <LocalizationPair Name="%BlockAcademyAuctionAgainstDescription">Wird einem anderen Imperium gegenüber eine Sperre verkündet, kann dieses Imperium der Akademie 20 Züge lang nichts mehr spenden (Skalierung mit der Spielgeschwindigkeit). Zusätzliche Nutzungen können durch die Akademiediplomatie erworben werden.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsTitle">Forschungsklausur</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsDescription">Mithilfe von isolierten Klöstern, Abteien und Forschungssiedlungen in der eisigen Einöde kann das Imperium seine passioniertesten Wissenschaftler von den Tiefgläubigen in einer von Natur aus forschungsfreundlichen Umgebung absondern.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience4TemplarsTitle">Naturphilosophische Einrichtungen</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience4TemplarsDescription">Das Vertrauen in die Verlorenen und das Gebiet der Naturphilosophie haben Erstere von Anfang an vor dem Unwissen und Letztere vor der Ketzerei bewahrt; die Einrichtung von Laboreinrichtungen in unseren religiösen Zentren ermöglicht es klerikalen Wissenschaftlern, effizient und in Ruhe zu arbeiten.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsTitle">Stiftung für Spirituelle Aufklärung</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsDescription">Im Rahmen der beliebten Initiative für eine lebenslange Weiterbildung zu den Geschenken der Verlorenen organisiert die Stiftung kostenlose Ausstellungen und Seminare rund um die Relikte der Verlorenen, die den Nutzen für die Gemeinschaft mit dem breiten Wissen der Gläubigen kombiniert.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScienceOnGasTemplarsTitle">Erhabene Universität</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScienceOnGasTemplarsDescription">Der noble Einfluss der Verlorenen und die Grausamkeit der Endless, die sie getötet haben, findet sich überall in den Galaxie-Anomalien, weshalb der engagierten historischen und wissenschaftlichen Fakultät eine hohe Bedeutung für die Nakalim zukommt.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience8TemplarsTitle">Himmlischer Campus</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience8TemplarsDescription">Auch wenn das Fliegen keine technische Schwierigkeit mehr darstellt, bleibt es doch ein Wunder, das die Sinne belebt und die Seele entflammt. Das Gleiche gilt für fliegende Städte, die die Gläubigen in den ergiebigen Chemie- und Physik-Spielwiesen der Gasgiganten zu neuen und unglaublichen Wundern der Technik inspirieren können.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementDefense1TemplarsTitle">Holistische Abwehr</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementDefense1TemplarsDescription">Der Rest des Systems darf nicht vernachlässigt werden, doch die Integration unserer Verteidigungs- und Trainingsprogramme in historische und heilige Stätten wird gute Gesundheits- und Trainingsregimes als kommunale und geistige Verpflichtung verfestigen.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueTemplarsEffectOverride">-5 % Energie pro Zug für feindliche Schiffe im Radius
++20 % Energie pro Zug für deine Schiffe im Radius</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemCollectRelicImprovementTitle">Ressourcenverbesserung</LocalizationPair>
+  <LocalizationPair Name="%SubCategoryCollectRelicTitle">Relikt</LocalizationPair>
+  <LocalizationPair Name="%StarSystemCollectRelicImprovementTitle">Relikt beschaffen</LocalizationPair>
+  <LocalizationPair Name="%StarSystemCollectRelicImprovementDescription">Beschaffe das Relikt in diesem System.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementOnlyOnAwakenedRuinsTitle">[blue-gray](Kann nur auf den erwachten Ruinen gebaut werden)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%SciencePerUnassignedRelicTitle">Standard [scienceColored] von [Relikt]</LocalizationPair>
+  <LocalizationPair Name="%FailureNotEnoughTemplesDescription">Eine Kathedrale kann in deinem Imperium nur gebaut werden, wenn 4 Tempel auf einem Planeten sind.</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyFleetCannotInvadeDescription">Flotten mit Akademieschiffen können nicht eingesetzt werden, um Systeme zu überfallen.</LocalizationPair>
+  <LocalizationPair Name="%FailureYouDontOwnTheAcademyDLC4Description">Du besitzt die Akademie nicht und hast auch keinen Zugriff auf die Agentenakten ausgehandelt.</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyRequiresAlliedDescription">Für diese Anfrage musst du mit der Akademie verbündet sein.</LocalizationPair>
+  <LocalizationPair Name="%FailureNotEnoughAcademyRelationDescription">Du brauchst eine bessere Beziehung zur Akademie, um dies zu erhalten.</LocalizationPair>
+  <LocalizationPair Name="%FailureTooManyPopulationOrderedDescription">Du hast bei den letzten Zügen zu viele Bevölkerungen angefragt! Gib der Akademie etwas Zeit, um sich auf künftige Anfragen vorzubereiten.</LocalizationPair>
+  <LocalizationPair Name="%FailureMetaplotInProgressDescription">Die Akademie ist gerade etwas knapp an Ressourcen!</LocalizationPair>
+  <LocalizationPair Name="%FailureDoesntOwnAcademyDescription">Die Akademie kann keine Anfragen gewähren, wenn sie ihr Heimatsystem nicht besitzt.</LocalizationPair>
+  <LocalizationPair Name="%FailureBoostAlreadyActiveDescription">Diese Verstärkung ist bereits aktiv.</LocalizationPair>
+  <LocalizationPair Name="%FailureAlreadyHasCrusadeDescription">Gegen dieses Imperium wurde bereits ein Kreuzzug verkündet.</LocalizationPair>
+  <LocalizationPair Name="%FailureHasCrusadeImmunityDescription">Dieses Imperium hat mit der Akademie eine Kreuzzug-Immunität ausgehandelt.</LocalizationPair>
+  <LocalizationPair Name="%FailureAlreadyCantAccessAcademyAuctionsDescription">Dieses Imperium wurde bereits für Akademieauktionen gesperrt.</LocalizationPair>
+  <LocalizationPair Name="%FailureFavoredByTheAcademyDescription">Dies kannst du nur gegen Imperien einsetzen, die nicht in der Gunst der Akademie stehen.</LocalizationPair>
+  <LocalizationPair Name="%FailureOnlyOneCathedralDescription">Du kannst immer nur jeweils eine Kathedrale bauen</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1Title">Gravitomagnetische Plasma-Umschläge</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2Title">Verbesserte Sprengdrohnen</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3Title">Städtische Simulationen</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1Description">Durch Nutzung der Magnetfelder von Planeten als Waffen oder in einigen Fällen durch eine Ladung an ihren Gravitationsbrunnen lassen sich Plasmabomben auf dem Weg nach unten gegen atmosphärische Streuung schützen, und es lässt sich gegen geringere Kosten oder über längere Zeiträume verhindern, dass Plasmaminen schleichend an Energie verlieren.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2Description">Zwar werden Sprengdrohnen schon seit Jahrtausenden eingesetzt, doch die Universale Aerodynamik ermöglicht bei ihrer Herstellung den Einsatz einer breiter aufgestellten Industrie, da sich die gleichen Produktionsanlagen in allen Umgebungen verwenden lassen; schon bald werden dieselben Drohnen der Standard sowohl bei organisierten Bombardierungskampagnen als auch in kolonialen Abwehrgruppen sein.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3Description">Mithilfe neuer geografischer Scantechnologie lassen sich Territorien rasch kopieren und in Unterhaltungssystemen simulieren, was Sachliteratur präziser, Fiktion unmittelbar nachvollziehbar und Kriegsspiele ungeheuer wertvoll macht. So werden die Bürger mit allen Abwehrtricks vertraut, die auf die simulierte Gegend zugeschnitten sind, was sich für die Verteidigung des eigenen Heimes oder für den Überfall auf das von jemand anderem nutzen lässt.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1EffectOverride">Schadensaufwertung bei strategischer Bodenschlacht-Bombardierung:
+• Präventive Bombardierung bei 2500
+• Geschlossenheit bei 1850</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2EffectOverride">Schadensaufwertung bei strategischer Bodenschlacht-Bombardierung:
+• Präventive Bombardierung bei 3000
+• Geschlossenheit bei 2250</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3EffectOverride">Schadensaufwertung bei strategischer Bodenschlacht-Bombardierung:
+• Präventive Bombardierung bei 3500
+• Geschlossenheit bei 2750</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1TemplarsEffectOverride">• Durchkämmen bei 3000
+• Rebellieren bei 2250</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2TemplarsEffectOverride">• Durchkämmen bei 3750
+• Rebellieren bei 2750</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3TemplarsEffectOverride">• Durchkämmen bei 4500
+• Rebellieren bei 3500</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementAcademyDiplomacyTitle">Akademische Zusammenarbeit</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementAcademyDiplomacyDescription">Nach dem Kontakt durch den Propheten an der Akademie lässt sich sofort ein einfaches Botschaftssystem einrichten, sobald wir einige lokale Sprachen übersetzt und die erforderliche Unterbringung unserer Botschafter festgelegt haben.</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill_RelicBoost_Title">Heilige Sache</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill_RelicBoost_Description">Die psychologischen Vorteile beim Anvertrauen eines Reliktes sind nicht zu unterschätzen; noch größerer Nutzen aber liegt darin, die esoterischen Wissensrahmen und Fertigkeitsengramme der Verlorenen in entsprechend ausgebildete Helden mit einem von der Kirche gebilligten Dust-„Fingerabdruck“ zu lenken.</LocalizationPair>
+  <LocalizationPair Name="%HeroSkillShip129_Vision_0_TooltipOverride">Schaltet die neue Flottenaktion Himmelswächter frei:
++10 Flottensicht bei Flotte
+-50 % [upkeepColored] bei Flotte
+Verbraucht alle Bewegung, während sie aktiv ist</LocalizationPair>
+  <LocalizationPair Name="%HeroSkillShip129_Vision_1_TooltipOverride">Schaltet die neue Flottenaktion Himmelswächter frei:
++20 Flottensicht bei Flotte
+-100 % [upkeepColored] bei Flotte
+Verbraucht alle Bewegung, während sie aktiv ist</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill02BranchTemplars_Title">Orbitschütze</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill02BranchTemplars_Description">Dank einem durch Dust verbesserten physikalischen und mathematischen Begriffsvermögen erzielt dieser Held nicht nur einen wirkungsvolleren Beschuss mit den Orbitalwaffen seiner Flotte, sondern trägt dazu auch sein eigenes Bombardement mithilfe von Dust-manipulierten Meteoriten und Weltraumtrümmern bei.</LocalizationPair>
+  <LocalizationPair Name="%HeroRelicTitle">Heldenrelikte</LocalizationPair>
+  <LocalizationPair Name="%TempleRelicsBranchDescription">Relikte, die Tempeln zugewiesen wurden.
+{0}/{1} Kathedralen errichtet.
+{2} weitere Tempel für die nächste Kathedrale erforderlich.</LocalizationPair>
+  <LocalizationPair Name="%ResearchRelicsBranchDescription">Nicht zugewiesene Relikte zur Generierung von [scienceColored] Wissenschaft.
+ 
+Relikt-Wissenschaftsertrag: {0} [scienceColored]</LocalizationPair>
+  <LocalizationPair Name="%FIDIRelicsBranchDescription">Dem Imperium zugewiesene Relikte.
+{0}/4 maximale Reliktplätze freigeschaltet</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSBonusTitle">[fids] auf Standardplanet</LocalizationPair>
+  <LocalizationPair Name="%SystemInfluenceRadiusTitle">Einflussradius des Systems</LocalizationPair>
+  <LocalizationPair Name="%FleetsInInfluenceZoneTitle">Flotten im Besitz im Einflussbereich dieses Systems</LocalizationPair>
+  <LocalizationPair Name="%RelicSlotsUnlockedTitle">Maximale Reliktplätze des Imperiums</LocalizationPair>
+  <LocalizationPair Name="%CathedralOnSystemStarSystemLabel">In diesem System gibt es eine Nakalim-Kathedrale und {0} Tempel auf Planeten dieses Systems.</LocalizationPair>
+  <LocalizationPair Name="%CathedralOnSystemOneTempleStarSystemLabel">In diesem System gibt es eine Nakalim-Kathedrale und 1 Tempel auf Planeten dieses Systems.</LocalizationPair>
+  <LocalizationPair Name="%TempleOnSystemStarSystemLabel">Es gibt eine Nakalim-Kathedrale auf {0} Planeten dieses Systems.</LocalizationPair>
+  <LocalizationPair Name="%OneTempleOnSystemStarSystemLabel">Es gibt einen Nakalim-Tempel auf 1 Planet dieses Systems.</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectOwnerTooltip">Kathedralen fügen feindlichen Schiffen Schaden zu und beschleunigen die Wiederherstellung deiner Schiffe. Im Einflussradius dieses Systems stellen Schiffe 20 % ihrer maximalen Energie pro Zug wieder her.</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectHostileTooltip">Kathedralen fügen feindlichen Schiffen in ihrem Einflussradius Schaden zu; da du ein Gegner dieser Fraktion bist, erleiden deine Flotten einen Schaden in Höhe von 5 % ihrer maximalen Energie pro Zug. Dieser Effekt kann Schiffe zerstören.</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectNeutralTooltip">Kathedralen fügen feindlichen Schiffen in ihrem Einflussradius Schaden zu, doch du bist kein Gegner dieser Fraktion.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsStarSystemLabel">Dieses System enthält verborgene schlummernde Ruinen, die darauf warten, dass du sie erweckst.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsAwakenedStarSystemLabel">Dieses System enthielt schlummernde Ruinen, aber sie sind erweckt worden.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelConvertedForAcademyTooltip">Du hast dieses System der Akademie geschenkt.</LocalizationPair>
+  <LocalizationPair Name="%MinimumFIDSTitle">Minimum an [fids]</LocalizationPair>
+  <LocalizationPair Name="%MinimumFIDSITitle">Minimum an [fidsi]</LocalizationPair>
+  <LocalizationPair Name="%MinimumFoodTitle">Minimum an [foodColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumIndustryTitle">Minimum an [industryColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumDustTitle">Minimum an [DustColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumScienceTitle">Minimum an [scienceColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumPrestigeTitle">Minimum an [prestigeColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumApprovalTitle">Minimum an [happinessColored]</LocalizationPair>
+  <LocalizationPair Name="%HappinessMalusReductionTitle">Anfängliche Ablehnung</LocalizationPair>
+  <LocalizationPair Name="%HeroPointMultiplierTitle">Punkte für Heldenfreischaltung</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsTooltipOverride">+2 [scienceColored] pro [Relic] pro Planet mit Anomalie</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsTooltipOverride">+2 [scienceColored] pro [Relikt] pro fruchtbarem Planeten im System</LocalizationPair>
+  <LocalizationPair Name="%TroopHealthPerTempleTitle">Gesundheit verteidigender Truppen pro Tempel</LocalizationPair>
+  <LocalizationPair Name="%false">FALSE</LocalizationPair>
+  <LocalizationPair Name="%FAKE">FAKE</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinitySophonsTitle">Sophon-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityCraversTitle">Craver-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVenetiansTitle">Lumeris-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVampirilisTitle">Vodyani-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTerransTitle">Terraner-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityMezariTitle">Mezari-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinitySheredynTitle">Sheredyn-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityHoratioTitle">Horatio-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTimeLordsTitle">Rissgeborenen-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityUnfallenTitle">Ungefallenen-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVaultersTitle">Vaulters-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityMajorHisshosTitle">Hissho-Schatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityUmbralChoirTitle">Schemenschatten</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTemplarsTitle">Nakalim-Schatten</LocalizationPair>
+  <LocalizationPair Name="%MoneyRatioLostFromTraitorsTitle25">Vodyani-Reisebüros</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamagesTitle">Schaden durch defensive Bombardierung</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesTitle">Schaden durch offensive Bombardierung</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSBonusPerPopulationTitle">[fids]-Malus des Letzten Imperiums</LocalizationPair>
+  <LocalizationPair Name="%PlanetScienceModifierTitle">[scienceColored]-Malus bei Glauben ohne Durchbrüche</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSTitle">Planet</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSITitle">Planet</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFoodPerPopulationTitle">[foodColored] pro [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialIndustryPerPopulationTitle">[industryColored] pro [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialDustPerPopulationTitle">[dustColored] pro [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialSciencePerPopulationTitle">[scienceColored] pro [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialPrestigePerPopulationTitle">[prestigeColored] pro [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSPerPopulationTitle">[FIDS] pro [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSIPerPopulationTitle">[FIDSI] pro [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSPenaltyBreakdownTitle">Fehlende Kolonisierungstechnologie</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSIFromSenatorSkillTitle">[FIDSI] pro [population] pro Heldenstufe</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointCostMultiplierTitle">Beziehungspunkt-Kosten der Akademiediplomatie</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsTitle">Akademie-Beziehungspunkte</LocalizationPair>
+  <LocalizationPair Name="%CandidateCountPerPopulationTitle">Kandidaten pro [population]</LocalizationPair>
+  <LocalizationPair Name="%NumberOfTemplesTitle">Anzahl der Tempel</LocalizationPair>
+  <LocalizationPair Name="%ScienceScrappingBonusTitle">Bonus [scienceColored] pro zerstörtem BP</LocalizationPair>
+  <LocalizationPair Name="%PartnerScienceTradingCostReductionTitle">[prestigeColored]-Kosten für den Erhalt von Technologien</LocalizationPair>
+  <LocalizationPair Name="%TempleScienceToInfluenceFactorTitle">Ursprünglicher [scienceColored]-Planet wurde dem ursprünglich [prestigeColored]-Planeten hinzugefügt</LocalizationPair>
+  <LocalizationPair Name="%HeroRecruitmentUnlockedTitle">Heldenrekrutierung freigeschaltet</LocalizationPair>
+  <LocalizationPair Name="%TrendTitle">Beziehungspunkte pro Zug</LocalizationPair>
+  <LocalizationPair Name="%BombardmentLevelTitle">Bombardementsstufe</LocalizationPair>
+  <LocalizationPair Name="%SentryActionLevelTitle">Wächterstufe</LocalizationPair>
+  <LocalizationPair Name="%HackingSpeedMultiplierTitle">Multiplikator: Hacking-Geschwindigkeit</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleCanFireTitle">Zitadelle kann feuern</LocalizationPair>
+  <LocalizationPair Name="%TradingRouteIncomeTitle">Handelsgesellschaften</LocalizationPair>
+  <LocalizationPair Name="%TradingRouteLeechTitle">Ausgebeutete Handelsgesellschaften</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSITitle">[FIDSI]-Boni</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSTitle">[FIDS]-Boni</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics01ButtonTooltipDescription">[industrialistColored] +{0} % Generieren von strategischen Ressourcen für Tempel</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics02ButtonTooltipDescription">[scientistColored] +{0} Dust pro nicht zugewiesenem Relikt
+[scientistColored] +{1} Einfluss pro nicht zugewiesenem Relikt
+[scientistColored] +{2} Personal pro nicht zugewiesenem Relikt</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics03ButtonTooltipDescription">[pacifistColored] +{0} % Handelswert für Systeme mit Kathedralen
+[pacifistColored] +{1} % Regeneration von Flottenenergie für Flotten in verbündeten Territorien
+[pacifistColored] +{2} % Truppengesundheit pro Tempel in Systemen</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics04ButtonTooltipDescription">[ecologistColored] +{0} % Generieren von Luxusressourcen für Tempel</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics05ButtonTooltipDescription">[religiousColored] Helden können Flotten außerhalb verbündeter Territorien zugewiesen werden
+[religiousColored] {0} % Heldenpunkte zum Freischalten des nächsten Helden erforderlich</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics06ButtonTooltipDescription">[militaristColored] Flotten können außerhalb verbündeter Territorien nachgerüstet werden
+[militaristColored] {0} % Dust-Kosten für das Nachrüsten</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsButtonTooltipDescriptionNoRelicsAsigned">[gray]Dieser Platz ist derzeit deaktiviert, klicke zum Ausgeben von 2 [Relic], um ihn zu aktivieren.#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsButtonTooltipDescriptionRelicsAsigned">[gray]Klicken, um diesen Platz zu deaktivieren und 2 [Relic] zurückzuerstatten.#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsDescription">Aktuelle Zahl verfügbarer Relikte.
+
+Gib 2 Relikte aus, um einen der Plätze unten zu aktivieren und ihre aufgeführten Effekte zu erhalten. Aktivierte Reliktplätze können jederzeit für eine vollständige Erstattung deaktiviert werden.</LocalizationPair>
+  <LocalizationPair Name="%FailureRelicsAssignedLimitReachedDescription"> </LocalizationPair>
+  <LocalizationPair Name="%AwokenSlumberingRuinsTitle">Erwachte schlummernde Ruinen</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsTitle">Schlummernde Ruinen</LocalizationPair>
+  <LocalizationPair Name="%OnOrbit">in Systemen mit diesem Helden in der Umlaufbahn</LocalizationPair>
+  <LocalizationPair Name="%OnOwnedOrbit">in deinen Systemen mit diesem Helden in der Umlaufbahn</LocalizationPair>
+  <LocalizationPair Name="%OnHostileOrbit">in feindlichen Systemen mit diesem Helden in der Umlaufbahn</LocalizationPair>
+  <LocalizationPair Name="%OnNeutralOrbit">in neutralen Systemen mit diesem Helden in der Umlaufbahn</LocalizationPair>
+  <LocalizationPair Name="%OnFriendlyOrbit">in verbündeten Systemen mit diesem Helden in der Umlaufbahn</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneTitle">Arkan</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneDescription">Deine Xirmisala-Mystiker haben darauf aufmerksam gemacht, dass auf diesem Planeten ein großes Dust-Vorkommen verborgen ist.</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneRewardsDescription">Wird eine große Menge Dust ergeben.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitle">An die Akademie spenden</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescription">Anstatt die Kontrolle über {0} zu übernehmen, wirst du den Besitz daran im Austausch gegen einige Gefälligkeiten und Ressourcen der Akademie übertragen.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitleAttacker">{0} wurde unter Zwang an die Akademie gespendet</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescriptionAttacker">Du hast {0} erlangt und an die Akademie gespendet, was dir einige Ressourcen und Gefälligkeiten der Akademie eingebracht hat.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitleDefender">{0} wurde von {1} unter Zwang an die Akademie gespendet</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescriptionDefender">{1} wurde von {0} eingenommen und dann an die Akademie gespendet. Du wirst dieses System kaum zurückerhalten, ohne die Akademie zu verärgern.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategy3TemplarsTitle">Durchkämmen</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategy3TemplarsDescription">Nutze alte Dust-Techniken, um den Feind und seine Werke ohne zusätzlichen Kollateralschaden hinwegzufegen.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4TemplarsTitle">Rebellieren</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4TemplarsDescription">Setze verborgene alte Abwehrsysteme ein, um einen großen Aufstand der Gläubigen gegen den Feind zu begleiten.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4Title">Geschlossenheit</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4Description">Alle Verteidigungen werden aufgewendet, um Boden wiedergutzumachen und den feindlichen Angriff zu durchbrechen. Effektiv, wenn die Eindringlinge kurz vor der Niederlage stehen oder du noch zusätzliche Truppen in Reserve hast.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategyAcademyFactionTitle">Ägide</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategyAcademyFactionDescription">Die vielen Dust-Anwender auf niedriger Stufe und die hochtrainierten Fanatiker der Akademie verteidigen ihr Territorium mit jeder Waffe, die ihnen zur Verfügung steht.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategyAcademyFactionTitle">Intervention</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategyAcademyFactionDescription">Elite-Spezialtruppen, die Dust nutzen, werden in der hohen Umlaufbahn eingesetzt, um wichtige Ziele bei minimalem Risiko für die Bevölkerung zu sichern.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeButtonDescription">Schlummernde Ruinen erwecken</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeNotOrbitingButtonDescription">Erweckt die Ruinen dieses Systems, kolonisiert sie auf der Stelle und stellt außerdem Ressourcen, Bevölkerung und Systemverbesserungen bereit. Zum Aktivieren ist eine Flotte in der Umlaufbahn erforderlich.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeNormalColonizerButtonDescription">Erweckt die Ruinen dieses Systems, kolonisiert sie auf der Stelle und stellt außerdem Ressourcen, Bevölkerung und Systemverbesserungen bereit. Dadurch wird deine Flotte nicht verbraucht, allerdings darf in dem System dazu noch kein Außenposten existieren.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeFleetActionTitle">Erwecken</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeFleetActionDescription">Kolonisiert dieses Systems auf der Stelle und stellt Ressourcen, Bevölkerung und Systemverbesserungen bereit. Allerdings darf in dem System dazu noch kein Außenposten existieren.</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction1Title">Himmelswächter</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction1Description">Umschalten, um die verbleibende Bewegung dieser Flotte zu opfern und ihr eine große Sichtverstärkung zu gewähren.</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction2Title">Himmelswächter</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction2Description">Umschalten, um die verbleibende Bewegung dieser Flotte zu opfern und ihr eine große Sichtverstärkung zu gewähren.</LocalizationPair>
+  <LocalizationPair Name="%FailureConsumeAllDescription">#A4ABB5#(Verbraucht alle verbleibende Bewegung)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsBonusEffectTitle">Erwachen aus dem Schlummer</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsBonusEffectDescription">Die Bewohner erwachen wieder zum Leben, Maschinen springen knirschend an, und die Lichter einer ganzen Zivilisation erhellen von Neuem die nächtliche Landschaft. Bis zum Abschluss dieses Prozesses zieht dieses System Ressourcen aus seinen vor langer Zeit angelegten Vorräten.</LocalizationPair>
+  <LocalizationPair Name="%TemporaryEffectSlumberingRuinsBonusTitle">Erwachen aus dem Schlummer (#E3BDAC#{0}#REVERT#[turn])</LocalizationPair>
+  <LocalizationPair Name="%TemporaryEffectSlumberingRuinsBonusDescription">Die Bewohner erwachen wieder zum Leben, Maschinen springen knirschend an, und die Lichter einer ganzen Zivilisation erhellen von Neuem die nächtliche Landschaft. Bis zum Abschluss dieses Prozesses zieht dieses System Ressourcen aus seinen vor langer Zeit angelegten Vorräten.
+Verbleibende Züge: {0} [turn]</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemAwakenImprovementTitle">Systemerwachen</LocalizationPair>
+  <LocalizationPair Name="%SubCategoryAwakenTitle">Schlummernde Ruinen</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementTitle">Kolonie wieder zum Leben erwecken</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementDescription">Wir werden einige von uns in die Tiefe schicken, um unser Volk aus dem Schlaf zu holen und unsere Infrastruktur wieder zu aktivieren.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementEffectOverride">Erweckt dieses System zum Leben und stellt so Ressourcen, eine Bevölkerung und Systemverbesserungen für dich bereit</LocalizationPair>
+  <LocalizationPair Name="%AcademyConvertedSystemTitheBonus">Das bekehrte System wurde der Akademie überlassen. Die Akademie ist bereit, diese Gefälligkeit gegen eine andere aus deiner Anfrage auszutauschen.</LocalizationPair>
+  <LocalizationPair Name="%SystemConvertedForAcademyTitle">System der Akademie überlassen</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Templars_Academy2Popup-Description">Geschenkte Systeme verbessern deine Beziehung zur Akademie, was du im Diplomatiemenü der Akademie gegen Gefälligkeiten eintauschen kannst.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyPowerDescription">Die Machtstufe der Akademie</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyRolesCountdownDescription">Anzahl der Züge, bis das Bieten auf Akademierollen beginnt.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyRequestCountdownDescription">Anzahl der Züge, bis das Bieten auf Akademierollen endet.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyMetaplotCountdownDescription">Die Akademie ist derzeit mit der Suche nach Magneten beschäftigt.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyDormantCountdownDescription">Die Akademie ist derzeit mit der Organisation beschäftigt und wird bald eine Anfrage stellen.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowTitle">AKADEMIE-DIPLOMATIE</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowDescription">Dies ist das Diplomatiemenü der Akademie.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowActionsTitle">Aktionen</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowActionsDescription">Zeigt die diplomatischen Aktionen, die dir für die Interaktion mit der Akademie zur Verfügung stehen.</LocalizationPair>
+  <LocalizationPair Name="%AcademySideLevelDescriptionAwakening">Die Machtstufe der Akademie bestimmt auch die Stufe neu rekrutierter Helden.</LocalizationPair>
+  <LocalizationPair Name="%AcademyModalSwitchTitle">Auf Akademierollen umschalten</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalSwitchTitle">Auf Akademiediplomatie umschalten</LocalizationPair>
+  <LocalizationPair Name="%AcademyModalSwitchIcon">[Hero]</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalSwitchIcon">[DiploStateTruce]</LocalizationPair>
+  <LocalizationPair Name="%AcademySwitchDescription">Auf Akademierollen-Bildschirm umschalten</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacySwitchDescription">Auf Diplomatiemenü der Akademie umschalten</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectTitle">Beziehungseffekte:</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectWar">Du und die Akademie könnt gegenseitig eure Flotten angreifen und eure Systeme belagern
+Du und die Akademie könnt gegenseitig in eure Systeme eindringen</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectHostile">Du und die Akademie könnt gegenseitig eure Flotten angreifen und eure Systeme belagern</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectNeutral">Du und die Akademie könnt gegenseitig eure unbefugt eindringenden Flotten angreifen</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectFriendly">Die Bevölkerung der Akademie kann in deine Systeme migrieren
+Du und die Akademie dürft euch nicht gegenseitig angreifen</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectAlly">Die Bevölkerung der Akademie kann in deine Systeme migrieren
+Du und die Akademie dürft euch nicht gegenseitig angreifen
+Du kannst deine Flotten in Systemen der Akademie reparieren und nachrüsten
+Du und die Akademie könnt jeweils die Systeme des anderen beschützen</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateHostileTitle">FEINDSELIG</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateHostileDescription">Bei diesem Stand der Diplomatie kann ein Imperium die Akademie auf ihrem Territorium angreifen, aber nicht in ihre Systeme eindringen. Die Diplomatie ist nicht begrenzt, aber die Akademie verliert allmählich die Geduld ...</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAcademyAcademyDiplomaticRelationStateHostile">Feindselig</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateFriendlyTitle">FREUNDLICH</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateFriendlyDescription">Dieser Stand der Diplomatie gilt als freundschaftliche Beziehungen zwischen einem Imperium und der Akademie. Es genießt eine Reihe von Gefälligkeiten der Akademie und darf keine feindseligen Handlungen gegen die Akademie begehen.</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAcademyAcademyDiplomaticRelationStateFriendly">Freundlich</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeWarTooltip">Im Krieg mit der Akademie</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeHostileTooltip">Feindselige Beziehungen mit der Akademie</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeNeutralTooltip">Neutrale Beziehungen mit der Akademie</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeFriendlyTooltip">Freundschaftliche Beziehungen mit der Akademie, die Bevölkerung der Akademie kann migrieren</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeAllyTooltip">Verbündet mit der Akademie, du kannst deine Flotten in Systemen der Akademie reparieren und nachrüsten</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStatusTitle">Status</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStatusDescription">Zeigt Informationen über deine Beziehung mit der Akademie und Informationen über die Akademie selbst an.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyTrendDescription">Dieser Wert zeigt, wie gut (oder schlecht) deine Beziehungen mit der Akademie sind.</LocalizationPair>
+  <LocalizationPair Name="%UnlockedAcademyDiplomacyTooltip">Ermöglicht Diplomatie mit der Akademie</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyRolesDisabledDescription">Du kannst nicht spenden, um Rollen zu übernehmen, aber frühere Spenden zählen immer noch.</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromQuests">{0} für Quests</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromMinors">{0} für Nebenzivilisationen</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromBuildings">{0} für Gebäude</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromRoles">{0} für Rollen</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromDeeds">{0} für Taten</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromPirates">{0} für das Ausmerzen von Piraten</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromHeroes">{0} für Helden</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromOther">{0} für anderes</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnNoneAffecting">Du hast keine Modifikatoren, die sich auf die Entwicklung deiner Akademiebeziehung auswirken</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionTitle">Zugang zur Akademie</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureRelationsImpactTitle">Wirkung der Beziehungen:</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureRelationsImpactNone">Keine</LocalizationPair>
+  <LocalizationPair Name="%NotEnougthAcademyRelationPoints">Du kannst dir die Beziehungskosten nicht leisten</LocalizationPair>
+  <LocalizationPair Name="%GainRelationAcademyActionTitle">[#52008a#Debug#REVERT#] Gain Relation</LocalizationPair>
+  <LocalizationPair Name="%GainRelationAcademyActionDescription">[#52008a#Debug#REVERT#] Gain Relation Description.</LocalizationPair>
+  <LocalizationPair Name="%HeroStatusAccessAcademyActionTitle">Agentenakten</LocalizationPair>
+  <LocalizationPair Name="%HeroStatusAccessAcademyActionDescription">Durchsuche die Büros der Akademie nach den Orten und Missionen der Helden der Galaxie</LocalizationPair>
+  <LocalizationPair Name="%CrusadeImmunityAcademyActionTitle">Sicherheitsgarantie</LocalizationPair>
+  <LocalizationPair Name="%CrusadeImmunityAcademyActionDescription">Handle dir das Versprechen der Akademie aus, dich vor der Verkündigung von Kreuzzügen zu schützen, und beende alle Kreuzzüge, die derzeit gegen dich laufen.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionTitle">Systemersuchen</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionDescription">Die Akademie ist eine neutrale Nicht-Regierungsinstitution, die sich nicht dazu eignet, ein Territorium zu verwalten; ersuche sie um ein System und nimm ihr diese Aufgabe ab.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUnfallenTitle">Vorbereitete Umrankung</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUnfallenDescription">Durch die Zusammenarbeit mit den Mitgliedern der Akademie vor Ort können wir diesen Planeten praktisch über Nacht umranken und ihn mit dem Segen der Akademie unserem Imperium als Erweiterung unseres friedlichen Mandats hinzufügen.</LocalizationPair>
+  <LocalizationPair Name="%RequestFleetAcademyActionTitle">Flottenanforderung</LocalizationPair>
+  <LocalizationPair Name="%RequestFleetAcademyActionDescription">Erstellt eine Flotte mit den stärksten verfügbaren Schiffen der Akademie für dich.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticMigrationActionTitle">Migrationsanfrage</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticMigrationActionDescription">Löse die Migration eines zufälligen Bevölkerungstyps aus dem System der Akademie zum nächstgelegenen System deines Imperiums aus.</LocalizationPair>
+  <LocalizationPair Name="%StartWarAcademyActionTitle">Krieg erklären</LocalizationPair>
+  <LocalizationPair Name="%StartWarAcademyActionDescription">Beginne einen Krieg, wodurch die Beziehungspunkte auf -100 gesetzt und Akademieauktionen verboten werden.</LocalizationPair>
+  <LocalizationPair Name="%StopWarAcademyActionTitle">Waffenstillstand</LocalizationPair>
+  <LocalizationPair Name="%StopWarAcademyActionDescription">Beende den Krieg, wodurch die Beziehung auf 0 Punkte gesetzt wird, und ermögliche den Zugang zu Akademieauktionen.</LocalizationPair>
+  <LocalizationPair Name="%UserIntructionCaptionTakeSystemTitle">Linksklick, um ein System für eine Übernahme auszuwählen, Rechtsklick zum Abbrechen</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNotAcademyOwnedDescription">Muss ein System im Besitz der Akademie sein</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemAcademyHomeSystemDescription">Darf kein Heimatsystem der Akademie sein</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemExsistingGhostSystemDescription">Darf nicht bereits ein Geistersystem haben</LocalizationPair>
+  <LocalizationPair Name="%SophonsUniqueAcademyActionTitle">Meditationsforschung</LocalizationPair>
+  <LocalizationPair Name="%SophonsUniqueAcademyActionDescription">Die Forscher der Akademie sind zusätzlich ausgebildete Wortführer und Mediatoren, wodurch sie jede internationale Forschungsgruppe, in die wir sie einladen, stark verbessern.</LocalizationPair>
+  <LocalizationPair Name="%CraversUniqueAcademyActionTitle">Geisel-Umweltschutz</LocalizationPair>
+  <LocalizationPair Name="%CraversUniqueAcademyActionDescription">Die Akademie ist bereit, ökologische Überlegungen und leichtes schützendes Terraformen bereitzustellen, solange wir die Gesundheit unserer Gefangenen garantieren.</LocalizationPair>
+  <LocalizationPair Name="%TerransUniqueAcademyActionTitle">Akademische Krönungen</LocalizationPair>
+  <LocalizationPair Name="%TerransUniqueAcademyActionDescription">Die Einladung von Vertretern der Akademie für den Vollzug von Vereidigungen, Erhebungen in den Ritterstand, gesellschaftlichen Wahlen und Krönungen von imperialen Amtspersonen wird uns einen zusätzlichen Anschein von Legitimität verleihen.</LocalizationPair>
+  <LocalizationPair Name="%HoratioUniqueAcademyActionTitle">Urlaubsziel</LocalizationPair>
+  <LocalizationPair Name="%HoratioUniqueAcademyActionDescription">Die Akademie wundert sich womöglich, wo ihre Helden wohl gerade stecken mögen, aber dank unserer guten Beziehungen können wir diesen und ihren Untergebenen komfortable Urlaubsangebote in unserem Territorium machen.</LocalizationPair>
+  <LocalizationPair Name="%TimeLordsUniqueAcademyActionTitle">Flüchtlingshilfe</LocalizationPair>
+  <LocalizationPair Name="%TimeLordsUniqueAcademyActionDescription">Eingedenk der Misere der Rissgeborenen wird die Akademie Fabrikationsberater und Bergbaugerät bereitstellen, um unsere neuen Heime vorzubereiten.</LocalizationPair>
+  <LocalizationPair Name="%UnfallenUniqueAcademyActionTitle">Gartenbau-Beihilfe</LocalizationPair>
+  <LocalizationPair Name="%UnfallenUniqueAcademyActionDescription">Die Rankennetze der Ungefallenen sind bei der Akademie wegen ihres diplomatischen und infrastrukturellen Potenzials sehr begehrt; sie werden in verbündeten Territorien Kartierung und Unterstützung bieten.</LocalizationPair>
+  <LocalizationPair Name="%VampirilisUniqueAcademyActionTitle">Essenzhilfe</LocalizationPair>
+  <LocalizationPair Name="%VampirilisUniqueAcademyActionDescription">Die Akademie vermeidet unschöne Raubzüge nach Möglichkeit und wird dazu ihre Nahrungshilfeprogramme auf unseren Durst auf Essenz ausweiten.</LocalizationPair>
+  <LocalizationPair Name="%VenetiansUniqueAcademyActionTitle">Heldenwerbung</LocalizationPair>
+  <LocalizationPair Name="%VenetiansUniqueAcademyActionDescription">Durch politische Bankette und gewaltige Spenden lassen sich Helden der Akademie in der ganzen Galaxie zu Markenbotschaftern machen.</LocalizationPair>
+  <LocalizationPair Name="%MajorHisshosUniqueAcademyActionTitle">Ausbildungsaustausch</LocalizationPair>
+  <LocalizationPair Name="%MajorHisshosUniqueAcademyActionDescription">Durch einen Studenten- und Lehreraustausch mit der Akademie können wir unser Image als bedeutende Akteure der Galaxie unterstützen und das Ansehen unserer Kriegern fördern.</LocalizationPair>
+  <LocalizationPair Name="%UmbralChoirUniqueAcademyActionTitle">Notfallplanung</LocalizationPair>
+  <LocalizationPair Name="%UmbralChoirUniqueAcademyActionDescription">Die Akademie hat sehr alte, nützliche Karten von der Galaxie sowie den Wunsch, dass jeder schattige Winkel darin von einem friedlichen Verbündeten beherrscht werden möge; wir werden zu einer annehmbaren Vereinbarung kommen.</LocalizationPair>
+  <LocalizationPair Name="%ShipDesignNameShipMasterOfDustDescription">Rolle: Legat</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Academy_DustMasterPopup-Title">WILLKOMMEN, LEGAT!</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Academy_DustMaster1Popup-Description">Dir wurde die Aufgabe übertragen, dich für die galaktische Eintracht und die Interessen der Schutzlosen einzusetzen! In dieser Position wirst du von der politischen Unterstützung von Isyander und den Massen profitieren.</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustTitle">Legat</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustDescription">Mit der Aufgabe, für die galaktische Eintracht und die Interessen der Schutzlosen einzutreten, profitiert der Legat von der politischen Unterstützung von Isyander und den Massen.</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustEffectOverride">Der Legat hat Zugang zu allen Nebenfraktion-Verbesserungen, eine Kriegserklärung an ihn ist teurer, und er kann einen Kreuzzug gegen einen Gegner verkünden.</LocalizationPair>
+  <LocalizationPair Name="%ShipDesignSmall01AttackerAcademyDescription">Rolle: Angreifer</LocalizationPair>
+  <LocalizationPair Name="%NegotiationModalWindowMakeOfferButtonCantAffordCrusadeDeclarations">Du hast keine Kreuzzug-Verkündigungen mehr</LocalizationPair>
+  <LocalizationPair Name="%NegotiatonModalWindowMakeOfferButtonTheyCantAffordCrusadeDeclarations">Sie haben keine Kreuzzug-Verkündigungen mehr</LocalizationPair>
+  <LocalizationPair Name="%NegotiationModalWindowMakeOfferButtonCantAffordAcademyAuctionBlocks">Du hast keine Sperren für Akademieauktionen mehr</LocalizationPair>
+  <LocalizationPair Name="%NegotiatonModalWindowMakeOfferButtonTheyCantAffordAcademyAuctionBlocks">Sie haben keine Sperren für Akademieauktionen mehr</LocalizationPair>
+  <LocalizationPair Name="%NotificationAcademyRequestDescription">Damit die Akademie weiterhin etwas entwickeln, erforschen und Spezialprojekte verfolgen kann, benötigt sie Folgendes: {0}.
+
+Alle Beteiligten erhalten Kredit bei der Akademie, der zum Tauschen gegen Gefälligkeiten eingesetzt werden kann.</LocalizationPair>
+  <LocalizationPair Name="%NotificationAcademyRolesDescription">Zur Förderung der Zusammenarbeit und als vertrauensbildende Maßnahme hat die Führung der Akademie Schlüsselrollen an verschiedene beteiligte Fraktionen vergeben.
+
+Alle Teilnehmer haben Kredit erhalten, den sie zum Tauschen gegen Gefälligkeiten von der Akademie einsetzen können.</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasAnomalyTitle">Planeten mit Anomalien</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasDepositLuxuryTitle">Planeten mit Luxusressourcen-Vorkommen</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasDepositStrategicTitle">Planeten mit Vorkommen für strategische Ressourcen</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasMoonTitle">Planeten mit Monden</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusMinorOraculars3_TooltipEffect">Schaltet das Gesetz zur Dust-Dämmung frei</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsShortTitle">Dust-Dämmung</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsTitle">Dust-Seher-Sondierungsarbeitsprogramm</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsDescription">Diese Initiative zur Ausweitung der medizinischen Versorgungsgesetze für Abbau-Industrien und der Regierungsprogramme für öffentliche Bauvorhaben stellt Dust-empfindlichen Bevölkerungen staatliche Arbeitsprogramme und hochentwickelte Einrichtungen bereit, um bedeutende Lagerstätten zur Finanzierung unseres Imperiums ausfindig zu machen.</LocalizationPair>
+  <LocalizationPair Name="%LawEffectP00L26-PopulationCollectionMinorOracularsEffectOverride">Zeigt arkane Kuriositäten auf, die bei der Suche eine große Menge Dust ergeben</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusDamageOnAcademyTitle">Verlorenen-Eingeweideschau</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusDamageOnAcademyDescription">Die Xirmisala sind Experten beim Sammeln von Dust von Zerstörtem und Verrottendem.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusContributionToAcademyTitle">Verlorenen-Archäologie</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusContributionToAcademyDescription">Die Xirmisala verstehen die Muster der Dust-Ansammlung an lange vergessenen oder ungewöhnlichen Orten.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionTitle">Akademie-Erweiterung</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionDescription">Zusätzlicher Schwierigkeitsgrad der Akademie-KI (Herausforderungsstufe für den Spieler).</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionNoneTitle">Keine</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionNoneDescription">Die Akademie funktioniert normal ohne die Erwachen-Inhalte.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionLowTitle">Gering</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionLowDescription">Die Akademie kann ohne die Hilfe des Spielers nicht über ihre ursprüngliche Größe hinaus expandieren.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionMediumTitle">Mittel</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionMediumDescription">Die Akademie expandiert in der Anfangsphase des Spiels.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionHighTitle">Hoch</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionHighDescription">Die Akademie hat eine Überbevölkerungsschwelle wie andere Imperien.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionEndlessTitle">Unendlich</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionEndlessDescription">Die Akademie expandiert während des gesamten Spiels.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEasyDescription">Die Akademie generiert kleine Flotten durchschnittlicher Schiffe.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyNormalDescription">Die Akademie generiert durchschnittlich große Flotten durchschnittlicher Schiffe.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyHardDescription">Die Akademie generiert große Flotten durchschnittlicher Schiffe.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEndlessTitle">Unendlich</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEndlessDescription">Die Akademie generiert große Flotten mächtiger Schiffe.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementTemplarsFinalQuest1TooltipOverride">Kein [scienceColored]-Malus auf Planeten</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementTemplarsFinalQuest2TooltipOverride">2x Standard [scienceColored] von [Relic]</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsTitle">Akademie-Abhandlung</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedEffectOverride">Die Nebenfraktion wurde in einen angesehenen Vasallen und ein Protektorat umgewandelt, was dir Zugriff auf ihre Ressourcen und ihr Fraktionsmerkmal bietet und sie gegen äußeren Wettbewerb abschottet, den Bewohnern aber dauerhaft die Möglichkeit bietet, ihre lokalen Interessen selbst zu verwalten.</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedTitle">AUF LINIE</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedDescription">Die Nebenfraktion wurde in einen angesehenen Vasallen und ein Protektorat umgewandelt, was dir Zugriff auf ihre Ressourcen und ihr Fraktionsmerkmal bietet.</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsTitle">Auf Linie bringen</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSwarmMissilesExplicationTitle">Schwarmraketen feuern viele Geschosse in kurzen Salven ab. Ihr Zweck ist es, anderen Raketen, EMP-Raketen und Batterien mit Detonationswirkung Deckung durch die feindliche Raketenabwehr zu geben. Höher entwickelte Raketen können in einer einzigen Salve mehr verbündeten Raketen Deckung geben.</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleOnlyOnePerFlotillaTitle">Der Effekt zählt nur einmal pro Flottille</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleOnlyOnePerShipTitle">Kann nur einmal pro Schiff installiert werden</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPFlotillaDefenseTitle">Deaktivierungsdauer Flottillen-EMP-Waffe</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleMaximumShieldCapForFlotillaTitle">Schildkapazität Flottille</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleShieldAbsorptionForFlotillaTitle">Schildabsorption Flottille</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSquadronExplicationTitle">Die gegnerische Raketenabwehr nimmt erst Kampfschiffe und dann Bombenschiffe ins Visier.
+Abfangjäger: Schnell und stark gegen gegnerische Geschwader
+Mehrzweckkampfschiff: Langsam, panzerartig und großartig gegen kleinere Schiffe
+Schweres Bombenschiff: Beständig unter schwerem Beschuss, aber langsam
+Leichtes Bombenschiff: Schnell mit hohem Schaden, aber anfällig</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlotillaShieldExplicationTitle">Flottillenschilde erhöhen die Schildkapazität und die Energieverteidigung jedes Schiffs in der Flottille.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaShipManpowerKillPerHitPercentTitle">Getötete Besatzung pro Treffer gegen die Flottille</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaManpowerDamageOverTimeIncreaseTitle">Personalschaden an Landekapsel-Modulen der Flottille</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDamageTitle">Geschwaderschaden</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronSpeedTitle">Geschwadergeschwindigkeit</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleHullWeaknessTitle">Rumpfschwäche</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSSquadronTitle">Raketenabwehrschaden für Geschwader pro Salve</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlakDamageModifierTitle">Raketenabwehrschaden</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectEfficiencyAgainstSquadronModifierTitle">Modifikator: Raketenabwehrschaden für Geschwader</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectMediumRangeBonusTitle">Bonus-Präzision auf mittlere Distanz</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDefenseAgainstSquadronTitle">Erlittener Schaden durch Geschwader</LocalizationPair>
+  <LocalizationPair Name="%MaximumDamageBonusFromManpowerTitle">Schadensbonus durch die Besatzung an Bord</LocalizationPair>
+  <LocalizationPair Name="%CriticalHitChanceTitle">Kritische Trefferchance</LocalizationPair>
+  <LocalizationPair Name="%CriticalAttackChanceTitle">Kritische Trefferchance</LocalizationPair>
+  <LocalizationPair Name="%SquadronCriticalDamageBonusTitle">Schadensbonus für kritische Geschwadertreffer</LocalizationPair>
+  <LocalizationPair Name="%SquadronTypeFighterTitle">Kampfschiffe</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBombersCountDescription">Gesamtanzahl der Bombereinheiten
+Gegen Schiffe:
+Energie-Bombenschiffe haben 90 % Rumpf- und 30 % Schilddurchschlagskraft
+Geschoss-Bombenschiffe haben 30 % Rumpf- und 90 % Schilddurchschlagskraft</LocalizationPair>
+  <LocalizationPair Name="%ShipStatFightersCountDescription">Gesamtanzahl der Kampfschiffeinheiten
+Gegen Schiffe:
+Energie-Kampfschiff haben 60 % Rumpf- und 40 % Schilddurchschlagskraft
+Geschoss-Kampfschiff haben 40 % Rumpf- und 60 % Schilddurchschlagskraft</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleMediumSupportShipOnlyTitle">Kann nur auf den folgenden mittleren Schiffen installiert werden: [support]</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusEvasionTitle">Ausweichen der Flotte</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus1DefensiveTitle">Defensiv</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus1DefensiveDescription">-50 % EMP-Deaktivierungsdauer
+-50 % durch kritischen Treffer erlittenen Schaden
+Für Module:
++10 % Schiffsenergie
++10 % Schildkapazität
++10 % Verteidigung für Panzerung und Schilde</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus2DefensiveTitle">Beschützer</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus2DefensiveDescription">-10 % EMP-Deaktivierungsdauer pro Defensivmodul
+-10 % durch kritischen Treffer erlittener Schaden pro Defensivmodul</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDamageTitle">Schaden, der durch jede Raketenabwehrsalve zugefügt wird</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakFireRateTitle">Raketenabwehrfeuerkadenz</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaFlakDamageModifierTitle">Raketenabwehrschaden für Flottille</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaFlakFireRateModifierTitle">Raketenabwehrfeuerkadenz für Flotille</LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportEMPFlotillaDefenseTitle">EMP-Störfeld</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneAntiCarrierModuleDescription">Du kannst nur ein Zielsystemmodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneAntiCrewModuleDescription">Du kannst nur ein Schrapnellmodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneFlakEnhancerModuleDescription">Du kannst nur ein Intelligentes Raketenabwehrmodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneSquadronOffenseEnhancerDescription">Du kannst nur ein Treffer-Multiplikator-Modul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneWeaponKineticRailgunDescription">Du kannst nur ein Schienenkanonenmodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneSquadronDefenseEnhancerDescription">Du kannst nur ein Geschwader-Schiebeeinheit-Modul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneJammerModuleDescription">Du kannst nur ein Störsendermodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneBaitModuleDescription">Du kannst nur ein Störsendermodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneEMPFlotillaDefenseDescription">Du kannst nur ein EMP-Störfeldmodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneFlakScramblerDescription">Du kannst nur ein Abstoßplattenmodul ausrüsten.</LocalizationPair>
+  <LocalizationPair Name="%ModuleWeaponMissileEMP1Strategic4Title2">Störrakete (Schild)</LocalizationPair>
+  <LocalizationPair Name="%ModuleWeaponBeamEMP1Strategic3Title2">Störstrahl (Waffe)</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary3EffectOverride2">+1 Startstufe für Schiffe</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary4EffectOverride2">+1 Startstufe für Schiffe</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary5EffectOverride2">+1 Startstufe für Schiffe</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip1TooltipEffect">+1 Startstufe für Schiffe</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueShip1TooltipEffect">+4 Startstufe für Schiffe</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip2TooltipEffect">+2 Startstufe für Schiffe
++10 % Energie für fertiggestellte Schiffe</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip1CraversTooltipEffect">+3 Startstufe für Schiffe
++10 % Energie für fertiggestellte Schiffe</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleSmallAttackerDescription">Die Rolle dieses Schiffes besteht darin, dem Gegner massiven Schaden zuzufügen.
+Primäre Ziele: Beschützer und dann Koordinatoren
+Sekundäre Ziele: Trägerschiffe
+Tertiäre Ziele: Angreifer und dann Jäger</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleMediumAttackerDescription">Die Rolle dieses Schiffes besteht darin, dem Gegner massiven Schaden zuzufügen.
+Primäre Ziele: Beschützer und dann Koordinatoren
+Sekundäre Ziele: Trägerschiffe
+Tertiäre Ziele: Angreifer und dann Jäger</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleSmallSupportDescription">Die Rolle dieses Schiffes besteht darin, andere Schiffe im Gefecht zu beschützen.
+Primäre Ziele: Trägerschiffe
+Sekundäre Ziele: Angreifer und dann Jäger
+Tertiäre Ziele: Beschützer und dann Koordinatoren</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleMediumSupportDescription">Die Rolle dieses Schiffes besteht darin, andere Schiffe im Gefecht zu beschützen oder zu unterstützen.
+Primäre Ziele: Trägerschiffe
+Sekundäre Ziele: Angreifer und dann Jäger
+Tertiäre Ziele: Beschützer und dann Koordinatoren</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleHeroDescription">Diese Art von Schiff ist an einen Helden gebunden. Alle Kosten an [commandPoint] (Befehlspunkten) werden aufgehoben. Heldenschiffe nehmen gegnerische Schiffe ins Visier und werden von ihnen ins Visier genommen, als gehörten sie zur Angreiferklasse.
+Primäre Ziele: Beschützer und dann Koordinatoren
+Sekundäre Ziele: Trägerschiffe
+Tertiäre Ziele: Angreifer und dann Jäger</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleBattleshipDescription">Moloche werden zuerst von Militärschiffen ins Visier genommen.
+Der Moloch ist das größte und stärkste Schiff der Galaxie. Er kann in Flotten integriert und weiter aufgewertet werden, wodurch er entweder mehr Plätze oder die Ionenwelle erhält – eine mächtige Fähigkeit, die allen am Knoten anwesenden Flotten Schaden zufügt.</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleJuggernautDescription">Leviathane werden zuerst von Militärschiffen ins Visier genommen.
+Die Rolle eines Leviathans hängt von den eingebauten Modulen ab. Diese Schiffe können auf wirtschaftliche, wissenschaftliche oder militärische Funktionen ausgelegt werden.</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleCarrierDescription">Die Rolle dieses Schiffes besteht darin, Kampfschiffe und Bomber in die Schlacht zu transportieren.
+Primäre Ziele: Trägerschiffe
+Sekundäre Ziele: Angreifer, Beschützer, Koordinatoren und Jäger gleichermaßen</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleJammer1ExplicationTitle">Wenn dieser Störsender auf Militärschiffe angewendet wird, dann stellt dies sicher, dass das Schiff nach anderen Militärschiffen ins Visier genommen wird.</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleJammer2ExplicationTitle">Wenn dieser Störsender auf einem beliebigen Schiff (einschließlich Leviathanen) angewendet wird, dann stellt dies sicher, dass das Schiff als Letztes ins Visier genommen wird.</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleBait1ExplicationTitle">Wenn dieser Köder auf ein Militärschiff angewendet wird, dann stellt dies sicher, dass das Schiff vor anderen Militärschiffen ins Visier genommen wird.</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleBait2ExplicationTitle">Wenn dieser Köder auf einem beliebigen Schiff (einschließlich Leviathanen) angewendet wird, dann stellt dies sicher, dass das Schiff als Erstes ins Visier genommen wird.</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyAgressiveDescription">Konzentriert sich auf das Zufügen von hohem Schaden.
+Jedes Kampfschiffgeschwader greift den Gegner an.</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyDefensiveDescription">Konzentriert sich auf das Verringern von erlittenem Schaden.
+Jedes Kampfschiffgeschwader bleibt bei den verbündeten Schiffen, um diese gegen feindliche Bombenschiffe zu schützen.</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyPostDescription">Konzentriert sich auf das Erwerben von Boni nach der Schlacht.
+Die Hälfte der Kampfschiffgeschwader wehrt ab und die andere Hälfte greift den Gegner an.</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveLongShieldIncreaseDescription">Verbessert Schilde, um die Abwehr zu verbessern, in erster Linie gegen Energiewaffen.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedDamageIncreaseDescription">Erhöht den Schaden basierend auf der gegnerischen Schiffsgröße für deine kleinen und mittleren Schiffe.</LocalizationPair>
+  <LocalizationPair Name="%PlayPostLongEmpireManpowerSavingDescription">Ein Teil des verlorenen Personals kehrt zum Imperiumsbestand zurück.</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveLongCooldownIncreaseDescription">Deaktiviert Hilfsmodule.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectCooldownIncreaseEffectOverride">Für beide Flotten:
+Flottillenschild-, Schildaufladungs- und Schiffsreparatur-Gefechtseffekte funktionieren nicht.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectMovementGainTooltipOverride">Bewegungspunkte für Schiffe werden nach dem Gefecht aufgefüllt</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortMoraleBonusIncreaseDescription">Verbessert die Effekte des Moralbonus. Das erhöht den Schaden, die Präzision und das Ausweichen für deine Schiffe, wenn der Feind über weniger aktive Flottillen verfügt.</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveShortAccuracyReductionDescription">Verwürfelt gegnerische Zielerfassungssysteme über lange und mittlere Reichweite.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectAccuracyReductionOtherEffectOverride">Für die gegnerische Flotte:</LocalizationPair>
+  <LocalizationPair Name="%PlayPostBalancedActionGainDescription">Erhalte einen Aktionspunkt nach dem Gefecht.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveLongSplashDamageDescription">Ein Prozentsatz des zugefügten Schadens wird auf andere Schiffe der Flottille weiterverteilt.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedShieldPenetrationIncrease2Title">Plasmaverzerrung ++</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedShieldPenetrationIncrease2Description">Verbesserte Plasmaverzerrungsversion.</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveMediumSquadronDefenseBoostTitle">Geschlossener Luftraum</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveMediumSquadronDefenseBoostDescription">Kampfschiffe verteidigen Flottenschiffe, statt in die Offensive zu gehen. Ihre Vertrautheit mit den Schiffen und deren Formationen verschaffen ihnen einen Vorteil in einem möglichen Kurvenkampf.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectSquadronDefenseBoostOtherEffectOverride">Für die gegnerische Flotte:</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortAccuracyReductionPerSquadronTitle">Zielerfassungssysteme verwürfeln</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortAccuracyReductionPerSquadronDescription">Kampfschiffe und Bombenschiffe verwürfeln die gegnerischen Zielerfassungssysteme, ziehen dadurch das feindliche Feuer auf sich und verbessern die Überlebenschancen der Schiffe in der Flotte.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectAccuracyReductionPerSquadronOtherTooltip">Für die gegnerische Flotte:
+-0,5 % Präzision bei jeder Reichweite pro Geschwader</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter1Title">Einfaches Mehrzweckkampfschiff</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter2Title">Verbessertes Mehrzweckkampfschiff</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber1Title">Einfaches schweres Bombenschiff</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber2Title">Verbessertes schweres Bombenschiff</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomberEnergy1Title">Einfache leichte Plasmabombenschiffe</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighterEnergy1Title">Einfache Abfangjäger</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomberEnergy2Title">Verbesserte leichte Plasmabombenschiffe</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighterEnergy2Title">Verbesserte Abfangjäger</LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportFlakEnhancer1Title">Koordinierte Raketenabwehr</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull1Title">Perfektionierte Angreiferkonstruktionen</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected2Hull1Title">Perfektionierte Angreiferkonstruktionen</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull1TooltipEffect">+500 Energie für Angreifer
+Modulmultiplikator wird auf x1,25 für Angreifer gesetzt
+Diese Erhöhung des Modulmultiplikators wirkt sich nicht auf WIND und die strategischen Kosten der Schiffe aus</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull2Title">Perfektionierte Beschützerkonstruktionen</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull2TooltipEffect">+500 Energie für Beschützer
+Modulmultiplikator wird auf x1,25 für Beschützer gesetzt
+Diese Erhöhung des Modulmultiplikators wirkt sich nicht auf WIND und die strategischen Kosten der Schiffe aus</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleColonizationExplicationTitle">Ermöglicht diesem Schiff, sich zu opfern, um einen bewohnbaren Planeten zu kolonisieren</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveMediumProjectilePenertrationIncrease2Title">Schwerkraftverzerrung ++</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeMediumDescription">Mittlere Schiffe benötigen #E3BDAC#3#REVERT# [commandPoint] (Befehlspunkte) ihrer Flotte.
+Rumpfschwäche: #E3BDAC#300#REVERT# (siehe Verteidigungsabsorption)</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeLargeDescription">Große Schiffe benötigen #E3BDAC#6#REVERT# [commandPoint] (Befehlspunkte) ihrer Flotte.
+Rumpfschwäche: #E3BDAC#800#REVERT# (siehe Verteidigungsabsorption)</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeJuggernautDescription">Leviathane stellen #E3BDAC#10#REVERT# [commandPoint] (Befehlspunkte) und müssen alleine in ihrer Flotte sein, solange sie keine Spezialisierung haben.
+Rumpfschwäche: #E3BDAC#600#REVERT# (siehe Verteidigungsabsorption).</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeMothershipDescription">Archen benötigen #E3BDAC#8#REVERT# [commandPoint] (Befehlspunkte) ihrer Flotte.
+Rumpfschwäche: #E3BDAC#1000#REVERT# (siehe Verteidigungsabsorption)</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectMoralePenaltyEffectOverride">Für beide Flotten:
+Der Moralbonus wird zum Malus (Effekt x -1).</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSupportAntiCarrierExplicationTitle">Zielsystemmodule ermöglichen es jedem Schiff in der Flottille, je nach Befehlspunkten des anvisierten Schiffs erhöhten Schaden zuzufügen. Der Effekt besteht auch dann fort, wenn der Koordinator zerstört wird.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageBonusPerTargetCommandPointsFlotillaTitle">Schaden pro Ziel-BP bei Schiffen in der Flottille</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyEconomicTitle">Wirtschaftliche Akademiediplomatie</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyScientificTitle">Wissenschaftliche Akademiediplomatie</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyMilitaryTitle">Militärische Akademiediplomatie</LocalizationPair>
+  <LocalizationPair Name="%StartedWarWithAcademyTitle">Kriegserklärungen an Akademie</LocalizationPair>
+</Datatable>

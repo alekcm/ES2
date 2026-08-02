@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- #####################################-->
+    <!-- #########     UPDATE 7    ###########-->
+    <!-- #####################################-->
+
+
+    <!-- #########   BOTS/EPISTIS   ###########-->
+
+
+    <QuestGuiElement Name="MinorPopulationQuest01">
+        <Title>%MinorPopulationQuest01-IntroTitle</Title>
+        <Description>%MinorPopulationQuest01-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Epistis_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest01-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest01-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest01-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest01-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest01-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest01-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest01-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest01-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest01-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest01-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest01-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest01-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest01-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest01-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest01-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <!-- #########   KALGEROS/BENTHYS   ###########-->
+
+
+    <QuestGuiElement Name="MinorPopulationQuest03">
+        <Title>%MinorPopulationQuest03-IntroTitle</Title>
+        <Description>%MinorPopulationQuest03-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Kalgeros_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest03-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest03-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest03-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest03-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_Science">%MinorPopulationQuest03-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest03-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest03-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest03-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest03-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_Science2">%MinorPopulationQuest03-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest03-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest03-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest03-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest03-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_Industrialist">%MinorPopulationQuest03-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest03-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest03-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest03-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest03-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_Industrialist2">%MinorPopulationQuest03-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest03-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest03-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest03-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest03-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_Pacifist">%MinorPopulationQuest03-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   MAVROS   ###########-->
+
+
+    <QuestGuiElement Name="MinorPopulationQuest04">
+        <Title>%MinorPopulationQuest04-IntroTitle</Title>
+        <Description>%MinorPopulationQuest04-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Mavros_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest04-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest04-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest04-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest04-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest04-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest04-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest04-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest04-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest04-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest04-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest04-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest04-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest04-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest04-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest04-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   HAROSHEMS   ###########-->
+
+
+    <QuestGuiElement Name="MinorPopulationQuest05">
+        <Title>%MinorPopulationQuest05-IntroTitle</Title>
+        <Description>%MinorPopulationQuest05-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Haroshems_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest05-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest05-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest05-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest05-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_Science">%MinorPopulationQuest05-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest05-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest05-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest05-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest05-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective_Industrialist">%MinorPopulationQuest05-Choice02Objective</Objective>
+                </ObjectiveSet>               
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   PILGRIMS   ###########-->
+
+
+    <QuestGuiElement Name="MinorPopulationQuest06">
+        <Title>%MinorPopulationQuest06-IntroTitle</Title>
+        <Description>%MinorPopulationQuest06-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Pilgrims_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest06-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest06-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest06-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest06-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest06-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest06-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest06-Choice04Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice04Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice04ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice04Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest06-Choice04Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   PILGRIMS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest06Bis">
+        <Title>%MinorPopulationQuest06-IntroTitle</Title>
+        <Description>%MinorPopulationQuest06-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Pilgrims_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest06-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective4">%MinorPopulationQuest06-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest06-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest06-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest06-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest06-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest06-Choice04Title</Title>
+                    <Description>%MinorPopulationQuest06-Choice04Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest06-Choice04ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest06-Choice04Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest06-Choice04Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   NIRIS   ###########-->
+
+
+    <QuestGuiElement Name="MinorPopulationQuest07">
+        <Title>%MinorPopulationQuest07-IntroTitle</Title>
+        <Description>%MinorPopulationQuest07-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Niris_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest07-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest07-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest07-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest07-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest07-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest07-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest07-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest07-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest07-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest07-Choice02Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   NIRIS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest08">
+        <Title>%MinorPopulationQuest08-IntroTitle</Title>
+        <Description>%MinorPopulationQuest08-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Niris_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest08-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest08-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest08-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest08-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest08-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest08-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest08-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest08-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest08-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest08-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest08-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest08-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest08-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest08-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest08-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest08-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest08-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest08-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest08-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest08-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest08-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest08-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest08-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest08-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest08-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest08-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest08-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest08-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest08-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest08-Choice02Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+        <!-- #########   TIKANANS   ###########-->
+    
+    <QuestGuiElement Name="MinorPopulationQuest09">
+        <Title>%MinorPopulationQuest09-IntroTitle</Title>
+        <Description>%MinorPopulationQuest09-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Tikanan_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest09-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest09-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest09-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest09-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest09-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest09-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest09-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest09-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest09-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest09-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest09-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest09-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest09-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest09-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest09-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   AMOEBA   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest10">
+        <Title>%MinorPopulationQuest10-IntroTitle</Title>
+        <Description>%MinorPopulationQuest10-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Amoeba_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest10-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest10-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest10-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest10-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest10-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MinorPopulationQuest10-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest10-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest10-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest10-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest10-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest10-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest10-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest10-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest10-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest10-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   PULSOS   ###########-->
+    
+    <QuestGuiElement Name="MinorPopulationQuest11">
+        <Title>%MinorPopulationQuest11-IntroTitle</Title>
+        <Description>%MinorPopulationQuest11-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Pulsos_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest11-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest11-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest11-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest11-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest11-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest11-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest11-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest11-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest11-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest11-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest11-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest11-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest11-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest11-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest11-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   HISSHOS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest12">
+        <Title>%MinorPopulationQuest12-IntroTitle</Title>
+        <Description>%MinorPopulationQuest12-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Hisshos_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest12-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest12-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest12-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest12-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest12-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest12-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest12-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest12-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest12-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest12-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest12-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest12-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest12-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest12-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest12-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest12-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest12-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest12-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest12-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest12-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+     <!-- #########   GNASHASTS   ###########-->
+    
+    <QuestGuiElement Name="MinorPopulationQuest13">
+        <Title>%MinorPopulationQuest13-IntroTitle</Title>
+        <Description>%MinorPopulationQuest13-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Gnashasts_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest13-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest13-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest13-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest13-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest13-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest13-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest13-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest13-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest13-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest13-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest13-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest13-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest13-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest13-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest13-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+
+    <!-- #########   Deuviyans   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest14">
+        <Title>%MinorPopulationQuest14-IntroTitle</Title>
+        <Description>%MinorPopulationQuest14-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Deuviyans_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest14-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest14-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest14-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest14-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest14-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest14-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest14-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest14-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest14-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest14-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest14-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest14-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest14-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest14-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest14-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest14-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest14-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest14-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest14-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest14-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   Eyders   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest15">
+        <Title>%MinorPopulationQuest15-IntroTitle</Title>
+        <Description>%MinorPopulationQuest15-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Eyders_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest15-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest15-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest15-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest15-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest15-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest15-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest15-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest15-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest15-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest15-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest15-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest15-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest15-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest15-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest15-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   Bhagabas   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest16">
+        <Title>%MinorPopulationQuest16-IntroTitle</Title>
+        <Description>%MinorPopulationQuest16-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Bhagabas_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%MinorPopulationQuest16-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest16-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest16-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest16-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest16-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest16-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest16-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest16-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest16-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest16-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%MinorPopulationQuest16-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest16-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest16-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest16-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest16-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   Remnant   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest17">
+        <Title>%MinorPopulationQuest17-IntroTitle</Title>
+        <Description>%MinorPopulationQuest17-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Remnant_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest17-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest17-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest17-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest17-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest17-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest17-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest17-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest17-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest17-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest17-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest17-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest17-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest17-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest17-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest17-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <!-- #########   ZVALI   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest18">
+        <Title>%MinorPopulationQuest18-IntroTitle</Title>
+        <Description>%MinorPopulationQuest18-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Zvali_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest18-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest18-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest18-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest18-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest18-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest18-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest18-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest18-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest18-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest18-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest18-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest18-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest18-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest18-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest18-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   GREENMAN/AMBLYR   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest19">
+        <Title>%MinorPopulationQuest19-IntroTitle</Title>
+        <Description>%MinorPopulationQuest19-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Amblyr_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest19-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest19-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest19-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest19-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest19-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest19-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest19-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest19-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest19-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest19-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest19-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest19-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest19-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest19-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest19-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   GALVRANS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest20">
+        <Title>%MinorPopulationQuest21-IntroTitle</Title>
+        <Description>%MinorPopulationQuest21-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Galvrans_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest21-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest21-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest21-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest21-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest21-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest21-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest21-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest21-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest21-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest21-Choice02Objective</Objective>
+                </ObjectiveSet>               
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <!-- #########   GALVRANS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest21">
+        <Title>%MinorPopulationQuest21-IntroTitle</Title>
+        <Description>%MinorPopulationQuest21-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Galvrans_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest21-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest21-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest21-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest21-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest21-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest21-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest21-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest21-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest21-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest21-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest21-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest21-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest21-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest21-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest21-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest21-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest21-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest21-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest21-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest21-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   KALTIKMA   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest22">
+        <Title>%MinorPopulationQuest22-IntroTitle</Title>
+        <Description>%MinorPopulationQuest22-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/KalTikMa_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest22-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest22-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest22-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest22-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest22-Choice01Objective</Objective>
+                </ObjectiveSet>
+                  <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest22-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest22-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest22-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest22-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest22-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest22-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest22-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest22-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest22-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest22-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest22-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest22-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest22-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest22-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest22-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics02">
+                    <Title>%MinorPopulationQuest22-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest22-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest22-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest22-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest22-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########    SOWERS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest23">
+        <Title>%MinorPopulationQuest23-IntroTitle</Title>
+        <Description>%MinorPopulationQuest23-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Sowers_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%MinorPopulationQuest23-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest23-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest23-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest23-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest23-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest23-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest23-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest23-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest23-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest23-Choice02Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest23-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest23-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest23-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest23-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest23-Choice03Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest23-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest23-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest23-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest23-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest23-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+    
+    <!-- #########   SOWERS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest24">
+        <Title>%MinorPopulationQuest24-IntroTitle</Title>
+        <Description>%MinorPopulationQuest24-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Sowers_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics01">
+                    <Title>%MinorPopulationQuest24-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest24-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest24-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest24-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest24-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest24-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest24-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest24-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest24-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest24-Choice02Objective</Objective>
+                </ObjectiveSet>              
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <!-- #########   SEFALOROS   ###########-->
+
+    <QuestGuiElement Name="MinorPopulationQuest25">
+        <Title>%MinorPopulationQuest25-IntroTitle</Title>
+        <Description>%MinorPopulationQuest25-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/MinorFactionPopQuest/Sefaloros_Pop_Quest" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest25-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest25-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest25-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest25-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest25-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest25-Choice01Title</Title>
+                    <Description>%MinorPopulationQuest25-Choice01Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest25-Choice01ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest25-Choice01Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%MinorPopulationQuest25-Choice01Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%MinorPopulationQuest25-Choice02Title</Title>
+                    <Description>%MinorPopulationQuest25-Choice02Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest25-Choice02ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest25-Choice02Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%MinorPopulationQuest25-Choice02Objective</Objective>
+                </ObjectiveSet>              
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest25-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest25-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest25-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest25-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest25-Choice03Objective</Objective>
+                </ObjectiveSet>
+              <ObjectiveSet Politics="Politics04">
+                    <Title>%MinorPopulationQuest25-Choice03Title</Title>
+                    <Description>%MinorPopulationQuest25-Choice03Description</Description>
+                    <TooltipDescription>%MinorPopulationQuest25-Choice03ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%MinorPopulationQuest25-Choice03Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%MinorPopulationQuest25-Choice03Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+  
+
+</Datatable>

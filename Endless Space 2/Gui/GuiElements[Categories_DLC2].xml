@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ####################### -->
+    <!-- ######  HISSHOS  ###### -->
+    <!-- ####################### -->
+
+    <GuiElement Name="CategoryHeroSkillTreeMajorHisshos">
+        <Title>%CategoryHeroSkillTreeMajorHisshosTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityMajorHisshosSmall" />
+        </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="CategoryTechnologyFactionMajorHisshos">
+        <Title>%CategoryTechnologyFactionMajorHisshosTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryTechnologySmall" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="CategoryFactionMajorHisshos">
+        <Title>%PopulationMajorHisshosTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityMajorHisshosSmall" />
+        </Icons>
+    </GuiElement>
+
+
+    <!-- ########################### -->
+    <!-- ######  JUGGERNAUTS  ###### -->
+    <!-- ########################### -->
+
+    <ExtendedGuiElement Name="CategoryJuggernaut">
+        <Title>%CategoryJuggernautTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryJuggernaut" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryJuggernautSpecialization">
+        <Title>%CategoryJuggernautSpecializationTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryJuggernautSpecialization" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="CategoryEmpireAction">
+        <Title>%CategoryEmpireActionTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryEmpireAction" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="CategoryFleetStatus">
+        <Title>%CategoryFleetStatusTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Categories/CategoryHullSmall" />
+        </Icons>
+    </GuiElement>
+
+
+    <!-- ########################### -->
+    <!-- ########  REMAINS  ######## -->
+    <!-- ########################### -->
+
+    <GuiElement Name="CategoryRemains">
+        <Title>%CategoryCuriosityTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Curiosities/CuriosityTypeRemainsSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryCuriosityTypeRemainsEncounter">
+        <Title>%CategoryCuriosityTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Curiosities/CuriosityTypeRemainsSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryCuriosityTypeRemainsMinorFaction">
+        <Title>%CategoryCuriosityTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Curiosities/CuriosityTypeRemainsSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryCuriosityTypeRemainsPirateLair">
+        <Title>%CategoryCuriosityTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Curiosities/CuriosityTypeRemainsSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="CategoryCuriosityTypeRemainsGroundBattle">
+        <Title>%CategoryCuriosityTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Curiosities/CuriosityTypeRemainsSmall" />
+        </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="CategoryAnomalyQualityRemains">
+        <Title>%CategoryAnomalyQualityRemainsTitle</Title>
+        <Description>%CategoryAnomalyQualityRemainsDescription</Description>
+        <Color Red="167" Green="174" Blue="185" Alpha="255"/>
+    </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="CategoryAnomalyQualityRemainsUpgradeable">
+    <Title>%CategoryAnomalyQualityRemainsTitle</Title>
+    <Description>%CategoryAnomalyQualityRemainsDescription</Description>
+    <Color Red="167" Green="174" Blue="185" Alpha="255"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="CategoryAnomalyQualityRemainsUpgraded">
+    <Title>%CategoryAnomalyQualityRemainsTitle</Title>
+    <Description>%CategoryAnomalyQualityRemainsDescription</Description>
+    <Color Red="167" Green="174" Blue="185" Alpha="255"/>
+  </ExtendedGuiElement>
+</Datatable>

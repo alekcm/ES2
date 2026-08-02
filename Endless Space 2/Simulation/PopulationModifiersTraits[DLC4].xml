@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <!-- WHEN ADDING TRAITS THAT ARE RESTRICTED TO A SPECIFIC DLC, PLEASE LET A PROGRAMMER KNOW !
+    CHANGES ARE REQUIRED ON THE CODE SIDE -->
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitPrimaryHappinessTemple" SubCategory="Secondary" ShowInCustom="true" Cost="10">
+        <Tags>BonusPopulationHappiness</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitPrimaryHappinessTemple"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!-- +2 approval per pop on systems with temples -->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryHappinessTemple"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryHappinessTemple"/>
+            </Modifier>
+        </Modifiers>
+		
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationAssimilatedPrimaryHappinessTemple">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPrimaryHappinessTemple"/>
+            </Modifier>
+        </AssimilatedModifiers>			
+    </PopulationModifiersTrait>
+
+	<PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryFIDSIHappy" SubCategory="Secondary" ShowInCustom="true" Cost="15">
+		<Tags>HappinessStatusStarSystem3,BonusPopulationFIDSI</Tags>
+		<Modifiers>
+			<Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+				<SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryFIDSIHappy"/>
+			</Modifier>
+			<Modifier Class="ClassPopulationPlanet">
+				<!-- +2 fidsi per pop on happy-->
+				<SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryFIDSIHappy"/>
+			</Modifier>
+			<Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+				<SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryFIDSIHappy"/>
+			</Modifier>
+		</Modifiers>
+		
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedSecondaryFIDSIHappy"/>
+            </Modifier>
+        </AssimilatedModifiers>		
+	</PopulationModifiersTrait>
+
+	<PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryDustHappyEpic" SubCategory="Secondary" ShowInCustom="true" Cost="15">
+		<Tags>HappinessStatusStarSystem3,BonusPopulationDust</Tags>
+		<Modifiers>
+			<Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+				<SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryDustHappyEpic"/>
+			</Modifier>
+			<Modifier Class="ClassPopulationPlanet">
+				<!-- +4 dust per pop on happy -->
+				<SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryDustHappyEpic"/>
+			</Modifier>
+			<Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+				<SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryDustHappyEpic"/>
+			</Modifier>
+		</Modifiers>
+		
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetSecondaryDustHappyEpic"/>
+            </Modifier>
+        </AssimilatedModifiers>			
+	</PopulationModifiersTrait>
+</Datatable>

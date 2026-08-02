@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+  <SimulationDescriptor Name="TechnologyHull2Vaulters"                         Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyHull3Vaulters"                         Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyImproveHull1Vaulters"                  Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyImproveHull2Vaulters"                  Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyHull4Vaulters"                         Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyHull5Vaulters"                         Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyImproveHull3Vaulters"                  Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyImproveHull4Vaulters"                  Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyHull6Vaulters"                         Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyHullMothership2Vaulters"               Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyImproveHull5Vaulters"                  Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyPortalUpgradePacificConversion"        Type="Technology" IsSerializable="false" />
+
+  <SimulationDescriptor Name="TechnologyPerfected1Hull1Vaulters"                  Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyPerfected1Hull2Vaulters"                  Type="Technology" IsSerializable="false"/>
+
+  <SimulationDescriptor Name="TechnologyUnique10Vaulters"                      Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyUniqueInfluence1Vaulters"                      Type="Technology" IsSerializable="false"/>
+
+  <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique2Vaulters"    Type="TechnologyLink"/>
+  <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique3Vaulters"    Type="TechnologyLink"/>
+
+
+  <SimulationDescriptor Name="TechnologyLinkExclusionUnique2Unique3Vaulters"              Type="TechnologyLink"/>
+  <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique4ToUnique6Vaulters"    Type="TechnologyLink"/>
+  <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique5ToUnique7Vaulters"    Type="TechnologyLink"/>
+
+  <SimulationDescriptor Name="TechnologyLinkEmpireDevelopmentUnique8ToUnique9Vaulters"    Type="TechnologyLink"/>
+  <SimulationDescriptor Name="TechnologyLinkExclusionUnique6Unique7Vaulters"              Type="TechnologyLink"/>
+
+  <!-- Obsolete descriptor, no links attached -->
+  <!--<SimulationDescriptor Name="TechnologyLinkScienceAndExploration25To6Vaulters"              Type="TechnologyLink"/>-->
+
+
+  <!--############################-->
+  <!--## FREE CONTENT VAULTERS  ##-->
+  <!--############################-->
+
+  <SimulationDescriptor Name="TechnologyMetaplotQuest1"                      Type="Technology" IsSerializable="false"/>
+  <SimulationDescriptor Name="TechnologyMetaplotQuest2"                      Type="Technology" IsSerializable="false"/>
+
+</Datatable>

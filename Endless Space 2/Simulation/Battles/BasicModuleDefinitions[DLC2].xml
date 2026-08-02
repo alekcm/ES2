@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/BasicModuleDefinition.xsd">
+
+    <!--################################-->
+    <!--###           CITADEL        ###-->
+    <!--################################-->
+    <BasicWeaponModule Name="CitadelWeaponAOENuke1">
+        <SimulationDescriptorReference Name="ClassBasicModule"/>
+        <SimulationDescriptorReference Name="ClassCitadelWeapon"/>
+        <SimulationDescriptorReference Name="ClassCitadelWeaponAOE"/>
+        <SimulationDescriptorReference Name="CitadelWeaponAOENuke1"/>
+        <BattleActionReference Name="CitadelWeapon_Initialize"/>
+        <BattleActionReference Name="CitadelAOE_SalvoLaunched"/>
+        <BattleActionReference Name="CitadelAOE_SalvoHitTarget"/>
+        <BattleActionReference Name="CitadelAOE_SalvoPostHitTarget"/>
+        <BattleActionReference Name="CitadelAOE_SalvoPostHitTarget_StatisticsRecording"/>
+        <BattleActionReference Name="CitadelWeaponAOE_SalvoPostHitTarget_StatisticsRecording"/>
+        <SalvoReference Name="CitadelSalvoAOE1"/>
+        <TargetSortingCriterion Name="Type">
+            <ScoreModifier Name="Flotilla">1</ScoreModifier>
+        </TargetSortingCriterion>
+    </BasicWeaponModule>
+    
+</Datatable>

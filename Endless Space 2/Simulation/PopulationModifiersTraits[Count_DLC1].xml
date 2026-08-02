@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitVaultersCount" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityVaultersCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityVaultersCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityVaultersCount"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+    
+    <PopulationModifiersTrait Name="PopulationModifiersTraitVaultersScienceCount" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityVaultersScienceCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityVaultersScienceCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityVaultersScienceCount"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+    
+    <PopulationModifiersTrait Name="PopulationModifiersTraitVaultersMilitaryCount" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityVaultersMilitaryCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityVaultersMilitaryCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityVaultersMilitaryCount"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+    
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSistersOfMercyCount" SubCategory="Count">
+      <Modifiers>
+        <Modifier Class="ClassPopulationPlanet">
+          <SimulationDescriptorReference Name="ClassPopulationPlanetAffinitySistersOfMercyCount"/>
+        </Modifier>
+        <Modifier Class="ClassPopulationStarSystem">
+          <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinitySistersOfMercyCount"/>
+        </Modifier>
+        <Modifier Class="ClassPopulationEmpire">
+          <SimulationDescriptorReference Name="ClassPopulationEmpireAffinitySistersOfMercyCount"/>
+        </Modifier>
+      </Modifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

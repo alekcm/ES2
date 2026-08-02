@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationDefinition.xsd">
+    <!-- Please update the SizeOfFidsiToRenderInFloat value in the code side when adding or removing a population definition -->
+    
+    <!-- ####################################### -->
+    <!--                UDPATE9                 -->
+    <!-- ####################################### -->
+
+
+    <PopulationDefinition AffinityName="AffinityHarmony" Standard="true">
+        <DefaultPolitics>
+            <Politics PoliticsReference="Politics04" BaseScore="1" BaseTrend="0"/>
+        </DefaultPolitics>
+
+        <Trait Name="PopulationPoliticalTraitEcologist"/>
+        <Trait Name="PopulationPoliticalTraitAntiReligious"/>
+        <Trait Name="PopulationPoliticalTraitScientificToEcologist"/>
+
+        <Trait Name="PopulationModifiersHarmonyCount"/>
+        <Trait Name="PopulationModifiersTraitHarmony"/>
+
+        <Trait Name="PopulationModifiersTraitPrimaryStrategicToFood01"/>
+        <Trait Name="PopulationModifiersTraitSecondaryStrategicToScience01"/>
+
+        <Trait Name="PopulationCollectionBonusTraitHarmony" />
+
+        <Desires></Desires>
+        <Wills></Wills>
+        <AffinityMapping Name="AffinityMappingHarmony"/>
+        <GrowthBoostLuxuryOptions>
+            <Luxury>Luxury1</Luxury>
+            <Luxury>Luxury2</Luxury>
+            <Luxury>Luxury3</Luxury>
+            <Luxury>Luxury4</Luxury>
+            <Luxury>Luxury5</Luxury>
+            <Luxury>Luxury6</Luxury>
+            <Luxury>Luxury7</Luxury>
+            <Luxury>Luxury8</Luxury>
+        </GrowthBoostLuxuryOptions>
+    </PopulationDefinition>
+
+
+</Datatable>

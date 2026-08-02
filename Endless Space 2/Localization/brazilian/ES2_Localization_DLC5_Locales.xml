@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%QuestTypeQuestTitle">Desafio</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Title">Um inimigo em comum</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Description">O Coletivo dos Bastardos Autônomos, um orgulhoso fomentador de pirataria e ilegalidade por toda a galáxia (isso já há décadas), está novamente chamando a atenção dos seus serviços de inteligência.
+Há rumores de que os piratas não só estão se juntando, como também se equipando com armas descobertas recentemente em uma ruína dos Endless. Apesar de ser difícil distinguir o que é fato e o que é boato, não custa nada enviar sinais públicos e privados indicando que a galáxia permanece firme contra esses bandidos.</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Objective">Nos próximos $Timer [turn] turnos, ganhe um novo aliado.</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-ObjectiveTitle">FEDERAR</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-ObjectiveDescription">Faça uma demonstração pública de união contra o CBA. Seus serviços de inteligência vão cuidar de enviar mensagens particulares bem esclarecedoras…</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-ObjectiveTooltip">As alianças estão dispostas na tela de diplomacia, e exigem influência para serem obtidas.</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-Outcome">Parece que as forças civilizadas da galáxia fizeram o CBA tornar a correr para a toca. Infelizmente, eles são como baratas: depois da primeira infestação, você sabe que sempre vão voltar.</LocalizationPair>
+  <LocalizationPair Name="%visions_of_a_common_enemy-OutcomeFailed">Parece que teremos que encarar sozinhos quaisquer transgressões futuras do CBA. Com sorte, eles voltarão à velha rotina de traições e conflitos internos.</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Title">Ladrões e traidores</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Description">Parece que alguns elementos rebeldes de dentro da Academia decidiram se opor formalmente à visão que Isyander tem para o futuro. Ao que tudo indica, eles se recusam a aceitar alguns dos potenciais riscos da cruzada dele, que, por acaso, inclui a possível erradicação da vida inteligente.
+Vindo à tona, essas frotas rebeldes de heróis dissidentes estão por toda a galáxia, tentando fomentar uma rebelião e interromper o longo jogo estratégico que Isyander vem jogando. Não conseguindo mais confiar em seus supostos seguidores, o líder da Academia solicitou a sua ajuda para contê-los.</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Objective">Cace e derrote as três frotas rebeldes.</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-ObjectiveTitle">PERSEGUIR</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Objective-Description">Dê um fim aos heróis rebeldes que se opõem ao grande plano de Isyander.</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-ObjectiveTooltip">A localização das frotas é indicada por um marcador de missão.</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Outcome">Não é fácil lidar com heróis conflituosos. Se você escolher ficar do lado de Isyander, ganhará um aliado poderoso. Caso contrário, terá pelo menos dissipado as suspeitas dele…</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-OutcomeFailed">Você falhou na missão!</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-AcademyTraitorsFleetName">Traidores</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-Reward">Nave da Academia [ship] na qual um traidor foi derrotado</LocalizationPair>
+  <LocalizationPair Name="%thieves_and_traitors-RewardFleetName">Presente da Academia</LocalizationPair>
+  <LocalizationPair Name="%incoming-Title">Se aproximando!</LocalizationPair>
+  <LocalizationPair Name="%incoming-Description">Eles estão agindo de novo, não estão? Os dados de reconhecimento indicam que um grupo de piratas tem como alvo um dos seus sistemas. Permitir que isso ocorra sob nossa vigília certamente causará alguns contratempos na próxima eleição. Quer mesmo que um bando de criminosos atrapalhe a visão cuidadosamente elaborada que você tem para o seu império?
+
+Os piratas precisam aprender uma lição letal, seja pelo uso de suas frotas ou pela indicação clara de que o fracasso deles é iminente. Como sempre, é a sua sagacidade política, ou necessidade orçamentária, que vai determinar a melhor maneira de lidar com isso.</LocalizationPair>
+  <LocalizationPair Name="%incoming-Objective">Destrua a frota ou designe um herói da classe guardião.</LocalizationPair>
+  <LocalizationPair Name="%incoming-ObjectiveTitle">DEFENDER</LocalizationPair>
+  <LocalizationPair Name="%incoming-ObjectiveDescription">Remova a ameaça pirata do sistema $YourSiegedSystemName, seja destruindo-a diretamente ou designando um herói da classe guardião para planejar a defesa. Eles chegarão em $Timer [turn] turnos.</LocalizationPair>
+  <LocalizationPair Name="%incoming-ObjectiveTooltip">Os tipos de classe de cada herói podem ser encontrados na tela de visão geral do herói.</LocalizationPair>
+  <LocalizationPair Name="%incoming-Outcome">Independentemente de isso ter sido o CBA procurando por fraquezas ou um grupo distinto, não custa enviar uma mensagem dizendo: "Isso foi uma péssima ideia".</LocalizationPair>
+  <LocalizationPair Name="%incoming-OutcomeFailed">Bom, as coisas não saíram conforme o esperado. Será que vão inventar algum apelido desagradável para você nas redes sociais?</LocalizationPair>
+  <LocalizationPair Name="%incoming-PiratesFleetName">O Coletivo</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Title">Forjado em batalha</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Description">Um herói veio até você com um pedido atípico. Ele gostaria de receber uma dispensa formal, ou seja, uma ordem sua, para poder caçar outros heróis na galáxia. Isso pareceu um pouco estranho, claro. Seria uma antiga tradição? Um trote? Uma piada que passou dos limites?
+Contudo, quando um herói vence uma batalha, ele conquista poderes dos quais você pode se beneficiar, e, além disso, a notoriedade e a imagem do seu império certamente ganharão imponência. Muito bem, então... Deixe que os heróis joguem os jogos deles, contanto que você possa lucrar com isso. Que a caçada comece!</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Objective">Em menos de $DurationName [turn] turnos, cace e derrote $ShipsCountName naves comandadas por um herói.</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-ObjectiveTitle">ABORDAR</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-ObjectiveDescription">É hora de soltar os cães de guerra! Em menos de $DurationName turnos, mande seu herói contra $ShipsCountName frotas comandadas por outros heróis.</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-ObjectiveTooltip">Dica: essas frotas inimigas terão uma nave de herói em seu rol.</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-Outcome">Apesar da ideia de ter heróis hospitalizando uns aos outros em uma espécie de show de talentos ser um pouco perturbadora, pelo menos seu herói ganhou uma experiência valiosa e um apreço pela sua mente aberta.</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-OutcomeFailed">Evidentemente, não é sempre que frotas de heróis estão dispostas a serem atacadas. Tomara que seu herói tenha pelo menos aprendido alguma coisa, e não enfurecido a Academia.</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-EnemyName">Herói adversário</LocalizationPair>
+  <LocalizationPair Name="%a_hero_proven_in_battle-EnemyFleetName">Frota adversária</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Title">Capítulo 1 - Notícias estranhas</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Description">O único problema com segredos perigosos há muito tempo enterrados é que, eventualmente, algum idiota vai acabar desenterrando-os… 
+ 
+ Arqueólogos e pesquisadores do Polo Tecnológico Ursa Maior descobriram evidências de uma superarma construída pelos Endless. Apesar de não ser surpresa alguma eles terem criado armamentos devastadores, a preocupação é que essa esteja ativa ou pelo menos passível de ser ativada. Não há tempo a perder! Envie seus exploradores e descubra o que está acontecendo… antes que a arma seja apontada para você.</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Objective">Curiosidades em várias constelações precisam ser examinadas e seus dados comparados para descobrir a origem de uma superarma dos Endless.</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-ObjectiveTitle">ANALISAR</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-ObjectiveDescription">Investigue as curiosidades destacadas na galáxia.</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-ObjectiveTooltip">As curiosidades a serem examinadas exibirão um indicador de missão.</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-Outcome">As informações que você coletou mostram que os efeitos dessas armas eram formidáveis. Elas eram capazes de tomar como alvo elementos tão pequenos quanto uma nave e tão grandes quanto um planeta, mas, ocasionalmente, pareciam disparar no espaço vazio. Nada está muito claro ainda...</LocalizationPair>
+  <LocalizationPair Name="%chapter_1_strange_tidings-OutcomeFailed">Infelizmente, não houve muito interesse em sua comunidade científica, ou orçamento o bastante, para concluir a tarefa. Esses mistérios terão que permanecer incógnitos…</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Title">Capítulo 2: Uma arma sem alvo</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Description">Há muitos elementos desse sistema de armas dos Endless que precisam ser analisados e compreendidos como fontes de energia, tecnologias de foco e sistemas de mira. Qualquer império que deseje chegar a fundo nesse mistério tem apenas uma tarefa muito clara: ganhar muito mais conhecimento sobre as energias que os Endless usavam e exploravam.
+ 
+ Está na hora de impulsionar as instalações de pesquisa e estudar o desconhecido.</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Objective">Para compreender os elementos do sistema de armas dos Endless, você deve aumentar a produção científica da sua facção ou assinar um tratado científico com outro império.</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-ObjectiveTitle">APRENDER</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-ObjectiveDescription">Aumente a produção científica para $Amount02 ou assine um tratado científico com outro império.</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-ObjectiveTooltip">Você pode aumentar a produção científica com aprimoramentos, leis, habilidades de herói e recursos de luxo.</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-Outcome">Seus engenheiros e cientistas aprenderam muito, mas ainda estão com a pulga atrás da orelha. Como sempre, mais conhecimento sempre leva a mais perguntas. Nesse caso, a pergunta é: Por quê?</LocalizationPair>
+  <LocalizationPair Name="%chapter_2_weapon_without_a_target-OutcomeFailed">Parece que você não foi veloz o bastante na busca pelo conhecimento. Os segredos do sistema de armas dos Endless permanecerão envoltos em mistério.</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Title">Capítulo 3: Dados anômalos</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Description">Com os Endless, era oito ou oitenta. Parece que a arma em questão não era disparada por meios tradicionais, mas sim aproveitando a produção de raios gama de quasares e buracos negros para formar um raio gama de intensidade inconcebível.
+ 
+ Apesar de os pesquisadores terem primeiro ficado fascinados com as possibilidades daquele objeto, eles logo passaram a se perguntar o que exatamente aquilo fazia. Parecia ser algo usado com frequência, mas quase nenhum destroço associado a isso foi encontrado. Na verdade, parecia que essas armas estavam disparando no espaço sem nenhum alvo evidente.</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Objective">Recolha informações adicionais, seja sobre o uso da arma ou os alvos dela.</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-ObjectiveTitle">INVESTIGAR</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-ObjectiveDescription">Descubra um novo planeta único relacionado aos Endless OU explore $Amount03 % da galáxia.</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-ObjectiveTooltip">Naves de desbravamento podem ser colocadas em autodesbravar para descobrirem as partes ocultas da galáxia. </LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-Outcome">Foram encontradas novas informações suficientes para prover planos para um módulo. Se tudo correr bem, com esse módulo os pesquisadores poderão finalmente obter algumas respostas concretas.</LocalizationPair>
+  <LocalizationPair Name="%chapter_3_anomalous_data-OutcomeFailed">A galáxia é muito vasta, ou suas naves são muito lentas. Não há informações suficientes para dar continuidade à investigação. O mistério dos Endless permanecerá sem solução.</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Title">Capítulo 4: Uma última absolvição</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Description">De todos os locais que foram visitados ou descritos nos dados descobertos, um parece ser o mais promissor. Uma relíquia dos Endless estava próxima o bastante do alvo para, com sorte, ter deixado alguns detalhes sobre seu uso e seus efeitos. Na verdade, é possível que a relíquia tenha servido como estação de observação durante o uso da arma. 
+ 
+ Isso, finalmente, pode ajudar a explicar do que exatamente os Endless estavam atrás na imensidão do espaço... Por outro lado, não há como saber se a arma ainda está ativa. Reforços, provavelmente, seriam uma boa ideia. Nunca se sabe se alguém com interesse em obter o seu conhecimento vai aparecer.</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Objective">Veja o que resta no local identificado pelos seus cientistas.</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-ObjectiveTitle">IDENTIFICAR</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-ObjectiveDescription">Envie uma frota para o local indicado pelo marcador de missão.</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-ObjectiveTooltip">Desbrave a localização indicada</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Step2Title">Derrote a frota da Academia!</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Step2Description">O conhecimento vai para o vitorioso…</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Outcome">Os sobreviventes do ataque colocaram você a par dos detalhes. A arma era a mais horrível invenção dos Endless, usada para drenar a vida de seres divinos chamados de Perdidos. Quando elas eram disparadas, há milhares de anos, os locais que tinham como alvo não eram completamente vazios, mas seres vivos… agora extintos.</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-OutcomeFailed">Infelizmente, você não conseguiu determinar exatamente o que aconteceu naquele local. O que quer que fosse, a Academia demonstrou estar muito interessada, o que leva a uma grande possibilidade de ser algo relacionado aos Perdidos.</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-LairFleet">Frota do covil</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-AcademyFleet">Frota da Academia</LocalizationPair>
+  <LocalizationPair Name="%chapter_4_a_final_absolution-Reward">Uma tecnologia [technology] aleatória de nível 3</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Title">Uma questão de branco e preto</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Description">Desenvolvimento econômico ou sustentabilidade ambiental? Uma discussão tão antiga quanto a vida senciente e que ainda não encontrou sua resposta definitiva. Mesmo agora, vozes divergentes dentro do governo defendem fortemente uma ou a outra abordagem.
+ 
+Melhorar sua produção industrial correndo o risco de danificar os ecossistemas ou promover a conservação e o desenvolvimento responsável correndo o risco de sofrer um declínio em seu poder econômico? Como líder supremo do império, a escolha cabe a você.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1">Enfureça os ecologistas ao promulgar $IndustrialistLawsCountLocale leis industrialistas.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1Title">Industrialista</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1Description">Aprove $IndustrialistLawsCountLocale leis industrialistas.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective1Tooltip">Use a tela do senado para selecionar e aprovar leis.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2">Enfureça os industrialistas ao promulgar $EcologistLawsCountLocale leis ecológicas.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2Title">Ecologista</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2Description">Aprove $EcologistLawsCountLocale leis ecológicas.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Objective2Tooltip">Use a tela do senado para selecionar e aprovar leis.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-Outcome">Pronto! A legislação seguiu em frente e o trajeto do seu império sofreu uma ligeira mudança. Avante, então, rumo a um futuro no qual essas duas forças não mais trilharão em direções opostas.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics-OutcomeFailed">Às vezes, as escolhas são muito difíceis, o que pode acabar resultando em escolha nenhuma. Mas não se preocupe! Mesmo sem você, eles são capazes de continuar discutindo.</LocalizationPair>
+  <LocalizationPair Name="%black_or_white_politics_Reward">Random [technology] Technology</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Title">Sabedoria do passado</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Description">Arqueólogos curiosos lhe contaram sobre uma antiga raça de viajantes estelares chamada Nakalim, que talvez não seja mais tão antiga assim. A história conta que eles realizaram uma hibernação em massa conforme sua civilização entrava em colapso, mas pouco se sabe sobre sua cultura e história.
+Deseja redirecionar algumas embarcações de desbravamento para descobrir os segredos dessa história incomum? Talvez você possa até vir a compreender algumas das tecnologias únicas e poderosas deles.</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Objective">A civilização deles é muito antiga, então, investigar curiosidades do tipo ruína é uma boa maneira de saber mais.</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-ObjectiveTitle">DESCOBRIR</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-ObjectiveDescription">Investigue $NumberRuinsLocale curiosidades do tipo ruína.</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-ObjectiveTooltip">Elas podem ser encontradas em qualquer lugar, e mais vão aparecer conforme o seu nível de ciência aumenta.</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-Outcome">Fascinante! Aparentemente, eles eram adoradores dos Perdidos, e muitas das tecnologias deles parecem ser presentes diretos dessa espécie incompreensível. Vamos ver como, exatamente, o artefato que você possui opera…</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past-OutcomeFailed">Infelizmente, não tivemos curiosidades suficientes (ou tempo o bastante) para determinar os segredos por trás dos Nakalim. Apesar de você conhecer muito da história da galáxia, esta parte ainda permanece oculta.</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past_Reward">Nave Nakalim [ship] na qual foi descoberta a última curiosidade</LocalizationPair>
+  <LocalizationPair Name="%wisdom_of_the_past_reward_fleet_name">Frota de recompensa dos Nakalim</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Title">Uma morte sem cadáver</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Description">Agora é aceito como fato comprovado que uma raça chamada de os Perdidos, seres etéreos gigantes formados por poeira primordial, costumava viver nas lacunas entre as estrelas e as constelações. O que será que restou deles, agora que os registros indicam que eles foram caçados até a extinção? Quais vestígios da glória ou da morte deles você virá a coletar?
+Talvez, se enviar uma embarcação para esses espaços vazios não catalogados, bem longe das vias estelares, você possa encontrar algum indício do que eles deixaram para trás. Isto é, se alguma coisa ainda de fato restar...</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Objective">Viaje por entre $NumberLocale constelações sem usar as vias estelares e poderá captar vestígios dos Perdidos de antes deles serem caçados pelos Endless.</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-ObjectiveTitle">PERCORRER</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-ObjectiveDescription">Use a tecnologia do propulsor de dobra para viajar $NumberLocale vezes sem uma via estelar.</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-ObjectiveTooltip">A tecnologia do propulsor de dobra fica no quadrante de ciência da árvore de tecnologias.</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-Outcome">Lindo, porém melancólico. Como todas as mortes, algo grande foi perdido, e algo precioso foi deixado para trás. No caso dos Perdidos, tudo o que restou foi a poeira deles…</LocalizationPair>
+  <LocalizationPair Name="%death_without_a_corpse-OutcomeFailed">Parece que os seus esforços, assim como os próprios Perdidos, ficaram sem tempo. Talvez, algumas coisas ocultas tenham sido feitas para permanecerem assim.</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Title">Uma galáxia muito distante</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Description">Já há algumas semanas, os sensores têm sido obstruídos de maneira peculiar, e as varreduras têm retornado resultados inesperados. Apesar de isso ter sido vinculado a equipamentos ou estresse operacional, além de ventos solares e comunicações instáveis, a verdade parece ser muito mais estranha.
+ 
+Na realidade, essas anomalias nos sensores e escâneres deveriam ter sido vistas como invasores pelos sistemas de alarme. Parece que seres desconhecidos e invisíveis de outra galáxia estão começando a circular entre nós.
+ 
+Eles podem não ser mais cientificamente avançados, mas são diferentes o bastante para que nossa ciência se veja obrigada a avançar para compreendê-los.</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Objective">Construa $Number aprimoramentos de "laboratórios de pesquisa óptica" ou "cidades de pesquisa".</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-ObjectiveTitle">AVANÇAR</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-ObjectiveDescription">As tecnologias mais propícias para compreender esses seres seriam os laboratórios de pesquisa óptica ou as cidades de pesquisa.</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-ObjectiveTooltip">Essas tecnologias podem ser encontradas no quadrante de ciência da árvore de tecnologias. Alguns aprimoramentos podem não estar disponíveis para todas as facções.</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Outcome">Inesperadas e… encantadoras? Independentemente do que são essas entidades estranhas, elas parecem estar felizes por terem feito contato e insistem que vieram em paz. Ou, pelo menos, caso haja algum contratempo, que seja tido como um mero acidente. Um pequeno presente da tecnologia delas pode dar a você uma visão melhor do mundo estranho desses seres.</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-OutcomeFailed">Infelizmente, avanços científicos podem ser difíceis e complicados. O que quer que sejam esses seres estranhos, você terá que conhecê-los e compreendê-los de alguma outra maneira.</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away-Reward">Nave do Coro Umbral [ship] na qual foi construído o último aprimoramento</LocalizationPair>
+  <LocalizationPair Name="%a_galaxy_far_far_away_fleet_name">Frota de recompensa do Coro Umbral</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterTitle">Endless Space 2: Matéria Escura</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterDescription">Endless Space 2: Matéria Escura mostra o Universo dos Endless a partir do submundo de eventos e descobertas que, por vezes, têm sido realmente sombrios...
+</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterLoreDescription">Desde uma série de missões que investigam os estranhos eventos que precederam a queda dos Endless a problemas simples de indivíduos rebeldes, aproveite a gama de experiências e aventuras de 12 novas missões a serem descobertas, situadas na estranha vastidão do Universo dos Endless!</LocalizationPair>
+  <LocalizationPair Name="%DLCDarkMatterContentDescription">Endless Space 2: Matéria Escura mostra o Universo dos Endless a partir do submundo de eventos e descobertas que, por vezes, têm sido realmente sombrios...</LocalizationPair>
+  <LocalizationPair Name="%HeroAffinityPugTitle">Pug</LocalizationPair>
+  <LocalizationPair Name="%HeroAffinityPugDescription">Ferozes e leais, os pugs são companheiros excelentes para o calor da batalha ou em negociações de mercado.</LocalizationPair>
+  <LocalizationPair Name="%HeroPug01Title">Sbejru Mashmir</LocalizationPair>
+  <LocalizationPair Name="%HeroPug01Description">Sétimo filhote da sétima geração de uma ninhada de sete, a origem de Sbejru é mística a ponto de se suspeitar de interferência externa. Os primeiros anos de sua vida foram pouco diferentes de qualquer outro bicho de estimação exoticamente apócrifo, mas tudo mudou após sua fuga a bordo da nave dos Vaulters, que partia de Auriga. Sob exaltação por um Evento da Poeira no Ímã dos Nove, Sbejru tornou-se uma figura de liderança tão capaz quanto estranha. Embora muitas vezes receba um tratamento inferior, de forma literal e figurada, o eficiente uso que faz do martelo de guerra geralmente previne a desobediência e os comentários maldosos de saírem do controle.</LocalizationPair>
+  <LocalizationPair Name="%PugHeroAddOnTitle">Sbejru Mashmir</LocalizationPair>
+  <LocalizationPair Name="%PugHeroAddOnDescription">Ferozes e leais, os pugs são companheiros excelentes para o calor da batalha ou em negociações de mercado.</LocalizationPair>
+</Datatable>

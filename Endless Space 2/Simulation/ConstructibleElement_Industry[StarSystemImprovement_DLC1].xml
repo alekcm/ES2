@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/IndustryConstructibleElement.xsd">
+
+
+  <!--#################################-->
+  <!--#### UNIQUE TECHNO VAULTERS #####-->
+  <!--#################################-->
+
+  <StarSystemImprovementDefinition Name="StarSystemImprovementUniqueStrategicVaulters"   Category="CategoryStarSystemImprovementUnique" SubCategory="SubCategoryIndustry" ScoreProvider="StarSystemImprovementUniqueBuilt">
+    <AIGain RessourceName="ResourceBonus">
+      <Tag>ResourceTypeStrategic</Tag>
+    </AIGain>
+    <SupervisorGain Name="Industry" />
+    <QueuedSimulationDescriptorReference Name="BuildingStarSystemImprovementUniqueStrategicVaulters"/>
+    <Cost ResourceName="SystemProduction">1120</Cost>
+    <Cost ResourceName="EmpireManpower" Instant="true">50</Cost>
+    <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementUniqueStrategicVaulters,!FastForwardedImprovement</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">../ClassEmpire/Uniques,StarSystemImprovementUniqueStrategicVaulters</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="true"    Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire/ClassStarSystem,BuildingStarSystemImprovementUniqueStrategicVaulters') and not(Path(Context,@'ClassStarSystem,BuildingStarSystemImprovementUniqueStrategicVaulters'))</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyStrategicResourceGeneration1</TechnologyPrerequisite>
+    <DownloadableContentPrerequisite  Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="StarSystemImprovementUniqueStrategicVaulters" />
+    <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage2Extreme" />
+    <SimulationDescriptorReference Name="StarSystemImprovementOncePerEmpire" />
+    <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionIndustry1"/>
+    <UniqueTags>StarSystemImprovementUniqueStrategicVaulters</UniqueTags>
+  </StarSystemImprovementDefinition>
+
+  <StarSystemImprovementDefinition Name="StarSystemImprovementUniqueVaulters" SubCategory="SubCategoryApproval" ScoreProvider="StarSystemImprovementBuilt">
+    <SupervisorGain Name="Approval" />
+    <Cost ResourceName="SystemProduction">6240</Cost>
+    <Cost ResourceName="Strategic3" Instant="true">25</Cost>
+    <Cost ResourceName="Strategic4" Instant="true">25</Cost>
+    <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+    <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementUniqueVaulters,!FastForwardedImprovement</PathPrerequisite>
+    <DownloadableContentPrerequisite  Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyUnique10Vaulters</TechnologyPrerequisite>
+
+    <SimulationDescriptorReference Name="StarSystemImprovementUniqueVaulters" />
+    <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4Normal" />
+    <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionApproval1"/>
+  </StarSystemImprovementDefinition>
+
+  <StarSystemImprovementDefinition Name="StarSystemImprovementScience3Vaulters" SubCategory="SubCategoryScience" ScoreProvider="StarSystemImprovementBuilt">
+    <SupervisorGain Name="Science" />
+    <Cost ResourceName="SystemProduction">1120</Cost>
+    <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScience3Vaulters,!FastForwardedImprovement</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScience3,!FastForwardedImprovement</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyScience3Vaulters</TechnologyPrerequisite>
+    <DownloadableContentPrerequisite  Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="StarSystemImprovementScience3Vaulters" />
+    <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+    <SimulationDescriptorReference Name="IsScienceBuilding" />
+    <SimulationDescriptorReference Name="ScienceConstruction" />
+    <PopulationEvent Name="PopulationPoliticalEventScienceBuildingConstruction1"/>
+  </StarSystemImprovementDefinition>
+
+  <StarSystemImprovementDefinition Name="StarSystemImprovementUniqueInfluence1Vaulters"   Category="CategoryStarSystemImprovementUnique" SubCategory="SubCategoryInfluence" ScoreProvider="StarSystemImprovementUniqueBuilt">
+    <SupervisorGain Name="Prestige" />
+    <QueuedSimulationDescriptorReference Name="BuildingStarSystemImprovementUniqueInfluence1Vaulters"/>
+    <Cost ResourceName="SystemProduction">3120</Cost>
+    <Cost ResourceName="Strategic2" Instant="true">10</Cost>
+    <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementUniqueInfluence1Vaulters,!FastForwardedImprovement</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementUniqueInfluence1,!FastForwardedImprovement</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">../ClassEmpire/Uniques,StarSystemImprovementUniqueInfluence1Vaulters</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">../ClassEmpire/Uniques,StarSystemImprovementUniqueInfluence1</PathPrerequisite>
+    <InterpreterPrerequisite Inverted="true"    Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire/ClassStarSystem,BuildingStarSystemImprovementUniqueInfluence1Vaulters') and not(Path(Context,@'ClassStarSystem,BuildingStarSystemImprovementUniqueInfluence1Vaulters'))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Inverted="true"    Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire/ClassStarSystem,BuildingStarSystemImprovementUniqueInfluence1') and not(Path(Context,@'ClassStarSystem,BuildingStarSystemImprovementUniqueInfluence1'))</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyUniqueInfluence1Vaulters</TechnologyPrerequisite>
+    <DownloadableContentPrerequisite  Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="StarSystemImprovementUniqueInfluence1Vaulters" />
+    <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3High" />
+    <SimulationDescriptorReference Name="StarSystemImprovementOncePerEmpire" />
+    <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionUniqueInfluence1"/>
+    <UniqueTags>StarSystemImprovementUniqueInfluence1Vaulters</UniqueTags>
+  </StarSystemImprovementDefinition>
+
+  <StarSystemImprovementDefinition Name="StarSystemImprovementDefense1Vaulters" SubCategory="SubCategoryDefense" ScoreProvider="StarSystemImprovementBuilt">
+    <SupervisorGain Name="Military" />
+    <Cost ResourceName="SystemProduction">280</Cost>
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDefense1,!FastForwardedImprovement</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDefense1Vaulters,!FastForwardedImprovement</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDefense1Templars,!FastForwardedImprovement</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyDefense1Vaulters</TechnologyPrerequisite>
+    <DownloadableContentPrerequisite  Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="StarSystemImprovementDefense1Vaulters" />
+    <SimulationDescriptorReference Name="DefenseConstruction" />
+    <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage1Normal" />
+    <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionDefense1"/>
+  </StarSystemImprovementDefinition>
+
+  <!--#################################-->
+  <!--####         METAPLOT       #####-->
+  <!--#################################-->
+
+  <StarSystemImprovementDefinition Name="StarSystemImprovementMetaplot01" SubCategory="SubCategoryFIDSI" ScoreProvider="StarSystemImprovementBuilt">
+    <SupervisorGain Name="Food"       Weight="0.25"  />
+    <SupervisorGain Name="Industry"   Weight="0.25"  />
+    <SupervisorGain Name="Science"    Weight="0.25"  />
+    <SupervisorGain Name="Dust"       Weight="0.25"  />
+    <SupervisorGain Name="Approval"   Weight="0.25"  />
+    <Cost ResourceName="SystemProduction">6240</Cost>
+    <Cost ResourceName="Strategic5" Instant="true">10</Cost>
+    <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+    <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementMetaplot01,!FastForwardedImprovement</PathPrerequisite>
+    <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedMetaplotQuestChapter1_Rank1</PathPrerequisite>
+    <SimulationDescriptorReference Name="StarSystemImprovementMetaplot01" />
+    <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4High" />
+    <SimulationDescriptorReference Name="IsScienceBuilding" />
+    <SimulationDescriptorReference Name="ScienceConstruction" />
+  </StarSystemImprovementDefinition>
+
+  <!--#################################-->
+  <!--####          PORTAL        #####-->
+  <!--#################################-->
+
+  <StarSystemImprovementDefinition Name="StarSystemImprovementPortal" SubCategory="SubCategoryStarting" ScoreProvider="StarSystemImprovementBuilt">
+    <SupervisorGain Name="Military" />
+    <SupervisorGain Name="Science" />
+    <CustomCost ResourceName="SystemProduction">Min(480, 160 + 80 * Property(StockLocation, @../ClassEmpire, PortalCount, true))</CustomCost>
+    <CustomCost ResourceName="Strategic1" Instant="true">5</CustomCost>
+    <CustomCost ResourceName="Strategic2" Instant="true">5</CustomCost>
+    <PathPrerequisite   Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+    <PathPrerequisite   Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+    <PathPrerequisite   Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPortal,!FastForwardedImprovement</PathPrerequisite>
+
+    <!--<DownloadableContentPrerequisite Inverted="true" Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>-->
+    <SimulationDescriptorReference Name="StarSystemImprovementPortal" />
+    <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+  </StarSystemImprovementDefinition>
+
+</Datatable>

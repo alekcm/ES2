@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <ExtendedGuiElement Name="AcademyRoleGrandAdmiral">
+        <Title>%AcademyRoleGrandAdmiralTitle</Title>
+        <Description>%AcademyRoleGrandAdmiralDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/AcademyRoles/AcademyRoleGrandAdmiralSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/AcademyRoles/AcademyRoleGrandAdmiralLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%AcademyRoleGrandAdmiralEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="AcademyRoleLibrarian">
+        <Title>%AcademyRoleLibrarianTitle</Title>
+        <Description>%AcademyRoleLibrarianDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/AcademyRoles/AcademyRoleLibrarianSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/AcademyRoles/AcademyRoleLibrarianLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%AcademyRoleLibrarianEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="AcademyRoleMasterOfDust">
+        <Title>%AcademyRoleMasterOfDustTitle</Title>
+        <Description>%AcademyRoleMasterOfDustDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/AcademyRoles/AcademyRoleMasterOfDustSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/AcademyRoles/AcademyRoleMasterOfDustLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%AcademyRoleMasterOfDustEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="AcademyRoleVaultKeeper">
+        <Title>%AcademyRoleVaultKeeperTitle</Title>
+        <Description>%AcademyRoleVaultKeeperDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/AcademyRoles/AcademyRoleVaultKeeperSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/AcademyRoles/AcademyRoleVaultKeeperLarge" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%AcademyRoleVaultKeeperEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+</Datatable>

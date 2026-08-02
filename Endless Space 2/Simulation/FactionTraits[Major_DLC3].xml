@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+    
+    <!-- WHEN ADDING TRAITS THAT ARE RESTRICTED TO A SPECIFIC DLC, PLEASE LET A PROGRAMMER KNOW !
+    CHANGES ARE REQUIRED ON THE CODE SIDE -->
+
+    <FactionTrait Name="FactionTraitReducedManpowerFromFood"   SubCategory="FactionTrait" TraitCategory="TraitCategoryManpower" TraitSubCategory="TraitSubCategoryImmaterialPopulation" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="-5">
+        <SimulationDescriptorReference Name="FactionTraitReducedManpowerFromFood"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitManpowerFromProcessingPower"   SubCategory="FactionTrait" TraitCategory="TraitCategoryManpower" TraitSubCategory="TraitSubCategoryDarkMatterManipulators" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="10">
+        <SimulationDescriptorReference Name="FactionTraitManpowerFromProcessingPower"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitBonusHackingRoutes"   SubCategory="FactionTrait" TraitCategory="TraitCategoryGroundBattle" TraitSubCategory="TraitSubCategoryWideNetwork" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="FactionTraitBonusHackingRoutes"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitTradePenalty" SubCategory="FactionTrait" TraitCategory="TraitCategoryEconomy" TraitSubCategory="TradeSubCategoryTradePenalty" Family="FactionTraitFamilyEconomyDevelopment" Hidden="false" Custom="true" Cost="-10">
+        <SimulationDescriptorReference Name="FactionTraitTradePenalty"/>
+    </FactionTrait>
+    
+    <FactionTrait Name="FactionTraitBonusHackingSpeed"   SubCategory="FactionTrait" TraitCategory="TraitCategoryGroundBattle" TraitSubCategory="TraitSubCategoryExpertHackers" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="10">
+        <SimulationDescriptorReference Name="FactionTraitBonusHackingSpeed"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitNativelyInvisibleShips"   SubCategory="FactionTrait" TraitCategory="TraitCategoryGroundBattle" TraitSubCategory="TraitSubCategoryGhosts" Family="FactionTraitFamilyMilitary" Hidden="false" Custom="true" Cost="10">
+        <SimulationDescriptorReference Name="FactionTraitNativelyInvisibleShips"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitProcessingPowerFromTraitors"   SubCategory="FactionTrait" TraitCategory="TraitCategoryEconomy" TraitSubCategory="FactionTraitProcessingPowerFromTraitors" Family="FactionTraitFamilyEconomyDevelopment" Hidden="false" Custom="true" Cost="10">
+        <SimulationDescriptorReference Name="FactionTraitProcessingPowerFromTraitors"/>
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitLuxuryCostModifier"   SubCategory="FactionTrait" TraitCategory="TraitCategoryEconomy" TraitSubCategory="FactionTraitLuxuryCostModifier" Family="FactionTraitFamilyEconomyDevelopment" Hidden="false" Custom="true" Cost="-10">
+        <SimulationDescriptorReference Name="FactionTraitLuxuryCostModifier"/>
+    </FactionTrait>
+    
+    <FactionTrait Name="FactionTraitAntiExpansionists"   SubCategory="FactionTrait" TraitCategory="TraitCategoryExpansion" TraitSubCategory="TraitSubCategoryExpansionists" Family="FactionTraitFamilyExpansionColonization" Custom="true" Cost="-20">
+        <SimulationDescriptorReference Name="FactionTraitAntiExpansionists"/>
+        <Prerequisites>!AffinityGameplayMajorHisshos</Prerequisites>
+    </FactionTrait>
+
+    <!--MinorHacking-->
+    <FactionTrait Name="FactionTraitMinorMinorHacking" SubCategory="FactionTrait" TraitCategory="TraitCategoryPopulation" TraitSubCategory="TraitSubCategoryStartMinorHacking" Family="FactionTraitFamilyStartingMinorPopulation" Hidden="false" Custom="true" Cost="5">
+        <Command Name="AddMinorPopulation" Arguments="AffinityMinorHacking,1" Priority="100"/>
+        <SimulationDescriptorReference Name="FactionTraitMinorMinorHacking"/>
+        <Prerequisites>!AffinityGameplayVampirilis,!AffinityGameplayUmbralChoir,!FactionTraitMinorAmoeba,!FactionTraitMinorBenthys,!FactionTraitMinorBots,!FactionTraitMinorDeuyivans,!FactionTraitMinorHaroshems,!FactionTraitMinorHisshos,!FactionTraitMinorMavros,!FactionTraitMinorPilgrims,!FactionTraitMinorZvali,!FactionTraitMinorTikanans,!FactionTraitMinorGnashasts,!FactionTraitMinorEyders,!FactionTraitMinorNiris,!FactionTraitMinorBhagabas,!FactionTraitMinorRemnant,!FactionTraitMinorPulsos,!FactionTraitMinorGreenman,!FactionTraitMinorSistersOfMercy,!FactionTraitMinorKalTikMas,!FactionTraitMinorSefaloros,!FactionTraitMinorGalvrans,!FactionTraitMinorSowers,!FactionTraitMinorHarmony,!FactionTraitMinorIllo,!FactionTraitMinorBasryxo,!FactionTraitMinorMinorOraculars</Prerequisites> 
+    </FactionTrait>
+
+    <FactionTrait Name="FactionTraitHomePlanetPlanetTypeFake"           SubCategory="HomePlanet"    Hidden="true"   Custom="false"     Cost="5"  IgnoreForTraitsCount="true">
+    </FactionTrait>
+</Datatable>

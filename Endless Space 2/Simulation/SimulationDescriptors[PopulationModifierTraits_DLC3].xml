@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- PopulationPlanet descriptors (provide bonuses to the population on the planet, and is used by the Collection bonuses/Boost bonuses). -->
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitPrimaryProcessingPower01" Type="ClassPopulationPlanet">
+        <Modifier TargetProperty="BonusPopulationProcessingPower"                           Operation="Addition" Value="1" Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitPrimaryProcessingPowerOnSmall01" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationProcessingPower"    Operation="Addition"    Value="1"   Path="FAKEFORGUI/./PlanetSizeSmall"/>
+        <BinaryModifier TargetProperty="BonusPopulationProcessingPower"    Operation="Addition"    Left="1"    BinaryOperation="Multiplication" Right="$(PlanetIsSmall)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryScienceFakePlanet" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationScience"                             Operation="Addition"    Value="1"   Path="FAKEFORGUI/./PlanetTypeFake"  />
+        <BinaryModifier TargetProperty="BonusPopulationScience"                             Operation="Addition"    Left="1"    BinaryOperation="Multiplication" Right="$(PlanetIsFake)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    
+    
+    <!-- PopulationEmpire descriptors (used to apply the effects of Population boosts, and poorly named. I'm sorry but that's a fact!). -->
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitPrimaryProcessingPower01" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationProcessingPower"    Operation="Addition"  Value="1"   Path="FAKEFORGUI/./ClassPopulation"/>
+        <BinaryModifier TargetProperty="BonusPopulationProcessingPower"    Operation="Addition"  Left="1"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryScienceFakePlanet" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationScience"			Operation="Addition"    Value="1"   Path="FAKEFORGUI/./PlanetTypeFake"  />
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			Operation="Addition" Left="1"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationScience"			Operation="Addition" Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetIsFake)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitPrimaryProcessingPowerOnSmall01" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationProcessingPower"    Operation="Addition"    Value="1"   Path="FAKEFORGUI/./PlanetSizeSmall"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			   Operation="Addition"    Left="1"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationProcessingPower"    Operation="Addition"    Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetIsSmall)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    
+
+    <!-- Assimilated populations descriptors (applied on the Horatio-like empire's major PopulationPlanets). -->
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetProcessingPowerOnSmall01" Type="ClassPopulationAssimilated">
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetProcessingPower01" Type="ClassPopulationAssimilated">
+        <Modifier       TargetProperty="BonusPopulationProcessingPower"         Operation="Addition"    Value="1"   Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetScienceFakePlanet" Type="ClassPopulationAssimilated">
+        <Modifier       TargetProperty="BonusPopulationScience"                 Operation="Addition"    Value="1"   Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+</Datatable>

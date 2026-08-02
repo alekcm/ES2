@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+  <!-- Good Images
+	Bitmaps/Dynamic/Anomalies/PlanetAnomalyAcademyLarge
+	Bitmaps/Dynamic/AcademyRoles/AcademyRoleVaultKeeperLarge
+	Bitmaps/Dynamic/Quests/Academy/AcademyQuest02Large
+
+	Bitmaps/Dynamic/Notifications/NotificationAcademyRequestLarge
+	Bitmaps/Dynamic/AcademyRoles/AcademyRoleLibrarianLarge
+	-->
+  <EmpireDiplomaticActionGuiElement Name="GainRelationAcademyAction" AssociatedPolitics="Politics01">
+    <Title>%GainRelationAcademyActionTitle</Title>
+    <Description>%GainRelationAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/StarSystem/StarSystemImprovementAcademyEmbassyLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="HeroStatusAccessAcademyAction" AssociatedPolitics="Politics05">
+    <Title>%HeroStatusAccessAcademyActionTitle</Title>
+    <Description>%HeroStatusAccessAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Academy/AcademyQuest03BLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="CrusadeImmunityAcademyAction" AssociatedPolitics="Politics03">
+    <Title>%CrusadeImmunityAcademyActionTitle</Title>
+    <Description>%CrusadeImmunityAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationPoliticUnlockedLarge_Politics05" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="TakeSystemAcademyAction" AssociatedPolitics="Politics05">
+    <Title>%TakeSystemAcademyActionTitle</Title>
+    <Description>%TakeSystemAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/NarrativeEvents/EventRandom06LLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="TakeSystemAcademyActionUnfallen" AssociatedPolitics="Politics04">
+    <Title>%TakeSystemAcademyActionUnfallenTitle</Title>
+    <Description>%TakeSystemAcademyActionUnfallenDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationRootsColonizedLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="TakeSystemAcademyActionUmbralChoir" AssociatedPolitics="Politics02">
+    <Title>%TakeSystemAcademyActionUmbralChoirTitle</Title>
+    <Description>%TakeSystemAcademyActionUmbralChoirDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationHackingBeaconCreationFailedLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="TakeSystemAcademyActionVampirilis" AssociatedPolitics="Politics05">
+    <Title>%TakeSystemAcademyActionVampirilisTitle</Title>
+    <Description>%TakeSystemAcademyActionVampirilisDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Vampirilis/VampirilisQuest_Chapter4Rel" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="RequestFleetAcademyActionEarly" AssociatedPolitics="Politics06">
+    <Title>%RequestFleetAcademyActionTitle</Title>
+    <Description>%RequestFleetAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipMasterOfDustLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="RequestFleetAcademyActionMid" AssociatedPolitics="Politics06">
+    <Title>%RequestFleetAcademyActionTitle</Title>
+    <Description>%RequestFleetAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipMasterOfDustLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="RequestFleetAcademyActionLate" AssociatedPolitics="Politics06">
+    <Title>%RequestFleetAcademyActionTitle</Title>
+    <Description>%RequestFleetAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipMasterOfDustLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="RequestFleetAcademyActionPeak" AssociatedPolitics="Politics06">
+    <Title>%RequestFleetAcademyActionTitle</Title>
+    <Description>%RequestFleetAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipMasterOfDustLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="StartWarAcademyAction" AssociatedPolitics="Politics06">
+    <Title>%StartWarAcademyActionTitle</Title>
+    <Description>%StartWarAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Metaplot/MetaplotQuest02Large" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="StopWarAcademyAction" AssociatedPolitics="Politics03">
+    <Title>%StopWarAcademyActionTitle</Title>
+    <Description>%StopWarAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationAcademyColonizedLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="AcademyDiplomaticMigrationAction" AssociatedPolitics="Politics05">
+    <Title>%AcademyDiplomaticMigrationActionTitle</Title>
+    <Description>%AcademyDiplomaticMigrationActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Update12/UniquePlanetQuest-Chapter5A" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="AcademyDiplomaticBlockAuctionAccess" AssociatedPolitics="Politics05">
+    <Title>%AcademyDiplomaticBlockAuctionAccessTitle</Title>
+    <Description>%AcademyDiplomaticBlockAuctionAccessDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Academy/AcademyQuest03BLarge" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="SophonsUniqueAcademyAction" AssociatedPolitics="Politics02">
+    <Title>%SophonsUniqueAcademyActionTitle</Title>
+    <Description>%SophonsUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Sophon/Sophon_quest_chap4_DIP_v1" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="CraversUniqueAcademyAction" AssociatedPolitics="Politics03">
+    <Title>%CraversUniqueAcademyActionTitle</Title>
+    <Description>%CraversUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Tutorial/TutorialQuest03Large" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="TerransUniqueAcademyAction" AssociatedPolitics="Politics03">
+    <Title>%TerransUniqueAcademyActionTitle</Title>
+    <Description>%TerransUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationFactionSwitchedLarge_AffinitySheredyn" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="MezariUniqueAcademyAction" AssociatedPolitics="Politics02">
+    <Title>%MezariUniqueAcademyActionTitle</Title>
+    <Description>%MezariUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationFactionSwitchedLarge_AffinityMezari" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="SheredynUniqueAcademyAction" AssociatedPolitics="Politics06">
+    <Title>%SheredynUniqueAcademyActionTitle</Title>
+    <Description>%SheredynUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Notifications/NotificationFactionSwitchedLarge_AffinitySheredyn" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="HoratioUniqueAcademyAction" AssociatedPolitics="Politics04">
+    <Title>%HoratioUniqueAcademyActionTitle</Title>
+    <Description>%HoratioUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Horatio/Horatio_Quest_chap4_Industrialist" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="TimeLordsUniqueAcademyAction" AssociatedPolitics="Politics01">
+    <Title>%TimeLordsUniqueAcademyActionTitle</Title>
+    <Description>%TimeLordsUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Timelords/Timelords_Quest_chap4a-2-Uturn" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="UnfallenUniqueAcademyAction" AssociatedPolitics="Politics04">
+    <Title>%UnfallenUniqueAcademyActionTitle</Title>
+    <Description>%UnfallenUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Unfallen/Unfallen_Quest_chap3-2" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="VampirilisUniqueAcademyAction" AssociatedPolitics="Politics05">
+    <Title>%VampirilisUniqueAcademyActionTitle</Title>
+    <Description>%VampirilisUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest10Large" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="VenetiansUniqueAcademyAction" AssociatedPolitics="Politics03">
+    <Title>%VenetiansUniqueAcademyActionTitle</Title>
+    <Description>%VenetiansUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Lumeris/LumerisQuest_Chapter2" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="VaultersUniqueAcademyAction" AssociatedPolitics="Politics06">
+    <Title>%VaultersUniqueAcademyActionTitle</Title>
+    <Description>%VaultersUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Vaulters/VaultersQuest-Chapter3-1" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="MajorHisshosUniqueAcademyAction" AssociatedPolitics="Politics06">
+    <Title>%MajorHisshosUniqueAcademyActionTitle</Title>
+    <Description>%MajorHisshosUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Hisshos/Hisshos_quest_chap3-2Religious" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="UmbralChoirUniqueAcademyAction" AssociatedPolitics="Politics02">
+    <Title>%UmbralChoirUniqueAcademyActionTitle</Title>
+    <Description>%UmbralChoirUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/UC/UmbralChoirQuest-Chapter4AB" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+
+  <EmpireDiplomaticActionGuiElement Name="TemplarsUniqueAcademyAction" AssociatedPolitics="Politics05">
+    <Title>%TemplarsUniqueAcademyActionTitle</Title>
+    <Description>%TemplarsUniqueAcademyActionDescription</Description>
+    <Icons>
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter1" />
+    </Icons>
+  </EmpireDiplomaticActionGuiElement>
+</Datatable>

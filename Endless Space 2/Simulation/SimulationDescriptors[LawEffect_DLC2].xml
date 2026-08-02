@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="LawEffectP05L03MajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="HasEncounterFlatHonorGains"   Operation="Force" Value="1" Path="../ClassEmpire" TooltipOverride="%LawEffectP05L03MajorHisshosTooltipOverride"/>
+    <Modifier TargetProperty="EncounterFlatHonorGains"      Operation="Force" Value="2" Path="../ClassEmpire"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasReligious" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP05L03MajorHisshosRepublic" Type="LawEffect">
+    <Modifier TargetProperty="HasEncounterFlatHonorGains"   Operation="Force" Value="1" Path="../ClassEmpire" TooltipOverride="%LawEffectP05L03MajorHisshosTooltipOverride"/>
+    <Modifier TargetProperty="EncounterFlatHonorGains"      Operation="Force" Value="3" Path="../ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L01MajorHisshos" Type="LawEffect">
+    <BinaryModifier       TargetProperty="PlanetDust" Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <Modifier       TargetProperty="UnclampedNetEmpireHonor"    Operation="Subtraction"     Value="2"     Path="../ClassEmpire"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L01RepublicMajorHisshos" Type="LawEffect">
+    <BinaryModifier       TargetProperty="PlanetDust" Operation="Addition" Left="4" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <Modifier       TargetProperty="UnclampedNetEmpireHonor"   Operation="Subtraction"           Value="2"    Path="../ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L05MajorHisshos" Type="LawEffect">
+    <Modifier       TargetProperty="UnclampedNetEmpireHonor"    Operation="Subtraction"           Value="2"    Path="../ClassEmpire"/>
+    <BinaryModifier       TargetProperty="PlanetScience" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L05RepublicMajorHisshos" Type="LawEffect">
+    <BinaryModifier       TargetProperty="PlanetScience" Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <Modifier       TargetProperty="UnclampedNetEmpireHonor"    Operation="Subtraction"           Value="2"    Path="../ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L06MajorHisshos" Type="LawEffect">
+    <BinaryModifier TargetProperty="BoostToHonorInShipBattle"        Operation="Addition"    Left="0.025" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem"  SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="BoostToHonorInGroundBattle"      Operation="Addition"    Left="0.025" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem"  SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="SystemMoney"    Operation="Subtraction" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem"  SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L06RepublicMajorHisshos" Type="LawEffect">
+    <BinaryModifier TargetProperty="BoostToHonorInShipBattle"        Operation="Addition"    Left="0.04" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem"  SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="BoostToHonorInGroundBattle"      Operation="Addition"    Left="0.04" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem"  SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="SystemMoney"    Operation="Subtraction" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem"  SearchValueFromPath="true"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L06DictatorshipMajorHisshos" Type="LawEffect">
+    <!--<Modifier TargetProperty="HonorBoostFromFleetPresence" Operation="Addition" Value="0.05" Path="" TooltipHidden="true"/>-->
+    <Modifier TargetProperty="OwnerShipRecoveryRateBoostFromFleetPresence"       Operation="Addition"  Value="0.1"   Path="../ClassEmpire/ClassColonizedStarSystem" Priority="10" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L07MajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="BoostToHonorInShipBattle"        Operation="Addition"    Value="0.20" Path="../ClassEmpire"  SearchValueFromPath="true"/>
+    <Modifier TargetProperty="BoostToHonorInGroundBattle"      Operation="Addition"    Value="0.20" Path="../ClassEmpire"  SearchValueFromPath="true"/>
+    <Modifier TargetProperty="MaximumHonorZoneRadius"          Operation="Percent"     Value="0.15" Path="../ClassEmpire/ClassGarrison/ClassShip"  SearchValueFromPath="true"/>
+    <Modifier TargetProperty="SystemProduction"       Operation="Percent"         Value="-0.1"    Path="../ClassEmpire/ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L07RepublicMajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="BoostToHonorInShipBattle"        Operation="Addition"    Value="0.35" Path="../ClassEmpire"  />
+    <Modifier TargetProperty="BoostToHonorInGroundBattle"      Operation="Addition"    Value="0.35" Path="../ClassEmpire"  />
+    <Modifier TargetProperty="MaximumHonorZoneRadius"          Operation="Percent"     Value="0.25" Path="../ClassEmpire/ClassGarrison/ClassShip"  SearchValueFromPath="true"/>
+    <Modifier TargetProperty="SystemProduction"       Operation="Percent"         Value="-0.1"    Path="../ClassEmpire/ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP01L01MajorHisshos" Type="LawEffect">
+    <Modifier       TargetProperty="BoostColonyShipReduction"               Operation="Addition"    Value="1"       Path="../ClassEmpire" TooltipHidden="true" />
+    <Modifier       TargetProperty="NetSystemGrowth"                        Operation="Percent"     Value="0.20"     Path="../ClassEmpire/ClassStarSystem,ColonizedStarSystemStateOutpost"/>
+    <Modifier       TargetProperty="DemocracyLawsDiversityHasIndustrialist" Operation="Addition"    Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP01L01RepublicMajorHisshos" Type="LawEffect">
+    <Modifier       TargetProperty="BoostColonyShipReduction"           Operation="Addition" Value="1"       Path="../ClassEmpire" TooltipHidden="true" />
+    <Modifier       TargetProperty="ColoShipProductionCostReduction"    Operation="Addition" Value="0.1" Path="../ClassEmpire/ClassColonizedStarSystem,TemporaryEffectColonyExpansionBoost" TooltipHidden="true" />
+    <Modifier       TargetProperty="NetSystemGrowth"                    Operation="Percent"  Value="0.30"     Path="../ClassEmpire/ClassStarSystem,ColonizedStarSystemStateOutpost"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP03L02MajorHisshos" Type="LawEffect">
+    <BinaryModifier TargetProperty="UnclampedNetEmpireHonor"     Operation="Addition"  Left="0.05"  BinaryOperation="Multiplication"    Right="$(PeaceCount)"       SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <BinaryModifier TargetProperty="UnclampedNetEmpireHonor"     Operation="Addition"  Left="0.1"   BinaryOperation="Multiplication"    Right="$(AllianceCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasPacifist"   Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP03L02RepublicMajorHisshos" Type="LawEffect">
+    <BinaryModifier TargetProperty="UnclampedNetEmpireHonor"     Operation="Addition"  Left="0.1"   BinaryOperation="Multiplication"    Right="$(PeaceCount)"       SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <BinaryModifier TargetProperty="UnclampedNetEmpireHonor"     Operation="Addition"  Left="0.15"  BinaryOperation="Multiplication"    Right="$(AllianceCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP04L00DictatorshipMajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Addition"    Value="0.25"    Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet"  TooltipHidden="true"/>
+    <Modifier TargetProperty="BoostToHonorInGroundBattle"                    Operation="Addition"    Value="0.15"      Path="../ClassEmpire"/>
+    <Modifier TargetProperty="BoostToHonorInShipBattle"                      Operation="Addition"    Value="0.15"      Path="../ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP06L00MajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="FreeWarDeclaration"          Operation="Force"        Value="0"     Path="../ClassEmpire" TooltipHidden="true"/>
+    <Modifier TargetProperty="FreeWarDeclaration"          Operation="Force"        Value="0"     Path="../ClassEmpire/ClassDiplomacy/ClassDiplomaticEmpire" Priority="1" TooltipHidden="true"/>
+    <!-- Contact AI if you change the following modifier -->
+    <BinaryModifier TargetProperty="BoostToHonorInGroundBattle"     Operation="Addition"  Left="0.1"  BinaryOperation="Multiplication"    Right="$(WarCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <BinaryModifier TargetProperty="BoostToHonorInShipBattle"       Operation="Addition"  Left="0.1"  BinaryOperation="Multiplication"    Right="$(WarCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasMilitarist" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP06L00RepublicMajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="FreeWarDeclaration"          Operation="Force"        Value="0"     Path="../ClassEmpire" TooltipHidden="true"/>
+    <Modifier TargetProperty="FreeWarDeclaration"          Operation="Force"        Value="0"     Path="../ClassEmpire/ClassDiplomacy/ClassDiplomaticEmpire" Priority="1" TooltipHidden="true"/>
+    <!-- Contact AI if you change the following modifier -->
+    <BinaryModifier TargetProperty="BoostToHonorInGroundBattle"     Operation="Addition"  Left="0.15"  BinaryOperation="Multiplication"    Right="$(WarCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <BinaryModifier TargetProperty="BoostToHonorInShipBattle"       Operation="Addition"  Left="0.15"  BinaryOperation="Multiplication"    Right="$(WarCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP06L00DictatorshipMajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="FreeWarDeclaration"          Operation="Force"        Value="0"     Path="../ClassEmpire" TooltipHidden="true"/>
+    <Modifier TargetProperty="FreeWarDeclaration"          Operation="Force"        Value="0"     Path="../ClassEmpire/ClassDiplomacy/ClassDiplomaticEmpire" Priority="1" TooltipHidden="true"/>
+    <!-- Contact AI if you change the following modifier -->
+    <BinaryModifier TargetProperty="BoostToHonorInGroundBattle"     Operation="Addition"  Left="0.1"  BinaryOperation="Multiplication"    Right="$(WarCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <BinaryModifier TargetProperty="BoostToHonorInShipBattle"       Operation="Addition"  Left="0.1"  BinaryOperation="Multiplication"    Right="$(WarCount)"    SearchValueFromPath="true"  Path="../ClassEmpire"/>
+    <Modifier TargetProperty="NetSystemManpower"     Operation="Percent"      Value="0.25" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP06L03MajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="HonorBoostShipBattlePerHomeSystem"              Operation="Addition"     Value="0.08"  Path="../ClassEmpire"/>
+    <Modifier TargetProperty="HonorBoostGroundBattlePerHomeSystem"            Operation="Addition"     Value="0.08"  Path="../ClassEmpire"/>
+    <BinaryModifier       TargetProperty="PlanetIndustry" Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasMilitarist" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP06L03RepublicMajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="HonorBoostShipBattlePerHomeSystem"                Operation="Addition"     Value="0.1"  Path="../ClassEmpire"/>
+    <Modifier TargetProperty="HonorBoostGroundBattlePerHomeSystem"              Operation="Addition"     Value="0.1"  Path="../ClassEmpire"/>
+    <BinaryModifier       TargetProperty="PlanetIndustry" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <Modifier TargetProperty="SystemProduction"       Operation="Percent"       Value="-0.1"    Path="../ClassEmpire/ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L21-PopulationCollectionNirisMajorHisshos" Type="LawEffect">
+    <BinaryModifier TargetProperty="BoostToHonorInGroundBattle" Operation="Addition" Left="0.03" BinaryOperation="Multiplication" Right="$(SystemLevel)"	Path="../ClassEmpire/ClassColonizedStarSystem"	SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="BoostToHonorInShipBattle"   Operation="Addition" Left="0.03" BinaryOperation="Multiplication" Right="$(SystemLevel)"	Path="../ClassEmpire/ClassColonizedStarSystem"	SearchValueFromPath="true"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L31-PopulationCollectionHarmonyMajorHisshos" Type="LawEffect">
+    <BinaryModifier TargetProperty="BoostToHonorInGroundBattle"  Operation="Addition" Left="0.02" BinaryOperation="Multiplication" Right="$(OwnedStrategicDeposits)" SearchValueFromPath="true" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+    <BinaryModifier TargetProperty="BoostToHonorInShipBattle"    Operation="Addition" Left="0.02" BinaryOperation="Multiplication" Right="$(OwnedStrategicDeposits)" SearchValueFromPath="true" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L16-PopulationCollectionMavrosMajorHisshos" Type="LawEffect">
+    <Modifier TargetProperty="OverColonizationThreshold" Operation="Addition" Value="2" Priority="10" Path="../ClassEmpire"/>
+    <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L25-PopulationCollectionIllo" Type="LawEffect">
+    <BinaryModifier TargetProperty="NetSystemEmpirePoint" Operation="Percent" Left="0.05" BinaryOperation="Multiplication" Right="$(WarCount)" Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L08MajorHisshos" Type="LawEffect">
+    <BinaryModifier       TargetProperty="UnclampedNetEmpireHonor"         Operation="Subtraction"     Left="1"      BinaryOperation="Multiplication" Right="$(SystemCountForHisshoLaw)"  SearchValueFromPath="true"     Path="../ClassEmpire"/>
+    <Modifier             TargetProperty="SystemFIDSIPercent"              Operation="Addition"        Value="0.25"   Path="../ClassEmpire/!ColonizedStarSystemStateOutpost,ClassColonizedStarSystem" />
+    <Modifier TargetProperty="DemocracyLawsDiversityHasNeutral"            Operation="Addition"        Value="1"     Path="../ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="LawEffectP00L08RepublicMajorHisshos" Type="LawEffect">
+    <BinaryModifier       TargetProperty="UnclampedNetEmpireHonor"        Operation="Subtraction"      Left="1"      BinaryOperation="Multiplication" Right="$(SystemCountForHisshoLaw)"  SearchValueFromPath="true"     Path="../ClassEmpire"/>
+    <Modifier             TargetProperty="SystemFIDSIPercent"             Operation="Addition"         Value="0.3"   Path="../ClassEmpire/!ColonizedStarSystemStateOutpost,ClassColonizedStarSystem" />
+  </SimulationDescriptor>
+
+</Datatable>

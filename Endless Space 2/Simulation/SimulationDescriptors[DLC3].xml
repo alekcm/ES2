@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- TEMPORARY EFFECTS -->
+
+    <SimulationDescriptor Name="TemporaryEffectFleetsImmobilization" Type="TemporaryEffect">
+        <Modifier TargetProperty="CannotMove" Operation="Addition" Value="1" Path="ClassEmpire/ClassGarrisonFleet" TooltipOverride="%TemporaryEffectFleetsImmobilizationEffectDescription"/>
+        <Modifier TargetProperty="Movement" Operation="Force" Value="0" Path="ClassEmpire/ClassGarrisonFleet" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectGroundBattlePlaysHacked" Type="TemporaryEffect">
+        <Modifier TargetProperty="FakeModifier" Operation="Addition" Value="1" TooltipOverride="%TemporaryEffectGroundBattlePlaysHackedEffectDescription"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectSystemBlackout" Type="TemporaryEffect">
+        <Modifier TargetProperty="IsBlackedOut" Operation="Addition" Value="1" TooltipOverride="%TemporaryEffectSystemBlackoutEffectDescription" Path="ClassColonizedStarSystem,!ColonizedStarSystemStateLost"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectMinorRelationIncreaseFromHack" Type="TemporaryEffectMinorRelation">
+        <Modifier TargetProperty="Trend" 	                Operation="Addition"   	Value="5" TooltipOverride="%MinorRelationIncreaseFromHackEffectOverride"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectMinorRelationDecreaseFromHack" Type="TemporaryEffectMinorRelation">
+        <Modifier TargetProperty="Trend" 	                    Operation="Addition"   	Value="-5" TooltipOverride="%MinorSuzerainRelationDecreaseFromHackEffectOverride"/>
+        <Modifier TargetProperty="MinimumTrend"                 Operation="Force"       Value="-5" TooltipHidden="true"/>
+        <Modifier TargetProperty="MinorPraiseCostMultiplier"    Operation="Percent"     Value="5" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectMinorGainsIncreaseFromHack" Type="TemporaryEffectMinorGains">
+        <Modifier TargetProperty="YieldsMultiplier" 		Operation="Addition"   	Value="0.75" TooltipOverride="%MinorGainsIncreaseFromHackEffectOverride"/>
+        <Modifier TargetProperty="SpecialYieldsMultiplier" 	Operation="Addition"   	Value="0.5" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TemporaryEffectMinorPraiseAndQuestCostReductionFromHack" Type="TemporaryEffectMinorPraise">
+        <Modifier TargetProperty="MinorPraiseCostMultiplier" Operation="Percent"   	Value="-0.5"/>
+        <Modifier TargetProperty="MinorQuestCostMultiplier" Operation="Percent"   	Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <!--<SimulationDescriptor Name="TemporaryEffectMinorQuestCostReductionFromHack" Type="MinorRelation">
+        <Modifier TargetProperty="MinorQuestCostMultiplier" Operation="Percent"   	Value="-0.5"/>
+    </SimulationDescriptor>-->
+
+    <SimulationDescriptor Name="TemporaryEffectReducedPirateActionsCost" Type="TemporaryEffect">
+        <Modifier TargetProperty="PirateDiplomacyCostMultiplier" Operation="Percent"   	Value="-0.5"/>
+    </SimulationDescriptor>
+
+
+    <!-- GROUND BATTLE STRATEGIES -->
+
+    <SimulationDescriptor Name="GroundBattleDefenderStrategyHacked" Type="GroundBattleDefenderStrategy">
+        <!--This modifier is for the GUI but is inactive due to priority level-->
+        <Modifier       TargetProperty="GroundBattleDefenderManpowerLimitBonus" Operation="Percent"     Value="-0.5" Priority="-5" />
+        <!--This is the actual modifier-->
+        <BinaryModifier TargetProperty="GroundBattleDefenderManpowerLimitBonus" Operation="Addition"    Left="-0.5" BinaryOperation="Multiplication" Right="$(GroundBattleDefenderManpowerLimit)" TooltipHidden="true" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="GroundBattleDefenderStrategy1Ghost" Type="GroundBattleDefenderStrategy">
+        <Modifier TargetProperty="GroundBattlePopulationPermanentConversionCount"                   Operation="Addition"    Value="2" TooltipOverride="%GroundBattleDefenderStrategy1GhostTooltipEffect1" />
+        <BinaryModifier TargetProperty="GroundBattlePopulationToManpowerPermanentConversionRate"    Operation="Addition"    Left="600" BinaryOperation="Multiplication" Right="$(Ownership)" TooltipOverride="%GroundBattleDefenderStrategy1GhostTooltipEffect2" />
+        <BinaryModifier TargetProperty="GroundBattleDefenderManpowerLimitBonus"                     Operation="Addition"    Left="600" BinaryOperation="Multiplication" Right="$(Ownership)" TooltipHidden="true" />
+        <Modifier       TargetProperty="GroundBattleDefenderManpowerLimitBonus"                     Operation="Percent"     Value="0.15"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="GroundBattleDefenderStrategy2Ghost" Type="GroundBattleDefenderStrategy">
+        <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier" Operation="Addition" Value="0.3"/>
+        <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Subtraction" Value="0.35" />
+      <Modifier TargetProperty="GroundBattleBombardmentDefensiveDamageReduction" Operation="Subtraction" Value="0.75" />
+    </SimulationDescriptor>
+
+
+    <!-- INVIS AND HACKING -->
+
+    <SimulationDescriptor Name="CanSeeOtherEmpireFleets" Type="CanSeeOtherEmpireFleets">
+        <Modifier TargetProperty="SeesSomeEnemyFleets" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipOverride="%CanSeeOtherEmpireFleetsTooltipOverride"/>
+        <Modifier TargetProperty="SeesAllFleets" Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FleetsCanBeSeenByOtherEmpire" Type="FleetsCanBeSeenByOtherEmpire">
+        <Modifier TargetProperty="FleetsCanBeSeenByEnemies" Operation="Addition" Value="1" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FakeContextualRestriction" Type="FakeContextualRestriction"/>
+
+    <SimulationDescriptor Name="PressureIncreaseFromTrace" Type="Pressure">
+        <Modifier TargetProperty="HackingPressureBonus"     Operation="Addition"    Value="0.5" TooltipOverride="%PressureIncreaseFromTraceEffectOverride"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PressureIncreaseFromTraceSymmetricalEffect" Type="Pressure">
+        <Modifier TargetProperty="HackingPressureBonus"     Operation="Addition"    Value="-0.5" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HackingSpeedDecreaseFromTrace" Type="HackingSpeed">
+        <Modifier TargetProperty="HackingSpeedMultiplier"   Operation="Percent" Value="-0.5" TooltipOverride="%HackingSpeedDecreaseFromTraceEffectOverride"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HackingSpeedIncreaseFromTrace" Type="HackingSpeed">
+        <Modifier TargetProperty="HackingSpeedMultiplier"   Operation="Percent" Value="0.5" TooltipOverride="%HackingSpeedIncreaseFromTraceEffectOverride"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="HackingSpeedIncreaseFromHauntDestruction" Type="HackingSpeed">
+        <Modifier TargetProperty="HackingSpeedMultiplier"   Operation="Percent" Value="0.5" TooltipOverride="%HackingSpeedIncreaseFromHauntDestructionEffectOverride"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassDetectionProbe" Type="Class">
+        <Property Name="VisionRange" BaseValue="0"/>
+        <Property Name="VisionStrength" BaseValue="0"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FleetActionLaunchingDetectionProbe" Type="FleetActionLaunchingDetectionProbe" IsSerializable="false"/>
+
+
+    <!-- SANCTUARIES -->
+
+    <SimulationDescriptor Name="ColonizedStarSystemStateGhost" Type="ColonizedStarSystemState">
+
+        <Property Name="HackingSpeedMultiplierFromGhostSystem" BaseValue="1.25"/>
+        <Property Name="OwnedSystems" BaseValue="1"/>
+        <Property Name="GroundBattleManpowerLimitBonusForAttackingAllies" BaseValue="0"/>
+        <Property Name="GroundBattleManpowerLimitBonusForDefendingAllies" BaseValue="0"/>
+        <Property Name="ColonizedStarSystemStateGhostCount"     BaseValue="1"/>
+        <Property Name="ColonizedStarSystemStateColonyCount"    BaseValue="1"/>
+
+        <!-- Force happiness to 50 (should not matter but who knows) -->
+        <Modifier TargetProperty="Happiness"            Operation="Force"       Value="50"                      Path="ClassColonizedStarSystem"/>
+
+        <!-- Transfer all FIDSI to Home system. -->
+        <Modifier TargetProperty="NetSystemLifeforce"   Operation="Addition"    Value="$(NetSystemLifeforce)"   Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+        <Modifier TargetProperty="NetSystemGrowth"      Operation="Addition"    Value="$(NetSystemGrowth)"      Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+        <Modifier TargetProperty="NetSystemProduction"  Operation="Addition"    Value="$(NetSystemProduction)"  Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+        <Modifier TargetProperty="NetSystemMoney"       Operation="Addition"    Value="$(NetSystemMoney)"       Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+        <Modifier TargetProperty="NetSystemResearch"    Operation="Addition"    Value="$(NetSystemResearch)"    Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+        <Modifier TargetProperty="NetSystemEmpirePoint" Operation="Addition"    Value="$(NetSystemEmpirePoint)" Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+
+        <Modifier TargetProperty="SanctuariesSystemResearch"    Operation="Addition"    Value="$(NetSystemResearch)"    Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+
+        <Modifier TargetProperty="NetSystemProductionForConvertersFromGhostSystem"  Operation="Addition"    Value="$(NetSystemProduction)"  Path="../ClassEmpire/ClassColonizedStarSystem,!ColonizedStarSystemStateGhost"/>
+
+        <!-- No influence zone. -->
+        <Modifier TargetProperty="NetSystemInfluence"                   Operation="Force"       Value="0" TooltipHidden="true"  Priority="10"/>
+        <Modifier TargetProperty="SystemInfluenceRadius"                Operation="Force"       Value="0" TooltipHidden="true"  Priority="10"/>
+        <Modifier TargetProperty="SystemNextInfluenceRadiusEstimation"  Operation="Force"       Value="0" TooltipHidden="true"  Priority="10"/>
+        <Modifier TargetProperty="VisionRange"                          Operation="Addition"    Value="1.7"/>
+
+        <!-- Hidden by default -->
+        <Modifier TargetProperty="AntiVisionStrength" Operation="Addition" Value="$(OwnedPlanets)"/>
+
+        <!-- Inform the best system of how much additional pop it can create in one turn. -->
+        <Modifier TargetProperty="AvailablePopulationSlotsOnGhostSystems" Operation="Addition"      Value="$(MaximumPopulation)"    Path="../ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony"/>
+        <Modifier TargetProperty="AvailablePopulationSlotsOnGhostSystems" Operation="Subtraction"   Value="$(Population)"           Path="../ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony"/>
+
+        <!-- Add 100 per Haunt system to empire manpower stock -->
+        <Modifier  TargetProperty="MaximumEmpireManpowerStock"          Operation="Addition"  Value="100" Path="./ClassEmpire" />
+
+        <!-- +200 Manpower per planet -->
+        <BinaryModifier TargetProperty="MaximumSystemManpower"          Operation="Addition" Left="200" BinaryOperation="Multiplication" Right="$(OwnedPlanets)" Priority="-10"/>
+
+        <!-- Bonus to manpower limit to allies -->
+        <BinaryModifier TargetProperty="GroundBattleManpowerLimitBonusForAttackingAllies" Operation="Addition" Left="$(Population)" BinaryOperation="Multiplication" Right="20"/>
+        <BinaryModifier TargetProperty="GroundBattleManpowerLimitBonusForDefendingAllies" Operation="Addition" Left="$(Population)" BinaryOperation="Multiplication" Right="25"/>
+
+        <!-- Count haunt planets for home system FX -->
+        <Modifier TargetProperty="UmbralChoirHomeSystemPower" Operation="Addition" Value="$(OwnedPlanets)" Path="../ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony"/>
+
+        <Modifier TargetProperty="OwnedSystemPopulationIsMaxed" Operation="Addition" Value="$(SystemPopulationIsMaxed)" Path="ColonizedStarSystemStateGhost"/>
+    </SimulationDescriptor>
+
+
+    <!-- TRAITORS -->
+
+    <SimulationDescriptor Name="StarSystemActionRemoveTraitors" Type="StarSystemActionRemoveTraitors" IsSerializable="false">
+        <Modifier TargetProperty="Happiness"      Operation="Percent" Value="-0.25" Path="ClassColonizedStarSystem"/>
+
+        <!--Hissho version-->
+        <Modifier TargetProperty="UnclampedNetEmpireHonor" Operation="Subtraction" Value="2" Path="../ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="StarSystemActionKillTraitors" Type="StarSystemActionKillTraitors" IsSerializable="false"/>
+
+    <SimulationDescriptor Name="StarSystemActionRevealTraitors" Type="StarSystemActionRevealTraitors" IsSerializable="false">
+        <Modifier TargetProperty="SeesTraitors" Operation="Addition"  Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TraitorBonusThreshold1" Type="TraitorBonusThreshold">
+        <Modifier TargetProperty="MoneyRatioLostFromTraitors"       Operation="Addition" Value="0.1"/>
+        <Modifier TargetProperty="StrategicRatioLostFromTraitors"   Operation="Addition" Value="0.1"/>
+        <Modifier TargetProperty="LuxuryRatioLostFromTraitors"      Operation="Addition" Value="0.1"/>
+
+        <Modifier TargetProperty="BaseMoneyRatioLostFromTraitors"       Operation="Addition" Value="0.1"/>
+        <Modifier TargetProperty="BaseStrategicRatioLostFromTraitors"   Operation="Addition" Value="0.1"/>
+        <Modifier TargetProperty="BaseLuxuryRatioLostFromTraitors"      Operation="Addition" Value="0.1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TraitorBonusThreshold2" Type="TraitorBonusThreshold">
+        <Modifier TargetProperty="MoneyRatioLostFromTraitors"       Operation="Addition" Value="0.2"/>
+        <Modifier TargetProperty="StrategicRatioLostFromTraitors"   Operation="Addition" Value="0.15"/>
+        <Modifier TargetProperty="LuxuryRatioLostFromTraitors"      Operation="Addition" Value="0.15"/>
+
+        <Modifier TargetProperty="BaseMoneyRatioLostFromTraitors"       Operation="Addition" Value="0.2"/>
+        <Modifier TargetProperty="BaseStrategicRatioLostFromTraitors"   Operation="Addition" Value="0.15"/>
+        <Modifier TargetProperty="BaseLuxuryRatioLostFromTraitors"      Operation="Addition" Value="0.15"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="TraitorBonusThreshold3" Type="TraitorBonusThreshold">
+        <Modifier TargetProperty="MoneyRatioLostFromTraitors"       Operation="Addition" Value="0.3"/>
+        <Modifier TargetProperty="StrategicRatioLostFromTraitors"   Operation="Addition" Value="0.2"/>
+        <Modifier TargetProperty="LuxuryRatioLostFromTraitors"      Operation="Addition" Value="0.2"/>
+
+        <Modifier TargetProperty="BaseMoneyRatioLostFromTraitors"       Operation="Addition" Value="0.3"/>
+        <Modifier TargetProperty="BaseStrategicRatioLostFromTraitors"   Operation="Addition" Value="0.2"/>
+        <Modifier TargetProperty="BaseLuxuryRatioLostFromTraitors"      Operation="Addition" Value="0.2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="DisplacementEffectProcessingPowerMalus" Type="DisplacementEffect">
+        <Modifier TargetProperty="MaximumEmpireProcessingPowerStock" Operation="Percent" Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="GhostActionDecolonize" Type="GhostActionDecolonize"/>
+
+</Datatable>

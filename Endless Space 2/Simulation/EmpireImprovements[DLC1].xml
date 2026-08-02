@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EmpireImprovementDefinition.xsd">
+
+  <!-- ###### VAULTERS ###### -->
+
+  <!-- Perfected1Hull1 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull1Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull1Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull1" />
+  </EmpireImprovementDefinition>
+
+  <!-- Perfected1Hull2 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull2Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull2Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull2" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull4 (medium attacker) unlocks additional slots for small attacker ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall01Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull1Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall01Vaulters" />
+    <!-- Points to the actual tooltip description that will be displayed -->
+  </EmpireImprovementDefinition>
+
+  <!-- Hull5 (medium defender) unlocks additional slots for small support ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall02Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary"  >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull2Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall02Vaulters" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6 (large ship) unlocks additional slots for all medium ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium01Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull3Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium01Vaulters" />
+  </EmpireImprovementDefinition>
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium02Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull4Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium02Vaulters" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6Slots unlocks additional slots for large ships-->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsLarge01Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull5Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsLarge01Vaulters" />
+  </EmpireImprovementDefinition>
+
+
+  <!--#########################-->
+  <!--####  QUEST TECHNO  #####-->
+  <!--#########################-->
+  <EmpireImprovementDefinition Name="EmpireImprovementQuestVaulters12" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedVaultersQuest12-Reward</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementQuestVaulters12"/>
+  </EmpireImprovementDefinition>
+
+  <!-- ##################################### -->
+  <!-- #####  VAULTERS SPECIAL TECH   ###### -->
+  <!-- ###################################### -->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementFreeMovementVaulters" Category="CategoryMovementBonus" SubCategory="SubCategoryExploration">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyFreeMovementVaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementFreeMovementVaulters" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementUnique11Vaulters" Category="CategoryMovementBonus" SubCategory="SubCategoryExploration">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyUnique11Vaulters</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementUnique11Vaulters" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementUnique11SuperColonizer" Category="CategoryHullUpgrade" SubCategory="SubCategoryExploration">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyUniqueSuperColonizerMobilePortal</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementUnique11SuperColonizer" />
+  </EmpireImprovementDefinition>
+
+  <!-- Portal upgrades -->
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedPortalGrowth" Category="CategoryPortalUpgrade" SubCategory="SubCategoryMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPortalUpgradeGrowth</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalGrowth" />
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalGrowthFakeEffect" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedPortalOverpopulation" Category="CategoryPortalUpgrade" SubCategory="SubCategoryApproval">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPortalUpgradeOverpopulation</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalOverpopulation" />
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalOverpopulationFakeEffect"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedPortalPacificConversion" Category="CategoryPortalUpgrade" SubCategory="SubCategoryDiplomacy">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPortalUpgradePacificConversion</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalPacificConversion" />
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalPacificConversionFakeEffect"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedPortalShipRegeneration" Category="CategoryPortalUpgrade" SubCategory="SubCategoryScience">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPortalUpgradeShipRegeneration</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalShipRegeneration" />
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedPortalShipRegenerationFakeEffect"/>
+  </EmpireImprovementDefinition>
+
+  <!--############################-->
+  <!--####    FREE CONTENT    ####-->
+  <!--############################-->
+
+
+  <EmpireImprovementDefinition Name="EmpireImprovementQuestMetaplot1" Category="CategoryManpower" SubCategory="SubCategoryMilitary">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedMetaplotQuestChapter2_TeamA</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementQuestMetaplot1" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementQuestMetaplot2" Category="CategoryManpower" SubCategory="SubCategoryMilitary">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedMetaplotQuestChapter2_TeamB</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementQuestMetaplot2" />
+  </EmpireImprovementDefinition>
+
+
+
+  <!--###### DEEDS #######-->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds01" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDiplomacy">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestEmpire_Stage5A</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds01"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds02" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDiplomacy">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestEmpire_Stage4A</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds02"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds03" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDiplomacy">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestEmpire_Stage5B</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds03"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds04" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDiplomacy">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestEmpire_Stage4B</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds04"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds05" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestScience_Stage5A</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds05"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds06" Category="CategoryEmpireImprovement" SubCategory="SubCategoryEmpire">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestScience_Stage5B</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds06"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds07" Category="CategoryEmpireImprovement" SubCategory="SubCategoryEmpire">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestScience_Stage5C</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds07"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDeeds08" Category="CategoryEmpireImprovement" SubCategory="SubCategoryFleet">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestMilitary_Stage4C</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDeeds08"/>
+  </EmpireImprovementDefinition>
+
+</Datatable>

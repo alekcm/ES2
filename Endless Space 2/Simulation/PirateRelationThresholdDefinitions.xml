@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PirateRelationThresholdDefinition.xsd">
+
+    <PirateRelationThresholdDefinition Name="PirateRelationAggressive" MinimumRelationPoints="-101" RelationState="DiplomaticRelationStatePirateAggressive"/>
+
+    <PirateRelationThresholdDefinition Name="PirateRelationNeutral" MinimumRelationPoints="-33" RelationState="DiplomaticRelationStatePirateNeutral"/>
+
+    <PirateRelationThresholdDefinition Name="PirateRelationCordial" MinimumRelationPoints="33" RelationState="DiplomaticRelationStatePirateCordial"/>
+
+    <PirateRelationThresholdDefinition Name="PirateRelationBestFriend" MinimumRelationPoints="33" BestRelationOnly="true" RelationState="DiplomaticRelationStatePirateBestFriend"/>
+    
+</Datatable>

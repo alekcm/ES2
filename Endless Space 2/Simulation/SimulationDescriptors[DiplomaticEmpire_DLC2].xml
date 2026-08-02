@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="FactionPactEffectMajorHisshos" Type="FactionPactEffect">
+        <Property Name="FactionPactBonusValue"  BaseValue="0.01" MaxValue="0.07"/>
+        <Property Name="FactionPactStepValue"   BaseValue="0" />
+        <BinaryModifier TargetProperty="FactionPactStepValue"   Operation="Force"       Left="0.07"                          BinaryOperation="Division"          Right="$(FactionPactDuration)"  Priority="3" TooltipHidden="true" />
+        <BinaryModifier TargetProperty="FactionPactBonusValue"  Operation="Addition"    Left="$(FactionPactCurrentTurn)"    BinaryOperation="Multiplication"    Right="$(FactionPactStepValue)" Priority="4" TooltipHidden="true" />
+        <BinaryModifier TargetProperty="TroopHealthBonuses" Operation="Percent" Left="$(FactionPactBonusValue)" BinaryOperation="Multiplication" Right="$(FactionPactEffectMultiplier)" Path="../ClassEmpire" Priority="5"/>
+        <BinaryModifier TargetProperty="TroopDamageBonuses" Operation="Percent" Left="$(FactionPactBonusValue)" BinaryOperation="Multiplication" Right="$(FactionPactEffectMultiplier)" Path="../ClassEmpire" Priority="5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="IsWarAttacker" Type="IsWarAttacker" IsSerializable="false">
+        <Modifier TargetProperty="HonorGainMultiplier" Operation="Percent" Value="0.25"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="IsWarDefender" Type="IsWarDefender" IsSerializable="false">
+        <Modifier TargetProperty="HonorGainMultiplier" Operation="Percent" Value="0.50"/>
+    </SimulationDescriptor>
+</Datatable>

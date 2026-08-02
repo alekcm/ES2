@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ####################################-->
+    <!-- #########     UPDATE 14    ######### -->
+    <!-- ####################################-->
+
+
+    <QuestGuiElement Name="PopulationQuest27_Part1">
+        <Title>%PopulationQuest27_Part1-IntroTitle</Title>
+        <Description>%PopulationQuest27_Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest27Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part1-1Title</Title>
+                    <Description>%PopulationQuest27_Part1-1Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part1-1ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part1-1Outcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%PopulationQuest27_Part1-1Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part1-1Title</Title>
+                    <Description>%PopulationQuest27_Part1-1Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part1-2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part1-1Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%PopulationQuest27_Part1-2Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part1-3Title</Title>
+                    <Description>%PopulationQuest27_Part1-3Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part1-3ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part1-3Outcome</OutcomeCompleted>
+                    <Objective Name="Objective2">%PopulationQuest27_Part1-3Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part1-4Title</Title>
+                    <Description>%PopulationQuest27_Part1-4Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part1-4ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part1-4Outcome</OutcomeCompleted>
+                    <Objective Name="Objective3">%PopulationQuest27_Part1-4Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="PopulationQuest27_Part2A">
+        <Title>%PopulationQuest27_Part2A-IntroTitle</Title>
+        <Description>%PopulationQuest27_Part2A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest27Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part2A-1Title</Title>
+                    <Description>%PopulationQuest27_Part2A-1Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part2A-1ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part2A-1Outcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%PopulationQuest27_Part2A-1Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part2A-2Title</Title>
+                    <Description>%PopulationQuest27_Part2A-2Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part2A-2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part2A-2Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%PopulationQuest27_Part2A-2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="PopulationQuest27_Part2B">
+        <Title>%PopulationQuest27_Part2B-IntroTitle</Title>
+        <Description>%PopulationQuest27_Part2B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest27Large" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part2B-1Title</Title>
+                    <Description>%PopulationQuest27_Part2B-1Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part2B-1ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part2B-1Outcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%PopulationQuest27_Part2B-1Objective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics00">
+                    <Title>%PopulationQuest27_Part2B-2Title</Title>
+                    <Description>%PopulationQuest27_Part2B-2Description</Description>
+                    <TooltipDescription>%PopulationQuest27_Part2B-2ObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%PopulationQuest27_Part2B-2Outcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%PopulationQuest27_Part2B-2Objective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+</Datatable>

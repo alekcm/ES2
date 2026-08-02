@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+
+
+    <!-- ################################### -->
+    <!--         FREE WEEK-END QUEST         -->
+    <!-- ################################### -->
+
+
+    <!-- ################################### -->
+    <!--                Part1                -->
+    <!-- ################################### -->
+
+    <QuestDefinition Name="PopulationQuest27_Part1" Category="PopulationQuest" SubCategory="Population" MinimumTurn="36" TriggeringProbability="1">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <!--Empire fulfilling this quest-->
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <!--OBJECTIVE 0-->
+            <!--Amount of turns I must have the required Approval-->
+            <InterpretedVar VarName="$HappinessDuration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*10</Expression>
+            </InterpretedVar>
+            <!--Amount of Empire Approval I must reach-->
+            <Var VarName="$MinimumEmpireHappiness" IntValue="90"/>
+            <!--Expression to check if the current level of Empire Approval is high enough-->
+            <Var VarName="$EmpireHappinessExpression" StringValue="Property(Context,@'ClassEmpire',EmpireHappinessScore) ge $(MinimumEmpireHappiness)"/>
+
+            <!--OBJECTIVE 1-->
+            <!--Amount of turns I must have the required Keii-->
+            <InterpretedVar VarName="$HonorDuration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*10</Expression>
+            </InterpretedVar>
+            <!--Amount of Keii I must reach-->
+            <Var VarName="$MinimumEmpireHonor" IntValue="95"/>
+            <!--Expression to check if the current level of Keii is high enough-->
+            <Var VarName="$EmpireHonorExpression" StringValue="Property(Context,@'ClassEmpire',EmpireHonorStock) ge $(MinimumEmpireHonor)"/>
+
+            <!--OBJECTIVE 2-->
+            <!--Amount of active Ecologist Law I must have-->
+            <InterpretedVar VarName="$EcologistLawAmount" Target="$(Empire)">
+                <Expression>Min(Count(Context, @'ClassEmpire/ClassSenate/ClassLaw,LawPolitics04')+1,4)</Expression>
+            </InterpretedVar>
+            <!--Amount of turns I must have the required amount of Laws-->
+            <InterpretedVar VarName="$EcologistLawDuration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*10</Expression>
+            </InterpretedVar>
+            <!--Ecologist Politics-->
+            <Var VarName="$EcologistPolitics" StringValue="Politics04"/>
+
+            <!--OBJECTIVE 3-->
+            <!--Highest amount of Food produced by my Systems-->
+            <InterpretedVar VarName="$FoodAmount" Target="$(Empire)">
+                <Expression>MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',SystemGrowth)</Expression>
+            </InterpretedVar>
+            <!--Amout of Food to reach-->
+            <InterpretedVar VarName="$FoodObjectiveAmount" Target="$(Empire)">
+                <Expression>MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',SystemGrowth)*1.5</Expression>
+            </InterpretedVar>
+            <!--Expression to get the currently highest amount of Food produced by my Systems-->
+            <Var VarName="$FoodAmountExpression" StringValue="MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',SystemGrowth)"/>
+
+            <!--LOCALIZATION VARIABLE-->
+            <LocalizationVar LocalizationKey="$MinimumEmpireHappinessName" Source="$MinimumEmpireHappiness"/>
+            <LocalizationVar LocalizationKey="$HappinessDurationName" Source="$HappinessDuration"/>
+
+            <LocalizationVar LocalizationKey="$MinimumEmpireHonorName" Source="$MinimumEmpireHonor"/>
+            <LocalizationVar LocalizationKey="$HonorDurationName" Source="$HonorDuration"/>
+
+            <LocalizationVar LocalizationKey="$EcologistLawAmountName" Source="$EcologistLawAmount"/>
+            <LocalizationVar LocalizationKey="$EcologistLawDurationName" Source="$EcologistLawDuration"/>
+
+            <LocalizationVar LocalizationKey="$FoodObjectiveAmountName" Source="$FoodObjectiveAmount"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context,@'ClassEmpire/ClassPopulationEmpire,ClassPopulationEmpireAffinityBasryxo',PopulationCount,true) ge 10 </InterpreterPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">Update14</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="2">
+                    <ChoiceItem ObjectiveSetIndex="0">
+                        <!--If I don't have the Hissho gameplay-->
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="1">
+                        <!--If I have the Hissho gameplay-->
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite">ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="2"/>
+                    <ChoiceItem ObjectiveSetIndex="3"/>
+                </Choice>
+
+                <!--============ OBJECTIVE SET 0 - For non-Hissho ============-->
+                <ObjectiveSet>
+                    <StartActions/>
+                    <Objective Name="Objective0" StartValue="0" EndValue="$HappinessDuration">
+                        <AIHint Category="MaximizeResource" Motivation="0.6">
+                            <Resource>Approval</Resource>
+                        </AIHint>
+                        <Sequence>
+                            <Loop>
+                                <!--Have enough Approval for $HappinessDuration turns-->
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$EmpireHappinessExpression"/>
+                                    </Condition_CheckInterpreter>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$HappinessDuration"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="Outcome0"/>
+                        </Sequence>
+                        <Outcome Name="Outcome0">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>PopulationQuest27Part2A</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Reward Droplist="DroplistLuxuriesEra3" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 1 - For Hissho ============-->
+                <ObjectiveSet>
+                    <Objective Name="Objective1" StartValue="0" EndValue="$HonorDuration">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="25" MaxAutoResolutionTurn="40" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <!--Have enough Obedience for $HonorDuration turns-->
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Condition_CheckInterpreter>
+                                        <Input_Context VarName="$CurrentEmpire"/>
+                                        <Input_Expression VarName="$EmpireHonorExpression"/>
+                                    </Condition_CheckInterpreter>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$HonorDuration"/>
+                            </Loop>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>PopulationQuest27Part2A</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Reward Droplist="DroplistLuxuriesEra2" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 2 ============-->
+                <ObjectiveSet>
+                    <Objective Name="Objective2" StartValue="0" EndValue="$EcologistLawDuration">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <!--Have enough Ecologist Law for $EcologistLawDuration turns-->
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Condition_HasLaws>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_Politics VarName="$EcologistPolitics"/>
+                                        <Input_MinimumAmount VarName="$EcologistLawAmount"/>
+                                    </Condition_HasLaws>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$EcologistLawDuration"/>
+                            </Loop>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistTechnologyEmpireDevelopment" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 3 ============-->
+                <ObjectiveSet>
+                    <Objective Name="Objective3" StartValue ="$FoodAmount" EndValue ="$FoodObjectiveAmount">
+                        <AIHint Category="MaximizeResource" Motivation="0.6">
+                            <Resource>Food</Resource>
+                        </AIHint>
+                        <Sequence>
+                            <!--End the turn-->
+                            <Decorator_BeginTurn>
+                                <Condition_IsProgressionComplete>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$FoodAmountExpression"/>
+                                </Condition_IsProgressionComplete>
+                            </Decorator_BeginTurn>
+                            <Action_ChooseOutcome Name="Outcome2"/>
+                        </Sequence>
+                        <Outcome Name="Outcome2">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>PopulationQuest27Part2B</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                    <Reward Droplist="DroplistLuxuriesEra2" Picks="1"/>
+                </ObjectiveSet>
+
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ################################### -->
+    <!--                Part2A               -->
+    <!-- ################################### -->
+
+    <QuestDefinition Name="PopulationQuest27_Part2A" Category="PopulationQuest" SubCategory="PopulationQuestContinuation">
+
+        <!--============ TAGS ============-->
+        <Tags>PopulationQuest27Part2A</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <!--Empire fulfilling this quest-->
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <!--OBJECTIVE 0-->
+            <!--Highest amount of Science produced by my Systems-->
+            <InterpretedVar VarName="$ScienceAmount" Target="$(Empire)">
+                <Expression>MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',NetSystemResearch)</Expression>
+            </InterpretedVar>
+            <!--Amout of Science to reach-->
+            <InterpretedVar VarName="$ScienceObjectiveAmount" Target="$(Empire)">
+                <Expression>Round(MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',NetSystemResearch)*1.3)</Expression>
+            </InterpretedVar>
+            <!--Expression to get the currently highest amount of Science produced by my Systems-->
+            <Var VarName="$ScienceAmountExpression" StringValue="MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',NetSystemResearch)"/>
+
+            <!--OBJECTIVE 1-->
+            <!--Highest amount of Industry produced by my Systems-->
+            <InterpretedVar VarName="$IndustryAmount" Target="$(Empire)">
+                <Expression>MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',NetSystemProduction)</Expression>
+            </InterpretedVar>
+            <!--Amout of Industry to reach-->
+            <InterpretedVar VarName="$IndustryObjectiveAmount" Target="$(Empire)">
+                <Expression>Round(MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',NetSystemProduction)*1.3)</Expression>
+            </InterpretedVar>
+            <!--Expression to get the currently highest amount of Industry produced by my Systems-->
+            <Var VarName="$IndustryAmountExpression" StringValue="MaxProperty(Context,@'ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony',NetSystemProduction)"/>
+
+            <!--LOCALIZATION VARIABLE-->
+            <LocalizationVar LocalizationKey="$ScienceObjectiveAmountName" Source="$ScienceObjectiveAmount"/>
+
+            <LocalizationVar LocalizationKey="$IndustryObjectiveAmountName" Source="$IndustryObjectiveAmount"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empire)"></Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+
+                <!--============ OBJECTIVE SET 0 ============-->
+                <ObjectiveSet>
+                    <StartActions/>
+                    <Objective Name="Objective0" StartValue="$ScienceAmount" EndValue="$ScienceObjectiveAmount">
+                        <AIHint Category="MaximizeResource" Motivation="0.6">
+                            <Resource>Science</Resource>
+                        </AIHint>
+                        <Sequence>
+                            <!--End the turn-->
+                            <Decorator_BeginTurn>
+                                <Condition_IsProgressionComplete>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$ScienceAmountExpression"/>
+                                </Condition_IsProgressionComplete>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistTechnologyScienceAndExploration" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 1 ============-->
+                <ObjectiveSet>
+                    <Objective Name="Objective1" StartValue="$IndustryAmount" EndValue="$IndustryObjectiveAmount">
+                        <AIHint Category="MaximizeResource" Motivation="0.6">
+                            <Resource>Industry</Resource>
+                        </AIHint>
+                        <Sequence>
+                            <!--End the turn-->
+                            <Decorator_BeginTurn>
+                                <Condition_IsProgressionComplete>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$IndustryAmountExpression"/>
+                                </Condition_IsProgressionComplete>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistTechnologyEconomyAndTrade" Picks="1"/>
+                </ObjectiveSet>
+
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!-- ################################### -->
+    <!--                Part2B               -->
+    <!-- ################################### -->
+
+    <QuestDefinition Name="PopulationQuest27_Part2B" Category="PopulationQuest" SubCategory="PopulationQuestContinuation">
+
+        <!--============ TAGS ============-->
+        <Tags>PopulationQuest27Part2B</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <!--Empire fulfilling this quest-->
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <!--A variable with the numerical value of 1-->
+            <Var VarName="$One" IntValue="1"/>
+
+            <!--OBJECTIVE 0-->
+            <!--Amout of Manpower the built ship must have-->
+            <InterpretedVar VarName="$ManpowerObjectiveAmount" Target="$(Empire)">
+                <Expression>MaxProperty(Context,@'ClassEmpire/ClassGarrison/ClassShip',MaximumShipManpower)*1.3</Expression>
+            </InterpretedVar>
+            <!--The ship that was just constructed-->
+            <Var VarName="$ConstructedShip"/>
+
+            <!--OBJECTIVE 1-->
+            <!--Amount of active Militarist Law I must have-->
+            <InterpretedVar VarName="$MilitaristLawAmount" Target="$(Empire)">
+                <Expression>Min(Count(Context, @'ClassEmpire/ClassSenate/ClassLaw,LawPolitics04')+1,4)</Expression>
+            </InterpretedVar>
+            <!--Amount of turns I must have the required amount of Laws-->
+            <InterpretedVar VarName="$MilitaristLawDuration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*10</Expression>
+            </InterpretedVar>
+            <!--Militarist Politics-->
+            <Var VarName="$MilitaristPolitics" StringValue="Politics06"/>
+
+            <!--LOCALIZATION VARIABLE-->
+            <LocalizationVar LocalizationKey="$ManpowerObjectiveAmountName" Source="$ManpowerObjectiveAmount"/>
+
+            <LocalizationVar LocalizationKey="$MilitaristLawAmountName" Source="$MilitaristLawAmount"/>
+            <LocalizationVar LocalizationKey="$MilitaristLawDurationName" Source="$MilitaristLawDuration"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empire)"></Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+
+                <!--============ OBJECTIVE SET 0 ============-->
+                <ObjectiveSet>
+                    <StartActions/>
+                    <Objective Name="Objective0">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="25" MaxAutoResolutionTurn="40" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Parallel CompletionPolicy="First">
+
+                                <Sequence>
+                                    <!--Build a ship-->
+                                    <Decorator_ShipConstructed Initiator="Empire">
+                                        <Condition_HasManpower>
+                                            <Input_Location VarName="$ConstructedShip"/>
+                                            <Input_MinimumAmount VarName="$ManpowerObjectiveAmount"/>
+                                            <Input_MinimumNumberOfValidLocations VarName="$One"/>
+                                        </Condition_HasManpower>
+                                        <Output_Ship VarName="$ConstructedShip"/>
+                                    </Decorator_ShipConstructed>
+                                </Sequence>
+
+                                <Sequence>
+                                    <!--End the turn-->
+                                    <Decorator_BeginTurn>
+                                        <Condition_HasManpower>
+                                            <Input_Location VarName="$CurrentEmpire"/>
+                                            <Input_MinimumAmount VarName="$ManpowerObjectiveAmount"/>
+                                            <Input_MinimumNumberOfValidLocations VarName="$One"/>
+                                        </Condition_HasManpower>
+                                    </Decorator_BeginTurn>
+                                </Sequence>
+
+                            </Parallel>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistTechnologyDefinitionMilitary" Picks="1"/>
+                </ObjectiveSet>
+
+                <!--============ OBJECTIVE SET 1 ============-->
+                <ObjectiveSet>
+                    <Objective Name="Objective1" StartValue="0" EndValue="$MilitaristLawDuration">
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1"/>
+                        <Sequence>
+                            <Loop>
+                                <!--Have enough Militarist Law for $MilitaristLawDuration turns-->
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Condition_HasLaws>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_Politics VarName="$MilitaristPolitics"/>
+                                        <Input_MinimumAmount VarName="$MilitaristLawAmount"/>
+                                    </Condition_HasLaws>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$MilitaristLawDuration"/>
+                            </Loop>
+                        </Sequence>
+                    </Objective>
+                    <Reward Droplist="DroplistStrategicsEra3" Picks="1"/>
+                </ObjectiveSet>
+
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+</Datatable>

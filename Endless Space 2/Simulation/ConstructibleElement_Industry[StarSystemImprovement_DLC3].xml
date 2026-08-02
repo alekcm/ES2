@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/IndustryConstructibleElement.xsd">
+
+    <!-- Legacy Content -->
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementIncreasedJuggernautLimitUmbralChoir" SubCategory="SubCategoryIndustry" NeedConfirm="true">
+        <Cost ResourceName="SystemProduction">2240</Cost>
+        <Cost ResourceName="Strategic1" Instant="true">25</Cost>
+        <Cost ResourceName="Strategic2" Instant="true">25</Cost>
+        <Cost ResourceName="Strategic3" Instant="true">10</Cost>
+        <Cost ResourceName="Strategic4" Instant="true">10</Cost>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard">TechnologyJuggernautIncreasedLimit</TechnologyPrerequisite>
+        <PathPrerequisite                   Flags="Prerequisite,Discard,UnlockAvailability" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                   Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+
+        <SimulationDescriptorReference Name="StarSystemImprovementIncreasedJuggernautLimit" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Extreme" />
+
+    </StarSystemImprovementDefinition>
+
+
+    <!-- Economy -->
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementIndustry1UmbralChoir" SubCategory="SubCategoryIndustry" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Industry" />
+        <Cost ResourceName="SystemProduction">280</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementIndustry1UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementIndustry1,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementIndustry1Sophons,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyIndustry1</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementIndustry1UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage1Normal" />
+        <SimulationDescriptorReference Name="IsIndustryBuilding" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionIndustry1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementIndustry3UmbralChoir" SubCategory="SubCategoryIndustry" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Industry" />
+        <Cost ResourceName="SystemProduction">1120</Cost>
+        <Cost ResourceName="Strategic1" Instant="true">5</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementIndustry3UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementIndustry3,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyIndustry3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementIndustry3UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+        <SimulationDescriptorReference Name="IsIndustryBuilding" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionIndustry1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementScience1UmbralChoir" SubCategory="SubCategoryScience" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Science" />
+        <Cost ResourceName="SystemProduction">280</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScience1UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScience1,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyScience1</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementScience1UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage1Normal" />
+        <SimulationDescriptorReference Name="IsScienceBuilding" />
+        <SimulationDescriptorReference Name="ScienceConstruction" />
+        <PopulationEvent Name="PopulationPoliticalEventScienceBuildingConstruction1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementFood1UmbralChoir"  SubCategory="SubCategoryFood" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Food" />
+        <Cost ResourceName="SystemProduction">280</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementFood1UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementFood1,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyUniqueFood1</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementFood1UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage1Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionFood1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementFood4UmbralChoir" SubCategory="SubCategoryFood" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Food"  />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <InterpreterPrerequisite                    Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire/ClassColonizedStarSystem/PlanetGameplayTypeGas') or Path(Context,@'../ClassEmpire/ClassColonizedStarSystem/PlanetMoon')</InterpreterPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementFood4UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementFood4Unfallen,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyFood4Common</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementFood4UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionFood1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementFood5UmbralChoir" SubCategory="SubCategoryFood" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Food"  />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <Cost ResourceName="Strategic6" Instant="true">25</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementFood5UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyFood4</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementFood5UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionFood1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementFood6UmbralChoir" SubCategory="SubCategoryFood" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Food"  />
+        <Cost ResourceName="SystemProduction">2240</Cost>
+        <Cost ResourceName="Strategic4" Instant="true">25</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementFood6UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementFood6,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyFood6</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementFood6UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionFood1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementUniqueUmbralChoir" SubCategory="SubCategoryInfluence" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Science"    Weight="3"  />
+        <QueuedSimulationDescriptorReference Name="BuildingStarSystemImprovementUniqueUmbralChoir"/>
+        <Cost ResourceName="SystemProduction">6240</Cost>
+		<Cost ResourceName="Strategic4" Instant="true">50</Cost>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">../ClassEmpire/Uniques,StarSystemImprovementUniqueUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementUniqueUmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <InterpreterPrerequisite Inverted="true"    Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire/ClassStarSystem,BuildingStarSystemImprovementUniqueUmbralChoir') and not(Path(Context,@'ClassStarSystem,BuildingStarSystemImprovementUniqueUmbralChoir'))</InterpreterPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyUnique1UmbralChoir</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementUniqueUmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4High" />
+        <SimulationDescriptorReference Name="StarSystemImprovementOncePerEmpire" />
+        <SimulationDescriptorReference Name="ScienceConstruction" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionUniqueUmbralChoir"/>
+        <UniqueTags>StarSystemImprovementUniqueUmbralChoir</UniqueTags>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementIndustryToScience2UmbralChoir" SubCategory="SubCategoryInfiniteScience" Category="CategoryStarSystemImprovementInfinite">
+        <AIGain RessourceName="ResourceConverter">
+            <Tag>IndustryConverter</Tag>
+        </AIGain>
+        <AIGain RessourceName="ScienceGain"/>
+
+        <SupervisorGain   Name="Industry" Weight="-1"  />
+        <SupervisorGain   Name="Science"  Weight="1"  />
+
+        <Tags>NoBuyout</Tags>
+        <InProgressSimulationDescriptorReference Name="StarSystemImprovementIndustryToScience2UmbralChoirEffect" />
+        <InProgressSimulationDescriptorReference Name="StarSystemImprovementInfinite"/>
+        <InfiniteCost ResourceName="SystemTurnBased"/>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyIndToScience2UmbralChoir</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementIndustryToScience2UmbralChoir"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementTrade2UmbralChoir" SubCategory="SubCategoryTradingCompanyStructure" ScoreProvider="StarSystemImprovementBuilt">
+        <AIGain RessourceName="DustGain" />
+        <SupervisorGain Name="Dust"     />
+        <Cost ResourceName="SystemProduction">2240</Cost>
+        <Cost ResourceName="Strategic3" Instant="true">10</Cost>
+        <Cost ResourceName="Strategic4" Instant="true">10</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementTrade2UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementTrade2,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementTrade2Hisshos,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyTrade3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementTrade2UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4Normal" />
+        <SimulationDescriptorReference Name="DustBuilding"/>
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionTrade1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementOverExpansion1UmbralChoir" SubCategory="SubCategoryApproval" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Approval" />
+        <Cost ResourceName="SystemProduction">2240</Cost>
+        <Cost ResourceName="EmpireEmpirePoint" Instant="true">1000</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony,StarSystemImprovementLevel4</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementOverExpansion1UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementOverExpansion1Hissho,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementOverExpansion1,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyApproval3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementOnlyOnLevelMax" />
+        <SimulationDescriptorReference Name="StarSystemImprovementOverExpansion1UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionApproval1"/>
+    </StarSystemImprovementDefinition>
+
+    <!-- POPULATION SLOT -->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulationSlot" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulationSlot,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeGas</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulationSlots</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulationSlot" />
+        <SimulationDescriptorReference Name="ClassImprovementRequiresGasPlanet" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulationSlotVampirilis" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulationSlotVampirilis,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulationSlots</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulationSlotVampirilis" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulationSlot2" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite                            Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"      Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulationSlot2,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"     Flags="Prerequisite,Discard">ColonizedStarSystemStateColony/ClassColonizedPlanet,PlanetMoon</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"      Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"      Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulationSlots</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulationSlot2" />
+        <SimulationDescriptorReference Name="ClassImprovementRequiresLunarAnomaly" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulationSlot2Vampirilis" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite                            Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"      Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulationSlot2Vampirilis,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite                            Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulationSlots</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulationSlot2Vampirilis" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulation1UmbralChoir" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">1120</Cost>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony/PlanetTypeFake</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulation1UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulation1Horatio,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulation1,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulation1</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulation1UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulation2UmbralChoir" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">2240</Cost>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony/PlanetTypeFake</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulation2UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulation2,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulation2</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulation2UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulationSlotUmbralChoir" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulationSlotUmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulationSlots</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulationSlotUmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementPopulationSlot2UmbralChoir" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Population"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementPopulationSlot2UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony/ClassColonizedPlanet,PlanetAnomaly</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyPopulationSlots</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementPopulationSlot2UmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPopulationSlot1"/>
+    </StarSystemImprovementDefinition>
+
+        <!-- SCIENCE -->
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementScienceOnGas" SubCategory="SubCategoryScience" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Science"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="true">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability">../ClassEmpire,!FactionTraitScienceReduction</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScienceOnGas,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScienceOnGasUmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScienceOnGasTemplars,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony/ClassColonizedPlanet,PlanetGameplayTypeGas</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyScienceOnGas</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementScienceOnGas" />
+        <SimulationDescriptorReference Name="ClassImprovementRequiresGasPlanet" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventScienceBuildingConstruction1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementScienceOnGasUmbralChoir" SubCategory="SubCategoryScience" ScoreProvider="StarSystemImprovementBuilt">
+        <AIGain RessourceName="ScienceGain" />
+        <SupervisorGain Name="Science"     />
+        <Cost ResourceName="SystemProduction">4480</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard,UnlockAvailability,Faction" Inverted="false">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScienceOnGasUmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScienceOnGasTemplars,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScienceOnGas,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">../ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateGhost/ClassColonizedPlanet,PlanetGameplayTypeGas</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyScienceOnGas</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementScienceOnGasUmbralChoir" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <PopulationEvent Name="PopulationPoliticalEventScienceBuildingConstruction1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementMoonExploitation1UmbralChoir" SubCategory="SubCategoryScience" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Science" />
+        <Tags>NoBailiff</Tags>
+        <Cost ResourceName="SystemProduction">1120</Cost>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony/PlanetAnomaly</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementMoonExploitation1UmbralChoir,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementMoonExploitation1,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyMoonExploration</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementMoonExploitation1UmbralChoir" />
+        <SimulationDescriptorReference Name="ClassImprovementRequiresAnyAnomaly" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+        <SimulationDescriptorReference Name="ScienceConstruction" />
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionIndustry1"/>
+    </StarSystemImprovementDefinition>
+
+    <!-- Free content, do not limit to DLC3-->
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementScience8" SubCategory="SubCategoryScience" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Science" />
+        <Tags>NoBailiff</Tags>
+        <Cost ResourceName="SystemProduction">1120</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <InterpreterPrerequisite                    Flags="Prerequisite,Discard">
+            Path(Context,@'ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomalyReduced') or
+            Path(Context,@'ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomalyNegative')
+        </InterpreterPrerequisite>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability">../ClassEmpire,!FactionTraitScienceReduction</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScience8,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementScience8Templars,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyAnomalyReduction3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementScience8" />
+        <SimulationDescriptorReference Name="ClassImprovementRequiresNegativeOrMixedAnomaly" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage5Normal" />
+        <SimulationDescriptorReference Name="ScienceConstruction" />
+        <PopulationEvent Name="PopulationPoliticalEventScienceBuildingConstruction1"/>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementDust7" SubCategory="SubCategoryDust" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Science" />
+        <Tags>NoBailiff</Tags>
+        <Cost ResourceName="SystemProduction">1120</Cost>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <InterpreterPrerequisite                    Flags="Prerequisite,Discard">
+            Path(Context,@'ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomalyReduced') or
+            Path(Context,@'ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomalyNegative')
+        </InterpreterPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDust7,!FastForwardedImprovement</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyAnomalyReduction3</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementDust7" />
+        <SimulationDescriptorReference Name="ClassImprovementRequiresNegativeOrMixedAnomaly" />
+        <SimulationDescriptorReference Name="ScienceConstruction" />
+        <SimulationDescriptorReference Name="DustBuilding"/>
+        <PopulationEvent Name="PopulationPoliticalEventBuildingConstructionPacifist"/>
+    </StarSystemImprovementDefinition>
+</Datatable>

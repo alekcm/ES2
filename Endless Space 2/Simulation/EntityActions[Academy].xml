@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EntityActionDefinition.xsd">
+
+  <!-- ########################################################### -->
+  <!-- ######################## Academy ########################## -->
+  <!-- ########################################################### -->
+
+  <!-- uncomment for debug gain relation -->
+  <!--<AcademyDiplomaticActionDynamicCost Name="GainRelationAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(20 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>10</AcademyRelationPointChange>
+    --><!-- Property(Empire,@ClassEmpire, X) Property(Academy,@ClassEmpire, X) --><!--
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+  </AcademyDiplomaticActionDynamicCost>-->
+
+  <!-- Requests -->
+  <AcademyDiplomaticActionDynamicCost Name="HeroStatusAccessAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-5 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireAcademyHeroAccess</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((5 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventHeroStatusAccessAcademyAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>AcademyHeroAccessEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="CrusadeImmunityAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(100 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireCrusadeImmunity</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventCrusadeImmunityAcademyAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyMilitary</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>CrusadeImmunity</TemporaryEffectOnEmpire>
+    <RemoveDiplomaticAbility>DeclaredCrusadeAgainst</RemoveDiplomaticAbility>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomacyGiveSystemAction Name="TakeSystemAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(50 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-40 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,!AffinityGameplayUnfallen</PathPrerequisite>
+    <PathPrerequisite Flags="Discard">ClassEmpire,!AffinityGameplayVampirilis</PathPrerequisite>
+    <PathPrerequisite Flags="Discard">ClassEmpire,!AffinityGameplayUmbralChoir</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((40 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventTakeSystemAcademyAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+  </AcademyDiplomacyGiveSystemAction>
+
+  <AcademyDiplomacyGiveSystemAction Name="TakeSystemAcademyActionUnfallen">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(50 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-40 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((40 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventTakeSystemAcademyAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+  </AcademyDiplomacyGiveSystemAction>
+
+  <AcademyDiplomacyGiveSystemAction Name="TakeSystemAcademyActionVampirilis">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(50 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-40 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((40 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventTakeSystemAcademyAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+  </AcademyDiplomacyGiveSystemAction>
+
+  <AcademyDiplomacyGiveSystemAction Name="TakeSystemAcademyActionUmbralChoir">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(50 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-40 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((40 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventTakeSystemAcademyAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+  </AcademyDiplomacyGiveSystemAction>
+
+  <AcademyDiplomaticSpawnFleetAction Name="RequestFleetAcademyActionEarly">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(100 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-35 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((35 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Discard">Property(Context, @'ClassEmpire,EmpireTypeAcademy', AcademyLevel) le 2</AcademyInterpreterPrerequisite>
+    <ShipDesigns>Academy_SmallSupportEarly;Academy_SmallSupportEarly;Academy_SmallAttackEarly;Academy_SmallAttackEarly;Academy_ExplorerEarly;Academy_ExplorerEarly;Academy_ExplorerEarly;Academy_ExplorerEarly</ShipDesigns>
+    <PopulationEventOnSelf>PopulationPoliticalEventRequestFleetAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyMilitary</ScoreProviderEventOnSelf>
+  </AcademyDiplomaticSpawnFleetAction>
+
+  <AcademyDiplomaticSpawnFleetAction Name="RequestFleetAcademyActionMid">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(100 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-35 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((35 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Discard">Property(Context, @'ClassEmpire,EmpireTypeAcademy', AcademyLevel) le 5 and Property(Context, @'ClassEmpire,EmpireTypeAcademy', AcademyLevel) gt 2</AcademyInterpreterPrerequisite>
+    <ShipDesigns>Academy_MediumAttackMid;Academy_MediumAttackMid;Academy_MediumDefenseMid;Academy_MediumDefenseMid;Academy_SmallSupportMid;Academy_SmallSupportMid;Academy_SmallSupportMid;Academy_SmallSupportMid;Academy_SmallAttackMid;Academy_SmallAttackMid;Academy_SmallAttackMid;Academy_SmallAttackMid</ShipDesigns>
+    <PopulationEventOnSelf>PopulationPoliticalEventRequestFleetAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyMilitary</ScoreProviderEventOnSelf>
+  </AcademyDiplomaticSpawnFleetAction>
+
+  <AcademyDiplomaticSpawnFleetAction Name="RequestFleetAcademyActionLate">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(100 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-35 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((35 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Discard">Property(Context, @'ClassEmpire,EmpireTypeAcademy', AcademyLevel) le 7 and Property(Context, @'ClassEmpire,EmpireTypeAcademy', AcademyLevel) gt 5</AcademyInterpreterPrerequisite>
+    <ShipDesigns>Academy_MediumAttackLate;Academy_MediumAttackLate;Academy_MediumDefenseLate;Academy_MediumDefenseLate;Academy_SmallSupportLate;Academy_SmallSupportLate;Academy_SmallSupportLate;Academy_SmallSupportLate;Academy_SmallAttackLate;Academy_SmallAttackLate;Academy_SmallAttackLate;Academy_SmallAttackLate</ShipDesigns>
+    <PopulationEventOnSelf>PopulationPoliticalEventRequestFleetAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyMilitary</ScoreProviderEventOnSelf>
+  </AcademyDiplomaticSpawnFleetAction>
+
+  <AcademyDiplomaticSpawnFleetAction Name="RequestFleetAcademyActionPeak">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(100 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-35 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((35 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Discard">Property(Context, @'ClassEmpire,EmpireTypeAcademy', AcademyLevel) gt 7</AcademyInterpreterPrerequisite>
+    <ShipDesigns>Academy_MediumAttackPeak;Academy_MediumAttackPeak;Academy_MediumDefensePeak;Academy_MediumDefensePeak;Academy_SmallSupportPeak;Academy_SmallSupportPeak;Academy_SmallSupportPeak;Academy_SmallSupportPeak;Academy_SmallAttackPeak;Academy_SmallAttackPeak;Academy_SmallAttackPeak;Academy_SmallAttackPeak</ShipDesigns>
+    <PopulationEventOnSelf>PopulationPoliticalEventRequestFleetAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyMilitary</ScoreProviderEventOnSelf>
+  </AcademyDiplomaticSpawnFleetAction>
+
+  <AcademyDiplomaticMigrationAction Name="AcademyDiplomaticMigrationAction" HidePanelOnClick="true" PopulationCount="1" PopulationOverride="" AllowSuperPops="false">
+    <PopulationBlacklist>AffinityRandom</PopulationBlacklist>
+    <PopulationBlacklist>AffinityCravers</PopulationBlacklist>
+    <PopulationBlacklist>AffinityVampirilis</PopulationBlacklist>
+
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(25 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-10 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Prerequisite,Discard" >ClassEmpire,!AffinityVampirilis</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" >ClassEmpire,!AffinityUmbralChoir</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((10 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="TooManyPopulationOrdered">Property(Context,@'ClassEmpire,EmpireTypeMajor',RecentlyOrderedAcademyPopulation) le 2</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventMigrationAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>RecentAcademyMigrationCounter</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticMigrationAction>
+
+  <!--<AcademyDiplomacyGiveResourcesAction Name="AcademyDiplomaticBlockAuctionAccess">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-25 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((25 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventAcademyAuctionBlock</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <ResourceReward ResourceName="AcademyAuctionBlocks">1</ResourceReward>
+  </AcademyDiplomacyGiveResourcesAction>-->
+
+  <!-- Faction Specific -->
+  <AcademyDiplomaticActionDynamicCost Name="SophonsUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplaySophons</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireSophonsUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventSophonsUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyScientific</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>SophonsUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="CraversUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayCravers</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireCraversUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventCraversUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>CraversUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="TerransUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayTerrans</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireTerransUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventTerransUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>TerransUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="MezariUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayMezari</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireMezariUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventMezariUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyScientific</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>MezariUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="SheredynUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplaySheredyn</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireSheredynUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventSheredynUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyMilitary</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>SheredynUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticMigrationAction Name="HoratioUniqueAcademyAction" HidePanelOnClick="true" PopulationCount="1" PopulationOverride="" AllowSuperPops="false">
+    <PopulationBlacklist>AffinityRandom</PopulationBlacklist>
+    <PopulationBlacklist>AffinityCravers</PopulationBlacklist>
+    <PopulationBlacklist>AffinityVampirilis</PopulationBlacklist>
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayHoratio</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireHoratioUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventHoratioUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>HoratioUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticMigrationAction>
+
+  <AcademyDiplomaticActionDynamicCost Name="TimeLordsUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayTimeLords</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireTimeLordsUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventTimeLordsUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>TimeLordsUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="UnfallenUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayUnfallen</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireUnfallenUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventUnfallenUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>UnfallenUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomacyGiveResourcesAction Name="VampirilisUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireVampirilisUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventVampirilisUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>VampirilisUniqueAcademyEffect</TemporaryEffectOnEmpire>
+    <ResourceReward ResourceName="EmpireLifeforce">200</ResourceReward>
+  </AcademyDiplomacyGiveResourcesAction>
+
+  <AcademyDiplomaticActionDynamicCost Name="VenetiansUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayVenetians</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireVenetiansUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventVenetiansUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>VenetiansUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="VaultersUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireVaultersUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventVaultersUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>VaultersUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="MajorHisshosUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireMajorHisshosUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventMajorHisshosUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyMilitary</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>MajorHisshosUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="UmbralChoirUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-15 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+    <PathPrerequisite Flags="BoostAlreadyActive" Inverted="true">ClassEmpire,TemporaryEffectOnEmpireUmbralChoirUniqueAcademy</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((15 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventUmbralChoirUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyScientific</ScoreProviderEventOnSelf>
+    <TemporaryEffectOnEmpire>UmbralChoirUniqueAcademyEffect</TemporaryEffectOnEmpire>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomacyGiveResourcesAction Name="TemplarsUniqueAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">(10 + Max(0, Property(StockLocation,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointsPerTurn)) * 15)  * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction) * (1 + (Property(StockLocation,@ClassEmpire,SystemCount) / 10))</CustomCost>
+    <AcademyRelationPointChange>(-20 - (5 * Property(Empire,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier)</AcademyRelationPointChange>
+
+    <PathPrerequisite Flags="Discard">ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Technology" UnlockHidden="true">TechnologyAcademyEmbassy</TechnologyPrerequisite>
+    <InterpreterPrerequisite Flags="NotEnoughAcademyRelation">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) ge ((20 + (5 * Property(Context,@'ClassEmpire,EmpireTypeMajor',NoContributionSpree))) * Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPointCostMultiplier))</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="AcademyRequiresAllied">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt 50</InterpreterPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,MetaplotInProgress">ClassEmpire,!MetaplotQuestInProgress</PathPrerequisite>
+    <AcademyInterpreterPrerequisite Flags="Prerequisite,DoesntOwnAcademy">Property(Context,@'ClassEmpire',AcademyOwned) eq 1</AcademyInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventTemplarsUniqueAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>DidAcademyDiplomacyEconomic</ScoreProviderEventOnSelf>
+    <Relics>2</Relics>
+  </AcademyDiplomacyGiveResourcesAction>
+
+  <!-- Diplomatic State -->
+  <AcademyDiplomaticActionDynamicCost Name="StartWarAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * 100 * Property(StockLocation,@ClassEmpire,FreeWarDeclaration) * Property(StockLocation,@ClassEmpire,AggressiveTreatyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction)</CustomCost>
+    <AcademyRelationPointChange>-(100 + Property(Empire,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints))</AcademyRelationPointChange>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) gt -50</InterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventStartWarAcademyAction</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>StartedWarWithAcademy</ScoreProviderEventOnSelf>
+  </AcademyDiplomaticActionDynamicCost>
+
+  <AcademyDiplomaticActionDynamicCost Name="StopWarAcademyAction">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * 300 * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,AcademyFactionCostReduction)</CustomCost>
+    <AcademyRelationPointChange>Min(Property(Empire,@'ClassEmpire,EmpireTypeMajor', AcademyRelationPoints) * -1,100)</AcademyRelationPointChange>
+    <InterpreterPrerequisite Flags="Discard">Property(Context,@'ClassEmpire,EmpireTypeMajor',AcademyRelationPoints) le -50</InterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventStopWarAcademyAction</PopulationEventOnSelf>
+  </AcademyDiplomaticActionDynamicCost>
+</Datatable>

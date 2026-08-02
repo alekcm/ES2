@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+
+  <!--################################-->
+  <!--###         BOARDING         ###-->
+  <!--################################-->
+  <SimulationDescriptor Name="SalvoBoardingPod1" Type="Salvo">
+    <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="180" Path="ClassSalvo"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="SalvoBoardingPod2" Type="Salvo">
+    <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="210" Path="ClassSalvo"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="SalvoBoardingPod3" Type="Salvo">
+    <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="240" Path="ClassSalvo"/>
+  </SimulationDescriptor>
+
+  <!--################################-->
+  <!--###             AOE          ###-->
+  <!--################################-->
+  <SimulationDescriptor Name="SalvoAOE1" Type="Salvo">
+    <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="1000" Path="ClassSalvo"/>
+  </SimulationDescriptor>
+
+  <!--################################-->
+  <!--###             EMP          ###-->
+  <!--################################-->
+  <SimulationDescriptor Name="SalvoMissileEMP1" Type="Salvo">
+    <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="210" Path="ClassSalvo"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="SalvoBeamEMP1" Type="Salvo">
+    <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="210" Path="ClassSalvo"/>
+  </SimulationDescriptor>
+
+</Datatable>

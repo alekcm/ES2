@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+    
+  <!-- Vaulters -->
+  <ExtendedGuiElement Name="AffinityGameplayVaulters">
+    <Title>%AffinityGameplayVaultersTitle</Title>
+    <Description>%AffinityGameplayVaultersDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityVaultersSmall" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%AffinityGameplayVaultersTooltipEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitGoldenAgePrefix">
+    <TooltipElement>
+      <EffectOverride>%FactionTraitGoldenAgePrefix</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FactionTraitManualHomeSystem">
+    <Title>%FactionTraitFactionTraitManualHomeSystemTitle</Title>
+    <Description>%FactionTraitFactionTraitManualHomeSystemDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+    <TooltipElement>
+      <EffectOverride>%FactionTraitFactionTraitManualHomeSystemEffect</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FactionTraitCoreWorlds">
+        <Title>%FactionTraitCoreWorldsTitle</Title>
+        <Description>%FactionTraitCoreWorldsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitCoreWorldsEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FactionTraitMaterialExpertise">
+        <Title>%FactionTraitMaterialExpertiseTitle</Title>
+        <Description>%FactionTraitMaterialExpertiseDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitMaterialExpertiseEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FactionTraitCorsairs">
+        <Title>%FactionTraitCorsairsTitle</Title>
+        <Description>%FactionTraitCorsairsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitCorsairsEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+    
+  <GuiElement Name="PopulationModifiersTraitSecondaryInitialDamagePerPop01">
+    <Title>%PopulationModifiersTraitSecondaryInitialDamagePerPop01Title</Title>
+  </GuiElement>
+
+    <GuiElement Name="PopulationModifiersTraitPrimaryScience03">
+        <Title>%PopulationModifiersTraitPrimaryScience03Title</Title>
+    </GuiElement>
+
+    <GuiElement Name="PopulationModifiersTraitSecondaryGroundBattleAttackerDamage01">
+        <Title>%PopulationModifiersTraitSecondaryGroundBattleAttackerDamage01Title</Title>
+    </GuiElement>
+
+  
+  <!-- Sisters of Mercy -->
+    <ExtendedGuiElement Name="FactionTraitMinorSistersOfMercy">
+        <Title>%FactionTraitMinorSistersOfMercyTitle</Title>
+        <Description>%FactionTraitMinorSistersOfMercyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitMinorSistersOfMercyTooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+    
+  <GuiElement Name="FactionTraitMinorHealers01">
+    <Title>%FactionTraitMinorHealers01Title</Title>
+    <Description>%FactionTraitMinorHealers01Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+  </GuiElement>
+  <GuiElement Name="FactionTraitMinorHealers02">
+    <Title>%FactionTraitMinorHealers02Title</Title>
+    <Description>%FactionTraitMinorHealers02Description</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+    </Icons>
+  </GuiElement>  
+  
+</Datatable>

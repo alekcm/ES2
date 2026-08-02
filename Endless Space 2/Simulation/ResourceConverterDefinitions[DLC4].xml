@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ResourceConverterDefinition.xsd">
+
+  <!-- From Academy Diplomacy Money to Empire Money-->
+  <!-- NOTE: If you consider to change the 1:1 convertion of this resource it will be necessary do changes on the UI panels that read the input value (e.g : NegotiationScreen or GroundBattleLootOutcome) to show the real converted value. -->
+  <!-- The main idea is keep this convertion value 1 : 1, is just Dust/money! but in another stock! -->
+  <ResourceConverterDefinition ResourceName="AcademyEmpireDiplomacyMoney">
+        <ToConverter To="EmpireMoney">            
+            <InterpreterModifier>$(Input)</InterpreterModifier>
+        </ToConverter>
+        <ToConverter To="PressureGain">
+            <InterpreterModifier>Min(100, 100 * $(Input) / Max(1, (5 * Property(StockLocation, @ClassEmpire, NetAcademyEmpireDiplomacyMoney) + Property(StockLocation, @ClassEmpire, AcademyEmpireDiplomacyMoneyStock))) * ((5 * Property(StockLocation, @ClassEmpire, NetAcademyEmpireDiplomacyMoney) + Property(StockLocation, @ClassEmpire, AcademyEmpireDiplomacyMoneyStock)) + (5 * Property(OtherEmpire, NetEmpireMoney) + Property(OtherEmpire, BankAccount))) / Max(1, Max((5 * Property(StockLocation, @ClassEmpire, NetAcademyEmpireDiplomacyMoney) + Property(StockLocation, @ClassEmpire, AcademyEmpireDiplomacyMoneyStock)), (5 * Property(OtherEmpire, NetEmpireMoney) + Property(OtherEmpire, BankAccount)))))</InterpreterModifier>
+        </ToConverter>
+    </ResourceConverterDefinition>
+
+  <!-- From Academy Improvement Money to Empire Money-->
+  <!-- NOTE: If you consider to change the 1:1 convertion of this resource it will be necessary do changes on the UI panels that read the input value (e.g : NegotiationScreen or GroundBattleLootOutcome) to show the real converted value. -->
+  <!-- The main idea is keep this convertion value 1 : 1, is just Dust/Money! but in another stock! -->
+  <ResourceConverterDefinition ResourceName="AcademyEmpireImprovementMoney">
+    <ToConverter To="EmpireMoney">
+      <InterpreterModifier>$(Input)</InterpreterModifier>
+    </ToConverter>
+    <ToConverter To="PressureGain">
+      <InterpreterModifier>Min(100, 100 * $(Input) / Max(1, (5 * Property(StockLocation, @ClassEmpire, NetAcademyEmpireImprovementMoney) + Property(StockLocation, @ClassEmpire, AcademyEmpireImprovementMoneyStock))) * ((5 * Property(StockLocation, @ClassEmpire, NetAcademyEmpireImprovementMoney) + Property(StockLocation, @ClassEmpire, AcademyEmpireImprovementMoneyStock)) + (5 * Property(OtherEmpire, NetEmpireMoney) + Property(OtherEmpire, BankAccount))) / Max(1, Max((5 * Property(StockLocation, @ClassEmpire, NetAcademyEmpireImprovementMoney) + Property(StockLocation, @ClassEmpire, AcademyEmpireImprovementMoneyStock)), (5 * Property(OtherEmpire, NetEmpireMoney) + Property(OtherEmpire, BankAccount)))))</InterpreterModifier>
+    </ToConverter>
+  </ResourceConverterDefinition>
+    
+</Datatable>

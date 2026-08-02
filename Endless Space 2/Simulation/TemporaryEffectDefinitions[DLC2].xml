@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TemporaryEffectDefinition.xsd">
+
+    <!-- Duration is overriden in this case -->   
+
+    <TemporaryEffectDefinition Name="HonorMalusFromDiplomacyWeak" Category="HonorMalus" Duration="10">
+        <Path>ClassEmpire,EmpireTypeMajor</Path>
+        <SimulationDescriptorReference Name="EmpireHonorMalusWeak"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="HonorMalusFromDiplomacyMedium" Category="HonorMalus" Duration="10">
+        <Path>ClassEmpire,EmpireTypeMajor</Path>
+        <SimulationDescriptorReference Name="EmpireHonorMalusMedium"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="SacrificeGuardianHonorMajorHisshos" Category="SacrificeGuardianHonor" Duration="10">
+        <Path>../ClassEmpire</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectSacrificeGuardianHonorMajorHisshos"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="StarSystemImprovementWonder1TemporaryEffectMajorHisshos" Category="StarSystemImprovementWonder1" Duration="20">
+        <Path>../ClassEmpire,AffinityGameplayMajorHisshos</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectStarSystemImprovementWonder1MajorHisshos"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="ColonyExpansionBoost" Category="LawEffects" Duration="5">
+        <Path>../ClassEmpire/ClassColonizedStarSystem</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectColonyExpansionBoost"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="SystemPillageHappinessMalus" Category="LawEffects" Duration="5">
+        <Path>ClassEmpire/ClassSenate</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectSystemPillageHappinessMalus"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="SystemRazeHappinessMalus" Category="LawEffects" Duration="5">
+        <Path>ClassEmpire/ClassSenate</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectSystemRazeHappinessMalus"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="HisshosFestivalGrowth" Category="HisshosFestival" Duration="10">
+        <Path>ClassColonizedStarSystem</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectHisshosFestivalGrowthEffect"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="HisshosFestivalManpower" Category="HisshosFestival" Duration="10">
+        <Path>ClassColonizedStarSystem</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectHisshosFestivalManpowerEffect"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="HisshosFestivalOwnership" Category="HisshosFestival" Duration="10">
+        <Path>ClassColonizedStarSystem</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectHisshosFestivalOwnershipEffect"/>
+    </TemporaryEffectDefinition>
+
+    <TemporaryEffectDefinition Name="ObliteratorMalus" Category="ObliteratorMalus" Duration="4">
+        <Path>ClassEmpire,EmpireTypeMajor</Path>
+        <SimulationDescriptorReference Name="TemporaryEffectObliteratorMalus"/>
+    </TemporaryEffectDefinition>
+
+
+</Datatable>

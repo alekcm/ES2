@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%PlanetInitialFIDSIFromMiningProbesTitle">Горнодобывающие зонды</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionLabel">В этом меню можно обменивать очки отношений с Академией на всевозможные услуги. Чтобы развивать отношения с Академией, жертвуйте средства аукционам и выполняйте конкурентные задания.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementQuestGlobalCompet09TooltipEffect">+3 к изначальному уровню кораблей</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity2EffectOverride">+75% к получаемому опыту Героев-губернаторов</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageEnergyFleetTitle">Энергетический урон флота</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageProjectileFleetTitle">Артиллерийский урон флота</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponCriticalHitFleetTitle">Вероятность критического попадания флота</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementQuestUniquePlanet12TooltipEffect">+5% [dustColored] в империи на каждую разблокированную технологию</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter3Strategic3Title">Идеальный ударный истребитель</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber3Strategic4Title">Идеальный тяжёлый бомбардировщик</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaTitle">Сайадха</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaDescription">Некогда Сайадха была огромной пустыней, но теперь эта планета покрыта океаном, и над бескрайними голубыми просторами возвышаются лишь редкие скалистые островки. Если верить легендам, под толщей воды скрыты следы присутствия великих цивилизаций, однако на доступных участках суши нет ничего, что подтверждало бы правдивость этих преданий. Здесь сохранилось лишь несколько первобытных общин, но ходят слухи, что где-то в глубинах погребена великая сила… </LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Title">Хранители глубин</LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Description">Здесь наполовину обезумевшие Вечные предлагают свои запретные знания… в обмен на обещание не тревожить их святилище, скрытое глубоко под землёй.</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Title">Севва Эзе</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Description">Севва родилась на борту аркологии Пилигримов «Светлый горизонт». Когда она была подростком, её родной флот оказался в поле зрения охотничьего патруля Единой Империи. После долгого и тщетного бегства Пилигримы были вынуждены дать заведомо безнадёжный бой, и аркология оказалась рассеяна. Пытаясь вернуть неприкосновенный запас пыли с близлежащей луны, Севва провалилась в глубокий пылевой колодец — и не только выжила, но и приобрела усиленные пылью способности. Она выбралась на волю несколько дней спустя, однако к тому времени уцелевшие корабли её флота давно покинули систему. После нескольких лет скитаний по галактике Севва поступила в Академию, чтобы под присмотром наставников развить свои новообретённые силы. Поквитавшись за «Горизонт», Севва отправилась в вольное плавание.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedTitle">Усиленная</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedDescription">Эта планетарная аномалия усилена для улучшения благоприятных эффектов, оказываемых ей на планету.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderTitle">Чудо</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderDescription">Эта планетарная аномалия — единственная в своём роде. Она обладает чрезвычайно мощными эффектами.</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsDescription">Пока им пользуется другая империя, захватывать системы с его помощью нельзя
+Захват невозможен</LocalizationPair>
+  <LocalizationPair Name="%FailureNoTemplesOnGasPlanetsDescription">На газовых планетах нельзя строить храмы</LocalizationPair>
+  <LocalizationPair Name="%PlanetImprovementTemple1TooltipOverride">Устраняет штраф к [fids] на планете в первоначальном состоянии
+50% [scienceColored] планеты в первоначальном состоянии преобразуются в [prestigeColored]
+
+[blue-gray](При завоевании системы храмы уничтожаются, а используемые там реликвии возвращаются.)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsGroupTooltipDescription">Реликвия для исследования
+Активируйте эту реликвию, чтобы получить мощный бонус к дальности обзора и скорости движения для всех кораблей.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsGroupTooltipDescription">Реликвия для экспансии
+Активируйте эту реликвию, чтобы повысить порог чрезмерной колонизации за каждый собор и устранить базовое недовольство на планетах с храмами.</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsGroupTooltipDescription">Реликвия для дипломатии
+Активируйте эту реликвию, чтобы получить пассивное улучшение отношений со всеми известными малыми фракциями и увеличить радиус влияния для всех систем.</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsGroupTooltipDescription">Реликвия для политики
+Активируйте эту реликвию, чтобы получить различные бонусы в зависимости от выбранных политических партий. Чем меньше представлено партий, тем выше эффективность бонуса.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsButtonTooltipDescription">Эффекты:
++25% к эффективности очков движения
++5 к дальности обзора для кораблей и систем{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsButtonTooltipDescription">Эффекты:
++1 к порогу чрезмерной колонизации на собор
+Нет базового недовольства на планетах{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsButtonTooltipDescription">Эффекты:
++5% к радиусу влияния за ход, когда эта ячейка активна (макс. 100%)
++1 к отношениям с малыми фракциями за ход{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsButtonTooltipDescription">Множитель представленной партии: {2}
+Эффекты:{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsSlotLocked">[red]Эта ячейка недоступна. Чтобы империя получила ещё одну ячейку для реликвии, постройте собор Ушедших.#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ConstructibleFilterInfiniteDescription">Отображает только бесконечные улучшения</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemImprovementInfiniteTitle">Бесконечное улучшение</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLunarAnomalyTooltip">[blue-gray](Можно построить только в системах с лунными аномалиями)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresPlanetAnomalyTooltip">[blue-gray](Можно построить только в системах с планетарными аномалиями)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyAnomalyTooltip">[blue-gray](Можно построить только в системах с аномалиями)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetTooltip">[blue-gray](Можно построить только в системах с газовыми планетами)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresNegativeOrMixedAnomalyTooltip">[blue-gray](Можно построить только в системах с негативными или смешанными аномалиями)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresStrategicDepositTooltip">[blue-gray](Можно построить только в системах со стратегическими месторождениями)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLuxuryDepositTooltip">[blue-gray](Можно построить только в системах с месторождениями ресурсов роскоши)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyDepositTooltip">[blue-gray](Можно построить только в системах с месторождениями ресурсов)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresTradeBuildingTooltip">[blue-gray](Можно построить только в системах со штаб-квартирой или филиалами торговой компании)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetOrLunarAnomalyTooltip">[blue-gray](Можно построить только в системах с газовыми планетами или лунными аномалиями)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetTooltip">[blue-gray](Можно построить только в системах со стерильными планетами)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetOrTradeBuildingTooltip">[blue-gray](Можно построить только в системах со штаб-квартирой или филиалами торговой компании либо со стерильными планетами)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrFertilePlanetTooltip">[blue-gray](Можно построить только в системах со стерильными или плодородными планетами)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrHotPlanetTooltip">[blue-gray](Можно построить только в системах со стерильными или горячими планетами)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelSpaceBattle1Tooltip">[blue-gray](Сначала необходимо построить батарею системы)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelTooltip">[blue-gray](Можно построить только в системах с цитаделями)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleProjectileCanBeShotDownTitle">Снаряд может быть сбит</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNoVisionDescription">Требуется обзор в системе</LocalizationPair>
+  <LocalizationPair Name="%LostTemplarsQuest-Chapter1-Part1-ReligiousObjective">Изучите не менее $Amount01Nam феноменов</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsDescription">Сделать систему протекторатом. Это даст доступ к ресурсам и уникальной особенности и защитит от других империй без необходимости захватывать.</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire1OrAboveTitle">Неповиновение или выше</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire2OrAboveTitle">Удовлетворение или выше</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire3OrAboveTitle">Лояльность или выше</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem1OrAboveTitle">Недовольство или выше</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem2OrAboveTitle">Удовлетворение или выше</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem3OrAboveTitle">Счастье или выше</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire1OrAboveTitle">Неповиновение или выше</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire2OrAboveTitle">Покорность или выше</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire3OrAboveTitle">Лояльность или выше</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem1OrAboveTitle">Неповиновение или выше</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem2OrAboveTitle">Покорность или выше</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem3OrAboveTitle">Лояльность или выше</LocalizationPair>
+  <LocalizationPair Name="%AssignmentCooldownBaseDurationTitle">Восстановление после назначения</LocalizationPair>
+  <LocalizationPair Name="%MaximumPopulationTitle">[population] Макс. численность населения</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSplashFlotillaDamagePercentTitle">Урон распределяется среди выбранной флотилии</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAnnotationsRefusedSciencePartnership">Вы отклонили наше предложение научного соглашения.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementCitadelSpecializationEffectOverride">Система с цитаделью получает следующие бонусы:
+ • +20% [foodColored] в системе
+ • +20% [scienceColored] в системе
+ • +20% [industryColored] в системе
+ • +10% [prestigeColored] в системе
+ • +1000 к [citadelDefenseColored] вместимости гарнизона цитадели
+ • +50 к [citadelDefenseColored] вместимости гарнизона цитадели за [population]</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeSmallDescription">Для кораблей малого размера требуется #E3BDAC#1#REVERT# [commandPoint] (КО) флота, в составе которого они находятся.
+Уязвимость корпуса: #E3BDAC#120#REVERT# (см. поглощение урона)</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesReductionTitle">Полученный урон от бомбардировок при атаке</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamageReductionTitle">Полученный урон от бомбардировок при атаке</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefensiveDamageReductionTitle">Полученный урон от бомбардировок при обороне</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundPopulationDestructionProbabilityTitle">Население, уничтоженное во время вторжений</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundImprovementDestructionProbabilityTitle">Улучшения, уничтоженные во время вторжений</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelIndustryScienceEffectOverride">+10% к прочности построенных кораблей
++10% к урону построенных кораблей </LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportMothershipAnchoredDefenseEffectTitle">Ковчег нельзя атаковать в космическом сражении, пока он привязан к системе
+Экипаж ковчега не может участвовать во вторжении</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockAltTitle">[ManpowerColored] Уровень трудовых ресурсов</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockTitle">[ManpowerColored] Уровень трудовых ресурсов</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseRecoveryTitle">Скорость восстановления гарнизона</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseTitle">Гарнизон системы</LocalizationPair>
+  <LocalizationPair Name="%MaximumSystemManpowerTitle">[systemDefenseColored] Вместимость гарнизона</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseTitle">Гарнизон цитадели</LocalizationPair>
+  <LocalizationPair Name="%MaximumCitadelManpowerTitle">[citadelDefenseColored] Вместимость гарнизона цитадели</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseDescription">Эти войска действуют аналогично гарнизону системы, однако они защищены от урона при осаде. Их численность начинает восполняться, когда гарнизон системы заполнен, и не учитывается для таких эффектов, как лагерь-симулятор.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescription">Эта система находится в осаде, численность её [systemDefenseColored] гарнизона постепенно снижается.
+Текущий [systemDefenseColored] гарнизон: {0} / {1} ({2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeWithFleetsDescription">Эта система находится в осаде, численность её [systemDefenseColored] гарнизона постепенно снижается.
+Текущий [systemDefenseColored] гарнизон: {0} / {1} ({2} [systemDefenseColored]/[turn])
+
+В случае вторжения флоты на орбите добавят {3} [shipCrewColored] ед. трудовых ресурсов из экипажа к гарнизону системы</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescriptionWithEmpireName">Система {4} империи {3} находится в осаде, её [systemDefenseColored] оборона постепенно слабеет.
+Текущее значение [systemDefenseColored]: {0} / {1} ({2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%NetSystemManpowerTitle">[systemDefenseColored] Численность гарнизона за ход</LocalizationPair>
+  <LocalizationPair Name="%SystemManpowerLossTitle">[systemDefenseColored] Урон численности гарнизона</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandTitle">Гарнизон</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandDescription">Переведите флот в гарнизон и поставьте в ангар текущей домашней системы, чтобы быстро произвести ремонт и пополнить запасы. Гарнизон можно размещать только в своей звёздной системе.</LocalizationPair>
+  <LocalizationPair Name="%ModuleEffectGroundBattleAttackerManpowerLimitBonusTitle">Лимит распределения экипажа при вторжении</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleDamageMultiplierTitle">Урон батареи системы</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipManpowerTitle">[shipCrewColored] Макс. численность экипажа</LocalizationPair>
+  <LocalizationPair Name="%MaxLocalManpowerAltTitle">[shipCrewColored] Макс. численность экипажа</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelSpaceBattle1Effects">Оснащает цитадель залповой батареей, которая в каждой фазе производит выстрел с орбиты, наносящий 2000 ед. урона каждому кораблю противника</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01MajorHisshosEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Ястреб»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02MajorHisshosEra2TooltipEffect">Разблокирует дополнительные [Strat02HyperiumColored] ячейки для модулей для корпусов класса «Пустельга»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01MajorHisshosEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Коршун»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02MajorHisshosEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Сокол»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01MajorHisshosEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Орёл»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UmbralChoirEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Строфа»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UmbralChoirEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Поэма»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UmbralChoirEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Гимн»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UmbralChoirEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Эпос»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UmbralChoirEra4TooltipEffect">Разблокирует дополнительные [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Цикл»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TemplarsEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Заговор»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TemplarsEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Призыв»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TemplarsEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Поклон»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TemplarsEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Гимн»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TemplarsEra4TooltipEffect">Разблокирует дополнительные [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Воззвание»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01CraversEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Королева»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01HoratioEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Император»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01SophonsEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Йотта»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TerransEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Зелевас»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TimeLordsEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Неделимый»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UnfallenEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Лес»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VampirilisEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Ортаам»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VenetiansEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Меос»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01CraversEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Епископ»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01HoratioEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Дукс»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01SophonsEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Гига»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TerransEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Сопрон»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TimeLordsEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Треугольник»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UnfallenEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Огонь»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VampirilisEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Джайум»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VenetiansEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Омокар»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02CraversEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Страж»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02HoratioEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Архидукс»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02SophonsEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Пета»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TerransEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Шередин»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TimeLordsEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Тетраэдр»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UnfallenEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Свет»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VampirilisEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Летум»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VenetiansEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Ланселлум»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership01TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Ковчег»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership02TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Ковчег»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01CraversEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Солдат»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01HoratioEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Марчио»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01SophonsEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Кило»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TerransEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Эгезрей»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TimeLordsEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Натурал»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UnfallenEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Шип»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VampirilisEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Слуайм»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VenetiansEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Вельм»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02CraversEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Рабочий»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02HoratioEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Баро»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02SophonsEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Дека»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TerransEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Йеранеф»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TimeLordsEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Рационал»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UnfallenEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Глина»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VampirilisEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Тойсам»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VenetiansEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Древ»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VaultersEra2TooltipEffect">Разблокирует дополнительные [Strat01titaniumColored] ячейки для модулей для корпусов класса «Стрела»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VaultersEra2TooltipEffect">Разблокирует дополнительные [Strat02hyperiumColored] ячейки для модулей для корпусов класса «Болт»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VaultersEra3TooltipEffect">Разблокирует дополнительные [Strat03adamantianColored] ячейки для модулей для корпусов класса «Арбалетная стрела»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VaultersEra3TooltipEffect">Разблокирует дополнительные [Strat04anti-matterColored] ячейки для модулей для корпусов класса «Ядро»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VaultersEra4TooltipEffect">Разблокирует дополнительные [Strat05orichalcixColored] / [Strat06quadrinixColored] ячейки для модулей для корпусов класса «Копьё»
++50% к [shipCrewColored] макс. численности экипажа</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedCravers">Вр-р-р… Кз-з-з… Тск… ПРЯМОТА: будем делиться разведданными. Рой предлагает такое не всем.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedCravers">Вр-р… Бз-з-з… Клак… СПОКОЙСТВИЕ: ваши научные достижения. Поглощены. Добавлены к нашим.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedCravers">Чт-т-т… Вр-р-р… Дз-з-з… РАЗОЧАРОВАНИЕ: рой обменяется с вами товарами, Те-Кто-Дают-Пищу-За-Ресурсы.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedCravers">Вх-х… Чт-т-т… Ктз-з-з… ПРЯМОТА: мы договорились.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedCravers">УДОВЛЕТВОРЕНИЕ: ваши владения откроют для роя новые источники пищи. Обещаем, речь не о вас. (Обожаю эту фразу, она подходит идеально!)</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedCravers">РАССЕЯННОСТЬ: вы показали рою новые миры. Новую пищу. Теперь оставьте нас.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedCravers">СПОКОЙСТВИЕ: рой привык быть сам по себе. Это ничего не меняет.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHissho">Пусть наши народы смело делятся информацией, а не прячутся друг от друга, словно перепуганная добыча.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHissho">Тот, у кого нет мудрости, представляет угрозу для самого себя. Заключив это соглашение, вы обеспечите мир и процветание обоим нашим народам.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHissho">Ваша готовность покупать наши товары делает честь нашим мастерам. Обещаем, качество вас не разочарует.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHissho">Эта сделка угодна Тонаци. Мы запомним, что с вами можно иметь дело.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHissho">Как ваши гости, мы обязуемся уважать каждый микрометр вашей территории — и ожидаем того же от вас.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHissho">Наши разведчики поделятся с вами своими открытиями. Надеюсь, эти знания принесут вам пользу.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHissho">Вы решили сражаться без посторонней помощи? Очень жаль. Но мы уважаем ваше решение идти путём одинокого воина.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHoratio">Это поможет вам понять, сколь сильно галактика нуждается в нашей красоте.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHoratio">Конечно, ваши учёные не так хороши, как Горацио, но дополнительные научные данные никогда не помешают.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHoratio">Зачем вообще нужна жизнь, если в ней нет места роскоши? Наслаждайтесь плодами экономического гения Горацио.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHoratio">Всё, чего касаются Горацио, делает галактику лучше.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHoratio">Сегодня у вас великий день! Теперь вы сможете увидеть совершенный мир Горацио собственными глазами, а Горацио получат возможность изучить вашу империю.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHoratio">Даже Горацио не в силах усовершенствовать миры, о которых не знают. Сегодня вы оказали галактике огромную услугу.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHoratio">Жаль, что вы пока не осознаёте всех преимуществ сотрудничества с Горацио, но когда-нибудь понимание придёт.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTemplars">Наши архивы охватывают бессчётные эпохи, но, по понятным причинам, информация в них изрядно устарела. Это соглашение принесёт немалую пользу верующим.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTemplars">Эти материалы пойдут на восстановление наших храмов. Знайте, что ваш вклад послужит нашей священной цели.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTemplars">Это соглашение принесёт пользу Накалимам. Его будут вспоминать и через тысячу лет, рассказывая историю нашего возрождения.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTemplars">Благодаря вашей помощи поиски наших древних реликвий пойдут намного быстрее. Сегодня вы оказали нам большую услугу.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTemplars">Да, за время нашего долгого сна галактика и вправду переменилась… Спасибо.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTemplars">Жаль, что вы так решили, и всё же мир между нами сохранится. Наверное, следовало больше поведать о нашей истории, чтобы вы осознали пользу от союза с нами?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedSophon">Супер! Так, посмотрим, что у нас есть… О, мы ещё одну видеотехнологию бесплатно подкинем! (Леймак, пришли мне спецов по древним форматам, эта штука не загружается…)</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedSophon">Одна голова хорошо, а две лучше. И тем более четыре — как в нашем случае. Ну, за совместную научную работу!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedSophon">Ух ты! Мне уже не терпится увидеть, что вы можете предложить. Товары Софонов вас не разочаруют, обещаю! Наши развлекательные программы — настоящая услада для ума!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedSophon">Да, это нам точно подойдёт. Отдел исследований и развития будет в восторге!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedSophon">Поймите меня правильно: у нас отличные телескопы, но увидеть все эти планеты вблизи гораздо интереснее!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedSophon">Это здорово поможет нам в исследованиях! Надеюсь, наши находки вас тоже заинтересуют.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedSophon">Ох… Э-э, нет-нет, это… Всё нормально. Значит, просто останемся друзьями. Хватит и того, что между нами мир…</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUmbralChoir">Расширяя нашу осведомлённость о галактике, ты оказываешь Хору большую услугу, Существо.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUmbralChoir">Хор готов поделиться с тобой нашими знаниями о вселенной, Существо.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUmbralChoir">Хор желает изучить твои товары, Существо. Координаты доставки уже отправлены в сети твоих компаний.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUmbralChoir">Мы ценим этот скромный шаг, Существо.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUmbralChoir">Хор приветствует тебя на своей территории, Существо. Раздели с нами радость от созерцания безмятежной пустоты.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUmbralChoir">Показывая нам эти карты, ты способствуешь наступлению вселенской гармонии, Существо.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUmbralChoir">Твой отказ заставил Хор ненадолго умолкнуть, Существо. Надеемся, однажды ты вновь станешь частью нашей песни.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUnfallen">Если мы поделимся с вами тем, что видим, Сердце станет лишь сильнее. Что скажете?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUnfallen">Совместный труд на благо науки принесёт процветание нашим народам. Спасибо, друзья.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUnfallen">Пусть этот обмен послужит всеобщему благу и подарит гармонию нашим народам.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUnfallen">Сердце довольно этим соглашением. Пусть оно приблизит достижение мира.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUnfallen">Взаимное открытие границ ознаменует эпоху мира. Нам не терпится поприветствовать вас на наших планетах и посетить ваши.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUnfallen">Там, где была лишь голая земля, теперь благодаря вам взойдут ростки мира. Мы благодарим вас за эти карты.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUnfallen">От вашего отказа Сердце замерло, словно цветок, скованный льдом. Мы сделаем всё, чтобы укрепить наши связи.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTerrans">Империя может быть исключительно ценным другом, но нас нельзя держать в неведении. Поделитесь с нами своими разведданными — это в ваших же интересах.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTerrans">Превосходно! Скоро в наших университетах будут преподавать величайшие умы обоих народов! Теперь обсудим, как мы будем следить, чтобы они держали свои политические взгляды при себе…</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTerrans">Ха! Богатство, экономический рост — и всё это без единого выстрела! Сегодня у меня прекрасное настроение. Давайте попробуем эти инопланетные деликатесы — они ещё не вышли на рынок.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTerrans">Мне не терпится узнать, что принесёт Империи это соглашение. Надо бы построить новый оперный театр… Или, может, огромный завод?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTerrans">Разумное решение. Тесное сотрудничество с Империей лишь укрепит вашу безопасность. Я с радостью загляну к вам в столицу, чтобы отпраздновать подписание договора. Надеюсь, вы не дадите мне заскучать…</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTerrans">Так радостно видеть новые территории и представлять себе будущих патриотов, которые там родятся… Я прикажу отделу планирования немедленно приступить к работе.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTerrans">О, какие мы честолюбивые… Что ж, Империя будет процветать и без вас. А вот ваше процветание под вопросом: без союза у нас нет причин вам помогать…</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVaulters">Мой народ пришёл к согласию. В наших интересах поделиться с вами сведениями, чтобы лучше координировать сбор данных и передвижение в космическом пространстве.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVaulters">Мой народ приветствует возможность заняться совместной научной работой. Пусть она принесёт процветание всем нам.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVaulters">Рынки насыщены товарами и постоянно дарят нам новые идеи. Наши творения продаются во всех уголках галактики, и мы гордимся этим. Мы словно вернулись домой, на Ауригу…</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVaulters">Славная сделка. Очередной шаг к лучшему будущему для наших народов.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVaulters">Мой народ примет вас с распростёртыми объятьями и будет уважительно вести себя в гостях. Я верю, что у нас будут прекрасные отношения.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVaulters">Страшно представить, сколько во вселенной звёзд. Наши астрономы будут рады обменяться с вами звёздными картами.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVaulters">Вселенная вознаграждает за сотрудничество, и тем, кто её боится, приходится нелегко. Мы выстоим, но надеемся, что однажды вы передумаете…</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedVampirilis">Вы приняли моё предложение о совместном обзоре. Свет Виртуалов обнажает всякий грех. Теперь он сияет и для вас.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVampirilis">Вы поступили мудро, согласившись разделить свои открытия с Церковью.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVampirilis">Верующие не нуждаются в богатстве, однако труд облагородит наши народы. Мудрое решение.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVampirilis">Виртуалы благословляют это соглашение.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVampirilis">Чудесно! Да обретёте вы Свет на наших благословенных территориях, и да узрят его верующие в ваших мирах.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVampirilis">Знания, что мы почерпнули из ваших карт, помогут обезопасить навигацию наших флотов.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVampirilis">Еретик хуже иноверца. Он знает священную истину, но уводит верующих с пути — шаг за шагом, почти незаметно… Прямо как те, кто соглашается на мир, но отвергает союз.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVenetians">Исследование рынка не даёт полной картины и к тому же быстро теряет актуальность. Что вы скажете, если мы предложим делиться данными в реальном времени?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVenetians">Чтобы поставлять новейшие товары, нужны новейшие технологии. Давайте создадим совет и посмотрим, что нам удастся придумать!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVenetians">Вот что делает вас лидером! Вы никогда не упустите выгодную сделку, а Семейства всегда предлагают самые выгодные соглашения. Обещаю, вы не пожалеете!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVenetians">Немного терпения, и дивиденды от этой сделки с лихвой покроют любые расходы.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVenetians">Туристы, инвестиции, наёмники… Вы не пожалеете, что открыли свои границы для Семейств!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVenetians">Четыре Семейства сумеют извлечь выгоду из этих карт. Я уже вижу превосходные участки для строительства элитного жилья…</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVenetians">Прагматичное решение, я это уважаю. У вас ещё есть время, чтобы передумать, но имейте в виду: долго ждать мы не будем.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTimeLords">Сотрудничество в деле сбора разведданных послужит нашим общим интересам. Обдумайте наше предложение — мы должны быть в курсе всего, что происходит в этой пугающей галактике.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTimeLords">В силу различий между вселенными объяснить наши научные методы вашим учёным будет непросто, но мы приложим все усилия. Благодарю вас от имени всех Властелинов времени.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTimeLords">Мы немедленно передадим информацию о нуждах ваших потребителей себе в прошлое. Во времени и пространстве по определению не существует лучших товаров, чем у нас — скоро вы убедитесь в этом сами.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTimeLords">Мы рады, что вы оценили преимущества нашего предложения. Прогноз показывает, что эти ресурсы — прекрасное вложение в будущее.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTimeLords">Возможно, со временем мы не только научимся выживать в вашей вселенной, но и достигнем процветания. Ваше согласие станет важным шагом на пути к этой цели.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTimeLords">Мы ценим всё, что вы делаете для нашего выживания. Благодаря этим картам мы сможем узнать вашу материальную вселенную почти так же хорошо, как некогда знали Короз.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTimeLords">Мы понимаем вашу осторожность — для нас она всегда на первом месте. И всё же надеемся, что в будущем мы сумеем убедить вас в пользе более тесного сотрудничества.</LocalizationPair>
+  <LocalizationPair Name="%RawMaximumPopulationTitle">[population] Макс. численность населения</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerManpowerLimitBonusTitle">Лимит трудовых ресурсов при вторжении</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderManpowerLimitBonusTitle">Лимит трудовых ресурсов при вторжении</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSiegePowerTitle">Урон трудовым ресурсам при осаде</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponOpponentPenaltyTitle">Негативный эффект противника</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSpecialEffectDurationTitle">Продолжительность негативного эффекта</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDamageAOETitle">Ущерб флотилии</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerPhaseTitle">Перезарядка щита каждую фазу</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerPhaseTitle">Перезарядка щита флотилий каждую фазу</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerSecondTitle">Перезарядка щита каждую секунду</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerSecondTitle">Перезарядка щита флотилий каждую секунду</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerPhaseTitle">Восстановление прочности каждую фазу</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerPhaseTitle">Восстановление прочности флотилий каждую фазу</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerSecondTitle">Восстановление прочности каждую секунду</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerSecondTitle">Восстановление прочности флотилий каждую секунду</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeTitle">Уничтожение членов экипажа в секунду</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronCriticalAttackChanceTitle">Бонус критического попадания эскадрилий</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterBattleTitle">Восстановление прочности флота после боя</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterPhaseTitle">Восстановление прочности флота каждую фазу</LocalizationPair>
+  <LocalizationPair Name="%DodgeChanceTitle">Уклонение эскадрилий</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDodgeChanceTitle">Уклонение эскадрилий</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponDPSTitle">Урон в секунду</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeDurationTitle">Продолжительность абордажа</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectOverallCooldownTitle">Интервал стрельбы</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsCooldownTitle">Восстановление</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShipManpowerKillAbsorption">Сопротивляемость урону экипажа</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleEMPExplicationTitle">При успешном попадании ЭМ-турель может на определенное время вывести из строя указанные подсистемы цели.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsRawDamageTitle">Базовый урон</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPWeaponDefenseTitle">Продолжительность деактивации оружия</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPShieldDefenseTitle">Продолжительность деактивации щита</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSTitle">Зенитный урон в секунду</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlakExplicationTitle">Зенитные орудия стреляют одновременно с базовым кинетическим оружием, целясь во вражеские снаряды, разрывные батареи и абордажные модули.
+Если урон от зенитного залпа равен прочности снаряда или превышает ее, выбранный снаряд будет уничтожен за одно попадание.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportAdditionalManpowerTitle">[shipCrewColored] Макс. численность экипажа</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstSmallShipsTitle">Бонус к урону небольшим кораблям</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstMediumShipsTitle">Бонус к урону средним кораблям</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstLargeShipsTitle">Бонус к урону крупным кораблям</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementObliteratorShieldEffects">Один раз защищает от полного уничтожения, после чего ломается.
++50% к спасению улучшений систем и населения от уничтожения.
+При уничтожении флотов на орбите урон снижается на 50%.
+Вероятность травм у управляющих героев уменьшается на 67%.</LocalizationPair>
+  <LocalizationPair Name="%DockedFleetsHealthRegenerationRatioTitle">Макс. запас прочности, восстанавливаемый каждый ход у гарнизонных судов</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity3EffectOverride">+50% к макс. запасу прочности, восстанавливаемому каждый ход у гарнизонных судов</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioTitle">Макс. запас прочности, восстанавливаемый каждый ход у гарнизонных судов или судов на орбите</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroDescription">Макс. запас прочности, восстанавливаемый каждый ход у гарнизонных судов или судов на орбите</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroTitle">Макс. запас прочности, восстанавливаемый каждый ход у гарнизонных судов или судов на орбите</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioDescription">Макс. запас прочности, восстанавливаемый каждый ход у гарнизонных судов или судов на орбите</LocalizationPair>
+  <LocalizationPair Name="%HealthPerTurnTitle">Скорость восстановления героя</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleExperienceFromBattlePercentModifierTitle">Получаемый опыт</LocalizationPair>
+  <LocalizationPair Name="%ExperienceBonusPercentTitle">Получаемый опыт</LocalizationPair>
+  <LocalizationPair Name="%ExperienceMultiplierTitle">Множитель опыта</LocalizationPair>
+  <LocalizationPair Name="%LongRangePenaltyTitle">Меткость на дальней дистанции</LocalizationPair>
+  <LocalizationPair Name="%MediumRangePenaltyTitle">Меткость на средней дистанции</LocalizationPair>
+  <LocalizationPair Name="%ShortRangePenaltyTitle">Меткость на малой дистанции</LocalizationPair>
+  <LocalizationPair Name="%DeadZoneRangePenaltyTitle">Меткость при выстреле в упор</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleAntiCrewExplicationTitle">Корабли получают бонус к урону, пропорциональный численности их экипажа (вплоть до 20%). Шрапнельные модули нейтрализуют этот бонус и улучшают абордажные модули.</LocalizationPair>
+  <LocalizationPair Name="%ModuleInvisibilityAmbushTitle">Замаскированные флотилии останутся невидимыми и не будут открывать огонь, пока не придут в заданную точку.</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusTitle">Эффект повышения боевого духа</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusIfOneShipTitle">+25% к урону на одиночных кораблях флотилии</LocalizationPair>
+  <LocalizationPair Name="%ManpowerLostTransferPercentTitle">Возвращение потерянного экипажа в качестве трудовых ресурсов</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusFromManpower">Урон от трудовых ресурсов экипажа</LocalizationPair>
+  <LocalizationPair Name="%PlayerDustPerAliveCPTitle">[dustColored] за каждый ваш КП в бою</LocalizationPair>
+  <LocalizationPair Name="%ManpowerPercentKillPerPhaseTitle">Уничтожение членов экипажа флота каждую фазу</LocalizationPair>
+  <LocalizationPair Name="%DamageKineticTitle">Урон орудий с дробью</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarCommandDescription">Общее количество командных очков кораблей, стоящих в гарнизоне этой системы</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarHealthDescription">Общее кол-во очков прочности кораблей, стоящих в гарнизоне этой системы</LocalizationPair>
+  <LocalizationPair Name="%SophonsQuest-Chapter2.1-Diplomacy-C1Step1ObjectiveTooltip">Используйте приказ "Гарнизон", чтобы поставить корабли в гарнизон, или постройте новые корабли и оставьте их в гарнизоне.</LocalizationPair>
+  <LocalizationPair Name="%ExplorationQuest26-Choice02ObjectiveTooltip">Корабль должен находиться в гарнизоне одной из ваших колоний.</LocalizationPair>
+  <LocalizationPair Name="%FailureShipLockedInGarrisonDescription">Вы не можете создать флот, потому что один из кораблей заблокирован в гарнизоне.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsManpowerDamageOverTimeDefenseTitle">Урон, полученный трудовыми ресурсами абордажного модуля</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceTitle">Бонус к вероятности критического попадания</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceKineticTitle">Бонус к вероятности критического попадания из кинетического оружия</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceEnergyTitle">Бонус к вероятности критического попадания из энергетического оружия</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDefenseTitle">Сопротивляемость урону эскадрильи</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightBonusTitle">Корабль становится более приоритетной целью</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightPenaltyTitle">Корабль становится менее приоритетной целью</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaMoraleBonusPercentTitle">Эффект повышения боевого духа</LocalizationPair>
+  <LocalizationPair Name="%GlobalSpeedModuleTitle">Эффективность очков движения</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipProbeStockTitle">Максимум исследовательских зондов</LocalizationPair>
+  <LocalizationPair Name="%ProbeStockTitle">Исследовательские зонды</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportProbeStockTitle">Исследовательские зонды</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsNetDepletionPointsOnOrbitTitle">Восстановление от истощения за ход</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponTypeCollateralTitle">Сопутствующий урон</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderTroopsDamageMultiplierTitle">Урон обороняющегося войска</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsDamageMultiplierTitle">Урон нападающего войска</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsMaxHealthMultiplierTitle">Здоровье нападающего войска</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentPopulationDestructionProbabilityTitle">Население уничтожено</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentImprovementDestructionProbabilityTitle">Улучшение уничтожено</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1GhostTooltipEffect2">Добавляет до 600 [systemDefenseColored] и повышает лимит размещения гарнизона на столько же</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TooltipEffect2">Добавляет до 300 [systemDefenseColored] и повышает лимит размещения гарнизона на столько же, в зависимости от уровня владения системой</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TerransTooltipEffect2">Добавляет до 400 [Manpower] и повышает лимит размещения гарнизона на столько же, в зависимости от уровня владения системой</LocalizationPair>
+  <LocalizationPair Name="%BesiegedColonizedStarSystemTitle">Осаждённая система</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCuriosity2EffectOverride">+0,08 [industryColored] за [systemDefenseColored]</LocalizationPair>
+  <LocalizationPair Name="%FailureMoreRelicsDescription">У вас недостаточно реликвий [relicColored]</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherDescription">Перейти на сайт Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherTitle">Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%MessageBoxGames2GetherButtonTitle">Ищите дополнительную информацию, обновления и идеи на Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%Update14Description">Благодаря вашему активному участию в бесплатных выходных в январе, вы разблокировали все доступные награды! Теперь доступна малая фракция Басриксо, ее новый герой и "мусорное" задание... Разблокируйте его на Amplifiers!</LocalizationPair>
+  <LocalizationPair Name="%EarlyAccessSubscriberContentDescription">Галактику легче захватить, если на вашей стороне будет еще один Герой. Благодаря вашему интересу к Amplitude и Amplifiers, гениальная Софон Атхассам Рамоэзз была разблокирована и доступна на Amplifiers!</LocalizationPair>
+  <LocalizationPair Name="%Update5Description">Благодаря активному участию в испытании сообщества "Игра на победу" игроки смогли разблокировать новое дополнение, включающее внешний вид "Мезари" для Единой Империи, новый набор корабельных модулей, нового Героя, спиральную галактику с шестью рукавами, новую аномалию и событие для населения. Разблокируйте на Amplifiers!</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisTitle">Праздник обращения</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisDescription">Крепкие отношения с Академией помогут нам убедить целую систему построить ковчег с последующим обращением в Сущность.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirTitle">Серверы под землей</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirDescription">По нашей просьбе Академия отключит свои сенсоры, чтобы мы могли тайно разместить сервер святилища в одной из их систем.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessTitle">Подковерные интриги</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessDescription">Академия не должна пытаться услужить всем. Но мы добьемся преимущества, если в частном порядке осудим другую империю в глазах Исиандера.</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionTitle">Возвращение реликвий</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionDescription">Наше отсутствие, общая вера и былые имперские амбиции мешали нам забрать реликвии из Академии, но с хорошими отношениями это стало возможным.</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionTitle">Служба безопасности</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionDescription">Владения Академии малы, а значит ее военная мощь и экономика должны быть совершенны. Мы попросим разделить эти знания с нашим народом.</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionTitle">Военные почести</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionDescription">Инициация войск в элитные ордена позволит объединить престиж Шередин и Академии, привлечь патриотов и заслужить уважение всей галактики.</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionTitle">Ученые наставники</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionDescription">Приняв у себя ученых Академии, наш император получит уважение интеллектуалов Мезари и галактического научного сообщества. </LocalizationPair>
+</Datatable>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!--Umbral Choir-->
+    <SimulationDescriptor Name="PopulationCollectionBonusUmbralChoir1" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="false"   TooltipOverride="%TooltipOverridePositivePolitics03"/>
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityUmbralChoirCount"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom0Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom1Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom2Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom3Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom4Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom5Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom6Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom7Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom8Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom9Count"     TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom10Count"    TooltipHidden="true"   />
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="PopulationCollectionBonusUmbralChoir1,ClassPopulationEmpireAffinityCustom11Count"    TooltipHidden="true"   />
+	</SimulationDescriptor> 
+    
+	<SimulationDescriptor Name="PopulationCollectionBonusUmbralChoir2" Type="PopulationCollectionBonus">
+        <BinaryModifier TargetProperty="EmpireEmpirePoint"                  Operation="Addition"    Left="1" BinaryOperation="Multiplication" Right="$(EmpireProcessingPowerAllocated)" Path="./ClassEmpire,EmpireTypeMajor" SearchValueFromPath="true" EnforceRightAsPer="true"/>
+        <Modifier       TargetProperty="MaximumEmpireProcessingPowerStock"  Operation="Addition"    Value="15"      Path="./ClassEmpire,EmpireTypeMajor" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationCollectionBonusUmbralChoir3" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="HackingWarpSpeed"     Value="0.15"  Operation="Percent" Path="./ClassEmpire,EmpireTypeMajor" TooltipHidden="true"/>
+        <Modifier TargetProperty="HackingNonWarpSpeed"  Value="0.15"  Operation="Percent" Path="./ClassEmpire,EmpireTypeMajor" TooltipHidden="true"/>
+        <Modifier TargetProperty="HackingNodeSpeed"     Value="0.15"  Operation="Percent" Path="./ClassEmpire,EmpireTypeMajor" />
+    </SimulationDescriptor>
+
+    <!-- MinorHacking -->
+    <SimulationDescriptor Name="PopulationCollectionBonusMinorHacking1" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics01ToPolitics01" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireAffinityMinorHacking"      TooltipOverride="%TooltipOverridePositivePolitics01"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusMinorHacking2" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="SystemProductionBonusFromCollection" Operation="Addition" Value="0.10" Path="../ClassEmpire,EmpireTypeMajor/ClassStarSystem/ClassPopulationStarSystemAffinityMinorHacking" SearchValueFromPath="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="PopulationCollectionBonusMinorHacking3" Type="PopulationCollectionBonus">
+    </SimulationDescriptor>
+
+
+    <!-- Super Population -->
+    <SimulationDescriptor Name="PopulationCollectionBonusSuperPopulation1" Type="PopulationCollectionBonus">
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1" Path="../ClassEmpire,EmpireTypeMajor/ClassPopulationEmpireSuperPopulation"      TooltipOverride="%TooltipOverridePositivePolitics03"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="PopulationCollectionBonusSuperPopulation2" Type="PopulationCollectionBonus">
+        <BinaryModifier TargetProperty="SystemFIDSFlat" Operation="Addition" Left="5" BinaryOperation="Multiplication" Right="$(SuperPopulationCount)" Path="PopulationCollectionBonusSuperPopulation2,ClassPopulationEmpireSuperPopulation/./ClassEmpire,EmpireTypeMajor/ClassStarSystem,HomeSystem,!ColonizedStarSystemStateGhost" SearchValueFromPath="true" EnforceRightAsPer="true"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="PopulationCollectionBonusSuperPopulation3" Type="PopulationCollectionBonus">
+        <BinaryModifier TargetProperty="SystemFIDSFlat" Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(EmpireProcessingPowerAllocated)" Path="./ClassEmpire,EmpireTypeMajor/ClassStarSystem,HomeSystem,!ColonizedStarSystemStateGhost" SearchValueFromPath="true" EnforceRightAsPer="true"/>
+    </SimulationDescriptor>
+
+</Datatable>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HackingOperationOutcomeDefinition.xsd">
+
+    <!-- ########################### -->
+    <!-- ## MISCELLANEOUS EFFECTS ## -->
+    <!-- ########################### -->
+    
+    <!-- RELOCATE AS UMBRAL CHOIR -->
+    <HackingOperationOutcomeCreateBeaconDefinition Name="HackingOperationOutcomeCreateBeacon" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeCreateBeaconDefinition>
+
+    <!-- CREATE HAUNT AS UMBRAL CHOIR -->
+    <HackingOperationOutcomeSpawnGhostSystemDefinition Name="HackingOperationOutcomeSpawnGhostSystem" Level="1" RequiredTraitorsOnExistingColony="2">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeSpawnGhostSystemDefinition>
+
+    <!-- CREATE BACKDOOR ON ANYTHING BUT MAJOR BEST SYSTEM -->
+    <HackingOperationOutcomeSpawnBackdoorDefinition Name="HackingOperationOutcomeSpawnBackdoor" Level="0">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">Path(Target,@'ClassColonizedStarSystem,BestSystem/../ClassEmpire,EmpireTypeMajor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeSpawnBackdoorDefinition>
+
+    <!-- RECLAIM HOME SYSTEM AS UMBRAL CHOIR -->
+    <HackingOperationOutcomeReclaimLostSystemDefinition Name="HackingOperationOutcomeReclaimLostSystem" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeReclaimLostSystemDefinition>
+    
+    <!-- DESTROY ONE HAUNT -->
+    <HackingOperationOutcomeDestroyGhostSystemDefinition Name="HackingOperationOutcomeDestroyGhostSystem" Level="0">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeDestroyGhostSystemDefinition>
+    
+    
+    <!-- ####################### -->
+    <!-- ## TRACE EFFECT SETS ## -->
+    <!-- ####################### -->
+
+    <!-- BLACK OUT-->
+    <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeBlackout" Composition="All" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeMajor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_SystemEffect"/>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_AbortOperation"/>
+    </HackingOperationOutcomeSetDefinition>
+
+    <HackingOperationOutcomeSystemTemporaryEffectDefinition Name="HackingOperationOutcomeBlackout_SystemEffect" Hidden="true">
+        <TemporaryEffectReference Name="SystemBlackout"/>
+    </HackingOperationOutcomeSystemTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeAbortTracedOperationDefinition Name="HackingOperationOutcomeBlackout_AbortOperation" Hidden="true"/>
+
+    <!-- BLACKMAIL -->
+    <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeBlackmail" Composition="All" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeMajor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackmail_FakeEffect"/>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackmail_PressureEffect"/>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackmail_ForceAcceptance"/>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_AbortOperation"/>
+    </HackingOperationOutcomeSetDefinition>
+
+    <HackingOperationOutcomeSystemTemporaryEffectDefinition Name="HackingOperationOutcomeBlackmail_FakeEffect" Hidden="true" Level="1">
+        <TemporaryEffectReference Name="FakeContextualRestriction"/>
+    </HackingOperationOutcomeSystemTemporaryEffectDefinition>
+
+    <HackingOperationOutcomeDiplomaticPressureEffectDefinition Name="HackingOperationOutcomeBlackmail_PressureEffect" Hidden="true" Level="1">
+        <DiplomaticEffectReference Name="PressureIncreaseOnInitiatorFromTrace"/>
+    </HackingOperationOutcomeDiplomaticPressureEffectDefinition>
+
+    <HackingOperationOutcomeTransferResourcesDefinition Name="HackingOperationOutcomeBlackmail_ForceAcceptance" Hidden="true" DescriptionHidden="true" Target="Relation" Level="1">
+        <ResourceTransfer ResourceName="ForceableContextualTerms">1</ResourceTransfer>
+    </HackingOperationOutcomeTransferResourcesDefinition>
+    
+    <!-- TRACE BACKDOOR AS MAJOR -->
+    <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeDestroyBackdoor" Composition="All" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeDestroyBackdoor_DestroyBackdoor"/>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_AbortOperation"/>
+    </HackingOperationOutcomeSetDefinition>
+
+    <HackingOperationOutcomeDestroyBackdoorDefinition Name="HackingOperationOutcomeDestroyBackdoor_DestroyBackdoor" Hidden="true" Level="1"/>
+
+    <!-- TRACE MINOR/PIRATE AS MAJOR -->
+    <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeAbortMinorOperation" Composition="All" Level="1">
+        <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+      <PathPrerequisite Flags="Discard" Inverted="false">IsAcademyFaction</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard" Inverted="true">Path(Target,@'../ClassEmpire,EmpireTypeMajor')</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_AbortOperation"/>
+    </HackingOperationOutcomeSetDefinition>
+
+    <!-- TRACE MAJOR AS MINOR/PIRATE -->
+    <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeAbortOperationAsMinor" Composition="All" Level="1">
+        <PathPrerequisite Flags="Discard" Inverted="true">EmpireTypeMajor</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+        <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeBlackout_AbortOperation"/>
+    </HackingOperationOutcomeSetDefinition>
+
+    <!-- DO NOTHING -->
+    <HackingOperationOutcomeDefinition Name="HackingOperationOutcomeDoNothing" Level="1">
+        <InterpreterPrerequisite Flags="Discard">$(IsTraceOperation)</InterpreterPrerequisite>
+    </HackingOperationOutcomeDefinition>
+</Datatable>

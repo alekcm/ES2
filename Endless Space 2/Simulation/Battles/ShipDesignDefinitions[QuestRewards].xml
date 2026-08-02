@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ShipDesignDefinition.xsd">
+  <!-- Academy Carrier -->
+  <ShipDesignDefinition Name="Academy_LargeCarrierReward">
+    <HullReference Name="HullLarge01AcademyReward"/>
+    <ShipRoleReference Name="ShipRoleCarrier"/>
+
+    <PathPrerequisite Flags="Prerequisite,Discard,Edition">../ClassEmpire,QuestShowAcademyCarrier</PathPrerequisite>
+  </ShipDesignDefinition>
+
+  <!-- Umbral Choir Coordinator -->
+  <ShipDesignDefinition Name="UmbralChoir_MediumDefenseReward">
+    <HullReference Name="HullMedium02UmbralChoirReward"/>
+    <ShipRoleReference Name="ShipRoleMediumSupport"/>
+
+    <PathPrerequisite Flags="Prerequisite,Discard,Edition">../ClassEmpire,QuestShowUmbralChoirCoordinator</PathPrerequisite>
+  </ShipDesignDefinition>
+
+  <!-- Nakalim Attacker -->
+  <ShipDesignDefinition Name="Templars_SmallAttackReward">
+    <HullReference Name="HullSmall01TemplarsReward"/>
+    <ShipRoleReference Name="ShipRoleSmallAttacker"/>
+
+    <PathPrerequisite Flags="Prerequisite,Discard,Edition">../ClassEmpire,QuestShowNakalimAttacker</PathPrerequisite>
+  </ShipDesignDefinition>
+</Datatable>

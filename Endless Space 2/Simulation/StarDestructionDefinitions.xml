@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/StarDestructionDefinition.xsd">
+
+    <StarDestructionDefinition Name="StarTypeWhite">
+        <StarDestruction DestinationStarType="StarTypeRedSupergiant"    Weight="20"/>
+        <StarDestruction DestinationStarType="StarTypeWhiteDwarf"       Weight="80"/>
+    </StarDestructionDefinition>
+    
+    <StarDestructionDefinition Name="StarTypeYellow">
+        <StarDestruction DestinationStarType="StarTypeBlue"             Weight="65"/>
+        <StarDestruction DestinationStarType="StarTypeRedDwarf"         Weight="35"/>
+    </StarDestructionDefinition>
+    
+    <StarDestructionDefinition Name="StarTypeBlue">
+        <StarDestruction DestinationStarType="StarTypeWhite"            Weight="35"/>
+        <StarDestruction DestinationStarType="StarTypeRedSupergiant"    Weight="65"/>
+    </StarDestructionDefinition>
+    
+    <StarDestructionDefinition Name="StarTypeProtostar">
+        <StarDestruction DestinationStarType="StarTypeBlue"             Weight="35"/>
+        <StarDestruction DestinationStarType="StarTypeYellow"           Weight="40"/>
+        <StarDestruction DestinationStarType="StarTypeDouble"           Weight="25"/>
+    </StarDestructionDefinition>
+    
+    <StarDestructionDefinition Name="StarTypeRedSupergiant">
+        <StarDestruction DestinationStarType="StarTypeWhite"            Weight="50"/>
+        <StarDestruction DestinationStarType="StarTypeWhiteDwarf"       Weight="50"/>
+    </StarDestructionDefinition>
+    
+    <StarDestructionDefinition Name="StarTypeDouble">
+        <StarDestruction DestinationStarType="StarTypeYellow"           Weight="25"/>
+        <StarDestruction DestinationStarType="StarTypeRedSupergiant"    Weight="75"/>
+    </StarDestructionDefinition>
+
+    <StarDestructionDefinition Name="StarTypeRedDwarf">
+        <StarDestruction DestinationStarType="StarTypeRedSupergiant"    Weight="50"/>
+        <StarDestruction DestinationStarType="StarTypeWhiteDwarf"       Weight="50"/>
+    </StarDestructionDefinition>
+
+    <StarDestructionDefinition Name="StarTypeWhiteDwarf">
+        <StarDestruction DestinationStarType="StarTypeWhiteDwarf"       Weight="95"/>
+        <StarDestruction DestinationStarType="StarTypeNone"             Weight="5"/>
+    </StarDestructionDefinition>
+
+    <StarDestructionDefinition Name="StarTypeDysonSphere">
+        <StarDestruction DestinationStarType="StarTypeProtostar"        Weight="20"/>
+        <StarDestruction DestinationStarType="StarTypeWhiteDwarf"       Weight="80"/>
+    </StarDestructionDefinition>
+    
+    <StarDestructionDefinition Name="StarTypeArtificial">
+        <StarDestruction DestinationStarType="StarTypeProtostar"        Weight="25"/>
+        <StarDestruction DestinationStarType="StarTypeWhiteDwarf"       Weight="75"/>
+    </StarDestructionDefinition>
+
+    <StarDestructionDefinition Name="StarTypeAcademy"> <!-- Same as yellow. -->
+        <StarDestruction DestinationStarType="StarTypeWhite"            Weight="35"/>
+        <StarDestruction DestinationStarType="StarTypeRedSupergiant"    Weight="65"/>
+    </StarDestructionDefinition>
+    
+    <StarDestructionDefinition Name="StarTypeTemplars">
+        <!-- Same as yellow. -->
+        <StarDestruction DestinationStarType="StarTypeWhite"            Weight="35"/>
+        <StarDestruction DestinationStarType="StarTypeRedSupergiant"    Weight="65"/>
+    </StarDestructionDefinition>
+</Datatable>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- PopulationPlanet descriptors (provide bonuses to the population on the planet, and is used by the Collection bonuses/Boost bonuses). -->
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryGroundBattleAttackerDamage01" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationGroundBattleBombardmentAttackerDamages"  Operation="Addition"    Value="25" Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitPrimaryScience03" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationScience"                                 Operation="Addition"    Value="3"  Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    
+    <!-- PopulationEmpire descriptors (used to apply the effects of Population boosts, and poorly named. I'm sorry but that's a fact!). -->
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryGroundBattleAttackerDamage01" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationGroundBattleBombardmentAttackerDamages"  Operation="Addition"    Value="25"   Path="FAKEFORGUI/./ClassPopulation"/>
+        <BinaryModifier TargetProperty="BonusPopulationGroundBattleBombardmentAttackerDamages"  Operation="Addition"    Left="25"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitPrimaryScience03" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationScience"    Operation="Addition"    Value="3"   Path="FAKEFORGUI/./ClassPopulation"/>
+        <BinaryModifier TargetProperty="BonusPopulationScience"    Operation="Addition"    Left="3"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+    <!-- Assimilated populations descriptors (applied on the Horatio-like empire's major PopulationPlanets). -->
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetGroundBattleAttackerDamage01" Type="ClassPopulationAssimilated">
+        <Modifier       TargetProperty="BonusPopulationGroundBattleBombardmentAttackerDamages"      Operation="Addition"    Value="10"  Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetScience03" Type="ClassPopulationAssimilated">
+        <Modifier       TargetProperty="BonusPopulationScience"      Operation="Addition"    Value="2"  Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+</Datatable>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ########################################## -->
+    <!-- ######        MAJOR FACTIONS        ###### -->
+    <!-- ########################################## -->
+    <!-- AffinityGuiElement is mapped with the AffinityMapping of the Faction's MajorPopulation -->
+
+    <AffinityGuiElement Name="AffinityMappingUmbralChoir" PreloadCount="3" >
+		<Title>%AffinityUmbralChoirTitle</Title>
+		<Description>%AffinityUmbralChoirDescription</Description>
+		<Icons>
+			<Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityUmbralChoirSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityUmbralChoirMedium" />
+            <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityUmbralChoirMediumInverted" />
+			<Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityUmbralChoirLarge" />
+            <Icon Size="Leader" Path="Bitmaps/Dynamic/Affinities/AffinityUCLeader" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/UmbralChoirLeader010" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetUmbralChoirSmall" />
+            <Icon Size="MediumExtended" Path="Bitmaps/Dynamic/Notifications/NotificationEmpireMet/NotificationMajorEmpireMetUmbralChoirMedium" />
+            <Icon Size="Loading" Path="Bitmaps/Dynamic/Moods/LoadingScreen11" />
+		</Icons>
+		<SymbolString>[umbralChoir]</SymbolString>
+        <Sounds>
+            <Sound EventName="Play_ES2_Voices_OUTRO_UmbralChoir" Type="Outro"/>
+        </Sounds>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+        <Movies>
+            <Movie Path="Movies/Factions/UmbralChoir_Intro.mp4" Type="Intro" />
+            <Movie Path="Movies/Factions/UmbralChoir_Outro.mp4" Type="Outro" />
+        </Movies>
+        <ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitUmbralChoirLeaders01</ModelPath>
+	</AffinityGuiElement>
+
+    <!-- MinorHacking -->
+    <AffinityGuiElement Name="AffinityMappingMinorHacking">
+        <Title>%AffinityGameplayMinorHackingTitle</Title>
+        <Description>%AffinityGameplayMinorHackingDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityMinorHackingSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityMinorHackingMedium" />
+            <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityMinorHackingMediumInverted" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityMinorHackingLarge" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Affinities/AffinityMinorHackingMood" />
+        </Icons>
+        <SymbolString>[kalmat]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </AffinityGuiElement>
+    
+</Datatable>

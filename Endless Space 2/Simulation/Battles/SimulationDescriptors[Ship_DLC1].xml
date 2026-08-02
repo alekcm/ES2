@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+
+    <SimulationDescriptor Name="ShipFactionVaulters"      Type="ShipFaction"/>
+    <SimulationDescriptor Name="ShipHull05" Type="ShipHull">
+        <Modifier TargetProperty="ShipHullIndex" Operation="Force" Value="5" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ShipStatBonus1Movement3" Type="ShipStatBonus1">
+        <Modifier TargetProperty="MaximumMovement"          Operation="Addition"    Value="0"		Path="ClassShip"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ShipStatBonus2Vision" Type="ShipStatBonus2">
+        <Modifier TargetProperty="VisionRange"          Operation="Addition"    Value="8"		Path="ClassShip"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ShipTypeIndestructible"      Type="ShipType"/>
+    <SimulationDescriptor Name="ShipStateLockedInGarrison"      Type="ShipState" IsSerializable="false" />
+    <SimulationDescriptor Name="ShipStateLockedInGarrisonFromDamage" Type="ShipState" IsSerializable="false" >
+        <Modifier TargetProperty="NetTurnsSinceSuperColonization" Operation="Force" Value="0" Path="../ClassEmpire" TooltipHidden="true" />
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="ShipStateLockedInGarrisonFromColonization"      Type="ShipState" IsSerializable="false" />
+
+    <SimulationDescriptor Name="ClassHullMediumSuperColonizer" Type="ClassHull">
+        <Modifier TargetProperty="MaximumShipManpower" Operation="Addition" Value="20"     Path="ClassShip"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassSectionCoreMediumSuperColonizer" Type="ClassSectionCore">
+        <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="5500" Path="ClassSection"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="ShipFactionHeroesPirate"      Type="ShipFaction"/>
+
+</Datatable>

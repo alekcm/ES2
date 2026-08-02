@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="TemporaryEffectSacrificeGuardianHonorMajorHisshos" Type="TemporaryEffect">
+    <Modifier TargetProperty="UnclampedNetEmpireHonor" Operation="Addition" Value="1" Priority="3" Path="ClassEmpire" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectStarSystemImprovementWonder1MajorHisshos" Type="TemporaryEffect">
+    <Modifier TargetProperty="UnclampedNetEmpireHonor" Operation="Addition" Value="1" Priority="3" Path="ClassEmpire" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="HonorActionFleetBonuses"    Type="HonorAction"  IsSerializable="false"/>
+  <SimulationDescriptor Name="HonorActionFleetFakePower"  Type="HonorAction"  IsSerializable="false"/>
+  <SimulationDescriptor Name="HonorActionSystemBonuses"   Type="HonorAction"  IsSerializable="false"/>
+  <SimulationDescriptor Name="HonorActionSystemDefense"   Type="HonorAction"  IsSerializable="false"/>
+
+  <SimulationDescriptor Name="TemporaryEffectObliteratorMalus"   Type="TemporaryEffect">
+    <BinaryModifier TargetProperty="ObliteratorMalus"   Operation="Addition" Left="$(EmpireEmpirePoint)"  BinaryOperation="Multiplication" Right=".5"     Path="ClassEmpire" TooltipOverride="%ObliteratorMalusInfluenceEffectOverride"/>
+    <Modifier TargetProperty="Happiness"   Operation="Subtraction" Value="40"     Path="ClassEmpire/ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <!-- Happiness -->
+  <SimulationDescriptor Name="ObedienceStatusEmpire0" Type="ObedienceStatusEmpire" IsSerializable="false">
+    <Modifier TargetProperty="EmpireResearch"     Operation="Percent" Value="-0.3"     Path="ClassEmpire"/>
+    <Modifier TargetProperty="EmpireMoney"        Operation="Percent" Value="-0.3"     Path="ClassEmpire"   ValueMustBePositive="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ObedienceStatusEmpire1" Type="ObedienceStatusEmpire" IsSerializable="false">
+    <Modifier   TargetProperty="EmpireResearch"     Operation="Percent" Value="-0.15"     Path="ClassEmpire"/>
+    <Modifier   TargetProperty="EmpireMoney"        Operation="Percent" Value="-0.15"     Path="ClassEmpire"    ValueMustBePositive="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ObedienceStatusEmpire1OrAbove" Type="ObedienceStatusEmpire" IsSerializable="false"/>
+
+  <SimulationDescriptor Name="ObedienceStatusEmpire2" Type="ObedienceStatusEmpire" IsSerializable="false">
+    <!--These are used for feedbacking "+0% D / S"-->
+    <Modifier   TargetProperty="EmpireResearch"     Operation="Percent" Value="0.0001"     Path="false,ClassEmpire"/>
+    <Modifier   TargetProperty="EmpireMoney"        Operation="Percent" Value="0.0001"     Path="false,ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ObedienceStatusEmpire2OrAbove" Type="ObedienceStatusEmpire" IsSerializable="false"/>
+
+  <SimulationDescriptor Name="ObedienceStatusEmpire3" Type="ObedienceStatusEmpire" IsSerializable="false">
+    <Modifier TargetProperty="EmpireResearch"     Operation="Percent" Value="0.15"     Path="ClassEmpire"/>
+    <Modifier TargetProperty="EmpireMoney"        Operation="Percent" Value="0.15"     Path="ClassEmpire" ValueMustBePositive="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ObedienceStatusEmpire3OrAbove" Type="ObedienceStatusEmpire" IsSerializable="false"/>
+
+  <SimulationDescriptor Name="ObedienceStatusEmpire4" Type="ObedienceStatusEmpire" IsSerializable="false">
+    <Modifier TargetProperty="EmpireResearch"     Operation="Percent" Value=".3"     Path="ClassEmpire"/>
+    <Modifier TargetProperty="EmpireMoney"        Operation="Percent" Value=".3"     Path="ClassEmpire" ValueMustBePositive="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="BonusOnJuggernauts" Type="BonusOnJuggernauts">
+    <Modifier TargetProperty="Multiplier"                       Operation="Force"       Value="3"       Path="ClassEmpire/ClassGarrison/ClassShip,ShipRoleJuggernaut/ClassSection/ClassModule" Priority="1"     TooltipOverride="%EmpireImprovementImprovedHullJuggernautOverride"/>
+    <Modifier TargetProperty="ShipHealth"                       Operation="Addition"    Value="20000"   Path="ClassEmpire/ClassGarrison/ClassShip,ShipRoleJuggernaut/ClassSection,ClassSectionCoreJuggernaut"   TooltipOverride="%EmpireImprovementImprovedHullJuggernautHealthOverride"/>
+    <Modifier TargetProperty="FreeMovementSpeed"                Operation="Addition"    Value="0.25"       Path="ClassEmpire/ClassGarrison/ClassShip,ShipRoleJuggernaut"   TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="JuggernautsCanBeResearched" Type="JuggernautsCanBeResearched"/>
+</Datatable>

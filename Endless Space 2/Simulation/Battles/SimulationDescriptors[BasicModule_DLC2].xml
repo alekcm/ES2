@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="ClassBasicModule" Type="Class">
+        <Property Name="Health"                         BaseValue="0"   IsSealed="true" IsSerializable="true"/>
+        <Property Name="MaximumHealth"                  BaseValue="0"   MinValue="1"/>
+
+        <Property Name="OffensiveMilitaryPower"/>
+        <Property Name="DefensiveMilitaryPower"/>
+        
+    </SimulationDescriptor>
+
+</Datatable>

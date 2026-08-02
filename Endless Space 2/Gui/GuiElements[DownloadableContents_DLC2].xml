@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+  
+    <!-- DLC2 -->
+    <DownloadableContentGuiElement Name="DLCHisshos" Notify="true">
+        <Title>%DLCHisshosTitle</Title>
+        <Description>%DLCHisshosDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="AffinityMajorHisshosSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Dynamic/DLC/DLCHisshosMedium" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/DLC/DLCHisshosLarge" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/DLC/DLCHisshosMood" />
+        </Icons>
+        <LoreDescription>%DLCHisshosLoreDescription</LoreDescription>
+        <ContentDescription>%DLCHisshosContentDescription</ContentDescription>
+    </DownloadableContentGuiElement>
+
+</Datatable>

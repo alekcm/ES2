@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="ClassCitadel" Type="Class">
+    <Property Name="SpaceBattleCanFire"             BaseValue="0"   MinValue="0"    MaxValue="1" />
+    <Property Name="SpaceBattleDamageMultiplier"    BaseValue="1"   MinValue="1" />
+    <Property Name="DamageBonusPerTargetCommandPoints"          BaseValue="0"  MinValue="Negative"/>
+    <Property Name="DamagePerSecond"                            BaseValue="0"/>
+
+    <Property Name="OffensiveMilitaryPower" />
+    <Property Name="DefensiveMilitaryPower" />
+    <Property Name="OffensiveMilitaryPowerForSimplifiedBattles" Composition="Sum"/>
+
+    <Property Name="CitadelManpowerStock" IsSealed="true"/>
+    <Property Name="NetCitadelManpower"/>
+    <Property Name="MaximumCitadelManpower" BaseValue="1000"/>
+
+    <Property Name="CitadelManpowerRefillRate" IsSealed="true"/>
+    <Property Name="MaximumCitadelManpowerRefillRate" BaseValue="1000"/>
+
+    <Property Name="SystemMoneyUpkeep" BaseValue="48"/>
+    <Property Name="UpkeepMultiplierFromJuggernauts" BaseValue="1" MaxValue="1024"/>
+
+    <Property Name="SystemPopulation" MinValue="0"/>
+
+    <Modifier TargetProperty="JuggernautCount"                                  Operation="Addition"    Value="1"       Path="./ClassColonizedStarSystem,ColonizedStarSystemStateColony/./ClassEmpire" TooltipHidden="true"/>
+    <Modifier TargetProperty="CitadelCount"                                     Operation="Addition"    Value="1"       Path="./ClassColonizedStarSystem,ColonizedStarSystemStateColony/./ClassEmpire" TooltipHidden="true"/>
+    <Modifier TargetProperty="JuggernautCount"                                  Operation="Addition"    Value="1"       Path="./ClassMothership/../ClassEmpire" TooltipHidden="true"/>
+    <Modifier TargetProperty="CitadelCount"                                     Operation="Addition"    Value="1"       Path="./ClassMothership/../ClassEmpire" TooltipHidden="true"/>
+    <Modifier TargetProperty="NetSystemResearch"                                Operation="Percent"     Value="0.2"     Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="SystemProduction"                                 Operation="Percent"     Value="0.2"     Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="SystemGrowth"                                     Operation="Percent"     Value="0.2"     Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="SystemEmpirePoint"                                Operation="Percent"     Value="0.1"     Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="TradingRouteIncomeModifier"                       Operation="Percent"     Value="1"       Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="HasObliteratorDefense"                            Operation="Addition"    Value="1"       Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="VisionRange"                                      Operation="Addition"    Value="4"       Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"    Operation="Addition"    Value="0.1"     Path="./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"       Operation="Addition"    Value="0.1"     Path="./ClassColonizedStarSystem"/>
+    <BinaryModifier TargetProperty="MaximumCitadelManpower"                     Operation="Addition"    Left="50"       BinaryOperation="Multiplication" Right="$(SystemPopulation)"/>
+    <Modifier TargetProperty="Damage" Operation="Multiplication" Value="$(SpaceBattleDamageMultiplier)" Path="ClassCitadel/ClassCitadelWeapon"/>
+
+    <Modifier TargetProperty="MaximumCitadelManpowerRefillRate" Operation="Addition" Value="$(MaximumCitadelManpower)"/>
+    <Modifier TargetProperty="NetCitadelManpower" Operation="Addition" Value="$(CitadelManpowerRefillRate)"/>
+
+    <Modifier TargetProperty="SystemMoneyUpkeep" Operation="Multiplication" Value="$(UpkeepMultiplierFromJuggernauts)"/>
+  </SimulationDescriptor>
+</Datatable>

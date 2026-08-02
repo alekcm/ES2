@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- AFFINITY GAMEPLAY -->
+    <ExtendedGuiElement Name="AffinityGameplayUmbralChoir">
+        <Title>%AffinityGameplayUmbralChoirTitle</Title>
+        <Description>%AffinityGameplayUmbralChoirDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityUmbralChoirSmall" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%AffinityGameplayUmbralChoirTooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="FactionTraitTechnologyDefinitionEconomyAndTrade1UmbralChoir">
+        <Title>%TechnologyDefinitionEconomyAndTrade1SophonsTitle</Title>
+        <Description>%TechnologyDefinitionEconomyAndTrade1SophonsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitStartingTechnologyEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+
+    <GuiElement Name="FactionTraitReducedManpowerFromFood">
+        <Title>%FactionTraitReducedManpowerFromFoodTitle</Title>
+        <Description>%FactionTraitReducedManpowerFromFoodDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="FactionTraitManpowerFromProcessingPower">
+        <Title>%FactionTraitManpowerFromProcessingPowerTitle</Title>
+        <Description>%FactionTraitManpowerFromProcessingPowerDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="FactionTraitBonusHackingRoutes">
+        <Title>%FactionTraitBonusHackingRoutesTitle</Title>
+        <Description>%FactionTraitBonusHackingRoutesDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="FactionTraitBonusHackingSpeed">
+        <Title>%FactionTraitBonusHackingSpeedTitle</Title>
+        <Description>%FactionTraitBonusHackingSpeedDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="FactionTraitTradePenalty">
+        <Title>%FactionTraitTradePenaltyTitle</Title>
+        <Description>%FactionTraitTradePenaltyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="FactionTraitNativelyInvisibleShips">
+        <Title>%FactionTraitNativelyInvisibleShipsTitle</Title>
+        <Description>%FactionTraitNativelyInvisibleShipsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitNativelyInvisibleShipsEffectOverride</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="FactionTraitProcessingPowerFromTraitors">
+        <Title>%FactionTraitProcessingPowerFromTraitorsTitle</Title>
+        <Description>%FactionTraitProcessingPowerFromTraitorsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="FactionTraitLuxuryCostModifier">
+        <Title>%FactionTraitLuxuryCostModifierTitle</Title>
+        <Description>%FactionTraitLuxuryCostModifierDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+    
+    <GuiElement Name="FactionTraitAntiExpansionists">
+        <Title>%FactionTraitAntiExpansionistsTitle</Title>
+        <Description>%FactionTraitAntiExpansionistsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <!-- MinorHacking -->
+    <ExtendedGuiElement Name="FactionTraitMinorMinorHacking">
+        <Title>%FactionTraitMinorMinorHackingTitle</Title>
+        <Description>%FactionTraitMinorMinorHackingDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+        <TooltipElement>
+            <EffectOverride>%FactionTraitMinorMinorHackingTooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="FactionTraitMinorProcessingPowerCostReduction01">
+        <Title>%FactionTraitMinorProcessingPowerCostReduction01Title</Title>
+        <Description>%FactionTraitMinorProcessingPowerCostReduction01Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="FactionTraitMinorBonusHackingSpeed">
+        <Title>%FactionTraitMinorBonusHackingSpeedTitle</Title>
+        <Description>%FactionTraitMinorBonusHackingSpeedDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Headers/HeaderTraits" />
+        </Icons>
+    </GuiElement>
+
+    <!-- Home Planet Type-->
+    <GuiElement Name="FactionTraitHomePlanetPlanetTypeFake">
+        <Title>%PlanetTypeFakeTitle</Title>
+        <Description>%PlanetTypeFakeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps\Atlased\Categories\CategoryPlanetImprovementSmall" />
+        </Icons>
+    </GuiElement>
+
+
+    <!-- ######## CUSTOM FACTIONS POPULATION MODIFIER TRAITS ######## -->
+    <GuiElement Name="PopulationModifiersTraitPrimaryProcessingPower01">
+        <Title>%PopulationModifiersTraitPrimaryProcessingPower01Title</Title>
+    </GuiElement>
+
+</Datatable>

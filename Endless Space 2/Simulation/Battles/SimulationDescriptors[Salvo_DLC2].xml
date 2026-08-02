@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="ClassCitadelSalvo" Type="Class">
+        <Property Name="Health"                                 BaseValue="0"   IsSealed="true" IsSerializable="true"/>
+        <Property Name="MaximumHealth"                          BaseValue="0"/>
+        <Property Name="EffectiveDamage"                        BaseValue="0"    IsSealed="true" />
+
+        <Property Name="SectionDamageFactor"                    BaseValue="1"   IsSealed="true"/>
+        <Property Name="SectionDamage"                          BaseValue="0"/>
+        <Property Name="ModuleDamage"                           BaseValue="0"/>
+
+        <Property Name="CriticalHitDamageBonus"                 BaseValue="0" />
+        <Property Name="EffectiveDamage"                        BaseValue="0"    IsSealed="true" />
+
+        <Property Name="Accuracy"                               BaseValue="0"/>
+        <Property Name="DestructionDuration"                    BaseValue="10"/>
+
+        <Property Name="DamageAgainstSmallShipsModifier"                 BaseValue="0" />
+        <Property Name="DamageAgainstMediumShipsModifier"                BaseValue="0" />
+        <Property Name="DamageAgainstLargeShipsModifier"                 BaseValue="0" />
+
+        <Property Name="DamageAgainstSmallShipsModifierFromWeapon"                 BaseValue="0" IsSealed="true"/>
+        <Property Name="DamageAgainstMediumShipsModifierFromWeapon"                BaseValue="0" IsSealed="true"/>
+        <Property Name="DamageAgainstLargeShipsModifierFromWeapon"                 BaseValue="0" IsSealed="true"/>
+
+        <BinaryModifier TargetProperty="SectionDamage" Operation="Force" Left="$(EffectiveDamage)" BinaryOperation="Multiplication" Right="$(SectionDamageFactor)" Path="ClassCitadelSalvo" />
+        <BinaryModifier TargetProperty="ModuleDamage" Operation="Force" Left="$(EffectiveDamage)" BinaryOperation="Subtraction" Right="$(SectionDamage)" Path="ClassCitadelSalvo" Priority="1" />
+
+        <Modifier TargetProperty="DamageAgainstSmallShipsModifier"       Operation="Addition" Value="$(DamageAgainstSmallShipsModifierFromWeapon)"  Path="ClassCitadelSalvo"/>
+        <Modifier TargetProperty="DamageAgainstMediumShipsModifier"      Operation="Addition" Value="$(DamageAgainstMediumShipsModifierFromWeapon)" Path="ClassCitadelSalvo"/>
+        <Modifier TargetProperty="DamageAgainstLargeShipsModifier"       Operation="Addition" Value="$(DamageAgainstLargeShipsModifierFromWeapon)"  Path="ClassCitadelSalvo"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="CitadelCriticalHit" Type="CitadelCriticalHit">
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="CitadelSalvoAOE1" Type="CitadelSalvo">
+        <Modifier TargetProperty="MaximumHealth" Operation="Addition" Value="1500" Path="ClassCitadelSalvo"/>
+    </SimulationDescriptor>
+
+</Datatable>

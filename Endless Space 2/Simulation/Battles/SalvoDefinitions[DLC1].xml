@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/SalvoDefinition.xsd">
+
+
+    <!--################################-->
+    <!--###         BOARDING         ###-->
+    <!--################################-->
+    <Salvo Name="SalvoBoardingPod1" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoBoardingPod1"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileBoardingPod</ProjectilePrefabFallback>
+    </Salvo>
+    <Salvo Name="SalvoBoardingPod2" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoBoardingPod2"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileBoardingPod</ProjectilePrefabFallback>
+    </Salvo>
+    <Salvo Name="SalvoBoardingPod3" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoBoardingPod3"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileBoardingPod</ProjectilePrefabFallback>
+    </Salvo>
+    
+    <!--################################-->
+    <!--###             AOE          ###-->
+    <!--################################-->
+    <Salvo Name="SalvoAOE1" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoAOE1"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileAOE01</ProjectilePrefabFallback>
+    </Salvo>
+    
+    <!--################################-->
+    <!--###             EMP          ###-->
+    <!--################################-->
+    <Salvo Name="SalvoMissileEMP1" AvailableAsTarget="true">
+        <SimulationDescriptorReference Name="SalvoMissileEMP1"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/MissileEMP_01</ProjectilePrefabFallback>
+    </Salvo>
+    
+    <Salvo Name="SalvoBeamEMP1" AvailableAsTarget="false">
+        <SimulationDescriptorReference Name="SalvoBeamEMP1"/>
+        <ProjectilePrefabFallback>Prefabs/Game/Weapons/Projectiles/BeamEMP01</ProjectilePrefabFallback>
+    </Salvo>
+    
+</Datatable>

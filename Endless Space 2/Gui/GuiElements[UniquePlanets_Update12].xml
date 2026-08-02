@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <GuiElement Name="UniquePlanetMezan">
+        <Title>%UniquePlanetMezanTitle</Title>
+        <Description>%UniquePlanetMezanDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeUniqueMezanMedium" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Notifications/PlanetTypeUniqueMezanLarge" />
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeUniqueMezanPlanetoid"/>
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="UniquePlanetChiark">
+        <Title>%UniquePlanetChiarkTitle</Title>
+        <Description>%UniquePlanetChiarkDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Planets/PlanetTypeUniqueChiarkMedium" />
+            <Icon Size="Mood" Path="Bitmaps/Dynamic/Notifications/PlanetTypeUniqueChiarkLarge" />
+            <Icon Size="Planetoid" Path="Bitmaps/Dynamic/Planets/PlanetTypeUniqueChiarkPlanetoid"/>
+        </Icons>
+    </GuiElement>
+    
+</Datatable>

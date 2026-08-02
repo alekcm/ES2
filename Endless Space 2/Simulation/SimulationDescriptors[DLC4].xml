@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="AcademyRoleGrandAdmiral" Type="AcademyRole"/>
+
+  <SimulationDescriptor Name="AcademyRoleLibrarian" Type="AcademyRole"/>
+
+  <SimulationDescriptor Name="AcademyRoleMasterOfDust" Type="AcademyRole">
+    <Modifier TargetProperty="CanUseAllMinorFactionBoosts" Operation="Force"          Value="1" Path="ClassEmpire"/>
+    <Modifier TargetProperty="DeclareWarOnCostMultiplier"  Operation="Multiplication" Value="3" Path="ClassEmpire,EmpireTypeMajor"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyRoleVaultKeeper" Type="AcademyRole"/>
+
+  <SimulationDescriptor Name="FleetActionCollectingRelics" Type="FleetActionCollectingRelics" IsSerializable="false"/>
+
+  <SimulationDescriptor Name="RelicScience" Type="RelicScience">
+    <BinaryModifier TargetProperty="NetRelicsResearch" Operation="Addition" Left="$(SciencePerUnassignedRelic)" BinaryOperation="Multiplication" Right="$(ResultingResearchRelics)" Path="ClassEmpire" Priority="10" TooltipHidden="true" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="RelicEmpirePoint" Type="RelicEmpirePoint">
+    <BinaryModifier TargetProperty="EmpireEmpirePoint" Operation="Addition" Left="50" BinaryOperation="Multiplication" Right="$(ResultingResearchRelics)" Path="ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="SystemConvertedForAcademy" Type="SystemConvertedForAcademy">
+    <Property Name="GifterEmpire" BaseValue="-1" MinValue="Negative"/>
+
+    <!--This Property "GiveFactor" is currently setted in code with the result of this formula-->
+    <!--0.5 + Property(Empire, @ClassEmpire, AcademySystemsTitheModifier)-->
+    <Property  Name="GiveFactor" BaseValue="0" MinValue="0" MaxValue="1"/>
+
+    <Property  Name="GivedNetDust" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetScience" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetEmpirePoint" BaseValue="0.0" IsSealed="true"/>
+
+    <Property  Name="GivedNetStrategic1" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetStrategic2" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetStrategic3" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetStrategic4" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetStrategic5" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetStrategic6" BaseValue="0.0" IsSealed="true"/>
+
+    <Property  Name="GivedNetLuxury1" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury2" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury3" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury4" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury5" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury6" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury7" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury8" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury9" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury10" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury11" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury12" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury13" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury14" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury15" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury16" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury17" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury18" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury19" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury19" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury20" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury21" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury22" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury23" BaseValue="0.0" IsSealed="true"/>
+    <Property  Name="GivedNetLuxury24" BaseValue="0.0" IsSealed="true"/>
+
+    <BinaryModifier TargetProperty="NetSystemMoney" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetSystemResearch" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetSystemEmpirePoint" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+
+    <BinaryModifier TargetProperty="NetStrategic1" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetStrategic2" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetStrategic3" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetStrategic4" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetStrategic5" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetStrategic6" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+
+    <BinaryModifier TargetProperty="NetLuxury1" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury2" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury3" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury4" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury5" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury6" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury7" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury8" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury9" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury10" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury11" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury12" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury13" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury14" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury15" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury16" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury17" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury18" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury19" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury20" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury21" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury22" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury23" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+    <BinaryModifier TargetProperty="NetLuxury24" Operation="Multiplication" Left="1.0" BinaryOperation="Subtraction" Right="$(GiveFactor)" Path="ClassColonizedStarSystem" Priority="1000"/>
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="FleetOrbitingAcademyNode"  Type="FleetOrbiting"/>
+
+  <SimulationDescriptor Name="OwnFleetCollectingRelics"  Type="OwnFleetCollectingRelics" IsSerializable="false"/>
+
+  <SimulationDescriptor Name="RelicSystemInteraction" Type="RelicSystemInteraction"/>
+  <!-- Don't remove this descriptor or any references to it. It's used for hardcoded things, and despite the fact we've moved all the logic out of it, it's too much effort to remove it fully. -->
+
+  <!-- Slumbering Ruins -->
+  <SimulationDescriptor Name="SlumberingRuins" Type="SlumberingRuins"/>
+  <SimulationDescriptor Name="AwokenSlumberingRuins" Type="AwokenSlumberingRuins"/>
+  <SimulationDescriptor Name="SlumberingRuinsBonusEffect" Type="SlumberingRuins">
+    <Modifier TargetProperty="PopulationGrowthUpkeep"   Operation="Percent"        Value="-1"    Path="ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="SystemGrowth"             Operation="Addition"       Value="20"    Path="ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="SystemMoney"              Operation="Addition"       Value="20"    Path="ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="SystemEmpirePoint"        Operation="Addition"       Value="10"    Path="ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="Happiness"                Operation="Addition"       Value="10"    Path="../ClassEmpire/ClassColonizedStarSystem" EnforceContext="true" />
+  </SimulationDescriptor>
+
+  <!-- Hero Sentry Fleet Action -->
+  <SimulationDescriptor Name="FleetActionSentryEffect1" Type="FleetActionSentry" IsSerializable="false">
+    <Modifier TargetProperty="VisionRange"              Operation="Addition" Value="10"   Path="ClassGarrisonFleet"/>
+    <Modifier TargetProperty="GarrisonMoneyUpkeep"      Operation="Percent"  Value="-0.5" Path="ClassGarrisonFleet"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="FleetActionSentryEffect2" Type="FleetActionSentry" IsSerializable="false">
+    <Modifier TargetProperty="VisionRange"              Operation="Addition" Value="20"   Path="ClassGarrisonFleet"/>
+    <Modifier TargetProperty="GarrisonMoneyUpkeep"      Operation="Percent"  Value="-1"   Path="ClassGarrisonFleet"/>
+  </SimulationDescriptor>
+
+  <!-- Upgraded Orbital Bombardment -->
+  <SimulationDescriptor Name="EmpireImprovementImproveStrategies1" Type="EmpireImprovement">
+    <Modifier TargetProperty="BombardmentLevel"         Operation="Force" Value="1" Path="ClassEmpire" Priority="1" TooltipOverride="%EmpireImprovementImproveStrategies1EffectOverride"/>
+    <Modifier TargetProperty="BombardmentLevelTemplars" Operation="Force" Value="1" Path="ClassEmpire" Priority="2" TooltipOverride="%EmpireImprovementImproveStrategies1TemplarsEffectOverride"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementImproveStrategies2" Type="EmpireImprovement">
+    <Modifier TargetProperty="BombardmentLevel"         Operation="Force" Value="2" Path="ClassEmpire" Priority="3" TooltipOverride="%EmpireImprovementImproveStrategies2EffectOverride"/>
+    <Modifier TargetProperty="BombardmentLevelTemplars" Operation="Force" Value="2" Path="ClassEmpire" Priority="4" TooltipOverride="%EmpireImprovementImproveStrategies2TemplarsEffectOverride"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementImproveStrategies3" Type="EmpireImprovement">
+    <Modifier TargetProperty="BombardmentLevel"         Operation="Force" Value="3" Path="ClassEmpire" Priority="5" TooltipOverride="%EmpireImprovementImproveStrategies3EffectOverride"/>
+    <Modifier TargetProperty="BombardmentLevelTemplars" Operation="Force" Value="3" Path="ClassEmpire" Priority="6" TooltipOverride="%EmpireImprovementImproveStrategies3TemplarsEffectOverride"/>
+  </SimulationDescriptor>
+
+  <!-- Ground Strategy Simulation Descriptors -->
+  <!-- Rally -->
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="1500"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4Early" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="1850"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4Intermediate" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="2250"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4Late" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="2750"/>
+  </SimulationDescriptor>
+
+  <!-- Rise Up -->
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4Templars" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="1750"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4TemplarsEarly" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="2250"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4TemplarsIntermediate" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="2750"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleDefenderStrategy4TemplarsLate" Type="GroundBattleDefenderStrategy">
+    <Modifier TargetProperty="GroundBattleDefenderTroopsMaxHealthMultiplier"  Operation="Percent" Value="-0.3"/>
+    <Modifier TargetProperty="GroundBattleDefenderTroopsDamageMultiplier"     Operation="Percent" Value="0.3" />
+    <Modifier TargetProperty="GroundBattleBombardmentAttackerDamages" Operation="Addition" Value="3500"/>
+  </SimulationDescriptor>
+
+  <!-- Orbital Bombardment -->
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.25" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.25" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="1400"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3Early" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.25" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.25" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="1750"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3Intermediate" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.25" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.25" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="2100"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3Late" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.25" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.25" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="2450"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+  <!-- Nakalim Variant - Scour -->
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3Templars" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.2" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.2" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="1575"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3TemplarsEarly" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.2" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.2" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="2100"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3TemplarsIntermediate" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.2" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.2" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="2625"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="GroundBattleAttackerStrategy3TemplarsLate" Type="GroundBattleAttackerStrategy">
+    <Modifier       TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Percent"     Value="-0.2" Priority="-5" />
+    <BinaryModifier TargetProperty="GroundBattleAttackerManpowerLimitBonus" Operation="Addition"    Left="-0.2" BinaryOperation="Multiplication" Right="$(GroundBattleAttackerManpowerLimit)" TooltipHidden="true" />
+    <Modifier TargetProperty="GroundBattleBombardmentDefenderDamages" Operation="Addition" Value="3150"/>
+    <Modifier TargetProperty="GroundBattleBombardmentImprovementDestructionProbability" Operation="Addition" Value="0.50" />
+    <Modifier TargetProperty="GroundBattleBombardmentPopulationDestructionProbability"  Operation="Addition" Value="0.50" />
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="DiplomaticAbilityEffectOngoingCrusade" Type="DiplomaticAbilityEffect">
+    <Modifier TargetProperty="CanBeAttackedByAnyone" Operation="Addition" Value="1" Path="ClassEmpire,EmpireTypeMajor"/>
+    <Modifier TargetProperty="CanBeInvadedByAnyone"  Operation="Addition" Value="1" Path="ClassEmpire,EmpireTypeMajor"/>
+    <Modifier TargetProperty="HasAnOngoingCrusade"   Operation="Addition" Value="1" Path="ClassEmpire,EmpireTypeMajor"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectCrusadeImmunity" Type="TemporaryEffect">
+    <Modifier TargetProperty="HasCrusadeImmunity" Operation="Addition" Value="1" Path="ClassEmpire,EmpireTypeMajor"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectAcademyHeroAccess" Type="TemporaryEffect">
+    <Modifier TargetProperty="CanSeeStatusOfAllHeroes" Operation="Addition" Value="1" Path="ClassEmpire,EmpireTypeMajor"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectRecentAcademyMigrationCounter" Type="TemporaryEffect">
+    <Modifier TargetProperty="RecentlyOrderedAcademyPopulation" Operation="Addition" Value="1" Path="ClassEmpire,EmpireTypeMajor"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectSophonsUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplaySophons/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="ScienceAgreementMultiplier" Operation="Percent" Value="0.5" Path="ClassEmpire,AffinityGameplaySophons"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectCraversUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="ParasitedPopulationApprovalMalus" Operation="Percent" Value="-0.5" Path="ClassEmpire,AffinityGameplayCravers//PopulationParasitedPlanet"/>
+    <Modifier TargetProperty="PlanetDepletionPerTurn" Operation="Percent" Value="-0.5" Path="ClassEmpire,AffinityGameplayCravers//ClassColonizedPlanet"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectTerransUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="SystemEmpirePoint" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplayTerrans/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="InfluenceRadiusModifier" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplayTerrans/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectMezariUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="SystemResearch" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplayMezari/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="InfluenceRadiusModifier" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplayMezari/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectSheredynUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="NetSystemManpower" Operation="Percent" Value="0.3" Path="ClassEmpire,AffinityGameplaySheredyn/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem,!BesiegedColonizedStarSystem"/>
+    <Modifier TargetProperty="InfluenceRadiusModifier" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplaySheredyn/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectHoratioUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="SystemGrowth" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplayHoratio/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectTimeLordsUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="SystemProduction" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplayTimeLords/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="DepositValue" Operation="Addition" Value="1" Path="ClassEmpire,AffinityGameplayTimeLords//ClassResourceDeposit,ResourceTypeStrategic"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectUnfallenUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="Happiness" Operation="Addition" Value="15" Path="ClassEmpire,AffinityGameplayUnfallen/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="RootingIncreasePerTurn" Operation="Percent" Value="0.25" Path="ClassEmpire,AffinityGameplayUnfallen//ClassShip"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectVampirilisUniqueAcademy" Type="TemporaryEffect">
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectVenetiansUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="SystemMoney" Operation="Percent" Value="0.2" Path="ClassEmpire,AffinityGameplayVenetians/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem"/>
+    <Modifier TargetProperty="TradingRouteIncomeModifier" Operation="Percent" Value="0.3" Path="ClassEmpire,AffinityGameplayVenetians/ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectVaultersUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="NetSystemManpower" Operation="Percent" Value="0.3" Path="ClassEmpire,AffinityGameplayVenetians/ClassColonizedStarSystem/ClassHero,HeroAssigned/./ClassColonizedStarSystem,!BesiegedColonizedStarSystem"/>
+    <Modifier TargetProperty="DepositValue" Operation="Addition" Value="1" Path="ClassEmpire,AffinityGameplayVaulters//ClassResourceDeposit,ResourceTypeStrategic"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectMajorHisshosUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="UnclampedNetEmpireHonor" Operation="Addition" Value="2" Path="ClassEmpire,AffinityGameplayMajorHisshos"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectUmbralChoirUniqueAcademy" Type="TemporaryEffect">
+    <Modifier TargetProperty="HackingBeaconChargeupTimeMultiplier" Operation="Percent" Value="-0.5" Path="ClassEmpire,AffinityGameplayUmbralChoir//ClassHackingBeacon"/>
+    <Modifier TargetProperty="MaximumEmpireProcessingPowerStock" Operation="Percent" Value="0.25" Path="ClassEmpire,AffinityGameplayUmbralChoir"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="TemporaryEffectTemplarsUniqueAcademy" Type="TemporaryEffect">
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="CompletedQuestDarkMatter03"	Type="CompletedQuest"/>
+  <SimulationDescriptor Name="CompletedQuestDarkMatter07"	Type="CompletedQuest"/>
+  <SimulationDescriptor Name="CompletedQuestDarkMatter09" Type="CompletedQuest"/>
+
+  <SimulationDescriptor Name="HullInnateInvisibility" Type="HullInnate">
+    <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Addition" Value="1" Path="ClassShip"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="QuestShowAcademyCarrier" Type="QuestShow"/>
+  <SimulationDescriptor Name="QuestShowUmbralChoirCoordinator" Type="QuestShow"/>
+  <SimulationDescriptor Name="QuestShowNakalimAttacker" Type="QuestShow"/>
+</Datatable>

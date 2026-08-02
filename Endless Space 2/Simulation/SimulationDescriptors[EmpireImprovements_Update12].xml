@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet04"      Type="EmpireImprovement">  
+    <BinaryModifier TargetProperty="SystemProduction"           Operation="Percent"    Left="0.5"             BinaryOperation="Multiplication"    Right="$(OwnedUniquePlanetAndGovernor)"  SearchValueFromPath="true" Path="ClassEmpire/ClassColonizedStarSystem" TooltipOverride="%EmpireImprovementQuestUniquePlanet04TooltipEffect"/>
+    <BinaryModifier TargetProperty="SystemResearch"             Operation="Percent"    Left="0.5"             BinaryOperation="Multiplication"    Right="$(OwnedUniquePlanetAndGovernor)"  SearchValueFromPath="true" Path="ClassEmpire/ClassColonizedStarSystem" TooltipOverride="%EmpireImprovementQuestUniquePlanet04TooltipEffectBis"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet05"      Type="EmpireImprovement">
+    <BinaryModifier TargetProperty="SystemGrowth"             Operation="Percent"    Left="0.5"             BinaryOperation="Multiplication"    Right="$(OwnedUniquePlanetAndGovernor)"  SearchValueFromPath="true" Path="ClassEmpire/ClassColonizedStarSystem" TooltipOverride="%EmpireImprovementQuestUniquePlanet05TooltipEffect"/>
+    <BinaryModifier TargetProperty="SystemMoney"              Operation="Percent"    Left="0.5"             BinaryOperation="Multiplication"    Right="$(OwnedUniquePlanetAndGovernor)"  SearchValueFromPath="true" Path="ClassEmpire/ClassColonizedStarSystem" TooltipOverride="%EmpireImprovementQuestUniquePlanet05TooltipEffectBis"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet06"      Type="EmpireImprovement">
+    <Modifier TargetProperty="BonusPopulationDust" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,PopulationMajor"/>
+    <Modifier TargetProperty="BonusPopulationFood" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,PopulationMajor"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet07"      Type="EmpireImprovement">
+    <Modifier TargetProperty="BonusPopulationScience"  Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,PopulationNonMajor"/>
+    <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,PopulationNonMajor"/>
+  </SimulationDescriptor>
+  
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet11"      Type="EmpireImprovement">
+    <BinaryModifier TargetProperty="EmpireMoney"              Operation="Percent"    Left="0.02"            BinaryOperation="Multiplication"    Right="$(MinorTraitsAssimilated)" Path="ClassEmpire" Priority="1" TooltipOverride="%EmpireImprovementQuestUniquePlanet11TooltipEffect" ValueMustBePositive="true"/>
+  </SimulationDescriptor>
+  
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet12"      Type="EmpireImprovement">
+    <Modifier TargetProperty="EmpireMoney"                   Operation="Percent"   Value="0.1"              Path="ClassEmpire"/>
+    <BinaryModifier TargetProperty="EmpireMoney"             Operation="Percent"   Left="0.05"              BinaryOperation="Multiplication"    Right="$(Stage5UnlockedCount)"  Path="ClassEmpire" TooltipOverride="%EmpireImprovementQuestUniquePlanet12TooltipEffect" />
+  </SimulationDescriptor>
+  
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet13"      Type="EmpireImprovement">
+    <BinaryModifier TargetProperty="EmpireMoney"             Operation="Percent"   Left="0.02"              BinaryOperation="Multiplication"    Right="$(GovernorAssigned)"  Path="ClassEmpire" TooltipOverride="%EmpireImprovementQuestUniquePlanet13TooltipEffect" />
+  </SimulationDescriptor>
+  
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet14"      Type="EmpireImprovement">
+    <BinaryModifier TargetProperty="EmpireMoney"             Operation="Percent"   Left="0.02"              BinaryOperation="Multiplication"    Right="$(AdmiralAssigned)"  Path="ClassEmpire" TooltipOverride="%EmpireImprovementQuestUniquePlanet14TooltipEffect" />
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet15"      Type="EmpireImprovement">
+    <Modifier TargetProperty="InfantryManpowerCost"    Operation="Percent"    Value="-0.2" Path="ClassEmpire"/>
+    <Modifier TargetProperty="InfantryDamagesBonus"    Operation="Addition"    Value="0.2" Path="ClassEmpire"/>
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet16"      Type="EmpireImprovement">
+    <Modifier TargetProperty="TankManpowerCost"    Operation="Percent"    Value="-0.2" Path="ClassEmpire"/>
+    <Modifier TargetProperty="TankDamagesBonus"    Operation="Addition"    Value="0.2" Path="ClassEmpire"/>
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet17"      Type="EmpireImprovement">
+    <Modifier TargetProperty="PlaneManpowerCost"    Operation="Percent"    Value="-0.2" Path="ClassEmpire"/>
+    <Modifier TargetProperty="PlaneDamagesBonus"    Operation="Addition"    Value="0.2" Path="ClassEmpire"/>
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="EmpireImprovementQuestUniquePlanet18"      Type="EmpireImprovement">   
+    <Modifier TargetProperty="ManpowerCostReduction"    Operation="Percent"   Value="-0.1" Path="ClassEmpire"/>
+    <Modifier TargetProperty="TroopDamageBonuses"       Operation="Addition"   Value="0.1" Path="ClassEmpire"/>
+  </SimulationDescriptor>
+  
+</Datatable>

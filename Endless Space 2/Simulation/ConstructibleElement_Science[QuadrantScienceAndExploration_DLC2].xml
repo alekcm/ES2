@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 2       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionScienceAndExplorationJuggernaut1" TechnologyStage="TechnologyStageDefinitionScienceAndExploration2" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyJuggernautMovement1"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautVision1"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperFormula>$(JuggernautCount) * 2</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionScienceAndExplorationJuggernaut3" TechnologyStage="TechnologyStageDefinitionScienceAndExploration2" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExplorationJuggernaut3To4')))</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyJuggernautResearch1"/>
+        <SimulationDescriptorReference Name="TechnologyLinkToScienceAndExplorationJuggernaut3"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+        <HelperVariable Name="ScienceVariable"/>
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperVariable Name="AvailableMixedAnomaly"/>
+        <HelperVariable Name="AvailableNegativeAnomaly"/>
+        <HelperFormula>$(JuggernautCount) * $(ScienceVariable) / 2 + $(AvailableMixedAnomaly) + $(AvailableNegativeAnomaly)</HelperFormula>
+    </TechnologyDefinition>
+    
+    
+    <!-- ###################################### -->
+    <!-- #######          STAGE 3       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionScienceAndExplorationJuggernaut4" TechnologyStage="TechnologyStageDefinitionScienceAndExploration3" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExplorationJuggernaut3To4'))) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExplorationJuggernaut4To5')))</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyJuggernautResearch2"/>
+        <SimulationDescriptorReference Name="TechnologyLinkToScienceAndExplorationJuggernaut4"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage3"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+        <HelperVariable Name="ScienceVariable"/>
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperVariable Name="VisiblePlanets"/>
+        <HelperFormula>$(JuggernautCount) * $(ScienceVariable) / 2 + $(VisiblePlanets)</HelperFormula>
+    </TechnologyDefinition>
+    
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 4       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionScienceAndExplorationJuggernaut5" TechnologyStage="TechnologyStageDefinitionScienceAndExploration4" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkScienceAndExplorationJuggernaut4To5')))</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyJuggernautResearch3"/>
+        <SimulationDescriptorReference Name="TechnologyLinkToScienceAndExplorationJuggernaut5"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationJuggernautIncreaseStage4"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+        <HelperVariable Name="ScienceVariable"/>
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperVariable Name="VisibleDestroyedPlanets"/>
+        <HelperFormula>$(JuggernautCount) * $(ScienceVariable) / 2 + $(VisibleDestroyedPlanets)</HelperFormula>
+    </TechnologyDefinition>
+    
+    
+    <!-- ###################################### -->
+    <!-- #######          STAGE 5       ####### -->
+    <!-- ###################################### -->
+
+
+    
+</Datatable>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/LawDefinition.xsd">
+
+  <LawDefinition Name="LawP00PopulationCollectionSowers" SubCategory="LawPolitics00" Duration="1">
+    <Politics Name="Politics00"/>
+    <LawEffectSimulation>
+      <SimulationDescriptorReference Name="LawEffectP00L27-PopulationCollectionSowers"/>
+    </LawEffectSimulation>
+    <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire/ClassPopulationEmpire,PopulationCollectionBonusSowers3</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">GovernmentAnarchy</PathPrerequisite>
+    <SimulationDescriptorReference Name="LawPolitics00"/>
+  </LawDefinition>
+
+  <LawDefinition Name="LawP00PopulationCollectionKalTikMas" SubCategory="LawPolitics00" Duration="1">
+    <AIGain RessourceName="MovementGain"/>
+    <Politics Name="Politics00"/>
+    <LawEffectSimulation>
+      <SimulationDescriptorReference Name="LawEffectP00L28-PopulationCollectionKalTikMas"/>
+    </LawEffectSimulation>
+    <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire/ClassPopulationEmpire,PopulationCollectionBonusKalTikMas3</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">GovernmentAnarchy</PathPrerequisite>
+    <SimulationDescriptorReference Name="LawPolitics00"/>
+  </LawDefinition>
+
+  <LawDefinition Name="LawP00PopulationCollectionSefaloros" SubCategory="LawPolitics00" Duration="1">
+    <Politics Name="Politics00"/>
+    <LawEffectSimulation>
+      <SimulationDescriptorReference Name="LawEffectP00L29-PopulationCollectionSefaloros"/>
+    </LawEffectSimulation>
+    <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire/ClassPopulationEmpire,PopulationCollectionBonusSefaloros3</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">GovernmentAnarchy</PathPrerequisite>
+    <SimulationDescriptorReference Name="LawPolitics00"/>
+  </LawDefinition>
+
+  <LawDefinition Name="LawP00PopulationCollectionGalvrans" SubCategory="LawPolitics00" Duration="1">
+    <AIGain RessourceName="ScienceGain"/>
+    <Politics Name="Politics00"/>
+    <LawEffectSimulation>
+      <SimulationDescriptorReference Name="LawEffectP00L30-PopulationCollectionGalvrans"/>
+    </LawEffectSimulation>
+    <PathPrerequisite Flags="Prerequisite,Discard">../ClassEmpire/ClassPopulationEmpire,PopulationCollectionBonusGalvrans3</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard" Inverted="true">GovernmentAnarchy</PathPrerequisite>
+    <SimulationDescriptorReference Name="LawPolitics00"/>
+  </LawDefinition>
+</Datatable>

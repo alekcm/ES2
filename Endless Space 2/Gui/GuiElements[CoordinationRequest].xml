@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+    
+    <GuiElement Name="AttackCoordinationRequest">
+      <Title>%CoordinationToolsAttackCoordinationRequestTitle</Title>
+      <Icons>
+        <Icon Size="Medium" Path="AttackCoordinationRequestSmall" />
+      </Icons>
+    </GuiElement>
+
+  <GuiElement Name="DefendCoordinationRequest">
+    <Title>%CoordinationToolsDefendCoordinationRequestTitle</Title>
+    <Icons>
+      <Icon Size="Medium" Path="DefendCoordinationRequestSmall" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="InformationCoordinationRequest">
+    <Title>%CoordinationToolsInformationCoordinationRequestTitle</Title>
+    <Icons>
+      <Icon Size="Medium" Path="InformationCoordinationRequestSmall" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="AttackCoordinationRequestButton">
+    <Description>%CoordinationToolsButtonRequestsAttackTooltip</Description>
+    <Icons>
+      <Icon Size="Medium" Path="AttackCoordinationRequestSmall" />
+    </Icons>
+  </GuiElement>
+  
+  <GuiElement Name="DefendCoordinationRequestButton">
+    <Description>%CoordinationToolsButtonRequestsDefendTooltip</Description>
+    <Icons>
+      <Icon Size="Medium" Path="DefendCoordinationRequestSmall" />
+    </Icons>
+  </GuiElement>  
+</Datatable>

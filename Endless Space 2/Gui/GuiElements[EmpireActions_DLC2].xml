@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+	<EntityActionGuiElement Name="HonorActionFleetBonuses">
+		<Title>%HonorActionFleetBonusesTitle</Title>
+		<Description>%HonorActionFleetBonusesDescription</Description>
+		<Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/HonorActions/HonorActionFleetBonusesSmall" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/HonorActions/HonorActionFleetBonusesSmallExtended" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/HonorActions/HonorActionFleetBonusesLarge" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="HonorActionFleetFakePower">
+        <Title>%HonorActionFleetFakePowerTitle</Title>
+        <Description>%HonorActionFleetFakePowerDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/HonorActions/HonorActionFleetFakePowerSmall" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/HonorActions/HonorActionFleetFakePowerSmallExtended" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/HonorActions/HonorActionFleetFakePowerLarge" />
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="HonorActionSystemBonuses">
+        <Title>%HonorActionSystemBonusesTitle</Title>
+        <Description>%HonorActionSystemBonusesDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/HonorActions/HonorActionSystemBonusesSmall" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/HonorActions/HonorActionSystemBonusesSmallExtended" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/HonorActions/HonorActionSystemBonusesLarge" />
+        </Icons>
+        <Color Red="220" Green="220" Blue="220" Alpha="255" />
+    </EntityActionGuiElement>
+
+    <EntityActionGuiElement Name="HonorActionSystemDefense">
+        <Title>%HonorActionSystemDefenseTitle</Title>
+        <Description>%HonorActionSystemDefenseDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/HonorActions/HonorActionSystemDefenseSmall" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/HonorActions/HonorActionSystemDefenseSmallExtended" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/HonorActions/HonorActionSystemDefenseLarge" />
+        </Icons>
+        <Color Red="220" Green="220" Blue="220" Alpha="255" />
+    </EntityActionGuiElement>
+
+</Datatable>

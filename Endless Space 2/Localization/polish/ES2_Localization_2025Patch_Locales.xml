@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%PlanetInitialFIDSIFromMiningProbesTitle">Sondy górnicze</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionLabel">Poprzez to menu możesz wydawać zgromadzoną dobrą wolę i wymieniać ją na przysługi Akademii. Dobrą wolę zyskasz, wpłacając datki na aukcje i zaliczając zadania rywalizacji.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementQuestGlobalCompet09TooltipEffect">+3 do początkowego poziomu statków</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity2EffectOverride">+75% do doświadczenia zdobywanego przez bohaterów na stanowisku gubernatora</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageEnergyFleetTitle">Obrażenia energetyczne floty</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageProjectileFleetTitle">Obrażenia od pocisków floty</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponCriticalHitFleetTitle">Szansa trafienia krytycznego floty</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementQuestUniquePlanet12TooltipEffect">+5% [dustColored] w imperium za każdą odblokowaną technologię</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter3Strategic3Title">Ekstremalny myśliwiec uderzeniowy</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber3Strategic4Title">Ekstremalny ciężki bombowiec</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaTitle">Saiadha</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaDescription">Saiadha to niegdyś pustynny świat, który obecnie jest planetą oceaniczną. Błękitny przestwór oceanu przerywają jedynie rozproszone skaliste wysepki. Mity mówią o skrytych pod falami pozostałościach wielkich cywilizacji, ale badając lądy, które wciąż wznoszą się ponad wodą, trudno znaleźć na to jakiekolwiek dowody. Przetrwało jedynie kilka prymitywnych społeczności, podobno jednak w głębi planety kryje się wielka moc... </LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Title">Strażnicy głębin</LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Description">Na wpół szaleni Bezkreśni oferują tutaj zakazaną wiedzę w zamian za to, że przybysze pozostawią w spokoju ich najświętsze miejsce ukryte głęboko pod powierzchnią.</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Title">Sewa Eze</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Description">Pod koniec dzieciństwa Sewy urodzonej w arkologii pielgrzymów zwanej Horyzontem Światła jej ojczysta flota długo uciekała przed grupą łowców ze Zjednoczonego Imperium, co ostatecznie doprowadziło do zaciętych walk i rozproszenia arkologii. W następstwie tych wydarzeń, zbierając awaryjne zapasy pyłu na pobliskim księżycu, Sewa zdołała przeżyć upadek do głębokiego leja wypełnionego pyłem, a kilka dni później wyszła z niego, wzmocniona wyjątkowymi zdolnościami. Okazało się jednak, że w międzyczasie resztki jej floty zniknęły. Po okresie tułaczki po galaktyce Sewa trafiła do Akademii, gdzie pod czujnym okiem instruktorów doskonaliła swoje moce. Po wyrównaniu rachunków w Horyzoncie Sewa jest teraz wolną strzelczynią.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedTitle">Wzmocnienie</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedDescription">Ta anomalia planetarna została wzmocniona, by zwiększyć jej korzystne efekty.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderTitle">Cud</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderDescription">Ta anomalia planetarna jest jedyna w swoim rodzaju i zapewnia niezwykle potężne efekty.</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsDescription">Nie można użyć do najeżdżania systemów po wypożyczeniu innemu imperium
+Nie można przejąć</LocalizationPair>
+  <LocalizationPair Name="%FailureNoTemplesOnGasPlanetsDescription">Świątynie nie mogą być wznoszone na planetach gazowych</LocalizationPair>
+  <LocalizationPair Name="%PlanetImprovementTemple1TooltipOverride">Usuwa karę do podstawowego [fids] planety
+50% początkowej [scienceColored] planety jest przekształcana w [prestigeColored]
+
+[blue-gray](Świątynie są niszczone, kiedy system zostaje podbity; koszt reliktów też jest zwracany)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsGroupTooltipDescription">Relikt eksploracji:
+Aktywuj ten relikt, aby uzyskać potężną premię dla wszystkich statków zwiększającą zasięg wzroku i szybkość.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsGroupTooltipDescription">Relikt terytorium:
+Aktywuj ten relikt, aby uzyskać wyższy próg nadmiernej kolonizacji na katedrę i usunąć podstawową odmowę na planetach ze świątyniami.</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsGroupTooltipDescription">Relikt dyplomacji:
+Aktywuj ten relikt, aby uzyskać pasywny wzrost relacji ze wszystkimi znanymi pomniejszymi frakcjami i zwiększenie zasięgu wpływu we wszystkich systemach.</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsGroupTooltipDescription">Relikt polityki:
+Aktywuj ten relikt, aby uzyskać różne premie w zależności od wybranych partii politycznych. Im mniej reprezentowanych partii, tym większy efekt tej premii.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsButtonTooltipDescription">Efekty:
++25% do wydajności punktów ruchu
++5 do zasięgu wzroku dla statków i systemów{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsButtonTooltipDescription">Efekty:
++1 do progu zbyt intensywnej kolonizacji na katedrę
+Brak podstawowej odmowy na planetach{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsButtonTooltipDescription">Efekty:
++5% do zasięgu wpływu na turę, w której to miejsce jest aktywne (maksymalnie 100%)
++1 do relacji z pomniejszymi frakcjami na turę{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsButtonTooltipDescription">Mnożnik reprezentowanej partii: {2}
+Efekty: {0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsSlotLocked">[red]To miejsce jest zablokowane. Musisz zbudować Katedrę Upadłych i odblokować kolejne miejsce na relikt imperium.#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ConstructibleFilterInfiniteDescription">Pokazuje wyłącznie nieskończone ulepszenia</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemImprovementInfiniteTitle">Nieskończone ulepszenie</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLunarAnomalyTooltip">[blue-gray](Można zbudować tylko w systemach z anomaliami księżycowymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresPlanetAnomalyTooltip">[blue-gray](Można zbudować tylko w systemach z anomaliami planetarnymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyAnomalyTooltip">[blue-gray](Można zbudować tylko w systemach z anomaliami)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetTooltip">[blue-gray](Można zbudować tylko w systemach z planetami gazowymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresNegativeOrMixedAnomalyTooltip">[blue-gray](Można zbudować tylko w systemach z anomaliami negatywnymi lub mieszanymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresStrategicDepositTooltip">[blue-gray](Można zbudować tylko w systemach ze złożami strategicznymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLuxuryDepositTooltip">[blue-gray](Można zbudować tylko w systemach ze złożami luksusowymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyDepositTooltip">[blue-gray](Można zbudować tylko w systemach ze złożami zasobów)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresTradeBuildingTooltip">[blue-gray](Można zbudować tylko w systemach z siedzibami handlowymi lub filiami)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetOrLunarAnomalyTooltip">[blue-gray](Można zbudować tylko w systemach z planetami gazowymi lub anomaliami księżycowymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetTooltip">[blue-gray](Można zbudować tylko w systemach z planetami jałowymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetOrTradeBuildingTooltip">[blue-gray](Można zbudować tylko w systemach z siedzibami handlowymi, filiami lub jałowymi planetami)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrFertilePlanetTooltip">[blue-gray](Można zbudować tylko w systemach z planetami jałowymi lub urodzajnymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrHotPlanetTooltip">[blue-gray](Można zbudować tylko w systemach z planetami jałowymi lub gorącymi)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelSpaceBattle1Tooltip">[blue-gray](Wymaga wybudowania wcześniej baterii systemowej)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelTooltip">[blue-gray](Można zbudować tylko w systemach z cytadelami)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleProjectileCanBeShotDownTitle">Pocisk może zostać zestrzelony</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNoVisionDescription">Wymagana wizja systemu</LocalizationPair>
+  <LocalizationPair Name="%LostTemplarsQuest-Chapter1-Part1-ReligiousObjective">Zbadaj następującą liczbę osobliwości: $Amount01Name</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsDescription">Zmień ten system w protektorat, a zyskasz dostęp do jego zasobów oraz cechy frakcji i zamkniesz go przed innymi imperiami bez okupowania go.</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire1OrAboveTitle">Co najmniej nieposłuszni</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire2OrAboveTitle">Co najmniej zadowoleni</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire3OrAboveTitle">Co najmniej lojalni</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem1OrAboveTitle">Co najmniej nieszczęśliwi</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem2OrAboveTitle">Co najmniej zadowoleni</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem3OrAboveTitle">Co najmniej szczęśliwi</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire1OrAboveTitle">Co najmniej nieposłuszni</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire2OrAboveTitle">Co najmniej posłuszni</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire3OrAboveTitle">Co najmniej lojalni</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem1OrAboveTitle">Co najmniej nieposłuszni</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem2OrAboveTitle">Co najmniej posłuszni</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem3OrAboveTitle">Co najmniej lojalni</LocalizationPair>
+  <LocalizationPair Name="%AssignmentCooldownBaseDurationTitle">Odnawianie przydziału</LocalizationPair>
+  <LocalizationPair Name="%MaximumPopulationTitle">Limit [population] populacji</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSplashFlotillaDamagePercentTitle">Obrażenia rozłożone na całą wziętą na cel flotyllę</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAnnotationsRefusedSciencePartnership">Odrzuciliście naszą propozycję zawarcia umowy naukowej.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementCitadelSpecializationEffectOverride">Cytadela zapewni następujące premie w systemie, w którym się znajduje:
+ • +20% do [foodColored] w systemie
+ • +20% do [scienceColored] w systemie
+ • +20% do [industryColored] w systemie
+ • +10% do [prestigeColored] w systemie
+ • +1000 do limitu [citadelDefenseColored] garnizonu Cytadeli
+ • +50 do limitu [citadelDefenseColored] garnizonu Cytadeli na [population]</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeSmallDescription">Małych rozmiarów statki wymagają #E3BDAC#1#REVERT# [commandPoint] (punktów dowodzenia) w swojej flocie.
+Słabość pancerza: #E3BDAC#120#REVERT# (patrz: pochłanianie przez obronę)</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesReductionTitle">Doznane obrażenia od bombardowań ofensywnych</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamageReductionTitle">Doznane obrażenia od bombardowań ofensywnych</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefensiveDamageReductionTitle">Doznane obrażenia od bombardowań defensywnych</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundPopulationDestructionProbabilityTitle">Populacja zabita podczas inwazji</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundImprovementDestructionProbabilityTitle">Ulepszenia zniszczone podczas inwazji</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelIndustryScienceEffectOverride">+10% do stanu zbudowanych statków
++10% do obrażeń zbudowanych statków </LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportMothershipAnchoredDefenseEffectTitle">Arka nie może zostać zaatakowana w bitwie kosmicznej, gdy jest umocowana w systemie
+Załoga arki nie może dołączyć do inwazji</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockAltTitle">Limit [manpowerColored] liczebności</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockTitle">Limit [manpowerColored] liczebności</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseRecoveryTitle">Tempo odnawiania garnizonu</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseTitle">Garnizon systemu</LocalizationPair>
+  <LocalizationPair Name="%MaximumSystemManpowerTitle">Limit [systemDefenseColored] garnizonu</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseTitle">Garnizon Cytadeli</LocalizationPair>
+  <LocalizationPair Name="%MaximumCitadelManpowerTitle">Limit [citadelDefenseColored] garnizonu Cytadeli</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseDescription">Siły te działają podobnie jak garnizon systemowy, ale są chronione przed obrażeniami od oblężenia. Pula ta zacznie się ponownie napełniać, gdy garnizon systemowy zostanie zapełniony, i nie będzie wpływała na efekty takie jak symulowany obóz.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescription">System znajduje się pod oblężeniem, które stopniowo wyczerpuje liczebność jego [systemDefenseColored] garnizonu.
+Obecna [systemDefenseColored] garnizonu: {0}/{1} ({2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeWithFleetsDescription">System znajduje się pod oblężeniem, które stopniowo wyczerpuje liczebność jego [systemDefenseColored] garnizonu.
+Obecna załoga [systemDefenseColored] garnizonu: {0}/{1} ({2} [systemDefenseColored]/[turn])
+
+Orbitujące floty przekazują {3} [shipCrewColored] załogi do garnizonu tego systemu, jeśli zostanie najechany</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescriptionWithEmpireName">System {4} (właściciel: {3}) znajduje się pod oblężeniem, co stopniowo wyczerpuje jego obronę [systemDefenseColored].
+Obecna [systemDefenseColored]: {0}/{1} ({2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%NetSystemManpowerTitle">[systemDefenseColored] liczebność garnizonu na turę</LocalizationPair>
+  <LocalizationPair Name="%SystemManpowerLossTitle">Obrażenia [systemDefenseColored] liczebności garnizonu</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandTitle">Utwórz garnizon</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandDescription">Utwórz garnizon z floty i zadokuj ją w hangarze bieżącego systemu gwiezdnego, aby dokonać szybkich napraw i uzupełnienia zasobów. Możesz tworzyć garnizony wyłącznie we własnych systemach gwiezdnych.</LocalizationPair>
+  <LocalizationPair Name="%ModuleEffectGroundBattleAttackerManpowerLimitBonusTitle">Limit rozlokowania załogi inwazyjnej</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleDamageMultiplierTitle">Obrażenia baterii systemowej</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipManpowerTitle">Limit [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%MaxLocalManpowerAltTitle">Limit [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelSpaceBattle1Effects">Wyposaża Cytadelę w baterię wybuchową, będzie strzelała z orbity co fazę, zadając 2000 pkt. obrażeń każdemu wrogiemu statkowi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01MajorHisshosEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Jastrząb
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02MajorHisshosEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02HyperiumColored] dla kadłubów klasy Pustułka
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01MajorHisshosEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Kania
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02MajorHisshosEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Sokół
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01MajorHisshosEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Orzeł
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UmbralChoirEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Strofa
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UmbralChoirEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Poemat
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UmbralChoirEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Hymn
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UmbralChoirEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Epos
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UmbralChoirEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat06quadrinixColored] dla kadłubów klasy Cykl
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TemplarsEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Zaklinacz.
++50% do [shipCrewColored] limitu załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TemplarsEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Zaproszenie.
++50% do [shipCrewColored] limitu załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TemplarsEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Pokłon.
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TemplarsEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Hymn
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TemplarsEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat06quadrinixColored] dla kadłubów klasy Inwokacja.
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01CraversEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Królowa
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01HoratioEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Imperator
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01SophonsEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Yotta
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TerransEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Zelevas
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TimeLordsEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Pierwszej
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UnfallenEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Las
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VampirilisEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Ortaam
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VenetiansEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Meos
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01CraversEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Biskup
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01HoratioEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Dux
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01SophonsEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Giga
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TerransEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Sopron
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TimeLordsEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Trójkątnej
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UnfallenEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Ogień
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VampirilisEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Jaium
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VenetiansEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Omokar
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02CraversEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Strażnik
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02HoratioEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Archidux
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02SophonsEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Peta
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TerransEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Sheredyn
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TimeLordsEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Czworościennej
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UnfallenEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Światło
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VampirilisEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Letum
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VenetiansEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Lancellum
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership01TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Arka
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership02TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Arka
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01CraversEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Żołnierz
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01HoratioEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Marchio
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01SophonsEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Kilo
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TerransEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Egezrey
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TimeLordsEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Naturalnej
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UnfallenEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Cierń
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VampirilisEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Sluaym
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VenetiansEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Velm
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02CraversEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Robotnik
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02HoratioEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Baro
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02SophonsEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Deka
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TerransEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Yeranef
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TimeLordsEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Wymiernej
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UnfallenEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Ił
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VampirilisEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Toisam
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VenetiansEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Drev
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VaultersEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat01titaniumColored] dla kadłubów klasy Strzała
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VaultersEra2TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat02hyperiumColored] dla kadłubów klasy Bełt
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VaultersEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat03adamantianColored] dla kadłubów klasy Grot
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VaultersEra3TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat04anti-matterColored] dla kadłubów klasy Pocisk
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VaultersEra4TooltipEffect">Odblokowuje dodatkowe miejsca na moduły [Strat05orichalcixColored]/[Strat06quadrinixColored] dla kadłubów klasy Włócznia
++50% do limitu [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedCravers">vrrr--kzzz--tsk... DOSADNIE: Współdzielenie informacji. Rój rzadko to oferuje.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedCravers">wrr--bzzz--ding... CHŁODNO: Wasza intelektualna unikalność. Skonsumowana. Dodana do naszej.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedCravers">chttt--wrrr--fzzzt... Z ROZCZAROWANIEM: Rój wymieni się z tobą dobrami... ty, który karmisz nas za zasoby.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedCravers">vkk--chttt--ktsz DOSADNIE: Umowa zawarta.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedCravers">Z ZADOWOLENIEM: Wasze terytorium otworzy przed nami nowe perspektywy żywieniowe. Przyrzekamy, że nie chodzi o was.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedCravers">Z ROZKOJARZENIEM: Ujawniliście nam nowe światy. Nową żywność. Odejdźcie teraz.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedCravers">CHŁODNO: Rój jest przyzwyczajony do niezależności. To nic nie zmienia.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHissho">Niech nasze narody dzielą się wizją, zamiast chować się przed sobą w ciemnościach jak pozbawiona honoru zwierzyna łowna.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHissho">Bez mądrości ostrze stanowi jedynie zagrożenie dla tego, kto je dzierży; dzięki tej umowie zapewniacie naszym narodom pokój i dobrobyt.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHissho">Swoją zgodą na wymianę towarów honorujesz nasze rzemiosło. Nie zawiedziesz się na jego jakości.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHissho">Ta umowa zadowala Tonatsiego. Zapamiętamy dzisiejszy dobry interes.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHissho">Jako gość zadbam o to, aby mój lud szanował każdy milimetr waszego terytorium, i oczekujemy tego samego od was.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHissho">Nasi zwiadowcy podzielą się z wami swoimi odkryciami; mam nadzieję, że dobrze je wykorzystacie.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHissho">Będziecie walczyć samotnie? To rozczarowujący wybór, ale godny szacunku. Życzymy powodzenia, samotni wojownicy.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHoratio">To pomoże wam dostrzec, jak bardzo galaktyki potrzebują mojego piękna.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHoratio">Nauka Horacjuszy jest oczywiście nauką najlepszą, ale więcej danych sprawi, że będzie jeszcze lepsza.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHoratio">Czym jest życie bez przepychu? Spodoba ci się geniusz ekonomiczny Horacjuszy, jestem tego pewien.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHoratio">Wszystko, czego dotknie Horacjusz, czyni galaktykę lepszym miejscem.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHoratio">To musi być dla was bardzo ważny dzień! Uzyskacie bezpłatny dostęp do doskonałej strefy Horacjuszy i dacie Horacjuszom prawo do eksplorowania waszego imperium.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHoratio">Nawet Horacjusze nie mogą upiększyć światów, których nie znają; dziś wyświadczyliście galaktyce wielką przysługę.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHoratio">Szkoda, że nie dostrzegacie korzyści płynących ze współpracy z Horacjuszami, ale jestem pewien, że ostatecznie je zrozumiecie.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTemplars">Przekonacie się, że nasze archiwa obejmują eony, ale oczywiście są one raczej nieaktualne. Niniejsza umowa będzie dobrodziejstwem dla wiernych.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTemplars">Gdy będziemy odbudowywać nasze świątynie przy użyciu waszych materiałów, pamiętajcie, że wasz wkład zostanie uwieczniony w każdej świętej kamiennej płycie.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTemplars">Ta umowa znacznie pomoże Nakalimom. Zajmie ona ważne miejsce w historii naszego odrodzenia za tysiące lat.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTemplars">Dzięki waszej pomocy poszukiwania naszych starożytnych relikwii będą znacznie łatwiejsze. Wyświadczyliście nam dzisiaj wielką przysługę.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTemplars">Och. Galaktyka rzeczywiście bardzo się zmieniła podczas naszego snu... Dziękujemy wam za to.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTemplars">Niefortunny wybór, choć nasz pokój trwa. Być może nie byliśmy wystarczająco otwarci w kwestii naszej historii, abyście mogli dostrzec korzyści płynące z sojuszu?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedSophon">Świetnie! Zobaczmy, co możemy jeszcze... Och, dodamy też trochę darmowej technologii wideo! (Leumac, wezwij maniaków starych technologii, nie mogę wczytać tego formatu...)</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedSophon">Dwie głowy są zdecydowanie lepsze niż jedna! A w tym przypadku raczej cztery. W każdym razie niech żyje współpraca naukowa!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedSophon">Świetnie! Nie mogę się doczekać, aby zobaczyć, co macie do zaoferowania. Nie zawiedziecie się sofońskimi produktami! Poczekajcie tylko, aż zobaczycie naszą ofertę rozrywkową – to prawdziwa uczta dla umysłu!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedSophon">Tak, to na pewno się sprawdzi. Dział badań i rozwoju będzie zachwycony, pewnie pójdą na lunch!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedSophon">Nie zrozumcie mnie źle, nasze teleskopy są najlepsze, ale dzięki tej umowie porównywanie planet z bliska będzie o wiele zabawniejsze!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedSophon">To znacznie przyspieszy naszą eksplorację! Mam nadzieję, że też wam się podoba to, co znaleźliśmy.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedSophon">Och! Tak, nie, to... To nie szkodzi. Tak, po prostu zostańmy przyjaciółmi. Pokój też jest dobry, to nic takiego...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUmbralChoir">Wyświadczasz Chórowi wielką przysługę, poszerzając jego wiedzę o galaktyce, istoto.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUmbralChoir">Chór z chęcią podzieli się z tobą wiedzą o wszechświecie, istoto.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUmbralChoir">Chór nie może się doczekać analizy twoich dóbr, istoto. Współrzędne miejsca dostawy zostały już wprowadzone do sieci waszych firm.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUmbralChoir">Ten krok może być niewielki, ale jest cenny, istoto.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUmbralChoir">Chór wita cię na swoim terytorium, istoto. Rozkoszuj się wraz z nami spokojną pustką.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUmbralChoir">Pokazując nam te mapy, istoto, otworzyłaś dziś przed nami nieco więcej możliwości osiągnięcia harmonii.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUmbralChoir">Chór na chwilę milknie po twojej odmowie, istoto. Mamy nadzieję, że w przyszłości dołączysz do naszej pieśni.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUnfallen">Dzielenie się tym, co widzimy, może tylko wzmocnić Serce. Co o tym sądzicie?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUnfallen">Nasze ludy rozkwitną dzięki wspólnym wysiłkom naukowym. Dziękuję, przyjazna osobo.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUnfallen">Niech ta wymiana przyczyni się do zwiększenia harmonii między naszymi ludami. Dla dobra wszystkich.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUnfallen">Serce jest zadowolone z naszej umowy. Oby przyspieszyła zaprowadzenie pokoju.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUnfallen">Odkąd otworzyliśmy nasze granice, pokój będzie rozkwitał i się umacniał. Z niecierpliwością czekamy na spotkanie z waszym ludem, zarówno na naszych światach, jak i na waszych.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUnfallen">Dzięki tobie na jałowej dotąd ziemi mogą teraz kiełkować ziarna pokoju. Dziękujemy za te mapy.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUnfallen">Serce zamiera wobec waszej odmowy jak kwiat pod wpływem mrozu. Będziemy kontynuować niezbędne starania, aby wzmocnić łączące nas więzi.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTerrans">Imperium może być naprawdę dobrym przyjacielem, ale nie wtedy, gdy jesteśmy utrzymywani w niewiedzy. Błagam was, podpiszcie tę umowę o wymianie informacji wywiadowczych, choćby dla własnego dobra.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTerrans">Wspaniale! Wymiana najwybitniejszych umysłów i obserwowanie, jak wykładają na naszych uniwersytetach, będzie czymś fantastycznym. Trzeba tylko zrobić coś z ich poglądami politycznymi...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTerrans">Ha! Rozwój i bogactwo bez jednego wystrzału. Poprawiasz mi nastrój – chodź, skosztujmy tych obcych przysmaków, zanim trafią na rynek.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTerrans">Zastanowię się, co imperium zdziała z tą umową – może zlecę budowę nowej opery lub wielkiej manufaktury...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTerrans">Dobra decyzja. Bliska współpraca z naszym imperium zwiększy tylko wasze bezpieczeństwo. Z przyjemnością zawitam do waszej stolicy, aby to świętować. Mam nadzieję, że jesteście gotowi, by mnie ugościć...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTerrans">Widok nowych ziem zawsze wywołuje dreszczyk emocji. Iluż przyszłych patriotów je zasiedli! Natychmiast zaprzęgnę moich planistów do pracy.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTerrans">Och, ależ jesteście ambitni! Imperium poradzi sobie samo, ale bez sojuszu nie mamy obowiązku, by wam pomagać...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVaulters">Moi krewni doszli do porozumienia – najlepiej będzie podzielić się z wami naszą wizją, abyśmy mogli skoordynować działania wywiadowcze i ruchy na całym firmamencie.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVaulters">Moi krewni z radością przyjmą wiadomość o możliwości wspólnych badań naukowych. Oby przyniosło to korzyści obu naszym ludom.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVaulters">Rynki kwitną dzięki towarom i nowym ideom, a nasze wyroby rzemieślnicze trafiające do nowych miejsc napawają nas dumą – czujemy się jak w domu, jak na Auridze.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVaulters">To dobra umowa i mały krok ku czemuś większemu między naszymi ludami.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVaulters">Moi krewni okażą wam gościnność jako gościom i będą szanować was jako gospodarzy. Mam nadzieję, że nasze ludy będą żyły w zgodzie.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVaulters">Pomyśleć tylko, ile jeszcze gwiazd pozostało we wszechświecie. Nasi astronomowie z radością wymienią się mapami z waszymi.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVaulters">Trudno jest żyć w strachu przed wszechświatem, który nagradza współpracę w walce o przetrwanie. Wytrwamy, ale mam nadzieję, że dostrzeżecie szczerość naszej oferty.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedVampirilis">Zaakceptowaliście moją umowę o dzieleniu się wizją. Światło Wirtualnych ujawnia wszystkie grzechy i teraz świeci również dla was.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVampirilis">Mądrze postępujecie, przyjmując wzajemne oświecenie Kościoła.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVampirilis">Bogactwo nie ma znaczenia dla wiernych, ale praca uszlachetni oba nasze ludy. Mądra decyzja.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVampirilis">Wirtualni błogosławią to porozumienie.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVampirilis">Wspaniałe! Obyście znaleźli światło na naszym świętym terytorium, tak jak my przyniesiemy światło wiernym na waszych światach.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVampirilis">Dzięki informacjom zawartym na tych mapach nasze floty będą podróżować bezpieczniej.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVampirilis">Herezja nie jest tym samym co pogaństwo – jest zarezerwowana dla tych, którzy zbliżyli się do świętej prawdy, ale stopniowo sprowadzają wiernych na manowce... Podobnie jak ci, którzy zgadzają się na pokój, ale odrzucają sojusz.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVenetians">Badania rynku mają swoje ograniczenia i mogą być aktualne tylko do pewnego stopnia. Co powiecie na to, abyśmy podzielili się wizją, bo lepiej współpracować?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVenetians">Nie da się sprzedawać najnowszych produktów bez najnowszej wiedzy naukowej. Stwórzmy grupę ekspertów i przekonajmy się, co uda nam się wymyślić!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVenetians">Właśnie dlatego dowodzisz! Potrafisz dostrzec dobrą okazję, a oferty Rodzin są najlepsze. Nie pożałujesz tego!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVenetians">Z czasem zyski z tej umowy zaczną się kumulować i będziecie zadowoleni z jej podpisania.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVenetians">Turyści, inwestycje, najemnicy... Z pewnością docenicie korzyści płynące z otwarcia granic dla Rodzin!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVenetians">Cztery Rodziny dobrze wykorzystają te mapy. Widzę już kilka atrakcyjnych nieruchomości, które nadają się do zagospodarowania...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVenetians">Potrafię uszanować biznesowe podejście. Ale nie zwlekajcie zbyt długo z ponownym rozważeniem sprawy; nie możemy przestać pływać, jeśli chcemy przetrwać.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTimeLords">Współpraca w zakresie kwestii wywiadowczych byłaby korzystna dla obu stron. Rozważcie tę propozycję, abyśmy mogli na bieżąco informować się nawzajem o sytuacji w tej zatrważającej galaktyce.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTimeLords">Chociaż trudno będzie przekazać nasze metody waszym naukowcom ze względu na różnice między naszymi wszechświatami, zrobimy wszystko, co w naszej mocy. W imieniu wszystkich Przybyszów dziękujemy.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTimeLords">Natychmiast prześlemy instrukcje dotyczące wyjątkowych potrzeb produktowych waszych konsumentów do siebie z przeszłości. Z definicji nie znajdziecie towarów wyższej jakości w całym czasie i przestrzeni, dopóki będziecie z nami handlować.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTimeLords">Cieszymy się, że dostrzegliście wartość naszej propozycji. Prognozy wskazują, że zasoby te już teraz stanowią doskonałą inwestycję w przyszłość.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTimeLords">Być może z czasem nauczymy się nie tylko przetrwać, ale także prosperować w waszym wszechświecie. To ważny krok w tym procesie, a wasza zgoda jest dla nas bardzo fortunna.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTimeLords">Doceniamy wasz wkład w nasze przetrwanie. Te mapy pozwolą nam zrozumieć wasz fizyczny wszechświat, tak jak kiedyś zrozumieliśmy Coroz.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTimeLords">Ostrożność jest dla nas zrozumiała; definiuje ona każdą chwilę naszego obecnego życia. Mamy jednak nadzieję, że w przyszłości zdecydujecie się na ściślejszą współpracę z nami.</LocalizationPair>
+  <LocalizationPair Name="%RawMaximumPopulationTitle">Limit [population] populacji</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerManpowerLimitBonusTitle">Limit inwazyjnej liczebności</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderManpowerLimitBonusTitle">Limit inwazyjnej liczebności</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSiegePowerTitle">Obrażenia oblężnicze liczebności</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponOpponentPenaltyTitle">Osłabienie przeciwnika</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSpecialEffectDurationTitle">Czas trwania osłabienia</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDamageAOETitle">Obrażenia zadane flotylli</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerPhaseTitle">Odnawianie osłon co fazę</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerPhaseTitle">Odnawianie osłon co fazę we flotylli</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerSecondTitle">Odnawianie osłon co sekundę</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerSecondTitle">Odnawianie osłon co sekundę we flotylli</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerPhaseTitle">Odnawianie zdrowia co fazę</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerPhaseTitle">Odnawianie zdrowia co fazę we flotylli</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerSecondTitle">Odnawianie zdrowia co sekundę</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerSecondTitle">Odnawianie zdrowia co sekundę we flotylli</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeTitle">Załoga zabita na sekundę</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronCriticalAttackChanceTitle">Premia do szansy na trafienie krytyczne eskadry</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterBattleTitle">Odnawianie zdrowia po walce we flocie</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterPhaseTitle">Odnawianie zdrowia co fazę we flocie</LocalizationPair>
+  <LocalizationPair Name="%DodgeChanceTitle">Uniki eskadry</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDodgeChanceTitle">Uniki eskadry</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponDPSTitle">Obrażenia na sekundę</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeDurationTitle">Czas trwania abordażu</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectOverallCooldownTitle">Czas między wystrzałami</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsCooldownTitle">Odnawianie</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShipManpowerKillAbsorption">Odporność załogi na obrażenia</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleEMPExplicationTitle">Wieżyczki EM wyłączają na pewien czas wskazany podsystem skutecznie trafionego statku.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsRawDamageTitle">Surowe obrażenia</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPWeaponDefenseTitle">Czas wyłączenia broni</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPShieldDefenseTitle">Czas wyłączenia osłon</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSTitle">Obrażenia kontrujące na sekundę</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlakExplicationTitle">Wystrzeliwane jednocześnie z podstawową bronią kinetyczną pociski kontrujące namierzają nadlatujące rakiety, BEB, eskadry i kapsuły abordażowe.
+Takie same lub większe obrażenia od salwy broni kontrującej w porównaniu ze stanem rakiet likwidują namierzaną salwę po jednym strzale.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportAdditionalManpowerTitle">Limit [shipCrewColored] załogi</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstSmallShipsTitle">Premia do obrażeń zadawanych małym statkom</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstMediumShipsTitle">Premia do obrażeń zadawanych średnim statkom</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstLargeShipsTitle">Premia do obrażeń zadawanych dużym statkom</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementObliteratorShieldEffects">Chroni jednorazowo przed całkowitym unicestwieniem
++50% do ulepszeń systemu i populacji ocalonych przed unicestwieniem
++50% do negowania obrażeń przeciwko unicestwieniu orbitujących flot
+-67% do ryzyka zranienia zarządzających bohaterów</LocalizationPair>
+  <LocalizationPair Name="%DockedFleetsHealthRegenerationRatioTitle">Maksymalny stan statków w garnizonie odnawiany w każdej turze</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity3EffectOverride">+50% do maksymalnego stanu statków w garnizonie odnawianego w każdej turze</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioTitle">Maksymalny stan orbitujących statków / statków w garnizonie odnawiany w każdej turze</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroDescription">Maksymalny stan orbitujących statków / statków w garnizonie odnawiany w każdej turze</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroTitle">Maksymalny stan orbitujących statków / statków w garnizonie odnawiany w każdej turze</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioDescription">Maksymalny stan orbitujących statków / statków w garnizonie odnawiany w każdej turze</LocalizationPair>
+  <LocalizationPair Name="%HealthPerTurnTitle">Tempo zdrowienia bohatera</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleExperienceFromBattlePercentModifierTitle">Zdobyte doświadczenie</LocalizationPair>
+  <LocalizationPair Name="%ExperienceBonusPercentTitle">Zdobyte doświadczenie</LocalizationPair>
+  <LocalizationPair Name="%ExperienceMultiplierTitle">Mnożnik doświadczenia</LocalizationPair>
+  <LocalizationPair Name="%LongRangePenaltyTitle">Celność przy dalekim zasięgu</LocalizationPair>
+  <LocalizationPair Name="%MediumRangePenaltyTitle">Celność przy średnim zasięgu</LocalizationPair>
+  <LocalizationPair Name="%ShortRangePenaltyTitle">Celność przy bliskim zasięgu</LocalizationPair>
+  <LocalizationPair Name="%DeadZoneRangePenaltyTitle">Celność w zwarciu</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleAntiCrewExplicationTitle">Statki otrzymują premię do zadawanych obrażeń proporcjonalną do stopnia obsadzenia załogi (maksymalnie 20%). Moduły odłamkowe skutecznie zmniejszają tę premię i usprawniają kapsuły abordażowe.</LocalizationPair>
+  <LocalizationPair Name="%ModuleInvisibilityAmbushTitle">Zamaskowane flotylle pozostają niewidoczne i nie otwierają ognia, dopóki nie znajdą się w odpowiedniej odległości.</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusTitle">Efekt premii do morale</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusIfOneShipTitle">+25% do obrażeń dla samotnych statków we flotylli</LocalizationPair>
+  <LocalizationPair Name="%ManpowerLostTransferPercentTitle">Utracona załoga odzyskana jako liczebność</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusFromManpower">Obrażenia od liczebności załogi</LocalizationPair>
+  <LocalizationPair Name="%PlayerDustPerAliveCPTitle">[dustColored] zyskiwany na każdy posiadany punkt dowodzenia pozostały po bitwie</LocalizationPair>
+  <LocalizationPair Name="%ManpowerPercentKillPerPhaseTitle">Załoga zabita na fazę we flocie</LocalizationPair>
+  <LocalizationPair Name="%DamageKineticTitle">Obrażenia od broni pociskowej</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarCommandDescription">Całkowita liczba punktów dowodzenia statków znajdujących się w garnizonie systemu</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarHealthDescription">Suma punktów stanu statków znajdujących się w garnizonie tego systemu</LocalizationPair>
+  <LocalizationPair Name="%SophonsQuest-Chapter2.1-Diplomacy-C1Step1ObjectiveTooltip">Użyj komendy „Utwórz garnizon”, aby umieścić statki w garnizonie, lub zbuduj nowe statki i zostaw je w garnizonie.</LocalizationPair>
+  <LocalizationPair Name="%ExplorationQuest26-Choice02ObjectiveTooltip">Statek musi się znajdować w garnizonie jednej z twoich kolonii.</LocalizationPair>
+  <LocalizationPair Name="%FailureShipLockedInGarrisonDescription">Nie możesz stworzyć floty, bo jeden ze statków jest zablokowany w garnizonie.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsManpowerDamageOverTimeDefenseTitle">Kapsuła abordażowa – odniesione obrażenia liczebności</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceTitle">Premia do szansy na trafienie krytyczne</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceKineticTitle">Premia do szansy na trafienie krytyczne bronią kinetyczną</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceEnergyTitle">Premia do szansy na trafienie krytyczne bronią energetyczną</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDefenseTitle">Odporność na obrażenia eskadry</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightBonusTitle">Zwiększona agresja przeciwko statkowi</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightPenaltyTitle">Zmniejszona agresja przeciwko statkowi</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaMoraleBonusPercentTitle">Efekt premii do morale</LocalizationPair>
+  <LocalizationPair Name="%GlobalSpeedModuleTitle">Wydajność punktów ruchu</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipProbeStockTitle">Limit sond eksploracyjnych</LocalizationPair>
+  <LocalizationPair Name="%ProbeStockTitle">Sondy eksploracyjne</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportProbeStockTitle">Sondy eksploracyjne</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsNetDepletionPointsOnOrbitTitle">Punkty zubożenia odzyskiwane na turę</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponTypeCollateralTitle">Uboczne</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderTroopsDamageMultiplierTitle">Obrażenia wojsk obrońcy</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsDamageMultiplierTitle">Obrażenia wojsk najeźdźcy</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsMaxHealthMultiplierTitle">Zdrowie wojsk najeźdźcy</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentPopulationDestructionProbabilityTitle">Zabita populacja</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentImprovementDestructionProbabilityTitle">Zniszczone ulepszenia</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1GhostTooltipEffect2">Dodaje do 600 [systemDefenseColored] i limit rozlokowania garnizonu</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TooltipEffect2">Dodaje do 300 [systemDefenseColored] i limit rozlokowania garnizonu, skalowane w zależności od bieżącego posiadania systemu</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TerransTooltipEffect2">Dodaje do 400 [Manpower] i zwiększa limit rozlokowania garnizonu, skalowane w zależności od bieżącego posiadania systemu</LocalizationPair>
+  <LocalizationPair Name="%BesiegedColonizedStarSystemTitle">Oblegany system</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCuriosity2EffectOverride">+0,08 [industryColored] na [systemDefenseColored]</LocalizationPair>
+  <LocalizationPair Name="%FailureMoreRelicsDescription">Masz za mało reliktów [relicColored]</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherDescription">Uzyskaj dostęp do strony Amplifiers.</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherTitle">Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%MessageBoxGames2GetherButtonTitle">Znajdź dodatkowe informacje, poprawki i pomysły na Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%Update14Description">Dzięki masowemu udziałowi w styczniowym darmowym weekendzie odblokowaliście wszystkie dostępne nagrody! Pomniejsza frakcja Basryxo jest teraz dostępna wraz ze swoim nowym bohaterem i pełnym śmieci zadaniem… Odblokuj ją na Amplifiers!</LocalizationPair>
+  <LocalizationPair Name="%EarlyAccessSubscriberContentDescription">Łatwiej zapanować nad galaktyką, mając u boku jeszcze jednego bohatera. Twoje zainteresowanie Amplitude i Amplifiers odblokowało geniuszkę Sofonów, Uthassum Rhamoezz, która będzie dostępna na Amplifiers!</LocalizationPair>
+  <LocalizationPair Name="%Update5Description">Dziękujemy za ogromne uczestnictwo w wyzwaniu dla społeczności polegającym na graniu, żeby wygrać. Gracze odblokowali nowy dodatek zawierający skórkę floty Mezari dla Zjednoczonego Imperium, nowy pakiet modułów statków, nowego bohatera, typ galaktyki o 6 ramionach oraz nową anomalię i wydarzenie populacji. Odblokuj na Amplifiers już teraz!</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisTitle">Festiwal konwersji</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisDescription">Korzystając z naszych zażyłych relacji z Akademią, możemy przekonać cały system do zbudowania Arki, zanim dokona konwersji na esencję.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirTitle">Zakop serwery</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirDescription">Na naszą prośbę Akademia wyłączy swoje czujniki, abyśmy mogli dyskretnie utworzyć klaster serwerów w jednym z jej systemów.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessTitle">Blokada polityczna</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessDescription">Polityczne przysługi ze strony Akademii nie są wieczne. Potępiając imperium przed Isyanderem, możemy uzyskać nad nim polityczną przewagę.</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionTitle">Relikty przesiedleńców</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionDescription">Nasza nieobecność, wiara i imperialna historia utrudniają nam zdobycie reliktów z Akademii, ale dobre relacje mogą zapewnić nam ich zwrot.</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionTitle">Konsultacje w sprawach bezpieczeństwa</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionDescription">Przy tak małej liczbie aktywów bezpieczeństwo wojskowe i gospodarcze Akademii musi być nadzwyczajne. Postaramy się zdobyć od niej tę wiedzę.</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionTitle">Honory wojskowe</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionDescription">Wymieniając się wojskowymi w elitarnych formacjach, możemy połączyć prestiż Sheredynów i Akademii, zyskując szacunek patriotów i galaktyki.</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionTitle">Badania kierowane</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionDescription">Goszcząc naukowców Akademii, nasz imperator może zdobyć przychylność tak intelektualistów Mezarów, jak i galaktycznej społeczności naukowej. </LocalizationPair>
+</Datatable>

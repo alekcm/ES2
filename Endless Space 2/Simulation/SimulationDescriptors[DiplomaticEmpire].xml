@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <!--================-->
+  <!-- ClassDiplomacy -->
+  <!--================-->
+
+  <SimulationDescriptor Name="ClassDiplomacy" Type="ClassDiplomacy">
+
+    <!-- BasePressure receives only the score of the empire, for each empire -->
+    <Property Name="BasePressure"               MinValue="0"/>
+    <Property Name="BasePressureMultiplier"     MinValue="Negative" BaseValue="1"/>
+
+    <!-- Traitors-related properties. -->
+    <Property Name="MoneyRatioLostFromTraitors"         Composition="Sum" MinValue="0" MaxValue="1"/>
+    <Property Name="StrategicRatioLostFromTraitors"     Composition="Sum" MinValue="0" MaxValue="1"/>
+    <Property Name="LuxuryRatioLostFromTraitors"        Composition="Sum" MinValue="0" MaxValue="1"/>
+
+    <Property Name="BaseMoneyRatioLostFromTraitors"     Composition="Sum" MinValue="1"/>
+    <Property Name="BaseStrategicRatioLostFromTraitors" Composition="Sum" MinValue="1"/>
+    <Property Name="BaseLuxuryRatioLostFromTraitors"    Composition="Sum" MinValue="1"/>
+
+    <Property Name="NetEmpireMoneyGainedFromTraitors"   IsSealed="true"/>
+    <Property Name="NetStrategic1GainedFromTraitors"    IsSealed="true"/>
+    <Property Name="NetStrategic2GainedFromTraitors"    IsSealed="true"/>
+    <Property Name="NetStrategic3GainedFromTraitors"    IsSealed="true"/>
+    <Property Name="NetStrategic4GainedFromTraitors"    IsSealed="true"/>
+    <Property Name="NetStrategic5GainedFromTraitors"    IsSealed="true"/>
+    <Property Name="NetStrategic6GainedFromTraitors"    IsSealed="true"/>
+    <Property Name="NetLuxury1GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury2GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury3GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury4GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury5GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury6GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury7GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury8GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury9GainedFromTraitors"       IsSealed="true"/>
+    <Property Name="NetLuxury10GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury11GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury12GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury13GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury14GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury15GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury16GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury17GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury18GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury19GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury20GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury21GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury22GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury23GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="NetLuxury24GainedFromTraitors"      IsSealed="true"/>
+    <Property Name="TraitorGainsMultiplier"             BaseValue="1" />
+
+    <!-- Modifiers -->
+    <Modifier TargetProperty="MyBasePressure"               Operation="Addition"        Value="$(BasePressure)"                 Path="ClassDiplomacy/ClassDiplomaticEmpire" />
+    <Modifier TargetProperty="MyBasePressureMultiplier"     Operation="Multiplication"  Value="$(BasePressureMultiplier)"       Path="ClassDiplomacy/ClassDiplomaticEmpire" />
+
+    <Modifier TargetProperty="MoneyRatioLostFromTraitors"       Operation="Division" Value="$(BaseMoneyRatioLostFromTraitors)" Path="ClassDiplomacy/ClassDiplomaticEmpire"/>
+    <Modifier TargetProperty="StrategicRatioLostFromTraitors"   Operation="Division" Value="$(BaseStrategicRatioLostFromTraitors)" Path="ClassDiplomacy/ClassDiplomaticEmpire"/>
+    <Modifier TargetProperty="LuxuryRatioLostFromTraitors"      Operation="Division" Value="$(BaseLuxuryRatioLostFromTraitors)" Path="ClassDiplomacy/ClassDiplomaticEmpire"/>
+
+    <!-- Losses -->
+    <Modifier       TargetProperty="MoneyRatioLostFromTraitors" Operation="Subtraction" Value="$(MoneyRatioLostFromTraitors)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic1"  Operation="Percent" Left="$(StrategicRatioLostFromTraitors)"    BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic2"  Operation="Percent" Left="$(StrategicRatioLostFromTraitors)"    BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic3"  Operation="Percent" Left="$(StrategicRatioLostFromTraitors)"    BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic4"  Operation="Percent" Left="$(StrategicRatioLostFromTraitors)"    BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic5"  Operation="Percent" Left="$(StrategicRatioLostFromTraitors)"    BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic6"  Operation="Percent" Left="$(StrategicRatioLostFromTraitors)"    BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury1"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury2"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury3"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury4"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury5"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury6"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury7"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury8"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury9"     Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury10"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury11"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury12"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury13"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury14"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury15"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury16"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury17"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury18"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury19"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury20"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury21"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury22"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury23"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury24"    Operation="Percent" Left="$(LuxuryRatioLostFromTraitors)"       BinaryOperation="Multiplication" Right="-1" Path="./ClassEmpire"/>
+
+    <!-- Gains -->
+    <BinaryModifier TargetProperty="EmpireMoneyGainedFromTraitors"  Operation="Addition" Left="$(NetEmpireMoneyGainedFromTraitors)" BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic1"                  Operation="Addition" Left="$(NetStrategic1GainedFromTraitors)"  BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic2"                  Operation="Addition" Left="$(NetStrategic2GainedFromTraitors)"  BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic3"                  Operation="Addition" Left="$(NetStrategic3GainedFromTraitors)"  BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic4"                  Operation="Addition" Left="$(NetStrategic4GainedFromTraitors)"  BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic5"                  Operation="Addition" Left="$(NetStrategic5GainedFromTraitors)"  BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetStrategic6"                  Operation="Addition" Left="$(NetStrategic6GainedFromTraitors)"  BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury1"                     Operation="Addition" Left="$(NetLuxury1GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury2"                     Operation="Addition" Left="$(NetLuxury2GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury3"                     Operation="Addition" Left="$(NetLuxury3GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury4"                     Operation="Addition" Left="$(NetLuxury4GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury5"                     Operation="Addition" Left="$(NetLuxury5GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury6"                     Operation="Addition" Left="$(NetLuxury6GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury7"                     Operation="Addition" Left="$(NetLuxury7GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury8"                     Operation="Addition" Left="$(NetLuxury8GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury9"                     Operation="Addition" Left="$(NetLuxury9GainedFromTraitors)"     BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury10"                    Operation="Addition" Left="$(NetLuxury10GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury11"                    Operation="Addition" Left="$(NetLuxury11GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury12"                    Operation="Addition" Left="$(NetLuxury12GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury13"                    Operation="Addition" Left="$(NetLuxury13GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury14"                    Operation="Addition" Left="$(NetLuxury14GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury15"                    Operation="Addition" Left="$(NetLuxury15GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury16"                    Operation="Addition" Left="$(NetLuxury16GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury17"                    Operation="Addition" Left="$(NetLuxury17GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury18"                    Operation="Addition" Left="$(NetLuxury18GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury19"                    Operation="Addition" Left="$(NetLuxury19GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury20"                    Operation="Addition" Left="$(NetLuxury20GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury21"                    Operation="Addition" Left="$(NetLuxury21GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury22"                    Operation="Addition" Left="$(NetLuxury22GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury23"                    Operation="Addition" Left="$(NetLuxury23GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+    <BinaryModifier TargetProperty="NetLuxury24"                    Operation="Addition" Left="$(NetLuxury24GainedFromTraitors)"    BinaryOperation="Multiplication" Right="$(TraitorGainsMultiplier)" Path="./ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <!--=======================-->
+  <!-- ClassDiplomaticEmpire -->
+  <!--=======================-->
+
+  <SimulationDescriptor Name="ClassDiplomaticEmpire" Type="ClassDiplomaticEmpire">
+
+    <Property Name="FreeWarDeclaration"             MinValue="0"           BaseValue="1"/>
+
+    <!-- BasePressure = score difference. Multiplier = bonuses (like laws and stuff) -->
+    <Property Name="MyBasePressure"                 MinValue="0"/>
+    <Property Name="MyBasePressureMultiplier"       MinValue="Negative"    BaseValue="1"/>
+    <Property Name="TheirBasePressure"              MinValue="0"                    IsSealed="true"/>
+    <Property Name="TheirBasePressureMultiplier"    MinValue="Negative"             IsSealed="true"/>
+
+    <Property Name="CombinedBasePressureMultipliers" MinValue="0" BaseValue="0"/>
+
+    <Property Name="PressureFromScore" BaseValue="0" MinValue="-5" MaxValue="5"/>
+    <Property Name="PressureFromFriction" BaseValue="0" MinValue="-5" MaxValue="5"/>
+    <Property Name="PressureFromCoveredSystems" BaseValue="0" MinValue="-12" MaxValue="12"/>
+
+    <Property Name="GeneratePressureTermActive" BaseValue="0" MinValue="0"/>
+
+    <!-- Stock & net -->
+    <Property Name="PressureValue"                  MinValue="-100" MaxValue="100"  IsSealed="true"/>
+    <Property Name="PressureTrend"                  MinValue="-12" MaxValue="12" />
+
+    <!-- Set by code:
+                SystemsUnderInfluence = count (negative for influencer, positive for influenced);
+                SystemsBorderFrictionValue = net influence difference between systems whose influence zone overlap. -->
+    <Property Name="SystemsUnderInfluence"              MinValue="Negative"     IsSealed="true"/>
+    <Property Name="SystemsBorderFrictionValue"         MinValue="Negative"     IsSealed="true"/>
+
+    <!-- Modifiers set by diplomacy -->
+    <Property Name="ContextualDiplomacyPressureBonus"   MinValue="Negative"/>
+    <Property Name="ContextualDiplomacyPressureHiddenBonus"   MinValue="Negative"/>
+    <Property Name="HackingPressureBonus"               MinValue="Negative"/>
+    <Property Name="CurrentRelationMultiplier"          MinValue="Negative"     BaseValue="1"/>
+    <Property Name="CurrentEffectsBonus"                MinValue="Negative"/>
+    <Property Name="HackingSpeedMultiplier"             MinValue="0.1" BaseValue="1"/>
+
+    <!-- Diplomacy cost reduction -->
+    <Property Name="PeacefulTreatyCostReduction"            BaseValue="1" MinValue="0.05"/>
+    <Property Name="AggressiveTreatyCostReduction"          BaseValue="1" MinValue="0.05"/>
+    <Property Name="CloseBordersCostReduction"              BaseValue="1" MinValue="0.05"/>
+    <Property Name="WarDeclarationCostReduction"            BaseValue="1" MinValue="0.05"/>
+    <Property Name="PeaceCostReduction"                     BaseValue="1" MinValue="0.05"/>
+    <Property Name="AllianceCostReduction"                  BaseValue="1" MinValue="0.05"/>
+
+    <Property Name="ReceivedAggressiveTreatyCostReduction"  BaseValue="1" MinValue="0.05"/>
+
+    <!-- Restrictions -->
+    <Property Name="TurnsBeforeNeighbourColonizationIsAllowed"  BaseValue="0" MinValue="0" IsSealed="true"/>
+    <Property Name="TurnsBeforeAttackIsAllowed"                 BaseValue="0" MinValue="0" IsSealed="true"/>
+    <Property Name="TurnsBeforeLeechingIsAllowed"               BaseValue="0" MinValue="0" IsSealed="true"/>
+    <Property Name="TurnsBeforeTimeBubblesAreAllowed"           BaseValue="0" MinValue="0" IsSealed="true"/>
+    <Property Name="TurnsBeforeRootingIsAllowed"                BaseValue="0" MinValue="0" IsSealed="true"/>
+    <Property Name="TurnsBeforeHackIsAllowed"                   BaseValue="0" MinValue="0" IsSealed="true"/>
+
+    <!-- Influence conversion -->
+    <Property Name="InfluenceConversionGainMultiplier"      BaseValue="1"/>
+
+    <!-- Used only by pirates. -->
+    <Property Name="PirateMarksFleetRecruitmentRange"   BaseValue="40"/>
+
+    <!-- Hisshos honor gain multiplier in battle/ground battle. -->
+    <Property Name="HonorGainMultiplier" BaseValue="1"/>
+
+    <!-- Is the owner able to see all the enemy fleets? -->
+    <Property Name="SeesAllFleets" BaseValue="0" MaxValue="1"/>
+
+
+    <Property Name="ForceableContextualTerms" BaseValue="0" IsSealed="true"/>
+
+    <!-- Traitors-related properties. -->
+    <Property Name="MoneyRatioLostFromTraitors"     BaseValue="0"/>
+    <Property Name="StrategicRatioLostFromTraitors" BaseValue="0"/>
+    <Property Name="LuxuryRatioLostFromTraitors"    BaseValue="0"/>
+
+    <Property Name="BaseMoneyRatioLostFromTraitors"     BaseValue="0"/>
+    <Property Name="BaseStrategicRatioLostFromTraitors" BaseValue="0"/>
+    <Property Name="BaseLuxuryRatioLostFromTraitors"    BaseValue="0"/>
+
+    <!-- Pressure: Initial trend computation -->
+    <BinaryModifier TargetProperty="CombinedBasePressureMultipliers" Operation="Addition" Left="$(MyBasePressureMultiplier)" BinaryOperation="Addition" Right="$(TheirBasePressureMultiplier)"/>
+
+    <BinaryModifier TargetProperty="PressureFromScore" Operation="Addition"         Left="$(MyBasePressure)"    BinaryOperation="Multiplication"    Right="$(MyBasePressureMultiplier)"     Priority="1" />
+    <BinaryModifier TargetProperty="PressureFromScore" Operation="Subtraction"      Left="$(TheirBasePressure)" BinaryOperation="Multiplication"    Right="$(TheirBasePressureMultiplier)"  Priority="2"/>
+    <BinaryModifier TargetProperty="PressureFromScore" Operation="Division"         Left="$(MyBasePressure)"    BinaryOperation="Addition"          Right="$(TheirBasePressure)"            Priority="3"/>
+    <Modifier       TargetProperty="PressureFromScore" Operation="Multiplication"   Value="3" Priority="4" />
+
+    <BinaryModifier TargetProperty="PressureFromFriction" Operation="Addition"    Left="$(SystemsBorderFrictionValue)" BinaryOperation="Division" Right="25" Priority="1" />
+    <Modifier       TargetProperty="PressureFromFriction" Operation="Multiplication"          Value="$(CombinedBasePressureMultipliers)" Priority="2"/>
+
+    <BinaryModifier TargetProperty="PressureFromCoveredSystems" Operation="Addition"  Left="4" BinaryOperation="Multiplication" Right="$(SystemsUnderInfluence)" Priority="1"/>
+    <Modifier       TargetProperty="PressureFromCoveredSystems" Operation="Multiplication"        Value="$(CombinedBasePressureMultipliers)" Priority="2"/>
+
+    <Modifier TargetProperty="PressureTrend" Operation="Addition" Value="$(PressureFromScore)"/>
+    <Modifier TargetProperty="PressureTrend" Operation="Addition" Value="$(PressureFromFriction)"/>
+    <Modifier TargetProperty="PressureTrend" Operation="Addition" Value="$(PressureFromCoveredSystems)"/>
+
+    <!-- Pressure: Add diplomacy effects -->
+    <Modifier TargetProperty="PressureTrend" Operation="Addition"       Value="$(ContextualDiplomacyPressureBonus)"/>
+    <Modifier TargetProperty="PressureTrend" Operation="Addition"       Value="$(HackingPressureBonus)"/>
+    <Modifier TargetProperty="PressureTrend" Operation="Addition"       Value="$(ContextualDiplomacyPressureHiddenBonus)" TooltipHidden="true" />
+    <Modifier TargetProperty="PressureTrend" Operation="Addition"       Value="$(CurrentEffectsBonus)"/>
+    <Modifier TargetProperty="PressureTrend" Operation="Multiplication" Value="$(CurrentRelationMultiplier)"/>
+
+  </SimulationDescriptor>
+
+
+  <SimulationDescriptor Name="DiplomaticAbilityEffectScienceAgreement" Type="DiplomaticAbilityEffect">
+
+    <Property Name="ScienceAgreementDuration" BaseValue="0" IsSealed="true"/>
+    <Property Name="CurrentTurn"/>
+    <Property Name="GameSpeedScienceDiplomacy" BaseValue="1"/>
+    <Property Name="ScienceBonusStep" BaseValue="0"/>
+
+    <Property Name="ResearchBonusBasedOnDuration" BaseValue="0" MaxValue="750"/>
+
+    <!-- 10 -->
+    <Property Name="ResearchBonus" BaseValue="50"/>
+
+    <BinaryModifier TargetProperty="ScienceBonusStep" Operation="Addition" Left="12" BinaryOperation="Division" Right="$(GameSpeedScienceDiplomacy)"/>
+
+    <!-- + 10 / turn, capped at +100 after 20 turns -->
+    <BinaryModifier TargetProperty="ResearchBonusBasedOnDuration" Operation="Addition" Left="$(ScienceAgreementDuration)" BinaryOperation="Multiplication" Right="$(ScienceBonusStep)"/>
+    <Modifier TargetProperty="ResearchBonus" Operation="Addition" Value="$(ResearchBonusBasedOnDuration)" />
+
+    <!-- x (gameTurn / 5) -->
+    <BinaryModifier TargetProperty="ResearchBonus" Operation="Addition" Left="$(CurrentTurn)" BinaryOperation="Division" Right="2"/>
+
+    <Modifier TargetProperty="ResearchScienceAgreementBonus" Operation="Addition" Value="$(ResearchBonus)" Path="../ClassEmpire"/>
+
+    <BinaryModifier TargetProperty="TreatiesUpkeep"   Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" SearchValueFromPath="true"  Path="../ClassEmpire" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="ScienceAgreementUpkeep"   Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" SearchValueFromPath="true"  Path="../ClassEmpire" TooltipHidden="false"/>
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="DiplomaticAbilityEffectTradeAgreement" Type="DiplomaticAbilityEffect">
+    <BinaryModifier TargetProperty="TreatiesUpkeep"   Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" SearchValueFromPath="true"  Path="../ClassEmpire" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="TradeAgreementUpkeep"   Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" SearchValueFromPath="true"  Path="../ClassEmpire" TooltipHidden="false"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="MilitaristLawOverride" Type="MilitaristLawOverride">
+    <Modifier TargetProperty="FreeWarDeclaration" Operation="Force" Value="1" Priority="2" TooltipHidden="true"/>
+  </SimulationDescriptor>
+</Datatable>

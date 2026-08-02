@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- Processing Power -->
+
+  <ExtendedGuiElement Name="EmpireProcessingPower">
+    <Title>%EmpireProcessingPowerTitle</Title>
+    <Description>%EmpireProcessingPowerDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/ProcessingPowerSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/ProcessingPowerLarge" />
+    </Icons>
+    <SymbolString>[processingPower]</SymbolString>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="EmpireProcessingPowerStock">
+    <Title>%EmpireProcessingPowerTitle</Title>
+    <Description>%EmpireProcessingPowerDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/ProcessingPowerSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/ProcessingPowerLarge" />
+    </Icons>
+    <SymbolString>[processingPower]</SymbolString>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ProcessingPowerAllocation">
+    <Title>%EmpireProcessingPowerTitle</Title>
+    <Description>%EmpireProcessingPowerDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/ProcessingPowerSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/ProcessingPowerLarge" />
+    </Icons>
+    <SymbolString>[processingPower]</SymbolString>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <GuiElement Name="EmpireProcessingPowerAllocated">
+    <Title>%EmpireProcessingPowerAllocatedTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="MaximumEmpireProcessingPowerStock">
+    <Title>%EmpireProcessingPowerTitle</Title>
+    <Description>%EmpireProcessingPowerDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/ProcessingPowerSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/ProcessingPowerLarge" />
+    </Icons>
+    <SymbolString>[processingPower]</SymbolString>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <GuiElement Name="ProcessingPowerForManpower">
+    <Title>%ProcessingPowerForManpowerTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PassiveProcessingPowerEnrollmentRate">
+    <Title>%PassiveProcessingPowerEnrollmentRateTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="BonusPopulationProcessingPower">
+    <Title>%EmpireProcessingPowerTitle</Title>
+    <SymbolString>[processingPower]</SymbolString>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BonusPopulationProcessingPowerFromSuperPopulation">
+    <Title>%BonusPopulationProcessingPowerFromSuperPopulationTitle</Title>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MaximumEmpireProcessingPowerStockOvercolonizationMultiplier">
+    <Title>%HappinessOverColonizationPenalties</Title>
+    <SymbolString>[OverColonization]</SymbolString>
+  </ExtendedGuiElement>
+
+  <!-- UC Pop Faction -->
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityUmbralChoir">
+    <Title>%ClassPopulationEmpireAffinityUmbralChoirTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityUmbralChoirCount">
+    <Title>%ClassPopulationEmpireAffinityUmbralChoirTitle</Title>
+  </ExtendedGuiElement>
+
+  <!-- UC System Affinity -->
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityUmbralChoir">
+    <Title>%ClassPopulationStarSystemAffinityUmbralChoirTitle</Title>
+    <SymbolString>[umbralChoir]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityUmbralChoirCount">
+    <Title>%ClassPopulationStarSystemAffinityUmbralChoirTitle</Title>
+    <SymbolString>[umbralChoir]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+
+  <!-- UC Planet Affinity-->
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityUmbralChoirCount">
+    <Title>%PopulationUmbralChoirTitle</Title>
+    <Description>%PopulationUmbralChoirDescription</Description>
+    <SymbolString>[umbralChoir]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationUmbralChoirTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <!-- UC AFFINITY -->
+
+  <ExtendedGuiElement Name="AffinityGameplayTechnologyUmbralChoir">
+    <Title>%AffinityGameplayUmbralChoirTitle</Title>
+    <Description>%AffinityGameplayUmbralChoirDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityGameplaySmall" />
+    </Icons>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AffinityUmbralChoir">
+    <Title>%AffinityUmbralChoirTitle</Title>
+    <Description>%AffinityUmbralChoirDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityUmbralChoirSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityUmbralChoirMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityUmbralChoirMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityUmbralChoirLarge" />
+      <Icon Size="Leader" Path="Bitmaps/Dynamic/Affinities/AffinityUCLeader" />
+    </Icons>
+    <SymbolString>[umbralChoir]</SymbolString>
+    <Color Red="233" Green="105" Blue="237" Alpha="255" />
+  </ExtendedGuiElement>
+
+
+  <!-- MinorHacking -->
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityMinorHacking">
+    <Title>%ClassPopulationEmpireAffinityMinorHackingTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationEmpireAffinityMinorHackingCount">
+    <Title>%ClassPopulationEmpireAffinityMinorHackingTitle</Title>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityMinorHacking">
+    <Title>%ClassPopulationStarSystemAffinityMinorHackingTitle</Title>
+    <SymbolString>[kalmat]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityMinorHackingCount">
+    <Title>%ClassPopulationStarSystemAffinityMinorHackingTitle</Title>
+    <SymbolString>[kalmat]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityMinorHacking">
+    <Title>%PopulationMinorHackingTitle</Title>
+    <Description>%PopulationMinorHackingDescription</Description>
+    <SymbolString>[kalmat]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationMinorHackingTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetAffinityMinorHackingCount">
+    <Title>%PopulationMinorHackingTitle</Title>
+    <Description>%PopulationMinorHackingDescription</Description>
+    <SymbolString>[kalmat]</SymbolString>
+    <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    <AltTitle>%PopulationMinorHackingTitle</AltTitle>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="ClassPopulationPlanetSuperPopulation">
+    <TooltipElement>
+      <EffectOverride>%ClassPopulationPlanetSuperPopulationEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AffinityMinorHacking">
+    <Title>%AffinityMinorHackingTitle</Title>
+    <Description>%AffinityMinorHackingDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityMinorHackingSmall" />
+      <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityMinorHackingMedium" />
+      <Icon Size="MediumInverted" Path="Bitmaps/Dynamic/Affinities/MediumInverted/AffinityMinorHackingMediumInverted" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/Affinities/AffinityMinorHackingLarge" />
+    </Icons>
+    <SymbolString>[kalmat]</SymbolString>
+    <Color Red="255" Green="141" Blue="102" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <GuiElement Name="HackingSpeedMultiplierFromBackdoor">
+    <Title>%HackingSpeedMultiplierFromBackdoorTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="HackingSpeedMultiplierFromTimeBubble">
+    <Title>%HackingSpeedMultiplierFromTimeBubbleTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="FinalProcessingPowerAllocation">
+    <Title>%FinalProcessingPowerAllocationTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="HackingSpeedMultiplierForSelf">
+    <Title>%HackingSpeedMultiplierForSelf</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HackingSpeedMultiplierForOthers">
+    <Title>%HackingSpeedMultiplierForOthers</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlaceViewerOffenseHackingProgramEffect">
+    <TooltipElement>
+      <EffectOverride>%PlaceViewerOffenseHackingProgramEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="RerouteOffenseHackingProgramEffect">
+    <TooltipElement>
+      <EffectOverride>%RerouteOffenseHackingProgramEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="PlaceViewerDefenseHackingProgramEffect">
+    <TooltipElement>
+      <EffectOverride>%PlaceViewerDefenseHackingProgramEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="BackdoorPreventionDefenseHackingProgramEffect">
+    <TooltipElement>
+      <EffectOverride>%BackdoorPreventionDefenseHackingProgramEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="FakeContextualRestriction">
+    <TooltipElement>
+      <EffectOverride>%BlackmailTraceDefenseHackingProgramEffectOverride</EffectOverride>
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HackingPressureBonus">
+    <Title>%HackingPressureBonusTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MinorPraiseCostMultiplier">
+    <Title>%MinorPraiseCostMultiplierTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MinorQuestCostMultiplier">
+    <Title>%MinorQuestCostMultiplierTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="MaximumHackingOperationsCount">
+    <Title>%MaximumHackingOperationCountTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HackingWarpSpeed">
+    <Title>%HackingWarpSpeedTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="HackingSpeedPercentMultiplier">
+    <Title>%HackingWarpSpeedTitle</Title>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="TurnsBeforeFleetSpawn">
+    <Title>%TurnsBeforeFleetSpawnTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PirateReinforcements">
+    <Title>%PirateReinforcementsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="ReducedPirateActionsCost">
+    <Title>%ReducedPirateActionsCostTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PirateDiplomacyCostMultiplier">
+    <Title>%PirateDiplomacyCostMultiplierTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="ColonizedStarSystemStateGhost">
+    <Title>%ColonizedStarSystemStateGhostTitle</Title>
+  </ExtendedGuiElement>
+  <ExtendedGuiElement Name="ColonizedStarSystemStateGhostMultiple">
+    <Title>%ColonizedStarSystemStateGhostMultipleTitle</Title>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="EmpireMoneyGainedFromTraitors">
+    <Title>%EmpireMoneyGainedFromTraitorsTitle</Title>
+  </GuiElement>
+  <RandomGuiElement Name="MoneyRatioLostFromTraitors">
+    <Titles>
+      <Title>%MoneyRatioLostFromTraitorsTitle1</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle2</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle3</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle4</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle5</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle6</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle7</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle8</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle9</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle10</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle11</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle12</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle13</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle14</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle15</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle16</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle17</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle18</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle19</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle20</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle21</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle22</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle23</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle24</Title>
+      <Title>%MoneyRatioLostFromTraitorsTitle25</Title>
+    </Titles>
+  </RandomGuiElement>
+  <GuiElement Name="TraitorGainsMultiplier">
+    <Title>%TraitorGainsMultiplierTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="TraitorsCount">
+    <Title>%TraitorsCountTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperPopulationCount">
+    <Title>%SuperPopulationCountTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="EmpireTraitorsCount">
+    <Title>%EmpireTraitorsCountTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="UnlockedProgramCount">
+    <Title>%UnlockedProgramCountTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="VisionStrength">
+    <Title>%PanelFeatureModuleVisionStrengthTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="DetectionProbeVisionStrength">
+    <Title>%DetectionProbeVisionStrengthTitle</Title>
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="AntiVisionStrengthForModule">
+    <Title>%PanelFeatureModuleAntiVisionStrengthForModuleTitle</Title>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="BaseEmpireMoney">
+    <Title>%BaseEmpireMoneyTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="BackdoorCount">
+    <Title>%BackdoorCountTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="TotalCommandPointsOnHeroFleet">
+    <Title>%TotalCommandPointsOnHeroFleetTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="HackingNodeSpeed">
+    <Title>%HackingWarpSpeedTitle</Title>
+    <Description>%HackingSpeedDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/HackingSpeedSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/HackingSpeedLarge" />
+    </Icons>
+    <SymbolString>[hackingSpeed]</SymbolString>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <ExtendedGuiElement Name="TracingSpeed">
+    <Title>%TracingWarpSpeedTitle</Title>
+    <Description>%TracingSpeedDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Atlased/GameVariables/HackingSpeedSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/GameVariables/TracingSpeedLarge" />
+    </Icons>
+    <SymbolString>[hackingSpeed]</SymbolString>
+    <Color Red="249" Green="230" Blue="196" Alpha="255" />
+  </ExtendedGuiElement>
+
+  <GuiElement Name="NetHackingOperationProgress">
+    <Title>%HackingWarpSpeedTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="GameSpeedHackMultiplier">
+    <Title>%JoinGameSessionListTableGameSpeedTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetAnomalyNegative">
+    <Title>%PlanetAnomalyNegativeTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="PlanetAnomalyReduced">
+    <Title>%PlanetAnomalyReducedTitle</Title>
+  </GuiElement>
+
+  <ExtendedGuiElement Name="SystemHeroFIDSIPercent">
+    <Title>%SystemHeroFIDSIPercentTitle</Title>
+    <SymbolString>[FIDSI]</SymbolString>
+    <TooltipElement Percent="true"/>
+  </ExtendedGuiElement>
+
+  <GuiElement Name="HackingProgramEffectSpeedupHackingOperation">
+    <Title>%SpeedupHackingOffenseHackingProgramTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="HackingProgramEffectSlowndownTrace">
+    <Title>%BackdoorPreventionDefenseHackingProgramTitle</Title>
+  </GuiElement>
+
+  <!-- Super Affinity -->
+  <GuiElement Name="SuperAffinitySophons">
+    <Title>%SuperAffinitySophonsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityCravers">
+    <Title>%SuperAffinityCraversTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityVenetians">
+    <Title>%SuperAffinityVenetiansTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityVampirilis">
+    <Title>%SuperAffinityVampirilisTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityTerrans">
+    <Title>%SuperAffinityTerransTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityMezari">
+    <Title>%SuperAffinityMezariTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinitySheredyn">
+    <Title>%SuperAffinitySheredynTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityHoratio">
+    <Title>%SuperAffinityHoratioTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityTimeLords">
+    <Title>%SuperAffinityTimeLordsTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityUnfallen">
+    <Title>%SuperAffinityUnfallenTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityVaulters">
+    <Title>%SuperAffinityVaultersTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityMajorHisshos">
+    <Title>%SuperAffinityMajorHisshosTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityUmbralChoir">
+    <Title>%SuperAffinityUmbralChoirTitle</Title>
+  </GuiElement>
+
+  <GuiElement Name="SuperAffinityTemplars">
+    <Title>%SuperAffinityTemplarsTitle</Title>
+  </GuiElement>
+</Datatable>

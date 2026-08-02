@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- ########################################## -->
+    <!-- ######        MAJOR FACTIONS        ###### -->
+    <!-- ########################################## -->
+    <SimulationDescriptor Name="AffinityGameplayUmbralChoir" Type="AffinityGameplay">
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeForest"    TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeTerran"    TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeMonsoon"   TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeOcean"     TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeAtoll"     TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeBoreal"    TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeJungle"    TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"     Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeFake"      TooltipHidden="true"/>
+
+        <!-- System status modifiers. -->
+        <Modifier TargetProperty="CanGrowMultiplePopPerTurn"    Operation="Force"       Value="1"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HasGhostSystems"              Operation="Force"       Value="1"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HasHiddenHomeSystem"          Operation="Force"       Value="1"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="IsHiddenSystem"               Operation="Addition"    Value="1"   Path="ClassEmpire/ClassColonizedStarSystem,HomeSystem,!ColonizedStarSystemStateGhost" TooltipHidden="true"/>
+        <Modifier TargetProperty="FleetsSpawnInvisible"         Operation="Force"       Value="1"   Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="MaximumPopulation"            Operation="Addition"    Value="3"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeDestroyed" TooltipHidden="true"/>
+        <Modifier TargetProperty="MaximumPopulation"            Operation="Addition"    Value="2"   Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeDestroyedGas" TooltipHidden="true"/>
+        <Modifier TargetProperty="HasObliteratorDefense"        Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem" Priority="10" TooltipHidden="true"/>
+        <Modifier TargetProperty="CanBeTargetedByInfluenceEffects"      Operation="Force"       Value="0"   Path="ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony" TooltipHidden="true"/>
+
+        <!-- No influence at all. -->
+        <Modifier TargetProperty="SystemInfluenceRadius"     	        Operation="Force"		Value="0"		Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true" Priority="10"/>
+        <Modifier TargetProperty="SystemNextInfluenceRadiusEstimation"  Operation="Force"		Value="0"		Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true" Priority="10"/>
+        <Modifier TargetProperty="CanBeConverted"                       Operation="Force"		Value="0"		Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true"/>
+
+        <!-- Only 1 HQ (on the colony), and one subsidiary per Haunt (built automatically). -->
+        <Modifier TargetProperty="MaximumNumberOfTradingCompanyHeadquarters" Operation="Force" Value="1" TooltipHidden="true"/>
+        <Modifier TargetProperty="MaximumNumberOfTradingCompanySubsidiaries" Operation="Force" Value="$(ColonizedStarSystemStateGhostCount)" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="KillForeignPopulationOnInvade" Operation="Force" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitReducedManpowerFromFood"    Type="FactionTrait">
+        <Modifier TargetProperty="PassiveEnrollmentRate" Operation="Percent" Value="-0.75" Path="ClassEmpire/ColonizedStarSystemStateColony,ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitManpowerFromProcessingPower"    Type="FactionTrait">
+        <Modifier TargetProperty="PassiveProcessingPowerEnrollmentRate" Operation="Addition" Value="0.5" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitBonusHackingRoutes"    Type="FactionTrait">
+        <Modifier TargetProperty="MaximumHackingOperationsCount" Operation="Addition" Value="1" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitBonusHackingSpeed"    Type="FactionTrait">
+        <Modifier TargetProperty="HackingWarpSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HackingNonWarpSpeed"  Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HackingNodeSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitTradePenalty"    Type="FactionTrait">
+        <Modifier TargetProperty="TradingRouteIncomeModifier"       Operation="Percent" Value="-0.5" Path="../ClassEmpire/ClassColonizedStarSystem"/>
+        <Modifier TargetProperty="TradingRouteIncomeEmpireModifier" Operation="Percent" Value="-0.5" Path="../ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitNativelyInvisibleShips"    Type="FactionTrait">
+        <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Force" Value="1" Path="../ClassEmpire/ClassGarrisonFleet/ClassShip" Priority="-1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitProcessingPowerFromTraitors"    Type="FactionTrait">
+        <BinaryModifier TargetProperty="MaximumEmpireProcessingPowerStock" Operation="Addition" Left="$(TraitorsCount)" BinaryOperation="Multiplication" Right="1" Path="../ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitLuxuryCostModifier"    Type="FactionTrait">
+        <Modifier TargetProperty="RecipeCostMultiplier" Operation="Percent" Value="1" Path="../ClassEmpire"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="FactionTraitAntiExpansionists"    Type="FactionTrait">
+        <Modifier TargetProperty="OverColonizationPenaltiesReduction"      Value="1"    Operation="Addition"    Path="ClassEmpire"/>
+        <BinaryModifier TargetProperty="MaximumEmpireProcessingPowerStockOvercolonizationMultiplier"    Operation="Addition"    Left="-0.05"    BinaryOperation="Multiplication"    Right="$(SystemsAboveOverColonizationCount)" Path="ClassEmpire" TooltipOverride="%FactionTraitAntiExpansionistsProcessingPowerEffectOverride"/>
+    </SimulationDescriptor>
+
+    <!-- ################################################# -->
+    <!-- #######        MINOR FACTION TRAITS         ##### -->
+    <!-- ################################################# -->
+
+    <SimulationDescriptor Name="FactionTraitMinorProcessingPowerCostReduction01" Type="FactionTraitMinor">
+        <Modifier TargetProperty="FinalProcessingPowerAllocation"	   Operation="Percent"		Value="-0.1"	Path="../ClassEmpire/ClassHacking/ClassHackingProgram" />
+        <Modifier TargetProperty="MinorTraitsAssimilated"                 Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMinorBonusHackingSpeed"    Type="FactionTraitMinor">   
+        <Modifier TargetProperty="HackingWarpSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HackingNonWarpSpeed"  Value="0.10"  Operation="Percent" Path="ClassEmpire" TooltipHidden="true"/>
+        <Modifier TargetProperty="HackingNodeSpeed"     Value="0.10"  Operation="Percent" Path="ClassEmpire" />
+        <Modifier TargetProperty="MinorTraitsAssimilated"                 Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMinorMinorHacking"    Type="FactionTrait"/>
+
+</Datatable>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Droplist.xsd">
+
+  <!-- ######################### -->
+  <!--          Metaplot          -->
+  <!-- ######################### -->
+
+  <Droplist Name="MetaplotLodestoneRewards" Selector="Weighted" RetryOnFailure="true" Fallback="DroplistLuxuries">
+    <Resource Name="Luxury1" Quantity="100" Weight="1"/>
+    <Resource Name="Luxury2" Quantity="100" Weight="1"/>
+    <Resource Name="Luxury3" Quantity="100" Weight="1"/>
+    <Resource Name="Luxury4" Quantity="100" Weight="1"/>
+    <Resource Name="Luxury5" Quantity="100" Weight="1"/>
+    <Resource Name="Luxury6" Quantity="100" Weight="1"/>
+    <Resource Name="Luxury7" Quantity="100" Weight="1"/>
+    <Resource Name="Luxury8" Quantity="100" Weight="1"/>
+  </Droplist>
+
+  <!--CH4-1 - Militarist: System Improvement-->
+  <Droplist Name="DroplistRewardQuestTemplars01" Fallback="DroplistLuxuries">
+    <Unlock Name="StarSystemImprovementQuestTemplars01" SimulationTag="CompletedQuestTemplars01">
+      <PathPrerequisite Flags="Discard">../ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+    </Unlock>
+  </Droplist>
+
+  <!--CH4-1 - Pacifist: System Improvement-->
+  <Droplist Name="DroplistRewardQuestTemplars02" Fallback="DroplistLuxuries">
+    <Unlock Name="StarSystemImprovementQuestTemplars02" SimulationTag="CompletedQuestTemplars02">
+      <PathPrerequisite Flags="Discard">../ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+    </Unlock>
+  </Droplist>
+
+  <!--CH4-1 - Ecologist: System Improvement-->
+  <Droplist Name="DroplistRewardQuestTemplars03" Fallback="DroplistLuxuries">
+    <Unlock Name="StarSystemImprovementQuestTemplars03" SimulationTag="CompletedQuestTemplars03">
+      <PathPrerequisite Flags="Discard">../ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+    </Unlock>
+  </Droplist>
+
+  <!--CH4-1B - Pacifist: System Improvement-->
+  <Droplist Name="DroplistRewardQuestTemplars04" Fallback="DroplistLuxuries">
+    <Unlock Name="StarSystemImprovementQuestTemplars04" SimulationTag="CompletedQuestTemplars04">
+      <PathPrerequisite Flags="Discard">../ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+    </Unlock>
+  </Droplist>
+
+  <!--CH4-1A - religious: Empire Improvement-->
+  <Droplist Name="DroplistRewardQuestTemplars05" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementTemplarsFinalQuest1" SimulationTag="CompletedQuestTemplars05">
+      <PathPrerequisite Flags="Discard">../ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+    </Unlock>
+  </Droplist>
+
+  <!--CH4-2B - Ecologist: Empire Improvement-->
+  <Droplist Name="DroplistRewardQuestTemplars06" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementTemplarsFinalQuest2" SimulationTag="CompletedQuestTemplars06">
+      <PathPrerequisite Flags="Discard">../ClassEmpire,AffinityGameplayTemplars</PathPrerequisite>
+    </Unlock>
+  </Droplist>
+
+
+  <!-- ######################### -->
+  <!--      Templars Quests      -->
+  <!-- ######################### -->
+
+  <Droplist Name="DroplistRewardRelics" Fallback="DroplistLuxuries">
+    <Relic Amount="2.0" Weight="5"/>
+    <Relic Amount="3.0" Weight="3"/>
+    <Relic Amount="4.0" Weight="1"/>
+  </Droplist>
+
+  <Droplist Name="DroplistRewardTokenRelics" Fallback="DroplistTokenLuxuries">
+    <Relic Amount="1.0" Weight="2"/>
+    <Relic Amount="2.0" Weight="1"/>
+  </Droplist>
+
+  <Droplist Name="DroplistTokenLuxuries" Selector="Weighted" RetryOnFailure="true">
+    <Resource Name="Luxury1" Quantity="5" Weight="8"/>
+    <Resource Name="Luxury2" Quantity="5" Weight="8"/>
+    <Resource Name="Luxury3" Quantity="5" Weight="8"/>
+    <Resource Name="Luxury4" Quantity="5" Weight="8"/>
+    <Resource Name="Luxury5" Quantity="5" Weight="8"/>
+    <Resource Name="Luxury6" Quantity="5" Weight="8"/>
+    <Resource Name="Luxury7" Quantity="5" Weight="8"/>
+    <Resource Name="Luxury8" Quantity="5" Weight="8"/>
+  </Droplist>
+  <Droplist Name="DroplistRewardEmpirePointsByRelics" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementEmpirePointByRelic" SimulationTag="EmpireImprovementEmpirePointByRelic-Reward"/>
+  </Droplist>
+
+
+  <!-- ######################### -->
+  <!--   Named Ships Salvages    -->
+  <!-- ######################### -->
+  <!-- Note: only droppables of type "Resource" works for the salvages. -->
+
+  <!--TechnologyQuadrantGlobalProgress 1-->
+  <Droplist Name="DroplistSalvageNameShipVaultKeeperEra1" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="100" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="150" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="20" Weight="5"/>
+    <Resource Name="Strategic2" Quantity="20" Weight="5"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipMasterOfDustEra1" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="100" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="150" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="20" Weight="5"/>
+    <Resource Name="Strategic2" Quantity="20" Weight="5"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipLibrarianEra1" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="100" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="150" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="20" Weight="5"/>
+    <Resource Name="Strategic2" Quantity="20" Weight="5"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipGrandAdmiralEra1" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="100" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="150" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="20" Weight="5"/>
+    <Resource Name="Strategic2" Quantity="20" Weight="5"/>
+  </Droplist>
+
+  <!--TechnologyQuadrantGlobalProgress 2-->
+  <Droplist Name="DroplistSalvageNameShipVaultKeeperEra2" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="200" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="300" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="40" Weight="8"/>
+    <Resource Name="Strategic2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury1" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury3" Quantity="40" Weight="8"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipMasterOfDustEra2" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="200" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="300" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="40" Weight="8"/>
+    <Resource Name="Strategic2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury1" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury3" Quantity="40" Weight="8"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipLibrarianEra2" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="200" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="300" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="40" Weight="8"/>
+    <Resource Name="Strategic2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury1" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury3" Quantity="40" Weight="8"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipGrandAdmiralEra2" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="200" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="300" Weight="5"/>
+    <Resource Name="Strategic1" Quantity="40" Weight="8"/>
+    <Resource Name="Strategic2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury1" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury2" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury3" Quantity="40" Weight="8"/>
+  </Droplist>
+
+  <!--TechnologyQuadrantGlobalProgress 3-->
+  <Droplist Name="DroplistSalvageNameShipVaultKeeperEra3" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="400" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="600" Weight="5"/>
+    <Resource Name="Strategic2" Quantity="75" Weight="4"/>
+    <Resource Name="Strategic3" Quantity="40" Weight="8"/>
+    <Resource Name="Strategic4" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury4" Quantity="70" Weight="8"/>
+    <Resource Name="Luxury5" Quantity="70" Weight="8"/>
+    <Resource Name="Luxury6" Quantity="70" Weight="8"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipMasterOfDustEra3" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="400" Weight="6"/>
+    <Resource Name="EmpireMoney" Quantity="600" Weight="8"/>
+    <Resource Name="Strategic2" Quantity="75" Weight="4"/>
+    <Resource Name="Strategic3" Quantity="40" Weight="6"/>
+    <Resource Name="Strategic4" Quantity="40" Weight="6"/>
+    <Resource Name="Luxury4" Quantity="70" Weight="5"/>
+    <Resource Name="Luxury5" Quantity="70" Weight="5"/>
+    <Resource Name="Luxury6" Quantity="70" Weight="5"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipLibrarianEra3" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="400" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="600" Weight="5"/>
+    <Resource Name="Strategic2" Quantity="75" Weight="4"/>
+    <Resource Name="Strategic3" Quantity="40" Weight="8"/>
+    <Resource Name="Strategic4" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury4" Quantity="70" Weight="8"/>
+    <Resource Name="Luxury5" Quantity="70" Weight="8"/>
+    <Resource Name="Luxury6" Quantity="70" Weight="8"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipGrandAdmiralEra3" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="400" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="600" Weight="5"/>
+    <Resource Name="Strategic2" Quantity="75" Weight="4"/>
+    <Resource Name="Strategic3" Quantity="40" Weight="8"/>
+    <Resource Name="Strategic4" Quantity="40" Weight="8"/>
+    <Resource Name="Luxury4" Quantity="70" Weight="8"/>
+    <Resource Name="Luxury5" Quantity="70" Weight="8"/>
+    <Resource Name="Luxury6" Quantity="70" Weight="8"/>
+  </Droplist>
+
+  <!--TechnologyQuadrantGlobalProgress 4-->
+  <Droplist Name="DroplistSalvageNameShipVaultKeeperEra4" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="800" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="1400" Weight="5"/>
+    <Resource Name="Strategic3" Quantity="75" Weight="8"/>
+    <Resource Name="Strategic4" Quantity="75" Weight="8"/>
+    <Resource Name="Luxury17" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury18" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury19" Quantity="50" Weight="4"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipMasterOfDustEra4" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="800" Weight="5"/>
+    <Resource Name="EmpireMoney" Quantity="1400" Weight="8"/>
+    <Resource Name="Strategic3" Quantity="75" Weight="6"/>
+    <Resource Name="Strategic4" Quantity="75" Weight="6"/>
+    <Resource Name="Luxury17" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury18" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury19" Quantity="50" Weight="4"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipLibrarianEra4" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="800" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="1400" Weight="5"/>
+    <Resource Name="Strategic3" Quantity="75" Weight="8"/>
+    <Resource Name="Strategic4" Quantity="75" Weight="8"/>
+    <Resource Name="Luxury17" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury18" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury19" Quantity="50" Weight="4"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipGrandAdmiralEra4" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="800" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="1400" Weight="5"/>
+    <Resource Name="Strategic3" Quantity="75" Weight="8"/>
+    <Resource Name="Strategic4" Quantity="75" Weight="8"/>
+    <Resource Name="Luxury17" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury18" Quantity="50" Weight="4"/>
+    <Resource Name="Luxury19" Quantity="50" Weight="4"/>
+  </Droplist>
+
+  <!--TechnologyQuadrantGlobalProgress 5-->
+  <Droplist Name="DroplistSalvageNameShipVaultKeeperEra5" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="1600" Weight="8"/>
+    <Resource Name="EmpireMoney" Quantity="2300" Weight="5"/>
+    <Resource Name="Strategic5" Quantity="50" Weight="8"/>
+    <Resource Name="Strategic6" Quantity="50" Weight="8"/>
+    <Resource Name="Luxury17" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury18" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury19" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury20" Quantity="60" Weight="4"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipMasterOfDustEra5" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="1600" Weight="5"/>
+    <Resource Name="EmpireMoney" Quantity="2300" Weight="8"/>
+    <Resource Name="Strategic5" Quantity="50" Weight="3"/>
+    <Resource Name="Strategic6" Quantity="50" Weight="3"/>
+    <Resource Name="Luxury17" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury18" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury19" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury20" Quantity="60" Weight="4"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipLibrarianEra5" Selector="Weighted">
+        <Resource Name="EmpireMoney" Quantity="1600" Weight="4"/>
+        <Resource Name="EmpireMoney" Quantity="2300" Weight="3"/>
+        <Resource Name="Strategic5" Quantity="50" Weight="5"/>
+        <Resource Name="Strategic6" Quantity="50" Weight="5"/>
+        <Resource Name="Luxury17" Quantity="60" Weight="8"/>
+        <Resource Name="Luxury18" Quantity="60" Weight="8"/>
+        <Resource Name="Luxury19" Quantity="60" Weight="8"/>
+        <Resource Name="Luxury20" Quantity="60" Weight="8"/>
+  </Droplist>
+
+  <Droplist Name="DroplistSalvageNameShipGrandAdmiralEra5" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="1600" Weight="5"/>
+    <Resource Name="EmpireMoney" Quantity="2300" Weight="5"/>
+    <Resource Name="Strategic5" Quantity="50" Weight="8"/>
+    <Resource Name="Strategic6" Quantity="50" Weight="8"/>
+    <Resource Name="Luxury17" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury18" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury19" Quantity="60" Weight="4"/>
+    <Resource Name="Luxury20" Quantity="60" Weight="4"/>
+  </Droplist>
+
+</Datatable>

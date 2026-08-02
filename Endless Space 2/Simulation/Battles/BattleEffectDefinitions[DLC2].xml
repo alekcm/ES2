@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/BattleEffectDefinition.xsd">
+
+    <BattleEffect_ApplyDescriptor Name="Weapon_EMPWeaponDeactivationInfinite" Duration="-1" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="EncounterEntityStatusDisabled"/>
+    </BattleEffect_ApplyDescriptor>
+
+    <BattleEffect_ApplyDescriptor Name="Ship_EMPWeaponsDeactivationInfinite" Duration="-1" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="WeaponsStatusDisabled"/>
+    </BattleEffect_ApplyDescriptor>
+
+    <BattleEffect_SetPropertyValue Name="Core_KamikazeShipDestruction" PropertyName="Health" Operation="Set" InterpreterFormula="0"/>
+    <BattleEffect_ApplyDescriptor Name="Ship_KamikazeShipDestruction" Duration="-1" StackingBehaviour="Stack">
+        <SimulationDescriptorReference Name="ShipHasDiedFromKamikaze"/>
+    </BattleEffect_ApplyDescriptor>
+
+    <BattleEffect_ApplyDescriptor Name="BattleEffectCitadelWeaponAddSpecificDescriptor" Duration="-1">
+        <SimulationDescriptorReference Name="ClassCitadelWeaponEncounter"/>
+    </BattleEffect_ApplyDescriptor>
+
+
+    <BattleEffect_SetPropertyValue Name="Ship_SetShipManpowerStockInitial"                                         PropertyName="ShipManpowerStockInitial"                      Operation="Addition"    InterpreterFormula="Property(Target, @ClassShip, ShipManpowerStock)"/>
+    <BattleEffect_SetPropertyValue Name="Group_IncreaseDestroyedManpowerForEssenceRecyclingOnShipDestruction"      PropertyName="DestroyedManpowerForEssenceRecycling"          Operation="Addition"    InterpreterFormula="Property(Initiator, @ClassShip, ShipManpowerStock)" />
+    <BattleEffect_SetPropertyValue Name="Ship_IncreaseDestroyedManpowerForEssenceRecycling"                        PropertyName="ShipDestroyedManpowerForEssenceRecycling"      Operation="Addition"    InterpreterFormula="Property(Target, @ClassShip, ShipManpowerStockInitial) - Property(Target, @ClassShip, ShipManpowerStock)" />
+    <BattleEffect_EmpireReward_Resource Name="Group_OpponentRecyclingEssenceGainReward"     ResourceName="EmpireLifeforce"      InterpreterFormula="Property(Owner, @ClassGroup, OpponentRecyclingEssencePerManpower) * (Property(Target, @ClassGroup, DestroyedManpowerForEssenceRecycling) + SumProperty(Target, @'ClassGroup/ClassFlotilla/ClassShip', ShipDestroyedManpowerForEssenceRecycling))" />
+
+    <BattleEffect_SetPropertyValue Name="Ship_HealPerSecondReceived"     PropertyName="DamageReceived" Operation="Subtraction"      InterpreterFormula="Min(Property(Target,@ClassShip/ClassSectionCore, Health) + Property(Initiator, @ClassShip, HPRestoredPerSecond), Property(Target, @ClassShip/ClassSectionCore, MaximumHealth)) - Property(Target, @ClassShip/ClassSectionCore, Health)" Duration="-1" Frequency="1" >
+        <CancellationEventPrerequisite EventType="LastPhaseStart"/>
+    </BattleEffect_SetPropertyValue>
+    <BattleEffect_SetPropertyValue Name="Core_HealPerSecond"     PropertyName="Health" Operation="Set"      InterpreterFormula="Min(Property(Target,@ClassSectionCore, Health) + Property(Initiator, @ClassShip, HPRestoredPerSecond), Property(Target, @ClassSectionCore, MaximumHealth)) " Duration="-1" Frequency="1" >
+        <CancellationEventPrerequisite EventType="LastPhaseStart"/>
+    </BattleEffect_SetPropertyValue>
+
+    <BattleEffect_SetPropertyValue Name="ShieldHolder_ComputeCriticalDamageReductionResult" PropertyName="CriticalDamageReductionResult" Operation="Set" InterpreterFormula="Random(0, 1)" />
+    <BattleEffect_SetPropertyValue Name="Salvo_ReduceDamageToZero" PropertyName="EffectiveDamage" Operation="Set" InterpreterFormula="0"/>
+    <BattleEffect_SetPropertyValue Name="Salvo_DestroyOnShieldHit" PropertyName="Health" Operation="Set" InterpreterFormula="0"/>
+
+    <BattleEffect_SetPropertyValue Name="Group_SetAliveShipCount"        PropertyName="GroupAliveShipCount" Operation="Set"         InterpreterFormula="Property(Target, @ClassGroup, InitialShipsCount)"/>
+    <BattleEffect_SetPropertyValue Name="Group_ReduceAliveShipCount"     PropertyName="GroupAliveShipCount" Operation="Subtraction" InterpreterFormula="1"/>
+    
+    <BattleEffect_SetPropertyValue Name="Module_IncreaseAttackFromLastStand"      PropertyName="DamageBonusIfOneShip" Operation="Addition" InterpreterFormula="Property(Target, @'../ClassShip', DamageBonusIfOneShip)"/>
+    <BattleEffect_SetPropertyValue Name="Ship_IncreaseDefenseFromLastStand"     PropertyName="DefenseBonusIfOneShipEncounter" Operation="Addition" InterpreterFormula="Property(Target, @ClassShip, DefenseBonusIfOneShip)"/>
+    
+
+    <!-- ****************************** -->
+    <!-- *****     CITADEL         **** -->
+    <!-- ****************************** -->
+
+    <BattleEffect_SetPropertyValue Name="CitadelWeapon_IncreaseTotalShot" PropertyName="TotalShot" Operation="Addition" InterpreterFormula="1"/>
+    <BattleEffect_SetPropertyValue Name="CitadelWeapon_IncreaseTotalHit"  PropertyName="TotalHit" Operation="Addition" InterpreterFormula="1"/>
+
+    <BattleEffect_SetPropertyValue Name="CitadelSalvo_InitDamageAgainstSmallShipsModifier"            PropertyName="DamageAgainstSmallShipsModifierFromWeapon"              Operation="Set"             InterpreterFormula="Property(Owner, @ClassCitadelWeapon, DamageAgainstSmallShipsModifier)"/>
+    <BattleEffect_SetPropertyValue Name="CitadelSalvo_InitDamageAgainstMediumShipsModifier"           PropertyName="DamageAgainstMediumShipsModifierFromWeapon"             Operation="Set"             InterpreterFormula="Property(Owner, @ClassCitadelWeapon, DamageAgainstMediumShipsModifier)"/>
+    <BattleEffect_SetPropertyValue Name="CitadelSalvo_InitDamageAgainstLargeShipsModifier"            PropertyName="DamageAgainstLargeShipsModifierFromWeapon"              Operation="Set"             InterpreterFormula="Property(Owner, @ClassCitadelWeapon, DamageAgainstLargeShipsModifier)"/>
+
+    <!-- For flotilla shield & bonuses and stuff-->
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOE_InitEffectiveDamage" PropertyName="EffectiveDamage" Operation="Set"
+                                   InterpreterFormula="Property(Owner, @ClassCitadelWeapon, Damage)"/>
+
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOE_ApplyDamageBonusPerTargetCommandPoints"      PropertyName="EffectiveDamage"          Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @./ClassCitadel, DamageBonusPerTargetCommandPoints) * Property(InitiatorTarget, @ClassFlotilla, CommandPoints)"/>
+
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOETargetSmall_UpdateHealthFromSalvo"         PropertyName="Health"               Operation="Subtraction"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstSmallShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOETargetMedium_UpdateHealthFromSalvo"         PropertyName="Health"               Operation="Subtraction"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstMediumShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOETargetLarge_UpdateHealthFromSalvo"         PropertyName="Health"               Operation="Subtraction"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstLargeShipsModifier)" />
+
+
+    <!-- Statistics-->
+    <!--Changing amount of FakeDamage on core section-->
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOETargetSmall_UpdateFakeDamageReceivededForAOEStatsFromCitadelSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstSmallShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOETargetMedium_UpdateFakeDamageReceivededForAOEStatsFromCitadelSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstMediumShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="CitadelSalvoAOETargetLarge_UpdateFakeDamageReceivededForAOEStatsFromCitadelSalvo"         PropertyName="FakeDamageReceivededForAOEStats"               Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstLargeShipsModifier)" />
+
+    <!--Summing it up on Citadel -->
+
+    <BattleEffect_SetPropertyValue Name="AttackingCitadel_UpdateDamageAppliedByAOEFromSalvo"  PropertyName="DamageAppliedByAOE"     Operation="Addition"
+                                   InterpreterFormula="Property(InitiatorTarget, @ClassFlotilla,  FakeDamageReceivededForAOEStats)" />
+
+    <!--Battle Damage Display-->
+    <BattleEffect_SetPropertyValue Name="AOETargetedSmallEntity_UpdateDamageReceivedFromCitadelSalvo"     PropertyName="DamageReceived"        Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstSmallShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="AOETargetedMediumEntity_UpdateDamageReceivedFromCitadelSalvo"     PropertyName="DamageReceived"        Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstMediumShipsModifier)" />
+
+    <BattleEffect_SetPropertyValue Name="AOETargetedLargeEntity_UpdateDamageReceivedFromCitadelSalvo"     PropertyName="DamageReceived"        Operation="Addition"
+                                   InterpreterFormula="Property(Initiator, @ClassCitadelSalvo, EffectiveDamage) * Property(Owner, @ClassCitadelWeapon, DamageAgainstLargeShipsModifier)" />
+
+</Datatable>

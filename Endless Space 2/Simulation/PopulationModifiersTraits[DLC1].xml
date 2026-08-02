@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <!--First trait is the same as sophons-->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitSecondaryGroundBattleAttackerDamage01" SubCategory="Secondary" ShowInCustom="true" Cost="5">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <!--+20 Ground battle damage to attacker -->
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitSecondaryGroundBattleAttackerDamage01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+20 Ground battle damage to attacker -->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryGroundBattleAttackerDamage01"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitSecondaryGroundBattleAttackerDamage01"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetGroundBattleAttackerDamage01"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+    <!--Vaulter Science Primary-->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitPrimaryScience03" SubCategory="Primary" ShowInCustom="false" Cost="0">
+        <!--Local Bonus: TBD-->
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet" DisplayWhenBoostedOnly="true">
+                <SimulationDescriptorReference Name="WithPopulationPlanetModifiersTraitPrimaryScience03"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet">
+                <!--+3 Science per Population-->
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryScience03"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationPlanet" SuperPopulationOnly="true">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitPrimaryScience03"/>
+            </Modifier>
+        </Modifiers>
+        
+        <AssimilatedModifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationAssimilatedPlanetScience03"/>
+            </Modifier>
+        </AssimilatedModifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

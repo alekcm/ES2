@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+	<!-- Vaulters -->
+    <SimulationDescriptor Name="FactionTraitManualHomeSystem" Type="FactionTrait">
+        <Modifier TargetProperty="MaximumEmpireManpowerStock"   Operation="Addition"    Value="50"  Path="ClassEmpire" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="HasSuperColonizer"            Operation="Force"       Value="1"   Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitGoldenAgePrefix" Type="FactionTrait"/>
+
+    <SimulationDescriptor Name="GoldenAge" Type="GoldenAge">
+        <Modifier TargetProperty="SystemFIDSFlat" 		    Operation="Addition"   	Value="25"   Path="ClassColonizedStarSystem"                SearchValueFromPath="true" EnforceContext="true" />
+        <Modifier TargetProperty="SystemEmpirePoint" 		Operation="Addition"   	Value="5"   Path="ClassColonizedStarSystem"                 SearchValueFromPath="true" EnforceContext="true" />
+        <Modifier TargetProperty="Happiness" 				Operation="Addition"   	Value="15" 	Path="ClassColonizedStarSystem"                 SearchValueFromPath="true" EnforceContext="true" />
+        <Modifier TargetProperty="Happiness" 				Operation="Addition"   	Value="10" 	Path="../ClassEmpire/ClassColonizedStarSystem"  SearchValueFromPath="true" EnforceContext="true" />
+        <Modifier TargetProperty="EmpireManpower"           Operation="Addition"    Value="25"  Path="../ClassEmpire"                           SearchValueFromPath="true" EnforceContext="true" />
+        <Modifier TargetProperty="InfluenceConversionRateModifier"  Operation="Percent"    Value="-0.5" Path="ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="AffinityGameplayVaulters" Type="AffinityGameplay">
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeForest" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeTerran" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeMonsoon" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeOcean" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeAtoll" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeBoreal" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeJungle" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="CanUsePortals"                   Operation="Addition"    Value="1" Path="ClassEmpire,EmpireTypeMajor" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="FactionTraitMinorSistersOfMercy"    Type="FactionTrait"/>
+
+    <SimulationDescriptor Name="FactionTraitCoreWorlds" Type="FactionTrait"> <!--Maxence VolHack in ColonizedStarSystem and Empire-->
+        <Modifier TargetProperty="IsUsingColonizationThresholdHappinessBonus" Operation="Force" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMaterialExpertise" Type="FactionTrait">
+        <Modifier TargetProperty="CanUseStrategicForRecipe" Operation="Force" Value="1" Path="EmpireTypeMajor" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitCorsairs" Type="FactionTrait"/>
+
+    <!-- Sisters of Mercy -->
+  <SimulationDescriptor Name="FactionTraitMinorHealers01" Type="FactionTraitMinor">
+    <Modifier TargetProperty="HealthPerTurn" Operation="Percent" Value="0.5" Path="ClassEmpire/ClassHero"/>
+    <Modifier TargetProperty="MinorTraitsAssimilated"                 Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="FactionTraitMinorHealers02" Type="FactionTraitMinor">
+    <Modifier TargetProperty="HealthRegenerationRatio"           Operation="Addition" Value="0.1"  Path="ClassEmpire//ClassShip"/>
+    <Modifier TargetProperty="MinorTraitsAssimilated"            Operation="Addition" Value="1"    Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+    
+</Datatable>

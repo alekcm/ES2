@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+  
+   <!--UPDATE8_TODO--> 
+   
+  <GuiElement Name="PopulationCollectionBonusSowers1">
+    <Title>%PopulationCollectionBonusSowers1</Title>
+  </GuiElement>
+  <GuiElement Name="PopulationCollectionBonusSowers2">
+    <Title>%PopulationCollectionBonusSowers2</Title>
+  </GuiElement>
+  <ExtendedGuiElement Name="PopulationCollectionBonusSowers3">
+    <Title>%PopulationCollectionBonusSowers3</Title>
+    <TooltipElement>
+      <EffectOverride>%PopulationCollectionBonusSowers3_TooltipEffect</EffectOverride><!--Not necessarily needed, deleted if not when implementing Law Effects-->
+    </TooltipElement>
+  </ExtendedGuiElement>
+
+    <GuiElement Name="PopulationCollectionBonusKalTikMas1">
+        <Title>%PopulationCollectionBonusKalTikMas1</Title>
+    </GuiElement>
+    <GuiElement Name="PopulationCollectionBonusKalTikMas2">
+        <Title>%PopulationCollectionBonusKalTikMas2</Title>
+    </GuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusKalTikMas3">
+        <Title>%PopulationCollectionBonusKalTikMas3</Title>
+        <TooltipElement>
+            <EffectOverride>%PopulationCollectionBonusKalTikMas3_TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="PopulationCollectionBonusSefaloros1">
+        <Title>%PopulationCollectionBonusSefaloros1</Title>
+    </GuiElement>
+    <GuiElement Name="PopulationCollectionBonusSefaloros2">
+        <Title>%PopulationCollectionBonusSefaloros2</Title>
+    </GuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusSefaloros3">
+        <Title>%PopulationCollectionBonusSefaloros3</Title>
+        <TooltipElement>
+            <EffectOverride>%PopulationCollectionBonusSefaloros3_TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="PopulationCollectionBonusGalvrans1">
+        <Title>%PopulationCollectionBonusGalvrans1</Title>
+    </GuiElement>
+    <GuiElement Name="PopulationCollectionBonusGalvrans2">
+        <Title>%PopulationCollectionBonusGalvrans2</Title>
+    </GuiElement>
+    <ExtendedGuiElement Name="PopulationCollectionBonusGalvrans3">
+        <Title>%PopulationCollectionBonusGalvrans3</Title>
+        <TooltipElement>
+            <EffectOverride>%PopulationCollectionBonusGalvrans3_TooltipEffect</EffectOverride>
+        </TooltipElement>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="LawEffectP00L27-PopulationCollectionSowers">
+		<Title>%LawP00PopulationCollectionSowersShortTitle</Title>
+	</GuiElement>
+
+    <GuiElement Name="LawEffectP00L28-PopulationCollectionKalTikMas">
+        <Title>%LawP00PopulationCollectionKalTikMasShortTitle</Title>
+    </GuiElement>
+
+    <GuiElement Name="LawEffectP00L29-PopulationCollectionSefaloros">
+        <Title>%LawP00PopulationCollectionSefalorosShortTitle</Title>
+    </GuiElement>
+
+    <GuiElement Name="LawEffectP00L30-PopulationCollectionGalvrans">
+        <Title>%LawP00PopulationCollectionGalvransShortTitle</Title>
+    </GuiElement>
+    
+</Datatable>

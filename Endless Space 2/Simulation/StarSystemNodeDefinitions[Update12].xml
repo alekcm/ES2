@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/StarSystemNodeDefinition.xsd">
+
+
+    <StarSystemNodeDefinition Name="QuestNodeMezan">
+        <SimulationDescriptorReference Name="StarTypeDouble"/>
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="UniquePlanetMezan"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeHot"/>
+            <SimulationDescriptorReference Name="PlanetSizeMedium"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeMeager"/>
+            <SimulationDescriptorReference Name="PlanetTypeAsh"/>
+            <SimulationDescriptorReference Name="IsUniquePlanet"/>
+            <ResourceDeposit>
+                <DefinitionReference Name="StrategicDeposit1"/>
+                <SizeDescriptorReference Name="DepositSizeAverage"/>
+            </ResourceDeposit>
+        </PlanetDefinition>
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeHot"/>
+            <SimulationDescriptorReference Name="PlanetSizeSmall"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeTeeming"/>
+            <SimulationDescriptorReference Name="PlanetTypeJungle"/>
+            <AnomalyReference Name="PlanetAnomaly01"/>
+        </PlanetDefinition>
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeHot"/>
+            <SimulationDescriptorReference Name="PlanetSizeLarge"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeMeager"/>
+            <SimulationDescriptorReference Name="PlanetTypeLava"/>
+            <CuriosityReference Name="Curiosity_PlanetAnomaly03"/>
+            <CuriosityReference Name="Curiosity_PlanetAnomaly04"/>
+        </PlanetDefinition>
+    </StarSystemNodeDefinition>
+
+    <StarSystemNodeDefinition Name="QuestNodeChiark">
+        <SimulationDescriptorReference Name="StarTypeWhite"/>
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="UniquePlanetChiark"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeTemperate"/>
+            <SimulationDescriptorReference Name="PlanetSizeTiny"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeTeeming"/>
+            <SimulationDescriptorReference Name="PlanetTypeTerran"/>
+            <SimulationDescriptorReference Name="IsUniquePlanet"/>
+        </PlanetDefinition>
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeHot"/>
+            <SimulationDescriptorReference Name="PlanetSizeHuge"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeMeager"/>
+            <SimulationDescriptorReference Name="PlanetTypeDesert"/>
+        </PlanetDefinition>
+        <PlanetDefinition>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeHot"/>
+            <SimulationDescriptorReference Name="PlanetSizeSmall"/>
+            <SimulationDescriptorReference Name="PlanetGameplayTypeMeager"/>
+            <SimulationDescriptorReference Name="PlanetTypeLava"/>
+            <CuriosityReference Name="Curiosity_PlanetAnomaly02"/>
+        </PlanetDefinition>
+    </StarSystemNodeDefinition>
+    
+</Datatable>

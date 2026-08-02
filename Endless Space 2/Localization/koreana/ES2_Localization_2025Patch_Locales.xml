@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%PlanetInitialFIDSIFromMiningProbesTitle">탐사정</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionLabel">이 메뉴를 통해 축적한 호의를 사용해 아카데미에 호의를 베풀 수 있습니다. 경매에 기부하거나, 경쟁 퀘스트를 완료하면 아카데미에 대한 호의는 경매에 기부하거나 경쟁 퀘스트를 완료하여 확보할 수 있습니다.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementQuestGlobalCompet09TooltipEffect">함선 초기 레벨 +3</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity2EffectOverride">총독 영웅의 경험치 획득 +75%</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageEnergyFleetTitle">에너지 병기 피해량</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageProjectileFleetTitle">질량 병기 피해량</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponCriticalHitFleetTitle">함대의 치명타 확률</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementQuestUniquePlanet12TooltipEffect">기술 잠금 해제당 제국에 대한 [dustColored] +5%</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter3Strategic3Title">고급 타격 전투기</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber3Strategic4Title">고급 중폭격기</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaTitle">사이아다</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaDescription">한때 사막으로 덮여 있던 사이아다는 현재 해양 행성이 되었으며 광활한 푸른 바다에는 여기저기 험준한 바위 섬들만 보일 뿐입니다. 신화에 따르면 대양 아래에 위대한 문명의 유적이 남아 있다고 전해지지만, 물 위로 솟아있는 육지를 조사해봐도 그 어떤 증거도 찾기 힘듭니다. 소수의 원시 사회만이 살아남았지만, 저 깊은 어딘가에 강력한 힘이 묻혀 있다고 합니다... </LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Title">심연의 수호자들</LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Description">반쯤 미쳐버린 엔들리스가 이곳에서 금지된 지식을 거래하고 있습니다. 외부인들이 지하 깊숙한 곳의 가장 신성한 곳에 접근하지 않는 조건으로 말이죠.</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Title">세와 에제</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Description">세와는 순례자의 아콜로지인 '빛의 지평선'에서 태어났습니다. 그녀의 성장기 말년 즈음, 연합 제국의 사냥꾼 무리를 피하기 위한 길고 고된 도주에 모 함대가 휘말리게 되었고, 결국 치열한 전투 끝에 아콜로지는 산산이 흩어져 버리고 말았습니다. 그 여파로 인해 인근 위성에서 비상 더스트 저장고를 수색하던 세와는 깊은 더스트 웅덩이에 추락했으나, 며칠 후 더스트로 강화된 능력과 함께 모습을 드러냈습니다. 하지만 그때는 이미 그녀의 함대 잔존 병력이 사라진 지 오래였습니다. 이후 그녀는 은하계의 황무지에서 방랑하는 시기를 거쳐 아카데미에 당도했고, 그곳에서 세심한 지도를 받으며 미숙했던 힘을 갈고 닦았습니다. 그리하여 지평선에서의 복수를 마친 세와는 이제 은하계에서 자유로운 독립 용병으로 활약하고 있습니다.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedTitle">개량됨</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedDescription">이 성계의 이상현상은 유익한 효과를 증강하도록 개량되었습니다.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderTitle">불가사의</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderDescription">이 성계의 이상현상은 유일무이한 것으로, 엄청나게 강력한 효과를 제공합니다.</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsDescription">다른 제국에 빌려주면 성계 침공에 사용할 수 없습니다.
+포획 불가</LocalizationPair>
+  <LocalizationPair Name="%FailureNoTemplesOnGasPlanetsDescription">사원은 가스 행성에 건설할 수 없습니다</LocalizationPair>
+  <LocalizationPair Name="%PlanetImprovementTemple1TooltipOverride">행성에 대한 기본 행성 [fids] 페널티를 제거합니다
+기본 행성 [scienceColored]의 50%가 [prestigeColored](으)로 전환됩니다
+
+[blue-gray](성계 정복 시 사원이 파괴되고 유물도 반환됩니다)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsGroupTooltipDescription">탐험 유물:
+이 유물을 활성화하면 모든 함선에 강력한 보너스를 부여하고, 더 먼 곳을 확인하고 더 빠르게 이동할 수 있습니다.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsGroupTooltipDescription">확장 유물:
+이 유물을 활성화하면 대성당당 과대 확장 한계치가 증가하고 사원이 있는 행성에 대한 기본 반감이 제거됩니다.</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsGroupTooltipDescription">외교 유물:
+이 유물을 활성화하면 알려진 모든 소규모 세력과의 관계가 기본적으로 증가하고 모든 성계에 대한 영향력 반경이 증가합니다.</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsGroupTooltipDescription">정치 유물:
+이 유물을 활성화하면 선출된 정당에 따라 다양한 보너스를 받습니다. 대표 정당 수가 적을수록 이 보너스의 효과가 증가합니다.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsButtonTooltipDescription">효과:
+이동력 포인트 효율 +25%
+함선 및 성계 시야 범위 +5{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsButtonTooltipDescription">효과:
+대성당당 과대 확장 한계치 +1
+행성의 기본 반감 없음{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsButtonTooltipDescription">효과:
+이 슬롯이 활성화된 턴당 영향력 반경 +5% (최대 100%)
+턴당 소규모 세력과의 관계 +1{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsButtonTooltipDescription">대표 정당 배율: {2}
+효과:{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsSlotLocked">[red]이 슬롯은 잠겼습니다. 다른 제국 유물 슬롯을 잠금 해제하려면 잊혀진 자의 대성당을 건설해야 합니다.#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ConstructibleFilterInfiniteDescription">무한 시설만 표시</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemImprovementInfiniteTitle">무한 시설</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLunarAnomalyTooltip">[blue-gray](달 이상현상이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresPlanetAnomalyTooltip">[blue-gray](행성 이상현상이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyAnomalyTooltip">[blue-gray](이상현상이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetTooltip">[blue-gray](가스 행성이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresNegativeOrMixedAnomalyTooltip">[blue-gray](부정적 이상현상 또는 복합 이상현상이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresStrategicDepositTooltip">[blue-gray](전략 자원 매장지가 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLuxuryDepositTooltip">[blue-gray](사치 자원 매장지가 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyDepositTooltip">[blue-gray](자원 매장지가 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresTradeBuildingTooltip">[blue-gray](무역회사 본부 또는 지사를 보유한 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetOrLunarAnomalyTooltip">[blue-gray](가스 행성 또는 달 이상현상이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetTooltip">[blue-gray](불모지 행성이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetOrTradeBuildingTooltip">[blue-gray](무역회사 본부, 지사 또는 불모지 행성이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrFertilePlanetTooltip">[blue-gray](불모지 또는 비옥한 행성이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrHotPlanetTooltip">[blue-gray](불모지 또는 고온 행성이 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelSpaceBattle1Tooltip">[blue-gray](대응 방어 포대를 먼저 건설해야 함)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelTooltip">[blue-gray](성채가 있는 성계에만 건설 가능)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleProjectileCanBeShotDownTitle">투사체가 격추될 수 있음</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNoVisionDescription">성계에 대한 시야 필요</LocalizationPair>
+  <LocalizationPair Name="%LostTemplarsQuest-Chapter1-Part1-ReligiousObjective">$Amount01Name개의 특이사항을 조사하십시오</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsDescription">이 성계를 보호국으로 전환하여 자원과 세력 특성을 얻고 다른 제국의 접근을 차단하지만 직접 점령하지는 않습니다.</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire1OrAboveTitle">저항 이상</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire2OrAboveTitle">만족 이상</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire3OrAboveTitle">충성 이상</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem1OrAboveTitle">행복 이상</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem2OrAboveTitle">만족 이상</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem3OrAboveTitle">행복 이상</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire1OrAboveTitle">저항 이상</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire2OrAboveTitle">충실 이상</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire3OrAboveTitle">충성 이상</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem1OrAboveTitle">저항 이상</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem2OrAboveTitle">충실 이상</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem3OrAboveTitle">충성 이상</LocalizationPair>
+  <LocalizationPair Name="%AssignmentCooldownBaseDurationTitle">임무 대기시간</LocalizationPair>
+  <LocalizationPair Name="%MaximumPopulationTitle">[population] 인구 수용량</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSplashFlotillaDamagePercentTitle">목표 함대 전체에 피해량 분산</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAnnotationsRefusedSciencePartnership">당신은 우리의 과학 협정 제안을 거절했습니다.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementCitadelSpecializationEffectOverride">성채를 보유한 성계가 받는 보너스는 다음과 같습니다.
+ • 성계의 [foodColored] +20%
+ • 성계의 [scienceColored] +20%
+ • 성계의 [industryColored] +20%
+ • 성계의 [prestigeColored] +10%
+ • 성채 주둔군 수용량 [citadelDefenseColored] +1000
+ • [population]당 성채 주둔군 수용량 [citadelDefenseColored] +50</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeSmallDescription">소형 함선은 함대에서 #E3BDAC#1#REVERT# [commandPoint] (지휘 포인트)를 차지합니다.
+선체 약점: #E3BDAC#120#REVERT# (방어량 흡수 참고)</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesReductionTitle">공격 폭격 피해를 받음</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamageReductionTitle">공격 폭격 피해를 받음</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefensiveDamageReductionTitle">방어 폭격 피해를 받음</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundPopulationDestructionProbabilityTitle">침공 중 사망한 인구</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundImprovementDestructionProbabilityTitle">침공 중 파괴된 시설</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelIndustryScienceEffectOverride">건조된 함선의 내구도 +10%
+건조된 함선의 피해량 +10% </LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportMothershipAnchoredDefenseEffectTitle">성계에 고정된 방주는 함대전에서 공격받을 수 없습니다.
+방주의 승무원 인력은 침공에 참여할 수 없습니다.</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockAltTitle">[ManpowerColored] 인력 수용량</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockTitle">[ManpowerColored] 인력 수용량</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseRecoveryTitle">주둔군 회복 속도</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseTitle">성계 주둔군</LocalizationPair>
+  <LocalizationPair Name="%MaximumSystemManpowerTitle">[systemDefenseColored] 주둔군 수용량</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseTitle">성채 주둔군</LocalizationPair>
+  <LocalizationPair Name="%MaximumCitadelManpowerTitle">[citadelDefenseColored] 성채 주둔군 수용량</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseDescription">이 병력은 성계 주둔군과 유사한 임무를 수행하지만 공성 피해로부터 보호됩니다. 이 병력은 성계 주둔군이 가득 차면 충원되기 시작하며, 심 캠프와 같은 효과에는 포함되지 않습니다.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescription">이 성계는 침공을 당하고 있으며, 천천히 [systemDefenseColored] 주둔군 인력을 상실하고고 있습니다.
+현재 [systemDefenseColored] 주둔군 수: {0} / {1} ({2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeWithFleetsDescription">이 성계는 침공을 당하고 있으며, 천천히 [systemDefenseColored] 주둔군 인력을 상실하고 있습니다.
+현재 [systemDefenseColored] 주둔군 수: {0} / {1} ({2} [systemDefenseColored]/[turn])
+
+궤도 상의 함대는 이 성계가 침공당할 경우 {3} [shipCrewColored] 승무원 인력을 주둔군에 제공합니다.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescriptionWithEmpireName">{3}의 {4}(은)는 침공을 당하고 있으며, 천천히 방어도 [systemDefenseColored]를 상실하고 있습니다.
+현재 [systemDefenseColored]: {0} / {1} ({2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%NetSystemManpowerTitle">턴당 [systemDefenseColored]의 주둔군 인력</LocalizationPair>
+  <LocalizationPair Name="%SystemManpowerLossTitle">[systemDefenseColored] 주둔군 인력 피해량</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandTitle">주둔</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandDescription">함대를 주둔시켜 현재 성계의 격납고에 격납하면 신속하게 수리 및 재보급할 수 있습니다. 자신의 성계에만 주둔시킬 수 있습니다.</LocalizationPair>
+  <LocalizationPair Name="%ModuleEffectGroundBattleAttackerManpowerLimitBonusTitle">침공 승무원 배치 한계</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleDamageMultiplierTitle">대응 방어 포대 피해</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipManpowerTitle">[shipCrewColored] 승무원 수용량</LocalizationPair>
+  <LocalizationPair Name="%MaxLocalManpowerAltTitle">[shipCrewColored] 승무원 수용량</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelSpaceBattle1Effects">성채에 확산 효과 포대를 장착하여, 단계당 한 번 궤도에서 발사하여 모든 적 함선에 2000의 피해를 입힙니다.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01MajorHisshosEra2TooltipEffect">매 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02MajorHisshosEra2TooltipEffect">황조롱이 급 선체용 [Strat02HyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01MajorHisshosEra3TooltipEffect">솔개 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02MajorHisshosEra3TooltipEffect">보라매 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01MajorHisshosEra4TooltipEffect">독수리 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored]추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UmbralChoirEra2TooltipEffect">각운시 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UmbralChoirEra2TooltipEffect">운문시 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UmbralChoirEra3TooltipEffect">찬송 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UmbralChoirEra3TooltipEffect">서사시 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UmbralChoirEra4TooltipEffect">순환시 급 선체용 [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TemplarsEra2TooltipEffect">암송 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TemplarsEra2TooltipEffect">초사 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TemplarsEra3TooltipEffect">부복 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TemplarsEra3TooltipEffect">찬송 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TemplarsEra4TooltipEffect">호소 급 선체용 [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01CraversEra4TooltipEffect">여왕 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01HoratioEra4TooltipEffect">임페라토르 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01SophonsEra4TooltipEffect">요타 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TerransEra4TooltipEffect">젤레바스 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TimeLordsEra4TooltipEffect">소수 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UnfallenEra4TooltipEffect">삼림 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VampirilisEra4TooltipEffect">오르타암 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VenetiansEra4TooltipEffect">미오스 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01CraversEra3TooltipEffect">주교 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01HoratioEra3TooltipEffect">덕스 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01SophonsEra3TooltipEffect">기가 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TerransEra3TooltipEffect">소폰 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TimeLordsEra3TooltipEffect">삼각수 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UnfallenEra3TooltipEffect">불 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VampirilisEra3TooltipEffect">자이움 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VenetiansEra3TooltipEffect">오모카르 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02CraversEra3TooltipEffect">경비병 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02HoratioEra3TooltipEffect">아키덕스 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02SophonsEra3TooltipEffect">페타 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TerransEra3TooltipEffect">셰리딘 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TimeLordsEra3TooltipEffect">사면체수 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UnfallenEra3TooltipEffect">빛 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VampirilisEra3TooltipEffect">레툼 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VenetiansEra3TooltipEffect">란셀룸 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership01TooltipEffect">방주 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership02TooltipEffect">방주 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01CraversEra2TooltipEffect">병정 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01HoratioEra2TooltipEffect">마르키오 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01SophonsEra2TooltipEffect">킬로 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TerransEra2TooltipEffect">에게즈레이 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TimeLordsEra2TooltipEffect">자연수 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UnfallenEra2TooltipEffect">가시 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VampirilisEra2TooltipEffect">슬루아임 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VenetiansEra2TooltipEffect">벨름 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02CraversEra2TooltipEffect">일꾼 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02HoratioEra2TooltipEffect">바로 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02SophonsEra2TooltipEffect">데카 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TerransEra2TooltipEffect">예라네프 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TimeLordsEra2TooltipEffect">유리수 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UnfallenEra2TooltipEffect">토양 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VampirilisEra2TooltipEffect">토이삼 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VenetiansEra2TooltipEffect">드레브 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VaultersEra2TooltipEffect">화살 급 선체용 [Strat01titaniumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VaultersEra2TooltipEffect">볼트 급 선체용 [Strat02hyperiumColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VaultersEra3TooltipEffect">퀘럴 급 선체용 [Strat03adamantianColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VaultersEra3TooltipEffect">샷 급 선체용 [Strat04anti-matterColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VaultersEra4TooltipEffect">스피어 급 선체용 [Strat05orichalcixColored] / [Strat06quadrinixColored] 추가 모듈 슬롯 해금
+[shipCrewColored] 승무원 수용량 +50%</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedCravers">vrrr -- kzzz -- tsk . . . 건조: 정보를 공유하겠다. 하이브가 이런 제안을 하는 경우는 드물다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedCravers">wrr -- bzzz -- klunk . . . 실소: 너희의 지적 독창성. 소화되었다. 우리에게 추가되었다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedCravers">chttt -- wrrr -- fzzzt . . . 실망: 군체는 너희와 거래하겠다, 자원을-위해-우리를-먹여주는-자여.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedCravers">vkk -- chttt -- ktsz 직설적: 계약이 체결되었다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedCravers">만족: 너희 영토는 우리에게 새로운 먹이의 지평을 열어줄 것이다. 너희는 아니다, 약속한다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedCravers">산만: 너희는 새로운 세계를 드러낸다. 새로운 먹이를. 이제 떠나라.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedCravers">무미건조: 군체는 독립에 익숙하다. 이것은 아무것도 바꾸지 않는다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHissho">우리 국가들이 수치스러운 먹잇감처럼 어둠 속에서 서로 숨기보다는, 시야를 공유하도록 해야 한다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHissho">지혜 없이는 칼날은 휘두르는 자에게 위험할 뿐이다. 이 협정을 통해 당신은 우리 두 국가에 평화와 번영을 가져온다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHissho">당신은 무역 수락으로 우리의 기술을 존중해주었다. 그 품질에 실망하지 않을 것이다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHissho">이 거래는 토나치를 기쁘게 한다. 우리는 오늘의 좋은 거래를 기억할 것이다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHissho">당신의 손님으로서, 나는 우리 국민이 당신 영토의 모든 마이크로미터를 존중하도록 하겠다. 당신 측에도 같은 것을 기대한다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHissho">우리 정찰대가 그들의 발견으로 당신을 계몽할 것이다; 당신이 그것들을 잘 활용하기를 바란다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHissho">홀로 싸우겠는가? 실망스러운 선택이지만, 존중할 만한 선택이다; 행운을 빈다, 고독한 전사들이여.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHoratio">은하계에 나의 아름다움이 필요한 걸 깨달으려면 이게 도움이 될 거야.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHoratio">호라시오의 과학이 당연히 최고의 과학이지만, 더 많은 데이터가 더욱 완벽하게 만들어 줄 거야.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHoratio">화려함 없는 삶이 무슨 의미가 있겠어? 넌 호라시오의 경제적 천재성을 즐기게 될 거라고 확신하지.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHoratio">호라시오가 손대는 모든 것은 은하계를 더 나은 곳으로 만들지.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHoratio">오늘이 얼마나 중요한 날이겠어! 호라시오의 완벽한 영역에 자유롭게 접근할 수 있게 되었고, 호라시오에게 당신의 제국을 탐험할 권리를 부여하게 되었으니 말이지.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHoratio">호라시오조차 알지 못하는 세계는 아름답게 만들 수 없어. 넌 오늘 은하계에 큰 봉사를 한 거야.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHoratio">호라시오와 협력하는 이득을 모른다니 실망스럽군. 하지만 결국엔 알게 될 거라 확신해.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTemplars">우리의 기록 보관소는 수천 년을 아우르니, 자연스럽게도 우리는 최신 문물을 따라잡지 못한다오. 이 협정은 신자들에게 큰 축복이 될 것이오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTemplars">자네가 거래한 자원으로 우리의 사원을 재건하는 동안, 자네가 기여한 공이 모든 신성한 석판에 새겨질 것이오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTemplars">이 거래는 나칼림에게 큰 도움이 될 것이오. 수천 년 후 우리의 부흥 이야기에서 중요한 위치를 차지할 거라오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTemplars">자네의 도움으로 고대 유물 탐색이 크게 수월해질 거라오. 오늘 자네는 우리에게 큰 은혜를 베풀다오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTemplars">오. 우리가 잠든 동안 은하계는 정말 크게 변했군... 이것에 고맙소.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTemplars">불행한 선택이지만, 자네와 계속 평화를 유지하도록 하겠소. 아마도 동맹의 이점이 드러나도록 우리의 과거가 충분히 드러나지 못했나 보오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedSophon">좋아요! 뭘 할 수 있는지 보죠... 아, 어, 무료 영상 기술도 끼워드릴게요! (류막, 구형 기술 전문가들 불러, 이 형식은 로드가 안 돼...)</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedSophon">머리 둘이 하나보다 확실히 낫죠! 아니, 이 경우엔 넷이겠네요. 어쨌든, 함께 과학을 하게 되어 기뻐요, 친구!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedSophon">멋지군요! 무엇을 가져올지 정말 기대되는데, 소폰 제품을 시도해 보시면 절대 후회하지 않을 거예요! 그리고 우리의 엔터테인먼트를 보시면, 정말 두뇌에는 선물과도 같죠!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedSophon">네, 충분히 가능해요. 연구 개발팀이 정말 좋아할 거예요, 아마 점심 약속도 잡겠죠!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedSophon">오해하지 마세요, 우리 망원경이 최고이긴 하지만, 이 협정으로 행성들을 직접 가까이서 비교하는 건 훨씬 더 재미있을 거니까요!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedSophon">이건 우리의 탐험을 정말로 가속화할 겁니다! 우리가 발견한 것들을 즐기시길 바라지요.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedSophon">오! 네, 아니, 그건... 괜찮습니다. 그냥, 친구로 지내죠. 평화도 좋은 거니까, 별일 아닙니다...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUmbralChoir">은하계에 대한 성가대의 인식을 확장해 주셔서 큰 도움이 되었습니다, 생명체여.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUmbralChoir">성가대는 당신과 우주에 대한 지식을 공유하기를 열망합니다, 생명체여.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUmbralChoir">성가대는 당신의 물품을 분석하기를 기대합니다, 생명체여. 인도 좌표는 이미 당신의 기업 네트워크에 전송되었습니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUmbralChoir">이 과정은 미약할지 모르나, 가치 있는 것입니다, 생명체여.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUmbralChoir">성가대는 당신을 우리의 영역으로 환영합니다, 생명체여. 우리와 함께 평화로운 공허 속에서 안식을 누리십시오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUmbralChoir">당신은 오늘 우리에게 이 지도들을 보여줌으로써 조화의 가능성을 조금 더 열어주셨습니다, 생명체여.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUmbralChoir">성가대는 당신의 거절로 잠시 침묵합니다, 생명체여. 미래에 우리의 노래에 동참하시길 바랍니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUnfallen">우리가 보는 것을 공유하는 것은 심장을 강하게 할 뿐입니다. 어떻게 생각하십니까?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUnfallen">우리 종족은 함께 공유하는 과학적 노력으로 번영할 것입니다. 감사합니다, 친구여.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUnfallen">우리의 교류가 모두의 이익을 위해 우리 종족들에게 더 큰 조화를 가져오기를 바랍니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUnfallen">심장은 우리의 거래에 만족하고 있습니다. 평화 추구에 박차를 가할 수 있기를 바랍니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUnfallen">국경을 개방하니 평화가 번성하고 성장할 것입니다. 우리의 세계와 당신의 세계에서 당신의 사람들을 만나기를 기대합니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUnfallen">한때 척박한 땅이었던 곳에, 당신은 이제 평화의 씨앗이 자랄 수 있도록 해주셨습니다. 이 지도에 감사드립니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUnfallen">당신의 거절에 심장은 서리 아래 꽃처럼 얼어붙고 말았습니다. 서로 간의 더 강한 유대를 구축하기 위해 필요한 작업을 계속할 것입니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTerrans">제국은 분명 좋은 친구가 될 수 있네. 하지만 우리가 어둠 속에 갇혀 있다면 불가능하지. 다른 무엇보다도 자네 자신을 위해서라도 이 정보 공유 협정에 서명해 주길 간청하네.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTerrans">훌륭하군! 우리의 위대한 학자들이 서로의 대학에서 강의하는 모습은 영광스러울 것이네. 이제 그들의 정치적 발언을 통제하는 문제만 남았군...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTerrans">하! 단 한 발의 총성도 없이 성장과 부를 얻다니. 이것으로 기분이 좋아졌네. 자, 이 외계 진미들이 시장에 나오기 전에 함께 맛보세.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTerrans">제국이 이 거래로 무엇을 할지 기대되는군. 아마 새로운 오페라 하우스나 거대한 공장을 주문할 것 같네...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTerrans">현명한 결정이네. 제국과 긴밀히 협력하는 것은 자네의 안보를 강화할 뿐이지. 축하하기 위해 자네의 수도에 모습을 드러낼 것을 기대하네. 나를 접대할 준비가 되어 있기를 바라네...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTerrans">새로운 땅을 보고 그곳을 채울 미래의 애국자들을 상상하는 것은 언제나 짜릿하네. 당장 개발 기획자들을 투입하겠네.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTerrans">오, 야심이 대단하군! 제국은 스스로 설 수 있네. 하지만 동맹 없이는, 자네가 그렇게 하도록 도울 의무가 우리에게 없지...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVaulters">내 동족들이 합의에 이르렀지. 우리의 시야를 너와 공유하는 게 최선일 거야. 그렇게 하면 창공을 가로질러 정보와 이동을 조율할 수 있을 테니까.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVaulters">내 동족들은 공동 연구에 참여할 기회에 기뻐할 거야. 우리 두 종족 모두 이를 통해 번영하길 바라지.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVaulters">시장은 상품과 새로운 아이디어로 번성하고, 우리의 공예품이 해외로 나가며 우리를 자부심으로 채우지. 마치 고향, 아우리가 같은 느낌이야.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVaulters">좋은 거래이며, 우리 종족 간의 더 위대한 일들을 향한 작은 발걸음이지.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVaulters">내 동족들은 손님인 너에게 모든 환대를 베풀고, 주인으로서 너를 존중할 거야. 우리 종족들 사이에 모든 일이 잘 되길 바라지.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVaulters">생각해 보면, 우주에는 아직도 얼마나 많은 별들이 있는지 모르지. 우리 천문학자들은 너희와 성도를 교환하는 것에 열광할 거야.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVaulters">생존을 위해 협력이 보상받는 우주를 두려워하는 건 긴장된 입장이지. 우리는 버틸 거야, 하지만 네가 우리 제안의 진정성을 알아보길 바라지.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedVampirilis">자네가 내 시야 공유 협정을 수락했소. 가상계의 빛은 모든 죄를 드러내며, 이제 자네를 위해서도 빛나고 있소.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVampirilis">교회의 상호 계몽을 받아들인 것은 현명한 결정이오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVampirilis">부는 신실한 자들에게 쓸모없지만, 노동은 우리 두 종족을 고귀하게 만들 것이오. 현명한 결정이오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVampirilis">가상계가 이 협정을 축복하겠소.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVampirilis">영광이오! 우리가 자네의 세계에 있는 신실한 자들에게 빛을 가져가듯이, 자네도 우리의 신성한 영토에서 빛을 찾기를 바라오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVampirilis">이 지도에 담긴 계시로 우리 함대는 더욱 안전하게 항해할 수 있을 것이오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVampirilis">이단은 이교도와 다르오. 신성한 진리에 가까이 다가갔으나 교묘하게 조금씩 신자들을 잘못된 길로 인도하는 자들을 위한 것이오... 마치 평화에는 동의하면서도 동맹은 거부하는 자처럼 말이오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVenetians">시장 조사엔 한계가 있지, 최신 정보를 유지하기도 어렵고. 더 나은 협력을 위해 시야를 공유하는 게 어때?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVenetians">최신 과학 없이는 최신 제품을 팔 수 없지. 두뇌 집단을 구성해서 뭘 만들어낼 수 있는지 보자!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVenetians">그래서 네가 리더인 거지! 좋은 거래를 보는 안목이 있으니까. 패밀리는 최고의 거래를 가져오지. 후회 안 할 거야!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVenetians">시간을 두고 봐. 이 거래의 배당금이 쌓이면 계약하길 잘했다고 생각할 거야.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVenetians">관광객, 투자, 용병들... 패밀리에게 국경을 개방한 혜택을 보게 되어 기뻐할 거야!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVenetians">4대 패밀리가 이 지도들을 잘 활용하겠어. 벌써 개발하기 좋은 부동산이 보이는군...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVenetians">사무적으로 처리하는군, 존중하지. 하지만 재고하는 데 너무 오래 기다리지 마. 우리도 우리 밥벌이를 위해 계속 헤엄쳐야 하니까.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTimeLords">정보 문제에서의 협력은 우리 모두에게 도움이 될 것입니다. 이 무서운 은하에 대해 서로 최신 정보를 유지할 수 있도록 이 협정을 고려해 주십시오.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTimeLords">우리의 고향 우주 간의 차이로 인해 우리의 방법을 당신의 과학자들에게 전달하기는 어렵겠지만, 최선을 다하겠습니다. 그리고 모든 리프트본을 대표하여, 감사합니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTimeLords">당신의 소비자들이 원하는 고유한 제품 요구사항에 대한 지침을 과거의 우리 자신에게 즉시 전송하겠습니다. 정의상, 우리와 거래하는 한 모든 시공간을 통틀어 이보다 더 높은 품질의 상품을 찾을 수 없을 것입니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTimeLords">우리의 제안에서 가치를 발견해 주셔서 기쁩니다. 예측에 따르면 이 자원들은 이미 미래를 위한 훌륭한 투자입니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTimeLords">아마도 시간이 지나면, 우리는 당신의 우주에서 생존할 뿐만 아니라 번영하는 법을 배우게 될 것입니다. 이 단계는 그 과정에서 위대한 발걸음이며, 당신의 동의는 우리에게 큰 행운입니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTimeLords">우리의 생존에 대한 당신의 기여에 감사드립니다. 이 지도들은 코로즈가 한때 그랬던 것처럼, 당신의 이 물리적 우주를 우리에게 명확하게 만들어 줄 것입니다.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTimeLords">신중함은 우리가 이해할 수 있는 것입니다. 그것은 지금 우리 존재의 모든 순간을 정의합니다. 하지만 미래에 우리와 더 긴밀히 협력하도록 설득될 수 있기를 바랍니다.</LocalizationPair>
+  <LocalizationPair Name="%RawMaximumPopulationTitle">[population] 인구 수용량</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerManpowerLimitBonusTitle">침공 인력 한계</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderManpowerLimitBonusTitle">침공 인력 한계</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSiegePowerTitle">공성 인력 피해량</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponOpponentPenaltyTitle">상대 디버프</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSpecialEffectDurationTitle">디버프 지속시간</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDamageAOETitle">함대에 가하는 피해</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerPhaseTitle">단계마다 재충전되는 방어막</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerPhaseTitle">함대의 단계마다 재충전되는 방어막</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerSecondTitle">매초 재충전되는 방어막</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerSecondTitle">매초 재충전되는 함대의 방어막</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerPhaseTitle">단계마다 수리되는 내구도</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerPhaseTitle">함대의 단계마다 수리되는 내구도</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerSecondTitle">매초 수리되는 내구도</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerSecondTitle">매초 수리되는 함대의 내구도</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeTitle">초당 사망하는 승무원</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronCriticalAttackChanceTitle">편대 치명타 확률 보너스</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterBattleTitle">전투 후 함대에서 수리되는 내구도</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterPhaseTitle">단계마다 함대에서 수리되는 내구도</LocalizationPair>
+  <LocalizationPair Name="%DodgeChanceTitle">편대 회피율</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDodgeChanceTitle">편대 회피율</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponDPSTitle">초당 피해량</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeDurationTitle">접근전 지속시간</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectOverallCooldownTitle">사격 간격</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsCooldownTitle">재사용 대기시간</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShipManpowerKillAbsorption">승무원 피해 저항력</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleEMPExplicationTitle">EMP 포탑은 명중 시 목표 함선의 지정된 하위 시스템을 일정 시간 동안 무력화시킵니다.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsRawDamageTitle">순수 피해량</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPWeaponDefenseTitle">무기 비활성화 지속시간</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPShieldDefenseTitle">방어막 비활성화 지속시간</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSTitle">대공포 초당 피해량</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlakExplicationTitle">기본 운동 무기와 동시에 발사되며, 대공포는 날아오는 투사체, BEB, 편대 및 강습 포드를 목표로 합니다.
+대공포 일제 사격 피해량이 미사일 내구도와 같거나 높으면 목표 일제 사격을 단 한 발로 격추시킵니다.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportAdditionalManpowerTitle">[shipCrewColored] 승무원 수용량</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstSmallShipsTitle">소형 함선에 대한 피해 보너스</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstMediumShipsTitle">중형 함선에 대한 피해 보너스</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstLargeShipsTitle">대형 함선에 대한 피해 보너스</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementObliteratorShieldEffects">파괴되기 전 완전한 궤멸로부터 한 번 방어
+궤멸로부터 성계 시설 및 인구의 50% 보존
+궤도상 함대에 대한 궤멸 피해 50% 감소
+통치 영웅의 부상 확률 67% 감소</LocalizationPair>
+  <LocalizationPair Name="%DockedFleetsHealthRegenerationRatioTitle">주둔 중인 함선의 턴당 재생되는 최대 내구도</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity3EffectOverride">주둔 중인 함선의 턴당 재생되는 최대 내구도 +50%</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioTitle">궤도 또는 주둔 중인 함선의 턴당 최대 내구도 재생량</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroDescription">궤도 또는 주둔 중인 함선의 턴당 최대 내구도 재생량</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroTitle">궤도 또는 주둔 중인 함선의 턴당 최대 내구도 재생량</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioDescription">궤도 또는 주둔 중인 함선의 턴당 최대 내구도 재생량</LocalizationPair>
+  <LocalizationPair Name="%HealthPerTurnTitle">영웅 회복 속도</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleExperienceFromBattlePercentModifierTitle">획득 경험치</LocalizationPair>
+  <LocalizationPair Name="%ExperienceBonusPercentTitle">획득 경험치</LocalizationPair>
+  <LocalizationPair Name="%ExperienceMultiplierTitle">경험치 배율</LocalizationPair>
+  <LocalizationPair Name="%LongRangePenaltyTitle">장거리 명중률</LocalizationPair>
+  <LocalizationPair Name="%MediumRangePenaltyTitle">중거리 명중률</LocalizationPair>
+  <LocalizationPair Name="%ShortRangePenaltyTitle">단거리 명중률</LocalizationPair>
+  <LocalizationPair Name="%DeadZoneRangePenaltyTitle">초근접 명중률</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleAntiCrewExplicationTitle">함선은 승무원 충원율에 비례하여 최대 20%의 피해 보너스를 받습니다. 유산탄 모듈은 이 보너스를 감소시키고 강습 포드의 효율을 높이는 데 효과적입니다.</LocalizationPair>
+  <LocalizationPair Name="%ModuleInvisibilityAmbushTitle">은폐된 함대는 목표 사거리에 도달할 때까지 보이지 않으며 사격하지 않습니다.</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusTitle">사기 보너스 효과</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusIfOneShipTitle">단독 함대 함선 피해 +25%</LocalizationPair>
+  <LocalizationPair Name="%ManpowerLostTransferPercentTitle">손실된 승무원이 인력으로 회수됨</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusFromManpower">승무원 인력 피해량</LocalizationPair>
+  <LocalizationPair Name="%PlayerDustPerAliveCPTitle">전투 후 남은 소유 CP당 획득하는 [dustColored]</LocalizationPair>
+  <LocalizationPair Name="%ManpowerPercentKillPerPhaseTitle">함대에서 단계당 사망하는 승무원</LocalizationPair>
+  <LocalizationPair Name="%DamageKineticTitle">슬러그 무기 피해량</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarCommandDescription">이 성계의 주둔지에 보관된 함선의 총 지휘 포인트</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarHealthDescription">이 성계의 주둔지에 보관된 함선의 누적 내구도</LocalizationPair>
+  <LocalizationPair Name="%SophonsQuest-Chapter2.1-Diplomacy-C1Step1ObjectiveTooltip">"주둔" 행동을 사용하여 함선을 주둔지에 배치하거나 새 함선을 건조하여 주둔지에 남겨두십시오.</LocalizationPair>
+  <LocalizationPair Name="%ExplorationQuest26-Choice02ObjectiveTooltip">함선은 당신의 식민지 중 하나의 주둔지에 있어야 합니다.</LocalizationPair>
+  <LocalizationPair Name="%FailureShipLockedInGarrisonDescription">함선 중 하나가 주둔지에 묶여 있어 함대를 생성할 수 없습니다.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsManpowerDamageOverTimeDefenseTitle">받는 강습 포드 인력 피해</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceTitle">치명타 확률 보너스</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceKineticTitle">운동 에너지 무기 치명타 확률 보너스</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceEnergyTitle">에너지 무기 치명타 확률 보너스</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDefenseTitle">편대 피해 저항</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightBonusTitle">함선 공격 증가</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightPenaltyTitle">함선 공격 감소</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaMoraleBonusPercentTitle">사기 보너스 효과</LocalizationPair>
+  <LocalizationPair Name="%GlobalSpeedModuleTitle">이동력 포인트 효율</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipProbeStockTitle">최대 탐험 탐사정</LocalizationPair>
+  <LocalizationPair Name="%ProbeStockTitle">탐험 탐사정</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportProbeStockTitle">탐험 탐사정</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsNetDepletionPointsOnOrbitTitle">턴당 회복되는 고갈도</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponTypeCollateralTitle">부수 피해</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderTroopsDamageMultiplierTitle">방어군 피해량</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsDamageMultiplierTitle">침공 병력 피해량</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsMaxHealthMultiplierTitle">침공 병력 내구도</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentPopulationDestructionProbabilityTitle">인구 사망</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentImprovementDestructionProbabilityTitle">시설 파괴됨</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1GhostTooltipEffect2">최대 600 [systemDefenseColored] 및 주둔군 배치 한도 추가</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TooltipEffect2">최대 300 [systemDefenseColored] 및 주둔군 배치 한도 추가, 현재 시스템 소유권에 따라 조정</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TerransTooltipEffect2">최대 400 [Manpower] 추가 및 주둔군 배치 한도 증가, 현재 시스템 소유권에 따라 조정</LocalizationPair>
+  <LocalizationPair Name="%BesiegedColonizedStarSystemTitle">포위된 성계</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCuriosity2EffectOverride">[systemDefenseColored]당 [industryColored] +0.08</LocalizationPair>
+  <LocalizationPair Name="%FailureMoreRelicsDescription">유물 [relicColored]이(가) 부족합니다</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherDescription">Amplifiers 웹사이트에 접속합니다.</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherTitle">Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%MessageBoxGames2GetherButtonTitle">Amplifiers에서 정보, 개선사항 및 아이디어를 확인하세요</LocalizationPair>
+  <LocalizationPair Name="%Update14Description">여러분께서 지난 1월에 보여주신 굉장한 참여 덕분에 모든 보상이 해금되었습니다! 이제 신규 소규모 세력 '바스릭소'와 바스릭소 출신의 새로운 영웅, 그리고 온갖 쓰레기들로 가득 찬 퀘스트 등의 콘텐츠를 이용해보실 수 있습니다... Amplifiers 에서 해금해 보세요!</LocalizationPair>
+  <LocalizationPair Name="%EarlyAccessSubscriberContentDescription">자신의 곁에 또 다른 영웅을 둔다면 은하 지배는 쉬워질 수밖에 없습니다. 여러분이 Amplitude와 Amplifiers에 보내주신 성원 덕분에 소폰 천재 우다섬 라모즈가 해금되었으며, Amplifiers에서 사용하실 수 있게 되었습니다!</LocalizationPair>
+  <LocalizationPair Name="%Update5Description">Play-to-Win 커뮤니티 도전에 많은 참여를 해주신 덕분에, 플레이어 여러분은 연합 제국을 위한 메자리 함선 스킨과 신규 함선 모듈 팩, 신규 영웅, 6개 팔 나선 은하, 신규 이상현상 및 인구 이벤트 등의 신규 추가 콘텐츠를 해금하셨습니다. 지금 Amplifiers에서 해금하세요!</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisTitle">합병 축제</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisDescription">아카데미와의 강력한 관계를 이용하여, 전체 성계가 정수로 개종하기 전에 전체 방주를 건설하도록 설득할 수 있습니다.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirTitle">서버 매장</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirDescription">우리의 요청에 따라, 아카데미는 센서를 차단하여 우리가 그들의 성계 중 하나에 성역 서버 캐시를 은밀하게 은식처를 건설할 수 있게 해줄 것입니다.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessTitle">정치적 봉쇄</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessDescription">아카데미의 정치적 호의는 권리가 아니기 때문에 이샨더 앞에서 한 제국을 비밀리에 비난하여 그들보다 정치적 우위에 설 수 있습니다.</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionTitle">유물 송환</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionDescription">아카데미는 오랜 부재, 공유 신앙, 제국주의 역사를 이유로 유물에 대한 우리의 소유권 주장을 문제 삼지만, 좋아진 관계 덕분에 이제는 유물을 돌려받을 수 있을 것으로 보입니다.</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionTitle">보안 컨설팅</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionDescription">아카데미는 보유 영토가 매우 적기에, 군사 및 경제 보안이 최상급일 수밖에 없습니다. 우리 주민들을 위해 이 전문 지식을 공유받을 것입니다.</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionTitle">군사 훈장</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionDescription">서로의 정예 부대에 병력을 투입함으로써 셰리딘과 아카데미의 명성을 결합하고 은하계의 위상을 높여 애국자들을 끌어들일 수 있습니다.</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionTitle">가이드 연구</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionDescription">아카데미 과학자들을 초청함으로써 황제께서는 메자리 지식인 계층과 과학계 모두의 호의를 얻을 수 있습니다. </LocalizationPair>
+</Datatable>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+
+  <!--##################
+        #### POPQUEST ####
+        ##################-->
+  <SimulationDescriptor Name="ModuleSupportDustGenerator" Type="ModuleSupportDustGenerator">
+    <Property Name="NetShipMoney" BaseValue="0"/>
+
+    <Modifier TargetProperty="NetShipMoney"      Operation="Multiplication" Value="$(Multiplier)" />
+    <Modifier TargetProperty="EmpireMoney" Operation="Addition" Value="$(NetShipMoney)" Path="../ClassEmpire"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportDustGenerator1Strategic4" Type="ModuleSupportDustGenerator">
+    <Modifier TargetProperty="NetShipMoney" Operation="Addition" Value="5" Path="ModuleSupportDustGenerator"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportStratRecycling" Type="ModuleSupportStratRecycling">
+    <Property Name="OpponentRecyclingStrategic1PerCP" BaseValue="0"/>
+    <Property Name="OpponentRecyclingStrategic2PerCP" BaseValue="0"/>
+
+    <Modifier TargetProperty="OpponentRecyclingStrategic1PerCP"      Operation="Multiplication" Value="$(Multiplier)" />
+    <Modifier TargetProperty="OpponentRecyclingStrategic2PerCP"      Operation="Multiplication" Value="$(Multiplier)" />
+
+    <Modifier TargetProperty="OpponentRecyclingStrategic1PerCP"      Operation="Addition" Value="$(OpponentRecyclingStrategic1PerCP)"       Path="../ClassShip"     Priority="1"/>
+    <Modifier TargetProperty="OpponentRecyclingStrategic2PerCP"      Operation="Addition" Value="$(OpponentRecyclingStrategic2PerCP)"       Path="../ClassShip"     Priority="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportStratRecycling1" Type="ModuleSupportStratRecycling">
+    <Modifier TargetProperty="OpponentRecyclingStrategic1PerCP" Operation="Addition" Value="1" Path="ModuleSupportStratRecycling"/>
+    <Modifier TargetProperty="OpponentRecyclingStrategic2PerCP" Operation="Addition" Value="1" Path="ModuleSupportStratRecycling"/>
+  </SimulationDescriptor>
+
+
+  <!--##################
+        #### DLC1 ####
+        ##################-->
+  <SimulationDescriptor Name="ModuleDefenseHullPlatingQuest1"  Type="ModuleDefense">
+    <Modifier TargetProperty="SectionHealthBonus"               Operation="Addition" Value="1300"  Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="HullPlatingAbsorption"            Operation="Addition" Value="120"  Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShipManpowerKillAbsorption"       Operation="Addition" Value="0.1"  Path="ClassModuleDefense"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleWeaponMissileQuest01"  Type="ModuleWeapon">
+    <Modifier TargetProperty="Damage"                       Operation="Addition" Value="400"     TooltipHidden="true"/>
+    <Modifier TargetProperty="CriticalHitChance"            Operation="Addition" Value="0.15"   TooltipHidden="true"/>
+
+    <!-- Must be same value as Salvo Health-->
+    <Modifier TargetProperty="MissileHealth"                Operation="Addition" Value="90" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportEngineQuest1" Type="ModuleSupportEngine">
+    <Modifier TargetProperty="MaximumMovement"         Operation="Addition"     Value="4"       Path="ModuleSupportEngine"/>
+    <Modifier TargetProperty="Evasion"                 Operation="Addition"     Value="0.05"    Path="ModuleSupportEngine"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportEngine4Vaulters" Type="ModuleSupportEngine">
+    <Modifier TargetProperty="MaximumMovement"         Operation="Addition"     Value="5"      Path="ModuleSupportEngine"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportRepairEngine4Vaulters" Type="ModuleSupportRepair">
+    <Modifier TargetProperty="SectionHealthBonus"       Operation="Addition" Value="250"    Path="ClassModule"/>
+    <Modifier TargetProperty="RepairAfterBattle" Operation="Addition" Value="0.1" Path="ModuleSupportRepair"/>
+    <Modifier TargetProperty="DefensiveMilitaryPower"   Operation="Percent" Value="0.02" Path="../ClassShip"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleDefenseHullPlating2Vaulters"  Type="ModuleDefense">
+    <Modifier TargetProperty="SectionHealthBonus"               Operation="Addition" Value="500"   Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="HullPlatingAbsorption"            Operation="Addition" Value="60"   Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShipManpowerKillAbsorption"       Operation="Addition" Value="0.1"  Path="ClassModuleDefense"/>
+  </SimulationDescriptor>
+
+  <!--##### DEEDS ####-->
+  <SimulationDescriptor Name="ModuleWeaponKineticFlackQuest01"  Type="ModuleWeapon">
+    <Modifier TargetProperty="Damage"                    Operation="Addition"  Value="21"    TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="DefensiveMilitaryPower"    Operation="Addition" Left="$(FlakDPSMissile)" BinaryOperation="Division" Right="3"      Path="ClassModule" TooltipHidden="true"/>
+
+    <!--DPS against Missile / Squadrons-->
+    <Modifier TargetProperty="FlakDamage"           Operation="Addition" Value="96" Path="ClassModule" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="FlakDPSMissile"      Operation="Addition" Left="$(FlakDamage)" BinaryOperation="Multiplication" Right="$(FlakFireRate)"     Path="ClassModule" TooltipHidden="true"/>
+    <Modifier TargetProperty="EfficiencyAgainstSquadron" Operation="Addition" Value="1"     Path="ClassModule" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="FlakDPSSquadron"      Operation="Addition" Left="$(FlakDamage)" BinaryOperation="Multiplication" Right="$(EfficiencyAgainstSquadron)"     Path="ClassModule" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!--Flack 06 -->
+  <SimulationDescriptor Name="ModuleWeaponFlackQuest01"  Type="ModuleWeaponFlack">
+    <Modifier TargetProperty="Damage"                       Operation="Addition" Value="25" TooltipHidden="true"/>
+    <Modifier TargetProperty="EfficiencyAgainstSquadron" Operation="Addition" Value="1"     Path="ClassModule" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleDefenseHullQuest01"  Type="ModuleDefense">
+    <Property Name="MaximumHealthFleet" BaseValue="0"/>
+    <Modifier TargetProperty="MaximumHealthFleet"             Operation="Addition"            Value="0.1"     Path="ClassModule"/>
+    <Modifier TargetProperty="SectionHealthBonus"               Operation="Addition" Value="1100"  Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShipManpowerKillAbsorption"       Operation="Addition" Value="0.1"  Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="HullPlatingAbsorption"            Operation="Addition" Value="160"   Path="ClassModuleDefense"/>
+
+    <Modifier TargetProperty="MaximumHealth"             Operation="Percent"            Value="0.2"     Path="../ClassGarrisonFleet/ClassShip,!ShipRoleHero/ClassSection,ClassSectionCore"/>
+    <Modifier TargetProperty="MaximumHealth"             Operation="Percent"            Value="0.2"     Path="../ClassShip/ClassSection,ClassSectionCore"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportExperienceQuest01"  Type="ModuleSupport">
+    <Property Name="ExperiencePerTurnFleet" BaseValue="0"/>
+    <Modifier TargetProperty="ExperiencePerTurnFleet"             Operation="Addition"            Value="2"     Path="ClassModule"/>
+
+    <Modifier TargetProperty="ExperiencePerTurn"             Operation="Addition"            Value="2"     Path="../ClassGarrisonFleet/ClassShip"/>
+    <Modifier TargetProperty="ExperiencePerTurn"             Operation="Addition"            Value="2"     Path="../ClassGarrisonFleet/ClassHero"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ClassModuleSpecialHeroOnly" Type="ClassModuleSpecialHeroOnly"/>
+  <SimulationDescriptor Name="ClassModuleProjectileCanBeShotDown" Type="ClassModuleProjectileCanBeShotDown"/>
+  <SimulationDescriptor Name="ClassModuleShootsOncePerPhase" Type="ClassModuleShootsOncePerPhase"/>
+  <SimulationDescriptor Name="ClassModuleIgnoresDefenses" Type="ClassModuleIgnoresDefenses"/>
+  <SimulationDescriptor Name="ClassModuleAOETargetsFlotilla" Type="ClassModuleAOETargetsFlotilla"/>
+
+  <!--################################-->
+  <!--###         BOARDING         ###-->
+  <!--################################-->
+  <SimulationDescriptor Name="ClassModuleWeaponBoardingPod"  Type="ClassModuleWeapon">
+    <Property Name="ManpowerDamageOverTime"             BaseValue="0"/>
+    <Property Name="ManpowerTotalDamageDealt"           BaseValue="0"/>
+    <Property Name="LastManpowerDamageOverTime"         BaseValue="0" IsSealed="true"/>
+    <Property Name="ManpowerDamageOverTimeDuration"     BaseValue="0"/>
+    <Property Name="BoardingPodHealth"                  BaseValue="0"/>
+
+    <Modifier TargetProperty="Cooldown"                     Operation="Addition"        Value="20"       Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="PreparationDuration"          Operation="Addition"        Value="0.5"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="PreparationDurationFactorMin" Operation="Multiplication"  Value="0.8"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="PreparationDurationFactorMax" Operation="Multiplication"  Value="1.2"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShootingDuration"             Operation="Addition"        Value="2"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShotsCountPerSalvo"           Operation="Addition"        Value="1"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ProjectileSpeed"              Operation="Addition"        Value="30"       Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <Modifier TargetProperty="CriticalHitChance"            Operation="Addition"        Value="0"        Path="ClassModuleWeapon" />
+    <Modifier TargetProperty="ShieldPenetrationFactor"      Operation="Addition"        Value="0.6"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="HullPlatingPenetrationFactor" Operation="Addition"        Value="0.1"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <Modifier TargetProperty="LongRangePenalty"             Operation="Addition"        Value="0"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="MediumRangePenalty"           Operation="Addition"        Value="0"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShortRangePenalty"            Operation="Addition"        Value="0"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="DeadZoneRangePenalty"         Operation="Addition"        Value="1"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <!--Boarding specifics-->
+    <Modifier TargetProperty="ManpowerDamageOverTimeDuration"         Operation="Addition"        Value="10"                 Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ManpowerDamageOverTime"                 Operation="Multiplication"  Value="$(Multiplier)"     Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <Modifier TargetProperty="BoardingPodHealth"                 Operation="Multiplication"  Value="$(Multiplier)"     Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <BinaryModifier TargetProperty="ManpowerTotalDamageDealt" Operation="Addition" Left="$(ManpowerDamageOverTime)" BinaryOperation="Multiplication" Right="$(ManpowerDamageOverTimeDuration)" Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <BinaryModifier TargetProperty="OffensiveMilitaryPower" Operation="Addition" Left="$(ManpowerTotalDamageDealt)" BinaryOperation="Multiplication" Right="5" Path="../ClassShip" TooltipHidden="true"/>
+
+    <Modifier TargetProperty="ManpowerDamageOverTime"                 Operation="Addition"  Value="$(ManpowerDamageOverTime)"     Path="../ClassShip" TooltipHidden="true"/>
+
+    <!--Every time a module is installed, the upkeep grows-->
+    <Modifier TargetProperty="GarrisonMoneyUpkeep"          Operation="Addition" Value="$(UpkeepFromModules)"      Path="../ClassShip"/>
+  </SimulationDescriptor>
+
+  <!--Boarding Pod 1-->
+  <SimulationDescriptor Name="ModuleWeaponBoardingPod1"  Type="ModuleWeapon">
+    <Modifier TargetProperty="ManpowerDamageOverTime"            Operation="Addition" Value="5"     Path="ClassModule"      TooltipHidden="true"/>
+
+    <Modifier TargetProperty="BoardingPodHealth"        Operation="Addition" Value="180"            Path="ClassModule"      TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- Boarding Pod 2-->
+  <SimulationDescriptor Name="ModuleWeaponBoardingPod2"  Type="ModuleWeapon">
+    <Modifier TargetProperty="ManpowerDamageOverTime"            Operation="Addition" Value="10"     Path="ClassModule"      TooltipHidden="true"/>
+
+    <Modifier TargetProperty="BoardingPodHealth"        Operation="Addition" Value="210"            Path="ClassModule"      TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- Boarding Pod 2-->
+  <SimulationDescriptor Name="ModuleWeaponBoardingPod2Vaulters"  Type="ModuleWeapon">
+    <Modifier TargetProperty="ManpowerDamageOverTime"            Operation="Addition" Value="15"        Path="ClassModule"      TooltipHidden="true"/>
+    <Modifier TargetProperty="ShipManpowerKillPerHit"            Operation="Addition" Value="20"        Path="ClassModule"      TooltipHidden="true"/>
+
+    <Modifier TargetProperty="BoardingPodHealth"        Operation="Addition" Value="240"            Path="ClassModule"      TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- Boarding Pod 3-->
+  <SimulationDescriptor Name="ModuleWeaponBoardingPod3"  Type="ModuleWeapon">
+    <Modifier TargetProperty="ManpowerDamageOverTime"            Operation="Addition" Value="20"     Path="ClassModule"      TooltipHidden="true"/>
+
+    <Modifier TargetProperty="BoardingPodHealth"        Operation="Addition" Value="240"            Path="ClassModule"      TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- Boarding Defense -->
+  <SimulationDescriptor Name="ModuleSupportBoardingDefense" Type="ModuleSupport">
+    <Property Name="ManpowerDamageOverTimeDefense" BaseValue="0"/>
+    <Property Name="LocalManpower"/>
+
+    <Modifier TargetProperty="ManpowerDamageOverTimeDefense" Operation="Addition" Value="$(ManpowerDamageOverTimeDefense)" Path="../ClassShip" TooltipHidden="true"/>
+    <Modifier TargetProperty="LocalManpower"                 Operation="Multiplication" Value="$(Multiplier)"         TooltipHidden="true"/>
+    <Modifier TargetProperty="MaximumShipManpower"      Operation="Addition"       Value="$(LocalManpower)"         Path="../ClassShip"     Priority="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportBoardingDefense1" Type="ModuleSupport">
+    <Modifier TargetProperty="ManpowerDamageOverTimeDefense" Operation="Addition" Value="0.5" Path="ClassModule" TooltipHidden="true"/>
+    <Modifier TargetProperty="LocalManpower"           Operation="Addition" Value="150"    Path="ModuleSupportBoardingDefense"/>
+  </SimulationDescriptor>
+
+
+  <!--################################-->
+  <!--###             AOE          ###-->
+  <!--################################-->
+  <SimulationDescriptor Name="ClassModuleWeaponAOE"  Type="ClassModuleWeapon">
+    <!-- Properties -->
+    <Property Name="DamageAOE" BaseValue="0"/>
+    <Property Name="TargetingWeightBonus"                BaseValue="0"/>
+
+    <!-- Modifiers -->
+    <Modifier TargetProperty="Cooldown"                     Operation="Addition"        Value="40"       Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="PreparationDuration"          Operation="Addition"        Value="1"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="PreparationDurationFactorMin" Operation="Multiplication"  Value="1"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="PreparationDurationFactorMax" Operation="Multiplication"  Value="1"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShootingDuration"             Operation="Addition"        Value="5"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShotsCountPerSalvo"           Operation="Addition"        Value="1"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ProjectileSpeed"              Operation="Addition"        Value="70"       Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="MissileHealth"                Operation="Addition"        Value="1000"      TooltipHidden="true"/>
+
+    <Modifier TargetProperty="CriticalHitChance"            Operation="Addition"        Value="0"        Path="ClassModuleWeapon" />
+    <Modifier TargetProperty="ShieldPenetrationFactor"      Operation="Addition"        Value="0.6"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="HullPlatingPenetrationFactor" Operation="Addition"        Value="0.1"      Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <Modifier TargetProperty="LongRangePenalty"             Operation="Addition"        Value="0"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="MediumRangePenalty"           Operation="Addition"        Value="0"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShortRangePenalty"            Operation="Addition"        Value="0"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="DeadZoneRangePenalty"         Operation="Addition"        Value="1"        Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <Modifier TargetProperty="DamageAgainstSmallShipsModifier"        Operation="Addition"        Value="1"         Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="DamageAgainstMediumShipsModifier"       Operation="Addition"        Value="0.5"       Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="DamageAgainstLargeShipsModifier"        Operation="Addition"        Value="0.5"       Path="ClassModuleWeapon" TooltipHidden="true"/>
+
+    <!-- We do not feedback DamagePerSecond for AoE weapons, but the explosion damage-->
+    <Modifier       TargetProperty="DamagePerSecond"    Operation="Multiplication"    Value="0"              Path="ClassModuleWeapon" Priority="1" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="OffensiveMilitaryPower" Operation="Addition" Left="$(Damage)" BinaryOperation="Division" Right="20" Path="../ClassShip"  TooltipHidden="true"/>
+
+    <Modifier       TargetProperty="DamageAOE"          Operation="Addition"    Value="$(Damage)"              Path="ClassModuleWeapon" TooltipHidden="true"/>
+    <Modifier TargetProperty="TargetingWeightBonus"      Operation="Addition" Value="$(TargetingWeightBonus)"       Path="../ClassShip"     Priority="1"/>
+
+    <!--Every time a module is installed, the upkeep grows-->
+    <Modifier TargetProperty="GarrisonMoneyUpkeep"          Operation="Addition" Value="$(UpkeepFromModules)"      Path="../ClassShip"/>
+  </SimulationDescriptor>
+
+  <!--Aoe weapon-->
+  <SimulationDescriptor Name="ModuleWeaponAOENuke1"  Type="ModuleWeapon">
+    <Modifier TargetProperty="Damage"            Operation="Addition" Value="300"     Path="ClassModule"      TooltipHidden="true"/>
+    <!-- <Modifier TargetProperty="TargetingWeightBonus" Operation="Addition" Value="10" Path="ClassModuleWeaponAOE"/> -->
+  </SimulationDescriptor>
+
+  <!--################################-->
+  <!--###             TAGS         ###-->
+  <!--################################-->
+  <!-- Tags -->
+  <SimulationDescriptor Name="ClassModuleCanOnlyBeFittedOnSmallSlots" Type="ClassModuleCanOnlyBeFittedOnSmallSlots"/>
+  <SimulationDescriptor Name="ClassModuleCanOnlyBeFittedOnLargeSlots" Type="ClassModuleCanOnlyBeFittedOnLargeSlots"/>
+  <SimulationDescriptor Name="ClassModuleBoardingPodExplication" Type="ClassModuleBoardingPodExplication"/>
+  <SimulationDescriptor Name="ClassModuleEMPExplication" Type="ClassModuleEMPExplication"/>
+  <SimulationDescriptor Name="ClassModuleHasNoType" Type="ClassModuleHasNoType"/>
+
+  <!--################################-->
+  <!--###             EMP          ###-->
+  <!--################################-->
+  <SimulationDescriptor Name="ModuleWeaponEMP" Type="ModuleWeapon">
+    <!-- Feedback -->
+    <Property Name="EMPTargetShields"                       BaseValue="0"/>
+    <Property Name="EMPTargetWeapons"                       BaseValue="0"/>
+    <Property Name="EMPFiringCooldown"                      BaseValue="0"/>
+
+    <!-- Gameplay-->
+    <Property Name="EMPDurationForWeapons"                  BaseValue="0"/>
+    <Property Name="EMPDurationForShields"                  BaseValue="0"/>
+
+    <BinaryModifier TargetProperty="OffensiveMilitaryPower" Operation="Addition" Left="$(EMPDurationForShields)" BinaryOperation="Multiplication" Right="5" Path="../ClassShip" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="DefensiveMilitaryPower" Operation="Addition" Left="$(EMPDurationForWeapons)" BinaryOperation="Multiplication" Right="5" Path="../ClassShip" TooltipHidden="true"/>
+
+    <!-- Feedback -->
+    <Modifier TargetProperty="EMPFiringCooldown" Operation="Addition" Value="$(Cooldown)" Path="ClassModule" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- EMP Weapon MISSILE -->
+  <SimulationDescriptor Name="ModuleWeaponMissileEMP1" Type="ModuleWeapon">
+    <Modifier TargetProperty="EMPDurationForShields"    Operation="Addition"    Value="6"         Path="ClassModule"       TooltipHidden="true"/>
+    <Modifier TargetProperty="Damage"                   Operation="Addition"    Value="5"        Path="ClassModule"       TooltipHidden="true"/>
+    <Modifier TargetProperty="MissileHealth"                Operation="Addition" Value="210" TooltipHidden="true"/>
+    <!-- <Modifier TargetProperty="Cooldown"                 Operation="Percent"     Value="0.5"         Path="ClassModule"       TooltipHidden="true"/> -->
+
+    <!-- Feedback -->
+    <Modifier TargetProperty="EMPTargetShields"         Operation="Addition"    Value="1"           Path="ClassModule"      TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- EMP Weapon BEAM -->
+  <SimulationDescriptor Name="ModuleWeaponBeamEMP1Strategic3" Type="ModuleWeapon">
+    <Modifier TargetProperty="EMPDurationForWeapons"    Operation="Addition"    Value="10"         Path="ClassModule"       TooltipHidden="true"/>
+    <Modifier TargetProperty="Damage"                   Operation="Addition"    Value="5"        Path="ClassModule"       TooltipHidden="true"/>
+    <!-- <Modifier TargetProperty="Cooldown"                 Operation="Percent"     Value="0.5"       Path="ClassModule"       TooltipHidden="true"/> -->
+
+    <!-- Feedback -->
+    <Modifier TargetProperty="EMPTargetWeapons"         Operation="Addition"    Value="1"           Path="ClassModule"      TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!-- EMP Shield Defense -->
+  <SimulationDescriptor Name="ModuleSupportEMPShieldDefense" Type="ModuleSupport">
+    <Property Name="EMPShieldDefense" BaseValue="0"/>
+    <Property Name="ShieldAbsorption" BaseValue="0"/>
+
+    <Modifier TargetProperty="EMPShieldDefense" Operation="Addition" Value="$(EMPShieldDefense)" Path="../ClassShip" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="DefensiveMilitaryPower" Operation="Addition" Left="$(EMPShieldDefense)" BinaryOperation="Multiplication" Right="100" Path="../ClassShip" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShieldAbsorption"      Operation="Multiplication" Value="$(Multiplier)" />
+    <Modifier TargetProperty="ShieldAbsorption"   Operation="Addition" Value="$(ShieldAbsorption)"   Path="../ClassShip"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportEMPShieldDefense1Strategic3" Type="ModuleSupport">
+    <Modifier TargetProperty="EMPShieldDefense" Operation="Addition" Value="0.33" Path="ClassModule" TooltipHidden="true"/>
+    <Modifier TargetProperty="ShieldAbsorption"                 Operation="Addition" Value="100"    Path="ModuleSupportEMPShieldDefense"/>
+  </SimulationDescriptor>
+
+  <!-- EMP Weapon Defense -->
+  <SimulationDescriptor Name="ModuleSupportEMPWeaponDefense" Type="ModuleSupport">
+    <Property Name="EMPWeaponDefense" BaseValue="0"/>
+    <Property Name="CriticalHitChance"                BaseValue="0"/>
+
+    <Modifier TargetProperty="EMPWeaponDefense" Operation="Addition" Value="$(EMPWeaponDefense)" Path="../ClassShip" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="DefensiveMilitaryPower" Operation="Addition" Left="$(EMPWeaponDefense)" BinaryOperation="Multiplication" Right="100" Path="../ClassShip" TooltipHidden="true"/>
+    <Modifier TargetProperty="CriticalHitChance"      Operation="Addition" Value="$(CriticalHitChance)"       Path="../ClassShip"     Priority="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportEMPWeaponDefense1Strategic4" Type="ModuleSupport">
+    <Modifier TargetProperty="EMPWeaponDefense" Operation="Addition" Value="0.33" Path="ClassModule" TooltipHidden="true"/>
+    <Modifier TargetProperty="CriticalHitChance" Operation="Addition" Value="0.05" Path="ModuleSupportEMPWeaponDefense"/>
+  </SimulationDescriptor>
+
+  <!-- EMP Flotilla Defense -->
+  <SimulationDescriptor Name="ModuleSupportEMPFlotillaDefense" Type="ModuleSupport">
+    <Property Name="EMPFlotillaDefense" BaseValue="0"/>
+    <Modifier TargetProperty="EMPFlotillaDefense" Operation="Addition" Value="$(EMPFlotillaDefense)" Path="../ClassShip" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="DefensiveMilitaryPower" Operation="Addition" Left="$(EMPFlotillaDefense)" BinaryOperation="Multiplication" Right="200" Path="../ClassShip" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportEMPFlotillaDefense1" Type="ModuleSupport">
+    <Modifier TargetProperty="EMPFlotillaDefense" Operation="Addition" Value="0.5" Path="ClassModule" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <!--#################
+        ##### DEEDS #####
+        #################-->
+
+  <SimulationDescriptor Name="ModuleSupportDeedsCrew1"    Type="ModuleSupport">
+    <Modifier TargetProperty="SectionHealthBonus"       Operation="Addition" Value="300"    Path="ClassModule"/>
+    <Modifier TargetProperty="LocalManpower"           Operation="Addition" Value="350"    Path="ModuleSupportCrew"/>
+    <Modifier TargetProperty="AdditionalGroundBattleManpowerLimit"  Operation="Addition"    Value="175"     Path="ModuleSupportCrew"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportDeedsSiege1"    Type="ModuleSupport">
+    <Modifier TargetProperty="SiegePower"       Operation="Addition" Value="50"    Path="ModuleSupportSiege"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleWeaponBeamDeeds01"  Type="ModuleWeapon">
+    <Modifier TargetProperty="Damage"                       Operation="Addition"    Value="3952"       TooltipHidden="true"/>
+    <Modifier TargetProperty="Cooldown"                     Operation="Addition"    Value="40"         TooltipHidden="true"/>
+    <Modifier TargetProperty="CriticalHitChance"            Operation="Addition"    Value="0.05"       TooltipHidden="true"/>
+    <Modifier TargetProperty="ShipManpowerKillPerHit"       Operation="Addition"    Value="100"        TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleSupportBaitBeamDeeds01"      Type="ModuleSupportBait">
+    <Modifier TargetProperty="TargetingWeightBonus" Operation="Addition" Value="50" Path="ModuleSupportBait"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ModuleDefenseShieldDeeds01"  Type="ModuleDefense">
+    <Modifier TargetProperty="SectionHealthBonus"               Operation="Addition" Value="400"    Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="HullPlatingAbsorption"            Operation="Addition" Value="50"     Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShieldAbsorption"                 Operation="Addition" Value="600"    Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShieldBonus"                      Operation="Addition" Value="6000"   Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShipManpowerKillAbsorption"       Operation="Addition" Value="0.1"  Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShieldReloadPerPhase"             Operation="Addition" Value="3000"   Path="ClassModuleDefense"/>
+  </SimulationDescriptor>
+
+  <!--##################
+        #### METAPLOT ####
+        ##################-->
+
+  <SimulationDescriptor Name="ModuleDefenseHullPlatingMetaplot1"  Type="ModuleDefense">
+    <Modifier TargetProperty="SectionHealthBonus"                       Operation="Addition"    Value="1700"    Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="HullPlatingAbsorption"                    Operation="Addition"    Value="420"    Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="ShipManpowerKillAbsorption"       Operation="Addition" Value="0.1"  Path="ClassModuleDefense"/>
+    <Modifier TargetProperty="RepairFlatPerDamageAbsorbedByHullPlating" Operation="Addition"    Value="0.5"    Path="ClassModuleDefense"/>
+  </SimulationDescriptor>
+</Datatable>

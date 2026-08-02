@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%PlanetInitialFIDSIFromMiningProbesTitle">Mining Probes</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionLabel">Through this menu you may spend your accumulated goodwill with the Academy for favors. You may gain goodwill with the Academy by donating to Auctions and completing competitive quests.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementQuestGlobalCompet09TooltipEffect">+3 Initial Level on Ships</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity2EffectOverride">+75% Experience gains on Governor Heroes</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageEnergyFleetTitle">Fleet Energy Damage</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageProjectileFleetTitle">Fleet Projectile Damage</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponCriticalHitFleetTitle">Fleet Critical Hit Chance</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementQuestUniquePlanet12TooltipEffect">+5% [dustColored] on Empire per Technology Unlocked</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter3Strategic3Title">Extreme Strike Fighter</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber3Strategic4Title">Extreme Heavy Bomber</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaTitle">Saiadha</LocalizationPair>
+  <LocalizationPair Name="%UniquePlanetSaiadhaDescription">Once a desert world, today Saiadha is an ocean planet, the vast blue expanse only broken by a scattering of craggy isles. Myths speak of the remains of great civilizations beneath the waves but inspecting the landmasses that still peek above the waters, you'd be hard pressed to find any evidence. Only a handful of primitive societies survive, yet a great power is claimed to be trapped deep inside... </LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Title">Keepers of the Deep</LocalizationPair>
+  <LocalizationPair Name="%PlanetAnomalyEndlessWonder3Description">The half-mad Endless here trade for forbidden knowledge.. in exchange for outsiders leaving their most holy site deep underground alone.</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Title">Sewa Eze</LocalizationPair>
+  <LocalizationPair Name="%QuestHeroPilgrims01Description">Born on the Pilgrim arcology Horizon of Light, in her late childhood Sewa's home fleet was involved in a long, drawn-out flight from a United Empire hunter party, eventually resulting in fierce fighting and the arcology's scattering. In the aftermath, scavenging emergency Dust reserves in a nearby moon, Sewa somehow survived a fall into a deep Dust sump, emerging some days later with Dust-enhanced abilities. By then, however, the remnants of her fleet had long gone. A period in the wilderness of the galaxy ensued, before she arrived at the Academy, where, under careful guidance, she honed her raw powers. After settling scores on the Horizon, Sewa is now a free agent at large.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedTitle">Enhanced</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityUpgradedDescription">This planetary anomaly has been enhanced to strengthen its beneficial effects.</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderTitle">Wonder</LocalizationPair>
+  <LocalizationPair Name="%CategoryAnomalyQualityWonderDescription">This planetary anomaly is one of a kind, providing extraordinarily powerful effects.</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsDescription">Cannot be used to invade systems when loaned to another Empire
+Cannot be Captured</LocalizationPair>
+  <LocalizationPair Name="%FailureNoTemplesOnGasPlanetsDescription">Temples may not be built on Gas Planets</LocalizationPair>
+  <LocalizationPair Name="%PlanetImprovementTemple1TooltipOverride">Removes the Base Planet [fids] penalty on Planet
+50% Base Planet [scienceColored] is converted into [prestigeColored]
+
+[blue-gray](Temples are destroyed when the system is conquered, and also refund their Relics)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsGroupTooltipDescription">Exploration Relic:
+Activate this relic to get a powerful bonus on all ships, allowing them to see further and move faster.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsGroupTooltipDescription">Expansion Relic:
+Activate this relic to get more overcolonization threshold per Cathedral and to remove base disapproval on planets with Temples</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsGroupTooltipDescription">Diplomacy Relic:
+Activate this relic to get a passive increase your relation with all known minor factions and to increase the influence radius on all systems.</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsGroupTooltipDescription">Political Relic:
+Activate this relic to get a variety of bonuses, depending on your elected political parties. Having fewer represented parties increases the effect of this bonus.</LocalizationPair>
+  <LocalizationPair Name="%EmpireExplorationRelicsButtonTooltipDescription">Effects:
++25% Movement Point Efficiency
++5 Vision Range on Ships and Systems{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireExpansionRelicsButtonTooltipDescription">Effects:
++1 Overcolonization Threshold per Cathedral
+No Base Disapproval on Planets{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireDiplomacyRelicsButtonTooltipDescription">Effects:
++5% Influence Radius per Turn this Slot is Enabled (Max 100%)
++1 Relation with Minor Factions per Turn{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsButtonTooltipDescription">Represented Party Multiplier: {2}
+Effects:{0} {1}</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsSlotLocked">[red]This slot is locked. You must build a Cathedral to the Lost to unlock another Empire Relic Slot#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ConstructibleFilterInfiniteDescription">Only shows Infinite Improvements</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemImprovementInfiniteTitle">Infinite Improvement</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLunarAnomalyTooltip">[blue-gray](Can only be built on Systems with Lunar Anomalies)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresPlanetAnomalyTooltip">[blue-gray](Can only be built on Systems with Planetary Anomalies)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyAnomalyTooltip">[blue-gray](Can only be built on Systems with Anomalies)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetTooltip">[blue-gray](Can only be built on Systems with Gas Planets)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresNegativeOrMixedAnomalyTooltip">[blue-gray](Can only be built on Systems with Negative or Mixed Anomalies)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresStrategicDepositTooltip">[blue-gray](Can only be built on Systems with Strategic Deposits)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresLuxuryDepositTooltip">[blue-gray](Can only be built on Systems with Luxury Deposits)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresAnyDepositTooltip">[blue-gray](Can only be built on Systems with Resource Deposits)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresTradeBuildingTooltip">[blue-gray](Can only be built on Systems with either a Trade HQ or Subsidiary)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresGasPlanetOrLunarAnomalyTooltip">[blue-gray](Can only be built on Systems with Gas Planets or Lunar Anomalies)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetTooltip">[blue-gray](Can only be built on Systems with Sterile Planets)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterilePlanetOrTradeBuildingTooltip">[blue-gray](Can only be built on Systems with Trade HQs, Subsidiaries, or Sterile Planets)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrFertilePlanetTooltip">[blue-gray](Can only be built on Systems with Sterile or Fertile Planets)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresSterileOrHotPlanetTooltip">[blue-gray](Can only be built on Systems with Sterile or Hot Planets)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelSpaceBattle1Tooltip">[blue-gray](Requires System Battery be constructed first)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassImprovementRequiresCitadelTooltip">[blue-gray](Can only be built on Systems with Citadels)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleProjectileCanBeShotDownTitle">Projectile can be shot down</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNoVisionDescription">Must have vision over the system</LocalizationPair>
+  <LocalizationPair Name="%LostTemplarsQuest-Chapter1-Part1-ReligiousObjective">Investigate $Amount01Name Curiosities</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsDescription">Turn this system into a protectorate, gaining its resources and faction trait and sealing it against other empires, but without occupying it.</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire1OrAboveTitle">Defiant or above</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire2OrAboveTitle">Content or above</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusEmpire3OrAboveTitle">Loyal or above</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem1OrAboveTitle">Unhappy or above</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem2OrAboveTitle">Content or above</LocalizationPair>
+  <LocalizationPair Name="%HappinessStatusStarSystem3OrAboveTitle">Happy or above</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire1OrAboveTitle">Defiant or above</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire2OrAboveTitle">Dutiful or above</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusEmpire3OrAboveTitle">Loyal or above</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem1OrAboveTitle">Defiant or above</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem2OrAboveTitle">Dutiful or above</LocalizationPair>
+  <LocalizationPair Name="%ObedienceStatusStarSystem3OrAboveTitle">Loyal or above</LocalizationPair>
+  <LocalizationPair Name="%AssignmentCooldownBaseDurationTitle">Assignment Cooldown</LocalizationPair>
+  <LocalizationPair Name="%MaximumPopulationTitle">[population] Population Capacity</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSplashFlotillaDamagePercentTitle">Damage shared across targeted Flotilla</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAnnotationsRefusedSciencePartnership">You refused our science agreement offer.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementCitadelSpecializationEffectOverride">The Citadel will grant the following bonuses to the system it's on:
+ • +20% [foodColored] on System
+ • +20% [scienceColored] on System
+ • +20% [industryColored] on System
+ • +10% [prestigeColored] on System
+ • +1000 [citadelDefenseColored] Citadel Garrison Capacity
+ • +50 [citadelDefenseColored] Citadel Garrison Capacity per [population]</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeSmallDescription">Small-sized ships require #E3BDAC#1#REVERT# [commandPoint] (Command Points) of their fleet.
+Hull Weakness: #E3BDAC#120#REVERT# (see defense absorption)</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesReductionTitle">Offensive Bombardment Damage Received</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamageReductionTitle">Offensive Bombardment Damage Received</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefensiveDamageReductionTitle">Defensive Bombardment Damage Received</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundPopulationDestructionProbabilityTitle">Population Killed during Invasions</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleRoundImprovementDestructionProbabilityTitle">Improvements Destroyed during Invasions</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelIndustryScienceEffectOverride">+10% Health on Constructed Ships
++10% Damage on Constructed Ships </LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportMothershipAnchoredDefenseEffectTitle">The Ark cannot be attacked in a space battle when it is attached to a System
+Crew Manpower from the Ark may not join the invasion</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockAltTitle">[ManpowerColored] Manpower Capacity</LocalizationPair>
+  <LocalizationPair Name="%MaximumEmpireManpowerStockTitle">[ManpowerColored] Manpower Capacity</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseRecoveryTitle">Garrison Recovery Rate</LocalizationPair>
+  <LocalizationPair Name="%SystemDefenseTitle">System Garrison</LocalizationPair>
+  <LocalizationPair Name="%MaximumSystemManpowerTitle">[systemDefenseColored] Garrison Capacity</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseTitle">Citadel Garrison</LocalizationPair>
+  <LocalizationPair Name="%MaximumCitadelManpowerTitle">[citadelDefenseColored] Citadel Garrison Capacity</LocalizationPair>
+  <LocalizationPair Name="%CitadelDefenseDescription">These forces function similarly to the System Garrison, but are protected from Siege damage. This pool will start refilling once your System Garrison is full, and will not count towards effects like Sim Camp.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescription">The system is under siege, which gradually depletes its [systemDefenseColored] Garrison Manpower.
+Current [systemDefenseColored] Garrison: {0} / {1} ( {2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeWithFleetsDescription">The system is under siege, which gradually depletes its [systemDefenseColored] Garrison Manpower.
+Current [systemDefenseColored] Garrison: {0} / {1} ( {2} [systemDefenseColored]/[turn])
+
+Orbiting fleets contribute {3} [shipCrewColored] Crew Manpower to this system's Garrison if it is invaded</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelUnderSiegeDescriptionWithEmpireName">{3}'s {4} is under siege, which slowly saps its Defense [systemDefenseColored].
+Current [systemDefenseColored]: {0} / {1} ( {2} [systemDefenseColored]/[turn])</LocalizationPair>
+  <LocalizationPair Name="%NetSystemManpowerTitle">[systemDefenseColored] Garrison Manpower per turn</LocalizationPair>
+  <LocalizationPair Name="%SystemManpowerLossTitle">[systemDefenseColored] Garrison Manpower Damage</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandTitle">Garrison</LocalizationPair>
+  <LocalizationPair Name="%FleetDisbandDescription">Garrison the fleet and dock it into the hangar of the current start system to quickly repair and restock. You may only garrison your own star system.</LocalizationPair>
+  <LocalizationPair Name="%ModuleEffectGroundBattleAttackerManpowerLimitBonusTitle">Invasion Crew Deployment Limit</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleDamageMultiplierTitle">System Battery Damage</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipManpowerTitle">[shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%MaxLocalManpowerAltTitle">[shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCitadelSpaceBattle1Effects">Equips the Citadel with a Blast Effect Battery, which it will fire from orbit once per Phase dealing 2000 damage to every enemy Ship</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01MajorHisshosEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Hawk-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02MajorHisshosEra2TooltipEffect">Unlocks additional [Strat02HyperiumColored] module slots for Kestrel-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01MajorHisshosEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Kite-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02MajorHisshosEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Falcon-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01MajorHisshosEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Eagle-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UmbralChoirEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Stanza-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UmbralChoirEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Poem-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UmbralChoirEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Hymn-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UmbralChoirEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Epic-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UmbralChoirEra4TooltipEffect">Unlocks additional [Strat06quadrinixColored] module slots for Cycle-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TemplarsEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Incantation-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TemplarsEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Invitatory-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TemplarsEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Prostration-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TemplarsEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Hymn-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TemplarsEra4TooltipEffect">Unlocks additional [Strat06quadrinixColored] module slots for Invocation-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01CraversEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Queen-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01HoratioEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Imperator-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01SophonsEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Yotta-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TerransEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Zelevas-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01TimeLordsEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Prime-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01UnfallenEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Forest-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VampirilisEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Ortaam-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VenetiansEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Meos-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01CraversEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Bishop-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01HoratioEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Dux-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01SophonsEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Giga-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TerransEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Sopron-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01TimeLordsEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Triangular-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01UnfallenEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Fire-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VampirilisEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Jaium-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VenetiansEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Omokar-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02CraversEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Guard-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02HoratioEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Archidux-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02SophonsEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Peta-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TerransEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Sheredyn-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02TimeLordsEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Tetrahedral-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02UnfallenEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Light-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VampirilisEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Letum-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VenetiansEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Lancellum-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership01TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Ark-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMothership02TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Ark-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01CraversEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Soldier-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01HoratioEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Marchio-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01SophonsEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Kilo-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TerransEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Egezrey-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01TimeLordsEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Natural-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01UnfallenEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Thorn-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VampirilisEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Sluaym-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VenetiansEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Velm-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02CraversEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Worker-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02HoratioEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Baro-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02SophonsEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Deka-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TerransEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Yeranef-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02TimeLordsEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Rational-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02UnfallenEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Loam-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VampirilisEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Toisam-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VenetiansEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Drev-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall01VaultersEra2TooltipEffect">Unlocks additional [Strat01titaniumColored] module slots for Arrow-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsSmall02VaultersEra2TooltipEffect">Unlocks additional [Strat02hyperiumColored] module slots for Bolt-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium01VaultersEra3TooltipEffect">Unlocks additional [Strat03adamantianColored] module slots for Quarrel-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsMedium02VaultersEra3TooltipEffect">Unlocks additional [Strat04anti-matterColored] module slots for Shot-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementSlotsLarge01VaultersEra4TooltipEffect">Unlocks additional [Strat05orichalcixColored] / [Strat06quadrinixColored] module slots for Spear-class hulls
++50% [shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedCravers">vrrr -- kzzz -- tsk . . . BLUNT: Share intelligence. The Hive rarely offers this.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedCravers">wrr -- bzzz -- klunk . . . FLAT: Your intellectual uniqueness. Consumed. Added to our own.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedCravers">chttt -- wrrr -- fzzzt . . . DISAPPOINTED: The Hive will exchange goods with you, One-Who-Feeds-Us-For-Resources.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedCravers">vkk -- chttt -- ktsz BLUNT: The deal is signed.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedCravers">PLEASED: Your territory will open new vistas of food to us. Not you, we promise. (This is my favorite for some reason, just really rolled off the tongue once I thought of it)</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedCravers">DISTRACTED: You reveal new worlds. New food. Leave us now.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedCravers">FLAT: The hive is used to independence. This changes nothing.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHissho">Let our nations share sight, rather than hide in the dark from one another like honorless prey.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHissho">Without wisdom, the blade is only a danger to its wielder; through this agreement, you bring both our nations peace and prosperity.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHissho">You honor our crafts with your acceptance of trade. You will not be disappointed in their quality.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHissho">This deal pleases Tonatsi. We will remember today's good business.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHissho">As your guests, I will make sure my people respect every micrometer of your territory, as we expect the same of yours.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHissho">Our scouts will enlighten you with their discoveries; I hope you make good use of them.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHissho">You will fight alone? A disappointing choice, but a respectable one; we wish you luck, lone warriors.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedHoratio">This will help you see the galaxies need for my beauty.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedHoratio">Horatio science is the best science of course, but more data will make it even better.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedHoratio">What is life without opulence? You'll enjoy the economic genius of Horatio, I know it.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedHoratio">Everything Horatio touches makes the galaxy a better place.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedHoratio">What an important day this must be for you! To gain free access to the perfect realm of Horatio, and give Horatio the right to explore your empire.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedHoratio">Even Horatio cannot beautify worlds which Horatio does not know of; you've done the galaxy a service today.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedHoratio">Disappointing you don't see the benefits of working with Horatio, but you'll understand eventually, I'm sure.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTemplars">You will find that our archives stretch eons, but naturally, we are rather out of date. This agreement will be a boon to the faithful.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTemplars">As we rebuild our temples with your traded materials, know that your contribution will be embodied in every sacred flagstone.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTemplars">This deal will help the Nakalim significantly. It will have an important place in the story of our restoration millennia from now.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTemplars">With your assistance, the hunt for our ancient relics will be greatly eased. You have done us a great service today.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTemplars">Oh. The galaxy has indeed changed greatly during our slumber... Thank you for this.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTemplars">An unfortunate choice, though our peace endures. Perhaps we have not been forthcoming enough with our history for you to see the benefit of an alliance?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedSophon">Great! Let's see what we can... oh, uhh, we'll throw in some free video tech too! (Leumac, get the vintage tech nerds, I can't load this format...)</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedSophon">Two heads are definitely better than one! Or, four in this case, I guess. Anyway, here's to doing science together, buddy!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedSophon">Awesome! I'm really looking forward to seeing what you've got, and you're not gonna regret giving Sophon goods a try! And just wait til you see our entertainment - it's a real treat for the brain!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedSophon">Yeah, we can definitely work with this. R&amp;D is gonna be thrilled, probably go out to lunch!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedSophon">Don't get me wrong, our telescopes are the best, but it's gonna be way more fun comparing planets up close with this agreement!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedSophon">This is really gonna accelerate our exploration! Hope you enjoy what we've found, too.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedSophon">Oh! Yeah, no, that's... That's fine. Yeah just, stay friends I guess. Peace is good too, it's no big deal...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUmbralChoir">You do the Choir a great service by expanding its awareness of the galaxy, Creature.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUmbralChoir">The Choir is eager to share knowledge of the universe with you, Creature.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUmbralChoir">The Choir looks forward to analyzing your goods, Creature. Drop-off coordinates have already been placed in your companies networks.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUmbralChoir">This step may be small, but it is valuable, Creature.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUmbralChoir">The Choir welcomes you to its territory, Creature. Bask in the peaceful void with us.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUmbralChoir">You have opened up the possibilities of harmony a bit more today by showing us these maps, Creature.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUmbralChoir">The Choir is quieted for a moment by your refusal, Creature. We hope you will join our song in the future.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedUnfallen">It can only strengthen the Heart for us to share what we see. What say you?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedUnfallen">Our peoples will flourish under our shared scientific labors. Thank you, friend.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedUnfallen">May our exchange bring greater harmony to our peoples, for the good of all.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedUnfallen">The Heart is pleased with our deal. May it speed along the pursuit of peace.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedUnfallen">Peace will flourish and grow now that we have opened our borders. We look forward to meeting your people, on our worlds and yours.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedUnfallen">Where once there was barren soil, you ensure there can now be seeds of peace. Thank you for these maps.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedUnfallen">The Heart stills with your refusal, like a flower under a frost. We will continue the necessary work to build stronger bonds between us.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTerrans">The Empire can be a good friend indeed, but not if we are kept in the dark. I implore you to sign this intelligence sharing agreement, for your own sake if nothing else.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTerrans">Excellent! To see our greatest minds lecturing in one anothers universities will be glorious - now to the matter of keeping a lid on their politics...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTerrans">Hah! Growth and riches, without a single shot fired. You've put me in a good mood with this - come, let us feast on these alien delicacies, before they hit the market.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTerrans">I look forward to what the Empire will do with this deal - perhaps I'll order a new opera house, or a great manufactory...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTerrans">A good decision, it can only increase your security to work so closely with the Empire. I will enjoy making an appearance in your capital to celebrate - I hope you are prepared to entertain me...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTerrans">It is always a thrill to see new lands, and imagine all the future patriots who could populate them. I'll get my development planners to work right away.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTerrans">Oh, ambitious aren't we! The Empire can stand on its own - but without an alliance, we have no obligations to help you do the same...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVaulters">My kin have found consensus - it would be for the best to share our vision with you, so we might coordinate intelligence and movements across the firmament.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVaulters">My kin will be delighted to hear of the opportunity to engage in shared study. May both our peoples prosper from this.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVaulters">The marketplaces flourish with goods and new ideas, and our crafts travel abroad, filling us with pride - it feels like home, like Auriga.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVaulters">A good deal, and a small step towards greater things between our peoples.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVaulters">My kin will extend every hospitality to you as guests, and respect you as hosts. I hope all will be well between our peoples.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVaulters">To think, how many more stars there still are in the universe. Our astronomers will be thrilled to exchange charts with yours.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVaulters">It is a tense position, to fear the universe when it rewards cooperation to survive. We will hold out, but I hope you come to see the honesty of our offer.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderSignedVampirilis">You accepted my Vision Sharing agreement The Light of the Virtuals reveals all sins, and now shines for you as well.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVampirilis">You are wise to accept the mutual enlightenment of the Church.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVampirilis">Wealth is useless to the faithful, but labor will ennoble both our peoples. A wise decision.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVampirilis">The Virtuals bless this arrangement.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVampirilis">Glorious! May you find the Light in our hallowed territory, just as we bring the Light to the faithful on your worlds.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVampirilis">Our fleets will journey more safely with the revelations within these maps.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVampirilis">Heresy is not the same as heathenism - it is reserved for those who come close to the holy truth, but lead the faithful astray by seductively small degrees... much like one who agrees to peace, but rejects alliance.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedVenetians">Market research can only go so far, and be so up to date. What do you say we share vision, the better to collaborate?</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedVenetians">You can't sell the latest products unless you have the latest science; let's form a brain-trust, and see what we can come up with!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedVenetians">That's why you're the leader! You know a good deal when you see one, and the Families bring the best deals. You won't regret this!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedVenetians">Give it time, the dividends from this deal will add up, and you'll be glad you signed it.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedVenetians">Tourists, investments, mercenaries... You'll be glad to see the benefits of opening your borders to the Families!</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedVenetians">The Four Families will make good use of these maps. I see some prime real estate for development already...</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedVenetians">Keeping it businesslike, I can respect that. But don't wait too long to reconsider, we can't stop swimming for our own lunch.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionVisionSharingSenderProposedTimeLords">Cooperation in intelligence matters would help us both. Consider this arrangement, so we can keep each other up to date on this frightening galaxy.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionScienceAgreementSenderSignedTimeLords">While it will be difficult to translate our methods to your scientists due to the difference between our home universes, we will do our best. And on behalf of all Riftborn - thank you.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionTradeAgreementSenderSignedTimeLords">We will send instructions on your consumers unique product needs to our past selves right away. By definition, you will not find higher quality goods in all of time and space so long as you trade with us.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionDealSenderSignedTimeLords">We are glad you have seen the value in our proposal. Projections indicate these resources are already an excellent investment in the future.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionOpenBordersSenderSignedTimeLords">Perhaps in time, we will learn to not only survive, but thrive in your universe. This step is a great one in that process, and your agreement is a great fortune for us.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionMapSharingSenderSignedTimeLords">Your contribution to our survival is appreciated. These maps will make this physical universe of yours clear to us, as Coroz once was.</LocalizationPair>
+  <LocalizationPair Name="DiplomaticInteractionAskAllianceReceiverRefusedTimeLords">Caution is understandable to us; it defines every moment of our existence, now. We hope you will be convinced to work more closely with us in the future though.</LocalizationPair>
+  <LocalizationPair Name="%RawMaximumPopulationTitle">[population] Population Capacity</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerManpowerLimitBonusTitle">Invasion Manpower Limit</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderManpowerLimitBonusTitle">Invasion Manpower Limit</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSiegePowerTitle">Siege Manpower Damage</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponOpponentPenaltyTitle">Opponent Debuff</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSpecialEffectDurationTitle">Debuff Duration</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDamageAOETitle">Damage to Flotilla</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerPhaseTitle">Shields recharged each Phase</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerPhaseTitle">Shields recharged each Phase on Flotilla</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShieldReloadPerSecondTitle">Shields recharged each Second</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaShieldReloadPerSecondTitle">Shields recharged each Second on Flotilla</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerPhaseTitle">Health repaired each Phase</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerPhaseTitle">Health repaired each Phase on Flotilla</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsHealthReloadPerSecondTitle">Health repaired each Second</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaHealthReloadPerSecondTitle">Health repaired each Second on Flotilla</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeTitle">Crew Killed per Second</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronCriticalAttackChanceTitle">Squadron Critical Hit Chance bonus</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterBattleTitle">Health repaired after Combat on Fleet</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaRepairAfterPhaseTitle">Health repaired each Phase on Fleet</LocalizationPair>
+  <LocalizationPair Name="%DodgeChanceTitle">Squadron Evasion</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDodgeChanceTitle">Squadron Evasion</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponDPSTitle">Damage per Second</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectManpowerDamageOverTimeDurationTitle">Boarding Duration</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectOverallCooldownTitle">Firing Interval</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsCooldownTitle">Cooldown</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsShipManpowerKillAbsorption">Crew Damage Resistance</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleEMPExplicationTitle">EMP Turrets disable the listed Subsystem on the target ship for a time on a successful hit.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsRawDamageTitle">Raw Damage</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPWeaponDefenseTitle">Weapon Deactivation Duration</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPShieldDefenseTitle">Shield Deactivation Duration</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSTitle">Flak DPS</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlakExplicationTitle">Firing simultaneously with its base Kinetic weapon, Flak targets incoming projectiles, BEBs, Squadrons and Boarding Pods.
+Equal or higher Flak Salvo Damage vs. Missile Health kills the targeted salvo in a single shot.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportAdditionalManpowerTitle">[shipCrewColored] Crew Capacity</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstSmallShipsTitle">Damage Bonus vs. Small Ships</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstMediumShipsTitle">Damage Bonus vs. Medium Ships</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronModifierAgainstLargeShipsTitle">Damage Bonus vs. Large Ships</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementObliteratorShieldEffects">Defends against complete Obliteration once before being destroyed
++50% of System Improvements and Population saved from Obliteration
++50% Damage Negation against Obliteration on Orbiting Fleets
+-67% Chance of Injury on Governing Heroes</LocalizationPair>
+  <LocalizationPair Name="%DockedFleetsHealthRegenerationRatioTitle">Max Health regenerated each Turn on Garrisoned Ships</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueCuriosity3EffectOverride">+50% Max Health regenerated each Turn on Garrisoned Ships</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioTitle">Max Health regenerated each Turn on Orbiting or Garrisoned Ships</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroDescription">Max Health regenerated each Turn on Orbiting or Garrisoned Ships</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioFromHeroTitle">Max Health regenerated each Turn on Orbiting or Garrisoned Ships</LocalizationPair>
+  <LocalizationPair Name="%HealthRegenerationRatioDescription">Max Health regenerated each Turn on Orbiting or Garrisoned Ships</LocalizationPair>
+  <LocalizationPair Name="%HealthPerTurnTitle">Hero Recovery Rate</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleExperienceFromBattlePercentModifierTitle">Experience earned</LocalizationPair>
+  <LocalizationPair Name="%ExperienceBonusPercentTitle">Experience earned</LocalizationPair>
+  <LocalizationPair Name="%ExperienceMultiplierTitle">Experience Multiplier</LocalizationPair>
+  <LocalizationPair Name="%LongRangePenaltyTitle">Accuracy at Long Range</LocalizationPair>
+  <LocalizationPair Name="%MediumRangePenaltyTitle">Accuracy at Medium Range</LocalizationPair>
+  <LocalizationPair Name="%ShortRangePenaltyTitle">Accuracy at Short Range</LocalizationPair>
+  <LocalizationPair Name="%DeadZoneRangePenaltyTitle">Accuracy at Point-Blank Range</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleAntiCrewExplicationTitle">Ships get a proportional damage bonus given how full their crew is, capping at 20%. Shrapnel modules are effective at reducing that bonus and improving Boarding Pods.</LocalizationPair>
+  <LocalizationPair Name="%ModuleInvisibilityAmbushTitle">Cloaked Flotillas will stay invisible and won't fire until they reach their desired range.</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusTitle">Effect of Morale Bonuses</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusIfOneShipTitle">+25% Damage on Ships alone in Flotilla</LocalizationPair>
+  <LocalizationPair Name="%ManpowerLostTransferPercentTitle">Lost Crew earned back as Manpower</LocalizationPair>
+  <LocalizationPair Name="%DamageBonusFromManpower">Damage from Crew Manpower</LocalizationPair>
+  <LocalizationPair Name="%PlayerDustPerAliveCPTitle">[dustColored] gained per owned CP remaining after Battle</LocalizationPair>
+  <LocalizationPair Name="%ManpowerPercentKillPerPhaseTitle">Crew Killed per Phase on Fleet</LocalizationPair>
+  <LocalizationPair Name="%DamageKineticTitle">Slug Weapon Damage</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarCommandDescription">The total Command Points of the Ships stored in the Garrison of this System</LocalizationPair>
+  <LocalizationPair Name="%FleetLineHangarHealthDescription">The cumulated health of Ships stored in the Garrison of this System</LocalizationPair>
+  <LocalizationPair Name="%SophonsQuest-Chapter2.1-Diplomacy-C1Step1ObjectiveTooltip">Use the "Garrison" action to put ships into a garrison or build new ships and leave them in the garrison.</LocalizationPair>
+  <LocalizationPair Name="%ExplorationQuest26-Choice02ObjectiveTooltip">The ship has to be in the garrison of one of your Colonies.</LocalizationPair>
+  <LocalizationPair Name="%FailureShipLockedInGarrisonDescription">You can't create a fleet because one of the ships is blocked in the garrison.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsManpowerDamageOverTimeDefenseTitle">Boarding Pod Manpower Damage received</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceTitle">Critical Hit Chance bonus</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceKineticTitle">Critical Hit Chance bonus on Kinetic Weapons</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsBonusCriticalAttackChanceEnergyTitle">Critical Hit Chance bonus on Energy Weapons</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDefenseTitle">Squadron Damage Resistance</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightBonusTitle">Increased Aggro on Ship</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleTargetingWeightPenaltyTitle">Decreased Aggro on Ship</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleFlotillaMoraleBonusPercentTitle">Effect of Morale Bonuses</LocalizationPair>
+  <LocalizationPair Name="%GlobalSpeedModuleTitle">Movement Point Efficiency</LocalizationPair>
+  <LocalizationPair Name="%MaximumShipProbeStockTitle">Maximum Exploration Probes</LocalizationPair>
+  <LocalizationPair Name="%ProbeStockTitle">Exploration Probes</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSupportProbeStockTitle">Exploration Probes</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsNetDepletionPointsOnOrbitTitle">Depletion healed per Turn</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsWeaponTypeCollateralTitle">Collateral</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderTroopsDamageMultiplierTitle">Defending Troops Damage</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsDamageMultiplierTitle">Invading Troops Damage</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleAttackerTroopsMaxHealthMultiplierTitle">Invading Troops Health</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentPopulationDestructionProbabilityTitle">Population Killed</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentImprovementDestructionProbabilityTitle">Improvements Destroyed</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1GhostTooltipEffect2">Adds up to 600  [systemDefenseColored] and Garrison Deployment Limit</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TooltipEffect2">Adds up to 300  [systemDefenseColored] and Garrison Deployment Limit, scaling with current System Ownership</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleDefenderStrategy1TerransTooltipEffect2">Adds up to 400 [Manpower] and increases Garrison Deployment Limit, scaling with current System Ownership</LocalizationPair>
+  <LocalizationPair Name="%BesiegedColonizedStarSystemTitle">Besieged System</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementCuriosity2EffectOverride">+0.08 [industryColored] per [systemDefenseColored]</LocalizationPair>
+  <LocalizationPair Name="%FailureMoreRelicsDescription">You don't have enough Relics [relicColored]</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherDescription">Go to the Amplifiers website</LocalizationPair>
+  <LocalizationPair Name="%MainMenuGames2GetherTitle">Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%MessageBoxGames2GetherButtonTitle">Look for information, fixes, and ideas on Amplifiers</LocalizationPair>
+  <LocalizationPair Name="%Update14Description">Thanks to your massive participation in last January’s free weekend, you unlocked all the available rewards! The Basryxo minor faction is now available with its new hero and a quest full of rubbish…  Unlock it on Amplifiers!</LocalizationPair>
+  <LocalizationPair Name="%EarlyAccessSubscriberContentDescription">Dominating the galaxy can only be easier with another Hero by your side. Thanks to your interest in Amplitude and Amplifiers, the Sophon genius Uthassum Rhamoezz has been unlocked and will be available on Amplifiers!</LocalizationPair>
+  <LocalizationPair Name="%Update5Description">Thanks to the massive participation in the Play-to-Win Community Challenge, players have unlocked a brand new add-on including the Mezari fleet skin for United Empire civilization, a new ship module pack, a new hero, the 6-branches galaxy type, a new anomaly and a population event. Unlock it on Amplifiers now!</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisTitle">Conversion Festival</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionVampirilisDescription">Using our strong relationship with the Academy, we can convince an entire system to build an Ark before converting themselves to Essence.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirTitle">Bury Servers</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUmbralChoirDescription">At our request, the Academy will blackout their sensors so we can discretely establish a sanctuary server cache on one of their systems.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessTitle">Political Lockout</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticBlockAuctionAccessDescription">Political favors from the Academy are not a right; by privately denouncing an Empire before Isyander, we can get a political edge over them.</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionTitle">Repatriate Relics</LocalizationPair>
+  <LocalizationPair Name="%TemplarsUniqueAcademyActionDescription">Our absence, shared faith, and imperial history problematize our claim to Relics in the Academy, but good relations can now see them returned.</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionTitle">Security Consulting</LocalizationPair>
+  <LocalizationPair Name="%VaultersUniqueAcademyActionDescription">With so few holdings, Academy military and economic security must be superlative; we will lean on them to share this expertise for our people.</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionTitle">Military Honors</LocalizationPair>
+  <LocalizationPair Name="%SheredynUniqueAcademyActionDescription">By initiating troops into each others elite orders, we can combine Sheredyn and Academy prestige, attracting patriots and galactic respect.</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionTitle">Guided Research</LocalizationPair>
+  <LocalizationPair Name="%MezariUniqueAcademyActionDescription">By hosting Academy scientists, our Emperor can earn the good will of both Mezari intellectuals and the galactic scientific community. </LocalizationPair>
+</Datatable>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="ShipFactionTemplars"     Type="ShipFaction"/>
+
+  <SimulationDescriptor Name="ShipFactionNamedShipTemplars"     Type="ShipFaction"/>
+  <SimulationDescriptor Name="ShipFactionNamedShipSophons"      Type="ShipFaction"/>
+  <SimulationDescriptor Name="ShipFactionNamedShipTerrans"      Type="ShipFaction"/>
+  <SimulationDescriptor Name="ShipFactionNamedShipCraversPrime" Type="ShipFaction"/>
+
+  <SimulationDescriptor Name="AcademyShip"             Type="AcademyShip">
+    <Modifier TargetProperty="CannotBeModified"         Operation="Maximum" Value="1" Path="./ClassGarrisonFleet"/>
+  </SimulationDescriptor>
+  
+  <SimulationDescriptor Name="NamedShip"               Type="NamedShip"/>
+
+  <!-- Reinforcement Effects -->
+  <!-- Stage: Inactive -->
+  <SimulationDescriptor Name="AcademyReinforcementStageInactiveEasy" Type="AcademyReinforcement">
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageInactiveNormal" Type="AcademyReinforcement">
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageInactiveHard" Type="AcademyReinforcement">
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageInactiveEndless" Type="AcademyReinforcement">
+
+  </SimulationDescriptor>
+
+  <!-- Stage: Passive -->
+  <SimulationDescriptor Name="AcademyReinforcementStagePassiveEasy" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.05" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStagePassiveNormal" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.05" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStagePassiveHard" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.05" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStagePassiveEndless" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.05" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <!-- Stage: Roaming -->
+  <SimulationDescriptor Name="AcademyReinforcementStageRoamingEasy" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.1" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageRoamingNormal" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.1" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageRoamingHard" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.1" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageRoamingEndless" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.1" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <!-- Stage: Aggressive -->
+  <SimulationDescriptor Name="AcademyReinforcementStageAggressiveEasy" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.15" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageAggressiveNormal" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.15" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageAggressiveHard" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.15" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageAggressiveEndless" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.15" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <!-- Stage: Developing -->
+  <SimulationDescriptor Name="AcademyReinforcementStageDevelopingEasy" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.2" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageDevelopingNormal" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.2" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageDevelopingHard" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.2" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageDevelopingEndless" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.2" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <!-- Stage: MidGame -->
+  <SimulationDescriptor Name="AcademyReinforcementStageMidGameEasy" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.25" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageMidGameNormal" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.25" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageMidGameHard" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.25" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageMidGameEndless" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.25" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <!-- Stage: LateGame -->
+  <SimulationDescriptor Name="AcademyReinforcementStageLateGameEasy" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.3" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageLateGameNormal" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.3" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageLateGameHard" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.3" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyReinforcementStageLateGameEndless" Type="AcademyReinforcement">
+    <Modifier TargetProperty="Damage" Operation="Percent" Value="0.3" Path="ClassGarrison/ClassShip/ClassSection/ClassModule,ClassModuleWeapon"/>
+  </SimulationDescriptor>
+
+  <!-- ShipFaction bonus tags -->
+  <SimulationDescriptor Name="ShipStatBonus3AcademyShips" Type="ShipStatBonus3">
+    <Modifier TargetProperty="CanInvade"                Operation="Minimum" Value="0" Path="./ClassGarrisonFleet"/>
+    <Modifier TargetProperty="CannotContributeManpower" Operation="Maximum" Value="1" Path="./ClassGarrisonFleet"/>
+  </SimulationDescriptor>
+</Datatable>

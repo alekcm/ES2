@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EmpireImprovementDefinition.xsd">
+
+  <!-- ############################ -->
+  <!-- ######  MajorHisshos  ###### -->
+  <!-- ############################ -->
+
+  <!-- Perfected1Hull1 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull1MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull1MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull1" />
+  </EmpireImprovementDefinition>
+
+  <!-- Perfected1Hull2 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull2MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull2MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull2" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull4 (medium attacker) unlocks additional slots for small attacker ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall01MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull1MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall01MajorHisshos" />
+    <!-- Points to the actual tooltip description that will be displayed -->
+  </EmpireImprovementDefinition>
+
+  <!-- Hull5 (medium defender) unlocks additional slots for small support ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall02MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary"  >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull2MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall02MajorHisshos" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6 (large ship) unlocks additional slots for all medium ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium01MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull3MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium01MajorHisshos" />
+  </EmpireImprovementDefinition>
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium02MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull4MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium02MajorHisshos" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6Slots unlocks additional slots for large ships-->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsLarge01MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyImproveHull5MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsLarge01MajorHisshos" />
+  </EmpireImprovementDefinition>
+
+
+  <!-- ########################### -->
+  <!-- ######  Juggernauts  ###### -->
+  <!-- ########################### -->
+
+  <!-- Science and Exploration -->
+  <EmpireImprovementDefinition Name="EmpireImprovementMovement01Juggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryExploration">
+    <PathPrerequisite       Inverted="true"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautMovement1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementMovement01Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementMovement01JuggernautMajorHisshos" Category="CategoryJuggernaut" SubCategory="SubCategoryExploration">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautMovement1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementMovement01JuggernautMajorHisshos" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementVision01Juggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryExploration">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautVision1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementVision01Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <!-- Empire Development -->
+  <EmpireImprovementDefinition Name="EmpireImprovementCitadelSpecializationJuggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryDefense">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautCitadelSpecialization</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementCitadelSpecializationJuggernaut" />
+  </EmpireImprovementDefinition>
+
+  <!-- Empire Development - Juggernaut hull improvement with hull types unlocked -->
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedHull1Juggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCHisshos</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyHull2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedHull1Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedHull4Juggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCHisshos</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyHull4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedHull4Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedHull5Juggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCHisshos</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyHull5</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedHull5Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementImprovedHull6Juggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCHisshos</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyHull6</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementImprovedHull6Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <!--<EmpireImprovementDefinition Name="EmpireImprovementHonorBoostJuggernaut" Category="CategoryEmpireImprovement" SubCategory="SubCategoryApproval">
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautUnlock</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="EmpireImprovementHonorBoostJuggernaut" />
+    </EmpireImprovementDefinition>-->
+
+  <!-- Military -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMilitary1Juggernaut" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautMilitarySlots1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMilitary1Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMilitary1BattleshipJuggernaut" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautBattleshipMilitarySlots1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMilitary1BattleshipJuggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementBattleshipSpecializationJuggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautBattleshipSpecialization</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementBattleshipSpecializationJuggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementObliteratorSpecializationJuggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautObliteratorSpecialization</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementObliteratorSpecializationJuggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementBattleshipAbilityJuggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautBattleshipAbility</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementBattleshipAbilityJuggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementObliteratorFasterShotJuggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautObliteratorFasterShot</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementObliteratorFasterShotJuggernaut" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementObliteratorFasterChargeJuggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautObliteratorFasterCharge</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementObliteratorFasterChargeJuggernaut" />
+  </EmpireImprovementDefinition>
+
+  <!-- Economy and Trade -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSupport1Juggernaut" Category="CategoryJuggernaut" SubCategory="SubCategoryIndustry">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyJuggernautSupportSlots1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSupport1Juggernaut" />
+  </EmpireImprovementDefinition>
+
+  <!-- ########################### -->
+  <!-- ###### Improvements  ###### -->
+  <!-- ########################### -->
+
+  <!-- Science and Exploration -->
+  <!--<EmpireImprovementDefinition Name="EmpireImprovementHonorHisshos" Category="CategoryEmpireImprovement" SubCategory="SubCategoryApproval">
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+        <TechnologyPrerequisite>TechnologyHonorHisshos</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="EmpireImprovementHonorHisshos" />
+    </EmpireImprovementDefinition>-->
+
+  <!-- Economy and Trade -->
+  <EmpireImprovementDefinition Name="EmpireImprovementHealthBonusTroop2" Category="CategoryTroop" SubCategory="SubCategoryMilitary">
+    <TechnologyPrerequisite>TechnologyManpowerBoostHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHealthBonusTroop2" />
+  </EmpireImprovementDefinition>
+
+  <!-- Empire Development -->
+  <EmpireImprovementDefinition Name="EmpireImprovementHonorBonusPerWar1" Category="CategoryEmpireImprovement" SubCategory="SubCategoryMilitary">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyApproval4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHonorBonusPerWar1" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementPopSlotOnSterile1" Category="CategoryEmpireImprovement" SubCategory="SubCategoryPopulation">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyDisapproval1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPopSlotOnSterile1" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementPopSlotOnSterile2" Category="CategoryEmpireImprovement" SubCategory="SubCategoryPopulation">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyApproval3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPopSlotOnSterile2" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDiplomacyBonus1MajorHissho" Category="CategoryTreaty" SubCategory="SubCategoryDiplomacy">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos">../ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyMinorFactionsGameplay</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDiplomacyBonus1MajorHissho" />
+  </EmpireImprovementDefinition>
+
+  <!--##################-->
+  <!--## HISSHO QUEST ##-->
+  <!--##################-->
+
+
+  <EmpireImprovementDefinition Name="EmpireImprovementQuestHisshos05" Category="CategoryEmpireImprovement" SubCategory="SubCategoryMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyQuestHisshos05</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementQuestHisshos05"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementQuestHisshos06" Category="CategoryEmpireImprovement" SubCategory="SubCategoryMilitary">
+    <TechnologyPrerequisite Flags="Prerequisite,Discard,Technology">TechnologyQuestHisshos06</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementQuestHisshos06"/>
+  </EmpireImprovementDefinition>
+
+  <!--According to the Obedience/Honor rate, the damage of the ship in fleet are increased-->
+  <EmpireImprovementDefinition Name="EmpireImprovementQuestHisshos07" Category="CategoryEmpireImprovement" SubCategory="SubCategoryHullMilitary" >
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,HisshosQuest-Chapter4-Part1Militarist-Reward</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementQuestHisshos07" />
+  </EmpireImprovementDefinition>
+
+  <!--More Honor won from space and ground battle-->
+  <EmpireImprovementDefinition Name="EmpireImprovementQuestHisshos08" Category="CategoryEmpireImprovement" SubCategory="SubCategoryHullMilitary" >
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,HisshosQuest-Chapter4-Part1Religious-Reward</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementQuestHisshos08" />
+  </EmpireImprovementDefinition>
+
+</Datatable>

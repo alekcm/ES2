@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <TutorialGuiElement Name="Tutorial_Academy_Requests" HidePortrait="true">
+        <PopupTitle>%Tutorial_Academy_Request-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_Academy_Request1Popup-Description</Description>
+          <Highlight Name="RolesPanel_Roles" Type="Informative"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_Academy_Request2Popup-Description</Description>
+            <Highlight Name="ContributionPanel_ConfirmButton" Type="Informative"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_Academy_Request3Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+  
+  <TutorialGuiElement Name="Tutorial_Academy_Reparations" HidePortrait="true">
+    <PopupTitle>%Tutorial_Academy_ReparationsPopup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Academy_Reparations1Popup-Description</Description>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Academy_Reparations2Popup-Description</Description>
+      <Highlight Name="ReparationsPanel_ConfirmButton" Type="Informative"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_Academy_GrandAdmiral" HidePortrait="true">
+    <PopupTitle>%Tutorial_Academy_GrandAdmiralPopup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Academy_GrandAdmiral1Popup-Description</Description>
+      <Highlight Name="GrandAdmiralPanel_LocateButton" Type="Informative"/>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Academy_NamedShips-Description</Description>
+      <Highlight Name="NamedShips_Toggle" Type="Informative"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_Academy_Librarian" HidePortrait="true">
+    <PopupTitle>%Tutorial_Academy_LibrarianPopup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Academy_Librarian1Popup-Description</Description>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Academy_Librarian2Popup-Description</Description>
+      <Highlight Name="buyButton" Type="Interactive"/>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Academy_NamedShips-Description</Description>
+      <Highlight Name="NamedShips_Toggle" Type="Informative"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_Academy_VaultKeeper" HidePortrait="true">
+    <PopupTitle>%Tutorial_Academy_VaultKeeperPopup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Academy_VaultKeeper1Popup-Description</Description>
+      <Highlight Name="VaultKeeperPanel_Laws" Type="Informative"/>
+      <Highlight Name="VaultKeeperPanel_SelectButton" Type="Informative"/>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Academy_NamedShips-Description</Description>
+      <Highlight Name="NamedShips_Toggle" Type="Informative"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_Academy_DustMaster" HidePortrait="true">
+    <PopupTitle>%Tutorial_Academy_DustMasterPopup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Academy_DustMaster1Popup-Description</Description>
+      <Highlight Name="MasterOfDustPanel_Button" Type="Informative"/>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Academy_NamedShips-Description</Description>
+      <Highlight Name="NamedShips_Toggle" Type="Informative"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_AcademyScreen02DLC4" HidePortrait="true">
+    <PopupTitle>%Tutorial_AcademyScreen02DLC4Popup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_AcademyScreen02DLC4Popup-Description</Description>
+      <Highlight Name="ControlBanner_AcademyScreenToggle" Type="Interactive"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_AcademyScreen02AltDLC4" HidePortrait="true">
+    <PopupTitle>%Tutorial_AcademyScreen02DLC4Popup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_AcademyScreen02AltDLC4Popup-Description</Description>
+      <Highlight Name="ControlBanner_AcademyScreenToggle" Type="Interactive"/>
+    </PopupPage>
+  </TutorialGuiElement>
+  
+  <TutorialGuiElement Name="Tutorial_Templars" HidePortrait="true">
+    <PopupTitle>%Tutorial_Templars-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_TemplarsPopup-Description</Description>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Templars2Popup-Description</Description> <!-- add highlight to relic counter-->
+      <Highlight Name="GameOverlay_RelicGroup" Type="Informative"/>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Templars3Popup-Description</Description> <!-- add highlight to planet-->
+    </PopupPage>
+  </TutorialGuiElement>
+  
+  <TutorialGuiElement Name="Tutorial_Templars_SystemManagement" HidePortrait="true">
+    <PopupTitle>%Tutorial_Templars-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Templars4Popup-Description</Description>
+      <Highlight Name="PlanetLabel_System_Infrastructure_Button" Type="Interactive"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_TemplarsHeroSkills" HidePortrait="true">
+    <PopupTitle>%Tutorial_TemplarsHeroSkills-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_TemplarsHeroSkills-Description</Description>   <!-- add highlight to the "relics assigned" icon-->
+      <Highlight Name="HeroCard_RelicsContainer" Type="Informative"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_Templars_Academy" HidePortrait="true">
+    <PopupTitle>%Tutorial_Templars_Academy-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Templars_AcademyPopup-Description</Description>
+    </PopupPage>
+    <PopupPage>
+      <Description>%Tutorial_Templars_Academy2Popup-Description</Description>
+    </PopupPage>
+  </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_Templars_RelicsOnSystem" HidePortrait="true">
+    <PopupTitle>%Tutorial_Templars_RelicsOnSystem-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Templars_RelicsOnSystem-Description</Description>
+      <Highlight Name="RelicsSidePanel_PanelsTable" Type="Informative"/>
+    </PopupPage>
+  </TutorialGuiElement>
+  
+</Datatable>

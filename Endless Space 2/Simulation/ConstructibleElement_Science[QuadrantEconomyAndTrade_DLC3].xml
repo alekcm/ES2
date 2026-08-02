@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+    <!-- Add descriptor "TechnologyMilitaryGameplay" to make a technology unlock the military screen -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade21VampirilisUmbralChoir" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade5" Category="CategoryTechnologyEconomyAndTrade" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityUmbralChoir" Inverted="false">AffinityMappingUmbralChoir</PathPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="false">AffinityGameplayVampirilis</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyIndToScience2UmbralChoir"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventIndustrialistTechnology"/>
+
+        <HelperVariable Name="ScienceVariable"/>
+        <HelperVariable Name="ImprovementsVariable"/>
+        <HelperFormula>15 * $(ImprovementsVariable) * $(ScienceVariable)</HelperFormula>
+    </TechnologyDefinition>
+
+</Datatable>

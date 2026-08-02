@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+    <!-- ########################################## -->
+    <!-- ######        MAJOR FACTIONS        ###### -->
+    <!-- ########################################## -->
+
+    <!-- UmbralChoir -->
+    <FactionAffinityMapping Name="AffinityMappingUmbralChoir" SubCategory="MajorFactionAffinityMapping" Hidden="false" Custom="true" Cost="5">
+        <Command Name="RecruitHero"                     Arguments="HeroUmbralChoir02"/>
+
+        <SimulationDescriptorReference Name="AffinityMappingUmbralChoir" />
+
+        <ShipDesign Abstract="SuperColonizer"    ShipDesign="UmbralChoir_SuperColonizer"/>
+        <ShipDesign Abstract="Colonizer"         ShipDesign="UmbralChoir_Colonizer"/>
+        <ShipDesign Abstract="Explorer"          ShipDesign="UmbralChoir_Explorer"/>
+        <ShipDesign Abstract="ExplorerShipBound" ShipDesign="UmbralChoir_ExplorerShipBound"/>
+        <ShipDesign Abstract="Leecher"           ShipDesign="UmbralChoir_Leecher"/>
+        <ShipDesign Abstract="RootCreator"       ShipDesign="UmbralChoir_RootCreator"/>
+        <ShipDesign Abstract="SmallAttack"       ShipDesign="UmbralChoir_SmallAttack"/>
+        <ShipDesign Abstract="SmallSupport"      ShipDesign="UmbralChoir_SmallSupport"/>
+        <ShipDesign Abstract="MediumAttack"      ShipDesign="UmbralChoir_MediumAttack"/>
+        <ShipDesign Abstract="MediumDefense"     ShipDesign="UmbralChoir_MediumDefense"/>
+        <ShipDesign Abstract="Invader"           ShipDesign="UmbralChoir_Invader"/>
+        <ShipDesign Abstract="LargeCarrier"      ShipDesign="UmbralChoir_LargeCarrier"/>
+        <ShipDesign Abstract="Mothership"        ShipDesign="UmbralChoir_Mothership"/>
+
+
+        <ShipDesign Abstract="ScienceJuggernaut"    ShipDesign="Juggernauts_ScienceJuggernaut"/>
+        <ShipDesign Abstract="MilitaryJuggernaut"   ShipDesign="Juggernauts_MilitaryJuggernaut"/>
+        <ShipDesign Abstract="SupportJuggernaut"    ShipDesign="Juggernauts_SupportJuggernaut"/>
+        <ShipDesign Abstract="Battleship"           ShipDesign="Juggernauts_Battleship"/>
+        <ShipDesign Abstract="Obliterator"          ShipDesign="Juggernauts_Obliterator"/>
+        
+    </FactionAffinityMapping>
+
+    <!-- MinorHacking -->
+    <FactionAffinityMapping Name="AffinityMappingMinorHacking" SubCategory="MinorFactionAffinityMapping" Hidden="false" Custom="false" Cost="0">
+        <SimulationDescriptorReference Name="AffinityMappingMinorHacking" />
+    </FactionAffinityMapping>
+</Datatable>

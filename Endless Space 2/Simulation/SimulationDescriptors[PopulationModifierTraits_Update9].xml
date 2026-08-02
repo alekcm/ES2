@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <!-- PopulationPlanet descriptors (provide bonuses to the population on the planet, and is used by the Collection bonuses/Boost bonuses). -->
+  <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitPrimaryStrategicToFood01" Type="ClassPopulationPlanet">
+    <Modifier       TargetProperty="BonusPopulationFood"    Operation="Addition"    Value="2"   Path="FAKEFORGUI/./PlanetHasDepositStrategic" />
+    <BinaryModifier TargetProperty="BonusPopulationFood"    Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PlanetHasStrategicDeposit)" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryStrategicToScience01" Type="ClassPopulationPlanet">
+    <Modifier       TargetProperty="BonusPopulationScience" Operation="Addition"    Value="2"   Path="FAKEFORGUI/./PlanetHasDepositStrategic" />
+    <BinaryModifier TargetProperty="BonusPopulationScience" Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PlanetHasStrategicDeposit)" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+
+
+  <!-- PopulationEmpire descriptors (used to apply the effects of Population boosts, and poorly named. I'm sorry but that's a fact!). -->
+  <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryStrategicToFood01" Type="WithPopulationPlanet">
+    <Modifier       TargetProperty="BonusPopulationFood"           Operation="Addition"  Value="2"   Path="FAKEFORGUI/./PlanetHasDepositStrategic" />
+    <BinaryModifier TargetProperty="BonusPopulationFood"           Operation="Addition"  Left="$(PopulationIsBoosted)" BinaryOperation="Multiplication" Right="$(PlanetHasStrategicDeposit)" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="BonusPopulationFood"           Operation="Addition"  Left="$(PopulationIsBoosted)" BinaryOperation="Multiplication" Right="$(PlanetHasStrategicDeposit)" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryStrategicToScience01" Type="WithPopulationPlanet">
+    <Modifier       TargetProperty="BonusPopulationScience" Operation="Addition"    Value="2"   Path="FAKEFORGUI/./PlanetHasDepositStrategic" />
+    <BinaryModifier TargetProperty="PopulationAuxValue1"	Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+    <BinaryModifier TargetProperty="BonusPopulationScience" Operation="Addition"    Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetHasStrategicDeposit)" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+
+
+  <!-- Assimilated populations descriptors (applied on the Horatio-like empire's major PopulationPlanets). -->
+  <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetStrategicToFood01" Type="ClassPopulationAssimilated">
+    <Modifier   TargetProperty="BonusPopulationFood"    Operation="Addition"    Value="1"   Path="ClassPopulation"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetStrategicToScience01" Type="ClassPopulationAssimilated">
+    <Modifier   TargetProperty="BonusPopulationScience" Operation="Addition"    Value="1"   Path="ClassPopulation"/>
+  </SimulationDescriptor>
+
+</Datatable>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TechnologyLinkDefinition.xsd">
+
+
+  <!-- ###################################### -->
+  <!-- #######          HISSHOS       ####### -->
+  <!-- ###################################### -->
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique2MajorHisshos" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2MajorHisshos</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull1MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique2MajorHisshos"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique1ToUnique3MajorHisshos" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull2MajorHisshos</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull2MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique1ToUnique3MajorHisshos"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique4ToUnique6MajorHisshos" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull4MajorHisshos</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull3MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique4ToUnique6MajorHisshos"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique5ToUnique7MajorHisshos" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull5MajorHisshos</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull4MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique5ToUnique7MajorHisshos"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentUnique8ToUnique9MajorHisshos" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyHull6MajorHisshos</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyImproveHull5MajorHisshos</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentUnique8ToUnique9MajorHisshos"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEconomyAndTrade25To8MajorHisshos" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyManpowerBoostHisshos</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization13</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEconomyAndTrade25To8"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopment1To5MajorHisshos" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyInfluenceSpecialHisshos</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyColonization12</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopment1To5"/>
+  </TechnologyLinkDefinition>
+
+
+  <!-- ###################################### -->
+  <!-- #######       JUGGERNAUTS      ####### -->
+  <!-- ###################################### -->
+
+  <!-- Science and Exploration -->
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExplorationJuggernaut3To4" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToScienceAndExplorationJuggernaut3</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToScienceAndExplorationJuggernaut4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkScienceAndExplorationJuggernaut3To4"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionScienceAndExplorationJuggernaut4To5" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToScienceAndExplorationJuggernaut4</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToScienceAndExplorationJuggernaut5</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkScienceAndExplorationJuggernaut4To5"/>
+  </TechnologyLinkDefinition>
+
+  <!-- Empire Development -->
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEmpireDevelopmentJuggernaut2To3" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToEmpireDevelopmentJuggernaut2</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToEmpireDevelopmentJuggernaut3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkEmpireDevelopmentJuggernaut2To3"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionDependencyEmpireDevelopmentJuggernaut3To4" Category="TechnologyLinkTypeDependency" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToEmpireDevelopmentJuggernaut3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionDependencyEmpireDevelopmentJuggernaut3To4"/>
+  </TechnologyLinkDefinition>
+
+  <!-- Military -->
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut2To4" Category="TechnologyLinkTypeDependency" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut2To4"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut2To5" Category="TechnologyLinkTypeDependency" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut2To5"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut3To6" Category="TechnologyLinkTypeDependency" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut3To6"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut3To7" Category="TechnologyLinkTypeDependency" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionDependencyMilitaryJuggernaut3To7"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionExclusionMilitaryJuggernaut4And5" Category="TechnologyLinkTypeExclusion" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut4</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut5</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionExclusionMilitaryJuggernaut4And5"/>
+  </TechnologyLinkDefinition>
+
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionExclusionMilitaryJuggernaut6And7" Category="TechnologyLinkTypeExclusion" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut6</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToMilitaryJuggernaut7</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionExclusionMilitaryJuggernaut6And7"/>
+  </TechnologyLinkDefinition>
+
+  <!-- Economy and Trade -->
+  <TechnologyLinkDefinition Name="TechnologyLinkDefinitionEconomyAndTradeJuggernaut3To4" Category="TechnologyLinkTypeCostReduction" PrerequisiteResolution="OR">
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToEconomyAndTradeJuggernaut3</TechnologyPrerequisite>
+    <TechnologyPrerequisite Flags="TechnologyLinkAvailability">TechnologyLinkToEconomyAndTradeJuggernaut4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkDefinitionEconomyAndTradeJuggernaut3To4"/>
+  </TechnologyLinkDefinition>
+
+</Datatable>

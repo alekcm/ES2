@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- UC -->
+  <GuiElement Name="TroopInfantryAffinityGameplayUmbralChoir">
+    <Title>%TroopInfantryTitle</Title>
+    <Description>%TroopInfantryDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/UC/UmbralChoirInfantrySmall" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="TroopTankAffinityGameplayUmbralChoir">
+    <Title>%TroopTankTitle</Title>
+    <Description>%TroopTankDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/UC/UmbralChoirTankSmall" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="TroopPlaneAffinityGameplayUmbralChoir">
+    <Title>%TroopPlaneTitle</Title>
+    <Description>%TroopPlaneDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/UC/UmbralChoirPlaneSmall" />
+    </Icons>
+  </GuiElement>
+
+    <GuiElement Name="GroundBattleDefenderStrategyHacked">
+        <Title>%NotificationGroundBattleDefenderStrategyHackedTitle</Title>
+        <Description>%NotificationGroundBattleDefenderStrategyHackedDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleDefenderStrategyHackedLarge" />
+        </Icons>
+    </GuiElement>
+
+    <!-- MinorHacking -->
+    <GuiElement Name="TroopInfantryAffinityGameplayMinorHacking">
+        <Title>%TroopInfantryTitle</Title>
+        <Description>%TroopInfantryDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/KalmatsInfantrySmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopTankAffinityGameplayMinorHacking">
+        <Title>%TroopTankTitle</Title>
+        <Description>%TroopTankDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/AdvancedTankSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="TroopPlaneAffinityGameplayMinorHacking">
+        <Title>%TroopPlaneTitle</Title>
+        <Description>%TroopPlaneDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/GroundBattle/MinorFaction/AdvancedPlaneSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeLootUmbralChoir">
+        <Title>%GroundBattleOutcomeLootUmbralChoirTitle</Title>
+        <Description>%GroundBattleOutcomeLootDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeLootUmbralChoirLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeLootTitleAttackerUmbralChoir</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeLootDescriptionAttackerUmbralChoir</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeLootTitleDefenderUmbralChoir</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeLootDescriptionDefenderUmbralChoir</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeCreateGhost">
+        <Title>%GroundBattleOutcomeCreateGhostTitle</Title>
+        <Description>%GroundBattleOutcomeCreateGhostDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeCreateGhostLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeCreateGhostTitleAttacker</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeCreateGhostDescriptionAttacker</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeRazeTitleDefender</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeRazeDescriptionDefender</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GroundBattleOutcomeGuiElement Name="GroundBattleOutcomeRazeGhost">
+        <Title>%GroundBattleOutcomeRazeGhostTitle</Title>
+        <Description>%GroundBattleOutcomeRazeGhostDescription</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleOutcomeRazeGhostLarge" />
+        </Icons>
+        <AttackerTitle>%GroundBattleOutcomeRazeGhostTitleAttacker</AttackerTitle>
+        <AttackerDescription>%GroundBattleOutcomeRazeGhostDescriptionAttacker</AttackerDescription>
+        <DefenderTitle>%GroundBattleOutcomeRazeGhostTitleDefender</DefenderTitle>
+        <DefenderDescription>%GroundBattleOutcomeRazeGhostDescriptionDefender</DefenderDescription>
+    </GroundBattleOutcomeGuiElement>
+
+    <GuiElement Name="GroundBattleDefenderStrategy1Ghost">
+        <Title>%NotificationGroundBattleSetupDefenderStrategy1Title</Title>
+        <Description>%NotificationGroundBattleSetupDefenderStrategy1Description</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleDefenderStrategy1Large" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="GroundBattleDefenderStrategy2Ghost">
+        <Title>%NotificationGroundBattleSetupDefenderStrategy2Title</Title>
+        <Description>%NotificationGroundBattleSetupDefenderStrategy2Description</Description>
+        <Icons>
+            <Icon Size="Large" Path="Bitmaps/Dynamic/GroundBattle/GroundBattleDefenderStrategy2Large" />
+        </Icons>
+    </GuiElement>
+    
+</Datatable>

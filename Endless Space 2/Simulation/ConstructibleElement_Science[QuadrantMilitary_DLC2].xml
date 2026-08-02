@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+
+    <!-- ###################################### -->
+    <!-- #######         STAGE 3        ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitaryJuggernaut1" TechnologyStage="TechnologyStageDefinitionMilitary3" Category="CategoryTechnologyMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyJuggernautMilitarySlots1"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautTractorBeam"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryJuggernautIncreaseStage3"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="EnemyEmpires"/>
+        <HelperVariable Name="KnownEmpires"/>
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperFormula>$(JuggernautCount) * 10 + $(EnemyEmpires) * 5 + $(KnownEmpires)</HelperFormula>
+    </TechnologyDefinition>
+    
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 4       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitaryJuggernaut2" TechnologyStage="TechnologyStageDefinitionMilitary4" Category="CategoryTechnologyMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToMilitaryJuggernaut2"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautBattleshipSpecialization"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautFactionModule"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryJuggernautIncreaseStage4"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="CurrentCommandPoints"/>
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperFormula>$(JuggernautCount) * 10 + Min(Max($(CurrentCommandPoints) - 10, 0), 1) * 20</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitaryJuggernaut3" TechnologyStage="TechnologyStageDefinitionMilitary4" Category="CategoryTechnologyMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', ObliteratorResearchCostMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <GameSettingPrerequisite Flags="Prerequisite,Discard">AllowSuperWeapons,True</GameSettingPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToMilitaryJuggernaut3"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautObliteratorSpecialization"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryJuggernautIncreaseStage4"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="EnemyEmpires"/>
+        <HelperVariable Name="KnownEmpires"/>
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperFormula>$(JuggernautCount) * 10 + $(EnemyEmpires) * 4 + $(KnownEmpires) * 2</HelperFormula>
+    </TechnologyDefinition>
+    
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 5       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitaryJuggernaut4" TechnologyStage="TechnologyStageDefinitionMilitary5" Category="CategoryTechnologyMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionExclusionMilitaryJuggernaut4And5</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionDependencyMilitaryJuggernaut2To4</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToMilitaryJuggernaut4"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautBattleshipAbility"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryJuggernautIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        
+        <HelperVariable Name="BattleshipCount"/>
+        <HelperFormula>$(BattleshipCount) * 8</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitaryJuggernaut5" TechnologyStage="TechnologyStageDefinitionMilitary5" Category="CategoryTechnologyMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionExclusionMilitaryJuggernaut4And5</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionDependencyMilitaryJuggernaut2To5</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToMilitaryJuggernaut5"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautBattleshipMilitarySlots1"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryJuggernautIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        
+        <HelperVariable Name="BattleshipCount"/>
+        <HelperFormula>$(BattleshipCount) * 10</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitaryJuggernaut6" TechnologyStage="TechnologyStageDefinitionMilitary5" Category="CategoryTechnologyMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', ObliteratorResearchCostMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <GameSettingPrerequisite Flags="Prerequisite,Discard">AllowSuperWeapons,True</GameSettingPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionExclusionMilitaryJuggernaut6And7</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionDependencyMilitaryJuggernaut3To6</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToMilitaryJuggernaut6"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautObliteratorFasterShot"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryJuggernautIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="EnemyEmpires"/>
+        <HelperVariable Name="ObliteratorCount"/>
+        <HelperFormula>$(ObliteratorCount) * 10 + $(EnemyEmpires) * 2</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitaryJuggernaut7" TechnologyStage="TechnologyStageDefinitionMilitary5" Category="CategoryTechnologyMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', ObliteratorResearchCostMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <GameSettingPrerequisite Flags="Prerequisite,Discard">AllowSuperWeapons,True</GameSettingPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionExclusionMilitaryJuggernaut6And7</TechnologyPrerequisite>
+        <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionDependencyMilitaryJuggernaut3To7</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToMilitaryJuggernaut7"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautObliteratorFasterCharge"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryJuggernautIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="KnownEmpires"/>
+        <HelperVariable Name="ObliteratorCount"/>
+        <HelperFormula>$(ObliteratorCount) * 10 + $(KnownEmpires) * 1.5</HelperFormula>
+    </TechnologyDefinition>
+
+    <!-- ###################################### -->
+    <!-- #######           QUEST        ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionQuestHisshos05" Category="CategoryTechnologyMilitary" Visibility="Hidden">
+        <CustomCost ResourceName="EmpireResearch">0</CustomCost>
+        <PathPrerequisite Flags="DiplomaticTradable">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyQuestHisshos05"/>
+        <SimulationDescriptorReference Name="TechnologyPlayDeckQuestHisshos05"/>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionQuestHisshos06" Category="CategoryTechnologyMilitary" Visibility="Hidden">
+        <CustomCost ResourceName="EmpireResearch">0</CustomCost>
+        <PathPrerequisite Flags="DiplomaticTradable">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyQuestHisshos06"/>
+        <SimulationDescriptorReference Name="TechnologyPlayDeckQuestHisshos06"/>
+    </TechnologyDefinition>
+
+</Datatable>

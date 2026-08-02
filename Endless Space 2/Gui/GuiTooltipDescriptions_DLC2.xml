@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiTooltipDescription.xsd">
+
+    <GuiTooltipDescription TooltipClass="JuggernautSpecialization" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescriptionGameplay"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCosts"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="JuggernautSpecializationActive" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescriptionGameplay"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffects"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="FireObliteratorFleetAction" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader" DoNotHandleCompactMode="true"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSimple"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureObliteratorTemporaryEffect"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCosts"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeaturePoliticalImpact"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDuration"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="FireIonWaveFleetAction" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader" DoNotHandleCompactMode="true"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSimple"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCosts"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeaturePoliticalImpact"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDuration"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="LaunchMiningProbeFleetAction" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader" DoNotHandleCompactMode="true"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSimple"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureMovementPointCost"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureProbeFleetActionInfo"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCosts"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeaturePoliticalImpact"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEmpirePointGain"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureMiningProbePreview"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="EmpireObedience" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescriptionGameplay"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHappiness"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHappinessStatus"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffects"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="StarSystemObedience" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescriptionGameplay"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHappiness"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHappinessStatus"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffects"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="HonorAction" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescriptionGameplay"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffectsSetHonorAction"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDuration"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCosts"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeaturePoliticalImpact"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSimple"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="HonorActionSimple" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescriptionGameplay"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffectsSetHonorAction"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDuration"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="HonorFleetAction" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescriptionGameplay"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffectsSetHonorAction"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureCosts"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeaturePoliticalImpact"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSimple"/>
+    </GuiTooltipDescription>
+        
+    <GuiTooltipDescription TooltipClass="HisshosFestival" TooltipWindow="TooltipWindow" ShowAnchors="true">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHisshosFestival"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="ConstructibleHisshosFestival" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescription" HideInCompactMode="true"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureSeparator"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureEffects"/>
+    </GuiTooltipDescription>
+
+    <GuiTooltipDescription TooltipClass="FleetStatus" TooltipWindow="TooltipWindow">
+        <AnchorOffset X="0" Y="0"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureHeader"/>
+        <PanelFeatureDescription Prefab="Prefabs/GUI/Tooltips/PanelFeatures/PanelFeatureDescription" HideInCompactMode="true"/>
+    </GuiTooltipDescription>
+
+
+</Datatable>

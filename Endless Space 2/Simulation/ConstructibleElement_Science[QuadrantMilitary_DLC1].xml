@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+
+    <!-- ###################################### -->
+    <!-- #######         STAGE 1        ####### -->
+    <!-- ###################################### -->
+    <!-- ATOMIC SUBSTRATE  -->
+    <TechnologyDefinition Name="TechnologyDefinitionMilitary1Vaulters" TechnologyStage="TechnologyStageDefinitionMilitary1" Category="CategoryTechnologyMilitary"  SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage1Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyVaulters" Inverted="false">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyDefense1Vaulters"/>
+        <SimulationDescriptorReference Name="TechnologyDefense1NonVampirilis"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryIncreaseStage1"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="TurnVariable"/>
+        <HelperVariable Name="EnemyEmpires"/>
+        <HelperFormula>$(TurnVariable) * 10 + 20 * $(EnemyEmpires)</HelperFormula>
+    </TechnologyDefinition>
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 2       ####### -->
+    <!-- ###################################### -->
+    
+    <!-- UNSTABLE ISOTOPE MANIPULATION -->
+    <!--<TechnologyDefinition Name="TechnologyDefinitionMilitary4Vaulters" TechnologyStage="TechnologyStageDefinitionMilitary2" Category="CategoryTechnologyMilitary" SubCategoryInQuests="TechnoMilitary"  ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityVaulters" Inverted="false">ClassEmpire,AffinityMappingVaulters</PathPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyDefenseModule1Vaulters"/>
+        <SimulationDescriptorReference Name="TechnologyDefenseModule1Kinetic2"/>
+        <SimulationDescriptorReference Name="TechnologyDefenseModule1ProjectileEnhancer1"/>
+        <SimulationDescriptorReference Name="TechnologyMilitaryGameplay"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+        
+        <HelperVariable Name="TurnVariable"/>
+        <HelperVariable Name="EnemyEmpires"/>
+        <HelperFormula>$(TurnVariable) * 15 + 20 * $(EnemyEmpires)</HelperFormula>
+    </TechnologyDefinition>-->
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 4       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionMilitary18Vaulters" TechnologyStage="TechnologyStageDefinitionMilitary4" Category="CategoryTechnologyMilitary"  SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityVaulters" Inverted="false">ClassEmpire,AffinityMappingVaulters</PathPrerequisite>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyArmyCap3"/>
+        <SimulationDescriptorReference Name="TechnologyWeaponModuleBoardingPod2Vaulters"/>
+        <SimulationDescriptorReference Name="TechnologyPlaneUnlock"/>
+        <SimulationDescriptorReference Name="TechnologyMilitaryGameplay"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryIncreaseStage4"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="TurnVariable"/>
+        <HelperVariable Name="EnemyEmpires"/>
+        <HelperFormula>$(TurnVariable) * 30 + 30 * $(EnemyEmpires)</HelperFormula>
+    </TechnologyDefinition>
+
+    <!-- ###################################### -->
+    <!-- ####    SPECIAL TECHNO DLC1      ##### -->
+    <!-- ###################################### -->
+    <TechnologyDefinition Name="TechnologyDefinitionMilitary33" TechnologyStage="TechnologyStageDefinitionMilitary3" Category="CategoryTechnologyMilitary" SubCategoryInQuests="TechnoMilitary"  ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCVaulters</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyWeaponModuleBoardingPod1"/>
+        <SimulationDescriptorReference Name="TechnologyLinkTo33Cravers"/>
+        <SimulationDescriptorReference Name="TechnologyLinkTo33Corsairs"/>
+        <SimulationDescriptorReference Name="TechnologyDefenseModuleBoardingDefense1"/>
+        <SimulationDescriptorReference Name="TechnologyCountMilitaryIncreaseStage3"/>
+        <SimulationDescriptorReference Name="TechnologyMilitaryGameplay"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+        <HelperVariable Name="TurnVariable"/>
+        <HelperVariable Name="EnemyEmpires"/>
+        <HelperFormula>$(TurnVariable) * 20 + 30 * $(EnemyEmpires)</HelperFormula>
+    </TechnologyDefinition>
+
+
+    
+</Datatable>

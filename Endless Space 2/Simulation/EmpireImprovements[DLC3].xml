@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EmpireImprovementDefinition.xsd">
+
+  <EmpireImprovementDefinition Name="EmpireImprovementStageEconomyAndTrade3NoSpacePort" Category="CategoryRecipeImprovement" SubCategory="SubCategoryRecipe">
+    <InterpreterPrerequisite Flags="Prerequisite,UnlockAvailability" Inverted="false">Path(Context,@'../ClassEmpire,AffinityGameplayVampirilis') or Path(Context,@'../ClassEmpire,AffinityGameplayUmbralChoir')</InterpreterPrerequisite>
+    <TechnologyPrerequisite>TechnologyStageEconomyAndTrade3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementStageEconomyAndTrade3NoSpacePort" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementStageEconomyAndTrade4NoSpacePort" Category="CategoryRecipeImprovement" SubCategory="SubCategoryRecipe">
+    <InterpreterPrerequisite Flags="Prerequisite,UnlockAvailability" Inverted="false">Path(Context,@'../ClassEmpire,AffinityGameplayVampirilis') or Path(Context,@'../ClassEmpire,AffinityGameplayUmbralChoir')</InterpreterPrerequisite>
+    <TechnologyPrerequisite>TechnologyStageEconomyAndTrade4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementStageEconomyAndTrade4NoSpacePort" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementStageEconomyAndTrade5NoSpacePort" Category="CategoryRecipeImprovement" SubCategory="SubCategoryRecipe">
+    <InterpreterPrerequisite Flags="Prerequisite,UnlockAvailability" Inverted="false">Path(Context,@'../ClassEmpire,AffinityGameplayVampirilis') or Path(Context,@'../ClassEmpire,AffinityGameplayUmbralChoir')</InterpreterPrerequisite>
+    <TechnologyPrerequisite>TechnologyStageEconomyAndTrade5</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementStageEconomyAndTrade5NoSpacePort" />
+  </EmpireImprovementDefinition>
+
+  <!-- HULLS -->
+
+  <!-- Perfected1Hull1 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull1UmbralChoir" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull1UmbralChoir</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull1" />
+  </EmpireImprovementDefinition>
+
+  <!-- Perfected1Hull2 -->
+  <EmpireImprovementDefinition Name="EmpireImprovementPerfected1Hull2UmbralChoir" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyPerfected1Hull2UmbralChoir</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementPerfected1Hull2" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull4 (medium attacker) unlocks additional slots for small attacker ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall01UmbralChoir" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveHull1UmbralChoir</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall01UmbralChoir" />
+    <!-- Points to the actual tooltip description that will be displayed -->
+  </EmpireImprovementDefinition>
+
+  <!-- Hull5 (medium defender) unlocks additional slots for small support ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall02UmbralChoir" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary"  >
+    <TechnologyPrerequisite>TechnologyImproveHull2UmbralChoir</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall02UmbralChoir" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6 (large ship) unlocks additional slots for all medium ships -->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium01UmbralChoir" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveHull3UmbralChoir</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium01UmbralChoir" />
+  </EmpireImprovementDefinition>
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsMedium02UmbralChoir" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveHull4UmbralChoir</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsMedium02UmbralChoir" />
+  </EmpireImprovementDefinition>
+
+  <!-- Hull6Slots unlocks additional slots for large ships-->
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsLarge01UmbralChoir" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary">
+    <TechnologyPrerequisite>TechnologyImproveHull5UmbralChoir</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsLarge01UmbralChoir" />
+  </EmpireImprovementDefinition>
+
+  <!--<EmpireImprovementDefinition Name="EmpireImprovementWormhole2" Category="CategoryMovementBonus" SubCategory="SubCategoryExploration">
+        <TechnologyPrerequisite>TechnologyWormhole2</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="EmpireImprovementWormhole2" />
+    </EmpireImprovementDefinition>-->
+
+  <!-- ECONOMY -->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementMovementBonus4" Category="CategoryMovementBonus" SubCategory="SubCategoryExploration">
+    <TechnologyPrerequisite>TechnologyMovementBonus</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementMovementBonus4" />
+  </EmpireImprovementDefinition>
+
+  <!--<EmpireImprovementDefinition Name="EmpireImprovementHappinessUmbralChoir" Category="CategoryEmpireImprovement" SubCategory="SubCategoryApproval">
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+        <TechnologyPrerequisite>TechnologyGlobalHappinessCommon</TechnologyPrerequisite>
+        <SimulationDescriptorReference Name="EmpireImprovementHappinessUmbralChoir" />
+    </EmpireImprovementDefinition>-->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementTerraformationUmbralChoir1" Category="CategoryPlanetTerraformation" SubCategory="SubCategoryTerraformation">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyStageScienceAndExploration2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementTerraformationUmbralChoir1" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementTerraformationUmbralChoir2" Category="CategoryPlanetTerraformation" SubCategory="SubCategoryTerraformation">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyStageScienceAndExploration3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementTerraformationUmbralChoir2" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementTerraformationUmbralChoir3" Category="CategoryPlanetTerraformation" SubCategory="SubCategoryTerraformation">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyStageScienceAndExploration4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementTerraformationUmbralChoir3" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementTradeUmbralChoir" Category="CategoryTradeSubsidiaries" SubCategory="SubCategoryTrade">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyTrade1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementTradeUmbralChoir" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSubsidiaries1UmbralChoir" Category="CategoryTradeSubsidiaries" SubCategory="SubCategoryTradingCompanyStructure">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction">../ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyTrade2Common</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSubsidiaries1UmbralChoir" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementInfluenceConversionUmbralChoir" Category="CategoryConversion" SubCategory="SubCategoryEmpire">
+    <TechnologyPrerequisite>TechnologyInfluenceConversion</TechnologyPrerequisite>
+    <PathPrerequisite Flags="UnlockAvailability,Faction" Inverted="false">AffinityGameplayUmbralChoir</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementInfluenceConversionUmbralChoir" />
+  </EmpireImprovementDefinition>
+
+
+  <!--##########################################-->
+  <!--###########	     HACKING       ###########-->
+  <!--##########################################-->
+
+  <!-- Hacking Route improvements -->
+
+  <!-- Hacking Speed improvements -->
+  <EmpireImprovementDefinition Name="EmpireImprovementHackingBonus1" Category="CategoryHackingImprovements" SubCategory="SubCategoryScience">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite>TechnologyHackBonus1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHackingBonus1" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementHackingBonus2" Category="CategoryHackingImprovements" SubCategory="SubCategoryScience">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite>TechnologyHackBonus2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHackingBonus2" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDetectionProbeLevel2" Category="CategoryDetectionSmall" SubCategory="SubCategoryMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite>TechnologyPlayDeck4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDetectionProbeLevel2" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDetectionProbeLevel3" Category="CategoryDetectionSmall" SubCategory="SubCategoryMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite>TechnologyPlayDeck6</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDetectionProbeLevel3" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementInvisibilityLevel2" Category="CategoryInvisibleSmall" SubCategory="SubCategoryMilitary">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyPlayDeck1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementInvisibilityLevel2" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementInvisibilityLevel3" Category="CategoryInvisibleSmall" SubCategory="SubCategoryMilitary">
+    <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir">../ClassEmpire,FactionTraitNativelyInvisibleShips</PathPrerequisite>
+    <TechnologyPrerequisite>TechnologyPlayDeck3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementInvisibilityLevel3" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementKillTraitors" Category="CategoryKillTraitors" SubCategory="SubCategoryMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite>TechnologyDust3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementKillTraitors" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementRevealTraitors" Category="CategoryRevealTraitors" SubCategory="SubCategoryMilitary">
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+    <TechnologyPrerequisite>TechnologyTrade3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementRevealTraitors" />
+  </EmpireImprovementDefinition>
+
+
+  <!--##########################################-->
+  <!--####      EXPLORER IMPROVEMENTS       ####-->
+  <!--##########################################-->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Sophons" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullSophons</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologySophons" Inverted="false">AffinityGameplaySophons</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Sophons" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Cravers" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullCravers</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyCravers" Inverted="false">AffinityGameplayCravers</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Cravers" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Lumeris" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullLumeris</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyVenetians" Inverted="false">AffinityGameplayVenetians</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Lumeris" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Vampirilis" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullVampirilis</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyVampirilis" Inverted="false">AffinityGameplayVampirilis</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Vampirilis" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04UnitedEmpire" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullUnitedEmpire</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyTerrans" Inverted="false">AffinityGameplayTerrans</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04UnitedEmpire" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Horatios" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullHoratios</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyHoratio" Inverted="false">AffinityGameplayHoratio</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Horatios" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04TimeLords" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullTimeLords</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyTimeLords" Inverted="false">AffinityGameplayTimeLords</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04TimeLords" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Unfallens" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullUnfallens</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUnfallen" Inverted="false">AffinityGameplayUnfallen</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Unfallens" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04Vaulters" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullVaulters</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyVaulters" Inverted="false">AffinityGameplayVaulters</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04Vaulters" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04MajorHisshos" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullMajorHisshos</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyMajorHisshos" Inverted="false">AffinityGameplayMajorHisshos</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04MajorHisshos" />
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSlotsSmall04UmbralChoirs" Category="CategoryHullUpgrade" SubCategory="SubCategoryHullMilitary" >
+    <TechnologyPrerequisite>TechnologyImproveExplorerHullUmbralChoir</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,UnlockAvailability,Faction,AffinityGameplayTechnologyUmbralChoir" Inverted="false">AffinityGameplayUmbralChoir</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSlotsSmall04UmbralChoirs" />
+  </EmpireImprovementDefinition>
+
+  <!--########################################-->
+  <!--###########	     QUEST       ###########-->
+  <!--########################################-->
+
+  <EmpireImprovementDefinition Name="EmpireImprovementHeroXpGain" Category="CategoryEmpireImprovement" SubCategory="SubCategoryHero">
+    <TechnologyPrerequisite>TechnologyQuestUC01</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHeroXpGain"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementHeroReduceAssignmentCooldown" Category="CategoryEmpireImprovement" SubCategory="SubCategoryHero">
+    <TechnologyPrerequisite>TechnologyQuestUC01</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHeroReduceAssignmentCooldown"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementEvasionBonus" Category="CategoryEmpireImprovement" SubCategory="SubCategoryMilitary">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUC4AMilitarist</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementEvasionBonus"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementProcessingPowerPerSystem" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUC4BPacifist</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementProcessingPowerPerSystem"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementHackingRouteBonus4" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUC4CScientist</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHackingRouteBonus4"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSciencePerTraitor" Category="CategoryEmpireImprovement" SubCategory="SubCategoryApproval">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUC4DPacifist</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSciencePerTraitor"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementHackingSpeedOnNodes" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUCPopObjective0</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementHackingSpeedOnNodes"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementInvisibleFleetSpeed" Category="CategoryEmpireImprovement" SubCategory="SubCategoryExploration">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUCPopObjective1</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementInvisibleFleetSpeed"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementSciencePerCpPerHero" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUCPopObjective2</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementSciencePerCpPerHero"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementProcessingPowerPerHackingRoute" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestUCPopObjective3</PathPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementProcessingPowerPerHackingRoute"/>
+  </EmpireImprovementDefinition>
+
+</Datatable>

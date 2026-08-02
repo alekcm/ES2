@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/HackingOperationOutcomeDefinition.xsd">
+
+  <!-- #################### -->
+  <!-- ## MAJOR ON ACADEMY ## -->
+  <!-- #################### -->
+
+  <HackingOperationOutcomeAcademyDecreaseReparationsDefinition Name="HackingOperationOutcomeAcademyDecreaseReparations" Level="1" ReparationsDecreasePercent="0.1">
+    <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeAcademy')</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    <StatePrerequisite Inverted="false" Flags="CannotDoThisWithoutReparations" State="AcademyDiplomaticRelationStateWar"/>
+  </HackingOperationOutcomeAcademyDecreaseReparationsDefinition>
+
+
+  <HackingOperationOutcomeAcademyIncreaseContributionDefinition Name="HackingOperationOutcomeAcademyIncreaseContribution" Level="1" ContributionIncreasePercent="5">
+    <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeAcademy')</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+  </HackingOperationOutcomeAcademyIncreaseContributionDefinition>
+
+  <HackingOperationOutcomeAcademyImmobilizeFleetsDefinition Name="HackingOperationOutcomeAcademyImmobilizeFleets" Level="1">
+    <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeAcademy')</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    <TemporaryEffectReference Name="ImmobilizeAcademyFleetsFromHack"/>
+    <StatePrerequisite Inverted="true" Flags="CannotDoThisWhenAcademyAlly" State="DiplomaticRelationStateAlly"/>
+  </HackingOperationOutcomeAcademyImmobilizeFleetsDefinition>
+
+ <HackingOperationOutcomeSetDefinition Name="HackingOperationOutcomeAcademyEarnHeroPoints" Composition="Any" Level="1">
+    <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeAcademy')</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+    <HackingOperationOutcomeDefinitionReference Name="HackingOperationOutcomeAcademyEarnHeroPointsSubEffect"/>
+  </HackingOperationOutcomeSetDefinition>
+
+  <HackingOperationOutcomeAcademyEarnHeroPointsDefinition Name="HackingOperationOutcomeAcademyEarnHeroPointsSubEffect" Hidden="true" Level="1" EarnHeroPointsPercent="5">
+    <PathPrerequisite Flags="Discard">EmpireTypeMajor</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeAcademy')</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+  </HackingOperationOutcomeAcademyEarnHeroPointsDefinition>
+  
+  <!-- ############################## -->
+  <!-- ## ACADEMY ON MAJOR ## -->
+  <!-- ############################## -->
+  <!-- If an outcome has a PathPrerequisite "!EmpireTypeMajor" it will be in the pool of Academy outcomes. -->
+
+  <HackingOperationOutcomeWoundHeroDefinition Name="HackingOperationAcademyOutcomeWoundHero" Level="1">
+    <PathPrerequisite Flags="Discard">!EmpireTypeMajor</PathPrerequisite>
+    <!-- this is necessary to mark the flag IsValidForPVE-->
+    <PathPrerequisite Flags="Discard">EmpireTypeAcademy</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="false">Path(Target,@'../ClassEmpire,EmpireTypeMajor')</InterpreterPrerequisite>
+    <InterpreterPrerequisite Flags="Discard" Inverted="true">$(IsTraceOperation)</InterpreterPrerequisite>
+  </HackingOperationOutcomeWoundHeroDefinition>
+    
+</Datatable>

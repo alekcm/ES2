@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+  <!-- ###################################### -->
+  <!-- #######          HISSHOS       ####### -->
+  <!-- ###################################### -->
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique1MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment2" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage2"/>
+    <SimulationDescriptorReference Name="TechnologyHull2MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyHull3MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyHull3"/>
+    <SimulationDescriptorReference Name="TechnologyHull2"/>
+    <SimulationDescriptorReference Name="TechnologyMilitaryGameplay"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>20 * $(TurnVariable) + 5</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique2MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment3" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopmentUnique1ToUnique2MajorHisshos'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkExclusionUnique2Unique3MajorHisshos</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull1"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull1MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>30 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique3MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment3" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopmentUnique1ToUnique3MajorHisshos'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkExclusionUnique2Unique3MajorHisshos</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull2"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull2MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>30 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique4MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment3" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyHull4"/>
+    <SimulationDescriptorReference Name="TechnologyHull4MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>30 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique5MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment3" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyHull5"/>
+    <SimulationDescriptorReference Name="TechnologyHull5MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>30 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique6MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment4" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopmentUnique4ToUnique6MajorHisshos'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkExclusionUnique6Unique7MajorHisshos</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull3"/>
+    <SimulationDescriptorReference Name="TechnologyPerfected1Hull2MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull3MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>35 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique7MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment4" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopmentUnique5ToUnique7MajorHisshos'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <TechnologyPrerequisite Inverted="true" Flags="Prerequisite,Link,Disable">TechnologyLinkExclusionUnique6Unique7MajorHisshos</TechnologyPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull4"/>
+    <SimulationDescriptorReference Name="TechnologyPerfected1Hull1MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull4MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>35 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique8MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment4" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyHull6"/>
+    <SimulationDescriptorReference Name="TechnologyHull6MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>40 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique9MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment5" Category="CategoryTechnologyFactionMajorHisshos"  SubCategoryInQuests="TechnoEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <Tags>NoOmniscience</Tags>
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopmentUnique8ToUnique9MajorHisshos'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityMajorHisshos">ClassEmpire,AffinityMappingMajorHisshos</PathPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite">DLCHisshos</DownloadableContentPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull5"/>
+    <SimulationDescriptorReference Name="TechnologyImproveHull5MajorHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>40 * $(TurnVariable) + 10</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopment1MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment1" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage1Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityGameplayTechnologyMajorHisshos">ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyMinorFactionsGameplay"/>
+    <SimulationDescriptorReference Name="TechnologyInfluenceSpecialHisshos"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage1"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventReligiousTechnology"/>
+
+    <HelperVariable Name="MinorEmpiresDiplomacyVariable"/>
+    <HelperVariable Name="HappinessVariable"/>
+    <HelperFormula>15 * $(MinorEmpiresDiplomacyVariable) + 10 * $(HappinessVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionUnique10MajorHisshos" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment4" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopment5To12'))) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyMajorHisshos">ClassEmpire,AffinityGameplayMajorHisshos</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyUnique1MajorHisshos"  />
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage4"   />
+    <SimulationDescriptorReference Name="TechnologyCounter" />
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="IndustryVariable"/>
+    <HelperFormula>50 * $(IndustryVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+
+  <!-- ###################################### -->
+  <!-- #######        JUGGERNAUTS     ####### -->
+  <!-- ###################################### -->
+
+  <!-- Stage 2 -->
+  <TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopmentJuggernaut1" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment2" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+    <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyJuggernautUnlock"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentJuggernautIncreaseStage2"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventReligiousTechnology"/>
+
+    <HelperVariable Name="JuggernautCount"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>(10 / Max($(JuggernautCount), 1)) * $(TurnVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+  <!-- Stage 3 -->
+  <TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopmentJuggernaut2" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment3" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopmentJuggernaut2To3')))</CustomCost>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+    <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkToEmpireDevelopmentJuggernaut2"/>
+    <SimulationDescriptorReference Name="TechnologyJuggernautCitadelSpecialization"/>
+    <SimulationDescriptorReference Name="TechnologyJuggernautIncreasedLimit"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentJuggernautIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventIndustrialistTechnology"/>
+
+    <HelperVariable Name="KnownEmpires"/>
+    <HelperVariable Name="EnemyEmpires"/>
+    <HelperVariable Name="JuggernautCount"/>
+    <HelperFormula>2 * $(KnownEmpires) + 5 * $(EnemyEmpires) + 5 * $(JuggernautCount)</HelperFormula>
+  </TechnologyDefinition>
+
+  <!-- Stage 4 -->
+  <TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopmentJuggernaut3" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment4" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEmpireDevelopmentJuggernaut2To3')))</CustomCost>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+    <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyLinkToEmpireDevelopmentJuggernaut3"/>
+    <SimulationDescriptorReference Name="TechnologyJuggernautCitadelSpaceBattle"/>
+    <SimulationDescriptorReference Name="TechnologyJuggernautObliteratorShield"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentJuggernautIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="KnownEmpires"/>
+    <HelperVariable Name="EnemyEmpires"/>
+    <HelperFormula>5 * $(KnownEmpires) + 10 * $(EnemyEmpires)</HelperFormula>
+  </TechnologyDefinition>
+
+  <!-- Stage 5 -->
+  <TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopmentJuggernaut4" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment5" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+    <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+    <TechnologyPrerequisite Flags="Prerequisite,Link,Disable">TechnologyLinkDefinitionDependencyEmpireDevelopmentJuggernaut3To4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyJuggernautCitadelMilitaryImprovements"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentJuggernautIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+
+    <HelperVariable Name="KnownEmpires"/>
+    <HelperVariable Name="EnemyEmpires"/>
+    <HelperVariable Name="CitadelCount"/>
+    <HelperFormula>1 * $(KnownEmpires) + 2 * $(EnemyEmpires) + 5 * $(CitadelCount)</HelperFormula>
+  </TechnologyDefinition>
+
+  <TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopmentJuggernaut5" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment5" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+    <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyJuggernautCitadelSupportImprovements"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentJuggernautIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventIndustrialistTechnology"/>
+
+    <HelperVariable Name="IndustryVariable"/>
+    <HelperVariable Name="FoodVariable"/>
+    <HelperVariable Name="DustVariable"/>
+    <HelperVariable Name="CitadelCount"/>
+    <HelperFormula>$(IndustryVariable) - 0.5 * $(FoodVariable) - 0.5 * $(DustVariable) + 5 * $(CitadelCount)</HelperFormula>
+  </TechnologyDefinition>
+
+</Datatable>

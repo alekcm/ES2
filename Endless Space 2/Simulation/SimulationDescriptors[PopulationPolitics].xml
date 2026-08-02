@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- Main politics. -->
+    <SimulationDescriptor Name="PopulationMainPolitics01" Type="PopulationMainPolitics" IsSerializable="false"/>
+    <SimulationDescriptor Name="PopulationMainPolitics02" Type="PopulationMainPolitics" IsSerializable="false"/>
+    <SimulationDescriptor Name="PopulationMainPolitics03" Type="PopulationMainPolitics" IsSerializable="false"/>
+    <SimulationDescriptor Name="PopulationMainPolitics04" Type="PopulationMainPolitics" IsSerializable="false"/>
+    <SimulationDescriptor Name="PopulationMainPolitics05" Type="PopulationMainPolitics" IsSerializable="false"/>
+    <SimulationDescriptor Name="PopulationMainPolitics06" Type="PopulationMainPolitics" IsSerializable="false"/>
+
+    
+    <!-- Political profiles. -->
+    <SimulationDescriptor Name="PoliticalProfileMilitarist"   Type="PoliticalProfile">
+        <Property Name="Politics01ToPolitics01" BaseValue="1"/>
+        <Property Name="Politics02ToPolitics02" BaseValue="1"/>
+        <Property Name="Politics03ToPolitics03" BaseValue="1"/>
+        <Property Name="Politics04ToPolitics04" BaseValue="1"/>
+        <Property Name="Politics05ToPolitics05" BaseValue="1"/>
+        <Property Name="Politics06ToPolitics06" BaseValue="2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PoliticalProfilePacifist"   Type="PoliticalProfile">
+        <Property Name="Politics01ToPolitics01" BaseValue="1"/>
+        <Property Name="Politics02ToPolitics02" BaseValue="1"/>
+        <Property Name="Politics03ToPolitics03" BaseValue="2"/>
+        <Property Name="Politics04ToPolitics04" BaseValue="1"/>
+        <Property Name="Politics05ToPolitics05" BaseValue="1"/>
+        <Property Name="Politics06ToPolitics06" BaseValue="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PoliticalProfileIndustrialist"   Type="PoliticalProfile">
+        <Property Name="Politics01ToPolitics01" BaseValue="2"/>
+        <Property Name="Politics02ToPolitics02" BaseValue="1"/>
+        <Property Name="Politics03ToPolitics03" BaseValue="1"/>
+        <Property Name="Politics04ToPolitics04" BaseValue="1"/>
+        <Property Name="Politics05ToPolitics05" BaseValue="1"/>
+        <Property Name="Politics06ToPolitics06" BaseValue="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PoliticalProfileEcologist"   Type="PoliticalProfile">
+        <Property Name="Politics01ToPolitics01" BaseValue="1"/>
+        <Property Name="Politics02ToPolitics02" BaseValue="1"/>
+        <Property Name="Politics03ToPolitics03" BaseValue="1"/>
+        <Property Name="Politics04ToPolitics04" BaseValue="2"/>
+        <Property Name="Politics05ToPolitics05" BaseValue="1"/>
+        <Property Name="Politics06ToPolitics06" BaseValue="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PoliticalProfileScientist"   Type="PoliticalProfile">
+        <Property Name="Politics01ToPolitics01" BaseValue="1"/>
+        <Property Name="Politics02ToPolitics02" BaseValue="2"/>
+        <Property Name="Politics03ToPolitics03" BaseValue="1"/>
+        <Property Name="Politics04ToPolitics04" BaseValue="1"/>
+        <Property Name="Politics05ToPolitics05" BaseValue="1"/>
+        <Property Name="Politics06ToPolitics06" BaseValue="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PoliticalProfileReligious"   Type="PoliticalProfile">
+        <Property Name="Politics01ToPolitics01" BaseValue="1"/>
+        <Property Name="Politics02ToPolitics02" BaseValue="1"/>
+        <Property Name="Politics03ToPolitics03" BaseValue="1"/>
+        <Property Name="Politics04ToPolitics04" BaseValue="1"/>
+        <Property Name="Politics05ToPolitics05" BaseValue="2"/>
+        <Property Name="Politics06ToPolitics06" BaseValue="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PoliticalProfileDeuyivan"   Type="PoliticalProfile">
+        <Property Name="Politics01ToPolitics01" BaseValue="1"/>
+        <Property Name="Politics02ToPolitics02" BaseValue="2"/>
+        <Property Name="Politics03ToPolitics03" BaseValue="1"/>
+        <Property Name="Politics04ToPolitics04" BaseValue="1"/>
+        <Property Name="Politics06ToPolitics06" BaseValue="1"/>
+    </SimulationDescriptor>
+
+    
+    <!-- Political traits. -->
+    <SimulationDescriptor Name="PopulationPoliticalTraitAggressive"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics01ToPolitics06"/>
+        <Modifier TargetProperty="Politics01ToPolitics06" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitAtheist"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics05ToPolitics05"/>
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Multiplication" Value="0.25"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitCurious"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics03ToPolitics02"/>
+        <Modifier TargetProperty="Politics03ToPolitics02" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitFanatic"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics06ToPolitics05"/>
+        <Modifier TargetProperty="Politics06ToPolitics05" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitHedonist"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics04ToPolitics03"/>
+        <Modifier TargetProperty="Politics04ToPolitics03" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitMerciful"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics06ToPolitics03"/>
+        <Modifier TargetProperty="Politics06ToPolitics03" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitPragmatic"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics01"/>
+        <Modifier TargetProperty="Politics02ToPolitics01" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitOptimised"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics01ToPolitics04"/>
+        <Modifier TargetProperty="Politics01ToPolitics04" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitPious"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics03ToPolitics05"/>
+        <Modifier TargetProperty="Politics03ToPolitics05" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitRelativist"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics05"/>
+        <Modifier TargetProperty="Politics02ToPolitics05" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitSagacious"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics06ToPolitics01"/>
+        <Modifier TargetProperty="Politics06ToPolitics01" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitScientist02"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics02"/>
+        <Property Name="Politics01ToPolitics01"/>
+        <Property Name="Politics03ToPolitics03"/>
+        <Property Name="Politics04ToPolitics04"/>
+        <Property Name="Politics06ToPolitics06"/>
+        <Modifier TargetProperty="Politics02ToPolitics02" Operation="Addition" Value="2"/>
+        <Modifier TargetProperty="Politics01ToPolitics01" Operation="Addition" Value="1"/>
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="1"/>
+        <Modifier TargetProperty="Politics04ToPolitics04" Operation="Addition" Value="1"/>
+        <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitScientist03"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics02"/>
+        <Modifier TargetProperty="Politics02ToPolitics02" Operation="Addition" Value="2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitSearcher"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics01ToPolitics02"/>
+        <Modifier TargetProperty="Politics01ToPolitics02" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitWary"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics03ToPolitics06"/>
+        <Modifier TargetProperty="Politics03ToPolitics06" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitWarmonger"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics06"/>
+        <Modifier TargetProperty="Politics02ToPolitics06" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitXenophobic"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics03ToPolitics06"/>
+        <Modifier TargetProperty="Politics03ToPolitics06" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitIndustryToScience"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics01ToPolitics02"/>
+        <Modifier TargetProperty="Politics01ToPolitics02" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitEcologistToScience"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics04ToPolitics02"/>
+        <Modifier TargetProperty="Politics04ToPolitics02" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitAntiIndustrialist"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics01ToPolitics01"/>
+        <Modifier TargetProperty="Politics01ToPolitics01" Operation="Addition" Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitAntiScientist02" Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics02"/>
+        <Modifier TargetProperty="Politics02ToPolitics02" Operation="Addition" Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitAntiPacifist"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics03ToPolitics03"/>
+        <Modifier TargetProperty="Politics03ToPolitics03" Operation="Addition" Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitAntiEcologist"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics04ToPolitics04"/>
+        <Modifier TargetProperty="Politics04ToPolitics04" Operation="Addition" Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitAntiReligious"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics05ToPolitics05"/>
+        <Modifier TargetProperty="Politics05ToPolitics05" Operation="Addition" Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitAntiMilitarist"   Type="PopulationPoliticalTrait">
+        <Property Name="Politics06ToPolitics06"/>
+        <Modifier TargetProperty="Politics06ToPolitics06" Operation="Addition" Value="-0.5"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitIndustrialistToPacifist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics01ToPolitics03"/>
+        <Modifier TargetProperty="Politics01ToPolitics03" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitIndustrialistToReligious" Type="PopulationPoliticalTrait">
+        <Property Name="Politics01ToPolitics05"/>
+        <Modifier TargetProperty="Politics01ToPolitics05" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitPacifistToIndustrialist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics03ToPolitics01"/>
+        <Modifier TargetProperty="Politics03ToPolitics01" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitPacifistToEcologist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics03ToPolitics04"/>
+        <Modifier TargetProperty="Politics03ToPolitics04" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitScientificToIndustrialist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics01"/>
+        <Modifier TargetProperty="Politics02ToPolitics01" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitScientificToPacifist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics03"/>
+        <Modifier TargetProperty="Politics02ToPolitics03" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitScientificToEcologist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics02ToPolitics04"/>
+        <Modifier TargetProperty="Politics02ToPolitics04" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitReligiousToIndustrialist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics05ToPolitics01"/>
+        <Modifier TargetProperty="Politics05ToPolitics01" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitReligiousToPacifist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics05ToPolitics03"/>
+        <Modifier TargetProperty="Politics05ToPolitics03" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitMilitaristToScientific" Type="PopulationPoliticalTrait">
+        <Property Name="Politics06ToPolitics02"/>
+        <Modifier TargetProperty="Politics06ToPolitics02" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitMilitaristToReligious" Type="PopulationPoliticalTrait">
+        <Property Name="Politics06ToPolitics05"/>
+        <Modifier TargetProperty="Politics06ToPolitics05" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitReligiousToScientific" Type="PopulationPoliticalTrait">
+        <Property Name="Politics05ToPolitics02"/>
+        <Modifier TargetProperty="Politics05ToPolitics02" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitReligiousToMilitarist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics05ToPolitics06"/>
+        <Modifier TargetProperty="Politics05ToPolitics06" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitReligiousToEcologist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics05ToPolitics04"/>
+        <Modifier TargetProperty="Politics05ToPolitics04" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitMilitaristToEcologist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics06ToPolitics04"/>
+        <Modifier TargetProperty="Politics06ToPolitics04" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitEcologistToIndustrialist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics04ToPolitics01"/>
+        <Modifier TargetProperty="Politics04ToPolitics01" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitEcologistToReligious" Type="PopulationPoliticalTrait">
+        <Property Name="Politics04ToPolitics05"/>
+        <Modifier TargetProperty="Politics04ToPolitics05" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitEcologistToMilitarist" Type="PopulationPoliticalTrait">
+        <Property Name="Politics04ToPolitics06"/>
+        <Modifier TargetProperty="Politics04ToPolitics06" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitScheming"   Type="PopulationPoliticalTrait"/>
+
+    <SimulationDescriptor Name="PopulationPoliticalTraitCooperative"   Type="PopulationPoliticalTrait"/>
+
+</Datatable>

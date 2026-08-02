@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="AffinityGameplayMajorHisshos" Type="AffinityGameplay">        
+        <Property Name="CanUseHonor"       BaseValue="1"/>
+
+        <Modifier TargetProperty="CanUseHonor" Operation="Addition" Value="1" TooltipHidden="true"/>
+        <Modifier TargetProperty="GovernmentChangeHappinessMultiplier" Operation="Force" Value="0" TooltipHidden="true"/>
+
+        <Modifier TargetProperty="RebellionStarSystemIncreasePerTurn" Operation="Force" Value="0" Path="ClassEmpire/ClassSenate" TooltipHidden="true"/>
+        
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeForest" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeTerran" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeMonsoon" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeOcean" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeAtoll" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeBoreal" TooltipHidden="true"/>
+        <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem/PlanetTypeJungle" TooltipHidden="true"/>        
+
+        <Modifier TargetProperty="AutomaticallyTurnsIntoColony" Operation="Force" Value="0" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitSacredTradition" Type="FactionTrait">
+        <Modifier TargetProperty="KeepsGovernmentOnEmpireRebellion" Operation="Addition" Value="1" TooltipHidden="true"/>
+        <Modifier TargetProperty="SystemRebellionCountOnEmpireRebellion" Operation="Addition" Value="1" TooltipOverride="%OneSystemRebelsOnEmpireRebellionTooltipOverride"/>
+        <Modifier TargetProperty="SeesEnemyPathfinding" Operation="Addition" Value="1" TooltipOverride="%SeesEnemyPathfindingTooltipOverride"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitHisshosFestivals" Type="FactionTrait">
+        <Modifier TargetProperty="HasHisshosFestivals" Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitMinorIllo"    Type="FactionTrait"/>
+
+    <SimulationDescriptor Name="FactionTraitMiningExperts"    Type="FactionTrait">
+        <Modifier TargetProperty="OverColonizationThreshold"    Operation="Subtraction"     Value="1"       Priority="-1"   Path="../ClassEmpire"/>
+        <BinaryModifier TargetProperty="SystemFIDSPercent"            Operation="Subtraction"     Left="0.05"  BinaryOperation="Multiplication"    Right="$(SystemsAboveOverColonizationCount)"   Priority="-1"   Path="../ClassEmpire/ClassColonizedStarSystem"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitPirateHaters"    Type="FactionTrait">
+        <Modifier TargetProperty="PirateLairLootMultiplier" Operation="Percent" Value="1" TooltipHidden="true"/>
+        <Modifier TargetProperty="IsPirateHater" Operation="Addition" Value="1" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitJuggernautSpecialists"    Type="FactionTrait">
+        <Modifier           TargetProperty="MaximumJuggernauts"   Operation="Addition"    Value="1" Path="ClassEmpire"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitNativeObliteratorProtection"    Type="FactionTrait">
+        <Modifier TargetProperty="HasObliteratorDefense" Operation="Addition" Value="$(HasNativeHomeSystemOwner)"   Path="ClassEmpire/ClassColonizedStarSystem,HomeSystem"  SearchValueFromPath="true"  TooltipHidden="true"/>
+    </SimulationDescriptor>
+    
+    <SimulationDescriptor Name="FactionTraitMinorJuggernautBoost01" Type="FactionTraitMinor">
+        <BinaryModifier TargetProperty="EmpireEmpirePoint" Operation="Addition" Left="40" BinaryOperation="Multiplication" Right="$(JuggernautCount)" Path="ClassEmpire" SearchValueFromPath="true"/>
+        <Modifier TargetProperty="MinorTraitsAssimilated"                 Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+    <SimulationDescriptor Name="FactionTraitMinorJuggernautBoost02" Type="FactionTraitMinor">
+        <Modifier TargetProperty="GarrisonMoneyUpkeep"	   Operation="Percent"		Value="-0.25"	Path="./ClassGarrisonFleet/ClassShip,ShipSizeJuggernaut" />
+		<Modifier TargetProperty="MinorTraitsAssimilated"                 Operation="Addition" Value="1" Path="ClassEmpire" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="FactionTraitTechnologyDefinitionEmpireDevelopment1MajorHisshos"         Type="FactionTrait"/>
+
+    <SimulationDescriptor Name="FactionTraitStartWithJuggernaut"    Type="FactionTrait"/>
+
+</Datatable>

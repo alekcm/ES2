@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <DamageDataGuiElement Name="DamageAppliedByAOE">
+        <Title>%DamageAppliedByAOETitle</Title>
+        <Description>%DamageAppliedByAOEDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="WeaponTypeAOESmall"/>
+            <Icon Size="Medium" Path="WeaponTypeAOE"/>
+        </Icons>
+        <DamageModifiers>
+            <DamageModifier PropertyName="Damage"/>
+            <DamageModifier PropertyName="DamageBonusPerTargetCommandPoints"/>
+            <DamageModifier PropertyName="DamageBonusPerOpponentShipAtLongRange"/>
+        </DamageModifiers>
+    </DamageDataGuiElement>
+</Datatable>

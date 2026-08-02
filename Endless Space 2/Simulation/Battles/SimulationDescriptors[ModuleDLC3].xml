@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="ClassModuleNotOnObliteratorOrBattleShip" Type="ClassModuleNotOnObliteratorOrBattleShip"/>
+    <SimulationDescriptor Name="ClassModuleInvisibilityUmbralChoir" Type="ClassModuleInvisibility"/>
+
+    <SimulationDescriptor Name="ClassModuleInvisibility" Type="ClassModuleInvisibility">
+        <Property Name="AntiVisionStrengthForModule"/>
+
+        <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Addition" Value="$(AntiVisionStrengthForModule)"   Path="../ClassShip" Priority="4"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityLevel1" Type="ClassModuleInvisibility">
+        <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Force" Value="1"   Path="ClassModuleInvisibility" Priority="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityLevel2" Type="ClassModuleInvisibility">
+        <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Force" Value="2"   Path="ClassModuleInvisibility" Priority="2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityLevel3" Type="ClassModuleInvisibility">
+        <Modifier TargetProperty="AntiVisionStrengthForModule" Operation="Force" Value="3"   Path="ClassModuleInvisibility" Priority="3"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleInvisibilityAmbush" Type="ModuleInvisibilityAmbush"/>
+
+    <SimulationDescriptor Name="ModuleInvisibilityFullCombat" Type="ModuleInvisibilityFullCombat">
+        <Property Name="FleetEvasionFromInvisibility"/>
+
+        <!--<Modifier TargetProperty="Evasion" Operation="Addition" Value="$(FleetEvasionFromInvisibility)" Path="../ClassGarrisonFleet"/>-->
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleInvisibilityFullCombat1" Type="ModuleInvisibilityFullCombat">
+        <Modifier TargetProperty="FleetEvasionFromInvisibility"                     Operation="Addition" Value="0.3" Path="ModuleInvisibilityFullCombat"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityDetection" Type="ClassModuleInvisibility">
+        <Property Name="VisionStrength"/>
+
+        <Modifier TargetProperty="VisionStrength" Operation="Addition" Value="$(VisionStrength)" Path="../ClassShip" Priority="3"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityDetectionLevel1" Type="ClassModuleInvisibilityDetection">
+        <Modifier TargetProperty="VisionStrength" Operation="Force" Value="1" Path="ClassModuleInvisibilityDetection" Priority="0"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityDetectionLevel2" Type="ClassModuleInvisibilityDetection">
+        <Modifier TargetProperty="VisionStrength" Operation="Force" Value="2" Path="ClassModuleInvisibilityDetection" Priority="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityDetectionLevel3" Type="ClassModuleInvisibilityDetection">
+        <Modifier TargetProperty="VisionStrength" Operation="Force" Value="3" Path="ClassModuleInvisibilityDetection" Priority="2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInvisibilityDetectionProbe" Type="ClassModuleInvisibilityDetectionProbe">
+        <Property Name="MaximumShipDetectionProbeStock"/>
+        <Property Name="NetShipDetectionProbe"/>
+
+        <Modifier TargetProperty="MaximumShipDetectionProbeStock"    Operation="Addition"        Value="$(MaximumShipDetectionProbeStock)"      Path="../ClassShip"     Priority="1"/>
+        <Modifier TargetProperty="NetShipDetectionProbe"             Operation="Addition"        Value="$(NetShipDetectionProbe)"               Path="../ClassShip"     Priority="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleInvisibilityDetectionProbeLevel1" Type="ModuleInvisibilityDetectionProbe">
+        <Modifier TargetProperty="MaximumShipDetectionProbeStock" Operation="Addition" Value="2"/>
+        <Modifier TargetProperty="NetShipDetectionProbe" Operation="Addition" Value="1"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleInvisibilityDetectionProbeLevel2" Type="ModuleInvisibilityDetectionProbe">
+        <Modifier TargetProperty="MaximumShipDetectionProbeStock" Operation="Addition" Value="3"/>
+        <Modifier TargetProperty="NetShipDetectionProbe" Operation="Addition" Value="2"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleInvisibilityDetectionProbeLevel3" Type="ModuleInvisibilityDetectionProbe">
+        <Modifier TargetProperty="MaximumShipDetectionProbeStock" Operation="Addition" Value="4"/>
+        <Modifier TargetProperty="NetShipDetectionProbe" Operation="Addition" Value="3"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleInfluenceProduction" Type="ClassModuleInfluenceProduction">
+        <Property Name="InfluenceProductionBonusPerTurn"/>
+
+        <Modifier TargetProperty="InfluenceBonusFromFleet" Operation="Addition" Value="$(InfluenceProductionBonusPerTurn)"   Path="../InvisibilityFleetAction,ClassGarrisonFleet" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleSupportInfluenceProduction" Type="ModuleSupportInfluenceProduction">
+        <Modifier TargetProperty="InfluenceProductionBonusPerTurn"         Operation="Addition"     Value="5"      Path="ClassModuleInfluenceProduction"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassModuleScienceProduction" Type="ClassModuleScienceProduction">
+        <Property Name="ScienceProductionBonusPerTurn"/>
+
+        <Modifier TargetProperty="ScienceBonusFromFleet" Operation="Addition" Value="$(ScienceProductionBonusPerTurn)"   Path="../InvisibilityFleetAction,ClassGarrisonFleet" />
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleSupportScienceProduction" Type="ModuleSupportScienceProduction">
+        <Modifier TargetProperty="ScienceProductionBonusPerTurn"           Operation="Addition"     Value="10"      Path="ClassModuleScienceProduction"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ModuleSupportJuggernautFleetEnhancerUmbralChoir"    Type="ModuleSupportJuggernautFleetEnhancer">
+        <Modifier TargetProperty="DamageEnergyFleet"            Operation="Addition"    Value="0.25"    Path="ModuleSupportJuggernautFleetEnhancer"/>
+        <Modifier TargetProperty="DamageProjectileFleet"        Operation="Addition"    Value="0.25"    Path="ModuleSupportJuggernautFleetEnhancer"/>
+    </SimulationDescriptor>
+
+</Datatable>

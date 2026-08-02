@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- PopulationPlanet descriptors (provide bonuses to the population on the planet, and is used by the Collection bonuses/Boost bonuses). -->
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryAntiDepletion01" Type="ClassPopulationPlanet">
+        <Modifier   TargetProperty="PlanetDepletionPerTurn"     Operation="Subtraction"     Value="0.5"       Path="FAKEFORGUI/./ClassPlanet"/>
+        <Modifier   TargetProperty="RepletionPerTurn"           Operation="Addition"        Value="0.5"       TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessSterile" Type="ClassPopulationPlanet">
+        <Modifier   TargetProperty="BonusPopulationHappiness"           Operation="Addition"    Value="3"   Path="FAKEFORGUI/./PlanetGameplayTypeMeager"/>
+        <Modifier   TargetProperty="BonusPopulationDefenseHissho"       Operation="Addition"    Value="20"  Path="FAKEFORGUI/./PlanetGameplayTypeMeager"/>
+        <BinaryModifier   TargetProperty="BonusPopulationHappiness"     Operation="Addition"    Left="3"    BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+        <BinaryModifier   TargetProperty="BonusPopulationDefenseHissho" Operation="Addition"    Left="20"   BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryIndustryFertile" Type="ClassPopulationPlanet">
+        <Modifier           TargetProperty="BonusPopulationIndustry"    Operation="Addition"    Value="2"   Path="FAKEFORGUI/./PlanetGameplayTypeTeeming"  />
+        <BinaryModifier     TargetProperty="BonusPopulationIndustry"    Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PlanetIsTeeming)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+    
+    <!-- PopulationEmpire descriptors (used to apply the effects of Population boosts, and poorly named. I'm sorry but that's a fact!). -->
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryAntiDepletion01" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="PlanetDepletionPerTurn"         Operation="Subtraction" Value="0.5" Path="FAKEFORGUI/./ClassPlanet"/>
+        <BinaryModifier TargetProperty="RepletionPerTurn"               Operation="Addition"    Left="0.5"  BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryHappinessSterile" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Value="3"   Path="FAKEFORGUI/./PlanetGameplayTypeMeager"/>
+        <Modifier       TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Value="20"  Path="FAKEFORGUI/./PlanetGameplayTypeMeager"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			Operation="Addition"    Left="3"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			Operation="Addition"    Left="20"   BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryIndustryFertile" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationIndustry"        Operation="Addition"    Value="2"   Path="FAKEFORGUI/./PlanetGameplayTypeTeeming"  />
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationIndustry"        Operation="Addition"    Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetIsTeeming)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    
+
+    <!-- Assimilated populations descriptors (applied on the Horatio-like empire's major PopulationPlanets). -->
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetAntiDepletion01" Type="ClassPopulationAssimilated">
+        <Modifier   TargetProperty="PlanetDepletionPerTurn"     Operation="Subtraction"     Value="0.5"     Path="FAKEFORGUI/./ClassPlanet"/>
+        <Modifier   TargetProperty="RepletionPerTurn"           Operation="Addition"        Value="0.5"     TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetHappinessSterile" Type="ClassPopulationAssimilated">
+        <Modifier   TargetProperty="BonusPopulationHappiness"        Operation="Addition"    Value="1"      Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetIndustryFertile" Type="ClassPopulationAssimilated">
+        <Modifier       TargetProperty="BonusPopulationIndustry"      Operation="Addition"    Value="1"     Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+
+</Datatable>

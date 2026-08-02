@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+     <TutorialGuiElement Name="Tutorial_Hisshos01">       
+        <PopupTitle>%Tutorial_Hisshos01Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_Hisshos01Popup-Description</Description>
+            <Highlight Name="HonorManagementPanel" Type="Informative"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_Hisshos02Popup-Description</Description>
+            <Highlight Name="HonorActionButton" Type="Informative"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Hisshos03">        
+        <PopupTitle>%Tutorial_Hisshos03Popup-Title</PopupTitle>
+        <PopupPage>
+           <Description>%Tutorial_Hisshos03Popup-Description</Description>    
+           <Highlight Name="ColonySidePanel_HappinessGroup" Type="Informative"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_Hisshos04Popup-Description</Description>
+            <Highlight Name="ControlBanner_EmpireScreenToggle" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+
+    <TutorialGuiElement Name="Tutorial_Hisshos05">
+        <PopupTitle>%Tutorial_Hisshos05Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_Hisshos05Popup-Description</Description>
+             <Highlight Name="EmpireStatusSidePanel_HappinessGroup" Type="Informative"/>
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_Hisshos06Popup-Description</Description>
+             <Highlight Name="EmpireStatusSidePanel_OvercolonizationGroup" Type="Informative"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Hisshos07">
+      <PopupTitle>%Tutorial_Hisshos07Popup-Title</PopupTitle>
+      <PopupPage>
+        <Description>%Tutorial_Hisshos07Popup-Description</Description>
+        <Highlight Name="FleetsScreenLine $EconomicJuggernautName" Type="Interactive"/>
+      </PopupPage>     
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Hisshos08">
+      <PopupTitle>%Tutorial_Hisshos08Popup-Title</PopupTitle>
+      <PopupPage>
+        <Description>%Tutorial_Hisshos08Popup-Description</Description>
+      </PopupPage>
+      <PopupPage>
+        <Description>%Tutorial_Hisshos09Popup-Description</Description>
+      </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Hisshos10">
+      <PopupTitle>%Tutorial_Hisshos10Popup-Title</PopupTitle>
+      <PopupPage>
+        <Description>%Tutorial_Hisshos10Popup-Description</Description>
+        <Highlight Name="PlanetLabel_OutpostActions" Type="Interactive"/>
+      </PopupPage>     
+    </TutorialGuiElement>
+
+  <TutorialGuiElement Name="Tutorial_Hisshos11">
+    <PopupTitle>%Tutorial_Hisshos11Popup-Title</PopupTitle>
+    <PopupPage>
+      <Description>%Tutorial_Hisshos11Popup-Description</Description>      
+      <Highlight Name="FleetsScreen_LaunchProbeFleetActionButton" Type="Interactive"/>
+    </PopupPage>
+  </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Hisshos12">
+        <PopupTitle>%Tutorial_Hisshos12Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_Hisshos12Popup-Description</Description>
+            <Highlight Name="HonorManagementPanel" Type="Informative"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+</Datatable>

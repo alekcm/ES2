@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Droplist.xsd">
+
+  <Droplist Name="thieves_and_traitors_droplist" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="10000" Weight="1"/>
+  </Droplist>
+
+  <Droplist Name="PugRewardDLC5" Selector="Weighted">
+    <Hero Name="HeroPug01" Spawn="true"/>
+  </Droplist>
+
+  <Droplist Name="RewardUCFleet" Selector="Weighted">
+    <Fleet>
+      <ShipDesign>UmbralChoir_MediumDefenseReward</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+  <Droplist Name="RewardNakalimFleet" Selector="Weighted">
+    <Fleet>
+      <ShipDesign>Templars_SmallAttackReward</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+  <Droplist Name="RewardFleet1" Selector="Weighted">
+    <Fleet>
+      <ShipDesign>Academy_LargeCarrierReward</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+  <Droplist Name="AcademyStrongFleetDesign" Selector="Weighted">
+    <Fleet>
+      <ShipDesign>Academy_MediumDefenseEarly</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+  <Droplist Name="incoming_quest_pirates_fleet" Picks="1">
+    <Fleet>
+      <ShipDesign>MFPiratesMediumAttackAvg</ShipDesign>
+      <ShipDesign>MFPiratesMediumAttackAvg</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+  <Droplist Name="incoming_quest_reward" Selector="Weighted">
+    <Resource Name="EmpireMoney" Quantity="10000" Weight="1"/>
+  </Droplist>
+
+  <Droplist Name="FleetToSpawn_A_Hero_Proven_In_Battle" Selector="Weighted">
+    <Fleet>
+      <HeroDefinition>HeroPirateLeader01</HeroDefinition>
+      <ShipDesign>ShipQuestHisshos_MilitaryJuggernaut</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+  <Droplist Name="Reward_A_Hero_Proven_In_Battle" Fallback="DroplistLuxuries">
+    <Technology Name="TechnologyDefinitionQuestHisshos05"/>
+  </Droplist>
+
+  <Droplist Name="Reward_Chapter_1_Strange_Tidings" Selector="Weighted">
+    <List Name="Dust_and_resource" Weight="1"/>
+  </Droplist>
+
+  <Droplist Name="Dust_and_resource" Selector="Default" Picks="2">
+    <Resource Name="EmpireMoney" Quantity="5000" Weight="1"/>
+    <Resource Name="Strategic2" Quantity="50" Weight="1"/>
+    <Resource Name="Strategic1" Quantity="50" Weight="1"/>
+  </Droplist>
+
+  <Droplist Name="FinalAbsolutionFleet">
+    <Fleet>
+      <ShipDesign>Academy_MediumDefenseLate</ShipDesign>
+      <ShipDesign>Academy_MediumDefenseLate</ShipDesign>
+      <ShipDesign>Academy_MediumDefenseLate</ShipDesign>
+      <ShipDesign>Academy_MediumDefenseLate</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+  <Droplist Name="thieves_and_traitors_blueprint">
+    <Unlock Name="HullLarge01Academy" SimulationTag="CompletedQuestDarkMatter03"/>
+  </Droplist>
+
+  <Droplist Name="wisdom_of_the_past_blueprint">
+    <Unlock Name="HullSmall01Templars" SimulationDescriptorReference="CompletedQuestDarkMatter07"/>
+  </Droplist>
+
+  <Droplist Name="a_galaxy_far_far_away_blueprint">
+    <Unlock Name="HullMedium02UmbralChoir" SimulationDescriptorReference="CompletedQuestDarkMatter09"/>
+  </Droplist>
+</Datatable>

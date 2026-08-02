@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ShipDesignDefinition.xsd">
+
+    <!-- Science juggernaut. -->
+    <ShipDesignDefinition Name="Juggernauts_ScienceJuggernaut">
+        <Tags>Science</Tags>
+        <HullReference Name="HullJuggernaut01Juggernauts"/>
+        <ShipRoleReference Name="ShipRoleJuggernaut"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Support01">
+            <ModuleReference Name="ModuleSupportJuggernautResearchStarting"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.DefenseSupport01">
+            <ModuleReference Name="ModuleSupportJuggernautResearchStarting"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Support01">
+            <ModuleReference Name="ModuleSupportJuggernautResearchStarting"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>  
+        </SlotBinding>
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        
+        <!--SE Section-->
+
+        <!--S Section-->
+
+        <!-- If the ShipDesign is given by the FactionTraits, it will automatically appear in the MilitaryScreen when these prerequisites are validated. -->
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyJuggernautUnlock</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <!-- Vaulters automated -->
+    <ShipDesignDefinition Name="ShipDesignAutomatedShipMajorHisshos" Hidden="true" Editable="false">
+        <HullReference Name="HullAutomatedMajorHisshos"/>
+        <ShipRoleReference Name="ShipRoleAutomated"/>
+    </ShipDesignDefinition>
+
+    <!-- Military juggernaut. -->
+    <ShipDesignDefinition Name="Juggernauts_MilitaryJuggernaut">
+        <Tags>Military,Indestructible</Tags>
+        <HullReference Name="HullJuggernaut01bisJuggernauts"/>
+        <ShipRoleReference Name="ShipRoleJuggernaut"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.DefenseSupport01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!--SE Section-->
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <!-- If the ShipDesign is given by the FactionTraits, it will automatically appear in the MilitaryScreen when these prerequisites are validated. -->
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyJuggernautUnlock</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <!-- Support juggernaut std. -->
+    <ShipDesignDefinition Name="Juggernauts_SupportJuggernaut">
+        <Tags>Support</Tags>
+        <HullReference Name="HullJuggernaut01Juggernauts"/>
+        <ShipRoleReference Name="ShipRoleJuggernaut"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Support01">
+            <ModuleReference Name="ModuleSupportJuggernautMiningStarting"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.DefenseSupport01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Support01">
+            <ModuleReference Name="ModuleSupportJuggernautFIDSFlat"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+
+        <!--SE Section-->
+
+        <!--S Section-->
+
+        <!-- If the ShipDesign is given by the FactionTraits, it will automatically appear in the MilitaryScreen when these prerequisites are validated. -->
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyJuggernautUnlock</TechnologyPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Edition,Discard" Inverted="true">../ClassEmpire,FactionTraitMiningExperts</PathPrerequisite>
+    </ShipDesignDefinition>
+
+    <!-- Support juggernaut Hisshos. -->
+    <ShipDesignDefinition Name="Juggernauts_SupportJuggernautHisshos">
+        <Tags>Support</Tags>
+        <HullReference Name="HullJuggernaut01Juggernauts"/>
+        <ShipRoleReference Name="ShipRoleJuggernaut"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.Support01">
+            <ModuleReference Name="ModuleSupportJuggernautMiningStartingHissho"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.DefenseSupport01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Support01">
+            <ModuleReference Name="ModuleSupportJuggernautFIDSFlat"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionNE.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!--E Section-->
+
+        <!--SE Section-->
+
+        <!--S Section-->
+
+        <!-- If the ShipDesign is given by the FactionTraits, it will automatically appear in the MilitaryScreen when these prerequisites are validated. -->
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyJuggernautUnlock</TechnologyPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Edition,Discard">../ClassEmpire,FactionTraitMiningExperts</PathPrerequisite>
+    </ShipDesignDefinition>
+
+    <!-- Battleship -->
+    <ShipDesignDefinition Name="Juggernauts_Battleship">
+        <Tags>Military,Indestructible</Tags>
+        <HullReference Name="HullJuggernaut02Juggernauts"/>
+        <ShipRoleReference Name="ShipRoleBattleship"/>
+        <!--Core Section-->
+        <SlotBinding SlotName="CoreSection.LargeWeapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.Support01">
+            <ModuleReference Name="ModuleSupportRepair1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.DefenseSupport01">
+            <ModuleReference Name="ModuleSupportRepair1"/>
+        </SlotBinding>
+        <!--N Section-->
+        <SlotBinding SlotName="SectionN.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!--NE Section-->
+        <SlotBinding SlotName="SectionNE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!--E Section-->
+        <SlotBinding SlotName="SectionE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!--SE Section-->
+
+        <!--S Section-->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+
+        <!-- If the ShipDesign is given by the FactionTraits, it will automatically appear in the MilitaryScreen when these prerequisites are validated. -->
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyJuggernautBattleshipSpecialization</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+
+    <!-- Obliterator -->
+    <ShipDesignDefinition Name="Juggernauts_Obliterator">
+        <Tags>Military,Indestructible</Tags>
+        <HullReference Name="HullJuggernaut03Juggernauts"/>
+        <ShipRoleReference Name="ShipRoleObliterator"/>
+        
+        <!-- If the ShipDesign is given by the FactionTraits, it will automatically appear in the MilitaryScreen when these prerequisites are validated. -->
+        <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyJuggernautObliteratorSpecialization</TechnologyPrerequisite>
+    </ShipDesignDefinition>
+  
+   
+  <!-- Military juggernaut. -->
+  <ShipDesignDefinition Name="ShipQuestHisshos_MilitaryJuggernaut">
+    <Tags>Military,Indestructible</Tags>
+    <HullReference Name="HullJuggernaut01bisJuggernauts"/>
+    <ShipRoleReference Name="ShipRoleJuggernaut"/>
+    <!--Core Section-->
+    <SlotBinding SlotName="CoreSection.DefenseSupport01">
+      <ModuleReference Name="ModuleSupportEngine4"/>
+    </SlotBinding>
+    <!--N Section-->
+    <SlotBinding SlotName="SectionN.Defense01">
+      <ModuleReference Name="ModuleDefenseHullPlating3Strategic1"/>
+    </SlotBinding>
+    <SlotBinding SlotName="SectionN.Weapon01">
+      <ModuleReference Name="ModuleWeaponMissile2Strategic1"/>
+    </SlotBinding>
+    <!--NE Section-->
+    <SlotBinding SlotName="SectionNE.Weapon01">
+      <ModuleReference Name="ModuleWeaponMissile2Strategic1"/>
+    </SlotBinding>
+    <SlotBinding SlotName="SectionNE.Defense01">
+      <ModuleReference Name="ModuleDefenseHullPlating3Strategic1"/>
+    </SlotBinding>
+    <!--E Section-->
+    <SlotBinding SlotName="SectionE.Weapon01">
+      <ModuleReference Name="ModuleWeaponMissile2Strategic1"/>
+    </SlotBinding>
+    <SlotBinding SlotName="SectionE.Defense01">
+      <ModuleReference Name="ModuleDefenseHullPlating3Strategic1"/>
+    </SlotBinding>
+    <!--SE Section-->
+    <SlotBinding SlotName="SectionSE.Weapon01">
+      <ModuleReference Name="ModuleWeaponMissile2Strategic1"/>
+    </SlotBinding>
+    <!--S Section-->   
+    <!-- If the ShipDesign is given by the FactionTraits, it will automatically appear in the MilitaryScreen when these prerequisites are validated. -->
+    <TechnologyPrerequisite Flags="Prerequisite,Edition,Technology,Discard">TechnologyJuggernautUnlock</TechnologyPrerequisite>
+  </ShipDesignDefinition>
+  
+</Datatable>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- Colo Fake -->
+    <GuiElement Name="PlanetTypeFakeColonization">
+        <Title>%PlanetColonizationFakeTitle</Title>
+        <Description>%PlanetColonizationFakeDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/Colonization/ColonizationFakeSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/Colonization/ColonizationFakeLarge" />
+        </Icons>
+    </GuiElement>
+
+    <!-- Colo destroyed -->
+    <GuiElement Name="PlanetTypeDestroyedColonization">
+        <Title>%PlanetTypeDestroyedColonizationTitle</Title>
+        <Description>%PlanetTypeDestroyedColonizationDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/Colonization/ColonizationDestroyedSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/Colonization/ColonizationDestroyedLarge" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="PlanetTypeDestroyedGasColonization">
+        <Title>%PlanetTypeDestroyedGasColonizationTitle</Title>
+        <Description>%PlanetTypeDestroyedGasColonizationDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/Colonization/ColonizationDestroyedGasSmall" />
+            <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/Colonization/ColonizationDestroyedGasLarge" />
+        </Icons>
+    </GuiElement>
+
+</Datatable>

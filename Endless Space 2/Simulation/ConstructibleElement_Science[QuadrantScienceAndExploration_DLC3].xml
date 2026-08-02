@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+
+    <!-- PathPrerequisite: Starting point is ClassEmpire -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration29" TechnologyStage="TechnologyStageDefinitionScienceAndExploration5" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+        <SimulationDescriptorReference Name="TechnologyPopulationSlots"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+
+        <HelperVariable Name="TurnVariable"/>
+        <HelperFormula>40 * $(TurnVariable)</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration30" TechnologyStage="TechnologyStageDefinitionScienceAndExploration5" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+       <SimulationDescriptorReference Name="TechnologyWormhole2"/>
+        <SimulationDescriptorReference Name="TechnologyMovementBonus"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+        <HelperVariable Name="TurnVariable"/>
+        <HelperFormula>40 * $(TurnVariable)</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration34" TechnologyStage="TechnologyStageDefinitionScienceAndExploration5" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+        <SimulationDescriptorReference Name="TechnologyScienceOnGas"/>
+        <SimulationDescriptorReference Name="TechnologyAnomalyReduction3"/>
+        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventScientistTechnology"/>
+
+        <HelperVariable Name="TurnVariable"/>
+        <HelperFormula>40 * $(TurnVariable)</HelperFormula>
+    </TechnologyDefinition>
+
+</Datatable>

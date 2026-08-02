@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ******************** -->
+    <!-- **     Roles      ** -->
+    <!-- ******************** -->
+    <!-- Primary Roles -->
+    <ExtendedGuiElement Name="ShipRoleSuperColonizer">
+        <Title>%ShipRoleSuperColonizerTitle</Title>
+        <Description>%ShipRoleSuperColonizerDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/ShipRole/ShipRoleSuperColonizerSmall" />
+            <Icon Size="SmallInverted" Path="ShipTypeSmallSuperColonizerSmallInverted" />
+            <Icon Size="Medium" Path="ShipTypeSmallSuperColonizerMedium" />
+            <Icon Size="MediumInverted" Path="ShipTypeSmallSuperColonizerMediumGlow" />
+        </Icons>
+        <SymbolString>[superColonizer]</SymbolString>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>
+</Datatable>

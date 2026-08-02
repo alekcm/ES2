@@ -1,0 +1,2427 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/QuestDefinition.xsd">
+   
+    <!--######################################-->
+    <!--##   ALTERNATIVE VERSION: HISSHOS   ##-->
+    <!--######################################-->
+
+    <!--#############################-->
+    <!--##   The Deads Part 2     ##-->
+    <!--#############################-->
+
+    <QuestDefinition Name="EventCuriosity10Bis" Category="Event" SubCategory="TriggeredByaQuest" IsInstant="true">
+
+        <!--============ TAGS ============-->
+        <Tags>EventCuriosity10</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EffectName1"  StringValue="EventEffect165"/>
+            <Var VarName="$EffectGUID1"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--============ STEP 1 ============-->
+            <Step Name="Step2_1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+
+    <!--#############################-->
+    <!--## STAR THEIR DESTINATION 2 ##-->
+    <!--#############################-->
+
+    <QuestDefinition Name="EventCuriosity17Bis" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1">
+
+        <!--============ TAGS ============-->
+        <Tags>EventCuriosity17</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystemList">
+                <From Source="$Empire.$ColonizedStarSystems"></From>
+            </Var>
+            <!--Increase Pacifist-->
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative13"/>
+            <!--Increase Militarist-->
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative13Bis"/>
+
+            <Var VarName="$EffectName1"  StringValue="EventEffect166"/>
+            <Var VarName="$EffectName2"  StringValue="EventEffect24"/>
+
+            <Var VarName="$EffectGUID1"/>
+            <Var VarName="$EffectGUID2"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity053PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical17BisPopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--#############################
+        ####### TRIAL BY FIRE  ######
+        #############################-->
+
+   <QuestDefinition Name="EventPolitical01Bis" Category="Event" SubCategory="PoliticalEvent" MinimumTurn="50" TriggeringProbability="0.8">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystems">
+                <From Source="$CurrentEmpire.$ColonizedStarSystems"/>
+            </Var>
+            <!--Militarist Choice-->
+
+
+            <Var VarName="$EffectName1"  StringValue="EventEffect167"/>
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative16"/>
+            <Var VarName="$EffectGUID1"/>
+            <!--Pacifist Choice-->
+            <Var VarName="$EffectName2"  StringValue="EventEffect168"/>
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative17"/>
+            <Var VarName="$EffectGUID2"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassPopulationEmpire,PopulationNonMajor</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire,AffinityCravers</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassSenate/ClassSenator,Politics06', Support, true) ge 0.4 </InterpreterPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity052PopulationTitle">
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>EventPolitical02Bis</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity053PopulationTitle">
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--###################################
+        ####### TRIAL BY FIRE PART2  ######
+        ###################################-->
+
+    <QuestDefinition Name="EventPolitical02Bis" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1" CheckRandom="false" TriggeringProbability="0.5">
+
+        <!--============ TAGS ============-->
+        <Tags>EventPolitical02Bis</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystems">
+                <From Source="$CurrentEmpire.$ColonizedStarSystems"/>
+            </Var>
+            <Var VarName="$EmpireSystemsWithMinor">
+                <From Source="$CurrentEmpire.$ColonizedStarSystems">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">//ClassPopulation,PopulationNonMajor</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            <!--Militarist Choice-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect169"/>
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative18"/>
+            <Var VarName="$EffectGUID1"/>
+            <!--Pacifist Choice-->
+            <Var VarName="$EffectName2"  StringValue="EventEffect170"/>
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative19"/>
+            <Var VarName="$EffectGUID2"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+      <Prerequisites Target="$(Empire)">     
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+      </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity052PopulationTitle">
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>EventPolitical03</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity053PopulationTitle">
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+    
+        <!--###################################
+            ######     Smoking Gun  2  ########
+            ###################################-->
+
+      <QuestDefinition Name="EventPolitical08Bis" Category="Event" SubCategory="TriggeredByaQuest" MinimumTurn="1">
+
+        <!--============ TAGS ============-->
+        <Tags>EventPolitical08</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+          <Var VarName="$EffectTarget1">
+            <From Source="$Empire"/>
+          </Var>
+          <Var VarName="$EmpireSystems">
+            <From Source="$EffectTarget1.$ColonizedStarSystems">
+                <Where>
+                    <PathPrerequisite>ColonizedStarSystemStateColony</PathPrerequisite>
+                </Where>
+            </From>
+          </Var>
+          <!--Choice1: increase dust and pacifism-->
+          <Var VarName="$EffectName1"  StringValue="EventEffect171"/>
+          <Var VarName="$EffectGUID1"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+          
+          <Prerequisites Target="$(Empire)">
+              <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+              <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+          </Prerequisites>
+          
+        <!--============ STEPS ============-->
+        <Steps>
+          <Step Name="Step1"> 
+            <!--============ STEP 1 ============-->
+            <ObjectiveSet>
+                
+                  <StartActions>
+                    <Action_ApplyQuestEffect LogAction="true">
+                      <Input_EffectName VarName="$EffectName1"/>
+                      <Input_Target VarName="$EffectTarget1"/>
+                      <Output_GUID VarName="$EffectGUID1"/>
+                    </Action_ApplyQuestEffect>
+                  </StartActions>
+                
+              <Objective Name="Step1_Objective1">
+                  
+                    <Sequence>
+                      <Decorator_QuestEffectFinished>
+                        <Input_GUID VarName="$EffectGUID1"/>
+                      </Decorator_QuestEffectFinished>
+                    </Sequence>
+                  
+              </Objective>
+            </ObjectiveSet>        
+          </Step>
+        </Steps>
+      </QuestDefinition>
+
+    <!--####################################################
+        ##### A MILLION THINGS I HAVEN'T DONE PART 3  ######
+        #################################################### -->
+
+    <QuestDefinition Name="EventPoliticalResult12Bis" Category="Event" SubCategory="TriggeredByaQuest">
+
+        <!--============ TAGS ============-->
+        <Tags>EventPoliticalResult12</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystems">
+                <From Source="$EffectTarget1.$ColonizedStarSystems"/>
+            </Var>
+            <!--Choice1: increase dust and pacifism-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect172"/>
+            <Var VarName="$EffectGUID1"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--#############################
+        ######## THE DIVISION #######
+        #############################-->
+
+    <QuestDefinition Name="EventPolitical13Bis" Category="Event" SubCategory="PoliticalEvent" MinimumTurn="50" TriggeringProbability="0.8">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var IsGlobal="true" VarName="$EmpireSystem">
+                <Any>
+                    <From Source="$EffectTarget1.$ColonizedStarSystems">
+                        <Where>
+                            <PathPrerequisite>ColonizedStarSystemStateColony</PathPrerequisite>
+                        </Where>
+                    </From>
+                </Any>
+            </Var>
+            <Var VarName="$EmpireSystemLocation">
+                <From Source="$EmpireSystem.$StarSystem"/>
+            </Var>
+            <!--Choice1: increase dust and pacifism-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect39"/>
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative24"/>
+            <Var VarName="$EffectGUID1"/>
+
+            <!--Choice2: decrease dust -->
+            <Var VarName="$EffectName2"  StringValue="EventEffect173"/>
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative25"/>
+            <Var VarName="$EffectGUID2"/>
+
+            <LocalizationVar Source="$EmpireSystem" LocalizationKey="$SystemName"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassSenate/ClassSenator,Politics03</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassSenate/ClassSenator,Politics06</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical13PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Parallel CompletionPolicy="Any">
+                            <Sequence>
+                                <Decorator_QuestEffectFinished>
+                                    <Input_GUID VarName="$EffectGUID1"/>
+                                </Decorator_QuestEffectFinished>
+                                <Action_ChooseOutcome Name="Outcome1"/>
+                            </Sequence>
+                            <Sequence>
+                                <Decorator_InvadeSystem>
+                                    <Input_System VarName="$EmpireSystemLocation"/>
+                                    <Input_VictimEmpire VarName="$EffectTarget1"/>
+                                    <Input_GroundBattleOutcomeType>CaptureOrRaze</Input_GroundBattleOutcomeType>
+                                </Decorator_InvadeSystem>
+                                <Action_Fail/>
+                            </Sequence>
+                        </Parallel>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>EventPolitical14</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$EffectTarget1"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity053PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--####################################
+        ########  DOWN TO EARTH ###########
+        ####################################-->
+
+   <QuestDefinition Name="EventPolitical16Bis" Category="Event" SubCategory="PoliticalEvent" MinimumTurn="50" TriggeringProbability="0.8">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystems">
+                <From Source="$EffectTarget1.$ColonizedStarSystems">
+                    <Where>
+                        <PathPrerequisite>ColonizedStarSystemStateColony</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+
+            <Var VarName="$OneSystem">
+                <Any>
+                    <From Source="$EmpireSystems">
+                        <Where>
+                            <FilterSystemByStatus StarSystemState="Colony"/>
+                        </Where>
+                    </From>
+                </Any>
+            </Var>
+
+
+            <!--Choice1: Decrease all FIDSI-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect174"/>
+            <!--Choice1: Politic= Militarist-->
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative28"/>
+            <Var VarName="$EffectGUID1"/>
+
+            <!--Choice2: Decrease only Industry -->
+            <Var VarName="$EffectName2"  StringValue="EventEffect175"/>
+            <!--Choice2: Politic= Industry-->
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative29"/>
+            <Var VarName="$EffectGUID2"/>
+
+            <LocalizationVar VarName="$System" Source="$OneSystem"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassSenate/ClassSenator,Politics05', Support, true) ge 0.4 </InterpreterPrerequisite>
+            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire/ClassSenate,GovernmentDictatorshipCommon</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventRandom04PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical16PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="EventPolitical22Bis" Category="Event" SubCategory="PoliticalEvent" MinimumTurn="50" TriggeringProbability="0.8">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystem">
+                <Any>
+                    <From Source="$EffectTarget1.$ColonizedStarSystems">
+                        <Where>
+                           <InterpreterPrerequisite>Property(Context, SystemProduction) ge 200</InterpreterPrerequisite>
+                        </Where>
+                    </From>
+                </Any>
+            </Var>
+
+            <!--Choice1: +30 Happiness -20 Industry-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect176"/>
+            <!--Choice1: Politic= Ecologist-->
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative47"/>
+            <Var VarName="$EffectGUID1"/>
+
+            <!--Choice2: -10 Happiness +10 Industry -->
+            <Var VarName="$EffectName2"  StringValue="EventEffect177"/>
+            <!--Choice2: Politic= Industrialist-->
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative48"/>
+            <Var VarName="$EffectGUID2"/>
+            <LocalizationVar Source="$EmpireSystem" LocalizationKey="$SystemName"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassSenate/ClassSenator,Politics04</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <!--============ STEP 1 ============-->
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity032PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity03PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+    
+    <!--#######################################-->
+    <!--###### CALL A SPACEMAN A SPACEMAN #####-->
+    <!--#######################################-->
+
+    <QuestDefinition Name="EventRandom04Bis" Category="Event" SubCategory="Random" MinimumTurn="20" TriggeringProbability="0.8">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystem">
+                <From Source="$EffectTarget1.$ColonizedStarSystems"/>
+            </Var>
+
+            <!--Decrease Happiness-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect178"/>
+            <!--Decrease Industry Production-->
+            <Var VarName="$EffectName2"  StringValue="EventEffect26"/>
+
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative14"/>
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative12"/>
+
+            <Var VarName="$EffectGUID1"/>
+            <Var VarName="$EffectGUID2"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassPopulationEmpire,PopulationNonMajor</PathPrerequisite>
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventRandom022PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventRandom04PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+
+        </Steps>
+    </QuestDefinition>
+
+    <!--#######################################-->
+    <!--## ON THE SHOULDERS OF SUPERGIANTS  ###-->
+    <!--#######################################-->
+
+    <QuestDefinition Name="EventRandom06Bis" Category="Event" SubCategory="Random" MinimumTurn="20" TriggeringProbability="0.4">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystem">
+                <From Source="$EffectTarget1.$ColonizedStarSystems"/>
+            </Var>
+
+            <!--Decrease Happiness-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect179"/>
+            <!--Decrease Industry Production-->
+
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative53"/>
+
+            <Var VarName="$EffectGUID1"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity053PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <!--#######################################-->
+    <!--############ MIND MATTERS  ############-->
+    <!--#######################################-->
+
+   <QuestDefinition Name="EventRandom08Bis" Category="Event" SubCategory="Random" MinimumTurn="20" TriggeringProbability="0.6">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$EmpireSystem">
+                <Any>
+                    <From Source="$EffectTarget1.$ColonizedStarSystems">
+                        <Where>
+                            <PathPrerequisite Flags="Prerequisite">ClassColonizedStarSystem/ClassHero</PathPrerequisite>
+                        </Where>
+                    </From>
+                </Any>
+            </Var>
+
+            <!--Decrease Happiness-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect180"/>
+            <!--Decrease Industry Production-->
+            <Var VarName="$EffectName2"  StringValue="EventEffect78"/>
+
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative54"/>
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative55"/>
+
+            <Var VarName="$EffectGUID1"/>
+            <Var VarName="$EffectGUID2"/>
+
+            <LocalizationVar Source="$EmpireSystem" LocalizationKey="$SystemName"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventCuriosity032PopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventPolitical17BisPopulationTitle">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EmpireSystem"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Step2_2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    <!--#######################################-->
+    <!--##         Juggernaut Spawn         ###-->
+    <!--#######################################-->
+
+    <QuestDefinition Name="EventJuggernautSpawn" Category="Event" SubCategory="TechnologyJuggernaut" MinimumTurn="1" TriggeringProbability="0">
+
+        <!--============ TAGS ============-->
+        <!--If a techno is unlocked, the quest is tested.-->
+        <!--Hidden = invisible for the player-->
+        <!--Trigger the Juggernaut Quest-->
+        <Tags>EventTechnologyUnlocked,BeginTurn,Hidden</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <!--Select the Empire which receives the quest-->
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <!--Among the colonies possessed by the Empire select one.-->
+            <Var VarName="$EmpireColonizedSystem">
+                <Any>
+                    <From Source="$CurrentEmpire.$ColonizedStarSystems">
+                        <Where>
+                            <FilterSystemByStatus StarSystemState="Colony"/>
+                        </Where>
+                    </From>
+                 </Any>
+            </Var>
+            <!--From the selected Colonized Star System, find its location-->
+            <Var VarName="$EmpireColonizedSystemLocalization">
+                <From Source="$EmpireColonizedSystem.$StarSystem"/>                
+            </Var>
+            <!--The fleet is filled by a Juggernaut ship design.-->
+            <DroplistVar Droplist="JuggernautsFleet" VarName="$JuggernautToSpawn"/>
+            <!--Mandatory element: GUID of the juggernaut once it is triggered-->
+            <Var VarName="$JuggernautToSpawnGUID"/>
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+        <!--Check the technology Juggernaut is unlocked in sim. If not, the quest will not be launched-->
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/ClassResearch,TechnologyJuggernautUnlock</PathPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <!--Actions done at the very beginning of the quest-->
+                    <StartActions>                      
+                        <Action_SpawnFleets>
+                            <Input_Empire VarName="$CurrentEmpire"/>
+                            <Input_Locations VarName="$EmpireColonizedSystemLocalization"/>
+                            <Input_DroppableFleet VarName="$JuggernautToSpawn"/>
+                            <Output_FleetGUIDs VarName="$JuggernautToSpawnGUID"/>
+                        </Action_SpawnFleets>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <!--Almost empty sequence: because we do need a sequence in the Quest definition-->
+                            <!--Completely useless and invisible for the player-->
+                          <Decorator_BeginTurn/>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+
+    <!--#######################################-->
+    <!--###### EVENT: HISSHOS SYKAGOJA  #######-->
+    <!--#######################################-->
+
+    <QuestDefinition Name="EventReveal07" Category="Event" SubCategory="Random" MinimumTurn="1" TriggeringProbability="1"   CheckRandom="false">
+
+        <!--============ TAGS ============-->
+        <!--Triggered if reveal a planet-->
+        <Tags>EventStarSystemNodeRevealed</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+          <!--Check if the discovered planet is Sykagoka-->
+            <Var VarName="$SykagojaSystem">
+                <From Source="$GameEvent.$StarSystem">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">ClassStarSystem/ClassPlanet,UniquePlanetSykagoja</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$EffectTarget1">
+                <From Source="$Empire"/>
+            </Var>
+            <!--Target of the event is all the Colonized System of the Empire-->
+            <Var VarName="$EmpireSystem">
+                <From Source="$EffectTarget1.$ColonizedStarSystems"/>
+            </Var>
+
+            <!--Reference all the events-->
+            <Var VarName="$EffectName1"  StringValue="EventEffect183"/>
+            <Var VarName="$EffectName2"  StringValue="EventEffect184"/>
+            <Var VarName="$EffectName3"  StringValue="EventEffect185"/>
+            <Var VarName="$EffectName4"  StringValue="EventEffect186"/>
+            <Var VarName="$EffectName5"  StringValue="EventEffect187"/>            
+
+            <!--Science-->
+            <Var VarName="$EventName1"   StringValue="PopulationPoliticalEventNarrative84"/>
+            <!--Militarist-->
+            <Var VarName="$EventName2"   StringValue="PopulationPoliticalEventNarrative85"/>
+            <!--Religious-->
+            <Var VarName="$EventName3"   StringValue="PopulationPoliticalEventNarrative86"/>
+          
+            <!--Reference all the events as game objects-->
+            <Var VarName="$EffectGUID1"/>
+            <Var VarName="$EffectGUID2"/>
+            <Var VarName="$EffectGUID3"/>
+            <Var VarName="$EffectGUID4"/>
+            <Var VarName="$EffectGUID5"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+            <PathPrerequisite Flags="Prerequisite">ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityMajorHisshos</PathPrerequisite>   
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context,@'ClassEmpire', EmpireResearch) ge 14 </InterpreterPrerequisite>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>    
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <!--Always displayed-->
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <!--If Affinity Hisshos-->
+                    <ChoiceItem ObjectiveSetIndex="1">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="2">
+                    <!--If not Affinity Hisshos-->
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite" Inverted="true">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="3">
+                      <!--If Affinity Hisshos-->
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="4">
+                    <!--If not Affinity Hisshos-->
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite" Inverted="true">EmpireTypeMajor,AffinityGameplayMajorHisshos</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                </Choice>
+          <!--============= OBJECTIVES ==============-->      
+              
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID1"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventReveal07Choice1Title">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName1"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID1"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName2"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID2"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventReveal07Choice2Title">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Objective2">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID2"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName3"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID3"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventReveal07Choice2Title">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName2"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Objective2">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID3"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName4"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID4"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventReveal07Choice3Title">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName3"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Objective3">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID4"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$EffectName5"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Output_GUID VarName="$EffectGUID5"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_TriggerPopulationEvent LogAction="true" LocalizationKey="%EventReveal07Choice3Title">
+                            <Input_Empire VarName="$EffectTarget1"/>
+                            <Input_Target VarName="$EffectTarget1"/>
+                            <Input_PopulationEventDefinition VarName="$EventName3"/>
+                        </Action_TriggerPopulationEvent>
+                    </StartActions>
+                    <Objective Name="Objective3">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID5"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+
+    </QuestDefinition>
+
+    
+    <!--#######################################-->
+    <!--###### EVENT: OBLITERATOR FIRE  #######-->
+    <!--#######################################-->
+
+    <QuestDefinition Name="DiplomaticEventObliteratorFire" Category="Event" SubCategory="" AlternateVersion="DiplomaticEventObliteratorFireNoAlly">
+        <Tags>EventObliteratorFireObserved</Tags>
+        <QuestContextSolo/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$ObliteratorEmpire">
+                <From Source="$GameEvent.$Instigator"/>
+            </Var>
+            <Var VarName="$ObliteratorEmpireAllies">
+                <From Source="$ObliteratorEmpire.$Allies"/>
+            </Var>
+            <!-- this variable is just there to ensure that the event is not triggered on the shooter's allies -->
+            <Var VarName="$AllianceCheck">
+                <From Source="$CurrentEmpire">
+                    <Where>
+                        <IsNot EntityVarName="$ObliteratorEmpireAllies"/>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$OtherEmpires">
+                <From Source="$MajorEmpires">
+                    <Where>
+                        <IsNot EntityVarName="$CurrentEmpire"/>
+                        <IsNot EntityVarName="$ObliteratorEmpire"/>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$GameNode">
+                <From Source="$GameEvent.$GameNode"/>
+            </Var>
+            
+            <Var VarName="$DenounceFakeEffectName"  StringValue="EventEffectObliteratorFakeDenounced"/>
+            <Var VarName="$StudyEffectName"         StringValue="EventEffectObliteratorStudied"/>
+            <Var VarName="$EffectGUID"/>
+
+            <LocalizationVar Source="$CurrentEmpire" LocalizationKey="$CurrentEmpireName"/>
+            <LocalizationVar Source="$ObliteratorEmpire" LocalizationKey="$ObliteratorEmpireName"/>
+            <LocalizationVar Source="$GameNode" LocalizationKey="$GameNodeName"/>
+        </Vars>
+
+        <Prerequisites Target="$(Empire)">
+             <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+             <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="DiplomaticEventObliteratorFireNoAlly" QuestState="InProgress"/>
+        </Prerequisites>
+      
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$DenounceFakeEffectName"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_Message Message="OtherEmpireFiredObliterator">
+                            <Input_Empires VarName="$OtherEmpires"/>
+                        </Action_Message>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>ObliteratorFireDenounced</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$ObliteratorEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$StudyEffectName"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID"/>
+                        </Action_ApplyQuestEffect>
+                    </StartActions>
+                    <Objective Name="Step2_2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DiplomaticEventObliteratorFireNoAlly" Category="Event" SubCategory="">
+        <Tags>EventObliteratorFireObserved</Tags>
+        <QuestContextSolo/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            <Var VarName="$ObliteratorEmpire">
+                <From Source="$GameEvent.$Instigator"/>
+            </Var>
+            <Var VarName="$OtherEmpires">
+                <From Source="$MajorEmpires">
+                    <Where>
+                        <IsNot EntityVarName="$CurrentEmpire"/>
+                        <IsNot EntityVarName="$ObliteratorEmpire"/>
+                    </Where>
+                </From>
+            </Var>
+            <Var VarName="$GameNode">
+                <From Source="$GameEvent.$GameNode"/>
+            </Var>
+
+            <Var VarName="$DenounceFakeEffectName"  StringValue="EventEffectObliteratorFakeDenounced"/>
+            <Var VarName="$StudyEffectName"         StringValue="EventEffectObliteratorStudied"/>
+            <Var VarName="$EffectGUID"/>
+
+            <LocalizationVar Source="$CurrentEmpire" LocalizationKey="$CurrentEmpireName"/>
+            <LocalizationVar Source="$ObliteratorEmpire" LocalizationKey="$ObliteratorEmpireName"/>
+            <LocalizationVar Source="$GameNode" LocalizationKey="$GameNodeName"/>
+        </Vars>
+
+        <Prerequisites Target="$(Empire)">
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="DiplomaticEventObliteratorFire" QuestState="InProgress"/>
+        </Prerequisites>
+
+        <Steps>
+            <Step Name="Step1">
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>
+                </Choice>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$DenounceFakeEffectName"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                        </Action_ApplyQuestEffect>
+                        <Action_Message Message="OtherEmpireFiredObliterator">
+                            <Input_Empires VarName="$OtherEmpires"/>
+                        </Action_Message>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Action_ChooseOutcome Name="Outcome1"/>
+                        </Sequence>
+                        <Outcome Name="Outcome1">
+                            <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>ObliteratorFireDenounced</Tags>
+                                    <QuestContextSolo ParticipantsVarName="$ObliteratorEmpire"/>
+                                </QuestTrigger>
+                            </Triggers>
+                        </Outcome>
+                    </Objective>
+                </ObjectiveSet>
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$StudyEffectName"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID"/>
+                        </Action_ApplyQuestEffect>
+                    </StartActions>
+                    <Objective Name="Step2_2_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <QuestDefinition Name="DiplomaticEventObliteratorFireDenounced" Category="Event" SubCategory="">
+        <Tags>ObliteratorFireDenounced</Tags>
+        <QuestContextSolo/>
+
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+            
+            <Var VarName="$DenounceEffectName"  StringValue="EventEffectObliteratorDenounced"/>
+            <Var VarName="$EffectGUID"/>
+        </Vars>
+
+      <Prerequisites>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+      </Prerequisites>
+
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet>
+                    <StartActions>
+                        <Action_ApplyQuestEffect LogAction="true">
+                            <Input_EffectName VarName="$DenounceEffectName"/>
+                            <Input_Target VarName="$CurrentEmpire"/>
+                            <Output_GUID VarName="$EffectGUID"/>
+                        </Action_ApplyQuestEffect>
+                    </StartActions>
+                    <Objective Name="Step2_1_Objective1">
+                        <Sequence>
+                            <Decorator_QuestEffectFinished>
+                                <Input_GUID VarName="$EffectGUID"/>
+                            </Decorator_QuestEffectFinished>
+                        </Sequence>
+                    </Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestDefinition>
+    
+    
+    <!--#######################################-->
+    <!--###### POPULATION QUEST HISSHOS #######-->
+    <!--#######################################-->
+
+    <QuestDefinition Name="PopulationQuest17" Category="PopulationQuest" SubCategory="Population" MinimumTurn="8" TriggeringProbability="1" CheckRandom="false">
+    <!--TRIGGER ONLY IF SYKAJA EXISTS-->
+    <!--IF NOT: TRIGGER THE QUEST POPULATIONQUEST18-->
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+
+        <QuestContextSolo/>
+
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+          
+            <!--Select all the systems in the Galaxy-->
+            <Var VarName="$ConstellationStarSystems">
+                <From Source="$Constellations.$StarSystems"/>
+            </Var>
+            
+             <!--Check if Sykagoja has been generated. If not: this quest will not be spawn-->
+            <Var VarName="$SykagojaSystem">
+                <From Source="$ConstellationStarSystems">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">ClassStarSystem/ClassPlanet, UniquePlanetSykagoja</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+            
+            <!--Select only the planet Sykagoja from its system: variable used in C3 and C4-->
+            <Var VarName="$SykagojaPlanet">
+                <Any>
+                    <From Source="$SykagojaSystem.$Planets">
+                        <Where>
+                           <PathPrerequisite>ClassPlanet,UniquePlanetSykagoja</PathPrerequisite>
+                        </Where> 
+                    </From>
+                </Any>
+            </Var>
+
+            <!--Count all the planet with a non-Major Hisshos on it-->
+            <Var VarName="$ColonizedPlanetWithMinor">
+                <Count>
+                    <From Source="$CurrentEmpire.$ColonizedStarSystems.$ColonizedPlanets">
+                        <Where>
+                            <PathPrerequisite Flags="Prerequisite">ClassColonizedPlanet/ClassPopulationPlanet,!ClassPopulationPlanetAffinityMajorHisshosCount</PathPrerequisite>
+                        </Where>
+                    </From>
+                </Count>
+            </Var>
+
+            <!--C1 only: check the planets with only Major-Hisshos.-->
+
+            <Var VarName="$Path" StringValue="ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony/ClassColonizedPlanet"/>
+            <Var VarName="$SubPath" StringValue="ClassColonizedPlanet/ClassPopulationPlanet"/>
+            <Var VarName="$Tag" StringValue="ClassPopulationPlanetAffinityMajorHisshosCount"/>
+            <Var VarName="$Marker01"/>
+            <!--C1: Owned planets - Planets with Minor faction = Planets with only Major-Hisshos-->
+            <InterpretedVar VarName="$Amount01" Target="$(Empire)">
+                <Expression>Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet') - $(ColonizedPlanetWithMinor) +1</Expression>
+            </InterpretedVar>
+            
+            <!--C2: select the Politic: Religious-->
+            <Var VarName="$ReligiousPolitic" StringValue="Politics05"/>
+            <!--C2: Define the nb of Religious laws needed-->
+            <InterpretedVar VarName="$Amount02" Target="$(Empire)">
+                <Expression>Min(3,(Count(Context, @'ClassEmpire/ClassSenate/ClassLaw,LawPolitics05') + 1))</Expression>
+            </InterpretedVar>
+            <!--C2: Duration needed with the amount of Religious laws-->
+            <InterpretedVar VarName="$Duration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*10</Expression>
+            </InterpretedVar>
+            
+            <!--C5: Amount of current EmpireResearch-->
+            <InterpretedVar VarName="$Amount03" Target="$(Empire)">
+                <Expression>Property(Context, @'ClassEmpire', EmpireResearch)</Expression>
+            </InterpretedVar>
+            <!--C5: Amount objective EmpireResearch-->
+            <InterpretedVar VarName="$Amount04" Target="$(Empire)">
+                <Expression>Property(Context, @'ClassEmpire', EmpireResearch) + 150</Expression>
+            </InterpretedVar>
+            <!--C5: expression to check-->
+            <Var VarName="$Expression01" StringValue="Property(Context, @'ClassEmpire', EmpireResearch)"/>
+            <!--C3: expression to check if the player owns Sykagoja-->
+            <Var VarName="$Expression03" StringValue="ClassEmpire/ClassColonizedStarSystem/UniquePlanetSykagoja,ClassColonizedPlanet"/>
+            
+            <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>            
+            <LocalizationVar LocalizationKey="$Amount02Name" Source="$Amount02"/>
+            <LocalizationVar LocalizationKey="$Amount04Name" Source="$Amount04"/>
+            <LocalizationVar LocalizationKey="$DurationName" Source="$Duration"/>
+            <LocalizationVar LocalizationKey="$SykagojaSystemName" Source="$SykagojaSystem"/>
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">           
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityMajorHisshosCount', PopulationCount, true) ge 8</InterpreterPrerequisite>
+            <!--Sykajo exists-->
+            <QuestStatePrerequisite Flags="Prerequisite" QuestDefinitionName="ExplorationQuest16Bis" QuestState="Completed"/>         
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--Let's choose-->
+            <Step Name="Step1">
+                <!--============ STEP 1 - Choose ============-->
+
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1">                       
+                    </ChoiceItem>
+                    <ChoiceItem ObjectiveSetIndex="2">
+                        <Prerequisites Target="$(Empire)">
+                            <PathPrerequisite Flags="Prerequisite" Inverted="true">ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,UniquePlanetSykagoja</PathPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>                    
+                    <ChoiceItem ObjectiveSetIndex="3">
+                        <Prerequisites Target="$(Empire)">
+                            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHisshos', PopulationCount, true) ge 1</InterpreterPrerequisite>
+                        </Prerequisites>
+                    </ChoiceItem>
+                </Choice>
+              
+                <!--============= OBJECTIVE ============-->
+              
+                <ObjectiveSet>                   
+                    <Objective Name="Objective_1">
+                      <!--============= Objective: have at least X planets with only Hisshos ============-->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+                        <Sequence>
+                            <Decorator_BeginTurn>
+                              <!--Search X Planets with only Hisshos-->
+                                <Condition_CountSimulationObjectsWithTag Composition="Minimum"   SubComposition="All">
+                                  <!--Start from the Empire-->
+                                    <Input_SimulationObjects VarName="$CurrentEmpire"/>
+                                  <!--Go to the Planet-->
+                                    <Input_Path VarName="$Path"/>
+                                  <!--Go from the Planet to the Population on it-->
+                                    <Input_SubPath VarName="$SubPath"/>
+                                  <!--Check on the Population Planet is the Planet Major Hisshos exists-->
+                                    <Input_Tag VarName="$Tag"/>
+                                  <!--Search X planet-->
+                                    <Input_Minimum VarName="$Amount01"/>
+                                </Condition_CountSimulationObjectsWithTag>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                  <Reward Droplist="DroplistPopulationQuest17-C1" Picks="1"/>
+                </ObjectiveSet>
+              
+              <!--============= Objective: Keep X religious laws during X turns  ============-->
+              
+                <ObjectiveSet>
+                    <Objective Name="Objective_2" StartValue="0" EndValue="$Duration">
+                        <!-- TODO -->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+                        <Sequence>
+                          <!--Loop defines the amount of turn need to validate the quest-->
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Condition_HasLaws>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_Politics VarName="$ReligiousPolitic"/>
+                                        <Input_MinimumAmount VarName="$Amount02"/>
+                                    </Condition_HasLaws>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$Duration"/>
+                            </Loop>
+                        </Sequence>
+                    </Objective>
+                  <Reward Droplist="DroplistPopulationQuest17-C2" Picks="1"/>
+                </ObjectiveSet>
+              
+              
+              <!--============= Objective: outpost (or colonize) the Planet Sykagoja  ============-->
+
+              <ObjectiveSet>
+                    <StartActions>
+                        <Action_AddQuestMarkers>
+                            <Input_Targets VarName="$SykagojaSystem"/>
+                            <Input_Empires VarName="$CurrentEmpire"/>
+                            <Output_Markers VarName="$Marker01"/>
+                        </Action_AddQuestMarkers>
+                    </StartActions>
+                    <Objective Name="Objective_3">
+                        <!-- TODO -->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+                      <Parallel CompletionPolicy="First">
+                        <Sequence>
+                          <Decorator_ColonizedPlanet Initiator="Empire">
+                            <Input_Planet VarName="$SykagojaPlanet"/>
+                          </Decorator_ColonizedPlanet>
+                          <Action_RemoveQuestMarkers>
+                            <Input_Markers VarName="$Marker01"/>
+                          </Action_RemoveQuestMarkers>
+                        </Sequence>
+                       <Sequence>
+                          <Decorator_BeginTurn>
+                            <Condition_CheckPath>
+                              <Input_SimulationObject VarName="$CurrentEmpire"/>
+                              <Input_Path VarName="$Expression03"/>
+                            </Condition_CheckPath>
+                          </Decorator_BeginTurn>
+                          <Action_RemoveQuestMarkers>
+                            <Input_Markers VarName="$Marker01"/>
+                          </Action_RemoveQuestMarkers>
+                        </Sequence>
+                      </Parallel>                          
+                          
+                          
+                    </Objective>
+                  <Reward Droplist="DroplistPopulationQuest17-C3" Picks="1"/>
+                </ObjectiveSet>
+
+              <!--============= Objective: Reach X Empire Reseach ============-->
+
+
+              <ObjectiveSet>
+                    <Objective Name="Objective_4" StartValue="$Amount03" EndValue="$Amount04">
+                        <!-- TODO -->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+                        <Sequence>
+                            <Decorator_BeginTurn>
+                                <Condition_IsProgressionComplete>
+                                <!--Check the Expression and update the counter even if the objective is not succeed-->
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$Expression01"/>
+                                </Condition_IsProgressionComplete>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                  <Reward Droplist="DroplistPopulationQuest17-C4" Picks="1"/>
+                </ObjectiveSet>
+                
+            </Step>
+        </Steps>
+    </QuestDefinition>
+
+    <!--#######################################-->
+    <!--###### POPULATION QUEST HISSHOS #######-->
+    <!--#######################################-->
+
+    <QuestDefinition Name="PopulationQuest18" Category="PopulationQuest" SubCategory="Population" MinimumTurn="50" TriggeringProbability="0.3">
+
+        <!--============ TAGS ============-->
+        <Tags>BeginTurn</Tags>
+
+        <QuestContextSolo/>
+
+        <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+        <Vars>
+            <Var VarName="$CurrentEmpire">
+                <From Source="$Empire"/>
+            </Var>
+
+            <Var VarName="$ColonizedPlanetWithMinor">
+                <Count>
+                    <From Source="$CurrentEmpire.$ColonizedStarSystems.$ColonizedPlanets">
+                        <Where>
+                            <PathPrerequisite Flags="Prerequisite">ClassColonizedPlanet/ClassPopulationPlanet,!ClassPopulationPlanetAffinityMajorHisshosCount</PathPrerequisite>
+                        </Where>
+                    </From>                          
+                </Count>
+            </Var>
+
+            <Var VarName="$ConstellationStarSystems">
+                <From Source="$Constellations.$StarSystems"/>
+            </Var>                  
+
+            <Var VarName="$Path" StringValue="ClassEmpire/ClassColonizedStarSystem,ColonizedStarSystemStateColony/ClassColonizedPlanet"/>
+            <Var VarName="$SubPath" StringValue="ClassColonizedPlanet/ClassPopulationPlanet"/>
+            <Var VarName="$Tag" StringValue="ClassPopulationPlanetAffinityMajorHisshosCount"/>
+
+            <InterpretedVar VarName="$Amount01" Target="$(Empire)">
+                <Expression>Count(Context, @'ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet') - $(ColonizedPlanetWithMinor) +1</Expression>
+            </InterpretedVar>
+          
+
+            <Var VarName="$ReligiousPolitic" StringValue="Politics05"/>
+            <InterpretedVar VarName="$Amount02" Target="$(Empire)">
+                <Expression>Min(3,(Count(Context, @'ClassEmpire/ClassSenate/ClassLaw,LawPolitics05') + 1))</Expression>
+            </InterpretedVar>
+            <InterpretedVar VarName="$Duration" Target="$(Empire)">
+                <Expression>Property(Context, @../ClassEmpire, GameSpeedMultiplier, true)*10</Expression>
+            </InterpretedVar>
+
+            <InterpretedVar VarName="$Amount03" Target="$(Empire)">
+                <Expression>Property(Context, @'ClassEmpire', EmpireResearch)</Expression>
+            </InterpretedVar>
+            <InterpretedVar VarName="$Amount04" Target="$(Empire)">
+                <Expression>Property(Context, @'ClassEmpire', EmpireResearch) + 150</Expression>
+            </InterpretedVar>
+
+            <Var VarName="$Expression01" StringValue="Property(Context, @'ClassEmpire', EmpireResearch)"/>
+
+            <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>
+            <LocalizationVar LocalizationKey="$Amount02Name" Source="$Amount02"/>
+            <LocalizationVar LocalizationKey="$Amount04Name" Source="$Amount04"/>
+            <LocalizationVar LocalizationKey="$DurationName" Source="$Duration"/>          
+
+        </Vars>
+
+        <!--============ PREREQUISITES ============-->
+
+        <Prerequisites Target="$(Empire)">
+              <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityMajorHisshosCount', PopulationCount, true) ge 8</InterpreterPrerequisite>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="ExplorationQuest16Bis" QuestState="Completed"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="ExplorationQuest16Bis" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="ExplorationQuest16Bis" QuestState="Failed"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="PopulationQuest17" QuestState="Completed"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="PopulationQuest17" QuestState="InProgress"/>
+            <QuestStatePrerequisite Flags="Prerequisite" Inverted="true" QuestDefinitionName="PopulationQuest17" QuestState="Failed"/>
+            <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        </Prerequisites>
+
+        <!--============ STEPS ============-->
+        <Steps>
+            <!--Let's choose-->
+            <Step Name="Step1">
+                <!--============ STEP 1 - Choose ============-->
+
+                <Choice DefaultChoiceIndex="0">
+                    <ChoiceItem ObjectiveSetIndex="0"/>
+                    <ChoiceItem ObjectiveSetIndex="1"/>                   
+                    <ChoiceItem ObjectiveSetIndex="2">
+                        <Prerequisites Target="$(Empire)">
+                            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @'ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHisshos', PopulationCount, true) ge 8</InterpreterPrerequisite>                           
+                        </Prerequisites>
+                    </ChoiceItem>
+                </Choice>
+
+                <ObjectiveSet>
+                    <Objective Name="Objective_1">
+                        <!-- TODO -->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+                        <Sequence>
+                            <Decorator_BeginTurn>
+                                <Condition_CountSimulationObjectsWithTag Composition="Minimum"   SubComposition="All">
+                                    <Input_SimulationObjects VarName="$CurrentEmpire"/>
+                                    <Input_Path VarName="$Path"/>
+                                    <Input_SubPath VarName="$SubPath"/>
+                                    <Input_Tag VarName="$Tag"/>
+                                    <Input_Minimum VarName="$Amount01"/>
+                                </Condition_CountSimulationObjectsWithTag>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                <Reward Droplist="DroplistPopulationQuest17-C1" Picks="1"/>
+                </ObjectiveSet>
+
+                <ObjectiveSet>
+                    <Objective Name="Objective_2" StartValue="0" EndValue="$Duration">
+                        <!-- TODO -->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+                        <Sequence>
+                            <Loop>
+                                <Decorator_BeginTurn ProgressionIncrement="1">
+                                    <Condition_HasLaws>
+                                        <Input_Empire VarName="$CurrentEmpire"/>
+                                        <Input_Politics VarName="$ReligiousPolitic"/>
+                                        <Input_MinimumAmount VarName="$Amount02"/>
+                                    </Condition_HasLaws>
+                                </Decorator_BeginTurn>
+                                <Input_Count VarName="$Duration"/>
+                            </Loop>
+                        </Sequence>
+                    </Objective>
+                <Reward Droplist="DroplistPopulationQuest17-C2" Picks="1"/>
+                </ObjectiveSet>             
+
+                <ObjectiveSet>
+                    <Objective Name="Objective_3" StartValue="$Amount03" EndValue="$Amount04">
+                        <!-- TODO -->
+                        <AIHint Category="Minimal" MinAutoResolutionTurn="45" MaxAutoResolutionTurn="60" AutoResolutionProbability="1" />
+                        <Sequence>
+                            <Decorator_BeginTurn>
+                                <Condition_IsProgressionComplete>
+                                    <Input_Context VarName="$CurrentEmpire"/>
+                                    <Input_EmpireWhoseProgressToUpdate VarName="$CurrentEmpire"/>
+                                    <Input_Expression VarName="$Expression01"/>
+                                </Condition_IsProgressionComplete>
+                            </Decorator_BeginTurn>
+                        </Sequence>
+                    </Objective>
+                <Reward Droplist="DroplistPopulationQuest17-C4" Picks="1"/>
+                </ObjectiveSet>
+
+            </Step>
+        </Steps>
+    </QuestDefinition>
+ 
+  <QuestDefinition Name="GlobalQuest06-CoopBis" Category="CooperativeQuest" SubCategory="Global" CheckRandom="false">
+
+    <Tags>BeginTurn,Hidden</Tags>
+<!--============ CONTEXT ============-->
+    <QuestContextMulti/>
+
+    <!--============ OCCURRENCE RULES ============-->
+    <RepetitionRules  NumberOfOccurrencesPerGame="1"
+                      NumberOfOccurrencesPerEmpire="1"
+                      NumberOfConcurrentInstances="0"/>
+
+    <SubCategoryRepetitionRules NumberOfConcurrentInstances="1"/>
+
+    <!--============ VARIABLES ============-->
+    <Vars>
+
+     <Var VarName="$LivingEmpires">
+        <From Source="$Participants"/>
+      </Var>
+      <!--Find a random amount thanks to a droplist-->
+      <DroplistVar  Droplist="DroplistGlobalQuest06-CoopBis" VarName="$Amount01"/>
+      <!--Translate the amount picked into the droplist and turn it into an IntValue-->
+      <Var VarName="$Amount02">
+        <From Source="$Amount01.$Value"/>
+      </Var>
+      <!--Find the GameSpeed-->
+      <Var VarName="$GameSpeed">
+          <From Source="$GameSpeedMultiplier"/>
+      </Var>
+      <!--Compute a Duration-->  
+      <InterpretedVar VarName="$Amount03">
+         <Expression>$(GameSpeed) * $(Amount02)</Expression>
+      </InterpretedVar>
+    </Vars>
+
+
+    <!--============ PREREQUISITES ============-->
+
+    <Prerequisites Target="$(Empires)" AnyTarget="true">
+      <!--If the toggle is activated then the quest shouldn't be triggered-->
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">../JuggernautsCanBeResearched</PathPrerequisite>
+    </Prerequisites>
+
+    <!--============ STEPS ============-->
+      <Steps>
+        <Step Name="Step01">
+          <ObjectiveSet>        
+            <Objective Name="Step01_Objective01">
+            
+              <Sequence>
+                <Decorator_Wait>
+                  <Input_WaitDuration VarName="$Amount03"/>
+                </Decorator_Wait>
+                <Action_ChooseOutcome Name="Outcome1"/>
+              </Sequence>
+            
+              <Outcome Name="Outcome1">
+                <Triggers Weight="1">
+                  <QuestTrigger>
+                    <Tags>GlobalQuest06-Coop</Tags>
+                     <QuestContextMulti ParticipantsVarName="$LivingEmpires">
+                                    </QuestContextMulti>
+                  </QuestTrigger>
+                </Triggers>
+              </Outcome>
+            
+            </Objective>
+          </ObjectiveSet>         
+        </Step>
+    </Steps>
+  </QuestDefinition>
+
+  <!-- #########################################-->
+  <!-- #######       Quest Juggernaut     ######-->
+  <!-- #########################################-->
+
+  <QuestDefinition Name="GlobalQuest06-Coop" Category="CooperativeQuest" SubCategory="Global" CheckRandom="false">
+
+    <!--============ TAGS ============-->
+    <Tags>GlobalQuest06-Coop</Tags>
+
+    <!--============ CONTEXT ============-->
+    <QuestContextMulti/>
+
+    <!--============ OCCURRENCE RULES ============-->
+    <RepetitionRules  NumberOfOccurrencesPerGame="1"
+                      NumberOfOccurrencesPerEmpire="1"
+                      NumberOfConcurrentInstances="0"/>
+
+    <SubCategoryRepetitionRules NumberOfConcurrentInstances="1"/>
+
+    <!--============ VARIABLES ============-->
+    <Vars>
+
+      <Var VarName="$LivingEmpires">
+        <From Source="$Participants"/>
+      </Var>
+      <Var VarName="$IAEmpire">
+         <From Source="$LesserEmpire"/>
+      </Var>
+      <!--Find the Academy-->
+      <Var VarName="$AcademySystem">
+        <From Source="$Constellations.$StarSystems">
+          <Where>
+            <PathPrerequisite Flags="Prerequisite">ClassStarSystem,WorldAcademy</PathPrerequisite>
+          </Where>
+        </From>
+      </Var>
+      <!--Find all neutral system-->
+      <Var VarName="$Systems">        
+        <From Source="$Constellations.$StarSystems">
+          <Where>
+            <PathPrerequisite Flags="Prerequisite">ClassStarSystem,!QuestNode,!WorldAcademy,!MajorHomeSystem,!MinorHomeSystem</PathPrerequisite>
+          </Where>
+        </From>
+      </Var>
+      <!--Find balanced-distance System--> 
+     <Var VarName="$CenterSystem">
+       <Any>
+        <From Source="$Systems">
+           <OrderBy>
+             <SortSystemByDistance OriginVarName="$AcademySystem" SortBy="Nearest" MinimumDistance="10" MinimumCandidateCount="1"/>
+           </OrderBy>
+        </From>
+         </Any>
+      </Var>    
+      
+      <!--Pick the Ship from a Droplist-->
+      <DroplistVar Droplist="DroplistGlobalQuest06-Coop03" VarName="$JuggernautToSpawn"/>
+      <Var VarName="$JuggernautToSpawnGUID" IsGlobal="true"/>
+      <!--Check the amount of Participants-->
+      <InterpretedVar VarName="$NumberOfLivingEmpires" Target="$(Participants)">
+        <Expression>Count(Context, @'EmpireTypeMajor,!EmpireEliminated')</Expression>
+      </InterpretedVar>
+         
+
+      <InterpretedVar VarName="$Amount02" Target="$(Participants)">
+        <Expression>Property(Context,@'ClassEmpire/ClassResearch', QuadrantMilitaryUnlockedTechnologyCount)</Expression>
+      </InterpretedVar>
+      <!--Add to the amount of unlocked technologies-->
+      <InterpretedVar VarName="$Amount01">
+        <Expression>$(Amount02) + Floor($(NumberOfLivingEmpires)*2 + 1)</Expression>
+      </InterpretedVar>  
+
+      <Var VarName="$Expression01" StringValue="SumProperty(Context,@'ClassEmpire/ClassResearch', QuadrantMilitaryUnlockedTechnologyCount)"/>
+      <!--If applied on the Empire: makes appear the Jugg Technologies-->
+      <Var VarName="$UnlockedDescriptor" StringValue="JuggernautsCanBeResearched"/>
+
+      <LocalizationVar LocalizationKey="$Amount01Name" Source="$Amount01"/>
+     
+    </Vars>
+
+    <!--============ OBJECTIVES ============-->
+    <Prerequisites Target="$(Empires)" AnyTarget="true">
+      <PathPrerequisite Flags="Prerequisite" Inverted="true">../JuggernautsCanBeResearched</PathPrerequisite>
+      <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+    </Prerequisites>
+
+    <Steps>
+      <!--============ STEP 1 ============-->
+      <Step Name="Step1">
+        <ObjectiveSet> 
+          <!--===== QUEST OBJECTIVE: Ensure that the Dust production in the galaxy reaches a sertain amount =====-->
+          <Objective Name="Objective" StartValue="$Amount02" EndValue="$Amount01">       
+            <Sequence>
+
+              <!--Set the progression start value of all participants-->
+              <Action_SetComparativeProgress SetProgressStart="true" ProgressCalculation="Sum">
+                <Input_Empires VarName="$LivingEmpires"/>
+                <Input_Expression VarName="$Expression01"/>
+              </Action_SetComparativeProgress>
+
+              <Parallel CompletionPolicy="Any">
+
+                <Loop Count="10000000">
+                  <!--Set the progression of all participants-->
+                  <Action_SetComparativeProgress ProgressCalculation="Sum">
+                    <Input_Empires VarName="$LivingEmpires"/>
+                    <Input_Expression VarName="$Expression01"/>
+                  </Action_SetComparativeProgress>
+                  <Decorator_BeginTurn/>                  
+                </Loop>
+
+                <Sequence>
+                    <Decorator_BeginTurn>
+                        <Condition_IsProgressionComplete/>
+                    </Decorator_BeginTurn>
+                    <Action_ApplyDescriptor>
+                        <Input_DescriptorName VarName="$UnlockedDescriptor"/>
+                        <Input_Targets VarName="$LivingEmpires"/>
+                    </Action_ApplyDescriptor>
+                     <Action_SpawnFleets>
+                        <Input_Empire VarName="$IAEmpire"/>
+                        <Input_Locations VarName="$CenterSystem"/>
+                        <Input_DroppableFleet VarName="$JuggernautToSpawn"/>
+                        <Output_FleetGUIDs VarName="$JuggernautToSpawnGUID"/>
+                  </Action_SpawnFleets>
+                  <Action_RevealEntities NewExplorationState="Revealed">
+                        <Input_Empires VarName="$LivingEmpires"/>
+                        <Input_TargetSystems VarName="$CenterSystem"/>                  
+                  </Action_RevealEntities>
+                  <Action_ChooseOutcome Name="Outcome1"/>
+                </Sequence>
+
+              </Parallel>
+
+            </Sequence>
+           <Outcome Name="Outcome1">
+                <Triggers Weight="1">
+                                <QuestTrigger>
+                                    <Tags>GlobalQuest06-CoopHiddenPart</Tags>
+                                    <QuestContextMulti ParticipantsVarName="$LivingEmpires">
+                                    </QuestContextMulti>
+                                </QuestTrigger>
+                 </Triggers>
+           </Outcome>
+          
+          </Objective>
+
+          <!--============ REWARDS ============-->
+          <PodiumReward>
+            <Reward Droplist="DroplistGlobalQuest06-Coop01" Picks="1"/>
+            <Reward Droplist="DroplistGlobalQuest06-Coop02" Picks="1"/>  
+            <Reward LocalizationKey="%GlobalQuest06-CoopReward" MinimumRank="99"/>
+          </PodiumReward>         
+        </ObjectiveSet>
+      </Step>
+
+    </Steps>
+
+  </QuestDefinition>
+
+ <QuestDefinition Name="GlobalQuest06-CoopHiddenPart" Category="CompetitiveQuest" SubCategory="Global" MinimumTurn="1" CheckRandom="false">
+
+    <!--============ TAGS ============-->
+    <Tags>GlobalQuest06-CoopHiddenPart,Hidden</Tags>
+
+    <!--============ CONTEXT ============-->
+        <QuestContextMulti ParticipantsVarName="$LivingEmpires">
+            <Distribution Type="FreeForAll"></Distribution>
+        </QuestContextMulti>
+
+        <!--============ OCCURRENCE RULES ============-->
+        <RepetitionRules  NumberOfOccurrencesPerGame="1"
+                          NumberOfOccurrencesPerEmpire="1"
+                          NumberOfConcurrentInstances="0"/>
+
+        <!--============ VARIABLES ============-->
+    <Vars>
+
+          <Var VarName="$LivingEmpires">
+                <From Source="$Empires">
+                    <Where>
+                        <PathPrerequisite Flags="Prerequisite">EmpireTypeMajor,!EmpireEliminated</PathPrerequisite>
+                    </Where>
+                </From>
+            </Var>
+ 
+     <Var VarName="$JuggernautToSpawnGUID" IsGlobal="true"/>
+
+    </Vars>
+
+
+    <!--============ PREREQUISITES ============-->
+   
+
+    <!--============ STEPS ============-->
+      <Steps>
+        <Step Name="Step01">
+          <ObjectiveSet>    
+            
+                <Vars>
+                        <Var VarName="$CurrentEmpire">
+                            <From Source="$Team"/>
+                        </Var>
+                    </Vars>
+              
+            <Objective Name="Step01_Objective01">
+            
+              <Sequence>
+                <Decorator_BeginTurn/>
+                <Decorator_BattleEnded>
+                  <Condition_BattleEnded_FleetDestroyed>
+                    <Input_FleetGUIDs VarName="$JuggernautToSpawnGUID"/>
+                  </Condition_BattleEnded_FleetDestroyed>
+                  <Input_Empire VarName="$CurrentEmpire"/>
+                </Decorator_BattleEnded>
+                <Action_ChooseOutcome Name="Outcome1"/>
+              </Sequence>
+            
+              <Outcome Name="Outcome1">
+                <Triggers Weight="1">
+                  <QuestTrigger>
+                    <Tags>EventCuriosity20</Tags>
+                    <QuestContextSolo ParticipantsVarName="$CurrentEmpire"/>
+                  </QuestTrigger>
+                </Triggers>
+              </Outcome>
+            
+            </Objective>
+          </ObjectiveSet>          
+        </Step>
+    </Steps>
+  </QuestDefinition>
+
+ <!--#############################-->
+  <!--###### Juggernaut Event ######-->
+  <!--#############################-->
+
+  <QuestDefinition Name="EventCuriosity20" Category="Event" SubCategory="Curiosity" CheckRandom="false">
+
+
+    <!--============ TAGS ============-->
+    <Tags>EventCuriosity20</Tags>
+
+    <QuestContextSolo/>
+
+    <RepetitionRules  NumberOfOccurrencesPerGame="0"
+                      NumberOfOccurrencesPerEmpire="1"
+                      NumberOfConcurrentInstances="0"/>
+
+
+    <!--============ VARIABLES ============-->
+    <Vars>
+      <Var VarName="$EffectTarget1">
+        <From Source="$Empire"/>
+      </Var>   
+
+      <Var VarName="$EffectName1"  StringValue="EventEffect188"/>     
+      <Var VarName="$EffectGUID1"/>
+    </Vars>
+
+    <!--============ PREREQUISITES ============-->
+
+    <!--============ STEPS ============-->
+    <Steps>
+      <!--============ STEP 1 ============-->
+      <Step Name="Step1">
+      
+        <ObjectiveSet>
+          
+          <StartActions>
+            <Action_ApplyQuestEffect LogAction="true">
+              <Input_EffectName VarName="$EffectName1"/>
+              <Input_Target VarName="$EffectTarget1"/>
+              <Output_GUID VarName="$EffectGUID1"/>
+            </Action_ApplyQuestEffect>          
+          </StartActions>
+          
+          <Objective Name="Step2_1_Objective1">
+            <Sequence>
+              <Decorator_QuestEffectFinished>
+                <Input_GUID VarName="$EffectGUID1"/>
+              </Decorator_QuestEffectFinished>             
+            </Sequence>          
+          </Objective>
+        </ObjectiveSet>      
+      </Step>
+    </Steps>
+  </QuestDefinition>
+
+</Datatable>

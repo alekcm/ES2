@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/TraitorLossResourceGainDefinition.xsd">
+
+    <!-- Context here is attacker's Empire -->
+    
+    <PopulationLossResourceGainDefinition Name="PopulationLossDustGain" ResourceName="EmpireMoney">
+        <Formula>Property(Context,Lifetime) * 10 * Property(Context,TraitorResourceConversionMultiplier)</Formula>
+    </PopulationLossResourceGainDefinition>
+    
+    <PopulationLossResourceGainDefinition Name="PopulationLossScienceGain" ResourceName="EmpireResearch">
+        <Formula>Property(Context,Lifetime) * 10 * Property(Context,TraitorResourceConversionMultiplier)</Formula>
+    </PopulationLossResourceGainDefinition>
+
+</Datatable>

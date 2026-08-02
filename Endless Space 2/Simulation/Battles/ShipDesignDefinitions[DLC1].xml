@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ShipDesignDefinition.xsd">
+    <!-- Vaulters automated -->
+    <ShipDesignDefinition Name="ShipDesignAutomatedShipVaulters" Hidden="true" Editable="false">
+        <HullReference Name="HullAutomatedVaulters"/>
+        <ShipRoleReference Name="ShipRoleAutomated"/>
+    </ShipDesignDefinition>
+
+    <!-- Pirate Admiral -->
+    <ShipDesignDefinition Name="ShipDesignHeroSmall01AttackerPirate" Hidden="true" Editable="false" MustBePreloaded="true">
+        <Tags>HideUpkeep</Tags>
+        <HullReference Name="Hull01SmallAdmiralPirate"/>
+        <ShipRoleReference Name="ShipRoleHero"/>
+        <!-- Core -->
+        <SlotBinding SlotName="CoreSection.Weapon01">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="CoreSection.Weapon02">
+            <ModuleReference Name="ModuleWeaponMissile1"/>
+        </SlotBinding>
+        <!-- N -->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseShield1"/>
+        </SlotBinding>
+        <!-- NE -->
+        <SlotBinding SlotName="SectionN.Defense01">
+            <ModuleReference Name="ModuleDefenseHullPlating1"/>
+        </SlotBinding>
+        <!-- E -->
+
+        <!-- SE -->
+        <SlotBinding SlotName="SectionSE.Weapon01">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <SlotBinding SlotName="SectionSE.Weapon02">
+            <ModuleReference Name="ModuleWeaponKinetic1"/>
+        </SlotBinding>
+        <!-- S -->
+        <SlotBinding SlotName="SectionS.Support01">
+            <ModuleReference Name="ModuleSupportEngine1"/>
+        </SlotBinding>
+    </ShipDesignDefinition>
+</Datatable>

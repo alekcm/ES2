@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationEventDefinition.xsd">
+
+    <!--#################################-->
+    <!--##########    ECONOMY   #########-->
+    <!--#################################-->
+
+    <PopulationPoliticalEventDefinition Name="PopulationPoliticalEventBuildingConstructionUniqueUmbralChoir"  Category="PoliticalEventColonization" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics05"/>
+    </PopulationPoliticalEventDefinition>
+
+
+    <!--#################################-->
+    <!--#######    COLONIZATION   #######-->
+    <!--#################################-->
+
+    <PopulationPoliticalEventDefinition Name="PopulationPoliticalEventColonizationDestroyed"  Category="PoliticalEventColonization" Scale="System" Duration="40" Power="0">
+        <Politics Name="Politics04"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationPoliticalEventColonizationDestroyedGas"  Category="PoliticalEventColonization" Scale="System" Duration="40" Power="0">
+        <Politics Name="Politics04"/>
+    </PopulationPoliticalEventDefinition>
+    
+    
+    <!--########################################-->
+    <!--#######    UMBRAL CHOIR QUESTS   #######-->
+    <!--########################################-->
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir1-1Pacifist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics03"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir1-1Scientist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics02"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir1-2APacifist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics03"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir1-2BScientist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics02"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir2Pacifist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics03"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir2Scientist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics02"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir3AMilitarist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics06"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir3APacifist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics03"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir3BScientist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics02"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir3BPacifist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics03"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir4AMilitarist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics06"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir4BPacifist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics03"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir4CScientist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics02"/>
+    </PopulationPoliticalEventDefinition>
+
+    <PopulationPoliticalEventDefinition Name="PopulationEventUmbralChoir4DPacifist" Category="PoliticalEventSystemManagement" Scale="Empire" Duration="20" Power="1">
+        <Politics Name="Politics03"/>
+    </PopulationPoliticalEventDefinition>
+
+</Datatable>

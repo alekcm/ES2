@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!-- ####################################### -->
+    <!--              Lost Templars Main Quest              -->
+    <!-- ####################################### -->
+
+    <QuestGuiElement Name="LostTemplarsQuest-Chapter1-Part1">
+        <Title>%LostTemplarsQuest-Chapter1-Part1-IntroTitle</Title>
+        <Description>%LostTemplarsQuest-Chapter1-Part1-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%LostTemplarsQuest-Chapter1-Part1-ReligiousTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter1-Part1-ReligiousDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter1-Part1-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter1-Part1-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%LostTemplarsQuest-Chapter1-Part1-ReligiousObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%LostTemplarsQuest-Chapter1-Part1-EcologistTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter1-Part1-EcologistDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter1-Part1-EcologistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter1-Part1-EcologistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%LostTemplarsQuest-Chapter1-Part1-EcologistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="LostTemplarsQuest-Chapter1-Part2A">
+        <Title>%LostTemplarsQuest-Chapter1-Part2A-IntroTitle</Title>
+        <Description>%LostTemplarsQuest-Chapter1-Part2A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%LostTemplarsQuest-Chapter1-Part2AReligiousTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter1-Part2A-ReligiousDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter1-Part2A-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter1-Part2A-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%LostTemplarsQuest-Chapter1-Part2A-ReligiousObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="LostTemplarsQuest-Chapter1-Part2B">
+        <Title>%LostTemplarsQuest-Chapter1-Part2B-IntroTitle</Title>
+        <Description>%LostTemplarsQuest-Chapter1-Part2B-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics04">
+                    <Title>%LostTemplarsQuest-Chapter1-Part2B-EcologistTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter1-Part2B-EcologistDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter1-Part2B-EcologistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter1-Part2B-EcologistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%LostTemplarsQuest-Chapter1-Part2B-EcologistObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="LostTemplarsQuest-Chapter2-Part1">
+        <Title>%LostTemplarsQuest-Chapter2-IntroTitle</Title>
+        <Description>%LostTemplarsQuest-Chapter2-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+              <ObjectiveSet Politics="Politics05">
+                <Title>%LostTemplarsQuest-Chapter2-Part1A-ReligiousTitle</Title>
+                <Description>%LostTemplarsQuest-Chapter2-Part1A-ReligiousDescription</Description>
+                <TooltipDescription>%LostTemplarsQuest-Chapter2-Part1A-ReligiousObjectiveTooltip</TooltipDescription>
+                <OutcomeCompleted>%LostTemplarsQuest-Chapter2-Part1A-ReligiousOutcome</OutcomeCompleted>
+                <Objective Name="Objective0">%LostTemplarsQuest-Chapter2-Part1A-ReligiousObjective</Objective>
+              </ObjectiveSet>
+              <ObjectiveSet Politics="Politics05">
+                <Title>%LostTemplarsQuest-Chapter2-Part1B-ReligiousTitle</Title>
+                <Description>%LostTemplarsQuest-Chapter2-Part1B-ReligiousDescription</Description>
+                <TooltipDescription>%LostTemplarsQuest-Chapter2-Part1B-ReligiousObjectiveTooltip</TooltipDescription>
+                <OutcomeCompleted>%LostTemplarsQuest-Chapter2-Part1B-ReligiousOutcome</OutcomeCompleted>
+                <Objective Name="Objective1">%LostTemplarsQuest-Chapter2-Part1B-ReligiousObjective</Objective>
+              </ObjectiveSet>
+              <ObjectiveSet Politics="Politics05">
+                <Title>%LostTemplarsQuest-Chapter2-Part1C-ReligioustTitle</Title>
+                <Description>%LostTemplarsQuest-Chapter2-Part1C-ReligiousDescription</Description>
+                <TooltipDescription>%LostTemplarsQuest-Chapter2-Part1C-ReligiousObjectiveTooltip</TooltipDescription>
+                <OutcomeCompleted>%LostTemplarsQuest-Chapter2-Part1C-ReligiousOutcome</OutcomeCompleted>
+                <Objective Name="Objective2">%LostTemplarsQuest-Chapter2-Part1C-ReligiousObjective</Objective>
+              </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="LostTemplarsQuest-Chapter3">
+        <Title>%LostTemplarsQuest-Chapter3-IntroTitle</Title>
+        <Description>%LostTemplarsQuest-Chapter3-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter3" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%LostTemplarsQuest-Chapter3-PacifistTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter3-PacifistDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter3-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter3-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Pacifist">%LostTemplarsQuest-Chapter3-PacifistObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%LostTemplarsQuest-Chapter3-MilitaryTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter3-MilitaryDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter3-MilitaryObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter3-MilitaryOutcome</OutcomeCompleted>
+                    <Objective Name="Objective_Militarist">%LostTemplarsQuest-Chapter3-MilitaryObjective</Objective>
+                </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+    <QuestGuiElement Name="LostTemplarsQuest-Chapter4-Part1A">
+        <Title>%LostTemplarsQuest-Chapter4-Part1A-IntroTitle</Title>
+        <Description>%LostTemplarsQuest-Chapter4-Part1A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter4-Part1" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics06">
+                    <Title>%LostTemplarsQuest-Chapter4-Part1A-MilitaryTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter4-Part1A-MilitaryDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter4-Part1A-MilitaryObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part1A-MilitaryOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%LostTemplarsQuest-Chapter4-Part1A-MilitaryObjective</Objective>
+                </ObjectiveSet>
+                <ObjectiveSet Politics="Politics03">
+                    <Title>%LostTemplarsQuest-Chapter4-Part1A-PacifistTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter4-Part1A-PacifistDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter4-Part1A-PacifistObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part1A-PacifistOutcome</OutcomeCompleted>
+                    <Objective Name="Objective1">%LostTemplarsQuest-Chapter4-Part1A-PacifistObjective</Objective>
+                </ObjectiveSet>
+              <ObjectiveSet Politics="Politics04">
+                <Title>%LostTemplarsQuest-Chapter4-Part1A-EcologistTitle</Title>
+                <Description>%LostTemplarsQuest-Chapter4-Part1A-EcologistDescription</Description>
+                <TooltipDescription>%LostTemplarsQuest-Chapter4-Part1A-EcologistObjectiveTooltip</TooltipDescription>
+                <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part1A-EcologistOutcome</OutcomeCompleted>
+                <Objective Name="Objective2">%LostTemplarsQuest-Chapter4-Part1A-EcologistObjective</Objective>
+              </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+  <QuestGuiElement Name="LostTemplarsQuest-Chapter4-Part1B">
+    <Title>%LostTemplarsQuest-Chapter4-Part1B-IntroTitle</Title>
+    <Description>%LostTemplarsQuest-Chapter4-Part1B-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter4-Part1" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics04">
+          <Title>%LostTemplarsQuest-Chapter4-Part1B-EcologistTitle</Title>
+          <Description>%LostTemplarsQuest-Chapter4-Part1B-EcologistDescription</Description>
+          <TooltipDescription>%LostTemplarsQuest-Chapter4-Part1B-EcologistObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part1B-EcologistOutcome</OutcomeCompleted>
+          <Objective Name="Objective0">%LostTemplarsQuest-Chapter4-Part1B-EcologistObjective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics03">
+          <Title>%LostTemplarsQuest-Chapter4-Part1B-PacifistTitle</Title>
+          <Description>%LostTemplarsQuest-Chapter4-Part1B-PacifistDescription</Description>
+          <TooltipDescription>%LostTemplarsQuest-Chapter4-Part1B-PacifistObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part1B-PacifistOutcome</OutcomeCompleted>
+          <Objective Name="Objective1">%LostTemplarsQuest-Chapter4-Part1B-PacifistObjective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+    <QuestGuiElement Name="LostTemplarsQuest-Chapter4-Part2A">
+        <Title>%LostTemplarsQuest-Chapter4-Part2A-IntroTitle</Title>
+        <Description>%LostTemplarsQuest-Chapter4-Part2A-IntroDescription</Description>
+        <Icons>
+            <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter4-Part2" Size="Quest" />
+        </Icons>
+        <Steps>
+            <Step Name="Step1">
+                <ObjectiveSet Politics="Politics05">
+                    <Title>%LostTemplarsQuest-Chapter4-Part2A-ReligiousTitle</Title>
+                    <Description>%LostTemplarsQuest-Chapter4-Part2A-ReligiousDescription</Description>
+                    <TooltipDescription>%LostTemplarsQuest-Chapter4-Part2A-ReligiousObjectiveTooltip</TooltipDescription>
+                    <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part2A-ReligiousOutcome</OutcomeCompleted>
+                    <Objective Name="Objective0">%LostTemplarsQuest-Chapter4-Part2A-ReligiousObjective</Objective>
+                </ObjectiveSet>
+              <ObjectiveSet Politics="Politics05">
+                <Title>%LostTemplarsQuest-Chapter4-Part2A-ReligiousTitle</Title>
+                <Description>%LostTemplarsQuest-Chapter4-Part2A-ReligiousDescription</Description>
+                <TooltipDescription>%LostTemplarsQuest-Chapter4-Part2A-ReligiousNorelicObjectiveTooltip</TooltipDescription>
+                <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part2A-ReligiousOutcome</OutcomeCompleted>
+                <Objective Name="Objective1">%LostTemplarsQuest-Chapter4-Part2A-NorelicObjective</Objective>
+              </ObjectiveSet>
+            </Step>
+        </Steps>
+    </QuestGuiElement>
+
+  <QuestGuiElement Name="LostTemplarsQuest-Chapter4-Part2B">
+    <Title>%LostTemplarsQuest-Chapter4-Part2B-IntroTitle</Title>
+    <Description>%LostTemplarsQuest-Chapter4-Part2B-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Templars/TemplarsQuest-Chapter4-Part2" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics04">
+          <Title>%LostTemplarsQuest-Chapter4-Part2B-EcologistTitle</Title>
+          <Description>%LostTemplarsQuest-Chapter4-Part2B-EcologistDescription</Description>
+          <TooltipDescription>%LostTemplarsQuest-Chapter4-Part2B-EcologistObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%LostTemplarsQuest-Chapter4-Part2B-EcologistOutcome</OutcomeCompleted>
+          <Objective Name="Objective0">%LostTemplarsQuest-Chapter4-Part2B-EcologistObjective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+    <!-- ####################################### -->
+    <!--       Templars Population Quest         -->
+    <!-- ####################################### -->
+
+  <QuestGuiElement Name="PopulationQuest28">
+    <Title>%PopulationQuest28-IntroTitle</Title>
+    <Description>%PopulationQuest28-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest28Large" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics05">
+          <Title>%PopulationQuest28-ReligiousTitle</Title>
+          <Description>%PopulationQuest28-ReligiousDescription</Description>
+          <TooltipDescription>%PopulationQuest28-ReligiousObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%PopulationQuest28-ReligiousOutcome</OutcomeCompleted>
+          <Objective Name="Objective0">%PopulationQuest28-ReligiousObjective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics04">
+          <Title>%PopulationQuest28-EcologistTitle</Title>
+          <Description>%PopulationQuest28-EcologistDescription</Description>
+          <TooltipDescription>%PopulationQuest28-EcologistObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%PopulationQuest28-EcologistOutcome</OutcomeCompleted>
+          <Objective Name="Objective1">%PopulationQuest28-EcologistObjective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics03">
+          <Title>%PopulationQuest28-PacifistTitle</Title>
+          <Description>%PopulationQuest28-PacifistDescription</Description>
+          <TooltipDescription>%PopulationQuest28-PacifistObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%PopulationQuest28-PacifistOutcome</OutcomeCompleted>
+          <Objective Name="Objective2">%PopulationQuest28-PacifistObjective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+  <QuestGuiElement Name="PopulationQuest28-2A">
+    <Title>%PopulationQuest28-2A-IntroTitle</Title>
+    <Description>%PopulationQuest28-2A-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest28Large" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics02">
+          <Title>%PopulationQuest28-2A-ScienceTitle</Title>
+          <Description>%PopulationQuest28-2A-ScienceDescription</Description>
+          <TooltipDescription>%PopulationQuest28-2A-ScienceObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%PopulationQuest28-2A-ScienceOutcome</OutcomeCompleted>
+          <Objective Name="Objective0">%PopulationQuest28-2A-ScienceObjective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+
+
+  <QuestGuiElement Name="PopulationQuest28-2B">
+    <Title>%PopulationQuest28-2B-IntroTitle</Title>
+    <Description>%PopulationQuest28-2B-IntroDescription</Description>
+    <Icons>
+      <Icon Path="Bitmaps/Dynamic/Quests/Population/PopulationQuest28Large" Size="Quest" />
+    </Icons>
+    <Steps>
+      <Step Name="Step1">
+        <ObjectiveSet Politics="Politics06">
+          <Title>%PopulationQuest28-2B-MilitaryTitle</Title>
+          <Description>%PopulationQuest28-2B-MilitaryDescription</Description>
+          <TooltipDescription>%PopulationQuest28-2B-MilitaryObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%PopulationQuest28-2B-MilitaryOutcome</OutcomeCompleted>
+          <Objective Name="Objective0">%PopulationQuest28-2B-MilitaryObjective</Objective>
+        </ObjectiveSet>
+        <ObjectiveSet Politics="Politics03">
+          <Title>%PopulationQuest28-2B-PacifistTitle</Title>
+          <Description>%PopulationQuest28-2B-PacifistDescription</Description>
+          <TooltipDescription>%PopulationQuest28-2B-PacifistObjectiveTooltip</TooltipDescription>
+          <OutcomeCompleted>%PopulationQuest28-2B-PacifistOutcome</OutcomeCompleted>
+          <Objective Name="Objective1">%PopulationQuest28-2B-PacifistObjective</Objective>
+        </ObjectiveSet>
+      </Step>
+    </Steps>
+  </QuestGuiElement>
+  
+</Datatable>

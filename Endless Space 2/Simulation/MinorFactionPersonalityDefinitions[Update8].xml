@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/MinorFactionPersonalityDefinition.xsd">
+
+
+    <MinorFactionPersonalityDefinition Name="FactionPersonalitySowers">
+        <MajorTrait Name="PersonalityTraitPragmatist"/>
+        <MinorTrait Weight="50">
+            <Trait Name="FactionTraitMinorSoilHealers"/>
+        </MinorTrait>
+        <MinorTrait Weight="35">
+            <Trait Name="FactionTraitMinorWorldArchitects"/> 
+        </MinorTrait>
+    </MinorFactionPersonalityDefinition>
+
+    <MinorFactionPersonalityDefinition Name="FactionPersonalityKalTikMas">
+        <MajorTrait Name="PersonalityTraitWarmonger"/>
+        <MinorTrait Weight="20">
+            <Trait Name="FactionTraitMinorStarTrekkers"/> 
+        </MinorTrait>
+        <MinorTrait Weight="50">
+            <Trait Name="FactionTraitMinorStalwartStoics"/> 
+        </MinorTrait>
+    </MinorFactionPersonalityDefinition>
+
+    <MinorFactionPersonalityDefinition Name="FactionPersonalitySefaloros">
+        <MajorTrait Name="PersonalityTraitPacifist"/>
+        <MinorTrait Weight="50">
+            <Trait Name="FactionTraitMinorWorkspaceOddity"/> 
+        </MinorTrait>
+        <MinorTrait Weight="35">
+            <Trait Name="FactionTraitMinorBountifulFiltration"/> 
+        </MinorTrait>
+    </MinorFactionPersonalityDefinition>
+
+    <MinorFactionPersonalityDefinition Name="FactionPersonalityGalvrans">
+        <MajorTrait Name="PersonalityTraitPacifist"/>
+        <MinorTrait Weight="50">
+            <Trait Name="FactionTraitMinorMinesOverMatter"/>
+        </MinorTrait>
+        <MinorTrait Weight="20">
+            <Trait Name="FactionTraitMinorCryoMining"/>
+        </MinorTrait>
+    </MinorFactionPersonalityDefinition>
+    
+</Datatable>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/BattleActionDefinition.xsd">
+
+    <BattleAction Name="SupportModule_BattleStart_GiveVisionStrengthToGroup">
+        <EventPrerequisite EventType="BattleStart"/>
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup"/>
+            </TargetFilter>
+            <BattleEffectReference Name="Group_RetrieveModuleVisionStrength"/>
+        </BattleEffectApplicationContext>
+    </BattleAction>
+
+    <BattleAction Name="SupportModule_BattleStart_GroupInteraction_InformOpponentOfVisionStrength">
+        <EventPrerequisite EventType="BattleStart_GroupInteraction"/>
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="InitiatorTarget" EntityType="Group" EntityTags="OtherGroup"/>
+            </TargetFilter>
+            <BattleEffectReference Name="Group_InformOpponentOfVisionStrength"/>
+        </BattleEffectApplicationContext>
+    </BattleAction>
+
+    <BattleAction Name="SupportModule_FirstPhaseStart_AddEvasionIfNotDetected">
+        <EventPrerequisite EventType="FirstPhaseStart"/>
+
+        <InterpreterPrerequisite>Property(Owner, @'../ClassGroup', OpponentVisionStrength) lt Property(Owner, AntiVisionStrengthForModule)</InterpreterPrerequisite>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+            </TargetFilter>
+            <BattleEffectReference Name="Ship_AddModuleEvasionToShipsOfGroup"/>
+        </BattleEffectApplicationContext>
+
+    </BattleAction>
+  
+    <BattleAction Name="SupportModule_FirstPhaseStart_AddEvasionIfNotDetectedUmbralChoir">
+        <EventPrerequisite EventType="FirstPhaseStart"/>
+
+        <InterpreterPrerequisite>Property(Owner, @'../ClassGroup', OpponentVisionStrength) lt Property(Owner, @'../ClassShip', AntiVisionStrengthForModule)</InterpreterPrerequisite>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+            </TargetFilter>
+            <BattleEffectReference Name="Ship_AddModuleEvasionToShipsOfGroup"/>
+        </BattleEffectApplicationContext>
+
+    </BattleAction>
+
+    <BattleAction Name="SupportModule_FirstPhaseStart_HideFlotilla">
+        <EventPrerequisite EventType="FirstPhaseStart"/>
+
+        <InterpreterPrerequisite>Property(Owner, @'../ClassGroup', OpponentVisionStrength) lt Property(Owner, AntiVisionStrengthForModule)</InterpreterPrerequisite>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup">
+                </ParentEntityFilter>
+                <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Module">
+                        <PathPrerequisite>ClassModuleWeapon</PathPrerequisite>
+                    </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="WeaponModule_DisableAttack"/>
+        </BattleEffectApplicationContext>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup">
+                </ParentEntityFilter>
+                <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Module">
+                        <PathPrerequisite>ClassModuleSquadron</PathPrerequisite>
+                    </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="SquadronModule_DisableAttack"/>
+        </BattleEffectApplicationContext>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup"/>
+                  <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Ship">
+                    </EntityFilter>
+                  </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="Ship_Hide"/>
+            <BattleEffectReference Name="Ship_CannotBeTargeted"/>
+        </BattleEffectApplicationContext>
+
+    </BattleAction>
+
+    <BattleAction Name="SupportModule_FirstPhaseStart_HideFlotillaUmbralChoir">
+        <EventPrerequisite EventType="FirstPhaseStart"/>
+
+        <InterpreterPrerequisite>Property(Owner, @'../ClassGroup', OpponentVisionStrength) lt Property(Owner, @'../ClassShip', AntiVisionStrengthForModule)</InterpreterPrerequisite>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup">
+                </ParentEntityFilter>
+                <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Module">
+                        <PathPrerequisite>ClassModuleWeapon</PathPrerequisite>
+                    </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="WeaponModule_DisableAttack"/>
+        </BattleEffectApplicationContext>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup">
+                </ParentEntityFilter>
+                <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Module">
+                        <PathPrerequisite>ClassModuleSquadron</PathPrerequisite>
+                    </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="SquadronModule_DisableAttack"/>
+        </BattleEffectApplicationContext>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner"/>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup"/>
+                <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Ship">
+                    </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="Ship_Hide"/>
+            <BattleEffectReference Name="Ship_CannotBeTargeted"/>
+        </BattleEffectApplicationContext>
+
+    </BattleAction>    
+
+    <BattleAction Name="SupportModule_PostPhaseStart_RevealFlotilla">
+        <EventPrerequisite EventType="PostPhaseStart"/>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner">
+                </EntityFilter>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup"/>
+                <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Module">
+                        <PathPrerequisite>ClassModuleWeapon</PathPrerequisite>
+                        <!-- Is the ship hidden? -->
+                        <InterpreterPrerequisite>Property(Context,@'../ClassShipEncounter', IsInvisible) gt 0</InterpreterPrerequisite>
+                        <!-- Is the phase range the ship's preferred range ? -->
+                        <InterpreterPrerequisite>Property(Context,@../ClassFlotilla,CurrentRangeIndex) eq Property(Context,@../ClassFlotilla,OptimalRangeIndex)</InterpreterPrerequisite>
+                    </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="WeaponModule_EnableAttack"/>
+        </BattleEffectApplicationContext>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner">
+                </EntityFilter>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup"/>
+                <SubEntityFilter SelectionMethod="All">
+                    <EntityFilter EntityTags="SameGroup" EntityType="Module">
+                        <PathPrerequisite>ClassModuleSquadron</PathPrerequisite>
+                        <!-- Is the ship hidden? -->
+                        <InterpreterPrerequisite>Property(Context,@'../ClassShipEncounter', IsInvisible) gt 0</InterpreterPrerequisite>
+                        <!-- Is the phase range the ship's preferred range ? -->
+                        <InterpreterPrerequisite>Property(Context,@../ClassFlotilla,CurrentRangeIndex) eq Property(Context,@../ClassFlotilla,OptimalRangeIndex)</InterpreterPrerequisite>
+                    </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="SquadronModule_EnableAttack"/>
+        </BattleEffectApplicationContext>
+
+        <BattleEffectApplicationContext>
+            <TargetFilter>
+                <EntityFilter EntityRole="Owner">
+                </EntityFilter>
+                <ParentEntityFilter EntityType="Group" EntityTags="SameGroup"/>
+                <SubEntityFilter SelectionMethod="All">
+                  <EntityFilter EntityTags="SameGroup" EntityType="Ship">
+                    <!-- Is the ship hidden? -->
+                    <InterpreterPrerequisite>Property(Context,@'ClassShipEncounter', IsInvisible) gt 0</InterpreterPrerequisite>
+                    <!-- Is the phase range the ship's preferred range ? -->
+                    <InterpreterPrerequisite>Property(Context,@../ClassFlotilla,CurrentRangeIndex) eq Property(Context,@../ClassFlotilla,OptimalRangeIndex)</InterpreterPrerequisite>
+                  </EntityFilter>
+                </SubEntityFilter>
+            </TargetFilter>
+            <BattleEffectReference Name="Ship_Reveal"/>
+            <BattleEffectReference Name="Ship_CanBeTargeted"/>
+        </BattleEffectApplicationContext>
+
+    </BattleAction>
+  
+    <BattleAction Name="Group_ReportFlotillaInvisibilityStatusCurrentPhase">
+          <EventPrerequisite EventType="PhaseEnd">
+          </EventPrerequisite>
+          <BattleEffectApplicationContext>
+              <TargetFilter>
+                  <EntityFilter EntityRole="Owner">
+                      <PathPrerequisite Flags="">GroupPhase1</PathPrerequisite>
+                  </EntityFilter>
+                  <SubEntityFilter SelectionMethod="All">
+                      <EntityFilter EntityType="Flotilla"/>
+                  </SubEntityFilter>
+              </TargetFilter>
+              <BattleEffectReference Name="AttackingFlotilla_RecordInvisibilityStatusPhase1"/>
+          </BattleEffectApplicationContext>
+          <BattleEffectApplicationContext>
+              <TargetFilter>
+                  <EntityFilter EntityRole="Owner">
+                      <PathPrerequisite Flags="">GroupPhase2</PathPrerequisite>
+                  </EntityFilter>
+                  <SubEntityFilter SelectionMethod="All">
+                      <EntityFilter EntityType="Flotilla"/>
+                  </SubEntityFilter>
+              </TargetFilter>
+              <BattleEffectReference Name="AttackingFlotilla_RecordInvisibilityStatusPhase2"/>
+          </BattleEffectApplicationContext>
+          <BattleEffectApplicationContext>
+              <TargetFilter>
+                  <EntityFilter EntityRole="Owner">
+                      <PathPrerequisite Flags="">GroupPhase3</PathPrerequisite>
+                  </EntityFilter>
+                  <SubEntityFilter SelectionMethod="All">
+                      <EntityFilter EntityType="Flotilla"/>
+                  </SubEntityFilter>
+              </TargetFilter>
+              <BattleEffectReference Name="AttackingFlotilla_RecordInvisibilityStatusPhase3"/>
+          </BattleEffectApplicationContext>
+      </BattleAction>
+</Datatable>

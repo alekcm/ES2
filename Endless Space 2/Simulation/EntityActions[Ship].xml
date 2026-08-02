@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EntityActionDefinition.xsd">
+
+    <LockInGarrisonShipAction Name="LockInGarrisonAfterDestructionShipAction" RequestedTurnsCount="0" Flags="CancelOnLock">
+        
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="ShipStateLockedInGarrison"/>
+            <SimulationAlteration DescriptorReference="ShipStateLockedInGarrisonFromDamage"/>
+        </EntityModifiers>
+        
+        <CancelActions Flags="CancelOnLock" SameContext="false" SameInitiator="true"/>
+        <EndingPrerequisites>
+            <InterpreterPrerequisite Flags="Prerequisite">Property(Context, @ClassShip, Health) ge Property(Context, @ClassShip, MaximumHealth)</InterpreterPrerequisite>
+        </EndingPrerequisites>
+    </LockInGarrisonShipAction>
+
+    <LockInGarrisonShipAction Name="LockInGarrisonAfterColonizationShipAction" RequestedTurnsCount="4" Flags="CancelOnLock">
+
+        <EntityModifiers Location="Self">
+            <SimulationAlteration DescriptorReference="ShipStateLockedInGarrison"/>
+            <SimulationAlteration DescriptorReference="ShipStateLockedInGarrisonFromColonization"/>
+        </EntityModifiers>
+
+        <CancelActions Flags="CancelOnLock" SameContext="false" SameInitiator="true"/>
+    </LockInGarrisonShipAction>
+
+</Datatable>

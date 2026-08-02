@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- ******************** -->
+  <!-- **   Templars      ** -->
+  <!-- ******************** -->
+  <GuiElement Name="Templars_Colonizer">
+    <Title>%ShipDesignSmall03ColonizerTemplarsTitle</Title>
+    <Description>%ShipDesignSmall03ColonizerTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="ShipDesignDecolonizationTemplars">
+    <Title>%ShipDesignSmall03ColonizerTemplarsTitle</Title>
+    <Description>%ShipDesignSmall03ColonizerTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_Explorer">
+    <Title>%ShipDesignSmall03ExplorerTemplarsTitle</Title>
+    <Description>%ShipDesignSmall03ExplorerTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_ExplorerShipBound">
+    <Title>%ShipDesignSmall03ExplorerTemplarsTitle</Title>
+    <Description>%ShipDesignSmall03ExplorerTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_Invader">
+    <Title>%ShipDesignMedium02InvaderTemplarsTitle</Title>
+    <Description>%ShipDesignMedium02InvaderTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_SmallAttack">
+    <Title>%ShipDesignSmall01AttackerTemplarsTitle</Title>
+    <Description>%ShipDesignSmall01AttackerTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall01TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall01TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_SmallSupport">
+    <Title>%ShipDesignSmall02SupporterTemplarsTitle</Title>
+    <Description>%ShipDesignSmall02SupporterTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall02TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall02TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_Leecher">
+    <Title>%ShipDesignSmall05LeecherTemplarsTitle</Title>
+    <Description>%ShipDesignSmall05LeecherTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+  <GuiElement Name="Templars_RootCreator">
+    <Title>%ShipDesignSmall06RootCreatorTemplarsTitle</Title>
+    <Description>%ShipDesignSmall06RootCreatorTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullSmall03TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+
+  <GuiElement Name="Templars_MediumAttack">
+    <Title>%ShipDesignMedium01AttackerTemplarsTitle</Title>
+    <Description>%ShipDesignMedium01AttackerTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullMedium01TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullMedium01TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_MediumDefense">
+    <Title>%ShipDesignMedium02DefenderTemplarsTitle</Title>
+    <Description>%ShipDesignMedium02DefenderTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullMedium02TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullMedium02TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_LargeCarrier">
+    <Title>%ShipDesignLarge01CarrierTemplarsTitle</Title>
+    <Description>%ShipDesignLarge01CarrierTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullLarge01TemplarsSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Templars/ShipHullLarge01TemplarsLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Templars_Mothership">
+    <Title>%ShipDesignLarge00MothershipTemplarsTitle</Title>
+    <Description>%ShipDesignLarge00MothershipTemplarsDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullVampirilisMothershipSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullVampirilisMothershipLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!-- Academy -->
+  <GuiElement Name="Academy_ColonizerEarly">
+    <Title>%ShipDesignSmall03ColonizerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ColonizerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_ColonizerMid">
+    <Title>%ShipDesignSmall03ColonizerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ColonizerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_ColonizerLate">
+    <Title>%ShipDesignSmall03ColonizerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ColonizerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_ColonizerPeak">
+    <Title>%ShipDesignSmall03ColonizerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ColonizerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_ExplorerEarly">
+    <Title>%ShipDesignSmall03ExplorerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ExplorerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_ExplorerMid">
+    <Title>%ShipDesignSmall03ExplorerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ExplorerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_ExplorerLate">
+    <Title>%ShipDesignSmall03ExplorerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ExplorerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_ExplorerPeak">
+    <Title>%ShipDesignSmall03ExplorerAcademyTitle</Title>
+    <Description>%ShipDesignSmall03ExplorerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall03VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallAttackEarly">
+    <Title>%ShipDesignSmall01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignSmall01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallAttackMid">
+    <Title>%ShipDesignSmall01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignSmall01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallAttackLate">
+    <Title>%ShipDesignSmall01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignSmall01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallAttackPeak">
+    <Title>%ShipDesignSmall01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignSmall01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallSupportEarly">
+    <Title>%ShipDesignSmall02SupporterAcademyTitle</Title>
+    <Description>%ShipDesignSmall02SupporterAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallSupportMid">
+    <Title>%ShipDesignSmall02SupporterAcademyTitle</Title>
+    <Description>%ShipDesignSmall02SupporterAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallSupportLate">
+    <Title>%ShipDesignSmall02SupporterAcademyTitle</Title>
+    <Description>%ShipDesignSmall02SupporterAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_SmallSupportPeak">
+    <Title>%ShipDesignSmall02SupporterAcademyTitle</Title>
+    <Description>%ShipDesignSmall02SupporterAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullSmall02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumDefenseEarly">
+    <Title>%ShipDesignMedium01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignMedium01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumDefenseMid">
+    <Title>%ShipDesignMedium01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignMedium01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumDefenseLate">
+    <Title>%ShipDesignMedium01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignMedium01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumDefensePeak">
+    <Title>%ShipDesignMedium01AttackerAcademyTitle</Title>
+    <Description>%ShipDesignMedium01AttackerAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumAttackEarly">
+    <Title>%ShipDesignMedium02DefenderAcademyTitle</Title>
+    <Description>%ShipDesignMedium02DefenderAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumAttackMid">
+    <Title>%ShipDesignMedium02DefenderAcademyTitle</Title>
+    <Description>%ShipDesignMedium02DefenderAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumAttackLate">
+    <Title>%ShipDesignMedium02DefenderAcademyTitle</Title>
+    <Description>%ShipDesignMedium02DefenderAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_MediumAttackPeak">
+    <Title>%ShipDesignMedium02DefenderAcademyTitle</Title>
+    <Description>%ShipDesignMedium02DefenderAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullMedium02VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_LargeCarrierEarly">
+    <Title>%ShipDesignLarge01CarrierAcademyTitle</Title>
+    <Description>%ShipDesignLarge01CarrierAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_LargeCarrierMid">
+    <Title>%ShipDesignLarge01CarrierAcademyTitle</Title>
+    <Description>%ShipDesignLarge01CarrierAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_LargeCarrierLate">
+    <Title>%ShipDesignLarge01CarrierAcademyTitle</Title>
+    <Description>%ShipDesignLarge01CarrierAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="Academy_LargeCarrierPeak">
+    <Title>%ShipDesignLarge01CarrierAcademyTitle</Title>
+    <Description>%ShipDesignLarge01CarrierAcademyDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Vampirilis/ShipHullLarge01VampirilisLarge" />
+    </Icons>
+  </GuiElement>
+
+  <!--*********************-->
+  <!--***   NAME SHIPS  ***-->
+  <!--*********************-->
+  <GuiElement Name="NameShipLibrarian">
+    <Title>%ShipDesignNameShipLibrarianTitle</Title>
+    <Description>%ShipDesignNameShipLibrarianDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipLibrarianSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipLibrarianLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="NameShipMasterOfDust">
+    <Title>%ShipDesignNameShipMasterOfDustTitle</Title>
+    <Description>%ShipDesignNameShipMasterOfDustDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipMasterOfDustSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipMasterOfDustLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="NameShipVaultKeeper">
+    <Title>%ShipDesignNameShipVaultKeeperTitle</Title>
+    <Description>%ShipDesignNameShipVaultKeeperDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipVaultKeeperSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipVaultKeeperLarge" />
+    </Icons>
+  </GuiElement>
+
+  <GuiElement Name="NameShipGrandAdmiral">
+    <Title>%ShipDesignNameShipGrandAdmiralTitle</Title>
+    <Description>%ShipDesignNameShipGrandAdmiralDescription</Description>
+    <Icons>
+      <Icon Size="Small" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipGrandAdmiralSmall" />
+      <Icon Size="Large" Path="Bitmaps/Dynamic/ShipHulls/Academy/ShipHullNameShipGrandAdmiralLarge" />
+    </Icons>
+  </GuiElement>
+</Datatable>

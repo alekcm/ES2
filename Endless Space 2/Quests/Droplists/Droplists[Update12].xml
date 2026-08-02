@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Droplist.xsd">
+
+   
+    <!--Droplist Heroes-->
+
+  <Droplist Name="DroplistUniquePlanetQuest_Chapter2_Step1Ter" Selector="Weighted">
+    <Hero Name="HeroBots01"/>
+    <Hero Name="HeroHaroshems02"/>
+    <Hero Name="HeroGnashasts01"/>
+    <Hero Name="HeroRemnant01"/>
+    <Hero Name="HeroPulsos01"/>  
+  </Droplist>
+
+  
+   <Droplist Name="DroplistUniquePlanetQuest_Chapter2_Step1bis" Selector="Weighted">
+     <String  Value="HeroBots01"/>
+     <String  Value="HeroHaroshems02"/>
+     <String  Value="HeroGnashasts01"/>
+     <String  Value="HeroRemnant01"/>
+     <String  Value="HeroPulsos01"/>  
+    </Droplist>
+  
+    <Droplist Name="DroplistUniquePlanetQuest01" Fallback="DroplistLuxuries">
+      <Unlock Name="ModuleIncreasedSpeedQuest01" SimulationTag="UniquePlanetQuest-Chapter1-Choice1Reward"/>
+    </Droplist>
+  
+    <Droplist Name="DroplistUniquePlanetQuest02" Fallback="DroplistLuxuries">
+      <Unlock Name="ModuleImprovedProbeQuest01" SimulationTag="UniquePlanetQuest-Chapter1-Choice2Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistUniquePlanetQuest03" Fallback="DroplistLuxuries">
+      <Unlock Name="ModuleImprovedProbeRegenQuest01" SimulationTag="UniquePlanetQuest-Chapter1-Choice3Reward"/>
+    </Droplist>
+
+
+    <Droplist Name="DroplistUniquePlanetQuest04" Fallback="DroplistLuxuries">
+        <Unlock Name="EmpireImprovementQuestUniquePlanet04" SimulationTag="UniquePlanetQuest-Chapter2-Part2-Reward"/>
+    </Droplist>
+  
+    <Droplist Name="DroplistUniquePlanetQuest05" Fallback="DroplistLuxuries">
+        <Unlock Name="EmpireImprovementQuestUniquePlanet05" SimulationTag="UniquePlanetQuest-Chapter2-Part3-Reward"/>
+    </Droplist>
+  
+    <Droplist Name="DroplistUniquePlanetQuest06" Fallback="DroplistLuxuries">
+        <Unlock Name="EmpireImprovementQuestUniquePlanet06" SimulationTag="UniquePlanetQuest-Chapter3A-Reward"/>
+    </Droplist>
+  
+    <Droplist Name="DroplistUniquePlanetQuest07" Fallback="DroplistLuxuries">
+          <Unlock Name="EmpireImprovementQuestUniquePlanet07" SimulationTag="UniquePlanetQuest-Chapter3C-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistUniquePlanetQuest08" Fallback="DroplistLuxuries">
+      <Unlock Name="ModuleHeroQuest01" SimulationTag="UniquePlanetQuest-Chapter3B-Choice1Reward"/>
+    </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest09" Fallback="DroplistLuxuries">
+    <Unlock Name="ModuleHeroQuest02" SimulationTag="UniquePlanetQuest-Chapter3B-Choice2Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest10" Fallback="DroplistLuxuries">
+    <Unlock Name="ModuleHeroQuest03" SimulationTag="UniquePlanetQuest-Chapter3B-Choice3Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest11" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet11" SimulationTag="UniquePlanetQuest-Chapter4A-Reward"/>
+  </Droplist>
+  
+  <Droplist Name="DroplistUniquePlanetQuest12" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet12" SimulationTag="UniquePlanetQuest-Chapter4C-Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest13" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet13" SimulationTag="UniquePlanetQuest-Chapter4B-Choice1Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest14" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet14" SimulationTag="UniquePlanetQuest-Chapter4B-Choice2Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest15" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet15" SimulationTag="UniquePlanetQuest-Chapter5A-Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest16" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet16" SimulationTag="UniquePlanetQuest-Chapter5B-Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest17" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet17" SimulationTag="UniquePlanetQuest-Chapter5C-Reward"/>
+  </Droplist>
+
+  <Droplist Name="DroplistUniquePlanetQuest18" Fallback="DroplistLuxuries">
+    <Unlock Name="EmpireImprovementQuestUniquePlanet18" SimulationTag="UniquePlanetQuest-Chapter5D-Reward"/>
+  </Droplist>
+
+</Datatable>

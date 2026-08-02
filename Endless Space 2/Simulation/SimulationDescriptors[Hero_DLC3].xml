@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <SimulationDescriptor Name="HeroAffinityUmbralChoir"        Type="HeroAffinity"/>
+
+    <SimulationDescriptor Name="HeroAffinityMinorHacking"       Type="HeroAffinity"/>
+
+    <SimulationDescriptor Name="HeroNotSellable" Type="HeroNotSellable">
+        <Modifier TargetProperty="CanBeSold" Operation="Force" Value="0"/>
+    </SimulationDescriptor>
+      
+</Datatable>

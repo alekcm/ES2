@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LocalizationPair Name="%FactionTraitConstellationVisionTitle">Обстоятельная подготовка</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitConstellationVisionDescription">Далекие космические просторы нам пока недоступны, зато наши обсерватории и исследовательские зонды позволили изучить ближайшие звездные системы.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitConstellationVisionTooltipOverride">Изначальная область открыта с самого начала</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTraitTemplarsTitle">Тщательный сбор</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTraitTemplarsDescription">Этот сбор сосредоточен на одобрении и вторжении.</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusTemplarsTooltipOverride">Открыта стратегия атаки Накалимов для наземных битв: «Прочесывание». Это улучшенная «Упреждающая атака» с большим бонусом к урону от бомбардировок.
+Открыта стратегия обороны Накалимов для наземных битв: «Ополчение». Это улучшенное «Сплочение» с большим бонусом к урону от бомбардировок.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride1">Отсутствует [scienceColored] от планет</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride2">+300% к расходу [prestigeColored] для получения технологий</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitScienceReductionEffectOverride3">-50% к [scienceColored] за уничтожение кораблей</LocalizationPair>
+  <LocalizationPair Name="%AffinityGameplayTemplarsTooltipEffect">Флоты могут искать и добывать реликвии. Неиспользуемые реликвии развивают науку. Вот как можно использовать реликвии:
+• возвести на планете храм, чтобы убрать штраф к ПППН;
+• усилить героев;
+• получить новые мощные особенности фракции.
+
+Можно строить соборы, которые дают системе полезные бонусы и увеличивают максимальное число ячеек.
+
+Можно делать малые фракции своими вассалами, чтобы открыть их особенность и продолжать получать от них ресурсы. Все флоты, производимые фракцией-вассалом, поступают в ваше распоряжение, но при этом она сохраняет независимость.</LocalizationPair>
+  <LocalizationPair Name="%PopulationModifiersTraitSecondaryFIDSIHappyTitle">Терпение и труд</LocalizationPair>
+  <LocalizationPair Name="%PopulationModifiersTraitSecondaryDustHappyEpicTitle">Эзотерические собиратели</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsTitle">Спящие руины</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsDescription">Эта империя начинает игру с тремя готовыми спящими колониями, которые спрятаны где-то между родной планетой и центром галактики. Их можно пробудить с помощью флотов или других новых колоний.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitSlumberingRuinsTooltipOverride">Системы с меткой «Спящие руины» можно пробудить, чтобы вернуть ресурсы, население и улучшения систем. Чтобы пробудить руины, отправьте флот в неколонизированную систему и выберите действие «Пробудить» в меню флота или постройте соответствующее улучшение системы в завоеванной системе.
+
+Помните, что другие империи с этой особенностью тоже могут пробуждать руины, даже принадлежащие вам.
+
+У каждой фракции с этой особенностью есть три планеты с руинами. Они могут находиться в любой системе, кроме столичных.
+
+Руины, которые вы еще не нашли, откроются вам, когда вы приступите к первому этапу задания фракции.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitApatheticColonistsEffect">Колонии отправляют -25% [foodColored] в аванпосты
+Аванпосты производят -25% [foodColored]</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitTechnologicalHeadStartLessEffectOverride">Первый уровень технологии открыт с самого начала</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesTitle">Давние выпускники</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesDescription">Эта империя — надежный и влиятельный спонсор Академии и приверженец ее философии. Она обладает неисчерпаемым запасом бюрократического опыта и может с самыми добрыми намерениями преподнести в дар целую систему.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitAcademyBestiesTooltipOverride">Может дарить Академии обращенные или завоеванные системы в обмен на очки отношений
+
+Академия открыта с самого начала</LocalizationPair>
+  <LocalizationPair Name="%PersonalityImperiousTitle">Властная</LocalizationPair>
+  <LocalizationPair Name="%PersonalityImperiousDescription">Эта империя стремится захватить как можно больше систем и распространить свое влияние.</LocalizationPair>
+  <LocalizationPair Name="%DeclareCrusadeAgainstTitle">Объявить о военном походе</LocalizationPair>
+  <LocalizationPair Name="%DeclareCrusadeAgainstDescription">Если вы объявите о военном походе против другой империи, все остальные империи смогут атаковать ее корабли и системы. Поход закончится, если отменить его во время переговоров с Академией.</LocalizationPair>
+  <LocalizationPair Name="%BlockAcademyAuctionAgainstTitle">Запрет на участие в аукционе</LocalizationPair>
+  <LocalizationPair Name="%BlockAcademyAuctionAgainstDescription">Если запретить другой империи участвовать в аукционе Академии, она не сможет передавать Академии дары еще 20 ходов (число может меняться в зависимости от скорости игры). Дипломатические отношения с Академией позволят открыть и другие возможности.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsTitle">Приют для ученых</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsDescription">Империя может разместить своих лучших ученых в монастырях, аббатствах и деревеньках в далекой и мерзлой глуши, где они смогут целиком посвятить себя науке.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience4TemplarsTitle">Изучение естественной философии</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience4TemplarsDescription">Вера в Ушедших и естественная философия давно оберегают нас от невежества и от ереси. Если мы откроем лаборатории при местах поклонения, наши верующие ученые смогут работать в гармонии с собой.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsTitle">Фонд духовного просветления</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsDescription">Этот фонд организует бесплатные выставки и лекции о реликвиях Ушедших. Его основатели придерживаются мнения, что с историей Ушедших должны быть знакомы все наши граждане. Благодаря ему мы не только укрепляем наше общество, но и получаем от верующих бесценные знания.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScienceOnGasTemplarsTitle">Богодухновенный университет</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScienceOnGasTemplarsDescription">Божественное влияние Ушедших и жестокость Вечных, истребивших их, проявляется во множестве галактических аномалий. Поэтому для Накалимов особенно важно изучать историю и науку.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience8TemplarsTitle">Небесные города</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience8TemplarsDescription">Даже на вершине технологического прогресса полет кажется нам чем-то восхитительным и невероятным. Летающие города помогут вдохновить верующих ученых на новые технологические открытия, а газовые гиганты позволят воплотить эти открытия в жизнь.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementDefense1TemplarsTitle">Защитим главное</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementDefense1TemplarsDescription">Мы посвятим больше ресурсов обороне исторических и священных объектов, а также будем отправлять туда бойцов на тренировки. Это полезно не только для здоровья нации, но и для укрепления духовности. Разумеется, пренебрегать остальной системой мы не станем.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueTemplarsEffectOverride">-5% прочности за ход враждебным кораблям в радиусе
++20% прочности за ход вашим кораблям в радиусе</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemCollectRelicImprovementTitle">Улучшение ресурсов</LocalizationPair>
+  <LocalizationPair Name="%SubCategoryCollectRelicTitle">Реликвия</LocalizationPair>
+  <LocalizationPair Name="%StarSystemCollectRelicImprovementTitle">Забрать реликвию</LocalizationPair>
+  <LocalizationPair Name="%StarSystemCollectRelicImprovementDescription">Заберите реликвию в этой системе.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementOnlyOnAwakenedRuinsTitle">[blue-gray](Можно построить только в пробужденных руинах)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%SciencePerUnassignedRelicTitle">Базовая [scienceColored] благодаря [Relic]</LocalizationPair>
+  <LocalizationPair Name="%FailureNotEnoughTemplesDescription">Можно построить только по одному собору на каждые 4 храма на планетах вашей империи.</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyFleetCannotInvadeDescription">Флоты, где есть корабли Академии, не могут захватывать системы.</LocalizationPair>
+  <LocalizationPair Name="%FailureYouDontOwnTheAcademyDLC4Description">Академия вам не принадлежит, и у вас нет доступа к архиву агентов.</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyRequiresAlliedDescription">Этот запрос могут выдвинуть только союзники Академии.</LocalizationPair>
+  <LocalizationPair Name="%FailureNotEnoughAcademyRelationDescription">Чтобы получить это, нужно развить отношения с Академией.</LocalizationPair>
+  <LocalizationPair Name="%FailureTooManyPopulationOrderedDescription">За недавние ходы вы запросили слишком много населения! Академия еще не готова оказывать вам услуги, придется подождать.</LocalizationPair>
+  <LocalizationPair Name="%FailureMetaplotInProgressDescription">У Академии сейчас не хватает ресурсов!</LocalizationPair>
+  <LocalizationPair Name="%FailureDoesntOwnAcademyDescription">Академия не может выполнять запросы, пока ее домашняя система ей не принадлежит.</LocalizationPair>
+  <LocalizationPair Name="%FailureBoostAlreadyActiveDescription">Это усиление уже действует.</LocalizationPair>
+  <LocalizationPair Name="%FailureAlreadyHasCrusadeDescription">На эту империю уже объявили военный поход.</LocalizationPair>
+  <LocalizationPair Name="%FailureHasCrusadeImmunityDescription">Эта империя получила от Академии защиту от военных походов.</LocalizationPair>
+  <LocalizationPair Name="%FailureAlreadyCantAccessAcademyAuctionsDescription">Этой империи закрыли доступ к аукциону Академии.</LocalizationPair>
+  <LocalizationPair Name="%FailureFavoredByTheAcademyDescription">Нельзя применять против империй, к которым Академия настроена благожелательно.</LocalizationPair>
+  <LocalizationPair Name="%FailureOnlyOneCathedralDescription">Одновременно можно строить только один собор.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1Title">Гравитомагнитное плазменное покрытие</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2Title">Усовершенствованные взрывные дроны</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3Title">Моделирование городов</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1Description">Магнитное поле планеты, а в некоторых случаях и его гравитационные ямы, можно использовать для защиты наших плазменных бомб от воздействия атмосферы. Кроме того, наши плазменные шахты смогут сократить расходы на сохранение энергии на земле — или же хранить ее дольше.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2Description">Взрывные дроны используются в бою уже много тысячелетий, но «Универсальная аэродинамика» позволяет расширить их производство. Поскольку дроны можно изготавливать в любых условиях, они стали неизменным атрибутом как организованных нападений, так и обороны колоний.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3Description">Новая технология географического сканирования позволяет быстро создавать копию местности для симуляции в развлекательных целях. Научно-популярная литература от этого станет точнее, художественные произведения — правдивее, а игры в войнушку — полезнее. Гражданские изучат всевозможные защитные приемы, не прилагая усилий, и смогут не только защитить свой дом, но и захватить чужой.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1EffectOverride">Улучшение стратегии урона от бомбардировок в наземных битвах:
+• «Упреждающая атака» равна 2500
+• «Сплочение» равно 1850</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2EffectOverride">Улучшение стратегии урона от бомбардировок в наземных битвах:
+• «Упреждающая атака» равна 3000
+• «Сплочение» равно 2250</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3EffectOverride">Улучшение стратегии урона от бомбардировок в наземных битвах:
+• «Упреждающая атака» равна 3500
+• «Сплочение» равно 2750</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies1TemplarsEffectOverride">• «Прочесывание» равно 3000
+• «Ополчение» равно 2250</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies2TemplarsEffectOverride">• «Прочесывание» равно 3750
+• «Ополчение» равно 2750</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementImproveStrategies3TemplarsEffectOverride">• «Прочесывание» равно 4500
+• «Ополчение» равно 3500</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementAcademyDiplomacyTitle">Связь с Академией</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementAcademyDiplomacyDescription">С нами уже связался провидец из Академии. Мы сможем открыть посольство, как только закончим перевод документов с местных языков и разберемся с бытовыми нуждами будущих послов.</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill_RelicBoost_Title">Святое дело</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill_RelicBoost_Description">Безусловно, гордость от владения реликвией очень важна, но это не главное. Благодаря реликвиям наши герои получают знания и навыки, а также учатся их применять — если, конечно, церковь и пыль сочтут их достойными.</LocalizationPair>
+  <LocalizationPair Name="%HeroSkillShip129_Vision_0_TooltipOverride">Открывает новое действие флота, «Божественный страж».
++10 к диапазону обзора флота
+-50% [upkeepColored] у флота
+До отключения расходует все очки движения</LocalizationPair>
+  <LocalizationPair Name="%HeroSkillShip129_Vision_1_TooltipOverride">Открывает новое действие флота, «Божественный страж».
++20 к диапазону обзора флота
+-100% [upkeepColored] у флота
+До отключения расходует все очки движения</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill02BranchTemplars_Title">Орбитальная артиллерия</LocalizationPair>
+  <LocalizationPair Name="%HeroSkill02BranchTemplars_Description">Пыль позволила этому герою в совершенстве освоить физику и математику, так что теперь орбитальные орудия его флота стреляют эффективнее. Кроме того, с помощью пыли он может использовать в качестве оружия даже метеориты и космический мусор.</LocalizationPair>
+  <LocalizationPair Name="%HeroRelicTitle">Реликвии героев</LocalizationPair>
+  <LocalizationPair Name="%TempleRelicsBranchDescription">Реликвии, используемые в храмах.
+Построено соборов: {0}/{1}.
+Для постройки следующего собора нужно возвести еще храмы ({2}).</LocalizationPair>
+  <LocalizationPair Name="%ResearchRelicsBranchDescription">Свободные реликвии, генерирующие [scienceColored] науку.
+ 
+Наука от реликвий: {0} [scienceColored]</LocalizationPair>
+  <LocalizationPair Name="%FIDIRelicsBranchDescription">Реликвии, назначенные империи.
+Открытые ячейки для реликвий: {0}/4</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSBonusTitle">[fids] на планете в первоначальном состоянии</LocalizationPair>
+  <LocalizationPair Name="%SystemInfluenceRadiusTitle">Радиус влияния системы</LocalizationPair>
+  <LocalizationPair Name="%FleetsInInfluenceZoneTitle">Подчиненные флоты в зоне влияния этой системы</LocalizationPair>
+  <LocalizationPair Name="%RelicSlotsUnlockedTitle">Макс. число имперских ячеек для реликвий</LocalizationPair>
+  <LocalizationPair Name="%CathedralOnSystemStarSystemLabel">В этой системе есть собор Накалимов. Также на планетах этой системы есть храмы ({0}).</LocalizationPair>
+  <LocalizationPair Name="%CathedralOnSystemOneTempleStarSystemLabel">В этой системе есть собор Накалимов. Также на планете этой системы есть храм.</LocalizationPair>
+  <LocalizationPair Name="%TempleOnSystemStarSystemLabel">На {0} планетах в этой системе есть храм Накалимов.</LocalizationPair>
+  <LocalizationPair Name="%OneTempleOnSystemStarSystemLabel">На планете в этой системе есть храм Накалимов.</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectOwnerTooltip">Соборы наносят урон вражеским кораблям и помогают восстанавливать прочность ваших кораблей. Находясь в радиусе влияния этой системы, ваши корабли восстанавливают 20% от запаса прочности за ход.</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectHostileTooltip">Соборы наносят урон вражеским кораблям в радиусе влияния. Вы враждуете с этой фракцией, поэтому ваши флоты получают урон в размере 5% от запаса прочности за ход. Этот эффект может уничтожать корабли.</LocalizationPair>
+  <LocalizationPair Name="%CathedralRadiusEffectNeutralTooltip">Соборы наносят урон вражеским кораблям в радиусе влияния, но вы не враждуете с этой фракцией.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsStarSystemLabel">В этой системе есть спящие руины. Они ждут, когда вы поможете им пробудиться.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsAwakenedStarSystemLabel">В этой системе находились спящие руины, но они уже пробудились.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemLabelConvertedForAcademyTooltip">Вы подарили эту систему Академии.</LocalizationPair>
+  <LocalizationPair Name="%MinimumFIDSTitle">Минимум [fids]</LocalizationPair>
+  <LocalizationPair Name="%MinimumFIDSITitle">Минимум [fidsi]</LocalizationPair>
+  <LocalizationPair Name="%MinimumFoodTitle">Минимум [foodColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumIndustryTitle">Минимум [industryColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumDustTitle">Минимум [DustColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumScienceTitle">Минимум [scienceColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumPrestigeTitle">Минимум [prestigeColored]</LocalizationPair>
+  <LocalizationPair Name="%MinimumApprovalTitle">Минимум [happinessColored]</LocalizationPair>
+  <LocalizationPair Name="%HappinessMalusReductionTitle">Изначальное недовольство</LocalizationPair>
+  <LocalizationPair Name="%HeroPointMultiplierTitle">Очки разблокировки героя</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience2TemplarsTooltipOverride">+2 [scienceColored] на планету с аномалией за [Relic]</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementScience6TemplarsTooltipOverride">+2 [scienceColored] на плодородную планету в системе за [Relic]</LocalizationPair>
+  <LocalizationPair Name="%TroopHealthPerTempleTitle">Здоровье войска защитника за храм</LocalizationPair>
+  <LocalizationPair Name="%false">FALSE</LocalizationPair>
+  <LocalizationPair Name="%FAKE">FAKE</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinitySophonsTitle">Тень Софонов</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityCraversTitle">Тень Пожирателей</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVenetiansTitle">Тень Люмерис</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVampirilisTitle">Тень Водяни</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTerransTitle">Тени землян</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityMezariTitle">Тень Мезари</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinitySheredynTitle">Тень Шередин</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityHoratioTitle">Тень Горацио</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTimeLordsTitle">Тень Властелинов Времени</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityUnfallenTitle">Тень Несгибаемых</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityVaultersTitle">Тень Хранителей</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityMajorHisshosTitle">Тень Хишшо</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityUmbralChoirTitle">Тень Хора</LocalizationPair>
+  <LocalizationPair Name="%SuperAffinityTemplarsTitle">Тень Накалимов</LocalizationPair>
+  <LocalizationPair Name="%MoneyRatioLostFromTraitorsTitle25">Турагентство Водяни</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentAttackerDamagesTitle">Урон от бомбардировок при обороне</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleBombardmentDefenderDamagesTitle">Урон от бомбардировок при атаке</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSBonusPerPopulationTitle">Штраф «Последняя империя» к [fids]</LocalizationPair>
+  <LocalizationPair Name="%PlanetScienceModifierTitle">[scienceColored]: штраф «Вера вместо прорывов»</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSTitle">Планета</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSITitle">Планета</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFoodPerPopulationTitle">[foodColored] на [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialIndustryPerPopulationTitle">[industryColored] на [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialDustPerPopulationTitle">[dustColored] на [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialSciencePerPopulationTitle">[scienceColored] на [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialPrestigePerPopulationTitle">[prestigeColored] на [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSPerPopulationTitle">[FIDS] на [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSIPerPopulationTitle">[FIDSI] на [population]</LocalizationPair>
+  <LocalizationPair Name="%PlanetInitialFIDSPenaltyBreakdownTitle">Отсутствует технология колонизации</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSIFromSenatorSkillTitle">[FIDSI] на [population] за уровень героя</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointCostMultiplierTitle">Расход очков отношений с Академией</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsTitle">Очки отношений с Академией</LocalizationPair>
+  <LocalizationPair Name="%CandidateCountPerPopulationTitle">Кандидаты на [population]</LocalizationPair>
+  <LocalizationPair Name="%NumberOfTemplesTitle">Количество храмов</LocalizationPair>
+  <LocalizationPair Name="%ScienceScrappingBonusTitle">[scienceColored]: бонус за каждый уничтоженный КП</LocalizationPair>
+  <LocalizationPair Name="%PartnerScienceTradingCostReductionTitle">Расход [prestigeColored] на получение технологий</LocalizationPair>
+  <LocalizationPair Name="%TempleScienceToInfluenceFactorTitle">Изначальная [scienceColored] планеты прибавляется к изначальному [prestigeColored] планеты</LocalizationPair>
+  <LocalizationPair Name="%HeroRecruitmentUnlockedTitle">Доступна вербовка героев</LocalizationPair>
+  <LocalizationPair Name="%TrendTitle">Очки отношений за ход</LocalizationPair>
+  <LocalizationPair Name="%BombardmentLevelTitle">Уровень бомбардировки</LocalizationPair>
+  <LocalizationPair Name="%SentryActionLevelTitle">Уровень защиты</LocalizationPair>
+  <LocalizationPair Name="%HackingSpeedMultiplierTitle">Множитель скорости взлома</LocalizationPair>
+  <LocalizationPair Name="%SpaceBattleCanFireTitle">Стрельба из «Цитадели»</LocalizationPair>
+  <LocalizationPair Name="%TradingRouteIncomeTitle">Торговые компании</LocalizationPair>
+  <LocalizationPair Name="%TradingRouteLeechTitle">Полученные торговые компании</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSITitle">Бонусы [fidsi]</LocalizationPair>
+  <LocalizationPair Name="%PlanetFIDSTitle">Бонусы [fids]</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics01ButtonTooltipDescription">[industrialistColored] +{0}% к появлению месторождений стратегических ресурсов в храмах</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics02ButtonTooltipDescription">[scientistColored] +{0} к пыли за неиспользуемую реликвию
+[scientistColored] +{1} к влиянию за неиспользуемую реликвию
+[scientistColored] +{2} к трудовым ресурсам за неиспользуемую реликвию</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics03ButtonTooltipDescription">[pacifistColored] +{0}% к рыночной стоимости систем с собором
+[pacifistColored] +{1}% к восстановлению прочности флота для флотов на дружественной территории
+[pacifistColored] +{2}% к здоровью войск за каждый храм в системе</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics04ButtonTooltipDescription">[ecologistColored] +{0}% к появлению месторождений ресурсов роскоши в храмах</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics05ButtonTooltipDescription">[religiousColored] Герои могут состоять во флотах, которые находятся за пределами дружественной территории
+[religiousColored] Для открытия следующего героя нужно {0}% очков героя</LocalizationPair>
+  <LocalizationPair Name="%EmpirePoliticalRelicsPolitics06ButtonTooltipDescription">[militaristColored] Флоты можно модернизировать за пределами дружественной территории
+[militaristColored] Расход пыли на модернизацию составляет {0}%</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsButtonTooltipDescriptionNoRelicsAsigned">[gray]Эта ячейка отключена. Нажмите, чтобы активировать ее за 2 [Relic].#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsButtonTooltipDescriptionRelicsAsigned">[gray]Нажмите, чтобы отключить эту ячейку и вернуть 2 [Relic].#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%EmpireRelicsDescription">Число доступных вам сейчас реликвий.
+
+Вложите две реликвии, чтобы активировать любые ячейки ниже и получить их эффекты. Активные ячейки можно отключить в любое время — тогда обе реликвии вернутся к вам.</LocalizationPair>
+  <LocalizationPair Name="%FailureRelicsAssignedLimitReachedDescription"> </LocalizationPair>
+  <LocalizationPair Name="%AwokenSlumberingRuinsTitle">Пробужденные ото сна руины</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsTitle">Спящие руины</LocalizationPair>
+  <LocalizationPair Name="%OnOrbit">системам, на орбите которых находится этот герой</LocalizationPair>
+  <LocalizationPair Name="%OnOwnedOrbit">вашим системам, на орбите которых находится этот герой</LocalizationPair>
+  <LocalizationPair Name="%OnHostileOrbit">вражеским системам, на орбите которых находится этот герой</LocalizationPair>
+  <LocalizationPair Name="%OnNeutralOrbit">нейтральным системам, на орбите которых находится этот герой</LocalizationPair>
+  <LocalizationPair Name="%OnFriendlyOrbit">дружественным системам, на орбите которых находится этот герой</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneTitle">Колдовство</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneDescription">Ваши мистики-Зирмисалы обнаружили на этой планете богатые залежи пыли.</LocalizationPair>
+  <LocalizationPair Name="%CuriosityTypeArcaneRewardsDescription">Вы получите много пыли.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitle">Отдать Академии</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescription">Вместо того чтобы получить контроль над системой {0}, вы передадите ее Академии в обмен на услуги и ресурсы.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitleAttacker">Теперь {0} принадлежит Академии, хотите вы того или нет.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescriptionAttacker">Вы захватили систему {0} и передали ее Академии, а взамен получили ресурсы и возможность запросить у Академии услуги.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyTitleDefender">Теперь {0} принадлежит Академии, хочет {1} того или нет.</LocalizationPair>
+  <LocalizationPair Name="%GroundBattleOutcomeTemplarsAcademyDescriptionDefender">Захватив систему {1}, {0} передает ее Академии в дар. Вы вряд ли сможете вернуть ее себе, не разозлив при этом Академию.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategy3TemplarsTitle">Прочесывание</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategy3TemplarsDescription">Вы берете на вооружение древние приемы, требующие применения пыли, и уничтожаете врага и его сооружения, избегая сопутствующего ущерба.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4TemplarsTitle">Ополчение</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4TemplarsDescription">Вдобавок к ополчению верующих против врага вы применяете старинную оборонную систему.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4Title">Сплочение</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategy4Description">Вы задействуете все оборонные средства, чтобы вернуть свою территорию и сорвать нападение врага. Этот метод эффективен, если захватчики уже близки к поражению или у вас в резерве достаточно войск.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategyAcademyFactionTitle">Эгида</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupDefenderStrategyAcademyFactionDescription">Полчища низкоуровневых любителей пыли и опытных фанатиков Академии защищают свою территорию, вооружившись всем, что попалось под руку.</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategyAcademyFactionTitle">Вмешательство</LocalizationPair>
+  <LocalizationPair Name="%NotificationGroundBattleSetupAttackerStrategyAcademyFactionDescription">С высокой орбиты спускаются элитные войска, работающие на пыли. Они занимают основные цели так, чтобы население не пострадало.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeButtonDescription">Пробудить спящие руины</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeNotOrbitingButtonDescription">Пробуждает руины в этой системе, мгновенно колонизируя ее. Вы получите ресурсы, население и улучшения системы. Чтобы пробудить систему, на ее орбите должен находиться флот.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeNormalColonizerButtonDescription">Пробуждает руины в этой системе, мгновенно колонизируя ее. Вы получите ресурсы, население и улучшения системы. Ваш флот не исчезнет, но в системе не должно быть аванпостов.</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeFleetActionTitle">Пробудить</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsColonizeFleetActionDescription">Мгновенно колонизирует ее. Вы получите ресурсы, население и улучшения системы. В пробуждаемой системе не должно быть аванпостов.</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction1Title">Божественный страж</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction1Description">Флот жертвует своими оставшимися очками движения взамен на увеличенное поле зрения.</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction2Title">Божественный страж</LocalizationPair>
+  <LocalizationPair Name="%TemplarSentryFleetAction2Description">Флот жертвует своими оставшимися очками движения взамен на увеличенное поле зрения.</LocalizationPair>
+  <LocalizationPair Name="%FailureConsumeAllDescription">#A4ABB5#(Поглощает оставшиеся очки движения)#REVERT#</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsBonusEffectTitle">Пробуждение ото сна</LocalizationPair>
+  <LocalizationPair Name="%SlumberingRuinsBonusEffectDescription">Жители нехотя пробуждаются ото сна, техника вновь подает признаки жизни — и вскоре свет цивилизации рассеивает непроглядную прежде тьму. Пока этот процесс не завершится, система будет черпать ресурсы из своих старых запасов.</LocalizationPair>
+  <LocalizationPair Name="%TemporaryEffectSlumberingRuinsBonusTitle">Пробуждение ото сна (#E3BDAC#{0}#REVERT#[turn])</LocalizationPair>
+  <LocalizationPair Name="%TemporaryEffectSlumberingRuinsBonusDescription">Жители нехотя пробуждаются ото сна, техника вновь подает признаки жизни — и вскоре свет цивилизации рассеивает непроглядную прежде тьму. Пока этот процесс не завершится, система будет черпать ресурсы из своих старых запасов.
+Осталось ходов: {0}[turn]</LocalizationPair>
+  <LocalizationPair Name="%CategoryStarSystemAwakenImprovementTitle">Пробуждение системы</LocalizationPair>
+  <LocalizationPair Name="%SubCategoryAwakenTitle">Спящие руины</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementTitle">Возродить колонию</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementDescription">Мы отправим туда своих граждан, чтобы пробудить сородичей ото сна и вновь активировать нашу забытую инфраструктуру.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAwakenImprovementEffectOverride">Пробуждает эту систему. Вы сможете получать ресурсы, население и улучшения системы.</LocalizationPair>
+  <LocalizationPair Name="%AcademyConvertedSystemTitheBonus">Вы передали эту систему Академии. Взамен Академия готова выполнить другой ваш запрос.</LocalizationPair>
+  <LocalizationPair Name="%SystemConvertedForAcademyTitle">Системы, переданные Академии</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Templars_Academy2Popup-Description">Передавая системы Академии, вы улучшаете отношения с ней. На экране дипломатии Академии очки отношений можно обменять на всевозможные услуги.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyPowerDescription">Уровень силы Академии.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyRolesCountdownDescription">Число ходов до начала аукциона за позиции Академии.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyRequestCountdownDescription">Число ходов до завершения аукциона за позиции Академии.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyMetaplotCountdownDescription">Сейчас Академия занята поисками Магнитов.</LocalizationPair>
+  <LocalizationPair Name="%StarSystemAcademyDormantCountdownDescription">Сейчас Академия занята организационными вопросами. Скоро от нее поступит запрос.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowTitle">Дипломатия Академии</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowDescription">Это экран «Дипломатия Академии»</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowActionsTitle">Действия</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalWindowActionsDescription">Отображает доступные дипломатические варианты взаимодействия с Академией.</LocalizationPair>
+  <LocalizationPair Name="%AcademySideLevelDescriptionAwakening">От уровня силы Академии также зависит уровень героев-новобранцев.</LocalizationPair>
+  <LocalizationPair Name="%AcademyModalSwitchTitle">К позициям Академии</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalSwitchTitle">К дипломатии Академии</LocalizationPair>
+  <LocalizationPair Name="%AcademyModalSwitchIcon">[Hero]</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyModalSwitchIcon">[DiploStateTruce]</LocalizationPair>
+  <LocalizationPair Name="%AcademySwitchDescription">Перейти на экран позиций Академии.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacySwitchDescription">Перейти на экран дипломатии Академии.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectTitle">Эффекты отношений:</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectWar">Вы с Академией можете атаковать флоты и осаждать системы друг друга
+Вы с Академией можете захватывать системы друг друга</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectHostile">Вы с Академией можете атаковать флоты и осаждать системы друг друга</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectNeutral">Вы с Академией можете атаковать флоты друг друга на своей территории</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectFriendly">Население Академии может мигрировать в ваши системы
+Вы с Академией не можете нападать друг на друга</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStateEffectAlly">Население Академии может мигрировать в ваши системы
+Вы с Академией не можете нападать друг на друга
+Вы можете чинить и модернизировать свои флоты в системах Академии
+Вы с Академией можете защищать системы друг друга</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateHostileTitle">ВРАЖДА</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateHostileDescription">На этом дипломатическом уровне империя может атаковать Академию на своей территории, но не захватывать ее системы. Отношения еще не прерваны, но Академия скоро выйдет из себя…</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAcademyAcademyDiplomaticRelationStateHostile">Вражда</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateFriendlyTitle">ДРУЖЕЛЮБИЕ</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticRelationStateFriendlyDescription">На этом дипломатическом уровне империя состоит в дружественных отношениях с Академией и получает соответствующие преимущества. Вести себя враждебно по отношению к Академии нельзя.</LocalizationPair>
+  <LocalizationPair Name="%EmpireAttitudeAcademyAcademyDiplomaticRelationStateFriendly">Дружелюбие</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeWarTooltip">Война с Академией</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeHostileTooltip">Враждебность с Академией</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeNeutralTooltip">Нейтральные отношения с Академией</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeFriendlyTooltip">Дружественность с Академией; ее население может мигрировать</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticGaugeAllyTooltip">Союз с Академией; вы можете чинить и модернизировать свои флоты в ее системах</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStatusTitle">Статус</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyStatusDescription">Отображает информацию о ваших отношениях с Академией и о самой Академии.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyTrendDescription">Это значение показывает, насколько высок (или низок) уровень ваших отношений с Академией.</LocalizationPair>
+  <LocalizationPair Name="%UnlockedAcademyDiplomacyTooltip">Позволяет использовать дипломатию в отношении Академии</LocalizationPair>
+  <LocalizationPair Name="%FailureAcademyRolesDisabledDescription">Вы не можете жертвовать средства в обмен на позиции, но все ваши предыдущие пожертвования учтены.</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromQuests">{0} за задания</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromMinors">{0} за малые цивилизации</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromBuildings">{0} за здания</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromRoles">{0} за роли</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromDeeds">{0} за действия</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromPirates">{0} за истребление пиратов</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromHeroes">{0} за героев</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnFromOther">{0} из других источников</LocalizationPair>
+  <LocalizationPair Name="%AcademyRelationPointsPerTurnNoneAffecting">У вас нет модификаторов, которые влияют на отношения с Академией.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomacyDescriptionTitle">Доступ к Академии</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureRelationsImpactTitle">Влияние отношений:</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureRelationsImpactNone">Нет</LocalizationPair>
+  <LocalizationPair Name="%NotEnougthAcademyRelationPoints">Отношения развиты недостаточно</LocalizationPair>
+  <LocalizationPair Name="%GainRelationAcademyActionTitle">[#52008a#Debug#REVERT#] Gain Relation</LocalizationPair>
+  <LocalizationPair Name="%GainRelationAcademyActionDescription">[#52008a#Debug#REVERT#] Gain Relation Description.</LocalizationPair>
+  <LocalizationPair Name="%HeroStatusAccessAcademyActionTitle">Архив агентов</LocalizationPair>
+  <LocalizationPair Name="%HeroStatusAccessAcademyActionDescription">Вы получаете доступ к архиву Академии, где есть все сведения о местоположении и заданиях героев в галактике.</LocalizationPair>
+  <LocalizationPair Name="%CrusadeImmunityAcademyActionTitle">Гарантия безопасности</LocalizationPair>
+  <LocalizationPair Name="%CrusadeImmunityAcademyActionDescription">Академия обязуется защищать вас от будущих военных походов и требует отозвать все военные походы, которые вам уже объявили.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionTitle">Система в подарок</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionDescription">Академия — учреждение нейтральное и негосударственное, а потому не может как следует распоряжаться своей территорией. Вы можете попросить у нее в подарок целую систему — вам она все равно пригодится больше.</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUnfallenTitle">Быстрое подключение</LocalizationPair>
+  <LocalizationPair Name="%TakeSystemAcademyActionUnfallenDescription">Местные жители из Академии помогут нам подключить эту планету почти моментально. Она станет частью нашей империи по воле Академии, и нам не придется проливать кровь.</LocalizationPair>
+  <LocalizationPair Name="%RequestFleetAcademyActionTitle">Запрос на флот</LocalizationPair>
+  <LocalizationPair Name="%RequestFleetAcademyActionDescription">Академия создаст флот из сильнейших доступных ей кораблей и передаст его в ваше распоряжение.</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticMigrationActionTitle">Запрос на миграцию</LocalizationPair>
+  <LocalizationPair Name="%AcademyDiplomaticMigrationActionDescription">Население случайного типа мигрирует из системы Академии в ближайшую подконтрольную вашей империи систему.</LocalizationPair>
+  <LocalizationPair Name="%StartWarAcademyActionTitle">Объявление войны</LocalizationPair>
+  <LocalizationPair Name="%StartWarAcademyActionDescription">Вы начинаете войну. Баланс очков отношений опустится до -100, и вы больше не сможете участвовать в аукционах Академии.</LocalizationPair>
+  <LocalizationPair Name="%StopWarAcademyActionTitle">Перемирие</LocalizationPair>
+  <LocalizationPair Name="%StopWarAcademyActionDescription">Вы завершаете войну. Баланс очков отношений становится равен нулю, и вы можете участвовать в аукционах Академии.</LocalizationPair>
+  <LocalizationPair Name="%UserIntructionCaptionTakeSystemTitle">ЛКМ — выбор системы; ПКМ — отмена</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemNotAcademyOwnedDescription">Система должна принадлежать Академии</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemAcademyHomeSystemDescription">Нельзя выбрать домашнюю систему Академии</LocalizationPair>
+  <LocalizationPair Name="%FailureTakeSystemExsistingGhostSystemDescription">У системы не должно быть систем-призраков</LocalizationPair>
+  <LocalizationPair Name="%SophonsUniqueAcademyActionTitle">Наука дипломатии</LocalizationPair>
+  <LocalizationPair Name="%SophonsUniqueAcademyActionDescription">Ученые Академии прекрасно подкованы в вопросах дипломатии. Все международные исследовательские группы с их участием добьются больших результатов.</LocalizationPair>
+  <LocalizationPair Name="%CraversUniqueAcademyActionTitle">Здоровые заложники</LocalizationPair>
+  <LocalizationPair Name="%CraversUniqueAcademyActionDescription">Академия готова консультировать нас по экологическим вопросам и проводить несложные защитные терраформирующие процедуры, если мы будем беречь здоровье заложников.</LocalizationPair>
+  <LocalizationPair Name="%TerransUniqueAcademyActionTitle">Официальные представители</LocalizationPair>
+  <LocalizationPair Name="%TerransUniqueAcademyActionDescription">Если мы будем приглашать представителей Академии на каждую церемонию инаугурации, посвящение в рыцари, корпоративные выборы и коронацию имперских чиновников, ни у кого не останется сомнений в серьезности наших намерений.</LocalizationPair>
+  <LocalizationPair Name="%HoratioUniqueAcademyActionTitle">Место для отпуска</LocalizationPair>
+  <LocalizationPair Name="%HoratioUniqueAcademyActionDescription">Пока у нас с Академией хорошие отношения, ее герои и их сподвижники могут запросто летать к нам в отпуск. А если Академия их хватится, ничего страшного.</LocalizationPair>
+  <LocalizationPair Name="%TimeLordsUniqueAcademyActionTitle">Помощь беженцам</LocalizationPair>
+  <LocalizationPair Name="%TimeLordsUniqueAcademyActionDescription">Академия сочувствует Властелинам Времени и потому готова выслать советников по производству и горнодобывающие орудия, чтобы помочь нам освоиться на новом месте.</LocalizationPair>
+  <LocalizationPair Name="%UnfallenUniqueAcademyActionTitle">Гранты на садоводство</LocalizationPair>
+  <LocalizationPair Name="%UnfallenUniqueAcademyActionDescription">Академия высоко ценит переплетенные лозы Несгибаемых за их дипломатический и инфраструктурный потенциал. На дружественной территории она поможет с созданием карты и другими вопросами.</LocalizationPair>
+  <LocalizationPair Name="%VampirilisUniqueAcademyActionTitle">Помощь искателям Сущности</LocalizationPair>
+  <LocalizationPair Name="%VampirilisUniqueAcademyActionDescription">Академия старается по возможности избегать лишнего кровопролития и потому предлагает нашим искателям Сущности гуманитарную помощь в виде пищи.</LocalizationPair>
+  <LocalizationPair Name="%VenetiansUniqueAcademyActionTitle">Героическая реклама</LocalizationPair>
+  <LocalizationPair Name="%VenetiansUniqueAcademyActionDescription">Званые ужины и щедрые дары помогут обратить героев Академии в наших галактических послов.</LocalizationPair>
+  <LocalizationPair Name="%MajorHisshosUniqueAcademyActionTitle">Учебный обмен</LocalizationPair>
+  <LocalizationPair Name="%MajorHisshosUniqueAcademyActionDescription">Открыв программу по обмену учениками и учителями с Академией, мы подчеркнем свою значимость на галактическом уровне и силу наших воинов.</LocalizationPair>
+  <LocalizationPair Name="%UmbralChoirUniqueAcademyActionTitle">Срочное планирование</LocalizationPair>
+  <LocalizationPair Name="%UmbralChoirUniqueAcademyActionDescription">У Академии есть старинные и весьма полезные космические карты. Она бы хотела, чтобы даже самые темные уголки галактики занимали ее мирные союзники. Мы наверняка сумеем договориться.</LocalizationPair>
+  <LocalizationPair Name="%ShipDesignNameShipMasterOfDustDescription">Роль: легат</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Academy_DustMasterPopup-Title">ДОБРО ПОЖАЛОВАТЬ, ЛЕГАТ</LocalizationPair>
+  <LocalizationPair Name="%Tutorial_Academy_DustMaster1Popup-Description">Ваша задача — обеспечивать гармонию во всей галактике и защищать интересы слабых и беззащитных! Вас поддерживает Исиандер и любит народ.</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustTitle">Легат</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustDescription">Легату поручено обеспечивать гармонию во всей галактике и защищать интересы слабых и беззащитных. Его поддерживает Исиандер и любит народ.</LocalizationPair>
+  <LocalizationPair Name="%AcademyRoleMasterOfDustEffectOverride">У легата есть доступ ко всем усилениям малых фракций. Развязать с ним войну выйдет дороже. Также легат может объявить военный поход на врага.</LocalizationPair>
+  <LocalizationPair Name="%ShipDesignSmall01AttackerAcademyDescription">Роль: атакующий</LocalizationPair>
+  <LocalizationPair Name="%NegotiationModalWindowMakeOfferButtonCantAffordCrusadeDeclarations">У вас не осталось возможностей объявить поход</LocalizationPair>
+  <LocalizationPair Name="%NegotiatonModalWindowMakeOfferButtonTheyCantAffordCrusadeDeclarations">У них не осталось возможностей объявить поход</LocalizationPair>
+  <LocalizationPair Name="%NegotiationModalWindowMakeOfferButtonCantAffordAcademyAuctionBlocks">У вас не осталось запретов на участие в аукционе</LocalizationPair>
+  <LocalizationPair Name="%NegotiatonModalWindowMakeOfferButtonTheyCantAffordAcademyAuctionBlocks">У них не осталось запретов на участие в аукционе</LocalizationPair>
+  <LocalizationPair Name="%NotificationAcademyRequestDescription">Для дальнейшего развития, исследований и специальных проектов Академии требуется {0}.
+
+Все участники получат очки, которые можно будет обменять на услуги Академии.</LocalizationPair>
+  <LocalizationPair Name="%NotificationAcademyRolesDescription">Чтобы укрепить сотрудничество и взаимное доверие, руководство Академии может предлагать различным дружественным фракциям ключевые позиции.
+
+Все участники получили очки, которые можно обменять на услуги Академии.</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasAnomalyTitle">Планеты с аномалиями</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasDepositLuxuryTitle">Планеты с ресурсами роскоши</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasDepositStrategicTitle">Планеты со стратегическими месторождениями</LocalizationPair>
+  <LocalizationPair Name="%PlanetHasMoonTitle">Планеты с лунами</LocalizationPair>
+  <LocalizationPair Name="%PopulationCollectionBonusMinorOraculars3_TooltipEffect">Открывает закон «Поиски пыли»</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsShortTitle">Поиски пыли</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsTitle">Программа по исследованию залежей пыли</LocalizationPair>
+  <LocalizationPair Name="%LawP00PopulationCollectionMinorOracularsDescription">Эта инициатива совмещает в себе охрану здоровья ресурсодобывающих рабочих и социальную помощь. В ее рамках чувствительное к пыли население сможет получить работу и самое современное снаряжение, а мы будем эффективнее искать новые залежи на благо империи.</LocalizationPair>
+  <LocalizationPair Name="%LawEffectP00L26-PopulationCollectionMinorOracularsEffectOverride">Открывает «Магические диковины», которые дают много пыли при обыске</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusDamageOnAcademyTitle">Забытая ворожба</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusDamageOnAcademyDescription">Зирмисалы виртуозно извлекают пыль из всего уничтоженного и разлагающегося.</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusContributionToAcademyTitle">Забытая археология</LocalizationPair>
+  <LocalizationPair Name="%FactionTraitMinorBonusContributionToAcademyDescription">Зирмисалы знают, где именно искать скопления пыли в нетронутых и необычных местах.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionTitle">Расширение Академии</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionDescription">Дополнительный уровень сложности Академии (насколько сложные испытания она готовит для игрока).</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionNoneTitle">Нет</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionNoneDescription">Академия действует так же, как до установки дополнения «Пробуждение».</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionLowTitle">Низкая</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionLowDescription">Академия не может заполучить новые системы, кроме изначальной, без помощи игрока.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionMediumTitle">Средняя</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionMediumDescription">Академия расширяется на начальном этапе игры.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionHighTitle">Высокая</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionHighDescription">У Академии, как и у других империй, есть порог чрезмерной колонизации.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionEndlessTitle">Бесконечная</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyExpansionEndlessDescription">Академия не прекращает осваивать новые территории.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEasyDescription">Академия создает небольшие флоты, которые состоят из обычных кораблей.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyNormalDescription">Академия создает средние флоты, которые состоят из обычных кораблей.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyHardDescription">Академия создает большие флоты, которые состоят из обычных кораблей.</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEndlessTitle">Бесконечная</LocalizationPair>
+  <LocalizationPair Name="%SettingAcademyDifficultyEndlessDescription">Академия создает большие флоты, которые состоят из мощных кораблей.</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementTemplarsFinalQuest1TooltipOverride">[scienceColored]: нет штрафа на планетах</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementTemplarsFinalQuest2TooltipOverride">Осн. [scienceColored] x2 ([Relic])</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus3AcademyShipsTitle">Трактат Академии</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedEffectOverride">Эта малая фракция стала уважаемым вассалом под вашей защитой. Вы получили доступ к ее ресурсам и уникальной особенности, а также обезопасили ее от конкурентов, однако теперь ее население должно целиком полагаться на себя.</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedTitle">ВАССАЛ</LocalizationPair>
+  <LocalizationPair Name="%DiplomaticRelationStateMinorAlignedDescription">Эта малая фракция стала уважаемым вассалом под вашей защитой. Вы получили доступ к ее ресурсам и уникальной особенности.</LocalizationPair>
+  <LocalizationPair Name="%CreateAllianceEmpireActionTemplarsTitle">Сделать вассалом</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSwarmMissilesExplicationTitle">Системы залпового огня выпускают большое количество ракет короткими залпами. Их цель — уберечь другие ракеты, ЭМ-ракеты и разрывные батареи с помощью вражеских систем противозенитной обороны. На высоких уровнях за один залп можно защитить больше дружественных ракет.</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleOnlyOnePerFlotillaTitle">Эффект действует по разу на флотилию</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleOnlyOnePerShipTitle">На корабль можно установить только один модуль</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsEMPFlotillaDefenseTitle">Продолжительность деактивации ЭМ у флотилии</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleMaximumShieldCapForFlotillaTitle">Прочность щитов флотилии</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleShieldAbsorptionForFlotillaTitle">Поглощение щитами флотилии</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSquadronExplicationTitle">Вражеские зенитные орудия сначала стреляют по истребителям, а затем по бомбардировщикам.
+Перехватчики: быстрые и опасные для вражеских эскадрилий
+Ударные: медленные и прочные, хороши в бою с небольшими кораблями
+Тяжелые бомбардировщики: очень прочные, но медленные
+Легкие бомбардировщики: быстрые и смертоносные, но непрочные</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleFlotillaShieldExplicationTitle">«Щиты флотилии» увеличивают прочность щитов и энергетическую защиту каждого корабля во флотилии.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaShipManpowerKillPerHitPercentTitle">Уничтожение членов экипажа флотилии при попадании</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlotillaManpowerDamageOverTimeIncreaseTitle">Урон трудовым ресурсам на абордажных модулях флотилий</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronDamageTitle">Урон эскадрилий</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsSquadronSpeedTitle">Скорость эскадрилий</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleHullWeaknessTitle">Уязвимость корпуса</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDPSSquadronTitle">Зенитный урон эскадрилье за залп</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlakDamageModifierTitle">Зенитный урон</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectEfficiencyAgainstSquadronModifierTitle">Модификатор зенитного урона эскадрильи</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectMediumRangeBonusTitle">Бонус к меткости на средней дистанции</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsDefenseAgainstSquadronTitle">Урон от эскадрилий</LocalizationPair>
+  <LocalizationPair Name="%MaximumDamageBonusFromManpowerTitle">Бонус к урону от экипажа на корабле</LocalizationPair>
+  <LocalizationPair Name="%CriticalHitChanceTitle">Вероятность крита</LocalizationPair>
+  <LocalizationPair Name="%CriticalAttackChanceTitle">Вероятность крита</LocalizationPair>
+  <LocalizationPair Name="%SquadronCriticalDamageBonusTitle">Бонус урона при критическом попадании эскадрильи</LocalizationPair>
+  <LocalizationPair Name="%SquadronTypeFighterTitle">Истребители</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBombersCountDescription">Общее количество бомбардировщиков
+Против кораблей:
+Энергетические бомбардировщики пробивают корпус на 90%, а щиты — на 30%
+Снарядные бомбардировщики пробивают корпус на 30%, а щиты — на 90%</LocalizationPair>
+  <LocalizationPair Name="%ShipStatFightersCountDescription">Общее количество истребителей
+Против кораблей:
+Энергетические истребители пробивают корпус на 60%, а щиты — на 40%
+Снарядные истребители пробивают корпус на 40%, а щиты — на 60%</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleMediumSupportShipOnlyTitle">Может быть установлен только на средние корабли [support]</LocalizationPair>
+  <LocalizationPair Name="%MoraleBonusEvasionTitle">Уклонение флота</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus1DefensiveTitle">Оборона</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus1DefensiveDescription">-50% к длительности отключения ЭМ-орудий
+-50% к получаемому критическому урону
+Для модулей:
++10% к прочности кораблей
++10% к прочности щитов
++10% к защите от обшивки и щитов</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus2DefensiveTitle">Заступник</LocalizationPair>
+  <LocalizationPair Name="%ShipStatBonus2DefensiveDescription">-10% к длительности перезарядки ЭМ-орудий за оборонный модуль
+-10% к получаемому критическому урону за оборонный модуль</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakDamageTitle">Урон каждого зенитного орудия</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectsFlakFireRateTitle">Скорострельность зенитных орудий</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaFlakDamageModifierTitle">Зенитный урон флотилии</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleEffectFlotillaFlakFireRateModifierTitle">Скорострельность зенитных орудий флотилии</LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportEMPFlotillaDefenseTitle">Поле дестабилизации ЭМ-орудий</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneAntiCarrierModuleDescription">Может быть установлен только один модуль наведения.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneAntiCrewModuleDescription">Может быть установлен только один шрапнельный модуль.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneFlakEnhancerModuleDescription">Может быть установлен только один умный зенитный модуль.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneSquadronOffenseEnhancerDescription">Может быть установлен только один ударный модуль.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneWeaponKineticRailgunDescription">Может быть установлен только один рельсотронный модуль.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneSquadronDefenseEnhancerDescription">Может быть установлен только один модуль усилителя эскадрилий.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneJammerModuleDescription">Может быть установлен только один модуль помех.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneBaitModuleDescription">Может быть установлен только один модуль помех.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneEMPFlotillaDefenseDescription">Может быть установлен только один модуль дестабилизации ЭМ-орудий.</LocalizationPair>
+  <LocalizationPair Name="%FailureNoMoreThanOneFlakScramblerDescription">Может быть установлен только один модуль репульсивных пластин.</LocalizationPair>
+  <LocalizationPair Name="%ModuleWeaponMissileEMP1Strategic4Title2">Противощитовая ракета</LocalizationPair>
+  <LocalizationPair Name="%ModuleWeaponBeamEMP1Strategic3Title2">Луч оружейных помех</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary3EffectOverride2">+1 к изначальному уровню кораблей</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary4EffectOverride2">+1 к изначальному уровню кораблей</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementStageMilitary5EffectOverride2">+1 к изначальному уровню кораблей</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip1TooltipEffect">+1 к изначальному уровню кораблей</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementUniqueShip1TooltipEffect">+4 к изначальному уровню кораблей</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip2TooltipEffect">+2 к изначальному уровню кораблей
++10% к прочности сооруженных кораблей</LocalizationPair>
+  <LocalizationPair Name="%StarSystemImprovementShip1CraversTooltipEffect">+3 к изначальному уровню кораблей
++10% к прочности сооруженных кораблей</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleSmallAttackerDescription">Роль этого корабля состоит в нанесении противнику максимального урона.
+Основные цели: Защитники, После них Координаторы
+Второстепенные цели: Авианосцы
+Цели с низким приоритетом: Aтакующие, После них Охотники</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleMediumAttackerDescription">Роль этого корабля состоит в нанесении противнику максимального урона.
+Основные цели: Защитники, После них Координаторы
+Второстепенные цели: Авианосцы
+Цели с низким приоритетом: Aтакующие, После них Охотники</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleSmallSupportDescription">Роль этого корабля состоит в защите других судов во время боя.
+Основные цели: Авианосцы
+Второстепенные цели: Aтакующие, После них Охотники
+Цели с низким приоритетом: Защитники, После них Координаторы</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleMediumSupportDescription">Роль этого корабля состоит в защите других судов и оказании помощи во время боя.
+Основные цели: Авианосцы
+Второстепенные цели: Aтакующие, После них Охотники
+Цели с низким приоритетом: Защитники, После них Координаторы</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleHeroDescription">Этот вид корабля предназначен Герою.  Все покупки, требующие [commandPoint] (КО), теперь бесплатны. При выборе цели корабли героя считаются за атакующие суда.
+Основные цели: Защитники, После них Координаторы
+Второстепенные цели: Авианосцы
+Цели с низким приоритетом: Aтакующие, После них Охотники</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleBattleshipDescription">Военные суда в первую очередь атакуют «Джаггернауты».
+Самый крупный и сильный корабль в галактике. Его можно помещать во флоты и улучшать, добавляя ячейки или разблокировав «Ионную волну» — мощную способность, наносящую урон всем флотам в узле.</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleJuggernautDescription">Военные суда в первую очередь атакуют «Бегемоты».
+Роли «Бегемотов» могут различаться в зависимости от модулей, которыми вы их оснащаете. Они могут иметь экономическую, научную или военную специализации.</LocalizationPair>
+  <LocalizationPair Name="%ShipRoleCarrierDescription">Роль этого корабля - перемещать истребители и бомбардировщики к месту битвы.
+Основные цели: Авианосцы
+Второстепенные цели: атакующие, защитники, координаторы, охотники</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleJammer1ExplicationTitle">Военный корабль, на котором установлен этот дестабилизатор, будет выбран в качестве цели позже других военных кораблей.</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleJammer2ExplicationTitle">Любой корабль, на котором установлен этот дестабилизатор, будет выбран в качестве цели в последнюю очередь, даже если это «Бегемот».</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleBait1ExplicationTitle">Военный корабль, на котором установлен этот фокусировщик, будет выбран в качестве цели раньше других военных кораблей.</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleBait2ExplicationTitle">Любой корабль, на котором установлен этот фокусировщик, будет выбран в качестве цели в первую очередь, даже если это «Бегемот».</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyAgressiveDescription">Нацелены на нанесение урона.
+Все эскадрильи истребителей атакуют врага.</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyDefensiveDescription">Нацелены на снижение получаемого урона.
+Все эскадрильи истребителей находятся рядом с дружественными кораблями и защищают их от вражеских бомбардировщиков.</LocalizationPair>
+  <LocalizationPair Name="%PlayFamilyPostDescription">Нацелены на получение бонусов после завершения битвы.
+Половина истребительных эскадрилий обороняется, а вторая половина нападает.</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveLongShieldIncreaseDescription">Эффективность щитов повышается, особенно при защите от энергетического оружия.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedDamageIncreaseDescription">Увеличивает урон, который наносят ваши малые и средние корабли, в зависимости от размера корабля противника.</LocalizationPair>
+  <LocalizationPair Name="%PlayPostLongEmpireManpowerSavingDescription">Часть уничтоженных единиц трудовых ресурсов возвращается в империю.</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveLongCooldownIncreaseDescription">Отключает вспомогательные модули.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectCooldownIncreaseEffectOverride">Для обоих флотов:
+Эффекты «Щитов флотилии», «Перезарядки щитов» и «Ремонта кораблей» не действуют.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectMovementGainTooltipOverride">После битвы корабли восстанавливают очки движения.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortMoraleBonusIncreaseDescription">Усиливает эффекты бонуса «Боевой дух», который увеличивает урон, меткость и уклонение ваших кораблей, если у врага меньше активных флотилий.</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveShortAccuracyReductionDescription">Мешает врагу прицеливаться на дальней и средней дистанции.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectAccuracyReductionOtherEffectOverride">Для вражеского флота:</LocalizationPair>
+  <LocalizationPair Name="%PlayPostBalancedActionGainDescription">Дает очко действия после битвы.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveLongSplashDamageDescription">Процент нанесенного урона распределяется по всем кораблям флотилии.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedShieldPenetrationIncrease2Title">Усил. плазмы ++</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveBalancedShieldPenetrationIncrease2Description">Усовершенствованная версия «Усил. плазмы».</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveMediumSquadronDefenseBoostTitle">Закрытое пространство</LocalizationPair>
+  <LocalizationPair Name="%PlayDefensiveMediumSquadronDefenseBoostDescription">Истребители получают приказ защищать корабли вашего флота. Знание кораблей и их возможных маневров дает вашим истребителям преимущество в бою.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectSquadronDefenseBoostOtherEffectOverride">Для вражеского флота:</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortAccuracyReductionPerSquadronTitle">Взлом систем наведения</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveShortAccuracyReductionPerSquadronDescription">Истребители и бомбардировщики мешают противнику навестись на цель и принимают огонь на себя, давая остальным кораблям больше шансов выстоять.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectAccuracyReductionPerSquadronOtherTooltip">Для вражеского флота:
+-0,5% к меткости за эскадрилью на любой дистанции</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter1Title">Базовый ударный истребитель</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighter2Title">Усовершенствованный ударный истребитель</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber1Title">Базовый тяжелый бомбардировщик</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomber2Title">Усовершенствованный тяжелый бомбардировщик</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomberEnergy1Title">Базовые легкие плазменные бомбардировщики</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighterEnergy1Title">Базовые истребители-перехватчики</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronBomberEnergy2Title">Продвинутые легкие плазменные бомбардировщики</LocalizationPair>
+  <LocalizationPair Name="%ModuleSquadronFighterEnergy2Title">Продвинутые истребители-перехватчики</LocalizationPair>
+  <LocalizationPair Name="%ModuleSupportFlakEnhancer1Title">Координированный зенитный огонь</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull1Title">Отличные корпуса атакующих</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected2Hull1Title">Отличные корпуса атакующих</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull1TooltipEffect">+500 к прочности атакующих
+Множитель модуля атакующих составляет 1,25
+Этот множитель модуля не влияет на расходы ПППН и стратегических ресурсов кораблей</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull2Title">Отличные корпуса защитников</LocalizationPair>
+  <LocalizationPair Name="%EmpireImprovementPerfected1Hull2TooltipEffect">+500 к прочности защитников
+Множитель модуля защитников составляет 1,25
+Этот множитель модуля не влияет на расходы ПППН и стратегических ресурсов кораблей</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleColonizationExplicationTitle">Позволяет кораблю пожертвовать собой ради колонизации пригодной для этого планеты.</LocalizationPair>
+  <LocalizationPair Name="%PlayOffensiveMediumProjectilePenertrationIncrease2Title">Грави-искажен. ++</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeMediumDescription">Для средних кораблей требуется #E3BDAC#3#REVERT# [commandPoint] (КО) флота, в составе которого они находятся.
+Уязвимость корпуса: #E3BDAC#300#REVERT# (см. поглощение урона)</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeLargeDescription">Для больших кораблей требуется #E3BDAC#6#REVERT# [commandPoint] (КО) флота, в составе которого они находятся.
+Уязвимость корпуса: #E3BDAC#800#REVERT# (см. поглощение урона)</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeJuggernautDescription">«Бегемоты» представляют собой #E3BDAC#10#REVERT# [commandPoint] (командных очков) флота, и, если они не специализированы, то у них не должно быть сопровождения.
+Слабость корпуса: #E3BDAC#600#REVERT# (см. поглощение защиты)</LocalizationPair>
+  <LocalizationPair Name="%ShipSizeMothershipDescription">Для ковчегов требуется #E3BDAC#8#REVERT# [commandPoint] (КО) флота, в составе которого они находятся.</LocalizationPair>
+  <LocalizationPair Name="%PlayEffectMoralePenaltyEffectOverride">Для обоих флотов:
+Бонус к морали становится штрафом (эффект -100%)</LocalizationPair>
+  <LocalizationPair Name="%ClassModuleSupportAntiCarrierExplicationTitle">С самонаводящимися модулями все корабли во флотилии наносят больше урона. Бонус к урону зависит от числа командных очков корабля, выбранного в качестве цели. Эффект действует даже после уничтожения координатора.</LocalizationPair>
+  <LocalizationPair Name="%PanelFeatureModuleDamageBonusPerTargetCommandPointsFlotillaTitle">Урон за КП на кораблях во флотилии, выбранный в качестве цели</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyEconomicTitle">Экономическая дипломатия с Академией</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyScientificTitle">Научная дипломатия с Академией</LocalizationPair>
+  <LocalizationPair Name="%DidAcademyDiplomacyMilitaryTitle">Военная дипломатия с Академией</LocalizationPair>
+  <LocalizationPair Name="%StartedWarWithAcademyTitle">Войны, объявленные Академии</LocalizationPair>
+</Datatable>

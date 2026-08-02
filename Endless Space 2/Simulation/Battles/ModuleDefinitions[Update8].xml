@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/ModuleDefinition.xsd">
+
+    
+    
+    <SupportModule Name="ModuleSupportAnalyzerFakeQuest" Family="AnalyzerBase" Level="1" IsHidden="true">
+        <Cost ResourceName="SystemProduction">50</Cost>
+        <TechnologyPrerequisite  Flags="Edition">TechnologyModuleSupportAnalyzerFakeQuest</TechnologyPrerequisite>             
+        <SimulationDescriptorReference Name="ClassModuleSupport"/>        
+        <CategorizedSimulationDescriptors Category="CategoryAnalyzer">
+            <SimulationDescriptorReference Name="ModuleSupportAnalyzerFakeQuest"/>            
+        </CategorizedSimulationDescriptors>
+    </SupportModule>
+  
+
+</Datatable>

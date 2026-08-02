@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Droplist.xsd">
+
+   
+    <!--UE QUEST Chapter 4 Scientist-->
+    <Droplist Name="DroplistRewardQuestUnitedEmpire12Alternative" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementQuestUnitedEmpire12Alternative" SimulationTag="CompletedQuestUnitedEmpire12Alternative"/>
+    </Droplist>  
+
+    <!--HORATIO QUEST ALTERNATIVE-->
+    <Droplist Name="DroplistRewardQuestHoratio06Alternative" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementQuestHoratio06Alternative" SimulationTag="CompletedQuestHoratio06Alternative"/>
+    </Droplist>
+
+    <!--CH3 - P2 - RELIGIOUS-->
+    <Droplist Name="DroplistRewardQuestHoratio07Alternative" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementQuestHoratio07Alternative" SimulationTag="CompletedQuestHoratio07Alternative"/>
+    </Droplist>
+
+      <!--CH3 - P2 - INDUSTRY-->
+    <Droplist Name="DroplistRewardQuestHoratio08Alternative" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementQuestHoratio08Alternative" SimulationTag="CompletedQuestHoratio08Alternative"/>
+    </Droplist>
+
+    <Droplist Name="DroplistRewardQuestTimeLords01Alternative" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementQuestTimeLords01Alternative" SimulationTag="CompletedQuestTimeLords01Alternative"/>
+    </Droplist>
+  
+    <Droplist Name="DroplistRewardQuestUnfallen05Alternative" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementQuestUnfallen05Alternative" SimulationTag="CompletedQuestUnfallen05Alternative"/>
+    </Droplist>
+
+    <Droplist Name="JuggernautsFleet" Picks="1">
+        <Fleet>
+            <ShipDesign>Juggernauts_SupportJuggernaut</ShipDesign>
+        </Fleet>
+    </Droplist>
+
+    <!--####################-->
+    <!--##  QUEST HISSHOS ##-->
+    <!--####################-->
+
+    <!--CHAPTER 1 PART 2 -->
+    <Droplist Name="DroplistHisshos01" Fallback="DroplistLuxuries">
+        <Unlock Name="ModuleWeaponBeamQuestHisshos1" SimulationTag="HisshosQuest-Chapter1-Part1Militarist-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistHisshos02" Fallback="DroplistLuxuries">
+        <Unlock Name="ModuleSupportJuggernautMiningLongQuestHisshos2" SimulationTag="HisshosQuest-Chapter1-Part1Religious-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistHisshos03" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementDefenseQuestHisshos03" SimulationTag="HisshosQuest-Chapter2-Part1Militarist-Reward"/>
+    </Droplist>
+    
+    <Droplist Name="DroplistHisshos04" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementInfluenceQuestHisshos04" SimulationTag="HisshosQuest-Chapter2-Part1Religious-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistHisshos04Bis" Fallback="DroplistLuxuries">
+        <Unlock Name="StarSystemImprovementInfluenceQuestHisshos04Bis" SimulationTag="HisshosQuest-Chapter2-Part1BisReligious-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistHisshos05" Fallback="DroplistLuxuries">
+        <Technology Name="TechnologyDefinitionQuestHisshos05"/>
+    </Droplist>
+
+    <Droplist Name="DroplistHisshos06" Fallback="DroplistLuxuries">
+        <Technology Name="TechnologyDefinitionQuestHisshos06"/>
+    </Droplist>
+    
+    <Droplist Name="DroplistHisshos07" Fallback="DroplistLuxuries">
+        <Unlock Name="EmpireImprovementQuestHisshos07" SimulationTag="HisshosQuest-Chapter4-Part1Militarist-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistHisshos08" Fallback="DroplistLuxuries">
+        <Unlock Name="EmpireImprovementQuestHisshos08" SimulationTag="HisshosQuest-Chapter4-Part1Religious-Reward"/>
+    </Droplist>
+
+  <Droplist Name="DroplistHisshos09" Selector="Weighted">
+    <Fleet>
+      <ShipDesign>ShipQuestHisshos_MilitaryJuggernaut</ShipDesign>     
+    </Fleet>
+  </Droplist>
+    
+    <Droplist Name="DroplistPopulationQuest17-C1" Fallback="DroplistLuxuries">
+        <Unlock Name="ModuleSupportEnergyEnhancerQuest1" SimulationTag="PopulationQuest17-C1-Reward"/>
+    </Droplist>
+    
+    <Droplist Name="DroplistPopulationQuest17-C2" Fallback="DroplistLuxuries">
+        <Unlock Name="ModuleSupportFlotillaShieldQuest1" SimulationTag="PopulationQuest17-C2-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistPopulationQuest17-C3" Fallback="DroplistLuxuries">
+        <Unlock Name="ModuleSupportProjectileEnhancerQuest1" SimulationTag="PopulationQuest17-C3-Reward"/>
+    </Droplist>
+    
+    <Droplist Name="DroplistPopulationQuest17-C4" Fallback="DroplistLuxuries">
+        <Unlock Name="ModuleSupportFlotillaRepairQuest1" SimulationTag="PopulationQuest17-C4-Reward"/>
+    </Droplist>
+
+    <Droplist Name="DroplistGlobalQuest06-Coop01" Fallback="DroplistLuxuries">
+      <Technology Name="TechnologyDefinitionEmpireDevelopmentJuggernaut1"/>
+    </Droplist>
+
+    <Droplist Name="DroplistGlobalQuest06-Coop02" Fallback="DroplistLuxuries">
+      <Technology Name="TechnologyDefinitionEconomyAndTradeJuggernaut3"/>
+    </Droplist>
+
+  <Droplist Name="DroplistGlobalQuest06-CoopBis" Picks="1">
+    <Integer Value="7" Weight="1"/>
+    <Integer Value="8" Weight="1"/>
+    <Integer Value="9" Weight="1"/>
+    <Integer Value="10" Weight="1"/>   
+  </Droplist>
+
+  <Droplist Name="DroplistGlobalQuest06-Coop03" Selector="Weighted">
+    <Fleet>
+      <ShipDesign>Juggernauts_MilitaryJuggernaut</ShipDesign>
+    </Fleet>
+  </Droplist>
+
+
+</Datatable>

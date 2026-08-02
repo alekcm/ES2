@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!--UMBRAL CHOIR TREE-->
+    <ExtendedGuiElement Name="HeroSkillTreeUmbralChoir">
+        <Title>%HeroSkillTreeUmbralChoirTitle</Title>
+        <Description>%HeroSkillTreeUmbralChoirDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="/Atlased/Affinities/AffinityUmbralChoirSmall" />
+        </Icons>
+        <Color Red="231" Green="103" Blue="0" Alpha="255"/>
+    </ExtendedGuiElement>
+    <!--UMBRAL CHOIR SKILLS-->
+    <ExtendedGuiElement Name="HeroSkill01BranchUmbralChoir">
+        <Title>%HeroSkill33_FleetDefense_Percent_Title</Title>
+        <Description>%HeroSkill33_FleetDefense_Percent_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill33_FleetDefense_Percent_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill02BranchUmbralChoir">
+        <Title>%HeroSkill120_ProcessingPower_Flat_Title</Title>
+        <Description>%HeroSkill120_ProcessingPower_Flat_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill120_ProcessingPower_Flat_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill03BranchUmbralChoir">
+        <Title>%HeroSkill113_FleetExploration_Flat_Title</Title>
+      <Description>%HeroSkill113_FleetExploration_Flat_Description</Description>
+      <Icons>
+          <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill113_FleetExploration_Flat_Small" />
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill04BranchUmbralChoir">
+        <Title>%HeroSkill72_Industry_Percent_Title</Title>
+        <Description>%HeroSkill72_Industry_Percent_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill72_Industry_Percent_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill05BranchUmbralChoir">
+        <Title>%HeroSkill123_FleetVisionStrength_Flat_Title</Title>
+        <Description>%HeroSkill123_FleetVisionStrength_Flat_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill123_FleetVisionStrength_Flat_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill06BranchUmbralChoir">
+        <Title>%HeroSkill121_HackingSpeed_Percent_Title</Title>
+        <Description>%HeroSkill121_HackingSpeed_Percent_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill121_HackingSpeed_Percent_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill07BranchUmbralChoir">
+        <Title>%HeroSkill122_FIDSI_Flat_Title</Title>
+        <Description>%HeroSkill122_FIDSI_Flat_Description</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Skills/HeroSkill122_FIDSI_Flat_Small" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <!--INDIVIDUAL SKILL
+    ###### MAJOR FACTION #####-->
+
+    <!--UMBRAL CHOIR-->
+    <ExtendedGuiElement Name="HeroSkill02UmbralChoir01">
+        <Title>%HeroSkill02UmbralChoir01Title</Title>
+        <Description>%HeroSkill02Sophons01Description</Description>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill02UmbralChoir02">
+        <Title>%HeroSkill02UmbralChoir02Title</Title>
+        <Description>%HeroSkill02Sophons02Description</Description>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="HeroSkill02UmbralChoir03">
+        <Title>%HeroSkill02UmbralChoir03Title</Title>
+        <Description>%HeroSkill02Sophons03Description</Description>
+    </ExtendedGuiElement>
+	<ExtendedGuiElement Name="HeroSkill02UmbralChoir04">
+		<Title>%HeroSkill02UmbralChoir04Title</Title>
+		<Description>%HeroSkill02Sophons04Description</Description>
+	</ExtendedGuiElement>
+	<ExtendedGuiElement Name="HeroSkill02UmbralChoir05">
+		<Title>%HeroSkill02UmbralChoir05Title</Title>
+		<Description>%HeroSkill02Sophons05Description</Description>
+	</ExtendedGuiElement>
+
+</Datatable>

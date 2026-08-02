@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 2       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTradeJuggernaut3" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade2" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDefinitionEconomyAndTradeJuggernaut3To4')))</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToEconomyAndTradeJuggernaut3"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautMining1"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeJuggernautIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventIndustrialistTechnology"/>
+
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperVariable Name="AvailableDepositStrategic1"/>
+        <HelperVariable Name="AvailableDepositStrategic2"/>
+        <HelperVariable Name="AvailableDepositStrategic3"/>
+        <HelperVariable Name="AvailableDepositStrategic4"/>
+        <HelperVariable Name="AvailableDepositStrategic5"/>
+        <HelperVariable Name="AvailableDepositStrategic6"/>
+        <HelperFormula>$(JuggernautCount) * 2 + $(AvailableDepositStrategic1) + $(AvailableDepositStrategic2) + $(AvailableDepositStrategic3) + $(AvailableDepositStrategic4) + $(AvailableDepositStrategic5) + $(AvailableDepositStrategic6)</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade25MajorHisshos" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade2" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyMajorHisshos" Inverted="false">AffinityGameplayMajorHisshos</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyColonization11"/>
+        <SimulationDescriptorReference Name="TechnologyManpowerBoostHisshos"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+
+        <HelperVariable Name="AvailableDepositStrategic3"/>
+        <HelperVariable Name="AvailableAshPlanets"/>
+        <HelperVariable Name="HappinessVariable"/>
+        <HelperFormula>$(AvailableAshPlanets) * 1 + 5 * $(AvailableDepositStrategic3) + 20 * $(HappinessVariable)</HelperFormula>
+    </TechnologyDefinition>
+
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 3       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTradeJuggernaut2" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade3" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyJuggernautFIDS2"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautSupportSlots1"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeJuggernautIncreaseStage3"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventPacifistTechnology"/>
+
+        <HelperVariable Name="TotalSystems"/>
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperFormula>$(JuggernautCount) * 4 + $(TotalSystems)</HelperFormula>
+    </TechnologyDefinition>
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTradeJuggernaut4" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade3" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostJuggernautMultiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier) * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkDefinitionEconomyAndTradeJuggernaut3To4')))</CustomCost>
+        <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCHisshos</DownloadableContentPrerequisite>
+        <PathPrerequisite Flags="Prerequisite,Disable,JuggernautsNotDiscovered">../JuggernautsCanBeResearched</PathPrerequisite>
+        <PathPrerequisite Flags="DiplomaticTradable,IgnoreOnCommand">false</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyLinkToEconomyAndTradeJuggernaut4"/>
+        <SimulationDescriptorReference Name="TechnologyJuggernautMining2"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeJuggernautIncreaseStage3"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventIndustrialistTechnology"/>
+
+        <HelperVariable Name="JuggernautCount"/>
+        <HelperVariable Name="AvailableDepositStrategic1"/>
+        <HelperVariable Name="AvailableDepositStrategic2"/>
+        <HelperVariable Name="AvailableDepositStrategic3"/>
+        <HelperVariable Name="AvailableDepositStrategic4"/>
+        <HelperVariable Name="AvailableDepositStrategic5"/>
+        <HelperVariable Name="AvailableDepositStrategic6"/>
+        <HelperFormula>$(JuggernautCount) * 2 + $(AvailableDepositStrategic1) + $(AvailableDepositStrategic2) + $(AvailableDepositStrategic3) + $(AvailableDepositStrategic4) + $(AvailableDepositStrategic5) + $(AvailableDepositStrategic6)</HelperFormula>
+    </TechnologyDefinition>
+
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 4       ####### -->
+    <!-- ###################################### -->
+
+</Datatable>

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <!--#####################-->
+    <!--### SWARM MISSILE ###-->
+    <!--#####################-->
+    <ExtendedGuiElement Name="ModuleWeaponMissileSwarm1">
+        <Title>%ModuleWeaponMissileSwarm1Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponMissileSwarm1" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleWeaponMissileSwarm2">
+        <Title>%ModuleWeaponMissileSwarm2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponMissileSwarm2" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleWeaponMissileSwarm3">
+        <Title>%ModuleWeaponMissileSwarm3Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponMissileSwarm3" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="ClassModuleSwarmMissilesExplication">
+        <Title>%ClassModuleSwarmMissilesExplicationTitle</Title>
+    </GuiElement>
+    
+    <ExtendedGuiElement Name="SubCategoryModuleWeaponKineticRailgun">
+        <Title>%CategoryModuleWeaponKineticRailgunTitle</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/\Atlased/Modules/SubCategoryModuleWeaponKineticRailgunSmall"/>
+        </Icons>
+        <Color Red="255" Green="255" Blue="255" Alpha="255" />
+    </ExtendedGuiElement>
+    
+    <!--#####################-->
+    <!--###    RAILGUN    ###-->
+    <!--#####################-->
+    <ExtendedGuiElement Name="ModuleWeaponKineticRailgun1">
+        <Title>%ModuleWeaponKineticRailgun1Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponKineticRailgun1" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleWeaponKineticRailgun2">
+        <Title>%ModuleWeaponKineticRailgun2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponKineticRailgun2" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleWeaponKineticRailgun3">
+        <Title>%ModuleWeaponKineticRailgun3Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleWeaponKineticRailgun3" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <!--########################-->
+    <!--### ENERGY SQUADRONS ###-->
+    <!--########################-->
+    <!--Energy Bomber-->
+    <ExtendedGuiElement Name="ModuleSquadronBomberEnergy1">
+        <Title>%ModuleSquadronBomberEnergy1Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSquadronBomberEnergy1" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleSquadronBomberEnergy2">
+        <Title>%ModuleSquadronBomberEnergy2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSquadronBomberEnergy2" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleSquadronBomberEnergy3Strategic4">
+        <Title>%ModuleSquadronBomberEnergy3Strategic4Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSquadronBomberEnergy3Strategic4" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+
+    <!--Energy Fighter-->
+    <ExtendedGuiElement Name="ModuleSquadronFighterEnergy1">
+        <Title>%ModuleSquadronFighterEnergy1Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSquadronFighterEnergy1" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleSquadronFighterEnergy2">
+        <Title>%ModuleSquadronFighterEnergy2Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSquadronFighterEnergy2" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+    
+    <ExtendedGuiElement Name="ModuleSquadronFighterEnergy3Strategic4">
+        <Title>%ModuleSquadronFighterEnergy3Strategic4Title</Title>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Dynamic/Modules/ModuleSquadronFighterEnergy3Strategic4" />
+        </Icons>
+        <Sounds>
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_AddSupportModule" Type="OnEquipModule" />
+            <Sound EventName="Play_ES2_GUI_ShipDesignScreen_RemoveModule" Type="OnUnequipModule" />
+        </Sounds>
+    </ExtendedGuiElement>
+</Datatable>

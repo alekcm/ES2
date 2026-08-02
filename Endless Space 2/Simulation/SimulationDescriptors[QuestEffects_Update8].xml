@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- All these modifiers affecting PopulationCount are just for GUI purposes (even though they have TooltipHidden="true")... That's a lot of them but it's mostly copy-paste. -->
+    <SimulationDescriptor Name="EventEffect91SimEffect91" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBenthysCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"					Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBenthysCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"				    Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBenthysCount" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationPrestigeHissho"         Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBenthysCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"					Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBenthysCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"				    Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBenthysCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect92SimEffect92" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityBenthysCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBenthysCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBenthysCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBenthysCount" TooltipHidden="true"/>
+
+     <Modifier       TargetProperty="BonusPopulationPrestigeHissho"         Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityBenthysCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBenthysCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBenthysCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBenthysCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect93SimEffect93" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationDust"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBenthysCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBenthysCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBenthysCount"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect94SimEffect94" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityHaroshemsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityHaroshemsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHaroshemsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityHaroshemsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect95SimEffect95" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityHaroshemsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHaroshemsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityHaroshemsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect96SimEffect96" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"         Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityNirisCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityNirisCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityNirisCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect97SimEffect97" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeOcean/ClassPopulationPlanetAffinityNirisCount"/>
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetTypeMonsoon/ClassPopulationPlanetAffinityNirisCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityNirisCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityNirisCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityNirisCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect98SimEffect98" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGreenmanCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGreenmanCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGreenmanCount" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationPrestigeHissho"      Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGreenmanCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGreenmanCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGreenmanCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect99SimEffect99" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationGroundBattleBombardmentAttackerDamages" Operation="Addition" Value="70" Priority="-3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGnashastsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGnashastsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGnashastsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect100SimEffect100" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationGroundBattleBombardmentAttackerDamages" Operation="Addition" Value="100" Priority="-3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeTeeming/ClassPopulationPlanetAffinityGnashastsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGnashastsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGnashastsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGnashastsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect101SimEffect101" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"            Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGnashastsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGnashastsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGnashastsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect102SimEffect102" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem,HappinessStatusStarSystem4/ClassColonizedPlanet/ClassPopulationPlanetAffinityZvaliCount"/>
+        <!-- GUI Feedbacks -->
+            <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityZvaliCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityZvaliCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityZvaliCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect103SimEffect103" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityZvaliCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityZvaliCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityZvaliCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect104SimEffect104" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationDust"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityZvaliCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityZvaliCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityZvaliCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect105SimEffect105" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationSystemManpower"      Operation="Addition"        Value="3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityTikanansCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityTikanansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityTikanansCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect106SimEffect106" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"            Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityTikanansCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityTikanansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityTikanansCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect107SimEffect107" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationSystemManpower"      Operation="Addition"        Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityTikanansCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityTikanansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityTikanansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityTikanansCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect114SimEffect114" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationSystemManpower"      Operation="Addition"        Value="5" Path="ClassEmpire/ClassColonizedStarSystem,HappinessStatusStarSystem3OrAbove/ClassColonizedPlanet/ClassPopulationPlanetAffinityHisshosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityHisshosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHisshosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityHisshosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect115SimEffect115" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationSystemManpower"      Operation="Addition"        Value="3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityHisshosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHisshosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityHisshosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect116SimEffect116" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityHisshosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHisshosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityHisshosCount" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationDustHissho"          Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityHisshosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityHisshosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityHisshosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect118SimEffect118" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityMavrosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityMavrosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityMavrosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect119SimEffect119" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationSystemManpower"      Operation="Addition"        Value="3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityMavrosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityMavrosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityMavrosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect120SimEffect120" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityMavrosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityMavrosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityMavrosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect120SimEffect120Bis" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySophonsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySophonsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySophonsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect121SimEffect121" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"            Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPilgrimsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPilgrimsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPilgrimsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect122SimEffect122" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPilgrimsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPilgrimsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPilgrimsCount" TooltipHidden="true"/>
+
+     <Modifier       TargetProperty="BonusPopulationDustHissho"             Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPilgrimsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPilgrimsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPilgrimsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect123SimEffect123" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityPilgrimsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPilgrimsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPilgrimsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPilgrimsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect124SimEffect124" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityPilgrimsCount"/>
+        <!-- GUI Feedbacks -->
+         <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPilgrimsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPilgrimsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPilgrimsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect125SimEffect125" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityAmoebaCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityAmoebaCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityAmoebaCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect126SimEffect126" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeCold/ClassPopulationPlanetAffinityAmoebaCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityAmoebaCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityAmoebaCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityAmoebaCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect127SimEffect127" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityAmoebaCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityAmoebaCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityAmoebaCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityAmoebaCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect129SimEffect129" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"            Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBotsCount"/>
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="-1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBotsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBotsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBotsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect130SimEffect130" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityBotsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBotsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBotsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBotsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect131SimEffect131" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBotsCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBotsCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBotsCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect132SimEffect132" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"            Operation="Addition"        Value="3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositStrategic/ClassPopulationPlanetAffinityPulsosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPulsosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPulsosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPulsosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect133SimEffect133" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationSystemManpower"      Operation="Addition"        Value="3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPulsosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPulsosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPulsosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect134SimEffect134" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityPulsosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityPulsosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityPulsosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect135SimEffect135" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityDeuyivansCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityDeuyivansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityDeuyivansCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect136SimEffect136" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationDust"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityDeuyivansCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityDeuyivansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityDeuyivansCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect137SimEffect137" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityDeuyivansCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityDeuyivansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityDeuyivansCount" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationFoodHissho"          Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityDeuyivansCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityDeuyivansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityDeuyivansCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityDeuyivansCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect138SimEffect138" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"            Operation="Addition"        Value="3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomaly/ClassPopulationPlanetAffinityBhagabasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBhagabasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBhagabasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBhagabasCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect139SimEffect139" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBhagabasCount"/>
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBhagabasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBhagabasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBhagabasCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect140SimEffect140" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationGroundBattleBombardmentAttackerDamages" Operation="Addition" Value="70" Priority="-3" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityBhagabasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityBhagabasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityBhagabasCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect141SimEffect141" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience" Operation="Addition" Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityRemnantCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityRemnantCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityRemnantCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect142SimEffect142" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositLuxury/ClassPopulationPlanetAffinityRemnantCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier       TargetProperty="PopulationCount"                    Operation="Addition"        Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityRemnantCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityRemnantCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityRemnantCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect143SimEffect143" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomaly/ClassPopulationPlanetAffinityRemnantCount"/>
+        <!-- GUI Feedbacks -->
+            <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityRemnantCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityRemnantCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityRemnantCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect144SimEffect144" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationDust"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityEydersCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityEydersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityEydersCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect145SimEffect145" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationDust"                Operation="Addition"        Value="5" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeGas/ClassPopulationPlanetAffinityEydersCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityEydersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityEydersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityEydersCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect146SimEffect146" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityEydersCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityEydersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityEydersCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect147SimEffect147" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGreenmanCount"/>
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGreenmanCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGreenmanCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGreenmanCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect148SimEffect148" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeMeager/ClassPopulationPlanetAffinityGreenmanCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGreenmanCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGreenmanCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGreenmanCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect149SimEffect149" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGreenmanCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGreenmanCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGreenmanCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect150SimEffect150" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomaly/ClassPopulationPlanetAffinitySowersCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySowersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySowersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySowersCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect151SimEffect151" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySowersCount"/>
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySowersCount"/>
+        <Modifier       TargetProperty="BonusPopulationPrestigeHissho"      Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySowersCount"/>
+
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySowersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySowersCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect152SimEffect152" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationDust"                Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomaly/ClassPopulationPlanetAffinitySowersCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySowersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySowersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySowersCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect153SimEffect153" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomaly/ClassPopulationPlanetAffinitySowersCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySowersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySowersCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySowersCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect154SimEffect154" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationIndustry"            Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <Modifier       TargetProperty="BonusPopulationPrestigeHissho"      Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount" TooltipHidden="true"/>
+
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect155SimEffect155" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"             Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositLuxury/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier       TargetProperty="PopulationCount"                    Operation="Addition"        Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySefalorosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect156SimEffect156" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositLuxury/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <Modifier       TargetProperty="BonusPopulationDustHissho"          Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositLuxury/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier       TargetProperty="PopulationCount"                    Operation="Addition"        Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySefalorosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+    <SimulationDescriptor Name="EventEffect157SimEffect157" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySefalorosCount" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationPrestigeHissho"      Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinitySefalorosCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinitySefalorosCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinitySefalorosCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect158SimEffect158" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,PopulationMajor"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,PopulationMajor" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMajor" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationPrestigeHissho"      Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,PopulationMajor"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,PopulationMajor" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,PopulationMajor" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect159SimEffect159" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetSizeLarge/ClassPopulationPlanetAffinityGalvransCount"/>
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetSizeHuge/ClassPopulationPlanetAffinityGalvransCount"/>
+        <!-- GUI Feedbacks -->
+         <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGalvransCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGalvransCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGalvransCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect160SimEffect160" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositStrategic/ClassPopulationPlanetAffinityGalvransCount"/>
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositStrategic/ClassPopulationPlanetAffinityGalvransCount"/>
+        <Modifier       TargetProperty="BonusPopulationPrestigeHissho"      Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetHasDepositStrategic/ClassPopulationPlanetAffinityGalvransCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGalvransCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGalvransCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGalvransCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect161SimEffect161" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGalvransCount"/>
+        <Modifier       TargetProperty="BonusPopulationFood"                Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityGalvransCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityGalvransCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityGalvransCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect162SimEffect162" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeCold/ClassPopulationPlanetAffinityKalTikMasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityKalTikMasCount" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationDustHissho"          Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetGameplayTypeCold/ClassPopulationPlanetAffinityKalTikMasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityKalTikMasCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect163SimEffect163" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationHappiness"           Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomaly/ClassPopulationPlanetAffinityKalTikMasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityKalTikMasCount" TooltipHidden="true"/>
+
+        <Modifier       TargetProperty="BonusPopulationDustHissho"                Operation="Addition"        Value="4" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet,PlanetAnomaly/ClassPopulationPlanetAffinityKalTikMasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityKalTikMasCount" TooltipHidden="true"/>
+
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="EventEffect164SimEffect164" Type="EventEffect">
+        <Modifier       TargetProperty="BonusPopulationPrestige"            Operation="Addition"        Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityKalTikMasCount"/>
+        <Modifier       TargetProperty="BonusPopulationScience"             Operation="Addition"        Value="2" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulationPlanetAffinityKalTikMasCount"/>
+        <!-- GUI Feedbacks -->
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassPopulation,ClassPopulationEmpireAffinityKalTikMasCount" TooltipHidden="true"/>
+        <Modifier		TargetProperty="PopulationCount"			        Operation="Addition"	    Value="0" Path="ClassEmpire/ClassColonizedStarSystem/ClassPopulation,ClassPopulationStarSystemAffinityKalTikMasCount" TooltipHidden="true"/>
+    </SimulationDescriptor>
+</Datatable>

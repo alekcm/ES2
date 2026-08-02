@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+    <!-- PopulationPlanet descriptors (provide bonuses to the population on the planet, and is used by the Collection bonuses/Boost bonuses). -->
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryManpower" Type="ClassPopulationPlanet">
+        <Modifier TargetProperty="BonusPopulationEmpireManpower"		Operation="Addition"    Value="1"   Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitPrimaryInfluenceOnHot01" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationPrestige"        Operation="Addition"    Value="1"   Path="FAKEFORGUI/./PlanetGameplayTypeHot"/>
+        <BinaryModifier TargetProperty="BonusPopulationPrestige"        Operation="Addition"    Left="1"    BinaryOperation="Multiplication" Right="$(PlanetIsHot)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitPrimaryHappinessAndHisshoAlternateMilitaryPower" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Value="2"   Path="ClassPopulation"/>
+        <Modifier       TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Value="20"  Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessSterileAndHisshoAlternateMilitaryPower" Type="ClassPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Value="3"   Path="FAKEFORGUI/./PlanetGameplayTypeMeager"  />
+        <Modifier       TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Value="20"  Path="FAKEFORGUI/./PlanetGameplayTypeMeager"  />
+        <BinaryModifier TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Left="3"    BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Left="20"   BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationPlanetModifiersTraitSecondaryHappinessFertileAndHisshoAlternateMilitaryPower" Type="ClassPopulationPlanet">
+        <Modifier TargetProperty="BonusPopulationHappiness"             Operation="Addition"    Value="4"   Path="FAKEFORGUI/./PlanetGameplayTypeTeeming"  />
+        <Modifier TargetProperty="BonusPopulationDefenseHissho"         Operation="Addition"    Value="20"  Path="FAKEFORGUI/./PlanetGameplayTypeTeeming"  />
+        <BinaryModifier TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Left="4"    BinaryOperation="Multiplication" Right="$(PlanetIsTeeming)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Left="20"   BinaryOperation="Multiplication" Right="$(PlanetIsTeeming)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+    <!-- PopulationEmpire descriptors (used to apply the effects of Population boosts, and poorly named. I'm sorry but that's a fact!). -->
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryManpower" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationEmpireManpower"  Operation="Addition"    Value="1"   Path="FAKEFORGUI/./ClassPopulation"/>
+        <BinaryModifier TargetProperty="BonusPopulationEmpireManpower"  Operation="Addition"    Left="1"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitPrimaryInfluenceOnHot01" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationPrestige"        Operation="Addition"    Value="1"   Path="FAKEFORGUI/./PlanetGameplayTypeHot"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			Operation="Addition"    Left="1"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationPrestige"        Operation="Addition"    Left="$(PopulationAuxValue1)" BinaryOperation="Multiplication" Right="$(PlanetIsHot)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitPrimaryHappinessAndHisshoAlternateMilitaryPower" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Value="2"   Path="FAKEFORGUI/./ClassPopulation"/>
+        <Modifier       TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Value="20"  Path="FAKEFORGUI/./ClassPopulation"/>
+        <BinaryModifier TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Left="2"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Left="20"   BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryHappinessSterileAndHisshoAlternateMilitaryPower" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Value="3"   Path="FAKEFORGUI/./PlanetGameplayTypeMeager"  />
+        <Modifier       TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Value="20"  Path="FAKEFORGUI/./PlanetGameplayTypeMeager"  />
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			Operation="Addition"    Left="3"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue2"			Operation="Addition"    Left="20"   BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Left="$(PopulationAuxValue1)"  BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Left="$(PopulationAuxValue2)" BinaryOperation="Multiplication" Right="$(PlanetIsMeager)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="WithPopulationPlanetModifiersTraitSecondaryHappinessFertileAndHisshoAlternateMilitaryPower" Type="WithPopulationPlanet">
+        <Modifier       TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Value="4"   Path="FAKEFORGUI/./PlanetGameplayTypeTeeming"  />
+        <Modifier       TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Value="20"  Path="FAKEFORGUI/./PlanetGameplayTypeTeeming"  />
+        <BinaryModifier TargetProperty="PopulationAuxValue1"			Operation="Addition"    Left="4"    BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="PopulationAuxValue2"			Operation="Addition"    Left="20"   BinaryOperation="Multiplication" Right="$(PopulationIsBoosted)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationHappiness"       Operation="Addition"    Left="$(PopulationAuxValue1)"  BinaryOperation="Multiplication" Right="$(PlanetIsTeeming)" TooltipHidden="true"/>
+        <BinaryModifier TargetProperty="BonusPopulationDefenseHissho"   Operation="Addition"    Left="$(PopulationAuxValue2)" BinaryOperation="Multiplication" Right="$(PlanetIsTeeming)" TooltipHidden="true"/>
+    </SimulationDescriptor>
+
+
+    <!-- Assimilated populations descriptors (applied on the Horatio-like empire's major PopulationPlanets). -->
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetManpowerHissho" Type="ClassPopulationAssimilated">
+        <Modifier TargetProperty="BonusPopulationEmpireManpower"	Operation="Addition"    Value="1"   Path="ClassPopulation"/>
+    </SimulationDescriptor>
+
+    <SimulationDescriptor Name="ClassPopulationAssimilatedPlanetInfluenceOnHot01" Type="ClassPopulationAssimilated">
+        <Modifier       TargetProperty="BonusPopulationPrestige"    Operation="Addition"    Value="1"   Path="ClassPopulation"/>
+    </SimulationDescriptor>
+    
+</Datatable>

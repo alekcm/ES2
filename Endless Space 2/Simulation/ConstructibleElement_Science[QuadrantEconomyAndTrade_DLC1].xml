@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/ScienceConstructibleElement.xsd">
+
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 2       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade25Vaulters" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade2" Category="CategoryTechnologyEconomyAndTrade" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyVaulters" Inverted="false">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyColonization11"/>
+        <SimulationDescriptorReference Name="TechnologyApproval5"/>
+        <SimulationDescriptorReference Name="TechnologyStrategicResourceGeneration1"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage2"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventReligiousTechnology"/>
+
+        <HelperVariable Name="AvailableAshPlanets"/>
+        <HelperVariable Name="HappinessVariable"/>
+        <HelperVariable Name="AvailableDepositStrategic3"/>
+        <HelperFormula>5 * $(AvailableDepositStrategic3) + 20 * $(HappinessVariable) + $(AvailableAshPlanets) * 1</HelperFormula>
+    </TechnologyDefinition>
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 3       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade11Vaulters" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade3" Category="CategoryTechnologyEconomyAndTrade" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyVaulters" Inverted="false">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyPortalUpgradeGrowth"/>
+        <SimulationDescriptorReference Name="TechnologyIndToScience"/>
+        <SimulationDescriptorReference Name="TechnologyIndToScienceAlt"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage3"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventIndustrialistTechnology"/>
+
+        <HelperVariable Name="ScienceVariable"/>
+        <HelperVariable Name="ImprovementsVariable"/>
+        <HelperFormula>5 * $(ImprovementsVariable) * $(ScienceVariable)</HelperFormula>
+    </TechnologyDefinition>
+
+    <!-- ###################################### -->
+    <!-- #######          STAGE 5       ####### -->
+    <!-- ###################################### -->
+
+    <TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade19Vaulters" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade5" Category="CategoryTechnologyEconomyAndTrade" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+        <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityGameplayTechnologyVaulters" Inverted="false">ClassEmpire,AffinityGameplayVaulters</PathPrerequisite>
+        <SimulationDescriptorReference Name="TechnologyPortalUpgradeOverpopulation"/>
+        <SimulationDescriptorReference Name="TechnologyIndustry7"/>
+        <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage5"/>
+        <SimulationDescriptorReference Name="TechnologyCounter"/>
+        <PopulationEvent Name="PopulationPoliticalEventIndustrialistTechnology"/>
+
+        <HelperVariable Name="AvailableDepositStrategic6"/>
+        <HelperVariable Name="IndustryPopulation"/>
+        <HelperVariable Name="PlanetsWithStrategic"/>
+        <HelperFormula>$(AvailableDepositStrategic6) * 5 + 2 * $(IndustryPopulation) + 2 * $(PlanetsWithStrategic)</HelperFormula>
+    </TechnologyDefinition>
+
+</Datatable>

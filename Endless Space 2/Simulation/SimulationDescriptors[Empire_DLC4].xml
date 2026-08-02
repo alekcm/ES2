@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <!-- Empire Types Definition -->
+  <SimulationDescriptor Name="EmpireTypeAcademy"  Type="EmpireType">
+    <Property Name="Stress"                     BaseValue="0"   IsSealed="true"/>
+    <Property Name="NetAcademyStress"           BaseValue="0"   MinValue="Negative"/>
+    <Property Name="AcademyLevel"               BaseValue="0"   IsSealed="true"/>
+    <Property Name="HasPopulationDiversityEffect"   BaseValue="1"/>
+
+    <Property Name="NetAcademyEmpireMoney" BaseValue="0"/>
+
+    <Property Name="NetAcademyEmpireShipMoney"            BaseValue="0"/>
+    <Property Name="AcademyEmpireShipMoneyStock"          IsSealed="true"/>
+    <Property Name="MinimumAcademyEmpireShipMoneyStock"   BaseValue="0"/>
+
+    <Property Name="NetAcademyEmpireImprovementMoney"            BaseValue="0"/>
+    <Property Name="AcademyEmpireImprovementMoneyStock"          IsSealed="true"/>
+    <Property Name="MinimumAcademyEmpireImprovementMoneyStock"   BaseValue="0"/>
+
+    <Property Name="NetAcademyEmpireDiplomacyMoney"            BaseValue="0"/>
+    <Property Name="AcademyEmpireDiplomacyMoneyStock"          IsSealed="true"/>
+    <Property Name="MinimumAcademyEmpireDiplomacyMoneyStock"   BaseValue="0"/>
+
+    <Property Name="AcademyFleetUpkeep"/>
+    <Property Name="MaxConcurrentFleetsMultiplier"        BaseValue ="1"/>
+
+    <Property Name="AggressivenessMultiplier"             BaseValue ="1"/>
+
+    <Property Name="ShipMoneyDistributionFactor"          BaseValue="0"/>
+    <Property Name="ImprovementMoneyDistributionFactor"   BaseValue="0"/>
+    <Property Name="DiplomacyMoneyDistributionFactor"     BaseValue="0"/>
+
+    <Property Name="CanColonize"                    BaseValue="0" MinValue="0" MaxValue="1"/>
+    <Property Name="HasNoColonizationCap"           BaseValue="1"/>
+    <Property Name="HasNoColonizationPeriod"        BaseValue="1"/>
+
+    <Property Name="ColonizationPeriod"             BaseValue="1" MinValue="1"/>
+
+    <Property Name="ColonizationPeriodFormulaNumerator"/>
+    <Property Name="ColonizationPeriodFormulaDenominator"/>
+    <Property Name="ColonizationCapFormulaNumerator"/>
+    <Property Name="ColonizationCapFormulaDenominator"/>
+
+    <!--Ceil(Max(Property(Context, @../EmpireTypeAcademy, ColonizationPeriod) - Property(Context, @../ClassEmpire, CurrentTurn) + 1,Property(Context, @../EmpireTypeAcademy, HasNoColonizationPeriod))/ Property(Context, @../EmpireTypeAcademy, ColonizationPeriod))-->
+    <BinaryModifier TargetProperty="ColonizationPeriodFormulaNumerator" Operation="Addition" Left="$(ColonizationPeriod)" BinaryOperation="Subtraction" Right="$(CurrentTurn)"/>
+    <Modifier TargetProperty="ColonizationPeriodFormulaNumerator" Operation="Addition" Value="1"/>
+    <Modifier TargetProperty="ColonizationPeriodFormulaNumerator" Operation="Maximum" Value="$(HasNoColonizationPeriod)"/>
+    <Modifier TargetProperty="ColonizationPeriodFormulaDenominator" Operation="Addition" Value="$(ColonizationPeriod)"/>
+
+    <BinaryModifier TargetProperty="CanColonize" Operation="Addition" Left="$(ColonizationPeriodFormulaNumerator)" BinaryOperation="Division" Right="$(ColonizationPeriodFormulaDenominator)"/>
+
+    <!--Ceil(Max(Property(Context, @../ClassEmpire, OverColonizationThreshold) - Property(Context, @../ClassEmpire, ColonizedStarSystemStateColonyCount) + 1,Property(Context, @../EmpireTypeAcademy, HasNoColonizationCap)) / (1 + Property(Context, @../ClassEmpire, OverColonizationThreshold)))-->
+    <BinaryModifier TargetProperty="ColonizationCapFormulaNumerator" Operation="Addition" Left="$(OverColonizationThreshold)" BinaryOperation="Subtraction" Right="$(ColonizedStarSystemStateColonyCount)"/>
+    <Modifier TargetProperty="ColonizationCapFormulaNumerator" Operation="Addition" Value="1"/>
+    <Modifier TargetProperty="ColonizationCapFormulaNumerator" Operation="Maximum" Value="$(HasNoColonizationCap)"/>
+    <BinaryModifier TargetProperty="ColonizationCapFormulaDenominator" Operation="Addition" Left="$(OverColonizationThreshold)" BinaryOperation="Addition" Right="1"/>
+
+    <BinaryModifier TargetProperty="CanColonize" Operation="Addition" Left="$(ColonizationCapFormulaNumerator)" BinaryOperation="Division" Right="$(ColonizationCapFormulaDenominator)"/>
+
+    <Modifier TargetProperty="NetAcademyEmpireMoney"  Operation="Subtraction" Value="$(AcademyFleetUpkeep)" Priority="1"/>
+    <!-- Counteract effect innate to their ships -->
+    <Modifier TargetProperty="CanInvade"                Operation="Force" Value="1" Path="ClassEmpire//ClassGarrisonFleet"/>
+    <Modifier TargetProperty="CannotContributeManpower" Operation="Force" Value="0" Path="ClassEmpire//ClassGarrisonFleet"/>
+    <Modifier TargetProperty="CannotBeModified"         Operation="Force" Value="0" Path="ClassEmpire//ClassGarrisonFleet"/>
+    <!-- Doesn't need to have colonization techs -->
+    <Modifier TargetProperty="PlanetInitialFIDSPenalty"        Operation="Force"     Value="0"    Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true"/>
+    <!-- Add property to academy systems -->
+    <Modifier TargetProperty="IsAcademyOwned" Operation="Force" Value="1" Path="ClassEmpire/ClassColonizedStarSystem" TooltipHidden="true"/>
+	<!-- Academy default system conversion immunity -->
+	<Modifier TargetProperty="InfluenceConversionGainMultiplier" Operation="Force" Value="0" Priority="1000" TooltipHidden="true"/>
+	<Modifier TargetProperty="IsImmuneToSystemConversion" Operation="Force" Value="1" Priority="1000"  Path="ClassEmpire" TooltipHidden="true" />
+  </SimulationDescriptor>
+
+  <!-- Academy Resource distribution -->
+  <SimulationDescriptor Name="AcademyResourceDistributionInactive" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"  Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"    Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"    Path="AcademyFactionDifficultyHard"  />
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2.5"    Path="AcademyFactionDifficultyEndless"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.25"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.75"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="40" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney"   Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyResourceDistributionPassive" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"  Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"    Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"    Path="AcademyFactionDifficultyHard"  />
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2.5"    Path="AcademyFactionDifficultyEndless"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.3"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.7"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="45" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney"   Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyResourceDistributionRoaming" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"  Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"    Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"    Path="AcademyFactionDifficultyHard"  />
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2.5"    Path="AcademyFactionDifficultyEndless"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.35"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.65"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="50" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney"   Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyResourceDistributionAggressive" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"  Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"    Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"    Path="AcademyFactionDifficultyHard"  />
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2.5"    Path="AcademyFactionDifficultyEndless"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.4"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.6"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="60" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney"   Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyResourceDistributionDeveloping" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"  Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"    Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"    Path="AcademyFactionDifficultyHard"  />
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2.5"    Path="AcademyFactionDifficultyEndless"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.45"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.55"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="70" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney"   Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyResourceDistributionMidGame" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"  Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"    Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"    Path="AcademyFactionDifficultyHard"  />
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2.5"    Path="AcademyFactionDifficultyEndless"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.5"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.5"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="80" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney"   Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyResourceDistributionLateGame" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"  Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"    Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"    Path="AcademyFactionDifficultyHard"  />
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2.5"    Path="AcademyFactionDifficultyEndless"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.55"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.45"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="90" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney"   Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyResourceDistributionAllOutWar" Type="AcademyResourceDistribution">
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="0.5"    Path="AcademyFactionDifficultyEasy"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="1"      Path="AcademyFactionDifficultyNormal"/>
+    <Modifier       TargetProperty="NetAcademyStress"                 Operation="Addition" Value="2"      Path="AcademyFactionDifficultyHard"  />
+
+    <Modifier       TargetProperty="ShipMoneyDistributionFactor"            Operation="Addition" Value="0.9"/>
+    <Modifier       TargetProperty="ImprovementMoneyDistributionFactor"     Operation="Addition" Value="0.0"/>
+    <Modifier       TargetProperty="DiplomacyMoneyDistributionFactor"       Operation="Addition" Value="0.1"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireMoney"        Operation="Addition" Left="100" BinaryOperation="Multiplication" Right="$(ColonizedStarSystemStateColonyCount)"/>
+
+    <BinaryModifier TargetProperty="NetAcademyEmpireShipMoney"        Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ShipMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireImprovementMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(ImprovementMoneyDistributionFactor)"/>
+    <BinaryModifier TargetProperty="NetAcademyEmpireDiplomacyMoney" Operation="Force" Left="$(NetAcademyEmpireMoney)" BinaryOperation="Multiplication" Right="$(DiplomacyMoneyDistributionFactor)"/>
+  </SimulationDescriptor>
+
+  <!-- Academy Reparations Simulation -->
+  <SimulationDescriptor Name="Reparations" Type="Reparations">
+    <Property Name="ReparationPoints" 			          BaseValue="0" IsSealed="true"/>
+    <Property Name="ReparationAnger" 			            BaseValue="0" IsSealed="true"/>
+    <Property Name="ReparationAngerDecayPerTurn" 			BaseValue="1"/>
+
+    <Modifier TargetProperty="ReparationAngerDecayPerTurn" Operation="Multiplication" Value="$(GameSpeedMultiplier)"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="MajorRelationWithAcademyWar" Type="MajorRelationWithAcademy">
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="MajorRelationWithAcademyHostile" Type="MajorRelationWithAcademy">
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="MajorRelationWithAcademyNeutral" Type="MajorRelationWithAcademy">
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="MajorRelationWithAcademyFriendly" Type="MajorRelationWithAcademy">
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="MajorRelationWithAcademyAlly" Type="MajorRelationWithAcademy">
+  </SimulationDescriptor>
+
+  <!-- Academy ground combat plans -->
+  <!-- Infantry has base weight of 10 -->
+  <SimulationDescriptor Name="AcademyTroopDistributionInactive" Type="AcademyTroopDistribution">
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyTroopDistributionPassive" Type="AcademyTroopDistribution">
+    <Modifier TargetProperty="TankManpowerWeight"     Operation="Addition" Value="10"/>
+
+    <Modifier TargetProperty="TankManpowerUnlocked"   Operation="Addition" Value="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyTroopDistributionRoaming" Type="AcademyTroopDistribution">
+    <Modifier TargetProperty="InfantryManpowerWeight" Operation="Addition" Value="20"/>
+    <Modifier TargetProperty="TankManpowerWeight"     Operation="Addition" Value="70"/>
+
+    <Modifier TargetProperty="TankManpowerUnlocked"   Operation="Addition" Value="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyTroopDistributionAggressive" Type="AcademyTroopDistribution">
+    <Modifier TargetProperty="InfantryManpowerWeight" Operation="Addition" Value="20"/>
+    <Modifier TargetProperty="TankManpowerWeight"     Operation="Addition" Value="40"/>
+    <Modifier TargetProperty="PlaneManpowerWeight"    Operation="Addition" Value="40"/>
+
+    <Modifier TargetProperty="TankManpowerUnlocked"   Operation="Addition" Value="1"/>
+    <Modifier TargetProperty="PlaneManpowerUnlocked"  Operation="Addition" Value="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyTroopDistributionDeveloping" Type="AcademyTroopDistribution">
+    <Modifier TargetProperty="InfantryManpowerWeight" Operation="Addition" Value="20"/>
+    <Modifier TargetProperty="TankManpowerWeight"     Operation="Addition" Value="40"/>
+    <Modifier TargetProperty="PlaneManpowerWeight"    Operation="Addition" Value="40"/>
+
+    <Modifier TargetProperty="TroopDamageBonuses"     Operation="Addition" Value="0.25"/>
+    <Modifier TargetProperty="TroopHealthBonuses"     Operation="Addition" Value="0.25"/>
+
+    <Modifier TargetProperty="TankManpowerUnlocked"   Operation="Addition" Value="1"/>
+    <Modifier TargetProperty="PlaneManpowerUnlocked"  Operation="Addition" Value="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyTroopDistributionMidGame" Type="AcademyTroopDistribution">
+    <Modifier TargetProperty="TankManpowerWeight"     Operation="Addition" Value="10"/>
+    <Modifier TargetProperty="PlaneManpowerWeight"    Operation="Addition" Value="10"/>
+
+    <Modifier TargetProperty="TroopDamageBonuses"     Operation="Addition" Value="0.5"/>
+    <Modifier TargetProperty="TroopHealthBonuses"     Operation="Addition" Value="0.5"/>
+
+    <Modifier TargetProperty="TankManpowerUnlocked"   Operation="Addition" Value="1"/>
+    <Modifier TargetProperty="PlaneManpowerUnlocked"  Operation="Addition" Value="1"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="AcademyTroopDistributionLateGame" Type="AcademyTroopDistribution">
+    <Modifier TargetProperty="TankManpowerWeight"     Operation="Addition" Value="10"/>
+    <Modifier TargetProperty="PlaneManpowerWeight"    Operation="Addition" Value="10"/>
+
+    <Modifier TargetProperty="TroopDamageBonuses"     Operation="Addition" Value="0.5"/>
+    <Modifier TargetProperty="TroopHealthBonuses"     Operation="Addition" Value="0.5"/>
+    <Modifier TargetProperty="ManpowerCostReduction"  Operation="Percent" Value="-0.15"/>
+
+    <Modifier TargetProperty="TankManpowerUnlocked"   Operation="Addition" Value="1"/>
+    <Modifier TargetProperty="PlaneManpowerUnlocked"  Operation="Addition" Value="1"/>
+  </SimulationDescriptor>
+</Datatable>

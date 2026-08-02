@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <SimulationDescriptor Name="ClassCitadelEncounter" Type="ClassCitadel">
+    <Property Name="DamageApplied" BaseValue="0" IsSealed="true"/>
+    <Property Name="DamageAppliedByAOE" BaseValue="0" IsSealed="true"/>
+    <Property Name="TotalShotSent" BaseValue="0" IsSealed="true"/>
+    <Property Name="TotalHitSent" BaseValue="0" IsSealed="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ClassCitadelWeaponEncounter" Type="ClassCitadelWeaponEncounter">
+    <Property Name="DamageApplied" BaseValue="0" IsSealed="true"/>
+    <Property Name="TotalShot" BaseValue="0" IsSealed="true"/>
+    <Property Name="TotalHit" BaseValue="0" IsSealed="true"/>
+
+    <Modifier   TargetProperty="Accuracy"  Operation="Addition" Value="$(Accuracy)"      Path="ClassCitadelWeaponEncounter/ClassCitadelSalvo" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlayEffectDamageIncreaseIfAlone"   Type="PlayEffect">
+    <Modifier TargetProperty="DamageBonusIfOneShip"                   Operation="Addition"   Value="0.5" Path="ClassGroup//ClassShip" TooltipOverride="%DamageBonusIfOneShipTitle"/>
+    <!-- Temp: The "both side" indication is add with an ExtendedGuiElement (until we have a real feedback)-->
+
+    <Modifier TargetProperty="FightersWithOffensiveStanceRatio" Operation="Addition" Value="1" Path="ClassGroup" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlayEffectDefenseIncreaseIfAlone"   Type="PlayEffect">
+    <Modifier TargetProperty="DefenseBonusIfOneShip"                  Operation="Addition"   Value="0.50" Path="ClassGroup//ClassShip" TooltipOverride="%DefenseBonusIfOneShipTitle"/>
+    <!-- Temp: The "both side" indication is add with an ExtendedGuiElement (until we have a real feedback)-->
+
+    <Modifier TargetProperty="FightersWithDefensiveStanceRatio" Operation="Addition" Value="1" Path="ClassGroup" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="ShipHasDiedFromKamikaze" Type="ShipHasDiedFromKamikaze">
+    <Property Name="ShipHasKamikazed" BaseValue="1"/>
+  </SimulationDescriptor>
+</Datatable>

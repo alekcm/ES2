@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Simulation.SimulationDescriptor.xsd">
+
+  <!-- STAR SYSTEM IMPROVEMENTS -->
+
+  <!-- FOOD PLANETARY IMPROVEMENT -->
+
+  <SimulationDescriptor Name="PlanetImprovementFood1" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetFood"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetFood"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeTeeming" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementFood2" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetFood"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetFood"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeTeeming" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementFood3" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetFood"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetFood"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeTeeming" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <!-- INDUSTRY PLANETARY IMPROVEMENT -->
+
+  <SimulationDescriptor Name="PlanetImprovementIndustry1" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetIndustry"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetIndustry"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeHot" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementIndustry2" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetIndustry"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetIndustry"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeHot" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementIndustry3" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetIndustry"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetIndustry"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeHot" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <!-- SCIENCE PLANETARY IMPROVEMENT -->
+
+  <SimulationDescriptor Name="PlanetImprovementScience1" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetScience"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetScience"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeCold" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementScience2" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetScience"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetScience"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeCold" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementScience3" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetScience"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetScience"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeCold" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <!-- DUST PLANETARY IMPROVEMENT -->
+
+  <SimulationDescriptor Name="PlanetImprovementDust1" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetDust"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetDust"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeMeager" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementDust2" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetDust"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetDust"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeMeager" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementDust3" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetDust"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+    <BinaryModifier TargetProperty="PlanetDust"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet,PlanetGameplayTypeMeager" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <!-- INFLUENCE PLANETARY IMPROVEMENT -->
+
+  <SimulationDescriptor Name="PlanetImprovementInfluence1" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetPrestige"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementInfluence2" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetPrestige"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementInfluence3" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetPrestige"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <!-- RESOURCES PLANETARY IMPROVEMENT -->
+
+  <SimulationDescriptor Name="PlanetImprovementResource1" Type="PlanetImprovement">
+    <Modifier TargetProperty="ResourceBonus"       Operation="Addition" Value="1"     Path="./ClassColonizedPlanet/ClassResourceDeposit"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementResource2" Type="PlanetImprovement">
+    <Modifier TargetProperty="ResourceBonus"       Operation="Addition" Value="2"     Path="./ClassColonizedPlanet/ClassResourceDeposit"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementResource3" Type="PlanetImprovement">
+    <Modifier TargetProperty="ResourceBonus"       Operation="Addition" Value="3"     Path="./ClassColonizedPlanet/ClassResourceDeposit"/>
+  </SimulationDescriptor>
+
+  <!-- HISSHOS -->
+
+  <SimulationDescriptor Name="PlanetImprovementFIDS1" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetFIDS"    Operation="Addition" Left="1" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementFIDS2" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetFIDS"    Operation="Addition" Left="2" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementFIDS3" Type="PlanetImprovement">
+    <BinaryModifier TargetProperty="PlanetFIDS"    Operation="Addition" Left="3" BinaryOperation="Multiplication" Right="$(Population)" Path="./ClassColonizedPlanet" SearchValueFromPath="true"/>
+  </SimulationDescriptor>
+
+  <!-- TEMPLARS -->
+
+  <!-- TEMPLES -->
+  <SimulationDescriptor Name="PlanetImprovementTemple1Descriptor" Type="PlanetImprovement">
+
+    <Property Name="TemplePlanetPopulation" BaseValue="0"/>
+
+    <Modifier TargetProperty="PlanetInitialFIDSBonus"       Operation="Force"     Value="0" Path="./ClassColonizedPlanet" TooltipOverride="%PlanetImprovementTemple1TooltipOverride"/>
+
+    <Modifier TargetProperty="NumberOfTemples"         Operation="Addition"    Value="1"   Path="../ClassColonizedStarSystem" TooltipHidden="true"/>
+    <Modifier TargetProperty="TempleRelics"            Operation="Addition"    Value="1"   Path="../ClassEmpire"  TooltipHidden="true"/>
+    <Modifier TargetProperty="ResultingResearchRelics" Operation="Subtraction" Value="1"   Path="../ClassEmpire"  TooltipHidden="true" />
+    <BinaryModifier TargetProperty="PlanetInitialPrestige" Operation="Addition" Left="$(TempleScienceToInfluenceFactor)" BinaryOperation="Multiplication" Right="$(PlanetInitialScience)" Path="./ClassColonizedPlanet" SearchValueFromPath="true" TooltipHidden="true"/>
+
+    <Modifier TargetProperty="HasTemple" Operation="Addition" Value="1" Path="./ClassColonizedPlanet" TooltipHidden="true"/>
+
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="BuildingStarSystemImprovementTempleRelicCost" Type="BuildingStarSystemImprovement">
+    <!--Applied only when in build queue-->
+    <Modifier TargetProperty="TempleRelics"            Operation="Addition"    Value="1"   Path="../ClassEmpire" Priority="-1"/>
+    <Modifier TargetProperty="ResultingResearchRelics" Operation="Subtraction" Value="1"   Path="../ClassEmpire" TooltipHidden="true" />
+  </SimulationDescriptor>
+
+  <!-- SCIENCE PLANETARY IMPROVEMENT FOR TEMPLARS -->
+
+  <SimulationDescriptor Name="PlanetImprovementTemplarsScience1" Type="PlanetImprovement">
+    <Modifier       TargetProperty="SystemResearch"     Operation="Addition"     Value="10"  Path="../ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementTemplarsScience2" Type="PlanetImprovement">
+    <Modifier       TargetProperty="SystemResearch"     Operation="Addition"     Value="20"  Path="../ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="PlanetImprovementTemplarsScience3" Type="PlanetImprovement">
+    <Modifier       TargetProperty="SystemResearch"     Operation="Addition"     Value="30"  Path="../ClassColonizedStarSystem"/>
+  </SimulationDescriptor>
+</Datatable>

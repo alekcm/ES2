@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+  <!-- TutorialGuiElements work like QuestGuiElements, except they must provide a title & description for the pop-up, and can highlight stuff -->
+  <!-- PopupTitle and PopupDescription are used for the top-right corner of the screen (looks like the Pinned quest panel, but isn't) -->
+  <!-- Highlights allow to highlight a thing in the Gui. Each element is set by code/gui, so you must ask a programmer to include a new one -->
+  <!-- Current existing highlightable elements: -->
+  <!-- All FleetActionButtons, formatted like 'FleetsScreen_<ActionNameInXml>Button' (without the <>) -->
+  <!-- All Control banner buttons, formatted like 'ControlBanner_<ScreenTitle>Toggle' (without the <>) -->
+  <!-- SenateScreen_ActiveLawsPanel, SenateScreen_VoteLawButton (in Senate screen & active laws modal window) -->
+  <!-- AcademyScreen_HealButton, AcademyScreen_InspectButton, AcademyScreen_AssignToFleetButton, , AcademyScreen_AssignToSystemButton, AcademyScreen_CreateFleetButton, AcademyScreen_UnassignButton -->
+  <!-- BattleSetupNotification_Arena, BattleSetupNotification_Play, BattleSetupNotification_AlliedFleets, BattleSetupNotification_EnemyFleets, BattleSetupNotification_StartBattle -->
+  <!-- Minor interaction button in system label, named 'StarSystemLabelMinorInteractionButton $LocalizationVar' -->
+  <!-- Fleet line in fleet screen, named 'FleetsScreenLine $LocalizationVar' -->
+  <!-- Fleet line in fleet selection modal window (eg. for hero assignment), named 'FleetSelectionLine $LocalizationVar' -->
+  <!-- System line in system selection modal window (eg. for hero assignment), named 'SystemSelectionLine $LocalizationVar' -->
+
+    <TutorialGuiElement Name="Tutorial_Vaulters01">       
+        <PopupTitle>%Tutorial_Vaulters01Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_Vaulters01Popup-Description</Description>           
+        </PopupPage>
+        <PopupPage>
+            <Description>%Tutorial_Vaulters02Popup-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Vaulters03">        
+        <PopupTitle>%Tutorial_Vaulters03Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_Vaulters03Popup-Description</Description>
+            <Highlight Name="FleetsScreen_ColonizeFleetActionButton" Type="Interactive"/>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_Vaulters04">       
+        <PopupTitle>%Tutorial_Vaulters04Popup-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_Vaulters04Popup-Description</Description>
+            <Highlight Name="StarSystemConstructibleItem_StarSystemConstructiblePanel StarSystemImprovementPortal" Type="Interactive"/>
+        </PopupPage>
+        
+    </TutorialGuiElement>
+    
+    <TutorialGuiElement Name="Tutorial_FreeMove03">
+        <PopupTitle>%Tutorial_FreeMove03-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_FreeMove03-Description</Description>
+        </PopupPage>
+    </TutorialGuiElement>
+
+    <TutorialGuiElement Name="Tutorial_FreeMove04">
+        <PopupTitle>%Tutorial_FreeMove04-Title</PopupTitle>
+        <PopupPage>
+            <Description>%Tutorial_FreeMove04-Description</Description>           
+        </PopupPage>
+    </TutorialGuiElement>
+
+
+
+
+</Datatable>

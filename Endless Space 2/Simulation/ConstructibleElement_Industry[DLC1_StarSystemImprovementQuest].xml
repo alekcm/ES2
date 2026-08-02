@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/IndustryConstructibleElement.xsd">
+
+    
+    
+    <!--##### QUEST BUILDINGS ####-->
+  
+    <!--########## VAULTERS ##########-->
+
+    <!--##### DEFENSE BUILDINGS ####-->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementQuestVaulters05" SubCategory="SubCategoryDefense" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Military" /> 
+        <Cost ResourceName="SystemProduction">840</Cost>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedVaultersQuest05-Reward</PathPrerequisite>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementQuestVaulters05,!FastForwardedImprovement</PathPrerequisite>
+
+        <DownloadableContentPrerequisite Flags="Prerequisite,Edition">DLCVaulters</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementQuestVaulters05" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+        <SimulationDescriptorReference Name="DefenseConstruction" />
+    </StarSystemImprovementDefinition>
+
+
+     <!--##### SCIENCE BUILDINGS ####-->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementQuestVaulters06" SubCategory="SubCategoryScience" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Science" />
+        <Cost ResourceName="SystemProduction">840</Cost>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedVaultersQuest06-Reward</PathPrerequisite>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementQuestVaulters06,!FastForwardedImprovement</PathPrerequisite>
+
+        <DownloadableContentPrerequisite Flags="Prerequisite,Edition">DLCVaulters</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementQuestVaulters06" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementQuestVaulters09"    Category="CategoryStarSystemImprovementUnique" SubCategory="SubCategoryIndustry" ScoreProvider="StarSystemImprovementUniqueBuilt">
+        <SupervisorGain   Name="Military"     />
+        <QueuedSimulationDescriptorReference Name="BuildingStarSystemImprovementQuestVaulters09"/>
+        <Cost ResourceName="SystemProduction">3510</Cost>      
+        <Cost ResourceName="Strategic3" Instant="true">60</Cost>
+        <Cost ResourceName="Strategic4" Instant="true">60</Cost>
+        <Cost ResourceName="Strategic5" Instant="true">10</Cost>
+        <Cost ResourceName="Strategic6" Instant="true">10</Cost>
+        <PathPrerequisite       Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedVaultersQuest09-Reward</PathPrerequisite>
+        <PathPrerequisite                           Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementQuestVaulters09,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite       Inverted="true"     Flags="Prerequisite,Discard">../ClassEmpire/Uniques,StarSystemImprovementQuestVaulters09</PathPrerequisite>
+        <InterpreterPrerequisite Inverted="true"    Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire/ClassStarSystem,BuildingStarSystemImprovementQuestVaulters09') and not(Path(Context,@'ClassStarSystem,BuildingStarSystemImprovementQuestVaulters09'))</InterpreterPrerequisite>
+
+     <DownloadableContentPrerequisite Flags="Prerequisite,Edition">DLCVaulters</DownloadableContentPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementQuestVaulters09" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage4High" />
+        <SimulationDescriptorReference Name="StarSystemImprovementOncePerEmpire" />
+       
+        <UniqueTags>StarSystemImprovementQuestVaulters09</UniqueTags>
+    </StarSystemImprovementDefinition>
+
+    <!--########################-->
+    <!--######## DEEDS #########-->
+    <!--########################-->
+
+    <!-- StarSystem Improvement Science -->
+    <StarSystemImprovementDefinition Name="StarSystemImprovementDeeds01" SubCategory="SubCategoryDefense" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Military" />
+        <Cost ResourceName="SystemProduction">560</Cost>
+        <Cost ResourceName="Strategic2" Instant="true">5</Cost>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestMilitary_Stage3B</PathPrerequisite>
+        <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDeeds01,!FastForwardedImprovement</PathPrerequisite>
+
+        <SimulationDescriptorReference Name="StarSystemImprovementDeeds01" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage2Normal" />
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementDeeds02" Category="CategoryStarSystemImprovementUnique" SubCategory="SubCategoryIndustry" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Industry" />
+        <QueuedSimulationDescriptorReference Name="BuildingStarSystemImprovementDeeds02"/>
+        <Cost ResourceName="SystemProduction">2340</Cost>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestEconomy_Stage3A</PathPrerequisite>
+        <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDeeds02,!FastForwardedImprovement</PathPrerequisite>
+        <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">../ClassEmpire/Uniques,StarSystemImprovementDeeds02</PathPrerequisite>
+        <InterpreterPrerequisite    Inverted="true"     Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire/ClassStarSystem,BuildingStarSystemImprovementDeeds02') and not(Path(Context,@'ClassStarSystem,BuildingStarSystemImprovementDeeds02'))</InterpreterPrerequisite>
+
+        <SimulationDescriptorReference Name="StarSystemImprovementDeeds02" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3High" />
+        <SimulationDescriptorReference Name="StarSystemImprovementOncePerEmpire" />
+        <UniqueTags>StarSystemImprovementDeeds02</UniqueTags>
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementDeeds03" SubCategory="SubCategoryInfluence" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Dust" />
+        <Cost ResourceName="SystemProduction">840</Cost>
+        <Cost ResourceName="Strategic3" Instant="true">25</Cost>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestEconomy_Stage3B</PathPrerequisite>
+        <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDeeds03,!FastForwardedImprovement</PathPrerequisite>
+
+        <SimulationDescriptorReference Name="StarSystemImprovementDeeds03" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+    </StarSystemImprovementDefinition>
+
+    <StarSystemImprovementDefinition Name="StarSystemImprovementDeeds04" SubCategory="SubCategoryDust" ScoreProvider="StarSystemImprovementBuilt">
+        <SupervisorGain Name="Dust" />
+        <Cost ResourceName="SystemProduction">840</Cost>
+        <Cost ResourceName="Strategic4" Instant="true">25</Cost>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+        <PathPrerequisite           Inverted="false"    Flags="Prerequisite,Discard">../ClassEmpire/ClassQuests,CompletedQuestEconomy_Stage3C</PathPrerequisite>
+        <PathPrerequisite           Inverted="true"     Flags="Prerequisite,Discard">ClassColonizedStarSystem/StarSystemImprovementDeeds04,!FastForwardedImprovement</PathPrerequisite>
+
+        <SimulationDescriptorReference Name="StarSystemImprovementDeeds04" />
+        <SimulationDescriptorReference Name="DustBuilding" />
+        <SimulationDescriptorReference Name="StarSystemImprovementUpkeepStage3Normal" />
+    </StarSystemImprovementDefinition>
+
+</Datatable>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EntityActionDefinition.xsd">
+
+  <!-- Fleet actions. -->
+  <InvisibilityFleetAction Name="InvisibilityFleetAction">
+    <EntityPrerequisites Location="Self">
+      <InterpreterPrerequisite Flags="Prerequisite,Discard,CheckedOnFleetSpawn,CheckedOnFleetModification">Property(Context,AntiVisionStrengthForModule) ge 1</InterpreterPrerequisite>
+      <PathPrerequisite Inverted="true"  Flags="MotherShipAttached">FleetActionMothershipAttached</PathPrerequisite>
+      <PathPrerequisite Inverted="true"  Flags="Prerequisite,ActionInProgress,CheckedOnFleetSpawn">InvisibilityFleetAction</PathPrerequisite>
+      <PathPrerequisite Inverted="true"  Flags="EncounterInProgress">FleetActionAttack</PathPrerequisite>
+      <PathPrerequisite Inverted="true"  Flags="FleetIsBusy">FleetActionLogistics</PathPrerequisite>
+      <PathPrerequisite Inverted="true"  Flags="FleetIsBusy">FleetActionRooting</PathPrerequisite>
+      <PathPrerequisite Inverted="true"  Flags="IsCollectingRelics">FleetActionCollectingRelics</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="InvisibilityFleetAction"/>
+    </EntityModifiers>
+
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard">DLCUC</DownloadableContentPrerequisite>
+
+    <!-- Suspendable descriptors are removed on attack, and restored afterwards -->
+    <SuspendableDescriptor Name="InvisibilityFleetActionAddAntivision"/>
+
+  </InvisibilityFleetAction>
+
+  <LaunchDetectionProbeFleetAction Name="LaunchDetectionProbeFleetAction" FeedbackDuration="1.5" DelayAfterFeedback="1">
+
+    <EntityPrerequisites Location="Self">
+      <!-- Hide button if module not equipped. -->
+      <InterpreterPrerequisite Flags="Discard" Inverted="false">Property(Context, MaximumShipDetectionProbeStock) gt 0</InterpreterPrerequisite>
+
+      <!-- Grey out if under enemy influence. -->
+      <PathPrerequisite Flags="UnderEnemyInfluence" Inverted="true">FleetInfluenceStateHostile</PathPrerequisite>
+
+      <PathPrerequisite Inverted="true" Flags="EncounterInProgress">../FleetActionAttack</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">../FleetActionGroundBattle</PathPrerequisite>
+      <PathPrerequisite Inverted="true" Flags="FleetIsBusy">../FleetActionLaunchingDetectionProbe</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="FleetActionLaunchingDetectionProbe"/>
+      <SimulationAlteration DescriptorReference="FleetActionBusy"/>
+    </EntityModifiers>
+
+    <DownloadableContentPrerequisite Flags="Discard">DLCUC</DownloadableContentPrerequisite>
+
+    <CancelActions Flags="CancelOnAnything,CancelOnMiningProbeLaunch" SameContext="false" SameInitiator="true"/>
+
+    <MovementCostFormula Flags="NoDetectionProbeInStock">
+      <Formula>Clamp01(Property(Context, MaximumShipDetectionProbeStock)) * (1 / Max(1, Property(Context, MaximumShipDetectionProbeStock))) * Property(Context, MaximumMovement)</Formula>
+      <CostOnShipWithLowestMovementImpact ResourceName="ShipDetectionProbe" Instant="true">1</CostOnShipWithLowestMovementImpact>
+    </MovementCostFormula>
+
+  </LaunchDetectionProbeFleetAction>
+
+
+  <!-- System traitors actions. -->
+  <ClearPopulationTraitorStatusSystemAction Name="RemoveTraitorsSystemAction" Duration="5" TraitorsRemovedPerTick="1">
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+      <PathPrerequisite Flags="ActionInProgress" Inverted="true">StarSystemActionRemoveTraitors</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="StarSystemActionRemoveTraitors"/>
+    </EntityModifiers>
+
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+  </ClearPopulationTraitorStatusSystemAction>
+
+  <DestroyTraitorPopulationsSystemAction Name="KillTraitorsSystemAction">
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+      <PathPrerequisite Flags="AlreadyRemovingTraitors" Inverted="true">StarSystemActionRemoveTraitors</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="StarSystemActionKillTraitors"/>
+    </EntityModifiers>
+
+    <!--<Cost ResourceName="EmpireEmpirePoint">50</Cost>-->
+    <CustomCost Instant="true" ResourceName="EmpireEmpirePoint">50 + 25 * Property(Context, Population)</CustomCost>
+
+    <TechnologyPrerequisite Flags="Prerequisite,Technology,Discard">TechnologyDust3</TechnologyPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+  </DestroyTraitorPopulationsSystemAction>
+
+  <TimedSystemTraitorsAction Name="RevealTraitorsSystemAction" Duration="5">
+
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="Discard">ColonizedStarSystemStateColony</PathPrerequisite>
+      <PathPrerequisite Flags="ActionInProgress" Inverted="true">StarSystemActionRevealTraitors</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="StarSystemActionRevealTraitors"/>
+    </EntityModifiers>
+
+    <!--<Cost ResourceName="EmpireEmpirePoint">50</Cost>-->
+    <CustomCost Instant="true" ResourceName="EmpireEmpirePoint">50 + 25 * Property(Context, Population)</CustomCost>
+
+    <TechnologyPrerequisite Flags="Prerequisite,Technology,Discard">TechnologyTrade3</TechnologyPrerequisite>
+    <DownloadableContentPrerequisite Flags="Prerequisite,Discard,UnlockAvailability">DLCUC</DownloadableContentPrerequisite>
+  </TimedSystemTraitorsAction>
+
+
+  <!-- Minor empire actions. -->
+  <GhostifyEmpireAction Name="GhostifyEmpireAction" HidePanelOnClick="true">
+    <CustomCost ResourceName="EmpireEmpirePoint" Instant="true">Property(StockLocation,@ClassEmpire,DiplomacyCostReduction) * 100 * Property(StockLocation,@ClassEmpire,PeacefulTreatyCostReduction) * Property(StockLocation,@ClassEmpire,SystemCount)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,Discard">ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+    <InterpreterPrerequisite Flags="Prerequisite,Discard">Path(Context,@'../ClassEmpire,!FactionTraitEternalWar') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00') or Path(Context,@'../ClassEmpire,FactionTraitEternalWar/ClassSenate/ClassLaw,LawEffectP03L00')</InterpreterPrerequisite>
+
+    <TechnologyPrerequisite Flags="Technology" UnlockHidden="true">TechnologyMinorFactionsGameplay</TechnologyPrerequisite>
+
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,Discard" Hidden="true" State="DiplomaticRelationStateMinorUnknown"/>
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,Discard" Hidden="true" State="DiplomaticRelationStateMinorAdvancedBrainwashed"/>
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,Discard" Hidden="true" State="DiplomaticRelationStateMinorAdvancedAligned"/>
+    <StatePrerequisite Inverted="true" Flags="Prerequisite,Disable,CannotDoThisWhenAtWar" Hidden="true" State="DiplomaticRelationStateMinorAdvancedWar"/>
+
+    <RelationInterpreterPrerequisite Flags="Prerequisite,Discard">Property(Context, @'ClassMinorRelationWithMajor', RelationPoint, true) ge 100</RelationInterpreterPrerequisite>
+
+    <MinorEmpireInterpreterPrerequisite Flags="Disable,OwnershipType">$(OwnershipType) lt 2 and $(IsOwner) eq 1</MinorEmpireInterpreterPrerequisite>
+    <PopulationEventOnSelf>PopulationPoliticalEventMinorEmpirePurge</PopulationEventOnSelf>
+    <ScoreProviderEventOnSelf>MinorEmpireAssimilated</ScoreProviderEventOnSelf>
+  </GhostifyEmpireAction>
+
+  <GhostifyEmpireAction Name="GhostifyEmpireActionViaQuest" HidePanelOnClick="true">
+    <InterpreterPrerequisite Flags="PrerequisiteWhichCanOnlyFailExceptIfStartedViaTheQuestsSpecialOrder">false</InterpreterPrerequisite>
+  </GhostifyEmpireAction>
+
+
+  <!-- Displacement. -->
+  <DisplacementSystemAction Name="DisplacementSystemAction">
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="StarSystemStateIsntColony">ColonizedStarSystemStateColony</PathPrerequisite>
+      <PathPrerequisite Flags="GroundBattleInProgressOnHomeSystem" Inverted="true">GroundBattleInProgress</PathPrerequisite>
+      <PathPrerequisite Flags="Prerequisite,Discard">./ClassEmpire,AffinityGameplayUmbralChoir</PathPrerequisite>
+      <PathPrerequisite Flags="Disable,SystemIsBlackout" Inverted="true">TemporaryEffectSystemBlackout</PathPrerequisite>
+    </EntityPrerequisites>
+
+    <DestructionPercentageFormula>($(BeaconMaxChargeTime) - $(BeaconCurrentChargeTime)) / $(BeaconMaxChargeTime)</DestructionPercentageFormula>
+    <DisplacementEffectDefinitionReference Name="DisplacementEffectProcessingPowerMalus"/>
+  </DisplacementSystemAction>
+
+  <DecolonizeGhostAction Name="DecolonizeGhostAction">
+    <EntityPrerequisites Location="Self">
+      <PathPrerequisite Flags="ActionInProgress" Inverted="true">GhostActionDecolonize</PathPrerequisite>
+    </EntityPrerequisites>
+    <EntityModifiers Location="Self">
+      <SimulationAlteration DescriptorReference="GhostActionDecolonize"/>
+    </EntityModifiers>
+  </DecolonizeGhostAction>
+</Datatable>

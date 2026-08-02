@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+
+    <!-- ########################################## -->
+    <!-- ######        MAJOR FACTIONS        ###### -->
+    <!-- ########################################## -->
+
+    <!-- Templars -->
+    <FactionAffinityMapping Name="AffinityMappingTemplars" SubCategory="MajorFactionAffinityMapping" Hidden="false" Custom="true" Cost="5">
+      <Command Name="RecruitHero"                     Arguments="HeroTemplars01"/>
+
+      <SimulationDescriptorReference Name="AffinityMappingTemplars" />
+
+      <ShipDesign Abstract="SuperColonizer"    ShipDesign="Templars_SuperColonizer"/>
+      <ShipDesign Abstract="Colonizer"         ShipDesign="Templars_Colonizer"/>
+      <ShipDesign Abstract="Explorer"          ShipDesign="Templars_Explorer"/>
+      <ShipDesign Abstract="ExplorerShipBound" ShipDesign="Templars_ExplorerShipBound"/>
+      <ShipDesign Abstract="Leecher"           ShipDesign="Templars_Leecher"/>
+      <ShipDesign Abstract="RootCreator"       ShipDesign="Templars_RootCreator"/>
+      <ShipDesign Abstract="SmallAttack"       ShipDesign="Templars_SmallAttack"/>
+      <ShipDesign Abstract="SmallSupport"      ShipDesign="Templars_SmallSupport"/>
+      <ShipDesign Abstract="MediumAttack"      ShipDesign="Templars_MediumAttack"/>
+      <ShipDesign Abstract="MediumDefense"     ShipDesign="Templars_MediumDefense"/>
+      <ShipDesign Abstract="Invader"           ShipDesign="Templars_Invader"/>
+      <ShipDesign Abstract="LargeCarrier"      ShipDesign="Templars_LargeCarrier"/>
+      <ShipDesign Abstract="Mothership"        ShipDesign="Templars_Mothership"/>
+
+      <ShipDesign Abstract="ScienceJuggernaut"    ShipDesign="Juggernauts_ScienceJuggernaut"/>
+      <ShipDesign Abstract="MilitaryJuggernaut"   ShipDesign="Juggernauts_MilitaryJuggernaut"/>
+      <ShipDesign Abstract="SupportJuggernaut"    ShipDesign="Juggernauts_SupportJuggernaut"/>
+      <ShipDesign Abstract="Battleship"           ShipDesign="Juggernauts_Battleship"/>
+      <ShipDesign Abstract="Obliterator"          ShipDesign="Juggernauts_Obliterator"/>
+
+    </FactionAffinityMapping>
+
+  <!-- Academy -->
+  <FactionAffinityMapping Name="AffinityMappingAcademyEmpire" SubCategory="AcademyFactionAffinityMapping" Hidden="false" Cost="0">
+    <SimulationDescriptorReference Name="AffinityMappingAcademyEmpire" />
+  </FactionAffinityMapping>
+  
+  <!-- Oraculars -->
+  <FactionAffinityMapping Name="AffinityMappingMinorOraculars" SubCategory="MinorFactionAffinityMapping" Hidden="false" Cost="0">
+    <SimulationDescriptorReference Name="AffinityMappingMinorOraculars" />
+  </FactionAffinityMapping>
+
+</Datatable>
