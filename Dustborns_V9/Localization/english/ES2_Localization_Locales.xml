@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../../Schemas/Amplitude.Unity.Localization.LocalizationDatatableElement.xsd">
+    <LocalizationPair Name="%FactionDustbornsTitle">Пылерождённые</LocalizationPair>
+    <LocalizationPair Name="%FactionDustbornsDescription">2 Пылерождённых +1 Безвольный на старте. Пылерождённые: x0.5 промышленности, +8 пыли на плодородной (Teeming) и +4 на средней (не Meager) только пока планета не истощена, еда->пыль постоянно 25%. Безвольные: без политики, +3/+6 промышленности, без науки/влияния. Конверсия минора в безвольного +300 пыли, распыление пылерождённого +100 пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%AffinityGameplayDustbornsTitle">Пылерождённые + Безвольные</LocalizationPair>
+    <LocalizationPair Name="%AffinityGameplayDustbornsDescription">x0.5 пром у Пылерождённых, +8/+4 пыли через теги планеты, еда в пыль постоянна, безвольные без политики.</LocalizationPair>
+
+    <LocalizationPair Name="%AffinityDustbornsTitle">Пылерождённые</LocalizationPair>
+    <LocalizationPair Name="%AffinityDustbornsDescription">Разумная пыль.</LocalizationPair>
+
+    <LocalizationPair Name="%AffinityMappingDustbornsTitle">Пылевые Корабли</LocalizationPair>
+    <LocalizationPair Name="%AffinityMappingDustbornsDescription">Корабли из пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%PopulationDustbornsTitle">Пылерождённый</LocalizationPair>
+    <LocalizationPair Name="%PopulationDustbornsDescription">x0.5 промышленности, +8 пыли на плодородной (Teeming) неистощённой, +4 на средней (не Meager) неистощённой, +1 истощения, еда->пыль 25% постоянно.</LocalizationPair>
+
+    <LocalizationPair Name="%PopulationBezvolnyTitle">Безвольный</LocalizationPair>
+    <LocalizationPair Name="%PopulationBezvolnyDescription">+3 промышленности (+6 на истощённой), без науки/влияния, без политики, не растёт.</LocalizationPair>
+
+    <LocalizationPair Name="%PopulationModifiersTraitDustbornsTitle">Пылевая Форма Жизни</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitDustbornsDescription">x0.5 пром, +8/+4 пыли через теги.</LocalizationPair>
+
+    <LocalizationPair Name="%PopulationModifiersTraitDustbornsPrimaryTitle">Пылевое Пожирание</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitDustbornsPrimaryDescription">+1 истощения, x0.5 пром, +8 пыли на Teeming неистощённой, +4 на не Meager неистощённой.</LocalizationPair>
+
+    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryTitle">Безвольная Покорность</LocalizationPair>
+    <LocalizationPair Name="%PopulationModifiersTraitBezvolnyPrimaryDescription">+3 пром (+6 на истощённой), -100% наука/влияние, без политики.</LocalizationPair>
+
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsTitle">Сконструировать Пылерождённого</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsDescription">Стоимость (100+75*население)*скорость. Быстрая x0.5.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationDustbornsEffect">Покупает Пылерождённого.</LocalizationPair>
+
+    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsTitle">Распылить Пылерождённого</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsDescription">Даёт +100 пыли.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementSellMajorPopulationDustbornsEffect">+100 пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyTitle">Переварить в Безвольного</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyDescription">Минора в Безвольного +300 пыли, требует Пылерождённого.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyEffect">+300 пыли и 1 Безвольный.</LocalizationPair>
+
+    <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyMajorTitle">Переварить Мажора в Безвольного</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyMajorDescription">Мажора в Безвольного +300.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementConvertToBezvolnyMajorEffect">+300 пыли.</LocalizationPair>
+
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationBezvolnyTitle">Сконструировать Безвольного</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationBezvolnyDescription">Собрать безвольного за пыль. Дешевле пылерождённого.</LocalizationPair>
+    <LocalizationPair Name="%StarSystemImprovementCreateMajorPopulationBezvolnyEffect">Покупает Безвольного.</LocalizationPair>
+
+    <LocalizationPair Name="%PlanetDepletionPerTurnTitle">Истощение</LocalizationPair>
+    <LocalizationPair Name="%SystemMoneyFromGrowthConversionTitle">Конверсия еды в пыль</LocalizationPair>
+    <LocalizationPair Name="%SystemProductionFromGrowthTitle">Конверсия еды</LocalizationPair>
+
+    <LocalizationPair Name="%ClassPopulationEmpireAffinityDustbornsTitle">Пылерождённые</LocalizationPair>
+    <LocalizationPair Name="%ClassPopulationStarSystemAffinityDustbornsTitle">Пылерождённые</LocalizationPair>
+    <LocalizationPair Name="%ClassPopulationPlanetAffinityDustbornsCountTitle">Пылерождённые</LocalizationPair>
+    <LocalizationPair Name="%ClassPopulationEmpireAffinityBezvolnyTitle">Безвольный</LocalizationPair>
+    <LocalizationPair Name="%ClassPopulationStarSystemAffinityBezvolnyTitle">Безвольный</LocalizationPair>
+    <LocalizationPair Name="%ClassPopulationPlanetAffinityBezvolnyCountTitle">Безвольный</LocalizationPair>
+
+</Datatable>

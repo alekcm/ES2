@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/MajorFaction.xsd">
+    <MajorFaction Name="FactionDustborns" Standard="true" Author="Arena Agent" Priority="90">
+        <Affinity Name="AffinityGameplayDustborns"/>
+        <Trait Name="IsMajorFaction"/>
+        <Trait Name="FactionTraitBigFleets1"/>
+        <Trait Name="FactionTraitCrowdedPlanets1"/>
+        <TraitStartingSenate Priority="1">
+            <Government Name="GovernmentDictatorship"/>
+            <PoliticsWeight Politics="Politics01" Weight="0"/>
+            <PoliticsWeight Politics="Politics02" Weight="0"/>
+            <PoliticsWeight Politics="Politics03" Weight="0"/>
+            <PoliticsWeight Politics="Politics04" Weight="0"/>
+            <PoliticsWeight Politics="Politics05" Weight="2"/>
+            <PoliticsWeight Politics="Politics06" Weight="1"/>
+        </TraitStartingSenate>
+        <Bailiff Name="DefaultMoneyBailiff"/>
+        <Bailiff Name="DefaultEmpirePointBailiff"/>
+        <MajorPopulation Affinity="AffinityDustborns" Count="2"/>
+        <MajorPopulation Affinity="AffinityBezvolny" Count="1"/>
+    </MajorFaction>
+</Datatable>

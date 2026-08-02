@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/FactionTrait.xsd">
+    <FactionAffinityMapping Name="AffinityMappingDustborns" SubCategory="MajorFactionAffinityMapping" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="AffinityMappingDustborns"/>
+        <!-- Reuse Cravers ship designs -->
+        <ShipDesign Abstract="SuperColonizer" ShipDesign="Cravers_Colonizer"/>
+        <ShipDesign Abstract="Colonizer" ShipDesign="Cravers_Colonizer"/>
+        <ShipDesign Abstract="Explorer" ShipDesign="Cravers_Explorer"/>
+        <ShipDesign Abstract="Leecher" ShipDesign="Cravers_Leecher"/>
+        <ShipDesign Abstract="RootCreator" ShipDesign="Cravers_RootCreator"/>
+        <ShipDesign Abstract="SmallAttack" ShipDesign="Cravers_SmallAttack"/>
+        <ShipDesign Abstract="SmallSupport" ShipDesign="Cravers_SmallSupport"/>
+        <ShipDesign Abstract="MediumAttack" ShipDesign="Cravers_MediumAttack"/>
+        <ShipDesign Abstract="MediumDefense" ShipDesign="Cravers_MediumDefense"/>
+        <ShipDesign Abstract="Invader" ShipDesign="Cravers_Invader"/>
+        <ShipDesign Abstract="LargeCarrier" ShipDesign="Cravers_LargeCarrier"/>
+        <ShipDesign Abstract="Mothership" ShipDesign="Cravers_Mothership"/>
+        <ShipDesign Abstract="ScienceJuggernaut" ShipDesign="Juggernauts_ScienceJuggernaut"/>
+        <ShipDesign Abstract="MilitaryJuggernaut" ShipDesign="Juggernauts_MilitaryJuggernaut"/>
+        <ShipDesign Abstract="SupportJuggernaut" ShipDesign="Juggernauts_SupportJuggernaut"/>
+        <ShipDesign Abstract="Battleship" ShipDesign="Juggernauts_Battleship"/>
+        <ShipDesign Abstract="Obliterator" ShipDesign="Juggernauts_Obliterator"/>
+        <ShipDesign Abstract="Privateer" ShipDesign="Cravers_SmallAttack"/>
+    </FactionAffinityMapping>
+
+    <FactionAffinityMapping Name="AffinityMappingBezvolny" SubCategory="MinorFactionAffinityMapping" Hidden="false" Custom="true" Cost="5">
+        <SimulationDescriptorReference Name="AffinityMappingBezvolny"/>
+        <!-- Используем тех же Cravers, но можно заменить на Terrans для индустриальности -->
+        <ShipDesign Abstract="SuperColonizer" ShipDesign="Cravers_Colonizer"/>
+        <ShipDesign Abstract="Colonizer" ShipDesign="Cravers_Colonizer"/>
+        <ShipDesign Abstract="Explorer" ShipDesign="Cravers_Explorer"/>
+        <ShipDesign Abstract="SmallAttack" ShipDesign="Cravers_SmallAttack"/>
+        <ShipDesign Abstract="SmallSupport" ShipDesign="Cravers_SmallSupport"/>
+        <ShipDesign Abstract="MediumAttack" ShipDesign="Cravers_MediumAttack"/>
+        <ShipDesign Abstract="MediumDefense" ShipDesign="Cravers_MediumDefense"/>
+    </FactionAffinityMapping>
+</Datatable>

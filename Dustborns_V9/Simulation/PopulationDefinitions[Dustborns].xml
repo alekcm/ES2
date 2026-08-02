@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationDefinition.xsd">
+    <PopulationDefinition AffinityName="AffinityDustborns" Standard="true">
+        <DefaultPolitics>
+            <Politics PoliticsReference="Politics05" BaseScore="1" BaseTrend="0"/>
+        </DefaultPolitics>
+        <Trait Name="PopulationPoliticalTraitReligious"/>
+        <Trait Name="PopulationPoliticalTraitAntiScientist"/>
+        <Trait Name="PopulationPoliticalTraitFanatic"/>
+        <Trait Name="PopulationModifiersTraitDustbornsCount"/>
+        <Trait Name="PopulationModifiersTraitDustborns"/>
+        <Trait Name="PopulationModifiersTraitDustbornsPrimary"/>
+        <Trait Name="PopulationCollectionBonusTraitCraver"/>
+        <AffinityMapping Name="AffinityMappingDustborns"/>
+        <GrowthBoostLuxuryOptions>
+            <Luxury>Luxury1</Luxury>
+            <Luxury>Luxury2</Luxury>
+            <Luxury>Luxury3</Luxury>
+            <Luxury>Luxury4</Luxury>
+            <Luxury>Luxury5</Luxury>
+            <Luxury>Luxury6</Luxury>
+            <Luxury>Luxury7</Luxury>
+            <Luxury>Luxury8</Luxury>
+        </GrowthBoostLuxuryOptions>
+    </PopulationDefinition>
+
+    <PopulationDefinition AffinityName="AffinityBezvolny" Standard="true">
+        <DefaultPolitics>
+        </DefaultPolitics>
+        <Trait Name="PopulationModifiersTraitBezvolnyCount"/>
+        <Trait Name="PopulationModifiersTraitBezvolny"/>
+        <Trait Name="PopulationModifiersTraitBezvolnyPrimary"/>
+        <Trait Name="PopulationCollectionBonusTraitCraver"/>
+        <AffinityMapping Name="AffinityMappingBezvolny"/>
+        <GrowthBoostLuxuryOptions>
+            <Luxury>Luxury1</Luxury>
+            <Luxury>Luxury2</Luxury>
+            <Luxury>Luxury3</Luxury>
+            <Luxury>Luxury4</Luxury>
+            <Luxury>Luxury5</Luxury>
+            <Luxury>Luxury6</Luxury>
+            <Luxury>Luxury7</Luxury>
+            <Luxury>Luxury8</Luxury>
+        </GrowthBoostLuxuryOptions>
+    </PopulationDefinition>
+</Datatable>

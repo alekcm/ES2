@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/IndustryConstructibleElement.xsd">
+    <!-- Покупка Пылерождённого за пыль -->
+    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementCreateMajorPopulationDustborns" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
+                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+        <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
+        <SupervisorGain Name="Dust" Weight="0.5"/>
+        <Tags>NoBuyout</Tags>
+        <QueuedSimulationDescriptorReference Name="QueuedDescriptorIncreaseVirtualPopulationDustborns"/>
+        <CustomCost ResourceName="EmpireMoney" Instant="true">(100 + Property(StockLocation,@ClassColonizedStarSystem,MajorPopulationCount) * 75) * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
+        <InterpreterPrerequisite Flags="MaximumPopulationSystem,Enqueue">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (1 + Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Prerequisite">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementCreateMajorPopulationDustborns"/>
+    </StarSystemPopulationTransformImprovementDefinition>
+
+    <!-- Распыление Пылерождённого -->
+    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementSellMajorPopulationDustborns" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
+                                                      PopulationSource="AffinityDustborns" IgnoreInvinciblePopulation="true">
+        <AIGain RessourceName="PopulationGain" Inverted="true"></AIGain>
+        <SupervisorGain Name="Dust" Weight="0.5"/>
+        <Tags>NoBuyout</Tags>
+        <Cost ResourceName="SystemTurnBased">1</Cost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
+        <InterpreterPrerequisite Flags="Prerequisite">Property(Context,@'ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns', PopulationCount) ge 1</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementSellMajorPopulationDustborns"/>
+        <TemporaryEffect>DustbornSellDustReward</TemporaryEffect>
+    </StarSystemPopulationTransformImprovementDefinition>
+
+    <!-- Создание Безвольного за пыль (для старта и покупки) -->
+    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementCreateMajorPopulationBezvolny" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
+                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+        <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
+        <SupervisorGain Name="Industry" Weight="0.5"/>
+        <Tags>NoBuyout</Tags>
+        <QueuedSimulationDescriptorReference Name="QueuedDescriptorIncreaseVirtualPopulationBezvolny"/>
+        <CustomCost ResourceName="EmpireMoney" Instant="true">(50 + Property(StockLocation,@ClassColonizedStarSystem,MajorPopulationCount) * 30) * Property(StockLocation, @../ClassEmpire, GameSpeedMultiplier, true)</CustomCost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
+        <InterpreterPrerequisite Flags="MaximumPopulationSystem,Enqueue">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (1 + Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
+        <InterpreterPrerequisite Flags="Prerequisite">(Property(Context,@ClassColonizedStarSystem, MaximumPopulation) ge (Property(Context,@ClassColonizedStarSystem, Population) + Property(Context,@ClassColonizedStarSystem, VirtualPopulation)))</InterpreterPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementCreateMajorPopulationBezvolny"/>
+    </StarSystemPopulationTransformImprovementDefinition>
+
+    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementCreateMajorPopulationBezvolnyHome" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
+                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+        <Tags>NoBuyout</Tags>
+        <Cost ResourceName="SystemTurnBased">0</Cost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementCreateMajorPopulationBezvolny"/>
+    </StarSystemPopulationTransformImprovementDefinition>
+
+    <!-- Конверсия минора в Безвольного +300 пыли, требует Пылерождённого -->
+    <StarSystemPopulationTransformImprovementDefinition Name="StarSystemImprovementConvertToBezvolny" SubCategory="SubCategoryPopulation" ScoreProvider="StarSystemImprovementBuilt"
+                                                      PopulationSource="Minor" PopulationSourceHeuristic="LowestCount"
+                                                      PopulationDestination="Major" PopulationToTransformCount="1" CreateIfNotAvailable="true" ConsumeResourceSurplus="true">
+        <AIGain RessourceName="PopulationGain" Inverted="false"></AIGain>
+        <SupervisorGain Name="Industry" Weight="0.5"/>
+        <Tags>NoBuyout</Tags>
+        <Cost ResourceName="SystemTurnBased">1</Cost>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/ClassPopulationStarSystemAffinityDustborns</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">ClassColonizedStarSystem/PopulationMinor</PathPrerequisite>
+        <PathPrerequisite Inverted="false" Flags="Prerequisite,Discard">../ClassEmpire/PopulationMajor,ClassPopulationEmpireAffinityDustborns</PathPrerequisite>
+        <SimulationDescriptorReference Name="StarSystemImprovementConvertToBezvolny"/>
+        <TemporaryEffect>BezvolnyDustReward</TemporaryEffect>
+    </StarSystemPopulationTransformImprovementDefinition>
+
+</Datatable>

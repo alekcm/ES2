@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/Amplitude.Unity.Gui.GuiElement.xsd">
+
+    <GuiElement Name="FactionDustborns">
+        <Title>%FactionDustbornsTitle</Title>
+        <Description>%FactionDustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Factions/FactionCraversSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Factions/FactionCraversMedium" />
+            <Icon Size="Large" Path="Bitmaps/Atlased/Factions/FactionCraversLarge" />
+        </Icons>
+    </GuiElement>
+
+    <AffinityGuiElement Name="AffinityMappingDustborns">
+        <Title>%AffinityMappingDustbornsTitle</Title>
+        <Description>%AffinityMappingDustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityCraversMedium" />
+            <Icon Size="MediumInverted" Path="Bitmaps/Atlased/Affinities/AffinityCraversMediumInverted" />
+            <Icon Size="Mood" Path="Bitmaps/Atlased/Affinities/AffinityCraversMood" />
+            <Icon Size="SmallExtended" Path="Bitmaps/Atlased/Affinities/AffinityCraversMood" />
+        </Icons>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="180" Green="180" Blue="180" Alpha="255"/>
+        <ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitCravers</ModelPath>
+    </AffinityGuiElement>
+
+    <GuiElement Name="AffinityDustborns">
+        <Title>%AffinityDustbornsTitle</Title>
+        <Description>%AffinityDustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall" />
+        </Icons>
+    </GuiElement>
+
+    <GuiElement Name="AffinityGameplayDustborns">
+        <Title>%AffinityGameplayDustbornsTitle</Title>
+        <Description>%AffinityGameplayDustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall" />
+        </Icons>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityDustborns">
+        <Title>%PopulationDustbornsTitle</Title>
+        <Description>%PopulationDustbornsDescription</Description>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityDustbornsCount">
+        <Title>%PopulationDustbornsTitle</Title>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="180" Green="180" Blue="180" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityDustborns">
+        <Title>%PopulationDustbornsTitle</Title>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="180" Green="180" Blue="180" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityDustbornsCount">
+        <Title>%PopulationDustbornsTitle</Title>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="180" Green="180" Blue="180" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationPlanetAffinityDustbornsCount">
+        <Title>%PopulationDustbornsTitle</Title>
+        <Description>%PopulationDustbornsDescription</Description>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="180" Green="180" Blue="180" Alpha="255"/>
+        <AltTitle>%PopulationDustbornsTitle</AltTitle>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationPlanetModifiersTraitDustbornsPrimary">
+        <Title>%PopulationModifiersTraitDustbornsPrimaryTitle</Title>
+        <Description>%PopulationModifiersTraitDustbornsPrimaryDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <GuiElement Name="TechnologyDustbornFoodToDust1">
+        <Title>%TechnologyDustbornFoodToDust1Title</Title>
+        <Description>%TechnologyDustbornFoodToDust1Description</Description>
+    </GuiElement>
+
+    <GuiElement Name="TechnologyDustbornFoodToDust2">
+        <Title>%TechnologyDustbornFoodToDust2Title</Title>
+        <Description>%TechnologyDustbornFoodToDust2Description</Description>
+    </GuiElement>
+
+    <GuiElement Name="TechnologyDustbornFoodToDust3">
+        <Title>%TechnologyDustbornFoodToDust3Title</Title>
+        <Description>%TechnologyDustbornFoodToDust3Description</Description>
+    </GuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust">
+        <Title>%PopulationModifiersTraitDustbornsPrimaryTitle</Title>
+        <Description>%PopulationModifiersTraitDustbornsPrimaryDescription</Description>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemImprovementCreateMajorPopulationDustborns">
+        <Title>%StarSystemImprovementCreateMajorPopulationDustbornsTitle</Title>
+        <Description>%StarSystemImprovementCreateMajorPopulationDustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
+        </Icons>
+        <TooltipEffect>%StarSystemImprovementCreateMajorPopulationDustbornsEffect</TooltipEffect>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemImprovementSellMajorPopulationDustborns">
+        <Title>%StarSystemImprovementSellMajorPopulationDustbornsTitle</Title>
+        <Description>%StarSystemImprovementSellMajorPopulationDustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
+        </Icons>
+        <TooltipEffect>%StarSystemImprovementSellMajorPopulationDustbornsEffect</TooltipEffect>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="AffinityDustbornsCount">
+        <Title>%PopulationDustbornsTitle</Title>
+        <SymbolString>[Cravers]</SymbolString>
+    </ExtendedGuiElement>
+
+    <!-- Bezvolny -->
+    <GuiElement Name="AffinityBezvolny">
+        <Title>%PopulationBezvolnyTitle</Title>
+        <Description>%PopulationBezvolnyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall" />
+        </Icons>
+    </GuiElement>
+
+    <AffinityGuiElement Name="AffinityMappingBezvolny">
+        <Title>%PopulationBezvolnyTitle</Title>
+        <Description>%PopulationBezvolnyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall" />
+            <Icon Size="Medium" Path="Bitmaps/Atlased/Affinities/AffinityCraversMedium" />
+            <Icon Size="Mood" Path="Bitmaps/Atlased/Affinities/AffinityCraversMood" />
+        </Icons>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="100" Green="100" Blue="100" Alpha="255"/>
+        <ModelPath>Prefabs/Gui/AnimatedPortrait/AnimatedPortraitCravers</ModelPath>
+    </AffinityGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityBezvolny">
+        <Title>%PopulationBezvolnyTitle</Title>
+        <Description>%PopulationBezvolnyDescription</Description>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityBezvolny">
+        <Title>%PopulationBezvolnyTitle</Title>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="100" Green="100" Blue="100" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationPlanetAffinityBezvolnyCount">
+        <Title>%PopulationBezvolnyTitle</Title>
+        <Description>%PopulationBezvolnyDescription</Description>
+        <SymbolString>[Cravers]</SymbolString>
+        <Color Red="100" Green="100" Blue="100" Alpha="255"/>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationStarSystemAffinityBezvolnyCount">
+        <Title>%PopulationBezvolnyTitle</Title>
+        <SymbolString>[Cravers]</SymbolString>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationEmpireAffinityBezvolnyCount">
+        <Title>%PopulationBezvolnyTitle</Title>
+        <SymbolString>[Cravers]</SymbolString>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="ClassPopulationPlanetModifiersTraitBezvolnyPrimary">
+        <Title>%PopulationModifiersTraitBezvolnyPrimaryTitle</Title>
+        <Description>%PopulationModifiersTraitBezvolnyPrimaryDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Affinities/AffinityCraversSmall" />
+        </Icons>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemImprovementConvertToBezvolny">
+        <Title>%StarSystemImprovementConvertToBezvolnyTitle</Title>
+        <Description>%StarSystemImprovementConvertToBezvolnyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
+        </Icons>
+        <TooltipEffect>%StarSystemImprovementConvertToBezvolnyEffect</TooltipEffect>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemImprovementConvertToBezvolnyMajor">
+        <Title>%StarSystemImprovementConvertToBezvolnyMajorTitle</Title>
+        <Description>%StarSystemImprovementConvertToBezvolnyMajorDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
+        </Icons>
+        <TooltipEffect>%StarSystemImprovementConvertToBezvolnyMajorEffect</TooltipEffect>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemImprovementCreateMajorPopulationBezvolny">
+        <Title>%StarSystemImprovementCreateMajorPopulationBezvolnyTitle</Title>
+        <Description>%StarSystemImprovementCreateMajorPopulationBezvolnyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
+        </Icons>
+        <TooltipEffect>%StarSystemImprovementCreateMajorPopulationBezvolnyEffect</TooltipEffect>
+    </ExtendedGuiElement>
+
+    <ExtendedGuiElement Name="StarSystemImprovementCreateMajorPopulationBezvolnyHome">
+        <Title>%StarSystemImprovementCreateMajorPopulationBezvolnyTitle</Title>
+        <Description>%StarSystemImprovementCreateMajorPopulationBezvolnyDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Improvements/ImprovementDust" />
+        </Icons>
+        <TooltipEffect>%StarSystemImprovementCreateMajorPopulationBezvolnyEffect</TooltipEffect>
+    </ExtendedGuiElement>
+
+</Datatable>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/PopulationModifiersTrait.xsd">
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitDustborns" SubCategory="Affinity" ShowInCustom="false">
+        <Modifiers>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityDustborns"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityDustborns"/>
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemGrowthTypeIndustry"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitDustbornsCount" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityDustbornsCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityDustbornsCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityDustbornsCount"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitDustbornsPrimary" SubCategory="Primary" ShowInCustom="true" Cost="15">
+        <Tags>PlanetDepletionPerTurn,BonusPopulationDust</Tags>
+        <Command Name="SetHomePlanetDepletion" Arguments="0.25"/>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitDustbornsPrimary"/>
+                <SimulationDescriptorReference Name="PopulationExploitingPlanetWhileDepleting"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemModifiersTraitDustbornsFoodToDust"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <!-- Bezvolny -->
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBezvolny" SubCategory="Affinity" ShowInCustom="false">
+        <Modifiers>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityBezvolny"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityBezvolny"/>
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemGrowthTypeIndustry"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBezvolnyCount" SubCategory="Count">
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetAffinityBezvolnyCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationStarSystem">
+                <SimulationDescriptorReference Name="ClassPopulationStarSystemAffinityBezvolnyCount"/>
+            </Modifier>
+            <Modifier Class="ClassPopulationEmpire">
+                <SimulationDescriptorReference Name="ClassPopulationEmpireAffinityBezvolnyCount"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+    <PopulationModifiersTrait Name="PopulationModifiersTraitBezvolnyPrimary" SubCategory="Primary" ShowInCustom="true" Cost="10">
+        <Tags>BonusPopulationIndustry</Tags>
+        <Modifiers>
+            <Modifier Class="ClassPopulationPlanet">
+                <SimulationDescriptorReference Name="ClassPopulationPlanetModifiersTraitBezvolnyPrimary"/>
+                <SimulationDescriptorReference Name="PopulationExploitingPlanetWhileDepleting"/>
+            </Modifier>
+        </Modifiers>
+    </PopulationModifiersTrait>
+
+</Datatable>

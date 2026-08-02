@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/GalaxyGeneratorWeightTableDefinition.xsd">
+
+    <GalaxyGeneratorWeightTable Name="FactionDustborns_StarTypes">
+        <Entry Tag="StarTypeYellow" Weight="1"/>
+        <Entry Tag="StarTypeWhite" Weight="1"/>
+    </GalaxyGeneratorWeightTable>
+
+    <GalaxyGeneratorWeightTable Name="FactionDustborns_PlanetTypes">
+        <Entry Tag="PlanetTypeDesert" Weight="3"/>
+        <Entry Tag="PlanetTypeArid" Weight="3"/>
+        <Entry Tag="PlanetTypeAsh" Weight="2"/>
+        <Entry Tag="PlanetTypeTerran" Weight="1"/>
+    </GalaxyGeneratorWeightTable>
+
+    <GalaxyGeneratorWeightTable Name="FactionDustborns_Asteroids">
+        <Entry Tag="AsteroidsNone" Weight="1"/>
+    </GalaxyGeneratorWeightTable>
+
+</Datatable>
