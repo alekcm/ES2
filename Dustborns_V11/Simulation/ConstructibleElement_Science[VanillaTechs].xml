@@ -399,4 +399,181 @@
     <HelperFormula>$(TurnVariable) * 30 + 40 * $(EnemyEmpires)</HelperFormula>
   </TechnologyDefinition>
 
+
+
+    <!-- ===== TechnologyDefinitionMilitary27 : базовое определение (оригинал + исключение Пылерождённых) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionMilitary27" TechnologyStage="TechnologyStageDefinitionMilitary5" Category="CategoryTechnologyMilitary" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyUniqueDefense1"/>
+    <SimulationDescriptorReference Name="TechnologyMilitaryGameplay"/>
+    <SimulationDescriptorReference Name="TechnologyImprovementGlobalBonusTroops"/>
+    <SimulationDescriptorReference Name="TechnologyCountMilitaryIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperVariable Name="EnemyEmpires"/>
+    <HelperFormula>$(TurnVariable) * 60 + 30 * $(EnemyEmpires)</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionMilitary27Dustborns : вариант для Пылерождённых (бонус: TechnologyDustbornBezvolnyIndustry2) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionMilitary27Dustborns" TechnologyStage="TechnologyStageDefinitionMilitary5" Category="CategoryTechnologyMilitary" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantMilitaryMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyUniqueDefense1"/>
+    <SimulationDescriptorReference Name="TechnologyMilitaryGameplay"/>
+    <SimulationDescriptorReference Name="TechnologyImprovementGlobalBonusTroops"/>
+    <SimulationDescriptorReference Name="TechnologyCountMilitaryIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+            <SimulationDescriptorReference Name="TechnologyDustbornBezvolnyIndustry2"/>
+    <PopulationEvent Name="PopulationPoliticalEventMilitaristTechnology"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperVariable Name="EnemyEmpires"/>
+    <HelperFormula>$(TurnVariable) * 60 + 30 * $(EnemyEmpires)</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionScienceAndExploration31 : базовое определение (оригинал + исключение Пылерождённых) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration31" TechnologyStage="TechnologyStageDefinitionScienceAndExploration4" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayTimeLords</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyTerraformation2"/>
+    <SimulationDescriptorReference Name="TechnologyScience6"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+    <HelperVariable Name="SciencePopulation"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>20 * $(TurnVariable) + $(SciencePopulation) * 10</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionScienceAndExploration31Dustborns : вариант для Пылерождённых (бонус: TechnologyDustbornDepletion2) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionScienceAndExploration31Dustborns" TechnologyStage="TechnologyStageDefinitionScienceAndExploration4" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage4Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayTimeLords</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyTerraformation2"/>
+    <SimulationDescriptorReference Name="TechnologyScience6"/>
+    <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage4"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+            <SimulationDescriptorReference Name="TechnologyDustbornDepletion2"/>
+    <PopulationEvent Name="PopulationPoliticalEventEcologistTechnology"/>
+    <HelperVariable Name="SciencePopulation"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>20 * $(TurnVariable) + $(SciencePopulation) * 10</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionEmpireDevelopment4 : базовое определение (оригинал + исключение Пылерождённых) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopment4" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment2" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyAcademyEmbassy"/>
+    <SimulationDescriptorReference Name="TechnologyPlanetaryInfluence1"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage2"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventReligiousTechnology"/>
+    <HelperVariable Name="InfluenceVariable"/>
+    <HelperVariable Name="AvailablePlanets"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>20 * $(TurnVariable) + 1 * $(AvailablePlanets) * $(InfluenceVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionEmpireDevelopment4Dustborns : вариант для Пылерождённых (бонус: TechnologyDustbornDepletion3) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionEmpireDevelopment4Dustborns" TechnologyStage="TechnologyStageDefinitionEmpireDevelopment2" Category="CategoryTechnologyEmpireDevelopment" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEmpireDevelopmentMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityGameplayVampirilis</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyAcademyEmbassy"/>
+    <SimulationDescriptorReference Name="TechnologyPlanetaryInfluence1"/>
+    <SimulationDescriptorReference Name="TechnologyCountEmpireDevelopmentIncreaseStage2"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+            <SimulationDescriptorReference Name="TechnologyDustbornDepletion3"/>
+    <PopulationEvent Name="PopulationPoliticalEventReligiousTechnology"/>
+    <HelperVariable Name="InfluenceVariable"/>
+    <HelperVariable Name="AvailablePlanets"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperFormula>20 * $(TurnVariable) + 1 * $(AvailablePlanets) * $(InfluenceVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionEconomyAndTrade6 : базовое определение (оригинал + исключение Пылерождённых) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade6" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade3" Category="CategoryTechnologyEconomyAndTrade" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)  * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEconomyAndTrade3To10')))</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">AffinityMappingVenetians</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">AffinityGameplayVampirilis</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyPillage"/>
+    <SimulationDescriptorReference Name="TechnologyPillageAlt"/>
+    <SimulationDescriptorReference Name="TechnologyMarketplace2"/>
+    <SimulationDescriptorReference Name="TechnologyLinkToMarketplace2Common"/>
+    <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventPacifistTechnology"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperVariable Name="DustPopulation"/>
+    <HelperFormula>$(TurnVariable) * 30 + 2* $(DustPopulation)</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionEconomyAndTrade6Dustborns : вариант для Пылерождённых (бонус: TechnologyDustbornDepletion4) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade6Dustborns" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade3" Category="CategoryTechnologyEconomyAndTrade" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage3Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)  * (1 - (Property(StockLocation,@ClassEmpire/ClassResearch , TechnologyLinkReductionValue) * Count(StockLocation, @'ClassEmpire/ClassResearch,TechnologyLinkEconomyAndTrade3To10')))</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">AffinityMappingVenetians</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">AffinityGameplayVampirilis</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyPillage"/>
+    <SimulationDescriptorReference Name="TechnologyPillageAlt"/>
+    <SimulationDescriptorReference Name="TechnologyMarketplace2"/>
+    <SimulationDescriptorReference Name="TechnologyLinkToMarketplace2Common"/>
+    <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage3"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+            <SimulationDescriptorReference Name="TechnologyDustbornDepletion4"/>
+    <PopulationEvent Name="PopulationPoliticalEventPacifistTechnology"/>
+    <HelperVariable Name="TurnVariable"/>
+    <HelperVariable Name="DustPopulation"/>
+    <HelperFormula>$(TurnVariable) * 30 + 2* $(DustPopulation)</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionEconomyAndTrade20 : базовое определение (оригинал + исключение Пылерождённых) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade20" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade5" Category="CategoryTechnologyEconomyAndTrade" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard" Inverted="true">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">AffinityMappingVenetians</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyIndToDust2"/>
+    <SimulationDescriptorReference Name="TechnologyIndToDust2Alt"/>
+    <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+    <PopulationEvent Name="PopulationPoliticalEventPacifistTechnology"/>
+    <HelperVariable Name="DustVariable"/>
+    <HelperVariable Name="ImprovementsVariable"/>
+    <HelperFormula>10 * $(ImprovementsVariable) * $(DustVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+
+    <!-- ===== TechnologyDefinitionEconomyAndTrade20Dustborns : вариант для Пылерождённых (бонус: TechnologyDustbornDepletion5) ===== -->
+<TechnologyDefinition Name="TechnologyDefinitionEconomyAndTrade20Dustborns" TechnologyStage="TechnologyStageDefinitionEconomyAndTrade5" Category="CategoryTechnologyEconomyAndTrade" SubCategoryInQuests="TechnoMilitary" ScoreProvider="TechnologyUnlocked">
+    <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage5Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantEconomyAndTradeMultiplier)</CustomCost>
+    <PathPrerequisite Flags="Prerequisite,DiplomaticTradable,Discard,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
+    <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable" Inverted="true">AffinityMappingVenetians</PathPrerequisite>
+    <SimulationDescriptorReference Name="TechnologyIndToDust2"/>
+    <SimulationDescriptorReference Name="TechnologyIndToDust2Alt"/>
+    <SimulationDescriptorReference Name="TechnologyCountEconomyAndTradeIncreaseStage5"/>
+    <SimulationDescriptorReference Name="TechnologyCounter"/>
+            <SimulationDescriptorReference Name="TechnologyDustbornDepletion5"/>
+    <PopulationEvent Name="PopulationPoliticalEventPacifistTechnology"/>
+    <HelperVariable Name="DustVariable"/>
+    <HelperVariable Name="ImprovementsVariable"/>
+    <HelperFormula>10 * $(ImprovementsVariable) * $(DustVariable)</HelperFormula>
+  </TechnologyDefinition>
+
+
 </Datatable>

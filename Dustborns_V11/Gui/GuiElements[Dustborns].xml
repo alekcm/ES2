@@ -187,10 +187,6 @@
 
 
     <!-- ============ ТЕХНОЛОГИИ ============ -->
-    <TechnologyGuiElement2 Name="TechnologyDustbornDepletion1" X="-1" Y="0">        <Icons>
-            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration5Small" />
-        </Icons>
-<Title>%TechnologyDustbornDepletion1Title</Title><Description>%TechnologyDustbornDepletion1Description</Description></TechnologyGuiElement2>
 
     <!-- ============ ТЕХНОЛОГИИ v3.0: ВАРИАНТЫ ПЫЛЕРОЖДЁННЫХ ============
          По одной на каждую ванильную технологию, в которую переехал бонус.
@@ -819,15 +815,152 @@
         </Step></Steps>
     </QuestGuiElement>
 
-    <!-- Unlock objects for Dustborn tech descriptors -->
-    <ExtendedGuiElement Name="DustbornTechUnlockFoodToDust0"><Title>%DustbornTechUnlockFoodToDust0Title</Title><Description>%DustbornTechUnlockFoodToDust0Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockFoodToDust10"><Title>%DustbornTechUnlockFoodToDust10Title</Title><Description>%DustbornTechUnlockFoodToDust10Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockFoodToDust25"><Title>%DustbornTechUnlockFoodToDust25Title</Title><Description>%DustbornTechUnlockFoodToDust25Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockDigestion1"><Title>%DustbornTechUnlockDigestion1Title</Title><Description>%DustbornTechUnlockDigestion1Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockDigestion2"><Title>%DustbornTechUnlockDigestion2Title</Title><Description>%DustbornTechUnlockDigestion2Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockDigestion3"><Title>%DustbornTechUnlockDigestion3Title</Title><Description>%DustbornTechUnlockDigestion3Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockDigestion4"><Title>%DustbornTechUnlockDigestion4Title</Title><Description>%DustbornTechUnlockDigestion4Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockDepletion1"><Title>%DustbornTechUnlockDepletion1Title</Title><Description>%DustbornTechUnlockDepletion1Effect</Description></ExtendedGuiElement>
-    <ExtendedGuiElement Name="DustbornTechUnlockBezvolnyIndustry1"><Title>%DustbornTechUnlockBezvolnyIndustry1Title</Title><Description>%DustbornTechUnlockBezvolnyIndustry1Effect</Description></ExtendedGuiElement>
+    <!-- v3.2: пассивные бонусы технологий как имперские улучшения (EmpireImprovement).
+         Показываются в разделе «Даёт» у технологии и во вкладке «Империя». -->
+    <ExtendedGuiElement Name="EmpireImprovementDustbornFoodToDust0">
+      <Title>%EmpireImprovementDustbornFoodToDust0Title</Title>
+      <Description>%EmpireImprovementDustbornFoodToDust0Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornFoodToDust10">
+      <Title>%EmpireImprovementDustbornFoodToDust10Title</Title>
+      <Description>%EmpireImprovementDustbornFoodToDust10Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornFoodToDust25">
+      <Title>%EmpireImprovementDustbornFoodToDust25Title</Title>
+      <Description>%EmpireImprovementDustbornFoodToDust25Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTradeLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDigestion1">
+      <Title>%EmpireImprovementDustbornDigestion1Title</Title>
+      <Description>%EmpireImprovementDustbornDigestion1Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDigestion2">
+      <Title>%EmpireImprovementDustbornDigestion2Title</Title>
+      <Description>%EmpireImprovementDustbornDigestion2Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDigestion3">
+      <Title>%EmpireImprovementDustbornDigestion3Title</Title>
+      <Description>%EmpireImprovementDustbornDigestion3Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDigestion4">
+      <Title>%EmpireImprovementDustbornDigestion4Title</Title>
+      <Description>%EmpireImprovementDustbornDigestion4Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleAttackLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDepletion2">
+      <Title>%EmpireImprovementDustbornDepletion2Title</Title>
+      <Description>%EmpireImprovementDustbornDepletion2Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDepletion3">
+      <Title>%EmpireImprovementDustbornDepletion3Title</Title>
+      <Description>%EmpireImprovementDustbornDepletion3Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDepletion4">
+      <Title>%EmpireImprovementDustbornDepletion4Title</Title>
+      <Description>%EmpireImprovementDustbornDepletion4Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornDepletion5">
+      <Title>%EmpireImprovementDustbornDepletion5Title</Title>
+      <Description>%EmpireImprovementDustbornDepletion5Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementTerraformationLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornBezvolnyIndustry1">
+      <Title>%EmpireImprovementDustbornBezvolnyIndustry1Title</Title>
+      <Description>%EmpireImprovementDustbornBezvolnyIndustry1Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleDefenseSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleDefenseLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+    <ExtendedGuiElement Name="EmpireImprovementDustbornBezvolnyIndustry2">
+      <Title>%EmpireImprovementDustbornBezvolnyIndustry2Title</Title>
+      <Description>%EmpireImprovementDustbornBezvolnyIndustry2Description</Description>
+      <Icons>
+        <Icon Size="Small" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleDefenseSmall"/>
+        <Icon Size="Large" Path="Bitmaps/Dynamic/Improvements/FakeImprovements/EmpireImprovementModuleDefenseLarge"/>
+      </Icons>
+    </ExtendedGuiElement>
+
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionMilitary27Dustborns" X="-1.5" Y="0">
+        <Title>%TechnologyDefinitionMilitary27DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionMilitary27DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionMilitary27Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionScienceAndExploration31Dustborns" X="-4.8" Y="0">
+        <Title>%TechnologyDefinitionScienceAndExploration31DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionScienceAndExploration31DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionScienceAndExploration31Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEmpireDevelopment4Dustborns" X="-2.15" Y="0">
+        <Title>%TechnologyDefinitionEmpireDevelopment4DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEmpireDevelopment4DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEmpireDevelopment4Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEconomyAndTrade6Dustborns" X="-3.3" Y="0">
+        <Title>%TechnologyDefinitionEconomyAndTrade6DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEconomyAndTrade6DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade6Small" />
+        </Icons>
+    </TechnologyGuiElement2>
+
+    <TechnologyGuiElement2 Name="TechnologyDefinitionEconomyAndTrade20Dustborns" X="-4" Y="0">
+        <Title>%TechnologyDefinitionEconomyAndTrade20DustbornsTitle</Title>
+        <Description>%TechnologyDefinitionEconomyAndTrade20DustbornsDescription</Description>
+        <Icons>
+            <Icon Size="Small" Path="Bitmaps/Atlased/Technologies/TechnologyDefinitionEconomyAndTrade20Small" />
+        </Icons>
+    </TechnologyGuiElement2>
 
 </Datatable>

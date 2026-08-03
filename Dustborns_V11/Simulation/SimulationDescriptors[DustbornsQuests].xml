@@ -313,62 +313,105 @@
     <!-- Конверсия еды в пыль: база.
          «Первый Голод» (эра 1, награда главы 1) РАЗБЛОКИРОВЫВАЕТ механику и даёт
          первые +25% излишка еды в Пыль напрямую в SystemMoney системы. -->
-    <SimulationDescriptor Name="TechnologyDustbornFoodToDust0" Type="Technology">
-        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
-                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
-                        Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
-
-    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornFoodToDust0" Type="Technology"/>
 
     <!-- Конверсия еды в пыль: +10% (вариант «Ландшафтного проектирования»). -->
-    <SimulationDescriptor Name="TechnologyDustbornFoodToDust10" Type="Technology">
-        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
-                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.10"
-                        Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
-    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornFoodToDust10" Type="Technology"/>
 
     <!-- Конверсия еды в пыль: +25% (варианты «Сканирования растений», «Хаотической
          метеорологии», «Автономных материалов», «Адаптации колоний»). -->
-    <SimulationDescriptor Name="TechnologyDustbornFoodToDust25" Type="Technology">
-        <BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
-                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
-                        Path="../ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
-    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornFoodToDust25" Type="Technology"/>
 
     <!-- Пыль за переваривание: каждый дескриптор добавляет +300 к свойству
          DustbornDigestionValue (держатель DustbornDigestionHolder на империи),
          которое читает TemporaryEffect при переработке жителя.
          База 300 + 4 x +300 = 1500 максимум. -->
-    <SimulationDescriptor Name="TechnologyDustbornDigestion1" Type="Technology">
-        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-    </SimulationDescriptor>
-    <SimulationDescriptor Name="TechnologyDustbornDigestion2" Type="Technology">
-        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-    </SimulationDescriptor>
-    <SimulationDescriptor Name="TechnologyDustbornDigestion3" Type="Technology">
-        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-    </SimulationDescriptor>
-    <SimulationDescriptor Name="TechnologyDustbornDigestion4" Type="Technology">
-        <Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="../ClassEmpire" TooltipHidden="true"/>
-    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornDigestion1" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyDustbornDigestion2" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyDustbornDigestion3" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyDustbornDigestion4" Type="Technology"/>
 
-    <!-- Терпеливые Ветра: НЕ плоские -0.1 ко всем планетам, а -0.1 ЗА КАЖДОГО Пылерождённого
-         на планете. Реализация: техника ставит свойство DustbornPatientWindsReduction=0.1
-         на трейт Primary каждого Пылерождённого; сам вычет делает бинарник в трейте
-         (PlanetDepletionPerTurn -= 0.1 × PopulationCount на планету). -->
-    <SimulationDescriptor Name="TechnologyDustbornDepletion1" Type="Technology">
-        <Modifier TargetProperty="DustbornPatientWindsReduction" Operation="Force" Value="0.1" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
-    </SimulationDescriptor>
+    <!-- Терпеливые Ветра (v3.3): -0.05 истощения ЗА КАЖДОГО Пылерождённого на планете
+         за каждую из 4 технологий (Климат-инжиниринг, Ксенология, Безвредное промышленное
+         производство, Ксено-НЛП). Каждый маркер ставит +0.05 к свойству
+         DustbornPatientWindsReduction на трейт Primary; сам вычет делает бинарник в трейте
+         (PlanetDepletionPerTurn -= 0.05×N × PopulationCount). Итог при всех 4: -0.2. -->
+    <SimulationDescriptor Name="TechnologyDustbornDepletion2" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyDustbornDepletion3" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyDustbornDepletion4" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyDustbornDepletion5" Type="Technology"/>
 
     <!-- Безвольные +1 производства: вариант «Автономного строительства» и вариант
          «Упрочнённых сплавов» (заменило удалённые «Армированные Оболочки»).
          Только обычные Безвольные (не Считающие Оболочки). -->
-    <SimulationDescriptor Name="TechnologyDustbornBezvolnyIndustry1" Type="Technology">
-        <Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="../ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="true"/>
-    </SimulationDescriptor>
+    <SimulationDescriptor Name="TechnologyDustbornBezvolnyIndustry1" Type="Technology"/>
+    <SimulationDescriptor Name="TechnologyDustbornBezvolnyIndustry2" Type="Technology"/>
 
     <!-- Держатель значения переваривания. Вешается на империю аффинити-трейтом. -->
-    <SimulationDescriptor Name="DustbornDigestionHolder" Type="DustbornCatalog">
+    
+
+    <!-- ==========================================================================
+         ИМПЕРСКИЕ УЛУЧШЕНИЯ (v3.2): эффекты технологий вынесены из маркеров
+         TechnologyDustborn* в отдельные дескрипторы EmpireImprovementDustborn*.
+         Технология применяет маркер (Type="Technology"), имперское улучшение
+         ссылается на него через TechnologyPrerequisite и само несёт бонус
+         (Type="EmpireImprovement") в масштабе империи.
+         ========================================================================== -->
+  <SimulationDescriptor Name="EmpireImprovementDustbornFoodToDust0" Type="EmpireImprovement">
+<BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
+                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornFoodToDust10" Type="EmpireImprovement">
+<BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.10"
+                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornFoodToDust25" Type="EmpireImprovement">
+<BinaryModifier TargetProperty="SystemMoney" Operation="Addition"
+                        Left="$(SystemGrowth)" BinaryOperation="Multiplication" Right="0.25"
+                        Path="ClassEmpire/ClassColonizedStarSystem" SearchValueFromPath="true" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornDigestion1" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornDigestion2" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornDigestion3" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornDigestion4" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornDigestionValue" Operation="Addition" Value="300" Path="ClassEmpire" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornDepletion2" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornPatientWindsReduction" Operation="Addition" Value="0.05" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="EmpireImprovementDustbornDepletion3" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornPatientWindsReduction" Operation="Addition" Value="0.05" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="EmpireImprovementDustbornDepletion4" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornPatientWindsReduction" Operation="Addition" Value="0.05" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+  </SimulationDescriptor>
+  <SimulationDescriptor Name="EmpireImprovementDustbornDepletion5" Type="EmpireImprovement">
+<Modifier TargetProperty="DustbornPatientWindsReduction" Operation="Addition" Value="0.05" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitDustbornsPrimary" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornBezvolnyIndustry1" Type="EmpireImprovement">
+<Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="true"/>
+  </SimulationDescriptor>
+
+  <SimulationDescriptor Name="EmpireImprovementDustbornBezvolnyIndustry2" Type="EmpireImprovement">
+<Modifier TargetProperty="BonusPopulationIndustry" Operation="Addition" Value="1" Path="ClassEmpire/ClassColonizedStarSystem/ClassColonizedPlanet/ClassPopulation,ClassPopulationPlanetModifiersTraitBezvolnyPrimary" TooltipHidden="true"/>
+  </SimulationDescriptor>
+<SimulationDescriptor Name="DustbornDigestionHolder" Type="DustbornCatalog">
         <Property Name="DustbornDigestionValue" BaseValue="300" MinValue="0"/>
     </SimulationDescriptor>
 

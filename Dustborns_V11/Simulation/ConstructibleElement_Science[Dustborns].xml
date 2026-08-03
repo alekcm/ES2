@@ -11,11 +11,13 @@
          «Армированные Оболочки» удалены: их бонусы разложены на «Автономное
          строительство» и «Упрочнённые сплавы» (+1 производства Безвольным).
 
-         Здесь остаются только:
+         В v3.3 одиночная технология «Терпеливые Ветра» (истощение -0.1) УДАЛЕНА;
+         её бонус разбит на 4 ванильные технологии по -0.05 через вариантные
+         технологии в ConstructibleElement_Science[VanillaTechs].xml.
+
+         Здесь остаётся только:
            - TechnologyDustbornFoodToDust0 «Первый Голод» (эра 1, скрытая,
-             разблокировка механики еда->пыль, награда главы 1 главного квеста);
-           - TechnologyDustbornDepletion1 «Терпеливые Ветра» (эра 2, истощение
-             -0.1 за каждого Пылерождённого на планете).
+             разблокировка механики еда->пыль, награда главы 1 главного квеста).
          ============================================================================ -->
 
     <!-- ВЕТКА: КОНВЕРСИЯ ЕДЫ В ПЫЛЬ (РАЗБЛОКИРОВКА)  ->  КВАДРАНТ «ЭКОНОМИКА И ТОРГОВЛЯ»
@@ -30,21 +32,6 @@
         <SimulationDescriptorReference Name="TechnologyCounter"/>
         <HelperVariable Name="TurnVariable"/>
         <HelperFormula>15 * $(TurnVariable) + 5</HelperFormula>
-    </TechnologyDefinition>
-
-    <!-- ВЕТКА: ИСТОЩЕНИЕ  ->  КВАДРАНТ «НАУКА И ИССЛЕДОВАНИЕ»
-         «Терпеливые Ветра» (эра 2): -0.1 истощения ЗА КАЖДОГО Пылерождённого
-         на планете (свойство DustbornPatientWindsReduction ставится на трейт
-         Primary; вычет делает бинарный модификатор в трейте). -->
-    <TechnologyDefinition Name="TechnologyDustbornDepletion1" TechnologyStage="TechnologyStageDefinitionScienceAndExploration2" Category="CategoryTechnologyScienceAndExploration" ScoreProvider="TechnologyUnlocked" TechnologyFlags="Affinity">
-        <Tags>NoOmniscience</Tags>
-        <CustomCost ResourceName="EmpireResearch">Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCurrentCost) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostStage2Multiplier) * Property(StockLocation,@'ClassEmpire/ClassResearch', TechnologyCostQuadrantScienceAndExplorationMultiplier)</CustomCost>
-        <PathPrerequisite Flags="Prerequisite,Discard,DiplomaticTradable,Faction,AffinityDustborns">ClassEmpire,AffinityMappingDustborns</PathPrerequisite>
-        <SimulationDescriptorReference Name="TechnologyCountScienceAndExplorationIncreaseStage2"/>
-        <SimulationDescriptorReference Name="TechnologyDustbornDepletion1"/>
-        <SimulationDescriptorReference Name="TechnologyCounter"/>
-        <HelperVariable Name="TurnVariable"/>
-        <HelperFormula>20 * $(TurnVariable) + 5</HelperFormula>
     </TechnologyDefinition>
 
 </Datatable>

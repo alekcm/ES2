@@ -38,7 +38,9 @@
         <Property Name="BonusFromDepletion" BaseValue="1"/>
 
         <!-- Ставки замедления истощения (множитель: число Пылерождённых на планете).
-             DustbornPatientWindsReduction: техника «Терпеливые Ветра» (Force 0.1).
+             DustbornPatientWindsReduction: 4 имперских улучшения «Терпеливые Ветра»
+             (Климат-инжиниринг, Ксенология, Безвредное пром. производство, Ксено-НЛП),
+             каждое Addition +0.05 (итог до -0.2 при всех четырёх).
              DustbornIceReduction: запись Каталога за ледяной мир (Force 0.05). -->
         <Property Name="DustbornPatientWindsReduction" BaseValue="0" MinValue="0" MaxValue="1"/>
         <Property Name="DustbornIceReduction" BaseValue="0" MinValue="0" MaxValue="1"/>

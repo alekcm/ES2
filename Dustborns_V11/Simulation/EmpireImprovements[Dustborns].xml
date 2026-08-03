@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Datatable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="../Schemas/EmpireImprovementDefinition.xsd">
+
+  <!-- ============================================================================
+       ПАССИВНЫЕ ИМПЕРСКИЕ УЛУЧШЕНИЯ ПЫЛЕРОЖДЁННЫХ  (v3.2)
+
+       Раньше бонусы технологий (еда->Пыль, Переваривание, Терпеливые Ветра,
+       производство Безвольных) были реализованы как ПОСТРОЙКИ
+       (StarSystemImprovementDefinition DustbornTechUnlock*) - их приходилось
+       строить за производство на каждой системе, что семантически неверно для
+       глобальных пассивных бонусов.
+
+       Теперь каждый бонус - это ИМПЕРСКОЕ УЛУЧШЕНИЕ (EmpireImprovementDefinition):
+         - выдаётся автоматически при исследовании технологии (TechnologyPrerequisite);
+         - видно в разделе «Даёт» у технологии (паттерн ванильных имперских улучшений
+           вроде EmpireImprovementHappiness);
+         - эффект глобальный, применяется на всю империю (дескриптор EmpireImprovement);
+         - НЕ требует строительства и НЕ висит в очереди производства.
+
+       Паттерн ванильной игры:
+         <EmpireImprovementDefinition>
+           <TechnologyPrerequisite>TechnologyX</TechnologyPrerequisite>
+           <SimulationDescriptorReference Name="EmpireImprovementX"/>
+         </EmpireImprovementDefinition>
+       Эффект лежит в дескрипторе EmpireImprovementX (Type="EmpireImprovement"),
+       а TechnologyX - чистый маркер (Type="Technology"), который применяет техуа.
+       ============================================================================ -->
+
+  <!-- ==== ЕДА -> ПЫЛЬ ==== -->
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornFoodToDust0" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <TechnologyPrerequisite>TechnologyDustbornFoodToDust0</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornFoodToDust0"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornFoodToDust10" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <TechnologyPrerequisite>TechnologyDustbornFoodToDust10</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornFoodToDust10"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornFoodToDust25" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <TechnologyPrerequisite>TechnologyDustbornFoodToDust25</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornFoodToDust25"/>
+  </EmpireImprovementDefinition>
+
+  <!-- ==== ПЕРЕВАРИВАНИЕ ==== -->
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDigestion1" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <TechnologyPrerequisite>TechnologyDustbornDigestion1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDigestion1"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDigestion2" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <TechnologyPrerequisite>TechnologyDustbornDigestion2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDigestion2"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDigestion3" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <TechnologyPrerequisite>TechnologyDustbornDigestion3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDigestion3"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDigestion4" Category="CategoryEmpireImprovement" SubCategory="SubCategoryDust">
+    <TechnologyPrerequisite>TechnologyDustbornDigestion4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDigestion4"/>
+  </EmpireImprovementDefinition>
+
+  <!-- ==== ПРОИЗВОДСТВО БЕЗВОЛЬНЫХ ==== -->
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornBezvolnyIndustry1" Category="CategoryEmpireImprovement" SubCategory="SubCategoryIndustry">
+    <TechnologyPrerequisite>TechnologyDustbornBezvolnyIndustry1</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornBezvolnyIndustry1"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornBezvolnyIndustry2" Category="CategoryEmpireImprovement" SubCategory="SubCategoryIndustry">
+    <TechnologyPrerequisite>TechnologyDustbornBezvolnyIndustry2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornBezvolnyIndustry2"/>
+  </EmpireImprovementDefinition>
+
+  <!-- ==== ТЕРПЕЛИВЫЕ ВЕТРА (истощение): 4 технологии по -0.05 ==== -->
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDepletion2" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <TechnologyPrerequisite>TechnologyDustbornDepletion2</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDepletion2"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDepletion3" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <TechnologyPrerequisite>TechnologyDustbornDepletion3</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDepletion3"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDepletion4" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <TechnologyPrerequisite>TechnologyDustbornDepletion4</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDepletion4"/>
+  </EmpireImprovementDefinition>
+
+  <EmpireImprovementDefinition Name="EmpireImprovementDustbornDepletion5" Category="CategoryEmpireImprovement" SubCategory="SubCategoryScience">
+    <TechnologyPrerequisite>TechnologyDustbornDepletion5</TechnologyPrerequisite>
+    <SimulationDescriptorReference Name="EmpireImprovementDustbornDepletion5"/>
+  </EmpireImprovementDefinition>
+
+</Datatable>
